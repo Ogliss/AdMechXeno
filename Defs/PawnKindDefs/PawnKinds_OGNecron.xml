@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <PawnKindDef>
+		<defName>NecronScarabSwarm</defName>
+		<label>Necron Scarab Swarm</label>
+		<race>Necron_ScarabSwarm</race>
+		<defaultFactionType>NecronFaction</defaultFactionType>
+		<combatPower>100</combatPower>
+		<itemQuality>Good</itemQuality>
+		<aiAvoidCover>true</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Pawn/NecronScarabSwarm</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.0</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+    <PawnKindDef>
+		<defName>NecronWarrior</defName>
+		<label>NecronWarrior</label>
+		<race>Necron_Warrior</race>
+		<defaultFactionType>NecronFaction</defaultFactionType>
+		<combatPower>200</combatPower>
+		<itemQuality>Good</itemQuality>
+		<aiAvoidCover>true</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Pawn/NecronWarrior</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.0</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>50000</min>
+			<max>50000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>NGaussFlayer</li>
+		</weaponTags>
+	</PawnKindDef>
+
+    <PawnKindDef>
+		<defName>NecronImmortal</defName>
+		<label>Necron Immortal</label>
+		<race>Necron_Warrior</race>
+		<defaultFactionType>NecronFaction</defaultFactionType>
+		<combatPower>350</combatPower>
+		<itemQuality>Good</itemQuality>
+		<aiAvoidCover>true</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Pawn/NecronWarrior</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.0</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>50000</min>
+			<max>50000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>NGaussBlaster</li>
+		</weaponTags>
+	</PawnKindDef>
+
+    <PawnKindDef>
+		<defName>NecronLord</defName>
+		<label>Necron Lord</label>
+		<race>Necron_Lord</race>
+		<defaultFactionType>NecronFaction</defaultFactionType>
+		<combatPower>350</combatPower>
+		<itemQuality>Superior</itemQuality>
+		<aiAvoidCover>true</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Pawn/NecronLord</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.0</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>50000</min>
+			<max>50000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>NStaffOfLight</li>
+		</weaponTags>
+	</PawnKindDef>
+
+    <PawnKindDef>
+		<defName>NecronDestroyer</defName>
+		<label>Necron Destroyer</label>
+		<race>Necron_Destroyer</race>
+		<defaultFactionType>NecronFaction</defaultFactionType>
+		<combatPower>300</combatPower>
+		<itemQuality>Good</itemQuality>
+		<aiAvoidCover>true</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Pawn/NecronDestroyer</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.50</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>50000</min>
+			<max>50000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>NGaussCannon</li>
+		</weaponTags>
+	</PawnKindDef>
+
+</Defs>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef>
+		<defName>EldarFaction</defName>
+		<label>Eldar Strike Force</label>
+    <description>The Eldar, or Aeldari as they were known in the Eldar Lexicon before the fall of their lost realm, or the Asuryani (followers of Asuryan) as they refer to themselves, are an ancient humanoid alien race whose vast empire once extended the width and breadth of the known galaxy. The Aeldari Empire was without equal, and they counted themselves masters of the stars. But millennia ago, the Aeldari's overweening pride and their fall into hedonistic practices led to a cataclysm that all but eradicated their kind and led to the birth of the Chaos God Slaanesh. 
+	Despite their boundless power, the heart of their civilisation was torn out by this catastrophe of their own making, forcing the surviving Aeldari, now calling themselves "Eldar," to flee upon gigantic, continent-size starships called Craftworlds. Now they cling to survival by a thread, fighting the horrors of the galaxy with ritualised discipline and consummate skill.</description>
+    <pawnsPlural>Eldar</pawnsPlural>
+    <baseSelectionWeight>1</baseSelectionWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>false</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+	<appreciative>false</appreciative>
+    <leaderTitle>Farseer</leaderTitle>
+    <expandingIconTexture>Icons/EldarIcon</expandingIconTexture>
+    <colorSpectrum>
+      <li>(0.35, 0.35, 0)</li>
+      <li>(0.4, 0.2, 0)</li>
+    </colorSpectrum>
+    <startingGoodwill>
+      <min>-95</min>
+      <max>-85</max>
+    </startingGoodwill>
+		<earliestRaidDays>45</earliestRaidDays>
+		<factionNameMaker>NamerOGEldarFaction</factionNameMaker>
+		<baseNameMaker>NamerOGEldarBases</baseNameMaker>
+		<pawnNameMaker>NamerOGEldarPawns</pawnNameMaker>
+		<techLevel>Spacer</techLevel>
+		<backstoryCategory>Raider</backstoryCategory>
+		<hairTags>
+			<li>Punk</li>
+			<li>Rural</li>
+		</hairTags>
+    <naturalColonyGoodwill>
+      <min>-99</min>
+      <max>-95</max>
+    </naturalColonyGoodwill>
+    <allowedArrivalTemperatureRange>
+      <min>-40</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Normal</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <EldarGuardian>200</EldarGuardian>
+          <EldarFireSupport>200</EldarFireSupport>
+          <EldarWarlock>100</EldarWarlock>
+          <EldarWraithGuardM>75</EldarWraithGuardM>
+          <EldarWraithGuardR>75</EldarWraithGuardR>
+          <EldarFarseer>50</EldarFarseer>
+          <EldarFactionFarseer>0</EldarFactionFarseer>
+        </options>
+      </li>
+      <li>
+        <kindDef>Normal</kindDef>
+        <commonality>25</commonality>
+        <options>
+          <EldarGuardian>40</EldarGuardian>
+          <EldarFireSupport>40</EldarFireSupport>
+          <EldarWarlock>20</EldarWarlock>
+          <EldarFarseer>10</EldarFarseer>
+          <EldarFactionFarseer>0</EldarFactionFarseer>
+        </options>
+      </li>
+      <li>
+        <kindDef>Normal</kindDef>
+        <commonality>25</commonality>
+        <options>
+          <EldarGuardian>100</EldarGuardian>
+          <EldarFireSupport>100</EldarFireSupport>
+          <EldarWraithGuardM>75</EldarWraithGuardM>
+          <EldarWraithGuardR>75</EldarWraithGuardR>
+          <EldarWarlock>50</EldarWarlock>
+          <EldarFarseer>25</EldarFarseer>
+          <EldarFactionFarseer>0</EldarFactionFarseer>
+        </options>
+      </li>
+      <li>
+        <kindDef>FactionBase</kindDef>
+        <options>
+          <EldarGuardian>200</EldarGuardian>
+          <EldarFireSupport>200</EldarFireSupport>
+          <EldarWarlock>100</EldarWarlock>
+          <EldarWraithGuardM>75</EldarWraithGuardM>
+          <EldarWraithGuardR>75</EldarWraithGuardR>
+          <EldarFarseer>50</EldarFarseer>
+          <EldarFactionFarseer>0</EldarFactionFarseer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
+  </FactionDef>
+
+</Defs>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <FactionDef>
+    <defName>NecronFaction</defName>
+    <label>necron dynasty</label>
+    <description>A hive of ancient self-replicating machines.</description>
+    <pawnsPlural>necrons</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <fixedName>a necron dynasty</fixedName>
+		<raidCommonalityFromPointsCurve>
+			<points>
+				<li>(1000, 0.4)</li>
+				<li>(2500, 1)</li>
+			</points>
+		</raidCommonalityFromPointsCurve>
+    <humanlikeFaction>false</humanlikeFaction>
+    <hidden>true</hidden>
+    <autoFlee>false</autoFlee>
+    <canUseAvoidGrid>false</canUseAvoidGrid>
+    <techLevel>Ultra</techLevel>
+    <earliestRaidDays>45</earliestRaidDays>
+    <startingGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </startingGoodwill>
+    <mustStartOneEnemy>true</mustStartOneEnemy>
+    <naturalColonyGoodwill>
+      <min>-100</min>
+      <max>-100</max>
+    </naturalColonyGoodwill>
+		<maxPawnOptionCostFactor>3.0</maxPawnOptionCostFactor>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Normal</kindDef>
+        <options>
+            <NecronScarabSwarm>100</NecronScarabSwarm>
+            <NecronWarrior>100</NecronWarrior>
+            <NecronImmortal>75</NecronImmortal>
+            <NecronDestroyer>75</NecronDestroyer>
+            <NecronLord>50</NecronLord>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
+    <allowedArrivalTemperatureRange>
+      <min>-100</min>
+      <max>200</max>
+    </allowedArrivalTemperatureRange>
+  </FactionDef>
+
+</Defs>
