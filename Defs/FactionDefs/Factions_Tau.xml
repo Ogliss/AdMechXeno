@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <FactionDef>
+		<defName>TauFaction</defName>
+		<label>Tau Cadre</label>
+    <description>The Tau, known in their own language as the T'au, are a young, humanoid and technologically-advanced intelligent race native to the Eastern Fringes of the Milky Way Galaxy who are fighting to expand their interstellar empire and extend a philosophical concept they call the "Greater Good" (Tau'va in the Tau Lexicon) to all the intelligent species of the galaxy. 
+	The Tau claim to be a peaceful race when possible, asking if others will join their cause voluntarily instead of fighting against them. However, if their peaceful overtures are refused, the Tau may well decide to conquer a planet and add it to their growing interstellar empire for the Greater Good, searing the flesh from the bones of anyone who stands against their benign intentions.</description>
+    <pawnsPlural>Tau</pawnsPlural>
+    <baseSelectionWeight>1</baseSelectionWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>false</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+	<appreciative>false</appreciative>
+    <leaderTitle>Aun'va</leaderTitle>
+    <expandingIconTexture>Icons/TauIcon</expandingIconTexture>
+    <colorSpectrum>
+      <li>(0.35, 0.35, 0)</li>
+      <li>(0.4, 0.2, 0)</li>
+    </colorSpectrum>
+    <startingGoodwill>
+      <min>-95</min>
+      <max>-85</max>
+    </startingGoodwill>
+		<earliestRaidDays>45</earliestRaidDays>
+		<factionNameMaker>NamerOGTauFaction</factionNameMaker>
+		<baseNameMaker>NamerOGTauBases</baseNameMaker>
+		<pawnNameMaker>NamerOGTauPawns</pawnNameMaker>
+		<techLevel>Spacer</techLevel>
+		<backstoryCategory>Raider</backstoryCategory>
+		<hairTags>
+			<li>Punk</li>
+			<li>Rural</li>
+		</hairTags>
+    <naturalColonyGoodwill>
+      <min>-99</min>
+      <max>-95</max>
+    </naturalColonyGoodwill>
+    <allowedArrivalTemperatureRange>
+      <min>-40</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Normal</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <TauFireWarrior>200</TauFireWarrior>
+          <KrootWarrior>200</KrootWarrior>
+          <TauFireWarriorSgt>100</TauFireWarriorSgt>
+          <TauEthereal>50</TauEthereal>
+          <TauFactionEthereal>0</TauFactionEthereal>
+        </options>
+      </li>
+      <li>
+        <kindDef>Normal</kindDef>
+        <commonality>25</commonality>
+        <options>
+          <TauFireWarrior>40</TauFireWarrior>
+          <KrootWarrior>40</KrootWarrior>
+          <TauFireWarriorSgt>20</TauFireWarriorSgt>
+          <TauEthereal>10</TauEthereal>
+          <TauFactionEthereal>0</TauFactionEthereal>
+        </options>
+      </li>
+      <li>
+        <kindDef>Normal</kindDef>
+        <commonality>25</commonality>
+        <options>
+          <TauFireWarrior>100</TauFireWarrior>
+          <KrootWarrior>100</KrootWarrior>
+          <TauFireWarriorSgt>50</TauFireWarriorSgt>
+          <TauEthereal>25</TauEthereal>
+          <TauFactionEthereal>0</TauFactionEthereal>
+        </options>
+      </li>
+      <li>
+        <kindDef>FactionBase</kindDef>
+        <options>
+          <TauFireWarrior>200</TauFireWarrior>
+          <KrootWarrior>200</KrootWarrior>
+          <TauFireWarriorSgt>100</TauFireWarriorSgt>
+          <TauEthereal>50</TauEthereal>
+          <TauFactionEthereal>0</TauFactionEthereal>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
+  </FactionDef>
+</Defs>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef>
+		<defName>OrkFaction</defName>
+		<label>Ork Warband</label>
+    <description>The Orks, also called Greenskins, are a savage, warlike, green-skinned race of humanoids who are spread all across the Milky Way Galaxy. They share many features with Warhammer Fantasy Orcs (and were initially called "Space Orcs" to distinguish them). They are seen by their enemies (pretty much everyone else in the universe) as savage, warlike, and crude, but they are the most successful species in the whole galaxy, outnumbering possibly every other intelligent race, even Mankind (with the very plausible exception of the Tyranids).
+
+Greenskins are one of the most dangerous alien races to plague the galaxy. Numerous beyond belief and driven always to fight and conquer, the Orks threaten every single intelligent species of the galaxy. Orks are possibly the most warlike aliens in the 41st Millennium, and their number is beyond counting. Amid constant, seething tides of war and bloodshed, burgeoning Ork stellar empires rise and fall. Mercifully most are short-lived, soon destroying themselves in a maelstrom of violence and internecine conflict, but should the Orks ever truly unify, they would crush all opposition.</description>
+    <pawnsPlural>Ork</pawnsPlural>
+    <baseSelectionWeight>1</baseSelectionWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+	<appreciative>false</appreciative>
+    <leaderTitle>Warboss</leaderTitle>
+    <expandingIconTexture>Icons/OrkIcon</expandingIconTexture>
+    <colorSpectrum>
+      <li>(0.35, 0.35, 0)</li>
+      <li>(0.4, 0.2, 0)</li>
+    </colorSpectrum>
+    <startingGoodwill>
+      <min>-95</min>
+      <max>-85</max>
+    </startingGoodwill>
+		<earliestRaidDays>45</earliestRaidDays>
+		<factionNameMaker>NamerOGOrkFaction</factionNameMaker>
+		<baseNameMaker>NamerOGOrkBases</baseNameMaker>
+		<pawnNameMaker>NamerOGOrkPawns</pawnNameMaker>
+		<techLevel>Spacer</techLevel>
+		<backstoryCategory>Raider</backstoryCategory>
+		<hairTags>
+			<li>Punk</li>
+			<li>Rural</li>
+		</hairTags>
+    <naturalColonyGoodwill>
+      <min>-99</min>
+      <max>-95</max>
+    </naturalColonyGoodwill>
+    <allowedArrivalTemperatureRange>
+      <min>-40</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+    <pawnGroupMakers>
+      <li>
+        <kindDef>Normal</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <OrkSluggaBoy>200</OrkSluggaBoy>
+          <OrkChoppaBoy>200</OrkChoppaBoy>
+          <OrkShootaBoy>100</OrkShootaBoy>
+          <OrkEavyShootaBoy>75</OrkEavyShootaBoy>
+          <OrkShootaNob>75</OrkShootaNob>
+          <OrkChoppaNob>75</OrkChoppaNob>
+          <OrkEavyShootaNob>35</OrkEavyShootaNob>
+          <OrkFactionWarboss>0</OrkFactionWarboss>
+        </options>
+      </li>
+      <li>
+        <kindDef>Normal</kindDef>
+        <commonality>25</commonality>
+        <options>
+          <OrkSluggaBoy>40</OrkSluggaBoy>
+          <OrkChoppaBoy>40</OrkChoppaBoy>
+          <OrkShootaBoy>40</OrkShootaBoy>
+          <OrkEavyShootaBoy>40</OrkEavyShootaBoy>
+          <OrkShootaNob>20</OrkShootaNob>
+          <OrkChoppaNob>20</OrkChoppaNob>
+          <OrkEavyShootaNob>10</OrkEavyShootaNob>
+          <OrkFactionWarboss>0</OrkFactionWarboss>
+        </options>
+      </li>
+      <li>
+        <kindDef>Normal</kindDef>
+        <commonality>25</commonality>
+        <options>
+          <OrkSluggaBoy>100</OrkSluggaBoy>
+          <OrkChoppaBoy>100</OrkChoppaBoy>
+          <OrkShootaBoy>100</OrkShootaBoy>
+          <OrkEavyShootaBoy>100</OrkEavyShootaBoy>
+          <OrkShootaNob>75</OrkShootaNob>
+          <OrkChoppaNob>75</OrkChoppaNob>
+          <OrkEavyShootaNob>35</OrkEavyShootaNob>
+          <OrkFactionWarboss>0</OrkFactionWarboss>
+        </options>
+      </li>
+      <li>
+        <kindDef>FactionBase</kindDef>
+        <options>
+          <OrkSluggaBoy>200</OrkSluggaBoy>
+          <OrkChoppaBoy>200</OrkChoppaBoy>
+          <OrkShootaBoy>200</OrkShootaBoy>
+          <OrkEavyShootaBoy>100</OrkEavyShootaBoy>
+          <OrkShootaNob>75</OrkShootaNob>
+          <OrkChoppaNob>75</OrkChoppaNob>
+          <OrkEavyShootaNob>50</OrkEavyShootaNob>
+          <OrkFactionWarboss>0</OrkFactionWarboss>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
+  </FactionDef>
+
+</Defs>
