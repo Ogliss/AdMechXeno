@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <ThingCategoryDef>
+      <defName>CorpsesNecron</defName>
+      <label>necron corpses</label>
+      <parent>Corpses</parent>
+    </ThingCategoryDef>
+	
+    <ThingCategoryDef>
+      <defName>CorpsesMechanicus</defName>
+      <label>mechanicus corpses</label>
+      <parent>Corpses</parent>
+    </ThingCategoryDef>
+	
+    <ThingCategoryDef>
+      <defName>CorpsesEldarConstruct</defName>
+      <label>eldar construct corpses</label>
+      <parent>Corpses</parent>
+    </ThingCategoryDef>
+	
+</Defs>

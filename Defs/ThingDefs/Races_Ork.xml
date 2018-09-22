@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+<!-- Ork Race -->
 <!-- Ork Base Abstract -->
-
   <ThingDef ParentName="BasePawn" Name="BaseOrk" Abstract="True">
-    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
     <statBases>
       <MarketValue>1750</MarketValue>
       <MoveSpeed>4.81</MoveSpeed>
@@ -11,7 +11,8 @@
       <Flammability>1</Flammability>
       <ComfyTemperatureMin>-60</ComfyTemperatureMin>
       <ComfyTemperatureMax>65</ComfyTemperatureMax>
-      <LeatherAmount>25</LeatherAmount>
+      <LeatherAmount>75</LeatherAmount>
+	  <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
     </statBases>
     <tools>
       <li>
@@ -56,7 +57,6 @@
         <power>10</power>
         <cooldownTime>1.8</cooldownTime>
         <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <commonality>0.2</commonality>
       </li>
     </tools>
     <race>
@@ -70,7 +70,7 @@
       <foodType>OmnivoreHuman</foodType>
       <baseHungerRate>0.15</baseHungerRate>
       <baseBodySize>1.25</baseBodySize>
-      <baseHealthScale>1.5</baseHealthScale>
+      <baseHealthScale>1.0</baseHealthScale>
       <predator>true</predator>
       <lifeStageAges>
         <li>
@@ -100,33 +100,27 @@
       <hediffGiverSets>
         <li>OrganicStandard</li>
       </hediffGiverSets>
-      <leatherColor>(211,194,143)</leatherColor>
-      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
-      <leatherInsulation>0.75</leatherInsulation>
-      <leatherMarketValueFactor>2</leatherMarketValueFactor>
+	  <leatherDef>Leather_Ork</leatherDef>
       <meatLabel>ork flesh</meatLabel>
-      <leatherLabel>orkskin</leatherLabel>
     </race>
   </ThingDef>
 
 <!-- Ork Eavy Nob -->
-
   <ThingDef ParentName="BaseOrk">
     <defName>Ork_Eavy_Nob</defName>
     <label>Ork Eavy Nob</label>
-    <description>A Nob (pl: Nobz) is a larger Ork Boy who is smaller than and subservient to an Ork Warboss but still possesses some authority amongst other Greenskins of his tribe or klan because of his greater-than-average size and strength. The term "Nob" is believed to be an Orkish bastardisation of the Imperial Low Gothic word for "noble." Serving as a crude Greenskin ruling class, the Nobz are never above reminding the Boyz who's in charge by making a few bloody examples. This could involve hacking up some suitably impressive foes, or knocking a few fractious Boyz' blocks off. The Nobz aren't too fussy, just so long as it gets the message across. Whether clustered in a menacing mob around their Warboss, or lording it over the Boyz, Nobz are a force to be reckoned with. Their armour is usually festooned with kill-trophies, their flesh criss-crossed with impressive scars, earned in pit-fights or while killing their way through strings of brutal wars. Some Nobz even take to the field astride monstrous Warbikes, roaring through the enemy ranks like blood-soaked battering rams covered in guns. Many Nobz also outfit themselves with a very visible token of their position, be it a large pair of horns, taken from a creature they hunted, or a massive Iron Jaw, to show they have the meanest bite around!</description>
+    <description>A Nob is a larger Ork Boy who is smaller than and subservient to an Ork Warboss but still possesses some authority amongst other Greenskins of his tribe or klan because of his greater-than-average size and strength. The term "Nob" is believed to be an Orkish bastardisation of the Imperial Low Gothic word for "noble." Serving as a crude Greenskin ruling class, the Nobz are never above reminding the Boyz who's in charge by making a few bloody examples. This could involve hacking up some suitably impressive foes, or knocking a few fractious Boyz' blocks off. The Nobz aren't too fussy, just so long as it gets the message across. Whether clustered in a menacing mob around their Warboss, or lording it over the Boyz, Nobz are a force to be reckoned with. Their armour is usually festooned with kill-trophies, their flesh criss-crossed with impressive scars, earned in pit-fights or while killing their way through strings of brutal wars. Some Nobz even take to the field astride monstrous Warbikes, roaring through the enemy ranks like blood-soaked battering rams covered in guns. Many Nobz also outfit themselves with a very visible token of their position, be it a large pair of horns, taken from a creature they hunted, or a massive Iron Jaw, to show they have the meanest bite around!</description>
     <statBases>
 	
     </statBases>
     <race>
       <lifeExpectancy>9999</lifeExpectancy>
       <body>OrkBody</body>
-      <baseHealthScale>2.5</baseHealthScale>
+      <baseHealthScale>2.0</baseHealthScale>
     </race>
   </ThingDef>
 
   <!-- Ork Nob -->
-  
   <ThingDef ParentName="BaseOrk">
     <defName>Ork_Nob</defName>
     <label>Ork Nob</label>
@@ -137,12 +131,11 @@
     <race>
       <lifeExpectancy>9999</lifeExpectancy>
       <body>OrkBody</body>
-      <baseHealthScale>2.0</baseHealthScale>
+      <baseHealthScale>1.5</baseHealthScale>
     </race>
   </ThingDef>
 
   <!-- Ork Eavy Boy -->
-
   <ThingDef ParentName="BaseOrk">
     <defName>Ork_Eavy_Boy</defName>
     <label>Ork Eavy Boy</label>
@@ -153,13 +146,11 @@
     <race>
       <lifeExpectancy>9999</lifeExpectancy>
       <body>OrkBody</body>
-      <baseHealthScale>1.75</baseHealthScale>
+      <baseHealthScale>1.25</baseHealthScale>
     </race>
   </ThingDef>
 
-
   <!-- Ork Boy -->
-
   <ThingDef ParentName="BaseOrk">
     <defName>Ork_Boy</defName>
     <label>Ork Boy</label>
@@ -174,7 +165,6 @@
   </ThingDef>
 
   <!-- Ork Faction Leader Pawn -->
-
   <ThingDef ParentName="BaseOrk">
     <defName>Ork_FactionWarboss</defName>
     <label>Ork Warboss</label>
@@ -188,6 +178,7 @@
       <intelligence>Humanlike</intelligence>
       <nameCategory>HumanStandard</nameCategory>
       <lifeExpectancy>9999</lifeExpectancy>
+      <baseHealthScale>2.75</baseHealthScale>
       <body>OrkBody</body>
     </race>
   </ThingDef>

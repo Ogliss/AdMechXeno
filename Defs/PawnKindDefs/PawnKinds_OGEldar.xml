@@ -3,7 +3,9 @@
 
   <PawnKindDef Name="EldarBase" Abstract="True">
     <defaultFactionType>EldarFaction</defaultFactionType>
-    <backstoryCategory>Raider</backstoryCategory>
+    <backstoryCategories>
+      <li>Civil</li>
+    </backstoryCategories>
     <invNutrition>2.55</invNutrition>
 		<aiAvoidCover>true</aiAvoidCover>
 		<weaponMoney>
@@ -21,7 +23,7 @@
 					</countRange>
 				</li>
 				<li>
-					<thingDef>Medicine</thingDef>
+					<thingDef>MedicineIndustrial</thingDef>
 					<countRange>
 						<min>1</min>
 						<max>3</max>
@@ -68,7 +70,7 @@
 		<defName>EldarFarseer</defName>
 		<label>Eldar Farseer</label>
 		<race>Eldar_Farseer</race>
-		<combatPower>150</combatPower>
+		<combatPower>250</combatPower>
 		<itemQuality>Superior</itemQuality>
 		<aiAvoidCover>true</aiAvoidCover>
 		<lifeStages>
@@ -101,7 +103,7 @@
 		<label>Eldar Warlock</label>
 		<race>Eldar_Warlock</race>
 		<defaultFactionType>EldarFaction</defaultFactionType>
-		<combatPower>100</combatPower>
+		<combatPower>200</combatPower>
 		<itemQuality>Good</itemQuality>
 		<aiAvoidCover>true</aiAvoidCover>
 		<lifeStages>
@@ -129,70 +131,12 @@
 		</weaponTags>
 	</PawnKindDef>
 
-    <PawnKindDef>
-		<defName>EldarWraithGuardM</defName>
-		<label>Eldar Wraith Guard</label>
-		<race>Eldar_WraithGuard</race>
-		<defaultFactionType>EldarFaction</defaultFactionType>
-		<combatPower>100</combatPower>
-		<itemQuality>Good</itemQuality>
-		<aiAvoidCover>true</aiAvoidCover>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Pawn/EldarWraithGuard</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>1.5</drawSize>
-					<shadowData>
-						<volume>(0.6, 0.8, 0.6)</volume>
-					</shadowData>
-				</bodyGraphicData>
-			</li>
-		</lifeStages>
-		<weaponMoney>
-			<min>55000</min>
-			<max>55000</max>
-		</weaponMoney>
-		<weaponTags>
-			<li>EGhostMelee</li>
-		</weaponTags>
-	</PawnKindDef>
-
-    <PawnKindDef>
-		<defName>EldarWraithGuardR</defName>
-		<label>Eldar Wraith Guard</label>
-		<race>Eldar_WraithGuard</race>
-		<defaultFactionType>EldarFaction</defaultFactionType>
-		<combatPower>100</combatPower>
-		<itemQuality>Good</itemQuality>
-		<aiAvoidCover>true</aiAvoidCover>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Pawn/EldarWraithGuard</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>1.5</drawSize>
-					<shadowData>
-						<volume>(0.6, 0.8, 0.6)</volume>
-					</shadowData>
-				</bodyGraphicData>
-			</li>
-		</lifeStages>
-		<weaponMoney>
-			<min>55000</min>
-			<max>55000</max>
-		</weaponMoney>
-		<weaponTags>
-			<li>EWraithcannon</li>
-		</weaponTags>
-	</PawnKindDef>
-
   <PawnKindDef ParentName="EldarBase">
 		<defName>EldarGuardian</defName>
 		<label>Eldar Guardian</label>
 		<race>Eldar_Warrior</race>
 		<defaultFactionType>EldarFaction</defaultFactionType>
-		<combatPower>50</combatPower>
+		<combatPower>75</combatPower>
 		<itemQuality>Good</itemQuality>
 		<aiAvoidCover>true</aiAvoidCover>
 		<lifeStages>
@@ -225,7 +169,7 @@
 		<label>Eldar Fire Support</label>
 		<race>Eldar_Warrior</race>
 		<defaultFactionType>EldarFaction</defaultFactionType>
-		<combatPower>75</combatPower>
+		<combatPower>100</combatPower>
 		<itemQuality>Good</itemQuality>
 		<aiAvoidCover>true</aiAvoidCover>
 		<lifeStages>

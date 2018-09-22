@@ -1,105 +1,267 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+<!--B19-->
 
-  <FactionDef>
-		<defName>OrkFaction</defName>
-		<label>Ork Warband</label>
-    <description>The Orks, also called Greenskins, are a savage, warlike, green-skinned race of humanoids who are spread all across the Milky Way Galaxy. They share many features with Warhammer Fantasy Orcs (and were initially called "Space Orcs" to distinguish them). They are seen by their enemies (pretty much everyone else in the universe) as savage, warlike, and crude, but they are the most successful species in the whole galaxy, outnumbering possibly every other intelligent race, even Mankind (with the very plausible exception of the Tyranids).
+  <FactionDef Name="OrkFactionBase" Abstract="True">
+    <goodwillDailyGain>0.10</goodwillDailyGain>
+    <goodwillDailyFall>0.40</goodwillDailyFall>
+  </FactionDef>
 
-Greenskins are one of the most dangerous alien races to plague the galaxy. Numerous beyond belief and driven always to fight and conquer, the Orks threaten every single intelligent species of the galaxy. Orks are possibly the most warlike aliens in the 41st Millennium, and their number is beyond counting. Amid constant, seething tides of war and bloodshed, burgeoning Ork stellar empires rise and fall. Mercifully most are short-lived, soon destroying themselves in a maelstrom of violence and internecine conflict, but should the Orks ever truly unify, they would crush all opposition.</description>
-    <pawnsPlural>Ork</pawnsPlural>
-    <baseSelectionWeight>1</baseSelectionWeight>
+  <FactionDef ParentName="OrkFactionBase" Name="TekOrkFactionBase" Abstract="True">
+	<pawnSingular>ork</pawnSingular>
+    <pawnsPlural>orkz</pawnsPlural>
+    <listOrderPriority>10</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
     <canSiege>true</canSiege>
     <canStageAttacks>true</canStageAttacks>
-	<appreciative>false</appreciative>
     <leaderTitle>Warboss</leaderTitle>
+    <earliestRaidDays>45</earliestRaidDays>
     <expandingIconTexture>Icons/OrkIcon</expandingIconTexture>
+	<factionNameMaker>NamerOGOrkFaction</factionNameMaker>
+    <settlementNameMaker>NamerOGOrkBases</settlementNameMaker>
+		<techLevel>Spacer</techLevel>
+		<backstoryCategories>
+			<li>Raider</li>
+		</backstoryCategories>
+		<geneticVariance>0.8</geneticVariance>
+		<hairTags>
+			<li>Punk</li>
+		</hairTags>
+    <allowedArrivalTemperatureRange>
+      <min>-40</min>
+      <max>75</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+				<!-- Normal fights, ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <Squig>10</Squig>
+          <OrkSluggaBoy>10</OrkSluggaBoy>
+          <OrkChoppaBoy>15</OrkChoppaBoy>
+          <OrkShootaBoy>7.5</OrkShootaBoy>
+          <OrkEavyShootaBoy>5</OrkEavyShootaBoy>
+          <OrkShootaNob>0.5</OrkShootaNob>
+          <OrkChoppaNob>0.5</OrkChoppaNob>
+          <OrkEavyShootaNob>2</OrkEavyShootaNob>
+          <OrkFactionWarboss>0</OrkFactionWarboss>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, melee-only -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <Squig>10</Squig>
+          <OrkChoppaBoy>15</OrkChoppaBoy>
+          <OrkChoppaNob>10</OrkChoppaNob>
+          <OrkEavyShootaNob>5</OrkEavyShootaNob>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>20</commonality>
+        <options>
+          <OrkSluggaBoy>15</OrkSluggaBoy>
+          <OrkShootaBoy>10</OrkShootaBoy>
+          <OrkEavyShootaBoy>6</OrkEavyShootaBoy>
+          <OrkShootaNob>2</OrkShootaNob>
+          <OrkEavyShootaNob>0.5</OrkEavyShootaNob>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, explosives with ranged mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>15</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <OrkShootaBoy>1</OrkShootaBoy>
+          <OrkShootaNob>10</OrkShootaNob>
+          <OrkEavyShootaBoy>1</OrkEavyShootaBoy>
+          <OrkEavyShootaNob>10</OrkEavyShootaNob>
+          <OrkChoppaNob>1</OrkChoppaNob>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, snipers only -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <OrkEavyShootaBoy>10</OrkEavyShootaBoy>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, drifters only (very rare) -->
+        <kindDef>Combat</kindDef>
+        <commonality>2.5</commonality>
+        <maxTotalPoints>1000</maxTotalPoints>
+        <options>
+          <Squig>10</Squig>
+          <OrkChoppaNob>10</OrkChoppaNob>
+        </options>
+      </li>
+      <li>
+				<!-- Base defense, mainly ranged with melee mix-ins -->
+				<kindDef>Settlement</kindDef>
+        <options>
+          <OrkShootaBoy>10</OrkShootaBoy>
+          <Squig>10</Squig>
+					<OrkChoppaBoy>15</OrkChoppaBoy>
+					<OrkEavyShootaNob>10</OrkEavyShootaNob>
+					<OrkShootaNob>10</OrkShootaNob>
+					<OrkEavyShootaBoy>10</OrkEavyShootaBoy>
+          <OrkChoppaNob>10</OrkChoppaNob>
+          <OrkFactionWarboss>0</OrkFactionWarboss>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+  </FactionDef>
+
+  <FactionDef ParentName="TekOrkFactionBase">
+    <defName>OrkFaction</defName>
+    <label>ork warband</label>
+    <description>The Orks, also called Greenskins, are a savage, warlike, green-skinned race of humanoids who are spread all across the Milky Way Galaxy. They are seen by their enemies as savage, warlike, and crude, but they are the most successful species in the whole galaxy, outnumbering possibly every other intelligent race, even Mankind.
+	
+Greenskins are one of the most dangerous alien races to plague the galaxy. Numerous beyond belief and driven always to fight and conquer, the Orks threaten every single intelligent species of the galaxy. Orks are possibly the most warlike aliens in the 41st Millennium, and their number is beyond counting. Amid constant, seething tides of war and bloodshed, burgeoning Ork stellar empires rise and fall. Mercifully most are short-lived, soon destroying themselves in a maelstrom of violence and internecine conflict, but should the Orks ever truly unify, they would crush all opposition.</description>
     <colorSpectrum>
       <li>(0.35, 0.35, 0)</li>
       <li>(0.4, 0.2, 0)</li>
     </colorSpectrum>
     <startingGoodwill>
-      <min>-95</min>
-      <max>-85</max>
+      <min>0</min>
+      <max>0</max>
     </startingGoodwill>
-		<earliestRaidDays>45</earliestRaidDays>
-		<factionNameMaker>NamerOGOrkFaction</factionNameMaker>
-		<baseNameMaker>NamerOGOrkBases</baseNameMaker>
-		<pawnNameMaker>NamerOGOrkPawns</pawnNameMaker>
-		<techLevel>Spacer</techLevel>
-		<backstoryCategory>Raider</backstoryCategory>
-		<hairTags>
-			<li>Punk</li>
-			<li>Rural</li>
-		</hairTags>
     <naturalColonyGoodwill>
-      <min>-99</min>
-      <max>-95</max>
+      <min>-50</min>
+      <max>0</max>
     </naturalColonyGoodwill>
+  </FactionDef>
+  
+  <FactionDef Name="OrkFactionFeralBase" Abstract="True">
+
+  </FactionDef>
+  
+  <FactionDef ParentName="OrkFactionFeralBase" Name="FeralOrkFactionBase" Abstract="True">
+	<pawnSingular>feral ork</pawnSingular>
+    <pawnsPlural>feral orkz</pawnsPlural>
+    <listOrderPriority>20</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <canSiege>true</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Feral Warboss</leaderTitle>
+    <expandingIconTexture>Icons/OrkIcon</expandingIconTexture>
+    <permanentEnemy>true</permanentEnemy>
+	<factionNameMaker>NamerOGOrkFaction</factionNameMaker>
+    <settlementNameMaker>NamerOGOrkBases</settlementNameMaker>
+		<techLevel>Neolithic</techLevel>
+		<backstoryCategories>
+			<li>Tribal</li>
+		</backstoryCategories>
+		<geneticVariance>0.1</geneticVariance>
+		<hairTags>
+			<li>Tribal</li>
+		</hairTags>
     <allowedArrivalTemperatureRange>
       <min>-40</min>
       <max>45</max>
     </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
     <pawnGroupMakers>
       <li>
-        <kindDef>Normal</kindDef>
+				<!-- Normal fights, ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
-          <OrkSluggaBoy>200</OrkSluggaBoy>
-          <OrkChoppaBoy>200</OrkChoppaBoy>
-          <OrkShootaBoy>100</OrkShootaBoy>
-          <OrkEavyShootaBoy>75</OrkEavyShootaBoy>
-          <OrkShootaNob>75</OrkShootaNob>
-          <OrkChoppaNob>75</OrkChoppaNob>
-          <OrkEavyShootaNob>35</OrkEavyShootaNob>
-          <OrkFactionWarboss>0</OrkFactionWarboss>
+          <FeralOrkChoppaBoy>15</FeralOrkChoppaBoy>
+          <FeralOrkShootaBoy>5</FeralOrkShootaBoy>
+          <FeralOrkChoppaNob>0.5</FeralOrkChoppaNob>
+          <FeralOrkFactionWarboss>0</FeralOrkFactionWarboss>
         </options>
       </li>
       <li>
-        <kindDef>Normal</kindDef>
-        <commonality>25</commonality>
+        <!-- Normal fights, melee-only -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
         <options>
-          <OrkSluggaBoy>40</OrkSluggaBoy>
-          <OrkChoppaBoy>40</OrkChoppaBoy>
-          <OrkShootaBoy>40</OrkShootaBoy>
-          <OrkEavyShootaBoy>40</OrkEavyShootaBoy>
-          <OrkShootaNob>20</OrkShootaNob>
-          <OrkChoppaNob>20</OrkChoppaNob>
-          <OrkEavyShootaNob>10</OrkEavyShootaNob>
-          <OrkFactionWarboss>0</OrkFactionWarboss>
+          <FeralOrkChoppaBoy>15</FeralOrkChoppaBoy>
+          <FeralOrkShootaBoy>10</FeralOrkShootaBoy>
+          <FeralOrkEavyShootaBoy>5</FeralOrkEavyShootaBoy>
+          <FeralOrkChoppaNob>7.5</FeralOrkChoppaNob>
+          <FeralOrkShootaNob>5</FeralOrkShootaNob>
+          <FeralOrkEavyShootaNob>2.5</FeralOrkEavyShootaNob>
         </options>
       </li>
       <li>
-        <kindDef>Normal</kindDef>
-        <commonality>25</commonality>
+        <!-- Normal fights, drifters only (very rare) -->
+        <kindDef>Combat</kindDef>
+        <commonality>2.5</commonality>
+        <maxTotalPoints>1000</maxTotalPoints>
         <options>
-          <OrkSluggaBoy>100</OrkSluggaBoy>
-          <OrkChoppaBoy>100</OrkChoppaBoy>
-          <OrkShootaBoy>100</OrkShootaBoy>
-          <OrkEavyShootaBoy>100</OrkEavyShootaBoy>
-          <OrkShootaNob>75</OrkShootaNob>
-          <OrkChoppaNob>75</OrkChoppaNob>
-          <OrkEavyShootaNob>35</OrkEavyShootaNob>
-          <OrkFactionWarboss>0</OrkFactionWarboss>
+          <FeralOrkChoppaNob>10</FeralOrkChoppaNob>
         </options>
       </li>
       <li>
-        <kindDef>FactionBase</kindDef>
+				<!-- Base defense, mainly ranged with melee mix-ins -->
+				<kindDef>Settlement</kindDef>
         <options>
-          <OrkSluggaBoy>200</OrkSluggaBoy>
-          <OrkChoppaBoy>200</OrkChoppaBoy>
-          <OrkShootaBoy>200</OrkShootaBoy>
-          <OrkEavyShootaBoy>100</OrkEavyShootaBoy>
-          <OrkShootaNob>75</OrkShootaNob>
-          <OrkChoppaNob>75</OrkChoppaNob>
-          <OrkEavyShootaNob>50</OrkEavyShootaNob>
-          <OrkFactionWarboss>0</OrkFactionWarboss>
+          <FeralOrkChoppaBoy>15</FeralOrkChoppaBoy>
+          <FeralOrkShootaBoy>10</FeralOrkShootaBoy>
+          <FeralOrkEavyShootaBoy>5</FeralOrkEavyShootaBoy>
+          <FeralOrkChoppaNob>7.5</FeralOrkChoppaNob>
+          <FeralOrkShootaNob>5</FeralOrkShootaNob>
+          <FeralOrkEavyShootaNob>2.5</FeralOrkEavyShootaNob>
         </options>
       </li>
     </pawnGroupMakers>
-    <homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+  </FactionDef>
+
+  <FactionDef ParentName="FeralOrkFactionBase">
+	<defName>FeralOrkFaction</defName>
+	<label>feral ork warband</label>
+    <description>Feral Orks or Wildboyz are Orks who arise on a world that a spaceborne Ork WAAAGH! has already assaulted, though they possess only pre-industrial levels of technology and culture. Feral Orks appear after a WAAAGH! has already infested a planet and then moved on to seek new battles elsewhere. Usually Feral Orks are a new generation of Orks grown from the fungal reproductive spores released by spaceborne Orks and left behind on the world their spaceborne counterparts have abandoned.
+
+Feral Orks can also be derived from an original population of spaceborne Orks stranded on a world who effectively devolve back to a feral state, losing their access to more advanced technology. The Feral Orks, while less advanced than their fellow Greenskins, do have access to a variety of wargear in their armoury. However, much of it works due to the strange effects it has on the mind and behaviour of the Ork, rather than actually producing a physical effect upon the enemy.</description>
+    <colorSpectrum>
+      <li>(0.25, 0.20, 0.50)</li>
+      <li>(0.35, 0.30, 0.80)</li>
+    </colorSpectrum>
+    <startingGoodwill>
+      <min>0</min>
+      <max>0</max>
+    </startingGoodwill>
   </FactionDef>
 
 </Defs>

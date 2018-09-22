@@ -3,7 +3,7 @@
 <!-- Eldar Base Abstract -->
 
   <ThingDef ParentName="BasePawn" Name="BaseEldar" Abstract="True">
-    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
     <statBases>
       <MarketValue>1750</MarketValue>
       <MoveSpeed>5.61</MoveSpeed>
@@ -90,33 +90,65 @@
       <hediffGiverSets>
         <li>OrganicStandard</li>
       </hediffGiverSets>
-      <leatherColor>(255,241,219)</leatherColor>
-      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
-      <leatherInsulation>0.70</leatherInsulation>
-      <leatherMarketValueFactor>2</leatherMarketValueFactor>
+	  <leatherDef>Leather_Eldar</leatherDef>
       <meatLabel>eldar flesh</meatLabel>
-      <leatherLabel>eldarskin</leatherLabel>
       <body>EldarBody</body>
     </race>
   </ThingDef>
+
   
   <ThingDef ParentName="BasePawn" Name="BaseEldarConstruct" Abstract="True">
-    <soundImpactDefault>BulletImpactMetal</soundImpactDefault>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <statBases>
       <PsychicSensitivity>+0.5</PsychicSensitivity>
       <ToxicSensitivity>0</ToxicSensitivity>
       <Flammability>0</Flammability>
       <ComfyTemperatureMin>-100</ComfyTemperatureMin>
       <ComfyTemperatureMax>250</ComfyTemperatureMax>
+      <MeatAmount>0</MeatAmount>
     </statBases>
     <race>
+      <fleshType>EldarConstruct</fleshType>
       <needsRest>false</needsRest>
       <hasGenders>false</hasGenders>
       <foodType>None</foodType>
+      <lifeExpectancy>99999</lifeExpectancy>
     </race>
   </ThingDef>
 
-
+  <!-- Walker (Wraithguard/wraithblade/wraithknight/wraithlord) base -->
+  <ThingDef ParentName="BaseEldarConstruct" Name="BaseEldarWalker" Abstract="True">
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <baseBodySize>1.0</baseBodySize>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+    </race>
+    <butcherProducts>
+      <Steel>20</Steel>
+      <Plasteel>5</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
+  </ThingDef>
+   
+  <PawnKindDef Name="BaseEldarConstructKind" Abstract="True">
+    <defaultFactionType>EldarFaction</defaultFactionType>
+    <aiAvoidCover>false</aiAvoidCover>
+    <destroyGearOnDrop>false</destroyGearOnDrop>
+  </PawnKindDef>  
+  
 <!-- Eldar Faction Leader -->
 
   <ThingDef ParentName="BaseEldar">
@@ -148,7 +180,7 @@
     </statBases>
     <race>
       <lifeExpectancy>25000</lifeExpectancy>
-      <baseHealthScale>2.5</baseHealthScale>
+      <baseHealthScale>1.50</baseHealthScale>
     </race>
   </ThingDef>
 
@@ -161,7 +193,7 @@
     <statBases>
     </statBases>
     <race>
-      <baseHealthScale>0.8</baseHealthScale>
+      <baseHealthScale>0.75</baseHealthScale>
     </race>
   </ThingDef>
 
@@ -176,65 +208,116 @@
     </statBases>
     <race>
       <lifeExpectancy>15000</lifeExpectancy>
-      <baseHealthScale>1.2</baseHealthScale>
+      <baseHealthScale>1.25</baseHealthScale>
     </race>
   </ThingDef>
 
 <!-- Eldar Wraith Guard -->
-
-  <ThingDef ParentName="BaseEldarConstruct">
+<!-- Base -->
+  <ThingDef ParentName="BaseEldarWalker">
     <defName>Eldar_WraithGuard</defName>
-    <label>Eldar Wraith Guard</label>
+    <label>wraithguard</label>
     <description>The Eldar Wraithguard are not living warriors; they are artificial robotic constructs created from the complex psycho-plastic material crafted by the Eldar of the Craftworlds known as Wraithbone. Each Wraithguard has a Spirit Stone containing the soul of an elite Eldar warrior that was drawn out of the Infinity Circuit of a Craftworld. Wraithguard are smaller in size than Wraithlords, and carry a weapon known as a Wraithcannon which is a short-range, but potent weapon capable of opening a small rift into the Warp which sucks the target, or pieces of the target, within the Immaterium. When used against infantrymen, the result is invariably fatal. Due to their Wraithbone construction, Wraithguards can suffer damage that would cripple, or even kill, a living Eldar warrior and still continue to fight, making them useful in situations that would be suicide for living soldiers. They see through the Warp using what is known as "Wraithsight" but as the Warp is a tumultuous place, Wraithguards often have trouble discerning the true nature of realspace and so can find themselves blinded and unable to function effectively. Because of this tendency Wraithguard are often led into battle by Warlocks who help to guide them.</description>
     <statBases>
-      <ArmorRating_Blunt>0.52</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.97</ArmorRating_Sharp>
-      <MeatAmount>0</MeatAmount>
+      <MoveSpeed>3.0</MoveSpeed>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
     </statBases>
-    <verbs>
+    <tools>
       <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.4</defaultCooldownTime>
-        <meleeDamageBaseAmount>5</meleeDamageBaseAmount>
-        <meleeDamageDef>Blunt</meleeDamageDef>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
       </li>
       <li>
-        <verbClass>Verb_MeleeAttack</verbClass>
-        <defaultCooldownTime>1.9</defaultCooldownTime>
-        <meleeDamageBaseAmount>10</meleeDamageBaseAmount>
-        <meleeDamageDef>Blunt</meleeDamageDef>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
       </li>
-    </verbs>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
     <race>
-      <thinkTreeMain>Humanlike</thinkTreeMain>
-      <intelligence>ToolUser</intelligence>
-      <body>NecronWarrior</body>
-      <baseBodySize>1</baseBodySize>
-      <baseHealthScale>2.0</baseHealthScale>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Pawn_Mech_Centipede_Wounded</soundWounded>
-          <soundDeath>Pawn_Mech_Centipede_Death</soundDeath>
-          <soundCall>Pawn_Mech_Centipede_Call</soundCall>
-        </li>
-      </lifeStageAges>
-      <soundCallIntervalRange>
-        <min>1000</min>
-        <max>2000</max>
-      </soundCallIntervalRange>
-      <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+      <body>EldarConstruct</body>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHealthScale>3</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
     </race>
-    <butcherProducts>
-      <Steel>80</Steel>
-      <Plasteel>50</Plasteel>
-      <Component>2</Component>
-    </butcherProducts>
   </ThingDef>
+<!-- Melee -->
+  <PawnKindDef ParentName="BaseEldarConstructKind">
+    <defName>EldarWraithGuardM</defName>
+    <label>eldar wraithguard</label>
+    <race>Eldar_WraithGuard</race>
+    <combatPower>200</combatPower>
 
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/EldarWraithGuard</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>EGhostMelee</li>
+    </weaponTags>
+  </PawnKindDef>  
+<!-- Ranged -->
+  <PawnKindDef ParentName="BaseEldarConstructKind">
+    <defName>EldarWraithGuardR</defName>
+    <label>eldar wraithguard</label>
+    <race>Eldar_WraithGuard</race>
+    <combatPower>200</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/EldarWraithGuard</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>EWraithcannon</li>
+    </weaponTags>
+  </PawnKindDef>  
+  
 </Defs>

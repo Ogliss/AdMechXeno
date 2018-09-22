@@ -1,51 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+<!--B19-->
+
   <FactionDef>
     <defName>NecronFaction</defName>
     <label>necron dynasty</label>
-    <description>A hive of ancient self-replicating machines.</description>
+    <pawnSingular>necron</pawnSingular>
     <pawnsPlural>necrons</pawnsPlural>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <fixedName>a necron dynasty</fixedName>
 		<raidCommonalityFromPointsCurve>
 			<points>
-				<li>(1000, 0.4)</li>
-				<li>(2500, 1)</li>
-			</points>
+        <li>(700, 0.1)</li>
+        <li>(900, 0.2)</li>
+        <li>(1200, 1)</li>
+        <li>(4000, 1.5)</li>
+      </points>
 		</raidCommonalityFromPointsCurve>
     <humanlikeFaction>false</humanlikeFaction>
     <hidden>true</hidden>
     <autoFlee>false</autoFlee>
     <canUseAvoidGrid>false</canUseAvoidGrid>
     <techLevel>Ultra</techLevel>
-    <earliestRaidDays>45</earliestRaidDays>
-    <startingGoodwill>
-      <min>-100</min>
-      <max>-100</max>
-    </startingGoodwill>
-    <mustStartOneEnemy>true</mustStartOneEnemy>
-    <naturalColonyGoodwill>
-      <min>-100</min>
-      <max>-100</max>
-    </naturalColonyGoodwill>
-		<maxPawnOptionCostFactor>3.0</maxPawnOptionCostFactor>
+    <earliestRaidDays>180</earliestRaidDays>
+    <permanentEnemy>true</permanentEnemy>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(400,200)</li>
+        <li>(900,300)</li>
+        <li>(100000,10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
     <pawnGroupMakers>
       <li>
-        <kindDef>Normal</kindDef>
+        <!-- All types-->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
         <options>
-            <NecronScarabSwarm>100</NecronScarabSwarm>
-            <NecronWarrior>100</NecronWarrior>
-            <NecronImmortal>75</NecronImmortal>
-            <NecronDestroyer>75</NecronDestroyer>
-            <NecronLord>50</NecronLord>
+          <NecronScarabSwarm>20</NecronScarabSwarm>
+          <NecronWarrior>10</NecronWarrior>
+          <NecronImmortal>10</NecronImmortal>
+          <NecronDestroyer>10</NecronDestroyer>
+          <NecronLord>1</NecronLord>
+        </options>
+      </li>
+      <li>
+        <!-- Ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>80</commonality>
+        <options>
+          <NecronWarrior>10</NecronWarrior>
+          <NecronImmortal>10</NecronImmortal>
+          <NecronDestroyer>10</NecronDestroyer>
+          <NecronLord>1</NecronLord>
+        </options>
+      </li>
+      <li>
+        <!-- Melee only-->
+        <kindDef>Combat</kindDef>
+        <commonality>70</commonality>
+        <options>
+          <NecronScarabSwarm>10</NecronScarabSwarm>
+        </options>
+      </li>
+      <li>
+        <!-- Destroyer only -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <options>
+          <NecronDestroyer>10</NecronDestroyer>
         </options>
       </li>
     </pawnGroupMakers>
-    <homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
     <allowedArrivalTemperatureRange>
       <min>-100</min>
       <max>200</max>
     </allowedArrivalTemperatureRange>
   </FactionDef>
-
 </Defs>

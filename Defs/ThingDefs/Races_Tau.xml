@@ -3,7 +3,7 @@
 <!-- Tau Base Abstract -->
 
   <ThingDef ParentName="BasePawn" Name="BaseTau" Abstract="True">
-    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
     <statBases>
       <MarketValue>1750</MarketValue>
       <MoveSpeed>4.61</MoveSpeed>
@@ -90,12 +90,8 @@
       <hediffGiverSets>
         <li>OrganicStandard</li>
       </hediffGiverSets>
-      <leatherColor>(211,194,143)</leatherColor>
-      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
-      <leatherInsulation>0.70</leatherInsulation>
-      <leatherMarketValueFactor>2</leatherMarketValueFactor>
+	  <leatherDef>Leather_Tau</leatherDef>
       <meatLabel>tau flesh</meatLabel>
-      <leatherLabel>tauskin</leatherLabel>
     </race>
   </ThingDef>
 
@@ -164,10 +160,8 @@
       <body>Kroot</body>
       <baseHungerRate>0.25</baseHungerRate>
       <baseHealthScale>1.8</baseHealthScale>
-      <leatherColor>(0,107,58)</leatherColor>
-      <leatherInsulation>0.65</leatherInsulation>
+	  <leatherDef>Leather_Kroot</leatherDef>
       <meatLabel>kroot flesh</meatLabel>
-      <leatherLabel>krootskin</leatherLabel>
     </race>
   </ThingDef>
 

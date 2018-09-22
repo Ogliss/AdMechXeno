@@ -3,7 +3,9 @@
 
   <PawnKindDef Name="TauBase" Abstract="True">
     <defaultFactionType>TauFaction</defaultFactionType>
-    <backstoryCategory>Raider</backstoryCategory>
+    <backstoryCategories>
+      <li>Civil</li>
+    </backstoryCategories>
     <invNutrition>2.55</invNutrition>
 		<aiAvoidCover>true</aiAvoidCover>
 		<weaponMoney>
@@ -21,7 +23,7 @@
 					</countRange>
 				</li>
 				<li>
-					<thingDef>Medicine</thingDef>
+					<thingDef>MedicineIndustrial</thingDef>
 					<countRange>
 						<min>1</min>
 						<max>3</max>
@@ -33,7 +35,9 @@
 
   <PawnKindDef Name="KrootBase" Abstract="True">
     <defaultFactionType>TauFaction</defaultFactionType>
-    <backstoryCategory>Raider</backstoryCategory>
+    <backstoryCategories>
+      <li>Raider</li>
+    </backstoryCategories>
     <invNutrition>2.55</invNutrition>
 		<aiAvoidCover>true</aiAvoidCover>
 		<weaponMoney>
@@ -62,7 +66,7 @@
           </countRange>
         </li>
         <li>
-          <thingDef>HerbalMedicine</thingDef>
+          <thingDef>MedicineHerbal</thingDef>
           <countRange>
             <min>1</min>
             <max>3</max>

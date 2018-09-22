@@ -1,17 +1,69 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- Mechanicus Base Abstract -->
-
   <ThingDef ParentName="BasePawn" Name="BaseMechanicus" Abstract="True">
-    <soundImpactDefault>BulletImpactFlesh</soundImpactDefault>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <statBases>
-      <MarketValue>1750</MarketValue>
-      <MoveSpeed>4.61</MoveSpeed>
       <PsychicSensitivity>-1</PsychicSensitivity>
-      <Flammability>1</Flammability>
-      <ComfyTemperatureMin>-60</ComfyTemperatureMin>
-      <ComfyTemperatureMax>65</ComfyTemperatureMax>
-      <MeatAmount>5</MeatAmount>
+      <ToxicSensitivity>0</ToxicSensitivity>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>250</ComfyTemperatureMax>
+      <MeatAmount>0</MeatAmount>
+    </statBases>
+    <race>
+      <fleshType>Mechanicus</fleshType>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <foodType>None</foodType>
+      <lifeExpectancy>99999</lifeExpectancy>
+    </race>
+  </ThingDef>
+
+  <PawnKindDef Name="BaseMechanicusKind" Abstract="True">
+    <defaultFactionType>MechanicusFaction</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
+    <destroyGearOnDrop>false</destroyGearOnDrop>
+  </PawnKindDef>  
+
+<!-- Walker base -->
+  <ThingDef ParentName="BaseMechanicus" Name="BaseMechanicusWalker" Abstract="True">
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <baseBodySize>1.0</baseBodySize>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+    </race>
+    <butcherProducts>
+      <Steel>20</Steel>
+      <Plasteel>5</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
+  </ThingDef>
+  
+<!-- Tech-priests -->
+<!--B19-->
+<!-- Faction Leader -->
+  <ThingDef ParentName="BaseMechanicusWalker">
+    <defName>Mechanicus_FactionTechPriest</defName>
+    <label>tech-priest</label>
+    <description>A Tech-priest, also spelled Tech-Priest, is an Adept of the Adeptus Mechanicus of the Imperium of Man who is generally responsible for maintaining all of the advanced technology of the Imperium, enlarging the Imperium's stocks of technical knowledge and conducting what little new scientific research occurs within the Imperium since the end of the Horus Heresy. Tech-priests are members of the Cult Mechanicus, the Cult of the Machine, a priesthood which forms an ecclesiastical hierarchy for the Cult Mechanicus of technicians, scientists, and religious leaders who believe that knowledge represents the only true divinity in the universe. The Tech-priests provide the rest of the Imperium with its technicians, scientists and engineers. Though their bodies often incorporate many inorganic components as bionic replacements, Tech-priests are fully human, unlike the cybernetic Servitors created by the Adeptus Mechanicus that carry out most of the heavy labour for all of the Imperium's myriad organisations and enterprises.</description>
+    <statBases>
+      <MoveSpeed>5.0</MoveSpeed>
+      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
     </statBases>
     <tools>
       <li>
@@ -19,155 +71,506 @@
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>7</power>
-        <cooldownTime>1.6</cooldownTime>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>22</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
       </li>
       <li>
         <label>right fist</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
-        <power>7</power>
-        <cooldownTime>1.6</cooldownTime>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
         <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>22</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
       </li>
     </tools>
     <race>
-      <thinkTreeMain>Mechanoid</thinkTreeMain>
-	  <intelligence>ToolUser</intelligence>
-      <makesFootprints>true</makesFootprints>
-      <lifeExpectancy>999999</lifeExpectancy>
-      <meatColor>(200,135,100)</meatColor>
-      <fleshType>Mechanoid</fleshType>
-      <needsRest>false</needsRest>
-      <hasGenders>false</hasGenders>
-      <foodType>None</foodType>
-      <baseBodySize>1.25</baseBodySize>
-      <baseHealthScale>1</baseHealthScale>
-      <lifeStageAges>
-        <li>
-          <def>HumanlikeAdult</def>
-          <minAge>18</minAge>
-        </li>
-      </lifeStageAges>
+      <body>Human</body>
+      <baseHealthScale>2.5</baseHealthScale>
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-      <specialShadowData>
-        <volume>(0.3, 0.8, 0.4)</volume>
-        <offset>(0,0,-0.3)</offset>
-      </specialShadowData>
-      <ageGenerationCurve>
-        <points>
-          <li>(14,0)</li>
-          <li>(16,100)</li>
-          <li>(50,100)</li>
-          <li>(60,30)</li>
-          <li>(70,18)</li>
-          <li>(80,10)</li>
-          <li>(90,3)</li>
-          <li>(100,0)</li>
-        </points>
-      </ageGenerationCurve>
-      <hediffGiverSets>
-        <li>OrganicStandard</li>
-      </hediffGiverSets>
-      <leatherColor>(215,237,225)</leatherColor>
-      <leatherCommonalityFactor>0.01</leatherCommonalityFactor>
-      <leatherInsulation>0.70</leatherInsulation>
-      <leatherMarketValueFactor>2</leatherMarketValueFactor>
-      <meatLabel>mechanicus flesh</meatLabel>
-      <leatherLabel>mechanicusskin</leatherLabel>
     </race>
-    <butcherProducts>
-      <Steel>40</Steel>
-      <Plasteel>25</Plasteel>
-      <Component>1</Component>
-    </butcherProducts>
   </ThingDef>
 
-<!-- Mechanicus Faction Leader Pawn -->
+  <PawnKindDef ParentName="BaseMechanicusKind">
+    <defName>MechanicusFactionTechPriest</defName>
+    <label>tech-priest lord</label>
+    <race>Mechanicus_FactionTechPriest</race>
+    <combatPower>600</combatPower>
 
-  <ThingDef ParentName="BaseMechanicus">
-    <defName>Mechanicus_FactionTechPriest</defName>
-    <label>Faction Leader</label>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/AdeptusMechanicusTechPriest</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>MacroStubber</li>
+    </weaponTags>
+  </PawnKindDef>  
+
+<!-- Dominus -->  
+  <ThingDef ParentName="BaseMechanicusWalker">
+    <defName>Mechanicus_TechPriestDominus</defName>
+    <label>tech-priest dominus</label>
     <description>A Tech-priest, also spelled Tech-Priest, is an Adept of the Adeptus Mechanicus of the Imperium of Man who is generally responsible for maintaining all of the advanced technology of the Imperium, enlarging the Imperium's stocks of technical knowledge and conducting what little new scientific research occurs within the Imperium since the end of the Horus Heresy. Tech-priests are members of the Cult Mechanicus, the Cult of the Machine, a priesthood which forms an ecclesiastical hierarchy for the Cult Mechanicus of technicians, scientists, and religious leaders who believe that knowledge represents the only true divinity in the universe. The Tech-priests provide the rest of the Imperium with its technicians, scientists and engineers. Though their bodies often incorporate many inorganic components as bionic replacements, Tech-priests are fully human, unlike the cybernetic Servitors created by the Adeptus Mechanicus that carry out most of the heavy labour for all of the Imperium's myriad organisations and enterprises.</description>
     <statBases>
-      <MoveSpeed>5.8</MoveSpeed>
+      <MoveSpeed>5.0</MoveSpeed>
+      <ArmorRating_Blunt>0.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.5</ArmorRating_Sharp>
     </statBases>
-    <race>
-      <thinkTreeMain>Humanlike</thinkTreeMain>
-      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-      <intelligence>Humanlike</intelligence>
-      <nameCategory>HumanStandard</nameCategory>
-      <body>Human</body>
-      <baseHealthScale>2.5</baseHealthScale>
-    </race>
-  </ThingDef>
-
-<!-- Mechanicus Tech-Priest -->
-
-  <ThingDef ParentName="BaseMechanicus">
-    <defName>Mechanicus_TechPriest</defName>
-    <label>Tech-Priest</label>
-    <description>A Tech-priest, also spelled Tech-Priest, is an Adept of the Adeptus Mechanicus of the Imperium of Man who is generally responsible for maintaining all of the advanced technology of the Imperium, enlarging the Imperium's stocks of technical knowledge and conducting what little new scientific research occurs within the Imperium since the end of the Horus Heresy. Tech-priests are members of the Cult Mechanicus, the Cult of the Machine, a priesthood which forms an ecclesiastical hierarchy for the Cult Mechanicus of technicians, scientists, and religious leaders who believe that knowledge represents the only true divinity in the universe. The Tech-priests provide the rest of the Imperium with its technicians, scientists and engineers. Though their bodies often incorporate many inorganic components as bionic replacements, Tech-priests are fully human, unlike the cybernetic Servitors created by the Adeptus Mechanicus that carry out most of the heavy labour for all of the Imperium's myriad organisations and enterprises.</description>
-    <statBases>
-      <MoveSpeed>5.8</MoveSpeed>
-    </statBases>
-    <race>
-      <body>Human</body>
-      <baseHealthScale>2.5</baseHealthScale>
-    </race>
-  </ThingDef>
-
-  <!-- Mechanicus Skitarii -->
-  
-  <ThingDef ParentName="BaseMechanicus">
-    <defName>Mechanicus_Skitarii</defName>
-    <label>Skitarii</label>
-    <description>The Skitarii are the infantry of the Adeptus Mechanicus. They will be deployed en masse to defend their forge world, diverting the foe from the approaching feet of towering Titans, or sent across the galaxy to march at the fore of an expedition to procure new knowledge for their Tech-Priest masters. 
-	
-	They were made for such tasks, as augmentation has replaced flesh – from synthetic synapses to limbs made of uncompromising steel. Due to their extensive modification, the Skitarii can excel in almost any environment. Each legion hails from a hyper-industrialised forge world – even extreme doses of radiation are nothing to those who have trodden such toxic wastes.</description>
-    <statBases>
-    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
     <race>
       <body>Human</body>
       <baseHealthScale>1.5</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
     </race>
   </ThingDef>
 
-  <!-- Mechanicus Sicarian -->
+  <PawnKindDef ParentName="BaseMechanicusKind">
+    <defName>MechanicusTechPriestDominus</defName>
+    <label>tech-priest dominus</label>
+    <race>Mechanicus_TechPriestDominus</race>
+    <combatPower>600</combatPower>
 
-  <ThingDef ParentName="BaseMechanicus">
-    <defName>Mechanicus_Sicarian</defName>
-    <label>Mechanicus Sicarian</label>
-    <description>The Ruststalkers of the Skitarii Legions fall upon their foes in a slashing, stabbing frenzy. Their transonic blades blur as they dart and cut like the weapons of gladiatorial knife-fighters, the deadly resonances they transmit bypassing armour as if it offered no more resistance than a hologram. The Ruststalkers were originally devised as cybernetic assassins, sent into the Red Planet’s wastes to hunt down feral servitors and other undesirables excommunicated from the Cult Mechanicus.
-	
-They proved so effective at their task they were repurposed and militarised into groups known as killclades. Since that day Ruststalker manufacturing has spread to every forge world and the troops have fought on the front line of the Cult Mechanicus’ many wars.</description>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/AdeptusMechanicusTechPriest</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>MacroStubber</li>
+    </weaponTags>
+  </PawnKindDef>  
+
+<!-- Priest -->  
+  <ThingDef ParentName="BaseMechanicusWalker">
+    <defName>Mechanicus_TechPriestEnginseer</defName>
+    <label>tech-priest</label>
+    <description>A Tech-priest, also spelled Tech-Priest, is an Adept of the Adeptus Mechanicus of the Imperium of Man who is generally responsible for maintaining all of the advanced technology of the Imperium, enlarging the Imperium's stocks of technical knowledge and conducting what little new scientific research occurs within the Imperium since the end of the Horus Heresy. Tech-priests are members of the Cult Mechanicus, the Cult of the Machine, a priesthood which forms an ecclesiastical hierarchy for the Cult Mechanicus of technicians, scientists, and religious leaders who believe that knowledge represents the only true divinity in the universe. The Tech-priests provide the rest of the Imperium with its technicians, scientists and engineers. Though their bodies often incorporate many inorganic components as bionic replacements, Tech-priests are fully human, unlike the cybernetic Servitors created by the Adeptus Mechanicus that carry out most of the heavy labour for all of the Imperium's myriad organisations and enterprises.</description>
     <statBases>
-      <MoveSpeed>6.2</MoveSpeed>
+      <MoveSpeed>5.0</MoveSpeed>
+      <ArmorRating_Blunt>0.4</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
     </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
     <race>
       <body>Human</body>
-      <baseHealthScale>1.8</baseHealthScale>
+      <baseHealthScale>1.0</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
     </race>
   </ThingDef>
 
+  <PawnKindDef ParentName="BaseMechanicusKind">
+    <defName>MechanicusTechPriestEnginseer</defName>
+    <label>tech-priest</label>
+    <race>Mechanicus_TechPriestEnginseer</race>
+    <combatPower>600</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/AdeptusMechanicusTechPriest</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>MacroStubber</li>
+    </weaponTags>
+  </PawnKindDef>  
+   
+<!-- Mechanicus Sicarians -->
+<!--B19--> 
+  <ThingDef ParentName="BaseMechanicusWalker">
+    <defName>Mechanicus_Sicarian</defName>
+    <label>sicarian warriors</label>
+    <description>The Ruststalkers of the Skitarii Legions fall upon their foes in a slashing, stabbing frenzy. Their transonic blades blur as they dart and cut like the weapons of gladiatorial knife-fighters, the deadly resonances they transmit bypassing armour as if it offered no more resistance than a hologram. The Ruststalkers were originally devised as cybernetic assassins, sent into the Red Planet’s wastes to hunt down feral servitors and other undesirables excommunicated from the Cult Mechanicus.
+	They proved so effective at their task they were repurposed and militarised into groups known as killclades. Since that day Ruststalker manufacturing has spread to every forge world and the troops have fought on the front line of the Cult Mechanicus’ many wars.</description>
+    <statBases>
+      <MoveSpeed>6.2</MoveSpeed>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>MechanicusConstruct</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>1.4</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+<!-- Rust Stalker --> 
+  <PawnKindDef ParentName="BaseMechanicusKind">
+    <defName>MechanicusSicarianRustStalker</defName>
+    <label>sicarian rust stalker</label>
+    <race>Mechanicus_Sicarian</race>
+    <combatPower>160</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/AdeptusMechanicusSicarian</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>IGCDualLightningClaw</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!-- Infiltrator --> 
+  <PawnKindDef ParentName="BaseMechanicusKind">
+    <defName>MechanicusSicarianInfiltrator</defName>
+    <label>sicarian infiltrator</label>
+    <race>Mechanicus_Sicarian</race>
+    <combatPower>160</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/AdeptusMechanicusSicarian</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>StubCarbine</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+<!-- Mechanicus Skitarii -->
+<!--B19-->
+  <ThingDef ParentName="BaseMechanicusWalker">
+    <defName>Mechanicus_Skitarii</defName>
+    <label>mechanicus Skitarii warrior</label>
+    <description>The Skitarii are the infantry of the Adeptus Mechanicus. They will be deployed en masse to defend their forge world, diverting the foe from the approaching feet of towering Titans, or sent across the galaxy to march at the fore of an expedition to procure new knowledge for their Tech-Priest masters. 
+	They were made for such tasks, as augmentation has replaced flesh – from synthetic synapses to limbs made of uncompromising steel. Due to their extensive modification, the Skitarii can excel in almost any environment. Each legion hails from a hyper-industrialised forge world – even extreme doses of radiation are nothing to those who have trodden such toxic wastes.</description>
+    <statBases>
+      <MoveSpeed>4.0</MoveSpeed>
+      <ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>MechanicusConstruct</body>
+      <baseBodySize>1</baseBodySize>
+      <baseHealthScale>1.5</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+<!-- Rangers --> 
+<!-- Base --> 
+  <PawnKindDef ParentName="BaseMechanicusKind">
+    <defName>MechanicusSkitariiRanger</defName>
+    <label>skitarii ranger</label>
+    <race>Mechanicus_Skitarii</race>
+    <combatPower>160</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/AdeptusMechanicusSkitarii</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>GalvanicRifle</li>
+    </weaponTags>
+  </PawnKindDef>
+<!-- Prime --> 
+  <PawnKindDef ParentName="BaseMechanicusKind">
+    <defName>MechanicusSkitariiRangerPrimus</defName>
+    <label>skitarii ranger primus</label>
+    <race>Mechanicus_Skitarii</race>
+    <combatPower>160</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/AdeptusMechanicusSkitarii</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+			<li>RadiumPistol</li>
+			<li>GalvanicRifle</li>
+			<li>TransuranicArquebus</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!-- Vanguard --> 
+<!-- Base --> 
+  <PawnKindDef ParentName="BaseMechanicusKind">
+    <defName>MechanicusSkitariiVanguard</defName>
+    <label>skitarii vanguard</label>
+    <race>Mechanicus_Skitarii</race>
+    <combatPower>160</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/AdeptusMechanicusSkitarii</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>RadiumCarbine</li>
+    </weaponTags>
+  </PawnKindDef>
+<!-- Prime --> 
+  <PawnKindDef ParentName="BaseMechanicusKind">
+    <defName>MechanicusSkitariiVanguardPrimus</defName>
+    <label>skitarii vanguard primus</label>
+    <race>Mechanicus_Skitarii</race>
+    <combatPower>175</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/AdeptusMechanicusSkitarii</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+			<li>RadiumCarbine</li>
+			<li>RadiumPistol</li>
+    </weaponTags>
+  </PawnKindDef>
+  
 </Defs>
