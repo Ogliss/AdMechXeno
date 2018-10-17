@@ -303,7 +303,7 @@
     <label>necron destroyer</label>
     <description>A Necron Destroyer is a deranged agent of annihilation whose sole reason for existence is centred around an unshakeable yearning to quench the flames of life. A Destroyer cares not for borders or dynasty allegiance, nor does he make any distinction between the innocent and the damned -- all life is his enemy, and all living creatures are his prey. To this end, Destroyers regularly engage in modifications to their bodies that other Necrons would consider self-mutilation. This most commonly takes the form of replacing arms with weapons, legs with grav-platforms, and modifying heads and neural circuitry with advanced targeting systems. The result is a single-minded killing machine able to track its quarry across any terrain and under any conditions, that quarry being any biological creature unfortunate enough to draw the Destroyer’s attention. The insane Destroyers are shunned and feared even by their fellow Necrons. These outcasts gather on the fringes of Tomb Worlds to form Destroyer Cults of the Red Harvest, said to be led by Necron Lords afflicted with the same madness. These so-called Destroyer Lords combine the intellect, cunning, and nigh-invulnerability of a Necron noble with the deadly purpose and enhanced systems of a Destroyer.</description>
     <statBases>
-      <MoveSpeed>1.9</MoveSpeed>
+      <MoveSpeed>4</MoveSpeed>
       <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
     </statBases>
@@ -323,7 +323,7 @@
       <intelligence>ToolUser</intelligence>
       <thinkTreeMain>Mechanoid</thinkTreeMain>
       <body>NecronDestroyer</body>
-      <baseBodySize>2.0</baseBodySize>
+      <baseBodySize>1.5</baseBodySize>
       <baseHealthScale>4.32</baseHealthScale>
       <lifeStageAges>
         <li>
@@ -359,7 +359,7 @@
         <bodyGraphicData>
           <texPath>Pawn/NecronDestroyer</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3</drawSize>
+          <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.6, 0.8, 0.6)</volume>
           </shadowData>

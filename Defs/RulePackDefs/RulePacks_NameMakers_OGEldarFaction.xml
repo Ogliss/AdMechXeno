@@ -35,12 +35,20 @@
 		<defName>NamerOGEldarPawns</defName>
 		<rulePack>
 		  <rulesStrings>
-			<li>name->[OGEldarFirst]</li>
+			<li>name->[OGEldarFirst] [OGof] [OGEldarSecond]</li>
 		  </rulesStrings>
 		  <rulesRaw>
 			<li Class="Rule_File">
 				<keyword>OGEldarFirst</keyword>
 				<path>NameBanks/OGEldarFirst</path>
+			</li>
+			<li Class="Rule_File">
+				<keyword>OGof</keyword>
+				<path>NameBanks/OGEldarSurNom</path>
+			</li>
+			<li Class="Rule_File">
+				<keyword>OGEldarSecond</keyword>
+				<path>NameBanks/OGEldarBaseNames</path>
 			</li>
 		  </rulesRaw>
 		</rulePack>

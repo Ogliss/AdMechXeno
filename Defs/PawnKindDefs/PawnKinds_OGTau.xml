@@ -161,7 +161,7 @@
 
   <PawnKindDef ParentName="TauBase">
 		<defName>TauFactionEthereal</defName>
-		<label>Faction Leader</label>
+		<label>Aun'O</label>
 		<race>Tau_FactionEthereal</race>
 		<defaultFactionType>TauFaction</defaultFactionType>
 		<combatPower>15000</combatPower>
@@ -195,7 +195,7 @@
 
   <PawnKindDef ParentName="TauBase">
 		<defName>TauEthereal</defName>
-		<label>Ethereal</label>
+		<label>Aun</label>
 		<race>Tau_Ethereal</race>
 		<defaultFactionType>TauFaction</defaultFactionType>
 		<combatPower>150</combatPower>

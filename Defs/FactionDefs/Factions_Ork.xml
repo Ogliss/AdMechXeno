@@ -3,8 +3,7 @@
 <!--B19-->
 
   <FactionDef Name="OrkFactionBase" Abstract="True">
-    <goodwillDailyGain>0.10</goodwillDailyGain>
-    <goodwillDailyFall>0.40</goodwillDailyFall>
+
   </FactionDef>
 
   <FactionDef ParentName="OrkFactionBase" Name="TekOrkFactionBase" Abstract="True">
@@ -12,6 +11,7 @@
     <pawnsPlural>orkz</pawnsPlural>
     <listOrderPriority>10</listOrderPriority>
     <settlementGenerationWeight>1</settlementGenerationWeight>
+    <permanentEnemy>true</permanentEnemy>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
     <canSiege>true</canSiege>
@@ -123,13 +123,14 @@
 				<kindDef>Settlement</kindDef>
         <options>
           <OrkShootaBoy>10</OrkShootaBoy>
+          <OrkSlave>10</OrkSlave>
           <Squig>10</Squig>
 					<OrkChoppaBoy>15</OrkChoppaBoy>
 					<OrkEavyShootaNob>10</OrkEavyShootaNob>
 					<OrkShootaNob>10</OrkShootaNob>
 					<OrkEavyShootaBoy>10</OrkEavyShootaBoy>
           <OrkChoppaNob>10</OrkChoppaNob>
-          <OrkFactionWarboss>0</OrkFactionWarboss>
+          <OrkFactionWarboss>10000000</OrkFactionWarboss>
         </options>
       </li>
     </pawnGroupMakers>
@@ -146,14 +147,16 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
       <li>(0.35, 0.35, 0)</li>
       <li>(0.4, 0.2, 0)</li>
     </colorSpectrum>
-    <startingGoodwill>
-      <min>0</min>
-      <max>0</max>
-    </startingGoodwill>
-    <naturalColonyGoodwill>
-      <min>-50</min>
-      <max>0</max>
-    </naturalColonyGoodwill>
+  </FactionDef>
+  
+    <FactionDef ParentName="FeralOrkFactionBase">
+	<defName>FeralOrkFaction</defName>
+	<label>feral ork warband</label>
+    <description>Feral Orks or Wildboyz are Orks who arise on a world that a spaceborne Ork WAAAGH! has already assaulted, though they possess only pre-industrial levels of technology and culture. Feral Orks appear after a WAAAGH! has already infested a planet and then moved on to seek new battles elsewhere. Usually Feral Orks are a new generation of Orks grown from the fungal reproductive spores released by spaceborne Orks and left behind on the world their spaceborne counterparts have abandoned./n/nFeral Orks can also be derived from an original population of spaceborne Orks stranded on a world who effectively devolve back to a feral state, losing their access to more advanced technology. The Feral Orks, while less advanced than their fellow Greenskins, do have access to a variety of wargear in their armoury. However, much of it works due to the strange effects it has on the mind and behaviour of the Ork, rather than actually producing a physical effect upon the enemy.</description>
+    <colorSpectrum>
+      <li>(0.25, 0.20, 0.50)</li>
+      <li>(0.35, 0.30, 0.80)</li>
+    </colorSpectrum>
   </FactionDef>
   
   <FactionDef Name="OrkFactionFeralBase" Abstract="True">
@@ -167,7 +170,7 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
     <settlementGenerationWeight>1</settlementGenerationWeight>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
-    <canSiege>true</canSiege>
+    <canSiege>false</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>Feral Warboss</leaderTitle>
     <expandingIconTexture>Icons/FeralOrkIcon</expandingIconTexture>
@@ -201,6 +204,7 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
 				<kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
+          <Squig>10</Squig>
           <FeralOrkChoppaBoy>15</FeralOrkChoppaBoy>
           <FeralOrkShootaBoy>5</FeralOrkShootaBoy>
           <FeralOrkChoppaNob>0.5</FeralOrkChoppaNob>
@@ -215,6 +219,7 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
           <li>Siege</li>
         </disallowedStrategies>
         <options>
+          <Squig>10</Squig>
           <FeralOrkChoppaBoy>15</FeralOrkChoppaBoy>
           <FeralOrkShootaBoy>10</FeralOrkShootaBoy>
           <FeralOrkEavyShootaBoy>5</FeralOrkEavyShootaBoy>
@@ -229,6 +234,7 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
         <commonality>2.5</commonality>
         <maxTotalPoints>1000</maxTotalPoints>
         <options>
+          <Squig>10</Squig>
           <FeralOrkChoppaNob>10</FeralOrkChoppaNob>
         </options>
       </li>
@@ -236,7 +242,9 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
 				<!-- Base defense, mainly ranged with melee mix-ins -->
 				<kindDef>Settlement</kindDef>
         <options>
-          <FeralOrkChoppaBoy>15</FeralOrkChoppaBoy>
+          <FeralOrkSlave>10</FeralOrkSlave>
+          <Squig>10</Squig>
+          <FeralOrkChoppaBoy>10</FeralOrkChoppaBoy>
           <FeralOrkShootaBoy>10</FeralOrkShootaBoy>
           <FeralOrkEavyShootaBoy>5</FeralOrkEavyShootaBoy>
           <FeralOrkChoppaNob>7.5</FeralOrkChoppaNob>
@@ -248,20 +256,5 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
   </FactionDef>
 
-  <FactionDef ParentName="FeralOrkFactionBase">
-	<defName>FeralOrkFaction</defName>
-	<label>feral ork warband</label>
-    <description>Feral Orks or Wildboyz are Orks who arise on a world that a spaceborne Ork WAAAGH! has already assaulted, though they possess only pre-industrial levels of technology and culture. Feral Orks appear after a WAAAGH! has already infested a planet and then moved on to seek new battles elsewhere. Usually Feral Orks are a new generation of Orks grown from the fungal reproductive spores released by spaceborne Orks and left behind on the world their spaceborne counterparts have abandoned.
-
-Feral Orks can also be derived from an original population of spaceborne Orks stranded on a world who effectively devolve back to a feral state, losing their access to more advanced technology. The Feral Orks, while less advanced than their fellow Greenskins, do have access to a variety of wargear in their armoury. However, much of it works due to the strange effects it has on the mind and behaviour of the Ork, rather than actually producing a physical effect upon the enemy.</description>
-    <colorSpectrum>
-      <li>(0.25, 0.20, 0.50)</li>
-      <li>(0.35, 0.30, 0.80)</li>
-    </colorSpectrum>
-    <startingGoodwill>
-      <min>0</min>
-      <max>0</max>
-    </startingGoodwill>
-  </FactionDef>
 
 </Defs>

@@ -37,10 +37,10 @@
         <kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
-          <NecronScarabSwarm>20</NecronScarabSwarm>
-          <NecronWarrior>10</NecronWarrior>
-          <NecronImmortal>10</NecronImmortal>
-          <NecronDestroyer>10</NecronDestroyer>
+          <NecronScarabSwarm>10</NecronScarabSwarm>
+          <NecronWarrior>9</NecronWarrior>
+          <NecronImmortal>6</NecronImmortal>
+          <NecronDestroyer>4</NecronDestroyer>
           <NecronLord>1</NecronLord>
         </options>
       </li>
@@ -50,8 +50,8 @@
         <commonality>80</commonality>
         <options>
           <NecronWarrior>10</NecronWarrior>
-          <NecronImmortal>10</NecronImmortal>
-          <NecronDestroyer>10</NecronDestroyer>
+          <NecronImmortal>6</NecronImmortal>
+          <NecronDestroyer>3</NecronDestroyer>
           <NecronLord>1</NecronLord>
         </options>
       </li>

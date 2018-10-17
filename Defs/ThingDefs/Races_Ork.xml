@@ -164,7 +164,7 @@
     </race>
   </ThingDef>
 
-  <!-- Ork Faction Leader Pawn -->
+  <!-- Ork Faction Leader Pawn 
   <ThingDef ParentName="BaseOrk">
     <defName>Ork_FactionWarboss</defName>
     <label>Ork Warboss</label>
@@ -182,5 +182,5 @@
       <body>OrkBody</body>
     </race>
   </ThingDef>
-
+   Ork Faction Leader Pawn -->
 </Defs>

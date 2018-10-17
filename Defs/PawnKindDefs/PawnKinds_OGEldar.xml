@@ -35,7 +35,7 @@
 		
   <PawnKindDef ParentName="EldarBase">
 		<defName>EldarFactionFarseer</defName>
-		<label>Eldar Faction Leader</label>
+		<label>Eldar Aurtrach</label>
 		<race>Eldar_FactionFarseer</race>
 		<combatPower>15000</combatPower>
 		<itemQuality>Superior</itemQuality>
