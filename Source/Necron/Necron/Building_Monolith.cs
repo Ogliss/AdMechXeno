@@ -25,7 +25,7 @@ namespace RimWorld
             }
             stringBuilder.Append("AwokeDaysAgo".Translate(new object[]
             {
-                this.age.TicksToDays().ToString("F1")
+                age.TicksToDays().ToString("F1")
             }));
             return stringBuilder.ToString();
         }
@@ -39,10 +39,5 @@ namespace RimWorld
 
         // Token: 0x040014CA RID: 5322
         protected int age;
-
-        internal void SetFaction(object ofNecrons, object p)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

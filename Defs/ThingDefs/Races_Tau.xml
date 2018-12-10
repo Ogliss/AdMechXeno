@@ -128,6 +128,7 @@
       <lifeExpectancy>150</lifeExpectancy>
       <body>Ethereal</body>
       <baseHealthScale>2.5</baseHealthScale>
+	  <useMeatFrom>Tau_FactionEthereal</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -143,6 +144,7 @@
       <lifeExpectancy>50</lifeExpectancy>
       <body>FireWarrior</body>
       <baseHealthScale>1.5</baseHealthScale>
+	  <useMeatFrom>Tau_FactionEthereal</useMeatFrom>
     </race>
   </ThingDef>
 

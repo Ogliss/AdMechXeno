@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- Necron Base Abstract -->
-  <ThingDef ParentName="BasePawn" Name="BaseNecron" Abstract="True">
+  <ThingDef ParentName="BasePawn" Name="BaseNecron">
+  <defName>Necron_Race</defName>
+    <label>Necron Construct Race</label>
     <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <statBases>
       <PsychicSensitivity>0</PsychicSensitivity>
@@ -17,6 +19,10 @@
       <hasGenders>false</hasGenders>
       <foodType>None</foodType>
       <lifeExpectancy>99999</lifeExpectancy>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <trainability>Advanced</trainability>
     </race>
   </ThingDef>
 
@@ -103,6 +109,7 @@
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+	  <useMeatFrom>Necron_Race</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -184,6 +191,7 @@
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+	  <useMeatFrom>Necron_Race</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -266,6 +274,7 @@
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+	  <useMeatFrom>Necron_Race</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -341,6 +350,7 @@
       <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
+	  <useMeatFrom>Necron_Race</useMeatFrom>
     </race>
     <butcherProducts>
       <Steel>50</Steel>
@@ -427,6 +437,7 @@
       <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
+	  <useMeatFrom>Necron_Race</useMeatFrom>
     </race>
   </ThingDef>
   

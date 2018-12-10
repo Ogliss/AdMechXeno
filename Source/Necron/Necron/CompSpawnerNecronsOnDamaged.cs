@@ -16,7 +16,7 @@ namespace RimWorld
 		{
 			base.PostExposeData();
 			Scribe_References.Look<Lord>(ref this.lord, "defenseLord", false);
-			Scribe_Values.Look<float>(ref this.pointsLeft, "necronPointsLeft", 0f, false);
+			Scribe_Values.Look<float>(ref this.pointsLeft, "mechanoidPointsLeft", 0f, false);
 		}
 
 		// Token: 0x060029B1 RID: 10673 RVA: 0x0013B2F4 File Offset: 0x001396F4
@@ -36,7 +36,7 @@ namespace RimWorld
 				float num = (float)this.parent.HitPoints - dinfo.Amount;
 				if ((num < (float)this.parent.MaxHitPoints * 0.98f && dinfo.Instigator != null && dinfo.Instigator.Faction != null) || num < (float)this.parent.MaxHitPoints * 0.9f)
 				{
-					this.TrySpawnNecrons();
+					this.TrySpawnMechanoids();
 				}
 			}
 			absorbed = false;
@@ -45,14 +45,14 @@ namespace RimWorld
 		// Token: 0x060029B2 RID: 10674 RVA: 0x0013B3A8 File Offset: 0x001397A8
 		public void Notify_BlueprintReplacedWithSolidThingNearby(Pawn by)
 		{
-			if (by.Faction != OfNecrons)
+			if (by.Faction != OGNFaction.OfMechanoids)
 			{
-				this.TrySpawnNecrons();
+				this.TrySpawnMechanoids();
 			}
 		}
 
 		// Token: 0x060029B3 RID: 10675 RVA: 0x0013B3C0 File Offset: 0x001397C0
-		private void TrySpawnNecrons()
+		private void TrySpawnMechanoids()
 		{
 			if (this.pointsLeft <= 0f)
 			{
@@ -70,8 +70,8 @@ namespace RimWorld
 					Log.Error("Found no place for mechanoids to defend " + this, false);
 					invalid = IntVec3.Invalid;
 				}
-				LordJob_NecronsDefendShip lordJob = new LordJob_NecronsDefendShip(this.parent, this.parent.Faction, 21f, invalid);
-				this.lord = LordMaker.MakeNewLord(OfNecrons, lordJob, this.parent.Map, null);
+				LordJob_MechanoidsDefendShip lordJob = new LordJob_MechanoidsDefendShip(this.parent, this.parent.Faction, 21f, invalid);
+				this.lord = LordMaker.MakeNewLord(OGNFaction.OfMechanoids, lordJob, this.parent.Map, null);
 			}
 			PawnKindDef kind;
 			while ((from def in DefDatabase<PawnKindDef>.AllDefs
@@ -80,10 +80,10 @@ namespace RimWorld
 			{
 				IntVec3 center;
 				if ((from cell in GenAdj.CellsAdjacent8Way(this.parent)
-				where this.CanSpawnNecronAt(cell)
+				where this.CanSpawnMechanoidAt(cell)
 				select cell).TryRandomElement(out center))
 				{
-					PawnGenerationRequest request = new PawnGenerationRequest(kind, OfNecrons, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, null, null, null, null, null, null, null, null);
+					PawnGenerationRequest request = new PawnGenerationRequest(kind, OGNFaction.OfMechanoids, PawnGenerationContext.NonPlayer, -1, true, false, false, false, true, false, 1f, false, true, true, false, false, false, false, null, null, null, null, null, null, null, null);
 					Pawn pawn = PawnGenerator.GeneratePawn(request);
 					if (GenPlace.TryPlaceThing(pawn, center, this.parent.Map, ThingPlaceMode.Near, null, null))
 					{
@@ -94,33 +94,20 @@ namespace RimWorld
 					Find.WorldPawns.PassToWorld(pawn, PawnDiscardDecideMode.Discard);
 				}
 
-         //       IL_1B9:
-
-
-			}
-            //	goto IL_1B9;
+            }
             this.pointsLeft = 0f;
             SoundDefOf.PsychicPulseGlobal.PlayOneShotOnCamera(this.parent.Map);
             return;
         }
 
 		// Token: 0x060029B4 RID: 10676 RVA: 0x0013B5A6 File Offset: 0x001399A6
-		private bool CanSpawnNecronAt(IntVec3 c)
+		private bool CanSpawnMechanoidAt(IntVec3 c)
 		{
 			return c.Walkable(this.parent.Map);
 		}
 
-
-        public Faction OfNecrons
-        {
-            get
-            {
-                return this.ofNecrons;
-            }
-        }
-
-        // Token: 0x04001736 RID: 5942
-        public float pointsLeft;
+		// Token: 0x04001736 RID: 5942
+		public float pointsLeft;
 
 		// Token: 0x04001737 RID: 5943
 		private Lord lord;
@@ -130,9 +117,5 @@ namespace RimWorld
 
 		// Token: 0x04001739 RID: 5945
 		public static readonly string MemoDamaged = "ShipPartDamaged";
-
-        // Token: 0x04000FA5 RID: 4005
-        public Faction ofNecrons;
-
-    }
+	}
 }

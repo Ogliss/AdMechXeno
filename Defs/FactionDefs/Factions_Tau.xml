@@ -13,7 +13,7 @@
     <maxCountAtGameStart>5</maxCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
     <earliestRaidDays>45</earliestRaidDays>
-    <canSiege>true</canSiege>
+    <canSiege>false</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>Aun'va</leaderTitle>
     <expandingIconTexture>Icons/TauIcon</expandingIconTexture>
@@ -51,10 +51,17 @@
 				<kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
+          <GuevesaCadet>15</GuevesaCadet>
+          <GuevesaSargent>10</GuevesaSargent>
+          <GuevesaSoldierHW>5</GuevesaSoldierHW>
+          <GuevesaSoldierSW>5</GuevesaSoldierSW>
+          <GuevesaSoldier>10</GuevesaSoldier>
           <TauFireWarrior>10</TauFireWarrior>
+          <KindredKroothound>10</KindredKroothound>
           <TauFireWarriorSgt>0.5</TauFireWarriorSgt>
-          <KrootWarrior>6</KrootWarrior>
-          <TauEthereal>5</TauEthereal>
+          <KindredKnarloc>2</KindredKnarloc>
+          <KrootWarrior>12</KrootWarrior>
+          <TauEthereal>1</TauEthereal>
           <TauFactionEthereal>0</TauFactionEthereal>
         </options>
       </li>
@@ -67,7 +74,9 @@
         </disallowedStrategies>
         <options>
           <KrootWarrior>10</KrootWarrior>
-          <TauEthereal>5</TauEthereal>
+          <KindredKroothound>10</KindredKroothound>
+          <KindredKnarloc>2</KindredKnarloc>
+          <TauEthereal>1</TauEthereal>
         </options>
       </li>
       <li>
@@ -75,10 +84,15 @@
         <kindDef>Combat</kindDef>
         <commonality>20</commonality>
         <options>
+          <GuevesaCadet>15</GuevesaCadet>
+          <GuevesaSargent>10</GuevesaSargent>
+          <GuevesaSoldierHW>5</GuevesaSoldierHW>
+          <GuevesaSoldierSW>5</GuevesaSoldierSW>
+          <GuevesaSoldier>10</GuevesaSoldier>
           <TauFireWarrior>10</TauFireWarrior>
           <KrootWarrior>10</KrootWarrior>
           <TauFireWarriorSgt>0.5</TauFireWarriorSgt>
-          <TauEthereal>5</TauEthereal>
+          <TauEthereal>1</TauEthereal>
         </options>
       </li>
       <li>
@@ -100,6 +114,11 @@
         <commonality>10</commonality>
         <options>
           <TauFireWarrior>10</TauFireWarrior>
+          <GuevesaCadet>15</GuevesaCadet>
+          <GuevesaSargent>10</GuevesaSargent>
+          <GuevesaSoldierHW>5</GuevesaSoldierHW>
+          <GuevesaSoldierSW>5</GuevesaSoldierSW>
+          <GuevesaSoldier>10</GuevesaSoldier>
         </options>
       </li>
       <li>
@@ -109,6 +128,11 @@
         <maxTotalPoints>1000</maxTotalPoints>
         <options>
           <KrootWarrior>10</KrootWarrior>
+          <GuevesaCadet>15</GuevesaCadet>
+          <GuevesaSargent>10</GuevesaSargent>
+          <GuevesaSoldierHW>5</GuevesaSoldierHW>
+          <GuevesaSoldierSW>5</GuevesaSoldierSW>
+          <GuevesaSoldier>10</GuevesaSoldier>
         </options>
       </li>
       <li>
@@ -120,6 +144,11 @@
 					<TauFireWarrior>10</TauFireWarrior>
           <TauEthereal>10</TauEthereal>
           <TauFactionEthereal>0</TauFactionEthereal>
+          <GuevesaCadet>15</GuevesaCadet>
+          <GuevesaSargent>10</GuevesaSargent>
+          <GuevesaSoldierHW>5</GuevesaSoldierHW>
+          <GuevesaSoldierSW>5</GuevesaSoldierSW>
+          <GuevesaSoldier>10</GuevesaSoldier>
         </options>
       </li>
     </pawnGroupMakers>

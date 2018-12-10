@@ -75,7 +75,7 @@
       <lifeStageAges>
         <li>
           <def>HumanlikeAdult</def>
-          <minAge>18</minAge>
+          <minAge>16</minAge>
         </li>
       </lifeStageAges>
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -117,6 +117,7 @@
       <lifeExpectancy>9999</lifeExpectancy>
       <body>OrkBody</body>
       <baseHealthScale>2.0</baseHealthScale>
+	  <useMeatFrom>Ork_Boy</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -132,6 +133,7 @@
       <lifeExpectancy>9999</lifeExpectancy>
       <body>OrkBody</body>
       <baseHealthScale>1.5</baseHealthScale>
+	  <useMeatFrom>Ork_Boy</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -147,6 +149,7 @@
       <lifeExpectancy>9999</lifeExpectancy>
       <body>OrkBody</body>
       <baseHealthScale>1.25</baseHealthScale>
+	  <useMeatFrom>Ork_Boy</useMeatFrom>
     </race>
   </ThingDef>
 

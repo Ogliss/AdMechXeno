@@ -41,7 +41,7 @@ namespace RimWorld
                     break;
                 }
                 Building_Monolith building_Monolith = (Building_Monolith)ThingMaker.MakeThing(this.def.shipPart, null);
-                building_Monolith.SetFaction(Faction.Necron, null);
+                building_Monolith.SetFaction(OGNFaction.OfNecrons, null);
                 building_Monolith.GetComp<CompSpawnerNecronsOnDamaged>().pointsLeft = Mathf.Max(parms.points * 0.9f, 300f);
                 Skyfaller skyfaller = SkyfallerMaker.MakeSkyfaller(ThingDefOf.CrashedShipPartIncoming, building_Monolith);
                 skyfaller.shrapnelDirection = shrapnelDirection;

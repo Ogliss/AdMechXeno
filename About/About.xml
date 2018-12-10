@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Adeptus Mechanicus Magos Xenobiologis B19</name>
+	<name>Adeptus Mechanicus Magos Xenobiologis R1.0</name>
 	<author>Ogliss</author>
-	<targetVersion>0.19.0</targetVersion>
-	<description>V1.0
-	Requires new start or perhaps one ofthose faction managers, im unsure if that would add them in
-    Adds factions using xenos weapons
+	<targetVersion>1.0.2059</targetVersion>
+	<description>V1.20
+    Adds factions using xenos weapons from my Armoury mod.
+	Requires new start or one of those faction managers
 		</description>
 </ModMetaData>

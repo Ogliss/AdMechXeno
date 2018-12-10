@@ -14,7 +14,7 @@
     <permanentEnemy>true</permanentEnemy>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <canMakeRandomly>true</canMakeRandomly>
-    <canSiege>true</canSiege>
+    <canSiege>false</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>Warboss</leaderTitle>
     <earliestRaidDays>45</earliestRaidDays>
@@ -48,7 +48,7 @@
 				<kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
-          <Squig>10</Squig>
+          <AttackSquig>10</AttackSquig>
           <OrkSluggaBoy>10</OrkSluggaBoy>
           <OrkChoppaBoy>15</OrkChoppaBoy>
           <OrkShootaBoy>7.5</OrkShootaBoy>
@@ -67,7 +67,7 @@
           <li>Siege</li>
         </disallowedStrategies>
         <options>
-          <Squig>10</Squig>
+          <AttackSquig>10</AttackSquig>
           <OrkChoppaBoy>15</OrkChoppaBoy>
           <OrkChoppaNob>10</OrkChoppaNob>
           <OrkEavyShootaNob>5</OrkEavyShootaNob>
@@ -114,7 +114,7 @@
         <commonality>2.5</commonality>
         <maxTotalPoints>1000</maxTotalPoints>
         <options>
-          <Squig>10</Squig>
+          <AttackSquig>10</AttackSquig>
           <OrkChoppaNob>10</OrkChoppaNob>
         </options>
       </li>
@@ -124,7 +124,7 @@
         <options>
           <OrkShootaBoy>10</OrkShootaBoy>
           <OrkSlave>10</OrkSlave>
-          <Squig>10</Squig>
+          <AttackSquig>10</AttackSquig>
 					<OrkChoppaBoy>15</OrkChoppaBoy>
 					<OrkEavyShootaNob>10</OrkEavyShootaNob>
 					<OrkShootaNob>10</OrkShootaNob>
@@ -152,7 +152,7 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
     <FactionDef ParentName="FeralOrkFactionBase">
 	<defName>FeralOrkFaction</defName>
 	<label>feral ork warband</label>
-    <description>Feral Orks or Wildboyz are Orks who arise on a world that a spaceborne Ork WAAAGH! has already assaulted, though they possess only pre-industrial levels of technology and culture. Feral Orks appear after a WAAAGH! has already infested a planet and then moved on to seek new battles elsewhere. Usually Feral Orks are a new generation of Orks grown from the fungal reproductive spores released by spaceborne Orks and left behind on the world their spaceborne counterparts have abandoned./n/nFeral Orks can also be derived from an original population of spaceborne Orks stranded on a world who effectively devolve back to a feral state, losing their access to more advanced technology. The Feral Orks, while less advanced than their fellow Greenskins, do have access to a variety of wargear in their armoury. However, much of it works due to the strange effects it has on the mind and behaviour of the Ork, rather than actually producing a physical effect upon the enemy.</description>
+    <description>Feral Orks or Wildboyz are Orks who arise on a world that a spaceborne Ork WAAAGH! has already assaulted, though they possess only pre-industrial levels of technology and culture. Feral Orks appear after a WAAAGH! has already infested a planet and then moved on to seek new battles elsewhere. Usually Feral Orks are a new generation of Orks grown from the fungal reproductive spores released by spaceborne Orks and left behind on the world their spaceborne counterparts have abandoned.\n\nFeral Orks can also be derived from an original population of spaceborne Orks stranded on a world who effectively devolve back to a feral state, losing their access to more advanced technology. The Feral Orks, while less advanced than their fellow Greenskins, do have access to a variety of wargear in their armoury. However, much of it works due to the strange effects it has on the mind and behaviour of the Ork, rather than actually producing a physical effect upon the enemy.</description>
     <colorSpectrum>
       <li>(0.25, 0.20, 0.50)</li>
       <li>(0.35, 0.30, 0.80)</li>
@@ -204,7 +204,7 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
 				<kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
-          <Squig>10</Squig>
+          <AttackSquig>10</AttackSquig>
           <FeralOrkChoppaBoy>15</FeralOrkChoppaBoy>
           <FeralOrkShootaBoy>5</FeralOrkShootaBoy>
           <FeralOrkChoppaNob>0.5</FeralOrkChoppaNob>
@@ -219,7 +219,7 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
           <li>Siege</li>
         </disallowedStrategies>
         <options>
-          <Squig>10</Squig>
+          <AttackSquig>10</AttackSquig>
           <FeralOrkChoppaBoy>15</FeralOrkChoppaBoy>
           <FeralOrkShootaBoy>10</FeralOrkShootaBoy>
           <FeralOrkEavyShootaBoy>5</FeralOrkEavyShootaBoy>
@@ -234,7 +234,7 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
         <commonality>2.5</commonality>
         <maxTotalPoints>1000</maxTotalPoints>
         <options>
-          <Squig>10</Squig>
+          <AttackSquig>10</AttackSquig>
           <FeralOrkChoppaNob>10</FeralOrkChoppaNob>
         </options>
       </li>
@@ -243,7 +243,7 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
 				<kindDef>Settlement</kindDef>
         <options>
           <FeralOrkSlave>10</FeralOrkSlave>
-          <Squig>10</Squig>
+          <AttackSquig>10</AttackSquig>
           <FeralOrkChoppaBoy>10</FeralOrkChoppaBoy>
           <FeralOrkShootaBoy>10</FeralOrkShootaBoy>
           <FeralOrkEavyShootaBoy>5</FeralOrkEavyShootaBoy>

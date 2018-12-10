@@ -5,12 +5,12 @@
 		<defName>NamerOGEldarFaction</defName>
 		<rulePack>
 		  <rulesStrings>
-			<li>name->[OGEldarRegiments]</li>
+			<li>name->[OGEldarCraftworldMajor]</li>
 		  </rulesStrings>
 		  <rulesRaw>
 			<li Class="Rule_File">
-				<keyword>OGEldarRegiments</keyword>
-				<path>NameBanks/OGEldarRegiments</path>
+				<keyword>OGEldarCraftworldMajor</keyword>
+				<path>NameBanks/OGEldarMajorCraftworlds</path>
 			</li>
 		  </rulesRaw>
 		</rulePack>
@@ -35,7 +35,10 @@
 		<defName>NamerOGEldarPawns</defName>
 		<rulePack>
 		  <rulesStrings>
-			<li>name->[OGEldarFirst] [OGof] [OGEldarSecond]</li>
+			<li>r_name->[OGEldarFirst] [OGEldarCraftworldMajor]</li>
+			<li>r_name->[OGEldarFirst] [OGEldarCraftworldMinor]</li>
+			<li>r_name->[OGEldarFirst] [OGEldarCraftworldLost]</li>
+			<li>r_name->[OGEldarFirst] [OGEldarCraftworldCorsair]</li>
 		  </rulesStrings>
 		  <rulesRaw>
 			<li Class="Rule_File">
@@ -43,12 +46,20 @@
 				<path>NameBanks/OGEldarFirst</path>
 			</li>
 			<li Class="Rule_File">
-				<keyword>OGof</keyword>
-				<path>NameBanks/OGEldarSurNom</path>
+				<keyword>OGEldarCraftworldMajor</keyword>
+				<path>NameBanks/OGEldarMajorCraftworlds</path>
 			</li>
 			<li Class="Rule_File">
-				<keyword>OGEldarSecond</keyword>
-				<path>NameBanks/OGEldarBaseNames</path>
+				<keyword>OGEldarCraftworldMinor</keyword>
+				<path>NameBanks/OGEldarMinorCraftworlds</path>
+			</li>
+			<li Class="Rule_File">
+				<keyword>OGEldarCraftworldLost</keyword>
+				<path>NameBanks/OGEldarLostCraftworlds</path>
+			</li>
+			<li Class="Rule_File">
+				<keyword>OGEldarCraftworldCorsair</keyword>
+				<path>NameBanks/OGEldarCorsairCraftworlds</path>
 			</li>
 		  </rulesRaw>
 		</rulePack>

@@ -2,7 +2,9 @@
 <Defs>
 <!-- Eldar Base Abstract -->
 
-  <ThingDef ParentName="BasePawn" Name="BaseEldar" Abstract="True">
+  <ThingDef ParentName="BasePawn" Name="BaseEldar">
+  <defName>Eldar_Race</defName>
+    <label>Eldar Race</label>
     <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
     <statBases>
       <MarketValue>1750</MarketValue>
@@ -97,7 +99,9 @@
   </ThingDef>
 
   
-  <ThingDef ParentName="BasePawn" Name="BaseEldarConstruct" Abstract="True">
+  <ThingDef ParentName="BasePawn" Name="BaseEldarConstruct">
+  <defName>Eldar_Construct_Race</defName>
+    <label>Eldar Construct Race</label>
     <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <statBases>
       <PsychicSensitivity>+0.5</PsychicSensitivity>
@@ -113,6 +117,10 @@
       <hasGenders>false</hasGenders>
       <foodType>None</foodType>
       <lifeExpectancy>99999</lifeExpectancy>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <trainability>Advanced</trainability>
     </race>
   </ThingDef>
 
@@ -165,6 +173,7 @@
       <nameCategory>HumanStandard</nameCategory>
       <lifeExpectancy>25000</lifeExpectancy>
       <baseHealthScale>2.5</baseHealthScale>
+	  <useMeatFrom>Eldar_Race</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -181,6 +190,7 @@
     <race>
       <lifeExpectancy>25000</lifeExpectancy>
       <baseHealthScale>1.50</baseHealthScale>
+	  <useMeatFrom>Eldar_Race</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -194,6 +204,7 @@
     </statBases>
     <race>
       <baseHealthScale>0.75</baseHealthScale>
+	  <useMeatFrom>Eldar_Race</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -209,6 +220,7 @@
     <race>
       <lifeExpectancy>15000</lifeExpectancy>
       <baseHealthScale>1.25</baseHealthScale>
+	  <useMeatFrom>Eldar_Race</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -263,6 +275,7 @@
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+	  <useMeatFrom>Eldar_Construct_Race</useMeatFrom>
     </race>
   </ThingDef>
 <!-- Melee -->
