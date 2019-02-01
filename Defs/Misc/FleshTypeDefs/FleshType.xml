@@ -1,6 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 
 <Defs>
+
+  <FleshTypeDef>
+    <defName>ChaosDeamon</defName>
+    <corpseCategory>CorpsesDeamon</corpseCategory>
+    <wounds>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundA</texture>
+        <color>0.675,0,0.529</color>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundB</texture>
+        <color>0.675,0,0.529</color>
+      </li>
+      <li>
+        <texture>Things/Pawn/Wounds/WoundC</texture>
+        <color>0.675,0,0.529</color>
+      </li>
+    </wounds>
+  </FleshTypeDef>
+  
   <FleshTypeDef>
     <defName>Necron</defName>
     <corpseCategory>CorpsesNecron</corpseCategory>

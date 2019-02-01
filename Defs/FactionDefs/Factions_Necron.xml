@@ -20,7 +20,7 @@
     <humanlikeFaction>false</humanlikeFaction>
     <hidden>true</hidden>
     <autoFlee>false</autoFlee>
-    <canUseAvoidGrid>false</canUseAvoidGrid>
+    <canUseAvoidGrid>true</canUseAvoidGrid>
     <techLevel>Ultra</techLevel>
     <earliestRaidDays>180</earliestRaidDays>
     <permanentEnemy>true</permanentEnemy>
@@ -35,7 +35,7 @@
       <li>
         <!-- All types-->
         <kindDef>Combat</kindDef>
-        <commonality>100</commonality>
+        <commonality>200</commonality>
         <options>
           <NecronScarabSwarm>10</NecronScarabSwarm>
           <NecronWarrior>9</NecronWarrior>

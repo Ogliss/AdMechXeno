@@ -1,114 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<!-- B18 
-  <FactionDef>
-		<defName>MechanicusFaction</defName>
-		<label>Mechanicus Exploritors</label>
-    <description>The Adeptus Mechanicus is the official Imperial name within the Adeptus Terra for the Cult Mechanicus or Cult of the Machine based on Mars which provides the Imperium with its scientists, engineers and technicians. The Adepts of the Mechanicus are the primary keepers of what is viewed as sacred wisdom, a privileged caste of Tech-priests who jealously guard the knowledge required to maintain and construct much of the Imperium's advanced technology.
-
-In ancient times, before the current Age of the Imperium officially began following the end of the Horus Heresy, the Adeptus Mechanicus was often called the Mechanicum. The Mechanicus acknowledge the Emperor of Mankind as the ruler of the Imperium of Man, but not the religious truth of the Imperial Cult or the Ecclesiarchy, and are granted an unusual amount of political and religious autonomy within the Imperium's structure, a role protected by the ancient Treaty of Mars. Instead of the Imperial Creed, the servants of the Mechanicus follow their own dark and mysterious scriptures and worship the deity they call the Machine God or the "Omnissiah."</description>
-    <pawnsPlural>mechanicus</pawnsPlural>
-    <requiredCountAtGameStart>1</requiredCountAtGameStart>
-    <settlementGenerationWeight>0</settlementGenerationWeight>
-    <canMakeRandomly>true</canMakeRandomly>
-    <humanlikeFaction>false</humanlikeFaction>
-    <hidden>true</hidden>
-    <autoFlee>false</autoFlee>
-    <canUseAvoidGrid>false</canUseAvoidGrid>
-    <techLevel>Ultra</techLevel>
-    <canSiege>false</canSiege>
-    <canStageAttacks>true</canStageAttacks>
-	<appreciative>false</appreciative>
-    <leaderTitle>Tech-priest Overlord</leaderTitle>
-    <expandingIconTexture>Icons/MechanicusIcon</expandingIconTexture>
-    <colorSpectrum>
-      <li>(0.35, 0.35, 0)</li>
-      <li>(0.4, 0.2, 0)</li>
-    </colorSpectrum>
-    <startingGoodwill>
-      <min>-95</min>
-      <max>-85</max>
-    </startingGoodwill>
-		<earliestRaidDays>45</earliestRaidDays>
-		<factionNameMaker>NamerOGMechanicusFaction</factionNameMaker>
-		<backstoryCategories>Raider</backstoryCategories>
-		<hairTags>
-			<li>Punk</li>
-			<li>Rural</li>
-		</hairTags>
-    <naturalColonyGoodwill>
-      <min>-99</min>
-      <max>-95</max>
-    </naturalColonyGoodwill>
-    <mustStartOneEnemy>true</mustStartOneEnemy>
-    <allowedArrivalTemperatureRange>
-      <min>-40</min>
-      <max>45</max>
-    </allowedArrivalTemperatureRange>
-    <pawnGroupMakers>
-      <li>
-        <kindDef>Normal</kindDef>
-        <commonality>100</commonality>
-        <options>
-          <MechanicusSkitariiRanger>200</MechanicusSkitariiRanger>
-          <MechanicusSkitariiRangerPrimus>100</MechanicusSkitariiRangerPrimus>
-          <MechanicusSkitariiVanguard>200</MechanicusSkitariiVanguard>
-          <MechanicusSkitariiVanguardPrimus>100</MechanicusSkitariiVanguardPrimus>
-          <MechanicusSicarianRustStalker>100</MechanicusSicarianRustStalker>
-          <MechanicusSicarianInfiltrator>100</MechanicusSicarianInfiltrator>
-          <MechanicusTechPriestEnginseer>75</MechanicusTechPriestEnginseer>
-          <MechanicusTechPriestDominus>50</MechanicusTechPriestDominus>
-          <MechanicusFactionTechPriest>0</MechanicusFactionTechPriest>
-        </options>
-      </li>
-      <li>
-        <kindDef>Normal</kindDef>
-        <commonality>25</commonality>
-        <options>
-          <MechanicusSkitariiRanger>200</MechanicusSkitariiRanger>
-          <MechanicusSkitariiRangerPrimus>100</MechanicusSkitariiRangerPrimus>
-          <MechanicusSkitariiVanguard>200</MechanicusSkitariiVanguard>
-          <MechanicusSkitariiVanguardPrimus>100</MechanicusSkitariiVanguardPrimus>
-          <MechanicusSicarianRustStalker>100</MechanicusSicarianRustStalker>
-          <MechanicusSicarianInfiltrator>100</MechanicusSicarianInfiltrator>
-          <MechanicusTechPriestEnginseer>75</MechanicusTechPriestEnginseer>
-          <MechanicusTechPriestDominus>50</MechanicusTechPriestDominus>
-          <MechanicusFactionTechPriest>0</MechanicusFactionTechPriest>
-        </options>
-      </li>
-      <li>
-        <kindDef>Normal</kindDef>
-        <commonality>25</commonality>
-        <options>
-          <MechanicusSkitariiRanger>200</MechanicusSkitariiRanger>
-          <MechanicusSkitariiRangerPrimus>100</MechanicusSkitariiRangerPrimus>
-          <MechanicusSkitariiVanguard>200</MechanicusSkitariiVanguard>
-          <MechanicusSkitariiVanguardPrimus>100</MechanicusSkitariiVanguardPrimus>
-          <MechanicusSicarianRustStalker>100</MechanicusSicarianRustStalker>
-          <MechanicusSicarianInfiltrator>100</MechanicusSicarianInfiltrator>
-          <MechanicusTechPriestEnginseer>75</MechanicusTechPriestEnginseer>
-          <MechanicusTechPriestDominus>50</MechanicusTechPriestDominus>
-          <MechanicusFactionTechPriest>0</MechanicusFactionTechPriest>
-        </options>
-      </li>
-      <li>
-        <kindDef>FactionBase</kindDef>
-        <options>
-          <MechanicusSkitariiRanger>200</MechanicusSkitariiRanger>
-          <MechanicusSkitariiRangerPrimus>100</MechanicusSkitariiRangerPrimus>
-          <MechanicusSkitariiVanguard>200</MechanicusSkitariiVanguard>
-          <MechanicusSkitariiVanguardPrimus>100</MechanicusSkitariiVanguardPrimus>
-          <MechanicusSicarianRustStalker>100</MechanicusSicarianRustStalker>
-          <MechanicusSicarianInfiltrator>100</MechanicusSicarianInfiltrator>
-          <MechanicusTechPriestEnginseer>75</MechanicusTechPriestEnginseer>
-          <MechanicusTechPriestDominus>50</MechanicusTechPriestDominus>
-          <MechanicusFactionTechPriest>0</MechanicusFactionTechPriest>
-        </options>
-      </li>
-    </pawnGroupMakers>
-    <homeIconPath>World/WorldObjects/DefaultFactionBase</homeIconPath>
-  </FactionDef>
--->
   <FactionDef>
 		<defName>MechanicusFaction</defName>
 		<label>mechanicus exploritors</label>
@@ -127,6 +18,7 @@ In ancient times, before the current Age of the Imperium officially began follow
       <li>(0.35, 0.35, 0)</li>
       <li>(0.4, 0.2, 0)</li>
     </colorSpectrum>
+    <earliestRaidDays>90</earliestRaidDays>
     <permanentEnemy>true</permanentEnemy>
 		<factionNameMaker>NamerOGMechanicusFaction</factionNameMaker>
 		<techLevel>Spacer</techLevel>

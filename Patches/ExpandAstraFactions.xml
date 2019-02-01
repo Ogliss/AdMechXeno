@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Traitor Guard Faction Expansion: Adds additional Traitor Guard & Pirate units -->
+	<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>		
+			<!-- Traitor Guard Faction Expansion -->
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/FactionDef[defName = "TraitorGuardFaction"]</xpath>
+			</li>
+			<!-- Adds Deamons -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName = "TraitorGuardFaction"]/pawnGroupMakers/li/options</xpath>
+					<value>
+						  <ChaosDeamonHorrorBlue>30</ChaosDeamonHorrorBlue>
+						  <ChaosDeamonHorrorPink>25</ChaosDeamonHorrorPink>
+						  <ChaosDeamonFlamer>25</ChaosDeamonFlamer>
+						  <ChaosDeamonFlamerExalted>15</ChaosDeamonFlamerExalted>
+						  <ChaosDeamonNurgling>45</ChaosDeamonNurgling>
+						  <ChaosDeamonHorrorBrimstone>45</ChaosDeamonHorrorBrimstone>
+						  <ChaosDeamonPlagueBearer>50</ChaosDeamonPlagueBearer>
+						  <ChaosDeamonDeamonette>50</ChaosDeamonDeamonette>
+						  <ChaosDeamonScreamer>65</ChaosDeamonScreamer>
+					</value>
+			</li>	
+			<!-- Pirate Faction Expansion: Adds Traitor Guard -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName = "TraitorGuardFaction"]/pawnGroupMakers/li/options</xpath>
+					<value>
+						  <TGSolider>3</TGSolider>
+						  <TGHeavySoldier>1</TGHeavySoldier>
+						  <TGGrenadier>1</TGGrenadier>
+						  <TGSharpshooter>2</TGSharpshooter>
+						  <TGVeteran>2</TGVeteran>
+						  <TGStormTrooper>2</TGStormTrooper>
+						  <TGCaptain>1</TGCaptain>
+					</value>
+			</li>	
+		</operations>	
+	</Operation>
+
+	<!-- Chaos Marine Faction Expansion: Adds additional Chaos Marine & Pirate units -->
+	<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+			<!-- Chaos Marines Faction Expansion -->
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/FactionDef[defName = "IG_ChaosMarineFaction"]</xpath>
+			</li>
+			<!-- Adds Deamons -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName = "IG_ChaosMarineFaction"]/pawnGroupMakers/li/options</xpath>
+					<value>
+						  <ChaosDeamonHorrorBlue>3</ChaosDeamonHorrorBlue>
+						  <ChaosDeamonHorrorPink>2</ChaosDeamonHorrorPink>
+						  <ChaosDeamonFlamer>2</ChaosDeamonFlamer>
+						  <ChaosDeamonFlamerExalted>1</ChaosDeamonFlamerExalted>
+						  <ChaosDeamonNurgling>4</ChaosDeamonNurgling>
+						  <ChaosDeamonHorrorBrimstone>4</ChaosDeamonHorrorBrimstone>
+						  <ChaosDeamonPlagueBearer>5</ChaosDeamonPlagueBearer>
+						  <ChaosDeamonDeamonette>5</ChaosDeamonDeamonette>
+						  <ChaosDeamonScreamer>6</ChaosDeamonScreamer>
+					</value>
+			</li>	
+			<!-- Pirate Faction Expansion: Adds Chaos Marines -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName = "Pirate"]/pawnGroupMakers/li/options</xpath>
+					<value>
+						  <IG_CM_RNG_Solider>2</IG_CM_RNG_Solider>
+						  <IG_CM_RNG_Sargent>1</IG_CM_RNG_Sargent>
+						  <IG_CM_MEL_Solider>2</IG_CM_MEL_Solider>
+						  <IG_CM_MEL_Sargent>1</IG_CM_MEL_Sargent>
+					</value>
+			</li>	
+		</operations>	
+	</Operation>
+		
+	<!-- Tyranid Faction Expansion: Adds additional Tyranid units -->
+	<!--
+	<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>	
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/FactionDef[defName = "TyranidFaction"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName = "TyranidFaction"]/pawnGroupMakers/li/options<</xpath>
+					<value>
+					  <OGTYTermagant>30</OGTYTermagant>
+					  <OGTYHormagaunt>2</OGTYHormagaunt>
+					  <OGTYRipperSwarm>1</OGTYRipperSwarm>
+					</value>
+			</li>	
+		</operations>	
+	</Operation>
+	-->
+</Patch>

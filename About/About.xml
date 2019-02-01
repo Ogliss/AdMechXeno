@@ -2,9 +2,98 @@
 <ModMetaData>
 	<name>Adeptus Mechanicus Magos Xenobiologis R1.0</name>
 	<author>Ogliss</author>
-	<targetVersion>1.0.2059</targetVersion>
-	<description>V1.20
-    Adds factions using xenos weapons from my Armoury mod.
-	Requires new start or one of those faction managers
+	<supportedVersions>
+        <li>1.0</li>
+	</supportedVersions>
+	<description>V1.3
+Adds factions using xenos weapons from my Armoury mod.
+Requires new start or one of those faction managers
+	
+Small addon for my weapons mod, Adds NPC factions using xenos weapons.
+
+Playable addons for various races are linked in the description below
+
+Requires new start or Orion's faction discovery mod to add them to an exsisting map (Thanks to BadNeighbour for testing)
+
+Current
+
+==Tau== - armour based on Cpt.Ohu's Tau armour
+
+Ethereal
+Firewarrior Shas'la
+Firewarrior Shas'ui
+Kroot Warrior
+
+Kroothound
+Krootox
+Knarloc
+
+==Eldar== - armour based on Baron's Eldar armour
+
+Farseer
+Warlock
+Guardian
+Fire Support
+
+==Necron==
+
+Scarab Swarm
+Warrior
+Destroyer
+Lord
+
+Monolith Spawn Incident
+
+==Ork==
+
+Boy (Shoota, Slugga, Choppa)
+Eavy boy
+Nob (Shoota, Choppa)
+Eavy Nob
+
+Squig
+
+==Mechanicus==
+
+Tech Priests(Humanlike)
+Skitarii(Humanlike)
+Sicarians
+
+==Chaos Deamons==
+
+Horrors of Tzeentch (Pink, Blue, Brimstone)
+Flamer of Tzeentch (Normal, Exalted)
+Screamers of Tzeentch
+
+Nurgling
+Plaguebearer
+
+Deamonette
+
+Warp Storm Incident
+Deamonic Infestation Incident
+
+load order should be
+[url=https://steamcommunity.com/workshop/filedetails/?id=771341092/]Astra Militarum Imperial Guard Core Mod[/url]
+[url=https://steamcommunity.com/workshop/filedetails/?id=1541438614/]Adeptus Mechanicus: Armoury R1.0[/url]
+Adeptus Mechanicus: Magos Xenobiologis R1.0
+
+OR
+
+[url=https://steamcommunity.com/workshop/filedetails/?id=1541438614/]Adeptus Mechanicus: Armoury R1.0[/url]
+Adeptus Mechanicus: Magos Xenobiologis R1.0
+
+Playable Races: These will overwrite the NPC versions of the factions added by Magos Xenobiologis
+These require [url=https://steamcommunity.com/workshop/filedetails/?id=839005762/]Humanoid Alien Races 2.0[/url]
+[url=https://steamcommunity.com/workshop/filedetails/?id=1541518264/]Adeptus Mechanicus: Magos Xenobiologis (Playable Orkoids) R1.0[/url]
+
+[url=https://steamcommunity.com/workshop/filedetails/?id=1541520023/]Adeptus Mechanicus: Magos Xenobiologis (Playable Tau) R1.0[/url]
+
+[url=https://steamcommunity.com/workshop/filedetails/?id=1541515831/]Adeptus Mechanicus: Magos Xenobiologis (Playable Eldar) R1.0[/url]
+
+you have my full permission to rebalance/patch/translate this mod, just please link back to the original :)
+
+Problems? Questions? Comments? Got something youd like to see added to the mod?
+[url=https://discord.gg/fR5cA7b/]Join us on Discord[/url]
 		</description>
 </ModMetaData>

@@ -2,6 +2,12 @@
 <Defs>
 
     <ThingCategoryDef>
+      <defName>CorpsesDeamon</defName>
+      <label>deamon corpses</label>
+      <parent>Corpses</parent>
+    </ThingCategoryDef>
+	
+    <ThingCategoryDef>
       <defName>CorpsesNecron</defName>
       <label>necron corpses</label>
       <parent>Corpses</parent>

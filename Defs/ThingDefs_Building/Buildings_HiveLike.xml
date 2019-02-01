@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef Class="ThingDef_Hivelike" ParentName="BuildingHivelikeBase">
+    <defName>OGCDWarpRift</defName>
+    <label>warp rift</label>
+    <description>A tare in the fabric of reality. If activated, it will spawn additional deamons and rifts over time.</description>
+    <thingClass>HiveLike</thingClass>
+		<Faction>OGChaosDeamonFaction</Faction>
+		<TunnelDef>OGCDWarpTunnel</TunnelDef>
+    <graphicData>
+      <texPath>Things/Special/WarpRiftA</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <shaderType>TransparentPostLight</shaderType>
+      <drawSize>2.6</drawSize>
+    </graphicData>
+    <altitudeLayer>Building</altitudeLayer>
+    <rotatable>false</rotatable>
+    <fillPercent>0.5</fillPercent>
+    <statBases>
+      <MaxHitPoints>130</MaxHitPoints>
+      <Flammability>0.0</Flammability>
+    </statBases>
+    <pathCost>50</pathCost>
+    <blockWind>true</blockWind>
+    <tickerType>Normal</tickerType>
+    <passability>PassThroughOnly</passability>
+    <drawerType>RealtimeOnly</drawerType>
+    <killedLeavings>
+      <InsectJelly>30</InsectJelly>
+    </killedLeavings>
+    <placeWorkers>
+      <li>PlaceWorker_Heater</li>
+    </placeWorkers>
+    <comps>
+      <li Class="CompProperties_SpawnerHiveLikes" />
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>InsectJelly</thingToSpawn>
+        <spawnCount>5</spawnCount>
+        <spawnIntervalRange>
+          <min>13000</min>
+          <max>15000</max>
+        </spawnIntervalRange>
+      </li>
+      <li Class="CompProperties_Spawner">
+        <thingToSpawn>GlowPod</thingToSpawn>
+        <spawnCount>1</spawnCount>
+        <spawnIntervalRange>
+          <min>30000</min>
+          <max>60000</max>
+        </spawnIntervalRange>
+        <spawnMaxAdjacent>1</spawnMaxAdjacent>
+        <saveKeysPrefix>pod</saveKeysPrefix>
+        <inheritFaction>true</inheritFaction>
+      </li>
+      <li Class="CompProperties_HeatPusher">
+        <heatPerSecond>6</heatPerSecond>
+        <heatPushMaxTemperature>38</heatPushMaxTemperature>
+      </li>
+      <li Class="CompProperties_SpawnerFilth">
+        <filthDef>Filth_Slime</filthDef>
+        <spawnCountOnSpawn>10</spawnCountOnSpawn>
+        <spawnMtbHours>4</spawnMtbHours>
+        <spawnRadius>5</spawnRadius>
+      </li>
+      <li Class="CompProperties_Maintainable">
+        <ticksHealthy>60000</ticksHealthy>
+        <ticksNeedsMaintenance>40000</ticksNeedsMaintenance>
+        <damagePerTickRare>10</damagePerTickRare>
+      </li>
+      <li Class="CompProperties_Glower">
+        <glowRadius>10</glowRadius>
+        <glowColor>(245,109,160,0)</glowColor>
+      </li>
+      <li Class="CompProperties_WarpFireOverlay">
+        <fireSize>5</fireSize>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef Class="ThingDef_TunnelHiveLikeSpawner"  ParentName="EtherealThingBase">
+    <defName>OGCDWarpTunnel</defName>
+    <label>warp tunnel</label>
+    <thingClass>TunnelHiveLikeSpawner</thingClass>
+		<Faction>OGChaosDeamonFaction</Faction>
+		<HiveDef>OGCDWarpRift</HiveDef>
+		<strikespreexplode>true</strikespreexplode>
+		<explodesprespawn>true</explodesprespawn>
+		<damageDef>OGCDWarpStormStrike</damageDef>
+		<blastradius>5</blastradius>
+    <tickerType>Normal</tickerType>
+    <drawerType>RealtimeOnly</drawerType>
+    <alwaysFlee>true</alwaysFlee>
+    <comps>
+      <li Class="CompProperties_SpawnerHiveLikes" />
+      <li Class="CompProperties_Glower">
+        <glowRadius>5</glowRadius>
+        <glowColor>(245,109,160,0)</glowColor>
+      </li>
+      <li Class="CompProperties_WarpFireOverlay">
+        <fireSize>1</fireSize>
+      </li>
+    </comps>
+  </ThingDef>
+  
+</Defs>

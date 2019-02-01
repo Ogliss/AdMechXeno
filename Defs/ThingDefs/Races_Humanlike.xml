@@ -80,10 +80,11 @@
           <li>(100,0)</li>
         </points>
       </ageGenerationCurve>
-      <hediffGiverSets>
+      <hediffGiverSets Inherit="false">
+        <li>Mechanicus</li>
+        <li>Human</li>
 	  <!--
         <li>OrganicStandard</li>
-        <li>Human</li>
       -->
 	  </hediffGiverSets>
     </race>

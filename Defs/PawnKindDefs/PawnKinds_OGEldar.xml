@@ -160,7 +160,7 @@
 			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-			<li>EGun</li>
+			<li>Eldar_Gun</li>
 		</weaponTags>
 	</PawnKindDef>
 
@@ -193,8 +193,8 @@
 			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-			<li>EEliteGun</li>
-			<li>EHeavyGun</li>
+			<li>Eldar_SpecialGun</li>
+			<li>Eldar_HeavyGun</li>
 		</weaponTags>
 	</PawnKindDef>
 

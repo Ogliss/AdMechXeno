@@ -14,51 +14,6 @@
       <LeatherAmount>75</LeatherAmount>
 	  <ShootingAccuracyPawn>2</ShootingAccuracyPawn>
     </statBases>
-    <tools>
-      <li>
-        <label>left fist</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>7</power>
-        <cooldownTime>1.6</cooldownTime>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>22</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-      </li>
-      <li>
-        <label>right fist</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>14</power>
-        <cooldownTime>1.6</cooldownTime>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-        <surpriseAttack>
-          <extraMeleeDamages>
-            <li>
-              <def>Stun</def>
-              <amount>22</amount>
-            </li>
-          </extraMeleeDamages>
-        </surpriseAttack>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>10</power>
-        <cooldownTime>1.8</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-      </li>
-    </tools>
     <race>
       <thinkTreeMain>Humanlike</thinkTreeMain>
       <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
@@ -105,8 +60,69 @@
     </race>
   </ThingDef>
 
+  <!-- Ork Nob -->
+  <ThingDef ParentName="BaseOrk" Name="BaseOrkNob">
+    <defName>Ork_Nob</defName>
+    <label>Ork Nob</label>
+    <description>A Nob (pl: Nobz) is a larger Ork Boy who is smaller than and subservient to an Ork Warboss but still possesses some authority amongst other Greenskins of his tribe or klan because of his greater-than-average size and strength. The term "Nob" is believed to be an Orkish bastardisation of the Imperial Low Gothic word for "noble." Serving as a crude Greenskin ruling class, the Nobz are never above reminding the Boyz who's in charge by making a few bloody examples. This could involve hacking up some suitably impressive foes, or knocking a few fractious Boyz' blocks off. The Nobz aren't too fussy, just so long as it gets the message across. Whether clustered in a menacing mob around their Warboss, or lording it over the Boyz, Nobz are a force to be reckoned with. Their armour is usually festooned with kill-trophies, their flesh criss-crossed with impressive scars, earned in pit-fights or while killing their way through strings of brutal wars. Some Nobz even take to the field astride monstrous Warbikes, roaring through the enemy ranks like blood-soaked battering rams covered in guns. Many Nobz also outfit themselves with a very visible token of their position, be it a large pair of horns, taken from a creature they hunted, or a massive Iron Jaw, to show they have the meanest bite around!</description>
+    <statBases>
+      <MoveSpeed>5.2</MoveSpeed>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <race>
+      <lifeExpectancy>9999</lifeExpectancy>
+      <body>OrkBody</body>
+      <baseHealthScale>1.5</baseHealthScale>
+	  <useMeatFrom>Ork_Boy</useMeatFrom>
+    </race>
+  </ThingDef>
+
 <!-- Ork Eavy Nob -->
-  <ThingDef ParentName="BaseOrk">
+  <ThingDef ParentName="BaseOrkNob">
     <defName>Ork_Eavy_Nob</defName>
     <label>Ork Eavy Nob</label>
     <description>A Nob is a larger Ork Boy who is smaller than and subservient to an Ork Warboss but still possesses some authority amongst other Greenskins of his tribe or klan because of his greater-than-average size and strength. The term "Nob" is believed to be an Orkish bastardisation of the Imperial Low Gothic word for "noble." Serving as a crude Greenskin ruling class, the Nobz are never above reminding the Boyz who's in charge by making a few bloody examples. This could involve hacking up some suitably impressive foes, or knocking a few fractious Boyz' blocks off. The Nobz aren't too fussy, just so long as it gets the message across. Whether clustered in a menacing mob around their Warboss, or lording it over the Boyz, Nobz are a force to be reckoned with. Their armour is usually festooned with kill-trophies, their flesh criss-crossed with impressive scars, earned in pit-fights or while killing their way through strings of brutal wars. Some Nobz even take to the field astride monstrous Warbikes, roaring through the enemy ranks like blood-soaked battering rams covered in guns. Many Nobz also outfit themselves with a very visible token of their position, be it a large pair of horns, taken from a creature they hunted, or a massive Iron Jaw, to show they have the meanest bite around!</description>
@@ -121,24 +137,67 @@
     </race>
   </ThingDef>
 
-  <!-- Ork Nob -->
-  <ThingDef ParentName="BaseOrk">
-    <defName>Ork_Nob</defName>
-    <label>Ork Nob</label>
-    <description>A Nob (pl: Nobz) is a larger Ork Boy who is smaller than and subservient to an Ork Warboss but still possesses some authority amongst other Greenskins of his tribe or klan because of his greater-than-average size and strength. The term "Nob" is believed to be an Orkish bastardisation of the Imperial Low Gothic word for "noble." Serving as a crude Greenskin ruling class, the Nobz are never above reminding the Boyz who's in charge by making a few bloody examples. This could involve hacking up some suitably impressive foes, or knocking a few fractious Boyz' blocks off. The Nobz aren't too fussy, just so long as it gets the message across. Whether clustered in a menacing mob around their Warboss, or lording it over the Boyz, Nobz are a force to be reckoned with. Their armour is usually festooned with kill-trophies, their flesh criss-crossed with impressive scars, earned in pit-fights or while killing their way through strings of brutal wars. Some Nobz even take to the field astride monstrous Warbikes, roaring through the enemy ranks like blood-soaked battering rams covered in guns. Many Nobz also outfit themselves with a very visible token of their position, be it a large pair of horns, taken from a creature they hunted, or a massive Iron Jaw, to show they have the meanest bite around!</description>
+  <!-- Ork Boy -->
+  <ThingDef ParentName="BaseOrk" Name="BaseOrkBoy">
+    <defName>Ork_Boy</defName>
+    <label>Ork Boy</label>
+    <description>The Ork Boyz are the different types of troops deployed by the Orks, a savage, warlike, green-skinned race of humanoids of the Milky Way Galaxy. They are in some ways equivalent to Warhammer Fantasy Orcs, particularly in terms of their physical appearance, but they vary from the Warhammer World's Greenskins in some minor biological and cultural details. They are seen by their enemies (pretty much everyone else in the galaxy) as savage, warlike and crude, but they are the most successful species in the Milky Way, outnumbering possibly every other intelligent race, including Mankind. However, the power of the Ork race as a whole is limited due to the fact that they are split into hundreds of tiny empires, which are more often warring between themselves than not. Were the Orks ever to unite as a species, they would undoubtedly crush all opposition in a massive migration-invasion known as a WAAAGH!</description>
     <statBases>
-      <MoveSpeed>5.2</MoveSpeed>
+      <MoveSpeed>5.4</MoveSpeed>
     </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
     <race>
       <lifeExpectancy>9999</lifeExpectancy>
       <body>OrkBody</body>
-      <baseHealthScale>1.5</baseHealthScale>
-	  <useMeatFrom>Ork_Boy</useMeatFrom>
     </race>
   </ThingDef>
 
   <!-- Ork Eavy Boy -->
-  <ThingDef ParentName="BaseOrk">
+  <ThingDef ParentName="BaseOrkBoy">
     <defName>Ork_Eavy_Boy</defName>
     <label>Ork Eavy Boy</label>
     <description>The Ork Boyz are the different types of troops deployed by the Orks, a savage, warlike, green-skinned race of humanoids of the Milky Way Galaxy. They are in some ways equivalent to Warhammer Fantasy Orcs, particularly in terms of their physical appearance, but they vary from the Warhammer World's Greenskins in some minor biological and cultural details. They are seen by their enemies (pretty much everyone else in the galaxy) as savage, warlike and crude, but they are the most successful species in the Milky Way, outnumbering possibly every other intelligent race, including Mankind. However, the power of the Ork race as a whole is limited due to the fact that they are split into hundreds of tiny empires, which are more often warring between themselves than not. Were the Orks ever to unite as a species, they would undoubtedly crush all opposition in a massive migration-invasion known as a WAAAGH!</description>
@@ -150,20 +209,6 @@
       <body>OrkBody</body>
       <baseHealthScale>1.25</baseHealthScale>
 	  <useMeatFrom>Ork_Boy</useMeatFrom>
-    </race>
-  </ThingDef>
-
-  <!-- Ork Boy -->
-  <ThingDef ParentName="BaseOrk">
-    <defName>Ork_Boy</defName>
-    <label>Ork Boy</label>
-    <description>The Ork Boyz are the different types of troops deployed by the Orks, a savage, warlike, green-skinned race of humanoids of the Milky Way Galaxy. They are in some ways equivalent to Warhammer Fantasy Orcs, particularly in terms of their physical appearance, but they vary from the Warhammer World's Greenskins in some minor biological and cultural details. They are seen by their enemies (pretty much everyone else in the galaxy) as savage, warlike and crude, but they are the most successful species in the Milky Way, outnumbering possibly every other intelligent race, including Mankind. However, the power of the Ork race as a whole is limited due to the fact that they are split into hundreds of tiny empires, which are more often warring between themselves than not. Were the Orks ever to unite as a species, they would undoubtedly crush all opposition in a massive migration-invasion known as a WAAAGH!</description>
-    <statBases>
-      <MoveSpeed>5.4</MoveSpeed>
-    </statBases>
-    <race>
-      <lifeExpectancy>9999</lifeExpectancy>
-      <body>OrkBody</body>
     </race>
   </ThingDef>
 

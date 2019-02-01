@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- Necron Base Abstract -->
-  <ThingDef ParentName="BasePawn" Name="BaseNecron">
+
+  <ThingDef Name="NecronPawn" Abstract="True">
+    <thingClass>Pawn</thingClass>
+    <category>Pawn</category>
+    <selectable>true</selectable>
+    <tickerType>Normal</tickerType>
+    <altitudeLayer>Pawn</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <hasTooltip>true</hasTooltip>
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+    <statBases>
+      <Mass>70</Mass>
+    </statBases>
+    <inspectorTabs>
+      <li>ITab_Pawn_Health</li>
+      <li>ITab_Pawn_Needs</li>
+      <li>ITab_Pawn_Character</li>
+      <li>ITab_Pawn_Training</li>
+      <li>ITab_Pawn_Social</li>
+      <li>ITab_Pawn_Guest</li>
+      <li>ITab_Pawn_Prisoner</li>
+      <li>ITab_Pawn_FormingCaravan</li>
+      <li>ITab_Pawn_Gear</li>
+      <li>ITab_Pawn_Log</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompAttachBase</compClass>
+      </li>
+    </comps>
+    <drawGUIOverlay>true</drawGUIOverlay>
+  </ThingDef>
+  
+  <ThingDef ParentName="NecronPawn" Name="BaseNecron">
   <defName>Necron_Race</defName>
     <label>Necron Construct Race</label>
     <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
@@ -111,6 +144,10 @@
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 	  <useMeatFrom>Necron_Race</useMeatFrom>
     </race>
+    <comps> 
+      <li Class="AdeptusMechanicus.CompProperties_NecronOG">
+      </li> 
+    </comps>
   </ThingDef>
 
   <PawnKindDef ParentName="BaseNecronKind">
@@ -136,7 +173,7 @@
       <max>40000</max>
     </weaponMoney>
     <weaponTags>
-      <li>NStaffOfLight</li>
+      <li>OGN_Gun_NStaffOfLight</li>
     </weaponTags>
   </PawnKindDef>  
   
@@ -193,6 +230,10 @@
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 	  <useMeatFrom>Necron_Race</useMeatFrom>
     </race>
+    <comps> 
+      <li Class="AdeptusMechanicus.CompProperties_NecronOG">
+      </li> 
+    </comps>
   </ThingDef>
 
   <PawnKindDef ParentName="BaseNecronKind">
@@ -218,7 +259,7 @@
       <max>40000</max>
     </weaponMoney>
     <weaponTags>
-      <li>NGaussFlayer</li>
+      <li>OGN_Gun_NGaussFlayer</li>
     </weaponTags>
   </PawnKindDef>
   
@@ -276,6 +317,10 @@
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 	  <useMeatFrom>Necron_Race</useMeatFrom>
     </race>
+    <comps> 
+      <li Class="AdeptusMechanicus.CompProperties_NecronOG">
+      </li> 
+    </comps>
   </ThingDef>
 
   <PawnKindDef ParentName="BaseNecronKind">
@@ -301,7 +346,7 @@
       <max>40000</max>
     </weaponMoney>
     <weaponTags>
-      <li>NGaussBlaster</li>
+      <li>OGN_Gun_NGaussBlaster</li>
     </weaponTags>
   </PawnKindDef>  
   
@@ -357,6 +402,10 @@
       <Plasteel>10</Plasteel>
       <ComponentIndustrial>2</ComponentIndustrial>
     </butcherProducts>
+    <comps> 
+      <li Class="AdeptusMechanicus.CompProperties_NecronOG">
+      </li> 
+    </comps>
   </ThingDef>
 
   <PawnKindDef ParentName="BaseNecronKind">
@@ -381,7 +430,7 @@
       <max>30000</max>
     </weaponMoney>
     <weaponTags>
-      <li>NGaussCannon</li>
+      <li>OGN_Gun_NGaussCannon</li>
     </weaponTags>
   </PawnKindDef>
 

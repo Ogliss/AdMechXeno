@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Pirate Faction Expansion: Adds additional Pirate units -->
+	<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>		
+			<!-- Pirate Faction Expansion: Adds Deamons -->
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/FactionDef[defName = "Pirate"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName = "Pirate"]/pawnGroupMakers/li/options</xpath>
+					<value>
+						  <ChaosDeamonHorrorBlue>3</ChaosDeamonHorrorBlue>
+						  <ChaosDeamonHorrorPink>2</ChaosDeamonHorrorPink>
+						  <ChaosDeamonFlamer>2</ChaosDeamonFlamer>
+						  <ChaosDeamonFlamerExalted>1</ChaosDeamonFlamerExalted>
+						  <ChaosDeamonNurgling>4</ChaosDeamonNurgling>
+						  <ChaosDeamonHorrorBrimstone>4</ChaosDeamonHorrorBrimstone>
+						  <ChaosDeamonPlagueBearer>2</ChaosDeamonPlagueBearer>
+						  <ChaosDeamonDeamonette>2</ChaosDeamonDeamonette>
+						  <ChaosDeamonScreamer>3</ChaosDeamonScreamer>
+					</value>
+			</li>	
+		</operations>	
+	</Operation>
+</Patch>
