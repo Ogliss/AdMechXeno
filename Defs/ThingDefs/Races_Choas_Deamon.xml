@@ -49,6 +49,7 @@
         <PainShockThreshold>5</PainShockThreshold>
     </statBases>
     <race>
+      <body>Human</body>
       <fleshType>ChaosDeamon</fleshType>
       <bloodDef>OG_FilthBlood_ChaosDeamon</bloodDef>	
       <thinkTreeMain>OGChaosDeamons</thinkTreeMain>

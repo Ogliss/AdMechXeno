@@ -47,6 +47,7 @@
       <MeatAmount>0</MeatAmount>
     </statBases>
     <race>
+      <body>Human</body>
       <fleshType>Necron</fleshType>
       <needsRest>false</needsRest>
       <hasGenders>false</hasGenders>

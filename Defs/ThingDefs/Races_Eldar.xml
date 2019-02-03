@@ -112,6 +112,7 @@
       <MeatAmount>0</MeatAmount>
     </statBases>
     <race>
+      <body>Human</body>
       <fleshType>EldarConstruct</fleshType>
       <needsRest>false</needsRest>
       <hasGenders>false</hasGenders>

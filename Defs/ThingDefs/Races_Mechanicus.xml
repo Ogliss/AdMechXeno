@@ -14,6 +14,7 @@
       <MeatAmount>0</MeatAmount>
     </statBases>
     <race>
+      <body>Human</body>
       <fleshType>Mechanicus</fleshType>
       <needsRest>false</needsRest>
       <hasGenders>false</hasGenders>
