@@ -186,6 +186,7 @@
       <lifeExpectancy>9999</lifeExpectancy>
       <baseHealthScale>2.75</baseHealthScale>
       <body>OrkBody</body>
+	  <useMeatFrom>Alien_Ork</useMeatFrom>
     </race>
   </ThingDef>
 

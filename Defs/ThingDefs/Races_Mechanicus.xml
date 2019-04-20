@@ -16,6 +16,7 @@
     <race>
       <body>Human</body>
       <fleshType>Mechanicus</fleshType>
+	  <useMeatFrom>Mech_Centipede</useMeatFrom>
       <needsRest>false</needsRest>
       <hasGenders>false</hasGenders>
       <foodType>None</foodType>
@@ -112,7 +113,6 @@
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-	  <useMeatFrom>Mechanicus_Race</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -141,6 +141,7 @@
     </weaponMoney>
     <weaponTags>
       <li>IGCDualLightningClaw</li>
+      <li>LightningClaw</li>
     </weaponTags>
   </PawnKindDef>
 

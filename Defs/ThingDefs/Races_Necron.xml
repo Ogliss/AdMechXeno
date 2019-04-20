@@ -49,6 +49,7 @@
     <race>
       <body>Human</body>
       <fleshType>Necron</fleshType>
+	  <useMeatFrom>Mech_Centipede</useMeatFrom>
       <needsRest>false</needsRest>
       <hasGenders>false</hasGenders>
       <foodType>None</foodType>
@@ -143,7 +144,6 @@
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-	  <useMeatFrom>Necron_Race</useMeatFrom>
     </race>
     <comps> 
       <li Class="AdeptusMechanicus.CompProperties_NecronOG">
@@ -229,7 +229,6 @@
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-	  <useMeatFrom>Necron_Race</useMeatFrom>
     </race>
     <comps> 
       <li Class="AdeptusMechanicus.CompProperties_NecronOG">
@@ -316,7 +315,6 @@
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-	  <useMeatFrom>Necron_Race</useMeatFrom>
     </race>
     <comps> 
       <li Class="AdeptusMechanicus.CompProperties_NecronOG">
@@ -396,7 +394,6 @@
       <soundMeleeHitPawn>Pawn_Melee_MechanoidBash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_MechanoidBash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_MechanoidBash_Miss</soundMeleeMiss>
-	  <useMeatFrom>Necron_Race</useMeatFrom>
     </race>
     <butcherProducts>
       <Steel>50</Steel>
@@ -487,7 +484,6 @@
       <soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_MechanoidSlash_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_MechanoidSlash_Miss</soundMeleeMiss>
-	  <useMeatFrom>Necron_Race</useMeatFrom>
     </race>
   </ThingDef>
   

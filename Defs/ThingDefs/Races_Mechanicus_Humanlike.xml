@@ -26,6 +26,7 @@
       <makesFootprints>true</makesFootprints>
 	  -->
       <leatherDef>Leather_Human</leatherDef>
+	  <useMeatFrom>Human</useMeatFrom>
       <nameCategory>HumanStandard</nameCategory>
       <lifeExpectancy>80</lifeExpectancy>
       <body>Human</body>

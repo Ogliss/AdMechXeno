@@ -91,10 +91,27 @@
         <li>OrganicStandard</li>
       </hediffGiverSets>
 	  <leatherDef>Leather_Tau</leatherDef>
-      <meatLabel>tau flesh</meatLabel>
+      <meatLabel>tau meat</meatLabel>
     </race>
   </ThingDef>
 
+  <ThingDef ParentName="BaseTau">
+    <defName>Alien_Tau</defName>
+    <label>Faction Leader</label>
+    <description>An Ethereal is a member of the fifth caste of the Tau species, forming a ruling elite above the Fire, Earth, Air, and Water Castes that make up the bulk of the T'au population. Known as the Aun in the Tau Lexicon, their name translates variously as the "Celestial" or "Ethereal Caste." Though their numbers are small compared to the other castes, the Ethereals are the rulers of the T'au Empire, and command near total authority and loyalty from every other Tau. Born to counsel, advise and steer their comrades towards the chosen path, the Ethereals embody the roles of royalty and the priesthood, and the deference paid to them is the closest thing to mysticism in T'au society.</description>
+    <statBases>
+      <MoveSpeed>5.8</MoveSpeed>
+    </statBases>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <nameCategory>HumanStandard</nameCategory>
+      <lifeExpectancy>150</lifeExpectancy>
+      <body>Ethereal</body>
+      <baseHealthScale>1</baseHealthScale>
+    </race>
+  </ThingDef>
 <!-- Tau Faction Leader Pawn -->
 
   <ThingDef ParentName="BaseTau">
@@ -111,6 +128,7 @@
       <nameCategory>HumanStandard</nameCategory>
       <lifeExpectancy>150</lifeExpectancy>
       <body>Ethereal</body>
+	  <useMeatFrom>Alien_Tau</useMeatFrom>
       <baseHealthScale>2.5</baseHealthScale>
     </race>
   </ThingDef>
@@ -128,7 +146,7 @@
       <lifeExpectancy>150</lifeExpectancy>
       <body>Ethereal</body>
       <baseHealthScale>2.5</baseHealthScale>
-	  <useMeatFrom>Tau_FactionEthereal</useMeatFrom>
+	  <useMeatFrom>Alien_Tau</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -144,11 +162,28 @@
       <lifeExpectancy>50</lifeExpectancy>
       <body>FireWarrior</body>
       <baseHealthScale>1.5</baseHealthScale>
-	  <useMeatFrom>Tau_FactionEthereal</useMeatFrom>
+	  <useMeatFrom>Alien_Tau</useMeatFrom>
     </race>
   </ThingDef>
 
   <!-- Kroot Warrior -->
+
+  <ThingDef ParentName="BaseTau">
+    <defName>Alien_Kroot</defName>
+    <label>Kroot Warrior</label>
+    <description>The Kroot are a species of savage humanoids who are a member species of the Tau Empire who evolved from avian creatures. Kroot are tall aliens (a good half-meter taller than most humans), their avian ancestry giving them a bird-like beak and long quills protruding from their heads like hair. Smaller quills, possibly the evolutionary remnants of feathers, can be found scattered over their bodies.</description>
+    <statBases>
+      <MoveSpeed>5.2</MoveSpeed>
+    </statBases>
+    <race>
+      <lifeExpectancy>120</lifeExpectancy>
+      <body>Kroot</body>
+      <baseHungerRate>0.25</baseHungerRate>
+      <baseHealthScale>1.8</baseHealthScale>
+	  <leatherDef>Leather_Kroot</leatherDef>
+      <meatLabel>kroot meat</meatLabel>
+    </race>
+  </ThingDef>
 
   <ThingDef ParentName="BaseTau">
     <defName>Tau_Kroot_Warrior</defName>
@@ -163,7 +198,7 @@
       <baseHungerRate>0.25</baseHungerRate>
       <baseHealthScale>1.8</baseHealthScale>
 	  <leatherDef>Leather_Kroot</leatherDef>
-      <meatLabel>kroot flesh</meatLabel>
+	  <useMeatFrom>Alien_Kroot</useMeatFrom>
     </race>
   </ThingDef>
 

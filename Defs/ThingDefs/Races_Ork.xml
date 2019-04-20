@@ -56,10 +56,25 @@
         <li>OrganicStandard</li>
       </hediffGiverSets>
 	  <leatherDef>Leather_Ork</leatherDef>
-      <meatLabel>ork flesh</meatLabel>
+      <meatLabel>ork meat</meatLabel>
     </race>
   </ThingDef>
 
+<!-- Alien_Ork -->
+  <ThingDef ParentName="BaseOrk">
+    <defName>Alien_Ork</defName>
+    <label>Ork</label>
+    <description>A Nob is a larger Ork Boy who is smaller than and subservient to an Ork Warboss but still possesses some authority amongst other Greenskins of his tribe or klan because of his greater-than-average size and strength. The term "Nob" is believed to be an Orkish bastardisation of the Imperial Low Gothic word for "noble." Serving as a crude Greenskin ruling class, the Nobz are never above reminding the Boyz who's in charge by making a few bloody examples. This could involve hacking up some suitably impressive foes, or knocking a few fractious Boyz' blocks off. The Nobz aren't too fussy, just so long as it gets the message across. Whether clustered in a menacing mob around their Warboss, or lording it over the Boyz, Nobz are a force to be reckoned with. Their armour is usually festooned with kill-trophies, their flesh criss-crossed with impressive scars, earned in pit-fights or while killing their way through strings of brutal wars. Some Nobz even take to the field astride monstrous Warbikes, roaring through the enemy ranks like blood-soaked battering rams covered in guns. Many Nobz also outfit themselves with a very visible token of their position, be it a large pair of horns, taken from a creature they hunted, or a massive Iron Jaw, to show they have the meanest bite around!</description>
+    <statBases>
+	
+    </statBases>
+    <race>
+      <lifeExpectancy>9999</lifeExpectancy>
+      <body>OrkBody</body>
+      <baseHealthScale>2.0</baseHealthScale>
+    </race>
+  </ThingDef>
+  
   <!-- Ork Nob -->
   <ThingDef ParentName="BaseOrk" Name="BaseOrkNob">
     <defName>Ork_Nob</defName>
@@ -117,7 +132,7 @@
       <lifeExpectancy>9999</lifeExpectancy>
       <body>OrkBody</body>
       <baseHealthScale>1.5</baseHealthScale>
-	  <useMeatFrom>Ork_Boy</useMeatFrom>
+	  <useMeatFrom>Alien_Ork</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -133,7 +148,7 @@
       <lifeExpectancy>9999</lifeExpectancy>
       <body>OrkBody</body>
       <baseHealthScale>2.0</baseHealthScale>
-	  <useMeatFrom>Ork_Boy</useMeatFrom>
+	  <useMeatFrom>Alien_Ork</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -193,6 +208,7 @@
     <race>
       <lifeExpectancy>9999</lifeExpectancy>
       <body>OrkBody</body>
+	  <useMeatFrom>Alien_Ork</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -208,7 +224,7 @@
       <lifeExpectancy>9999</lifeExpectancy>
       <body>OrkBody</body>
       <baseHealthScale>1.25</baseHealthScale>
-	  <useMeatFrom>Ork_Boy</useMeatFrom>
+	  <useMeatFrom>Alien_Ork</useMeatFrom>
     </race>
   </ThingDef>
 
