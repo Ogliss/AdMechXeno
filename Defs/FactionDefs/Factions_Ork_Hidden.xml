@@ -43,18 +43,15 @@
         <kindDef>Combat</kindDef>
         <commonality>100</commonality>
         <options>
-		  <AttackSquig>5</AttackSquig>
-          <OrkRuntBoy>9</OrkRuntBoy>
-          <OrkWarboss>1</OrkWarboss>
-          <OrkEavyChoppaBoy>7</OrkEavyChoppaBoy>
-          <OrkEavySluggaBoy>7</OrkEavySluggaBoy>
-          <OrkEavyShootaBoy>7</OrkEavyShootaBoy>
-          <OrkChoppaNob>5</OrkChoppaNob>
-          <OrkSluggaNob>5</OrkSluggaNob>
-          <OrkShootaNob>5</OrkShootaNob>
-          <OrkEavyChoppaNob>3</OrkEavyChoppaNob>
-          <OrkEavySluggaNob>3</OrkEavySluggaNob>
-          <OrkEavyShootaNob>3</OrkEavyShootaNob>
+          <AttackSquig>10</AttackSquig>
+          <OrkSluggaBoy>10</OrkSluggaBoy>
+          <OrkChoppaBoy>15</OrkChoppaBoy>
+          <OrkShootaBoy>7.5</OrkShootaBoy>
+          <OrkEavyShootaBoy>5</OrkEavyShootaBoy>
+          <OrkShootaNob>0.5</OrkShootaNob>
+          <OrkChoppaNob>0.5</OrkChoppaNob>
+          <OrkEavyShootaNob>2</OrkEavyShootaNob>
+          <OrkFactionWarboss>0</OrkFactionWarboss>
         </options>
       </li>
       <li>
@@ -62,14 +59,11 @@
         <kindDef>Combat</kindDef>
         <commonality>80</commonality>
         <options>
-          <OrkRuntBoy>9</OrkRuntBoy>
-          <OrkWarboss>1</OrkWarboss>
-          <OrkEavySluggaBoy>7</OrkEavySluggaBoy>
-          <OrkEavyShootaBoy>7</OrkEavyShootaBoy>
-          <OrkSluggaNob>5</OrkSluggaNob>
-          <OrkShootaNob>5</OrkShootaNob>
-          <OrkEavySluggaNob>3</OrkEavySluggaNob>
-          <OrkEavyShootaNob>3</OrkEavyShootaNob>
+          <OrkSluggaBoy>15</OrkSluggaBoy>
+          <OrkShootaBoy>10</OrkShootaBoy>
+          <OrkEavyShootaBoy>6</OrkEavyShootaBoy>
+          <OrkShootaNob>2</OrkShootaNob>
+          <OrkEavyShootaNob>0.5</OrkEavyShootaNob>
         </options>
       </li>
       <li>
@@ -77,13 +71,10 @@
         <kindDef>Combat</kindDef>
         <commonality>70</commonality>
         <options>
-		  <AttackSquig>5</AttackSquig>
-          <OrkEavyChoppaBoy>7</OrkEavyChoppaBoy>
-          <OrkEavySluggaBoy>7</OrkEavySluggaBoy>
-          <OrkChoppaNob>5</OrkChoppaNob>
-          <OrkSluggaNob>5</OrkSluggaNob>
-          <OrkEavyChoppaNob>3</OrkEavyChoppaNob>
-          <OrkEavySluggaNob>3</OrkEavySluggaNob>
+          <AttackSquig>10</AttackSquig>
+          <OrkChoppaBoy>15</OrkChoppaBoy>
+          <OrkChoppaNob>10</OrkChoppaNob>
+          <OrkEavyShootaNob>5</OrkEavyShootaNob>
         </options>
       </li>
       <li>
@@ -92,7 +83,7 @@
         <commonality>30</commonality>
         <options>
           <OrkEavyShootaNob>10</OrkEavyShootaNob>
-          <OrkEavyChoppaNob>10</OrkEavyChoppaNob>
+          <OrkChoppaNob>1</OrkChoppaNob>
         </options>
       </li>
     </pawnGroupMakers>

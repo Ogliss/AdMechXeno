@@ -277,7 +277,6 @@
       <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
       <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-	  <useMeatFrom>Eldar_Construct_Race</useMeatFrom>
     </race>
   </ThingDef>
 <!-- Melee -->
