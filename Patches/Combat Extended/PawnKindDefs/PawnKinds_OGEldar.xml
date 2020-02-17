@@ -11,7 +11,7 @@
     </li>
 	
     <li Class="PatchOperationAddModExtension">
-    <xpath>/Defs/PawnKindDef[@Name="EldarBase"]</xpath>
+    <xpath>/Defs/PawnKindDef[@Name="OG_Eldar_Pawnkind_Base"]</xpath>
     <value>
       <li Class="CombatExtended.LoadoutPropertiesExtension">
         <primaryMagazineCount>

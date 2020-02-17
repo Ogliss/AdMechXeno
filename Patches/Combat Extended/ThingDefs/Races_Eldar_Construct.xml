@@ -9,7 +9,7 @@
 
     <li Class="PatchOperationReplace">
         <success>Always</success>
-        <xpath>Defs/ThingDef[@Name="BaseEldarConstruct"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
+        <xpath>Defs/ThingDef[@Name="OG_Eldar_Wraithconstruct_Pawn_Base"]/inspectorTabs/li[.="ITab_Pawn_Gear"]</xpath>
         <value>
             <li>CombatExtended.ITab_Inventory</li>
         </value>
@@ -17,14 +17,14 @@
  
     <li Class="PatchOperationAdd">
         <success>Always</success>
-        <xpath>Defs/ThingDef[@Name="BaseEldarConstruct"]/comps</xpath>
+        <xpath>Defs/ThingDef[@Name="OG_Eldar_Wraithconstruct_Pawn_Base"]/comps</xpath>
         <value>
             <li Class="CombatExtended.CompProperties_Inventory" />
         </value>
     </li>
 
 	<li Class="PatchOperationAddModExtension">
-		<xpath>Defs/ThingDef[defName="Eldar_WraithGuard"]</xpath>
+		<xpath>Defs/ThingDef[defName="OG_Eldar_Wraithguard_Race"]</xpath>
 		<value>
 			<li Class="CombatExtended.RacePropertiesExtensionCE">
 				<bodyShape>Humanoid</bodyShape>
@@ -33,7 +33,7 @@
 	</li>
 	
 	<li Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Eldar_WraithGuard"]/tools</xpath>
+		<xpath>Defs/ThingDef[defName="OG_Eldar_Wraithguard_Race"]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
@@ -72,7 +72,7 @@
 	</li>
 	
 	<li Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Eldar_WraithGuard"]/comps</xpath>
+		<xpath>Defs/ThingDef[defName="OG_Eldar_Wraithguard_Race"]/comps</xpath>
 		<value>
 			<li>
 			  <compClass>CombatExtended.CompPawnGizmo</compClass>

@@ -1,0 +1,10 @@
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Assemblies\AdeptusMechanicusXenobiologis.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Assemblies\AdeptusMechanicusXenobiologis.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Source\Necron\Necron\obj\Release\AdeptusMechanicusXenobiologis.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Source\Necron\Necron\obj\Release\AdeptusMechanicusXenobiologis.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Source\Necron\Necron\obj\Release\AdeptusMechanicusXenobiologis.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Source\Necron\Necron\obj\Release\AdeptusMechanicusXenobiologis.pdb
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Source\AdeptusMechanicusXenobiologis\AdeptusMechanicusXenobiologis\obj\Release\AdeptusMechanicusXenobiologis.csprojResolveAssemblyReference.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Source\AdeptusMechanicusXenobiologis\AdeptusMechanicusXenobiologis\obj\Release\AdeptusMechanicusXenobiologis.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Source\AdeptusMechanicusXenobiologis\AdeptusMechanicusXenobiologis\obj\Release\AdeptusMechanicusXenobiologis.dll
+C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Source\AdeptusMechanicusXenobiologis\AdeptusMechanicusXenobiologis\obj\Release\AdeptusMechanicusXenobiologis.pdb

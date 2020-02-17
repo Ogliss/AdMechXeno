@@ -12,15 +12,15 @@
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/FactionDef[defName = "TraitorGuardFaction"]/pawnGroupMakers/li/options</xpath>
 					<value>
-						  <ChaosDeamonHorrorBlue>30</ChaosDeamonHorrorBlue>
-						  <ChaosDeamonHorrorPink>25</ChaosDeamonHorrorPink>
-						  <ChaosDeamonFlamer>25</ChaosDeamonFlamer>
-						  <ChaosDeamonFlamerExalted>15</ChaosDeamonFlamerExalted>
-						  <ChaosDeamonNurgling>45</ChaosDeamonNurgling>
-						  <ChaosDeamonHorrorBrimstone>45</ChaosDeamonHorrorBrimstone>
-						  <ChaosDeamonPlagueBearer>50</ChaosDeamonPlagueBearer>
-						  <ChaosDeamonDeamonette>50</ChaosDeamonDeamonette>
-						  <ChaosDeamonScreamer>65</ChaosDeamonScreamer>
+						  <OG_Chaos_Deamon_Lessar_Horror_Blue>30</OG_Chaos_Deamon_Lessar_Horror_Blue>
+						  <OG_Chaos_Deamon_Lessar_Horror_Pink>25</OG_Chaos_Deamon_Lessar_Horror_Pink>
+						  <OG_Chaos_Deamon_Flamer>25</OG_Chaos_Deamon_Flamer>
+						  <OG_Chaos_Deamon_Flamer_Exalted>15</OG_Chaos_Deamon_Flamer_Exalted>
+						  <OG_Chaos_Deamon_Lessar_Nurgling>45</OG_Chaos_Deamon_Lessar_Nurgling>
+						  <OG_Chaos_Deamon_Lessar_Horror_Brimstone>45</OG_Chaos_Deamon_Lessar_Horror_Brimstone>
+						  <OG_Chaos_Deamon_Plague_Bearer>50</OG_Chaos_Deamon_Plague_Bearer>
+						  <OG_Chaos_Deamon_Lessar_Deamonette>50</OG_Chaos_Deamon_Lessar_Deamonette>
+						  <OG_Chaos_Deamon_Lessar_Screamer>65</OG_Chaos_Deamon_Lessar_Screamer>
 					</value>
 			</li>	
 			<!-- Pirate Faction Expansion: Adds Traitor Guard -->
@@ -51,15 +51,15 @@
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/FactionDef[defName = "IG_ChaosMarineFaction"]/pawnGroupMakers/li/options</xpath>
 					<value>
-						  <ChaosDeamonHorrorBlue>3</ChaosDeamonHorrorBlue>
-						  <ChaosDeamonHorrorPink>2</ChaosDeamonHorrorPink>
-						  <ChaosDeamonFlamer>2</ChaosDeamonFlamer>
-						  <ChaosDeamonFlamerExalted>1</ChaosDeamonFlamerExalted>
-						  <ChaosDeamonNurgling>4</ChaosDeamonNurgling>
-						  <ChaosDeamonHorrorBrimstone>4</ChaosDeamonHorrorBrimstone>
-						  <ChaosDeamonPlagueBearer>5</ChaosDeamonPlagueBearer>
-						  <ChaosDeamonDeamonette>5</ChaosDeamonDeamonette>
-						  <ChaosDeamonScreamer>6</ChaosDeamonScreamer>
+						  <OG_Chaos_Deamon_Lessar_Horror_Blue>3</OG_Chaos_Deamon_Lessar_Horror_Blue>
+						  <OG_Chaos_Deamon_Lessar_Horror_Pink>2</OG_Chaos_Deamon_Lessar_Horror_Pink>
+						  <OG_Chaos_Deamon_Flamer>2</OG_Chaos_Deamon_Flamer>
+						  <OG_Chaos_Deamon_Flamer_Exalted>1</OG_Chaos_Deamon_Flamer_Exalted>
+						  <OG_Chaos_Deamon_Lessar_Nurgling>4</OG_Chaos_Deamon_Lessar_Nurgling>
+						  <OG_Chaos_Deamon_Lessar_Horror_Brimstone>4</OG_Chaos_Deamon_Lessar_Horror_Brimstone>
+						  <OG_Chaos_Deamon_Plague_Bearer>5</OG_Chaos_Deamon_Plague_Bearer>
+						  <OG_Chaos_Deamon_Lessar_Deamonette>5</OG_Chaos_Deamon_Lessar_Deamonette>
+						  <OG_Chaos_Deamon_Lessar_Screamer>6</OG_Chaos_Deamon_Lessar_Screamer>
 					</value>
 			</li>	
 			<!-- Pirate Faction Expansion: Adds Chaos Marines -->
@@ -76,7 +76,6 @@
 	</Operation>
 		
 	<!-- Tyranid Faction Expansion: Adds additional Tyranid units -->
-	<!--
 	<Operation Class="PatchOperationSequence">
 	<success>Always</success>
 		<operations>	
@@ -84,14 +83,22 @@
 				<xpath>/Defs/FactionDef[defName = "TyranidFaction"]</xpath>
 			</li>
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/FactionDef[defName = "TyranidFaction"]/pawnGroupMakers/li/options<</xpath>
+				<xpath>/Defs/FactionDef[defName = "TyranidFaction"]/pawnGroupMakers/li/options</xpath>
 					<value>
-					  <OGTYTermagant>30</OGTYTermagant>
-					  <OGTYHormagaunt>2</OGTYHormagaunt>
-					  <OGTYRipperSwarm>1</OGTYRipperSwarm>
+					  <OG_Tyranid_Ripper_Swarm>20</OG_Tyranid_Ripper_Swarm>
+					  <OG_Tyranid_Hormagaunt>90</OG_Tyranid_Hormagaunt>
+					  <OG_Tyranid_Termagant>90</OG_Tyranid_Termagant>
+					  <OG_Tyranid_Genestealer>30</OG_Tyranid_Genestealer>
+					  <!-- <OG_Tyranid_Warrior>7</OG_Tyranid_Warrior> -->
+					  <OG_Tyranid_Gargoyle>30</OG_Tyranid_Gargoyle>
+					  <OG_Tyranid_Lictor>4</OG_Tyranid_Lictor>
+					  <OG_Tyranid_Ravener>4</OG_Tyranid_Ravener>
+					  <OG_Tyranid_Hive_Tyrant>2</OG_Tyranid_Hive_Tyrant>
+					  <!-- <OG_Tyranid_Carnifex>1</OG_Tyranid_Carnifex> -->
+					  <OG_Tyranid_Zoanthrope>1</OG_Tyranid_Zoanthrope>
 					</value>
 			</li>	
 		</operations>	
 	</Operation>
-	-->
+	
 </Patch>

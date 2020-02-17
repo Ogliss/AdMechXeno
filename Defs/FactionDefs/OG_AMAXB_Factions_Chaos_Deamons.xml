@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!--B19-->
+
+  <FactionDef Name="OG_Chaos_Deamon_Faction_Base" Abstract="true">
+    <label>Deamons of Chaos</label>
+    <pawnSingular>Deamon</pawnSingular>
+    <pawnsPlural>Deamons</pawnsPlural>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <fixedName>Deamonhost</fixedName>
+		<raidCommonalityFromPointsCurve>
+			<points>
+        <li>(700, 0.1)</li>
+        <li>(900, 0.2)</li>
+        <li>(1200, 1)</li>
+        <li>(4000, 1.5)</li>
+      </points>
+		</raidCommonalityFromPointsCurve>
+    <humanlikeFaction>false</humanlikeFaction>
+    <hidden>true</hidden>
+    <autoFlee>true</autoFlee>
+    <canUseAvoidGrid>false</canUseAvoidGrid>
+    <techLevel>Ultra</techLevel>
+    <earliestRaidDays>180</earliestRaidDays>
+    <permanentEnemy>true</permanentEnemy>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(400,200)</li>
+        <li>(900,300)</li>
+        <li>(100000,10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+        <!-- All types-->
+        <kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+	<options>
+	  <OG_Chaos_Deamon_Lessar_Horror_Blue>10</OG_Chaos_Deamon_Lessar_Horror_Blue>
+	  <OG_Chaos_Deamon_Lessar_Horror_Pink>7</OG_Chaos_Deamon_Lessar_Horror_Pink>
+	  <OG_Chaos_Deamon_Lessar_Horror_Brimstone>15</OG_Chaos_Deamon_Lessar_Horror_Brimstone>
+	  <OG_Chaos_Deamon_Flamer>5</OG_Chaos_Deamon_Flamer>
+	  <OG_Chaos_Deamon_Flamer_Exalted>3</OG_Chaos_Deamon_Flamer_Exalted>
+	  <OG_Chaos_Deamon_Lessar_Nurgling>15</OG_Chaos_Deamon_Lessar_Nurgling>
+	  <OG_Chaos_Deamon_Plague_Bearer>10</OG_Chaos_Deamon_Plague_Bearer>
+	  <OG_Chaos_Deamon_Lessar_Deamonette>10</OG_Chaos_Deamon_Lessar_Deamonette>
+	  <OG_Chaos_Deamon_Lessar_Screamer>10</OG_Chaos_Deamon_Lessar_Screamer>
+        </options>
+      </li>
+      <li>
+        <!-- Ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>80</commonality>
+        <options>
+          <OG_Chaos_Deamon_Lessar_Horror_Blue>10</OG_Chaos_Deamon_Lessar_Horror_Blue>
+          <OG_Chaos_Deamon_Lessar_Horror_Pink>7</OG_Chaos_Deamon_Lessar_Horror_Pink>
+          <OG_Chaos_Deamon_Flamer>5</OG_Chaos_Deamon_Flamer>
+          <OG_Chaos_Deamon_Flamer_Exalted>3</OG_Chaos_Deamon_Flamer_Exalted>
+        </options>
+      </li>
+      <li>
+        <!-- Melee only-->
+        <kindDef>Combat</kindDef>
+        <commonality>70</commonality>
+        <options>
+          <OG_Chaos_Deamon_Lessar_Nurgling>15</OG_Chaos_Deamon_Lessar_Nurgling>
+          <OG_Chaos_Deamon_Lessar_Horror_Brimstone>15</OG_Chaos_Deamon_Lessar_Horror_Brimstone>
+          <OG_Chaos_Deamon_Plague_Bearer>10</OG_Chaos_Deamon_Plague_Bearer>
+          <OG_Chaos_Deamon_Lessar_Deamonette>10</OG_Chaos_Deamon_Lessar_Deamonette>
+          <OG_Chaos_Deamon_Lessar_Screamer>10</OG_Chaos_Deamon_Lessar_Screamer>
+        </options>
+      </li>
+      <li>
+        <!-- Destroyer only -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <options>
+          <OG_Chaos_Deamon_Lessar_Horror_Pink>10</OG_Chaos_Deamon_Lessar_Horror_Pink>
+          <OG_Chaos_Deamon_Flamer>10</OG_Chaos_Deamon_Flamer>
+          <OG_Chaos_Deamon_Flamer_Exalted>3</OG_Chaos_Deamon_Flamer_Exalted>
+          <OG_Chaos_Deamon_Plague_Bearer>10</OG_Chaos_Deamon_Plague_Bearer>
+          <OG_Chaos_Deamon_Lessar_Deamonette>10</OG_Chaos_Deamon_Lessar_Deamonette>
+          <OG_Chaos_Deamon_Lessar_Screamer>10</OG_Chaos_Deamon_Lessar_Screamer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <allowedArrivalTemperatureRange>
+      <min>-9999</min>
+      <max>9999</max>
+    </allowedArrivalTemperatureRange>
+	<modExtensions>
+	  <li Class="AdeptusMechanicus.FactionDefExtension">
+		  <!--
+		  <ActiveDropPod>OG_Active_Mycetic_Spore</ActiveDropPod>
+		  <DropPodIncoming>OG_Mycetic_Spore_Incoming</DropPodIncoming>
+		  -->
+		  <DropPodOverride>Teleport</DropPodOverride>
+		  <TeleportBoltTexPath>Weather/PinkBolt</TeleportBoltTexPath>
+		  <DeepStrikeChance>0.5</DeepStrikeChance>
+		  <InfiltrateChance>1</InfiltrateChance>
+	  </li>
+	</modExtensions>
+  </FactionDef>
+  
+  <FactionDef ParentName="OG_Chaos_Deamon_Faction_Base">
+    <defName>OG_Chaos_Deamon_Faction</defName>
+	<requiredCountAtGameStart>0</requiredCountAtGameStart>
+  </FactionDef>
+  
+  <FactionDef ParentName="OG_Chaos_Deamon_Faction_Base">
+    <defName>OGChaosDeamonFaction</defName>
+    <label>Deamons of Chaos Old</label>
+    <!--
+	<requiredCountAtGameStart>0</requiredCountAtGameStart>
+	-->
+  </FactionDef>
+</Defs>

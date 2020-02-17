@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<HediffDef>
+		<defName>OG_Regenerating</defName>
+		<label>regenerating</label>
+		<hediffClass>AdeptusMechanicus.Hediff_RegeneratingPart</hediffClass>
+		<defaultLabelColor>(0.59, 0.92, 0.69)</defaultLabelColor>
+		<isBad>false</isBad>
+		<addedPartProps>
+			<!-- isSolid>true</isSolid -->
+			<partEfficiency>0.0</partEfficiency>
+		</addedPartProps>
+		<initialSeverity>1.0</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<stages>
+			<li>
+				<label>Complete</label>
+				<minSeverity>0</minSeverity>
+			</li>
+			<li>
+				<label>Almost complete</label>
+				<minSeverity>0.001</minSeverity>
+			</li>
+			<li>
+				<label>Late formation</label>
+				<minSeverity>0.25</minSeverity>
+			</li>
+			<li>
+				<label>Mid formation</label>
+				<minSeverity>0.75</minSeverity>
+			</li>
+			<li>
+				<label>Early formation</label>
+				<minSeverity>0.999</minSeverity>
+			</li>
+			<li>
+				<label>Starting</label>
+				<minSeverity>1</minSeverity>
+			</li>
+		</stages>
+	</HediffDef>
+	
+	<HediffDef>
+		<defName>OG_Regenerated</defName>
+		<label>regenerated bodypart</label>
+		<hediffClass>AdeptusMechanicus.Hediff_SelfRemoving</hediffClass>
+		<defaultLabelColor>(1.0, 1.0, 1.0)</defaultLabelColor>
+		<isBad>false</isBad>
+		<initialSeverity>0.0</initialSeverity>
+		<maxSeverity>1.0</maxSeverity>
+		<stages>
+			<li>
+				<becomeVisible>false</becomeVisible>
+			</li>
+		</stages>
+	</HediffDef>
+	
+</Defs>

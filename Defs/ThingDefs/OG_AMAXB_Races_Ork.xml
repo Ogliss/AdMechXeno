@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Ork Race -->
+<!-- Ork Base Abstract -->
+  <ThingDef ParentName="BasePawn" Name="OG_Ork_Pawn_Base" Abstract="True">
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+    <statBases>
+      <MarketValue>1750</MarketValue>
+      <PsychicSensitivity>0.5</PsychicSensitivity>
+      <Flammability>1</Flammability>
+      <ComfyTemperatureMin>-60</ComfyTemperatureMin>
+      <ComfyTemperatureMax>65</ComfyTemperatureMax>
+      <LeatherAmount>75</LeatherAmount>
+      <MoveSpeed>4.81</MoveSpeed>
+	  <ShootingAccuracyPawn>-10</ShootingAccuracyPawn>
+      <ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+    </statBases>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <fleshType>OG_Flesh_Ork</fleshType>
+      <bloodDef>OG_FilthBlood_Orkoid</bloodDef>	
+      <intelligence>ToolUser</intelligence>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>9999</lifeExpectancy>
+      <meatColor>(200,135,100)</meatColor>
+      <nameGenerator>NamerPersonOrk</nameGenerator>
+      <hasGenders>false</hasGenders>
+      <foodType>OmnivoreHuman</foodType>
+      <baseHungerRate>0.15</baseHungerRate>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHealthScale>1.0</baseHealthScale>
+      <predator>true</predator>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>16</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <specialShadowData>
+        <volume>(0.3, 0.8, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>
+      <ageGenerationCurve>
+        <points>
+          <li>(14,0)</li>
+          <li>(16,100)</li>
+          <li>(50,100)</li>
+          <li>(60,30)</li>
+          <li>(70,18)</li>
+          <li>(80,10)</li>
+          <li>(90,3)</li>
+          <li>(100,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+      </hediffGiverSets>
+	  <leatherDef>Leather_Ork</leatherDef>
+      <meatLabel>ork meat</meatLabel>
+    </race>
+    <comps>
+	  <!--
+      <li Class="AdeptusMechanicus.CompProperties_ButcherBloodReplacer">
+        <bloodDef>OG_FilthBlood_ChaosDeamon</bloodDef>
+      </li>
+	  -->
+    </comps>
+  </ThingDef>
+
+<!-- Alien_Ork -->
+  <ThingDef ParentName="OG_Ork_Pawn_Base">
+    <defName>OG_Alien_Ork</defName>
+    <label>ork</label>
+    <description>The Ork Boyz are the different types of troops deployed by the Orks, a savage, warlike, green-skinned race of humanoids of the Milky Way Galaxy. They are in some ways equivalent to Warhammer Fantasy Orcs, particularly in terms of their physical appearance, but they vary from the Warhammer World's Greenskins in some minor biological and cultural details. They are seen by their enemies (pretty much everyone else in the galaxy) as savage, warlike and crude, but they are the most successful species in the Milky Way, outnumbering possibly every other intelligent race, including Mankind. However, the power of the Ork race as a whole is limited due to the fact that they are split into hundreds of tiny empires, which are more often warring between themselves than not. Were the Orks ever to unite as a species, they would undoubtedly crush all opposition in a massive migration-invasion known as a WAAAGH!</description>
+    <statBases>
+	
+    </statBases>
+    <race>
+      <lifeExpectancy>9999</lifeExpectancy>
+      <body>OrkBody</body>
+      <baseHealthScale>2.0</baseHealthScale>
+    </race>
+  </ThingDef>
+  
+  <ThingDef ParentName="OG_Ork_Pawn_Base">
+    <defName>Alien_Ork</defName>
+    <label>ork</label>
+    <description>The Ork Boyz are the different types of troops deployed by the Orks, a savage, warlike, green-skinned race of humanoids of the Milky Way Galaxy. They are in some ways equivalent to Warhammer Fantasy Orcs, particularly in terms of their physical appearance, but they vary from the Warhammer World's Greenskins in some minor biological and cultural details. They are seen by their enemies (pretty much everyone else in the galaxy) as savage, warlike and crude, but they are the most successful species in the Milky Way, outnumbering possibly every other intelligent race, including Mankind. However, the power of the Ork race as a whole is limited due to the fact that they are split into hundreds of tiny empires, which are more often warring between themselves than not. Were the Orks ever to unite as a species, they would undoubtedly crush all opposition in a massive migration-invasion known as a WAAAGH!</description>
+    <statBases>
+	
+    </statBases>
+    <race>
+      <lifeExpectancy>9999</lifeExpectancy>
+      <body>OrkBody</body>
+      <baseHealthScale>2.0</baseHealthScale>
+    </race>
+  </ThingDef>
+  
+<!-- Alien_Grot -->
+  <ThingDef ParentName="OG_Ork_Pawn_Base">
+    <defName>OG_Alien_Grot</defName>
+    <label>grot</label>
+    <description>Gretchin or Grotz are basically a smaller subspecies of Orks, who are more cowardly than normal Orks and are usually used as living shields, to clear mine fields, are stepped on to get through difficult terrain, and sometimes even as emergency rations. Gretchins are quite low in the strict hierarchy of Ork society because of their small size (the lowest Orkoids being the Snotlings) and are often used for the dirtiest jobs like scavenging and being used as the football when the bigger Orks get bored. While they are not as aggressive as standard Orks, they enjoy fighting weaker opponents and are less likely to flee if they comfortably outnumber their opponents. If a Gretchin is particularly wealthy, he may purchase a second-hand, worn-down, low-tech gun. These guns are mainly to reassure the Gretchin that they have a chance of killing something, provided they remember which way to hold the gun.</description>
+    <statBases>
+	
+    </statBases>
+    <race>
+      <lifeExpectancy>9999</lifeExpectancy>
+      <body>OrkBody</body>
+      <baseHealthScale>1.2</baseHealthScale>
+    </race>
+  </ThingDef>
+  
+  <ThingDef ParentName="OG_Ork_Pawn_Base">
+    <defName>Alien_Grot</defName>
+    <label>grot</label>
+    <description>Gretchin or Grotz are basically a smaller subspecies of Orks, who are more cowardly than normal Orks and are usually used as living shields, to clear mine fields, are stepped on to get through difficult terrain, and sometimes even as emergency rations. Gretchins are quite low in the strict hierarchy of Ork society because of their small size (the lowest Orkoids being the Snotlings) and are often used for the dirtiest jobs like scavenging and being used as the football when the bigger Orks get bored. While they are not as aggressive as standard Orks, they enjoy fighting weaker opponents and are less likely to flee if they comfortably outnumber their opponents. If a Gretchin is particularly wealthy, he may purchase a second-hand, worn-down, low-tech gun. These guns are mainly to reassure the Gretchin that they have a chance of killing something, provided they remember which way to hold the gun.</description>
+    <statBases>
+	
+    </statBases>
+    <race>
+      <lifeExpectancy>9999</lifeExpectancy>
+      <body>OrkBody</body>
+      <baseHealthScale>0.8</baseHealthScale>
+      <baseBodySize>0.7</baseBodySize>
+    </race>
+  </ThingDef>
+  
+  <!-- Ork Warboss -->
+  <ThingDef ParentName="OG_Ork_Pawn_Base" Name="BaseOrkWarboss">
+    <defName>Ork_Warboss</defName>
+    <label>ork (warboss)</label>
+    <description>A Warboss is the biggest, the greenest, and the meanest Ork in a tribe or klan, and as such, he's the supreme commander of every Greenskin that falls under his jurisdiction. Relatively cunning strategists (by Ork standards) and exceedingly powerful warriors, these brutes rise through the Ork ranks by winning battles and killing every challenger to his power who puts himself in the way of the putative Warboss. These monstrous killing machines can reach up to ten Terran feet in height, and their sheer muscular bulk makes them wider at the shoulder than a fully armoured Space Marine. Though some Warbosses rise to prominence through low cunning, most seize power through the application of brute force.</description>
+    <statBases>
+      <MoveSpeed>5.21</MoveSpeed>
+	  <ShootingAccuracyPawn>-5</ShootingAccuracyPawn>
+      <ArmorRating_Blunt>0.64</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.64</ArmorRating_Sharp>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>14</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>16</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <race>
+      <lifeExpectancy>9999</lifeExpectancy>
+      <body>OrkBody</body>
+      <baseHealthScale>4</baseHealthScale>
+      <baseBodySize>4</baseBodySize>
+	  <useMeatFrom>Alien_Ork</useMeatFrom>
+    </race>
+  </ThingDef>
+
+  <!-- Ork Nob -->
+  <ThingDef ParentName="OG_Ork_Pawn_Base" Name="BaseOrkNob">
+    <defName>Ork_Nob</defName>
+    <label>ork (Nob)</label>
+    <description>A Nob (pl: Nobz) is a larger Ork Boy who is smaller than and subservient to an Ork Warboss but still possesses some authority amongst other Greenskins of his tribe or klan because of his greater-than-average size and strength. The term "Nob" is believed to be an Orkish bastardisation of the Imperial Low Gothic word for "noble." Serving as a crude Greenskin ruling class, the Nobz are never above reminding the Boyz who's in charge by making a few bloody examples. This could involve hacking up some suitably impressive foes, or knocking a few fractious Boyz' blocks off. The Nobz aren't too fussy, just so long as it gets the message across. Whether clustered in a menacing mob around their Warboss, or lording it over the Boyz, Nobz are a force to be reckoned with. Their armour is usually festooned with kill-trophies, their flesh criss-crossed with impressive scars, earned in pit-fights or while killing their way through strings of brutal wars. Some Nobz even take to the field astride monstrous Warbikes, roaring through the enemy ranks like blood-soaked battering rams covered in guns. Many Nobz also outfit themselves with a very visible token of their position, be it a large pair of horns, taken from a creature they hunted, or a massive Iron Jaw, to show they have the meanest bite around!</description>
+    <statBases>
+      <MoveSpeed>5.2</MoveSpeed>
+	  <ShootingAccuracyPawn>-7.5</ShootingAccuracyPawn>
+      <ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.32</ArmorRating_Sharp>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <race>
+      <lifeExpectancy>9999</lifeExpectancy>
+      <body>OrkBody</body>
+      <baseHealthScale>2.5</baseHealthScale>
+      <baseBodySize>2.5</baseBodySize>
+	  <useMeatFrom>Alien_Ork</useMeatFrom>
+    </race>
+  </ThingDef>
+
+<!-- Ork Eavy Nob -->
+  <ThingDef ParentName="BaseOrkNob">
+    <defName>Ork_Eavy_Nob</defName>
+    <label>ork (Eavy Nob)</label>
+    <description>A Nob is a larger Ork Boy who is smaller than and subservient to an Ork Warboss but still possesses some authority amongst other Greenskins of his tribe or klan because of his greater-than-average size and strength. The term "Nob" is believed to be an Orkish bastardisation of the Imperial Low Gothic word for "noble." Serving as a crude Greenskin ruling class, the Nobz are never above reminding the Boyz who's in charge by making a few bloody examples. This could involve hacking up some suitably impressive foes, or knocking a few fractious Boyz' blocks off. The Nobz aren't too fussy, just so long as it gets the message across. Whether clustered in a menacing mob around their Warboss, or lording it over the Boyz, Nobz are a force to be reckoned with. Their armour is usually festooned with kill-trophies, their flesh criss-crossed with impressive scars, earned in pit-fights or while killing their way through strings of brutal wars. Some Nobz even take to the field astride monstrous Warbikes, roaring through the enemy ranks like blood-soaked battering rams covered in guns. Many Nobz also outfit themselves with a very visible token of their position, be it a large pair of horns, taken from a creature they hunted, or a massive Iron Jaw, to show they have the meanest bite around!</description>
+    <statBases>
+	  <ShootingAccuracyPawn>-6</ShootingAccuracyPawn>
+      <ArmorRating_Blunt>0.48</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.48</ArmorRating_Sharp>
+    </statBases>
+    <race>
+      <lifeExpectancy>9999</lifeExpectancy>
+      <body>OrkBody</body>
+      <baseHealthScale>3.0</baseHealthScale>
+      <baseBodySize>3.0</baseBodySize>
+	  <useMeatFrom>Alien_Ork</useMeatFrom>
+    </race>
+  </ThingDef>
+
+  <!-- Ork Boy -->
+  <ThingDef ParentName="OG_Ork_Pawn_Base" Name="BaseOrkBoy">
+    <defName>Ork_Boy</defName>
+    <label>ork (Boy)</label>
+    <description>The Ork Boyz are the different types of troops deployed by the Orks, a savage, warlike, green-skinned race of humanoids of the Milky Way Galaxy. They are in some ways equivalent to Warhammer Fantasy Orcs, particularly in terms of their physical appearance, but they vary from the Warhammer World's Greenskins in some minor biological and cultural details. They are seen by their enemies (pretty much everyone else in the galaxy) as savage, warlike and crude, but they are the most successful species in the Milky Way, outnumbering possibly every other intelligent race, including Mankind. However, the power of the Ork race as a whole is limited due to the fact that they are split into hundreds of tiny empires, which are more often warring between themselves than not. Were the Orks ever to unite as a species, they would undoubtedly crush all opposition in a massive migration-invasion known as a WAAAGH!</description>
+    <statBases>
+      <MoveSpeed>5.4</MoveSpeed>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>10</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <race>
+      <lifeExpectancy>9999</lifeExpectancy>
+      <body>OrkBody</body>
+	  <useMeatFrom>Alien_Ork</useMeatFrom>
+      <baseHealthScale>2.0</baseHealthScale>
+      <baseBodySize>2.0</baseBodySize>
+    </race>
+  </ThingDef>
+
+  <!-- Ork Eavy Boy -->
+  <ThingDef ParentName="BaseOrkBoy">
+    <defName>Ork_Eavy_Boy</defName>
+    <label>ork (Eavy Boy)</label>
+    <description>The Ork Boyz are the different types of troops deployed by the Orks, a savage, warlike, green-skinned race of humanoids of the Milky Way Galaxy. They are in some ways equivalent to Warhammer Fantasy Orcs, particularly in terms of their physical appearance, but they vary from the Warhammer World's Greenskins in some minor biological and cultural details. They are seen by their enemies (pretty much everyone else in the galaxy) as savage, warlike and crude, but they are the most successful species in the Milky Way, outnumbering possibly every other intelligent race, including Mankind. However, the power of the Ork race as a whole is limited due to the fact that they are split into hundreds of tiny empires, which are more often warring between themselves than not. Were the Orks ever to unite as a species, they would undoubtedly crush all opposition in a massive migration-invasion known as a WAAAGH!</description>
+    <statBases>
+	  <ShootingAccuracyPawn>-8</ShootingAccuracyPawn>
+      <ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.32</ArmorRating_Sharp>
+    </statBases>
+    <race>
+      <lifeExpectancy>9999</lifeExpectancy>
+      <body>OrkBody</body>
+      <baseHealthScale>2.5</baseHealthScale>
+      <baseBodySize>2.5</baseBodySize>
+	  <useMeatFrom>Alien_Ork</useMeatFrom>
+    </race>
+  </ThingDef>
+
+  <!-- Ork Grot -->
+  <ThingDef ParentName="OG_Ork_Pawn_Base" Name="BaseOrkGrot">
+    <defName>Ork_Grot</defName>
+    <label>grot</label>
+    <description>Gretchin or Grotz are basically a smaller subspecies of Orks, who are more cowardly than normal Orks and are usually used as living shields, to clear mine fields, are stepped on to get through difficult terrain, and sometimes even as emergency rations. Gretchins are quite low in the strict hierarchy of Ork society because of their small size (the lowest Orkoids being the Snotlings) and are often used for the dirtiest jobs like scavenging and being used as the football when the bigger Orks get bored. While they are not as aggressive as standard Orks, they enjoy fighting weaker opponents and are less likely to flee if they comfortably outnumber their opponents. If a Gretchin is particularly wealthy, he may purchase a second-hand, worn-down, low-tech gun. These guns are mainly to reassure the Gretchin that they have a chance of killing something, provided they remember which way to hold the gun.</description>
+    <statBases>
+      <MoveSpeed>5.4</MoveSpeed>
+	  <ShootingAccuracyPawn>-15</ShootingAccuracyPawn>
+      <ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>1.2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>8</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4</power>
+        <cooldownTime>1.2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>8</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>6</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+      </li>
+    </tools>
+    <race>
+      <lifeExpectancy>9999</lifeExpectancy>
+      <body>OrkBody</body>
+	  <useMeatFrom>Alien_Ork</useMeatFrom>
+      <baseHealthScale>0.8</baseHealthScale>
+      <baseBodySize>0.8</baseBodySize>
+    </race>
+  </ThingDef>
+
+</Defs>

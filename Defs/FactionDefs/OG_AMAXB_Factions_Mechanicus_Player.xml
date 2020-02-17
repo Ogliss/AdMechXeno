@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <FactionDef Abstract="True" Name="OG_Mechanicus_PlayerFaction_Base">
+    <colorSpectrum>
+      <li>(0, 0.737, 0.847)</li>
+    </colorSpectrum>
+  </FactionDef>
+  
+  <FactionDef Parent="OG_Mechanicus_PlayerFaction_Base">
+    <defName>OG_Mechanicus_PlayerColony</defName>
+    <label>Mechanicus Colony</label>
+    <description>Your own Mechanicus Colony.</description>
+    <isPlayer>true</isPlayer>
+    <pawnSingular>mechanicus</pawnSingular>
+    <pawnsPlural>mechanicus</pawnsPlural>
+    <basicMemberKind>Colonist_OG_Mechanicus</basicMemberKind>
+    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <techLevel>Ultra</techLevel>
+    <backstoryCategories>
+			<li>Civil</li>
+			<li>Raider</li>
+  	</backstoryCategories>
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <expandingIconTexture>World/WorldObjects/IconHuman</expandingIconTexture>
+    <startingResearchTags>
+      <li>ClassicStart</li>
+    </startingResearchTags>
+    <hairTags>
+		<li>Urban</li>
+    </hairTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Synthread</li>
+      </thingDefs>
+    </apparelStuffFilter>
+  </FactionDef>
+  
+</Defs>

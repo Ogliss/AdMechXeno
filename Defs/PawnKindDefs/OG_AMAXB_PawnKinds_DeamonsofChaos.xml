@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- ChaosDeamon Base Abstracts -->
+  <PawnKindDef Name="OG_Chaos_Deamon_PawnKind" Abstract="True">
+    <defaultFactionType>OG_Chaos_Deamon_Faction</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
+    <destroyGearOnDrop>true</destroyGearOnDrop>
+  </PawnKindDef>  
+ 
+<!-- Pink Horror -->
+  <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+    <defName>OG_Chaos_Deamon_Lessar_Horror_Pink</defName>
+    <label>Pink Horror of Tzeentch</label>
+    <race>OG_Chaos_Deamon_Horror</race>
+    <combatPower>100</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Chaos/Deamons/Chaos_Horror</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+          <drawSize>1.0</drawSize>
+          <color>(170,0,170)</color>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+     <li>Warpfire_Horror_Pink</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!-- Blue Horror -->
+  <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+    <defName>OG_Chaos_Deamon_Lessar_Horror_Blue</defName>
+    <label>Blue Horror of Tzeentch</label>
+    <race>OG_Chaos_Deamon_Horror</race>
+    <combatPower>50</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Chaos/Deamons/Chaos_Horror</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+          <drawSize>0.75</drawSize>
+          <color>(29,40,255)</color>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+     <li>Warpfire_Horror_Blue</li>
+    </weaponTags>
+  </PawnKindDef>
+ 
+<!-- Brimstone Horror -->
+  <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+    <defName>OG_Chaos_Deamon_Lessar_Horror_Brimstone</defName>
+    <label>Brimstone Horror of Tzeentch</label>
+    <race>OG_Chaos_Deamon_Horror</race>
+    <combatPower>25</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Chaos/Deamons/Chaos_Horror</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+          <drawSize>0.5</drawSize>
+          <color>(255,217,13)</color>
+          <shadowData>
+            <volume>(0.2, 0.4, 0.2)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+	
+    </weaponMoney>
+    <weaponTags>
+	
+    </weaponTags>
+  </PawnKindDef>
+  
+<!-- Flamer -->
+  <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+    <defName>OG_Chaos_Deamon_Flamer</defName>
+    <label>Flamer of Tzeentch</label>
+    <race>OG_Chaos_Deamon_Flamer</race>
+    <combatPower>150</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Chaos/Deamons/Chaos_Flamer</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+          <drawSize>2.0</drawSize>
+          <color>(170,0,170)</color>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+     <li>Warpfire_Flamer</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+<!-- Exalted Flamer -->
+  <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+    <defName>OG_Chaos_Deamon_Flamer_Exalted</defName>
+    <label>Flamer of Tzeentch</label>
+    <race>OG_Chaos_Deamon_Flamer</race>
+    <combatPower>200</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Chaos/Deamons/Chaos_ExaltedFlamer</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+          <drawSize>2.0</drawSize>
+          <color>(170,0,170)</color>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+     <li>Warpfire_Flamer</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+  <!-- Screamer -->
+  <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+    <defName>OG_Chaos_Deamon_Lessar_Screamer</defName>
+    <label>Screamer of Tzeentch</label>
+    <race>ChaosDeamon_Screamer</race>
+    <combatPower>50</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Chaos/Deamons/Chaos_Screamer</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+          <drawSize>2.0</drawSize>
+          <color>(255,255,255)</color>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+	
+    </weaponMoney>
+    <weaponTags>
+	
+    </weaponTags>
+  </PawnKindDef>
+    
+  <!-- Nurgling -->
+  <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+    <defName>OG_Chaos_Deamon_Lessar_Nurgling</defName>
+    <label>Nurgling</label>
+    <race>ChaosDeamon_Nurgling</race>
+    <combatPower>50</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Chaos/Deamons/Chaos_Nurgling</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+          <drawSize>1.0</drawSize>
+          <color>(255,255,255)</color>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+	
+    </weaponMoney>
+    <weaponTags>
+	
+    </weaponTags>
+  </PawnKindDef>
+  
+  <!-- Plague Bearer -->
+  <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+    <defName>OG_Chaos_Deamon_Plague_Bearer</defName>
+    <label>Plague Bearer</label>
+    <race>ChaosDeamon_PlagueBearer</race>
+    <combatPower>50</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Chaos/Deamons/Chaos_PlagueBearer</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+          <drawSize>2.0</drawSize>
+          <color>(255,255,255)</color>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+     <li>Deamon_Melee_PlagueSword</li>
+      <li>CPlagueknife</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+  <!-- Deamonette -->
+  <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+    <defName>OG_Chaos_Deamon_Lessar_Deamonette</defName>
+    <label>Deamonette</label>
+    <race>ChaosDeamon_Deamonette</race>
+    <combatPower>50</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Pawn/Chaos/Deamons/Chaos_Deamonette</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+		  <shaderType>CutoutComplex</shaderType>
+          <drawSize>2.0</drawSize>
+          <color>(255,255,255)</color>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+     <li>Deamon_Melee_DeamonetteSword</li>
+			<li>CPowerSword</li>
+    </weaponTags>
+  </PawnKindDef>
+
+</Defs>

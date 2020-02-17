@@ -1,0 +1,878 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>OG_Tyranid_Symbiote_RendingClaw</defName>
+    <label>rending claw</label>
+    <labelNoun>a rending claw</labelNoun>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>rending claws</label>
+            <capacities>
+			  <li>OG_RendingWeapon_Cut</li>
+			  <li>OG_RendingWeapon_Stab</li>
+            </capacities>
+            <power>18.0</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <!--<spawnThingOnRemoved>PowerClaw</spawnThingOnRemoved>-->
+    <addedPartProps>
+      <isGoodWeapon>true</isGoodWeapon>
+      <solid>true</solid>
+      <partEfficiency>1.25</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>OG_Tyranid_Symbiote_ScythingTalon</defName>
+    <label>scything talon</label>
+    <labelNoun>a scything talon</labelNoun>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>scything talon</label>
+            <capacities>
+              <li>Cut</li>
+            </capacities>
+            <power>18.0</power>
+            <cooldownTime>1</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+			<MeleeHitChance>+0.16</MeleeHitChance>
+		</statOffsets>
+      </li>
+    </stages>
+    <!--<spawnThingOnRemoved>PowerClaw</spawnThingOnRemoved>-->
+    <addedPartProps>
+      <isGoodWeapon>true</isGoodWeapon>
+      <solid>true</solid>
+      <partEfficiency>1.25</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>OG_Tyranid_TailBiomorph_BoneMace</defName>
+    <label>bone mace</label>
+    <labelNoun>a bone mace tail-biomorph</labelNoun>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>tail mace</label>
+            <capacities>
+              <li>Blunt</li>
+            </capacities>
+            <power>36.0</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <!--<spawnThingOnRemoved>PowerClaw</spawnThingOnRemoved>-->
+    <addedPartProps>
+      <isGoodWeapon>true</isGoodWeapon>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>OG_Tyranid_TailBiomorph_PrehensilePincer</defName>
+    <label>prehensile pincer</label>
+    <labelNoun>a prehensile pincer tail-biomorph</labelNoun>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>tail pincer</label>
+            <capacities>
+              <li>Scratch</li>
+            </capacities>
+            <power>18.0</power>
+            <cooldownTime>1</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <!--<spawnThingOnRemoved>PowerClaw</spawnThingOnRemoved>-->
+    <addedPartProps>
+      <isGoodWeapon>true</isGoodWeapon>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>OG_Tyranid_TailBiomorph_ThresherScythe</defName>
+    <label>thresher scythe</label>
+    <labelNoun>a thresher scythe tail-biomorph</labelNoun>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>tail scythe</label>
+            <capacities>
+              <li>OG_RendingWeapon_Cut</li>
+            </capacities>
+            <power>18.0</power>
+            <cooldownTime>1</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <!--<spawnThingOnRemoved>PowerClaw</spawnThingOnRemoved>-->
+    <addedPartProps>
+      <isGoodWeapon>true</isGoodWeapon>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <HediffDef ParentName="AddedBodyPartBase">
+    <defName>OG_Tyranid_TailBiomorph_ToxinSpike</defName>
+    <label>toxin spike</label>
+    <labelNoun>a toxin spike tail-biomorph</labelNoun>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>tail spike</label>
+            <capacities>
+              <li>OGTY_ToxicStab</li>
+            </capacities>
+            <power>18.0</power>
+            <cooldownTime>1</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <!--<spawnThingOnRemoved>PowerClaw</spawnThingOnRemoved>-->
+    <addedPartProps>
+      <isGoodWeapon>true</isGoodWeapon>
+      <solid>true</solid>
+      <partEfficiency>1.00</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_AcidBlood</defName>
+    <label>acid blood</label>
+    <labelNoun>an acid blood biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_AcidMaw</defName>
+    <label>acid maw</label>
+    <labelNoun>an acid maw biomorph</labelNoun>
+    <stages>
+      <li>
+	  
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>acid maw</label>
+            <capacities>
+              <li>OGTY_AcidBite</li>
+            </capacities>
+            <power>18.0</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_AdamantineTusks</defName>
+    <label>adamantine tusks</label>
+    <labelNoun>an adamantine tusk biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_AdrenalGlads</defName>
+    <label>adrenal glands</label>
+    <labelNoun>an adrenal gland biomorph</labelNoun>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.02</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.02</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+			<MoveSpeed>+1</MoveSpeed>
+			<MeleeHitChance>+0.08</MeleeHitChance>
+			<MeleeDodgeChance>+0.08</MeleeDodgeChance>
+			<MeleeWeapon_CooldownMultiplier>-0.08</MeleeWeapon_CooldownMultiplier>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_AmphibiousAdaptations</defName>
+    <label>amphibious adaptations</label>
+    <labelNoun>an amphibious adaptation biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+    <comps>
+      <li Class="AdeptusMechanicus.HediffCompProperties_MoveThroughCover">
+		<TerrainTagsList>
+			<li>Water</li> 
+		</TerrainTagsList>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_AntidoteGlands</defName>
+    <label>antidote glands</label>
+    <labelNoun>an antidote glands biomorph</labelNoun>
+    <stages>
+      <li>
+        <statOffsets>
+			<ToxicSensitivity>-0.75</ToxicSensitivity>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_BurrowingLimbs</defName>
+    <label>burrowing limbs</label>
+    <labelNoun>a burrowing limbs biomorph</labelNoun>
+    <stages>
+      <li>
+        
+        <statOffsets>
+			<MiningSpeed>+0.32</MiningSpeed>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_BlindingVenom</defName>
+    <label>blinding venom</label>
+    <labelNoun>a blinding venom biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>blinding venom</label>
+            <capacities>
+              <li>OGTY_BlindingVenom</li>
+            </capacities>
+            <power>18.0</power>
+            <cooldownTime>2</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_CarbonizedClaws</defName>
+    <label>carbonized claws</label>
+    <labelNoun>a carbonized claws biomorph</labelNoun>
+    <stages>
+      <li>
+	  
+        <statOffsets>
+			<MeleeArmorPenetration>+0.16</MeleeArmorPenetration>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_DopamineInjectors</defName>
+    <label>dopamine injectors</label>
+    <labelNoun>a dopamine injector biomorph</labelNoun>
+    <stages>
+      <li>
+        <painFactor>0.5</painFactor>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_EnhancedLegMuscles</defName>
+    <label>enhanced leg muscles</label>
+    <labelNoun>a enhanced leg muscles biomorph</labelNoun>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.02</offset>
+          </li>
+        </capMods>
+        <statOffsets>
+			<MoveSpeed>+1</MoveSpeed>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_FeederTendrils</defName>
+    <label>feeder tendrils</label>
+    <labelNoun>a feeder tendrils biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_FleshHooks</defName>
+    <label>flesh hooks</label>
+    <labelNoun>a Flesh hooks biomorph</labelNoun>
+    <stages>
+      <li>
+        <label>ranged attack, move through cover</label>
+      </li>
+    </stages>
+    <comps>
+      <li Class="AdeptusMechanicus.HediffCompProperties_VerbGiverExtra">
+		<verbEntrys>
+			<li>
+			  <Multishot>true</Multishot>
+			  <ScattershotCount>4</ScattershotCount>
+			  <VerbProps>
+				<verbClass>Verb_Shoot</verbClass>
+				<label>flesh hooks</label>
+				<accuracyTouch>0.15</accuracyTouch>
+				<accuracyShort>0.45</accuracyShort>
+				<accuracyMedium>0.15</accuracyMedium>
+				<accuracyLong>0.1</accuracyLong>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>OGTY_Bullet_FleshHooks</defaultProjectile>
+				<warmupTime>0.5</warmupTime>
+				<range>12</range>
+				<ticksBetweenBurstShots>6</ticksBetweenBurstShots>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>OG_Fleshhook_Sound</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>0</muzzleFlashScale>
+				<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				<commonality>0.25</commonality>
+			  </VerbProps>
+			</li>
+		</verbEntrys>
+      </li>
+      <li Class="AdeptusMechanicus.HediffCompProperties_MoveThroughCover">
+		<MoveThroughAll>true</MoveThroughAll>
+		<!--
+		<TerrainTagsList>
+			<li></li> 
+		</TerrainTagsList>
+		<BuildingClassList>
+			<li></li> 
+		</BuildingClassList> 
+		-->
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_FeedingFrenzyTrigger</defName>
+    <label>feeding frenzy trigger</label>
+    <labelNoun>a feeding frenzy trigger biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_HiveMindDirectLink</defName>
+    <label>hive mind direct link</label>
+    <labelNoun>a hive mind direct link biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_ImplantAttack</defName>
+    <label>implant attack</label>
+    <labelNoun>an implant attack biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_ImplantedMechanismDisruptionInstincts</defName>
+    <label>disruption instincts</label>
+    <labelNoun>a disruption instincts biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_ImplantedOrganismKillingInstincts</defName>
+    <label>killing instincts</label>
+    <labelNoun>a killing instincts biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_IncreasedMuscleDensity</defName>
+    <label>increased muscle density</label>
+    <labelNoun>an increased muscle density biomorph</labelNoun>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.16</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.02</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_InsulaGlands</defName>
+    <label>insula glands</label>
+    <labelNoun>an insula gland biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_NonepinephrineInfusion</defName>
+    <label>nonepinephrine infusion</label>
+    <labelNoun>a nonepinephrine infusion biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_PressureDetectionSensors</defName>
+    <label>pressure detection sensors</label>
+    <labelNoun>a pressure detection sensor biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_PsychicDeflectionBioCrystals</defName>
+    <label>psychic deflection bio crystals</label>
+    <labelNoun>a psychic deflection bio crystal biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_Regeneration</defName>
+    <label>regeneration</label>
+    <labelNoun>a regeneration biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_ReflexiveOptimization</defName>
+    <label>reflexive optimization</label>
+    <labelNoun>a reflexive optimization biomorph</labelNoun>
+    <stages>
+      <li>
+        
+        <statOffsets>
+			<AimingDelayFactor>-0.16</AimingDelayFactor>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_SerratedBlades</defName>
+    <label>serrated blades </label>
+    <labelNoun>a Serrated blades biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_SpineBanks</defName>
+    <label>blinding venom</label>
+    <labelNoun>a blinding venom biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_SpringCoilMusculature</defName>
+    <label>spring coil musculature</label>
+    <labelNoun>a spring coil musculature biomorph</labelNoun>
+    <stages>
+      <li>
+        <capMods>
+          <li>
+            <capacity>Manipulation</capacity>
+            <offset>0.16</offset>
+          </li>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>0.02</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_StonecrusherRamshield</defName>
+    <label>stonecrusher ramshield</label>
+    <labelNoun>a stonecrusher ramshield biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_ThreeDimensionalThoughtPatterns</defName>
+    <label>three dimensional thought patterns</label>
+    <labelNoun>a three dimensional thought pattern biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_ToxicMiasma</defName>
+    <label>toxic miasma</label>
+    <labelNoun>a toxic miasma biomorph</labelNoun>
+    <stages>
+      <li>
+	  
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_ToxinSacs</defName>
+    <label>toxin sacs</label>
+    <labelNoun>a Toxin sac biomorph</labelNoun>
+    <stages>
+      <li>
+	  
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_WarpShieldProjector</defName>
+    <label>warp shield projector</label>
+    <labelNoun>a warp shield projector biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+    <comps>
+      <li Class="AdeptusMechanicus.HediffCompProperties_Shield">
+		<EnergyShieldEnergyMax>10</EnergyShieldEnergyMax>
+		<EnergyShieldRechargeRate>0.5</EnergyShieldRechargeRate>
+		<DrawX>1.5</DrawX>
+		<DrawY>2.5</DrawY>
+      </li>
+    </comps>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_WideSpectrumRetinas</defName>
+    <label>wide spectrum retinas</label>
+    <labelNoun>a wide spectrum retina biomorph</labelNoun>
+    <stages>
+      <li>
+        
+        <statOffsets>
+			<ShootingAccuracyPawn>+0.16</ShootingAccuracyPawn>
+		</statOffsets>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.16</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Biomorph_Wings</defName>
+    <label>wings</label>
+    <labelNoun>a wings biomorph</labelNoun>
+    <stages>
+      <li>
+        <statOffsets>
+			<MoveSpeed>+4</MoveSpeed>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Mutation_AdaptiveMotionAnalysis</defName>
+    <label>adaptive motion analysis</label>
+    <labelNoun>an adaptive motion analysis mutation</labelNoun>
+    <stages>
+      <li>
+        <statOffsets>
+			<MeleeHitChance>+0.16</MeleeHitChance>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Mutation_HyperReactivePupils</defName>
+    <label>hyper reactive pupils</label>
+    <labelNoun>a hyper reactive pupil mutation</labelNoun>
+    <stages>
+      <li>
+        <statOffsets>
+			<ShootingAccuracyPawn>+0.16</ShootingAccuracyPawn>
+		</statOffsets>
+        <capMods>
+          <li>
+            <capacity>Sight</capacity>
+            <offset>0.16</offset>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Mutation_MuscleFiberDensity</defName>
+    <label>muscle fiber density</label>
+    <labelNoun>a muscle fiber density mutation</labelNoun>
+    <stages>
+      <li>
+        <statOffsets>
+			<MeleeArmorPenetration>+0.16</MeleeArmorPenetration>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Mutation_SubdermalChitinSheathing</defName>
+    <label>subdermal chitin sheathing</label>
+    <labelNoun>a subdermal chitin sheathing mutation</labelNoun>
+    <stages>
+      <li>
+        <statOffsets>
+			<ArmorRating_Blunt>+0.16</ArmorRating_Blunt>
+			<ArmorRating_Sharp>+0.16</ArmorRating_Sharp>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Mutation_RedundantOrganSystems</defName>
+    <label>redundant organ systems</label>
+    <labelNoun>a redundant organ system mutation</labelNoun>
+    <stages>
+      <li>
+		<capMods>
+			<li>
+				<capacity>Breathing</capacity>
+				<offset>0.16</offset>
+			</li>
+			<li>
+				<capacity>BloodFiltration</capacity>
+				<offset>0.16</offset>
+			</li>
+			<li>
+				<capacity>BloodPumping</capacity>
+				<offset>0.5</offset>
+			</li>
+		</capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Mutation_DecentralizedNervousSystem</defName>
+    <label>decentralized nervous system</label>
+    <labelNoun>a decentralized nervous system mutation</labelNoun>
+    <stages>
+      <li>
+        <painOffset>-0.5</painOffset>
+		<capMods>
+			<li>
+				<capacity>Consciousness</capacity>
+				<offset>0.5</offset>
+			</li>
+		</capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Mutation_ExplosiveMuscleAction</defName>
+    <label>explosive muscle action</label>
+    <labelNoun>an explosive muscle action mutation</labelNoun>
+    <stages>
+      <li>
+        <statOffsets>
+			<MeleeDodgeChance>+0.16</MeleeDodgeChance>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Mutation_FearSuppressionGlands</defName>
+    <label>fear suppression glands</label>
+    <labelNoun>a fear suppression gland mutation</labelNoun>
+    <stages>
+      <li>
+        <statOffsets>
+			<MentalBreakThreshold>+0.16</MentalBreakThreshold>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Mutation_ImpactDeflectiveCarapace</defName>
+    <label>impact deflective carapace</label>
+    <labelNoun>an impact deflective carapace mutation</labelNoun>
+    <stages>
+      <li>
+        <statOffsets>
+			<ArmorRating_Blunt>+0.16</ArmorRating_Blunt>
+			<ArmorRating_Sharp>+0.16</ArmorRating_Sharp>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Mutation_EnhancedNeuralArchitecture</defName>
+    <label>enhanced neural architecture</label>
+    <labelNoun>a enhanced neural architecture mutation</labelNoun>
+    <stages>
+      <li>
+        <statOffsets>
+			<MeleeDodgeChance>+0.25</MeleeDodgeChance>
+		</statOffsets>
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Tyranid_Mutation_ReinforcedSynapticLinks</defName>
+    <label>reinforced synaptic links</label>
+    <labelNoun>a reinforced synaptic link mutation</labelNoun>
+    <stages>
+      <li>
+		<capMods>
+			<li>
+				<capacity>Consciousness</capacity>
+				<offset>0.5</offset>
+			</li>
+		</capMods>
+      </li>
+    </stages>
+  </HediffDef>
+  
+</Defs>

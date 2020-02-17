@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <ThingDef ParentName="BaseBullet">
+    <defName>OGTY_Bullet_FleshHooks</defName>
+    <label>flesh hooks</label>
+	<thingClass>AdeptusMechanicus.AnimalProjectile</thingClass>
+
+    <graphicData>
+      <texPath>Things/Projectile/SpinefistShotSml</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>2</drawSize>
+    </graphicData>
+    <projectile>
+      <flyOverhead>false</flyOverhead>
+      <damageDef>RangedStab</damageDef>
+      <damageAmountBase>1</damageAmountBase>
+      <speed>45</speed>
+    </projectile>
+  </ThingDef>
+
+  <!-- leap as a flying object -->
+  
+  	<ThingDef ParentName="BaseBullet" Name="FlyingObject_Leap">
+	   <defName>FlyingObject_Leap</defName>
+	   <thingClass>AdeptusMechanicus.FlyingObject_Leap</thingClass>
+	   <label>leap</label>
+	   <graphicData>
+			<texPath>DummyTexture</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+	   <projectile>
+			<flyOverhead>true</flyOverhead>
+			<damageDef>Stun</damageDef>
+			<damageAmountBase>6</damageAmountBase>
+			<speed>250</speed>
+	   </projectile>
+	</ThingDef>
+
+</Defs>

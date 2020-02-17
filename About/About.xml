@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
-	<name>Adeptus Mechanicus Magos Xenobiologis R1.0</name>
+	<name>Adeptus Mechanicus: Magos Xenobiologis R1.0</name>
 	<author>Ogliss</author>
-	<supportedVersions>
-        <li>1.0</li>
-	</supportedVersions>
-	<description>V1.3
+   <supportedVersions>
+      <li>1.0</li>
+      <li>1.1</li>
+   </supportedVersions>
+   <!--
+   <supportedGameVersions>
+      <li>1.1</li>
+   </supportedGameVersions>
+   <packageId>Ogliss.AdMech.Xenobiologis</packageId>
+   -->
+	<description>V1.5
 Adds factions using xenos weapons from my Armoury mod.
 Requires new start or one of those faction managers
 	
@@ -38,8 +45,14 @@ Fire Support
 ==Necron==
 
 Scarab Swarm
+Flayed Ones (Infiltrators)
 Warrior
+Immortal
+Tomb Spyder (Can repair dead/damaged necrons)
+Wraith (Move Through Cover, Phase Shifter)
 Destroyer
+Heavy Destroyer
+Destroyer Lord
 Lord
 
 Monolith Spawn Incident
@@ -72,6 +85,20 @@ Deamonette
 
 Warp Storm Incident
 Deamonic Infestation Incident
+
+==Tyranids==
+
+Ripper Swarm
+Homogaunt (Leaping Attack)
+Termagant
+Gargoyle
+Genestealer
+Warrior (Not Yet Avaiable)
+Lictor (Infiltrator, Move Through Cover)
+Ravener (Deep Strike)
+Hive Tyrant
+Carnifex (Not Yet Avaiable)
+Zoanthrope (Shielded)
 
 load order should be
 [url=https://steamcommunity.com/workshop/filedetails/?id=771341092/]Astra Militarum Imperial Guard Core Mod[/url]
