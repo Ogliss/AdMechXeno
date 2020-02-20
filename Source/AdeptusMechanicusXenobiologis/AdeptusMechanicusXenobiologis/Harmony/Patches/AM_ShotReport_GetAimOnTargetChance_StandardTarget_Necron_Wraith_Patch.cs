@@ -1,6 +1,10 @@
 ﻿using RimWorld;
 using Verse;
-using HarmonyLib;
+using Harmony;
+using System.Reflection;
+using System.Collections.Generic;
+using System;
+using UnityEngine;
 
 namespace AdeptusMechanicus
 {

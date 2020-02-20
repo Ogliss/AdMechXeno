@@ -23,7 +23,7 @@ namespace AdeptusMechanicus
             */
             if (!SettingsHelper.XBlatest.AllowEldarWraithguard)
             {
-                FactionDef fd = OGEldarDefOf.OG_Eldar_Craftworld_Faction;
+                FactionDef fd = OGEldarDefOf.EldarFaction;
                 ThingDef td = OGEldarDefOf.OG_Eldar_Wraithguard_Race;
                 Filter(fd,td);
             }

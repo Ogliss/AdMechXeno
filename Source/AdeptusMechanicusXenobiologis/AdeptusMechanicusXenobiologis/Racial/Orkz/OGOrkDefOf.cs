@@ -14,9 +14,17 @@ namespace RimWorld
         }
 
         // Ork ThingDefs
+        public static ThingDef Alien_Ork;
+        public static ThingDef Alien_Grot;
         public static ThingDef OG_Alien_Ork;
         public static ThingDef OG_Alien_Grot;
-        
+
+        // Ork FactionDefs
+        public static FactionDef OrkFaction;
+        public static FactionDef FeralOrkFaction;
+        public static FactionDef HulkOrkz;
+        public static FactionDef RokOrkz;
+
         public static FactionDef OG_Ork_Tek_Faction;
         public static FactionDef OG_Ork_Feral_Faction;
         public static FactionDef OG_Ork_Hulk;

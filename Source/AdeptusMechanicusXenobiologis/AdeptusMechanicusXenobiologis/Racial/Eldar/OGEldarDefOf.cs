@@ -17,11 +17,13 @@ namespace RimWorld
         //    public static ThingDef ;
 
         // Eldar ThingDefs Races
+        public static ThingDef Alien_Eldar;
         public static ThingDef OG_Eldar_Wraithguard_Race;
         public static ThingDef OG_Alien_Eldar;
 
         // Eldar FactionDefs
         public static FactionDef OG_Eldar_Craftworld_Faction;
+        public static FactionDef EldarFaction;
         /*
         public static FactionDef OG_Eldar_Exodite_Faction;
         public static FactionDef OG_Eldar_Harlequinn_Faction;

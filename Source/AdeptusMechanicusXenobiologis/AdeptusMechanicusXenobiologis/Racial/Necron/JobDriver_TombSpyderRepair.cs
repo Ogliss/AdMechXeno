@@ -160,7 +160,7 @@ namespace RimWorld
                         {
                             DamagedNecron.inventory.innerContainer.Remove(thing);
                         }
-                    //    DamagedNecron.equipment.AdMechAddOffHandEquipment(thing);
+                        DamagedNecron.equipment.AdMechAddOffHandEquipment(thing);
                     }
                 }
             }

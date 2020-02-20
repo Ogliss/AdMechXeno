@@ -1,9 +1,18 @@
-﻿using Verse;
-using HarmonyLib;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using RimWorld;
+using Verse;
+using Verse.AI;
+using Verse.AI.Group;
+using Harmony;
+using Verse.Sound;
+using UnityEngine;
 using System.Reflection;
-using AdeptusMechanicus.HarmonyInstance;
+using AdeptusMechanicus.settings;
 
-namespace AdeptusMechanicus
+namespace AdeptusMechanicus.Harmony
 {
     [HarmonyPatch(typeof(Pawn_HealthTracker), "MakeDowned")]
     public static class AMXB_Pawn_HealthTracker_MakeDowned_Necron_Patch

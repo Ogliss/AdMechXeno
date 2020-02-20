@@ -106,11 +106,6 @@
  
   <!-- ============================ ImperialGuard Civilians ========================== -->
   <PawnKindDef ParentName="OG_Militarum_Civilian_Base">
-    <defName>Colonist_OG_Militarum</defName>
-    <label>colonist</label>
-  </PawnKindDef>
-  
-  <PawnKindDef ParentName="OG_Militarum_Civilian_Base">
     <defName>OG_Militarum_Trader</defName>
     <label>Imperial trader</label>
     <trader>true</trader>

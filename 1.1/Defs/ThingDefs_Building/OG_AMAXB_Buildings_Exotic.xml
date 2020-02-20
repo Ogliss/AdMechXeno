@@ -41,7 +41,7 @@ When its massive silhouette looms over a battlefield, it will lay waste to entir
     <label>Ork Rok</label>
     <description>A mysterious crashed piece of a spaceship. It may contain any manner of deadly defenders and exotic materials.</description>
     <graphicData>
-      <texPath>Things/Building/Exotic/CrashedPoisonmechClusterBuilding</texPath>
+      <texPath>Things/Building/Exotic/CrashedPoisonShipPart</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(6,6)</drawSize>
 			<shadowData>
@@ -60,7 +60,7 @@ When its massive silhouette looms over a battlefield, it will lay waste to entir
     <label>Space Hulk Part</label>
     <description>A mysterious crashed piece of a spaceship. It may contain any manner of deadly defenders and exotic materials.</description>
     <graphicData>
-      <texPath>Things/Building/Exotic/CrashedPoisonmechClusterBuilding</texPath>
+      <texPath>Things/Building/Exotic/CrashedPoisonShipPart</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <drawSize>(6,3)</drawSize>
 			<shadowData>

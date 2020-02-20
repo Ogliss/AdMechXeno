@@ -1,6 +1,6 @@
 ﻿using RimWorld;
 using Verse;
-using HarmonyLib;
+using Harmony;
 using System.Reflection;
 using System.Collections.Generic;
 using System;
@@ -19,7 +19,7 @@ namespace AdeptusMechanicus
         static AdeptusMechanicusXenoPatches()
         {
             //    HarmonyInstance.DEBUG = true;
-            var harmony = new Harmony("com.ogliss.rimworld.mod.adeptusmechanicus.xenobiologis");
+            var harmony = HarmonyInstance.Create("com.ogliss.rimworld.mod.adeptusmechanicus.xenobiologis");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
 
         }

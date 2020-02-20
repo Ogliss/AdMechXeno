@@ -13,31 +13,28 @@ namespace RimWorld
             DefOfHelper.EnsureInitializedInCtor(typeof(OGDarkEldarDefOf));
         }
 
-        // DarkEldar ThingDefs
+        // Eldar ThingDefs
         //    public static ThingDef ;
 
-        // DarkEldar ThingDefs Races
-        //    public static ThingDef OG_Alien_DarkEldar;
+        // Eldar FactionDefs
+        //    public static FactionDef OG_DarkEldarFaction;
 
-        // DarkEldar FactionDefs
-        //    public static FactionDef OG_DarkEldar_Faction;
-
-        // DarkEldar IncidentDefs
+        // Eldar IncidentDefs
         //    public static IncidentDef ;
 
-        // DarkEldar DamageDefs
+        // Eldar DamageDefs
         //    public static DamageDef ;
 
-        // DarkEldar HediffDefs
+        // Eldar HediffDefs
         //    public static HediffDef ;
 
-        // DarkEldar MentalStateDefs
+        // Eldar MentalStateDefs
         //    public static MentalStateDef ;
 
-        // DarkEldar GameConditionDefs
+        // Eldar GameConditionDefs
         //    public static GameConditionDef ;
 
-        // DarkEldar PawnKindDefs
+        // Eldar PawnKindDefs
         //    public static PawnKindDef ;
     }
 }
