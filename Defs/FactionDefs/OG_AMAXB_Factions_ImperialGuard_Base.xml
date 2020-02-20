@@ -23,7 +23,7 @@
 	<settlementNameMaker>NamerOGIGBases</settlementNameMaker>
 	<techLevel>Ultra</techLevel>
   <backstoryCategories>
-			<li>Civil</li>
+			<li>Outlander</li>
 			<li>Raider</li>
   	</backstoryCategories>
 		<hairTags>
@@ -111,7 +111,7 @@
       </li>
     </pawnGroupMakers>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
-    <expandingIconTexture>World/WorldObjects/ImperialGuardIcon</expandingIconTexture>
+    <expandingIconTexture>Icons/Icon_Adetpus_Militarum</expandingIconTexture>
   </FactionDef>
   
 </Defs>

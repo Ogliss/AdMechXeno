@@ -21,7 +21,7 @@ namespace Verse.AI
             {
                 return base.GetReport();
             }
-            if (this.pawn.RaceProps.Humanlike && this.pawn.story.WorkTagIsDisabled(WorkTags.Violent))
+            if (this.pawn.RaceProps.Humanlike && this.pawn.story.DisabledWorkTagsBackstoryAndTraits.HasFlag(WorkTags.Violent))
             {
                 return "ReportStanding".Translate();
             }
@@ -78,8 +78,8 @@ namespace Verse.AI
             {
                 return;
             }
-            bool flag = this.pawn.story == null || !this.pawn.story.WorkTagIsDisabled(WorkTags.Violent);
-            bool flag2 = this.pawn.RaceProps.ToolUser && this.pawn.Faction == Faction.OfPlayer && !this.pawn.story.WorkTagIsDisabled(WorkTags.Firefighting);
+            bool flag = this.pawn.story == null || !this.pawn.story.DisabledWorkTagsBackstoryAndTraits.HasFlag(WorkTags.Violent);
+            bool flag2 = this.pawn.RaceProps.ToolUser && this.pawn.Faction == Faction.OfPlayer && !this.pawn.story.DisabledWorkTagsBackstoryAndTraits.HasFlag(WorkTags.Firefighting);
             if (flag || flag2)
             {
                 Fire fire = null;

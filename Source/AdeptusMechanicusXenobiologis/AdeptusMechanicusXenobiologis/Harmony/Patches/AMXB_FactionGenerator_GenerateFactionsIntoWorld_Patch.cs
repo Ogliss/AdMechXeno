@@ -1,15 +1,7 @@
 ﻿using RimWorld;
 using Verse;
-using Harmony;
-using System.Reflection;
-using System.Collections.Generic;
-using System;
-using Verse.AI;
-using System.Text;
+using HarmonyLib;
 using System.Linq;
-using Verse.AI.Group;
-using RimWorld.Planet;
-using UnityEngine;
 using AdeptusMechanicus.settings;
 
 namespace AdeptusMechanicus

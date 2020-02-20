@@ -16,7 +16,6 @@
     <canSiege>false</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>Aun'va</leaderTitle>
-    <expandingIconTexture>Icons/TauIcon</expandingIconTexture>
     <colorSpectrum>
       <li>(0.35, 0.35, 0)</li>
       <li>(0.4, 0.2, 0)</li>
@@ -163,15 +162,11 @@
       </li>
     </pawnGroupMakers>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <expandingIconTexture>Icons/Icon_Tau</expandingIconTexture>
   </FactionDef>
 
   <FactionDef ParentName="OG_Tau_Faction_Base">
     <defName>OG_Tau_Faction</defName>
-  </FactionDef>
-
-  <FactionDef ParentName="OG_Tau_Faction_Base">
-    <defName>TauFaction</defName>
-    <requiredCountAtGameStart>0</requiredCountAtGameStart>
   </FactionDef>
 
 </Defs>

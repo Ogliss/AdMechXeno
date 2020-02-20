@@ -14,7 +14,6 @@
     <canSiege>false</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>Farseer</leaderTitle>
-    <expandingIconTexture>Icons/EldarIcon</expandingIconTexture>
     <colorSpectrum>
       <li>(0.35, 0.35, 0)</li>
       <li>(0.4, 0.2, 0)</li>
@@ -137,6 +136,7 @@
       </li>
     </pawnGroupMakers>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <expandingIconTexture>Icons/Icon_Eldar</expandingIconTexture>
 	<modExtensions>
 	  <li Class="AdeptusMechanicus.FactionDefExtension">
 		  <!--
@@ -161,13 +161,6 @@
       <max>50</max>
     </naturalColonyGoodwill>
 	-->
-  </FactionDef>
-
-  <FactionDef ParentName="OG_Eldar_Faction_Base">
-    <defName>EldarFaction</defName>
-	<label>craftworld eldar strike force</label>
-    <listOrderPriority>0</listOrderPriority>
-    <requiredCountAtGameStart>0</requiredCountAtGameStart>
   </FactionDef>
 
 </Defs>

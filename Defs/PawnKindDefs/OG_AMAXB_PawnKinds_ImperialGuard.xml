@@ -28,7 +28,7 @@
     <combatPower>25</combatPower>
 	<race>OG_Human_Imperial</race>
 	<backstoryCategories>
-			<li>Civil</li>
+			<li>Outlander</li>
   	</backstoryCategories>
     <itemQuality>Poor</itemQuality>
     <isFighter>false</isFighter>

@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using RimWorld;
-using Verse;
-using Verse.AI;
-using Verse.AI.Group;
-using Harmony;
-using Verse.Sound;
+﻿using Verse;
+using HarmonyLib;
 
-namespace AdeptusMechanicus.Harmony
+namespace AdeptusMechanicus
 {
     [HarmonyPatch(typeof(Corpse), "get_ShouldVanish")]
     public static class AMXB_Corpse_get_ShouldVanish_NecronComps_Patch

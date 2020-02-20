@@ -85,6 +85,7 @@ namespace AdeptusMechanicus
                     {
                         originalWeapon = pawn.equipment.Primary;
                         //    Log.Message(string.Format("{0} spawned with {1}", pawn.Label, originalWeapon.Label));
+                        /*
                         if (AdeptusIntergrationUtil.enabled_rooloDualWield)
                         {
                             if (pawn.equipment.AdMechTryGetOffHandEquipment(out ThingWithComps thing))
@@ -92,6 +93,7 @@ namespace AdeptusMechanicus
                                 secondryWeapon = thing;
                             }
                         }
+                        */
                     }
                 }
             }
@@ -253,7 +255,7 @@ namespace AdeptusMechanicus
                     {
                         pawn.inventory.innerContainer.Remove(thing);
                     }
-                    pawn.equipment.AdMechAddOffHandEquipment(thing);
+                //    pawn.equipment.AdMechAddOffHandEquipment(thing);
                 }
                 if (!ForcedRevive)
                 {

@@ -19,12 +19,13 @@
 		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
 		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
     <techLevel>Ultra</techLevel>
-    <backstoryCategories>
-			<li>Civil</li>
-			<li>Raider</li>
-  	</backstoryCategories>
-    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
-    <expandingIconTexture>World/WorldObjects/IconHuman</expandingIconTexture>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
     <startingResearchTags>
       <li>ClassicStart</li>
     </startingResearchTags>
@@ -36,6 +37,8 @@
         <li>Synthread</li>
       </thingDefs>
     </apparelStuffFilter>
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <expandingIconTexture>Icons/Icon_Adetpus_Mechanicus</expandingIconTexture>
   </FactionDef>
   
 </Defs>

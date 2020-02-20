@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Eldar Base Abstract -->
+  <ThingDef ParentName="BasePawn" Name="OG_Eldar_Wraithconstruct_Pawn_Base" Abstract="True">
+  <defName>OG_Eldar_Wraithconstruct</defName>
+    <label>Eldar Construct Race</label>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <statBases>
+      <PsychicSensitivity>+0.5</PsychicSensitivity>
+      <ToxicSensitivity>0</ToxicSensitivity>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>250</ComfyTemperatureMax>
+      <MeatAmount>0</MeatAmount>
+    </statBases>
+    <race>
+      <body>Human</body>
+      <fleshType>OG_Flesh_Construct_Eldar</fleshType>
+	  <useMeatFrom>Mech_Centipede</useMeatFrom>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <foodType>None</foodType>
+      <lifeExpectancy>99999</lifeExpectancy>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <trainability>Advanced</trainability>
+    </race>
+  </ThingDef>
+
+  <!-- Walker (Wraithguard/wraithblade/wraithknight/wraithlord) base -->
+  <ThingDef ParentName="OG_Eldar_Wraithconstruct_Pawn_Base" Name="OG_Eldar_Wraithconstruct_Walker" Abstract="True">
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <baseBodySize>1.0</baseBodySize>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+    </race>
+    <butcherProducts>
+      <Steel>20</Steel>
+      <Plasteel>5</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
+  </ThingDef>
+ 
+<!-- Eldar Wraithguard/Wraithblade -->
+<!-- Base -->
+  <ThingDef ParentName="OG_Eldar_Wraithconstruct_Walker">
+    <defName>OG_Eldar_Wraithguard_Race</defName>
+    <label>wraithguard</label>
+    <description>The Eldar Wraithguard are not living warriors; they are artificial robotic constructs created from the complex psycho-plastic material crafted by the Eldar of the Craftworlds known as Wraithbone. Each Wraithguard has a Spirit Stone containing the soul of an elite Eldar warrior that was drawn out of the Infinity Circuit of a Craftworld. Wraithguard are smaller in size than Wraithlords, and carry a weapon known as a Wraithcannon which is a short-range, but potent weapon capable of opening a small rift into the Warp which sucks the target, or pieces of the target, within the Immaterium. When used against infantrymen, the result is invariably fatal. Due to their Wraithbone construction, Wraithguards can suffer damage that would cripple, or even kill, a living Eldar warrior and still continue to fight, making them useful in situations that would be suicide for living soldiers. They see through the Warp using what is known as "Wraithsight" but as the Warp is a tumultuous place, Wraithguards often have trouble discerning the true nature of realspace and so can find themselves blinded and unable to function effectively. Because of this tendency Wraithguard are often led into battle by Warlocks who help to guide them.</description>
+    <statBases>
+      <MoveSpeed>3.0</MoveSpeed>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>OG_Eldar_ConstructBody</body>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHealthScale>3</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+    </race>
+  </ThingDef>
+
+</Defs>

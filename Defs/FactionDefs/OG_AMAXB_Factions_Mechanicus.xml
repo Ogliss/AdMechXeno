@@ -13,7 +13,6 @@
     <canSiege>true</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>Tech-priest Overlord</leaderTitle>
-    <expandingIconTexture>Icons/MechanicusIcon</expandingIconTexture>
     <colorSpectrum>
       <li>(0.35, 0.35, 0)</li>
       <li>(0.4, 0.2, 0)</li>
@@ -168,14 +167,11 @@
       </li>
     </pawnGroupMakers>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <expandingIconTexture>Icons/Icon_Adetpus_Militarum</expandingIconTexture>
   </FactionDef>
 
   <FactionDef ParentName="OG_Mechanicus_Faction_Base">
     <defName>OG_Mechanicus_Faction</defName>
   </FactionDef>
   
-  <FactionDef ParentName="OG_Mechanicus_Faction_Base">
-    <defName>MechanicusFaction</defName>
-    <requiredCountAtGameStart>0</requiredCountAtGameStart>
-  </FactionDef>
 </Defs>

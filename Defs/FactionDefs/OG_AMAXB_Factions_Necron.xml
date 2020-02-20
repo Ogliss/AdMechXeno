@@ -80,6 +80,7 @@
       </li>
     </pawnGroupMakers>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <expandingIconTexture>Icons/Icon_Necron</expandingIconTexture>
     <allowedArrivalTemperatureRange>
       <min>-100</min>
       <max>200</max>

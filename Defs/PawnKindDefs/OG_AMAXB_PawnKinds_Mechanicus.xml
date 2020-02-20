@@ -10,7 +10,8 @@
     <combatPower>600</combatPower>
     <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
     <backstoryCategories>
-      <li>Civil</li>
+      <li>Outlander</li>
+      <li>Offworld</li>
       <li>AdMech_TechPriest</li>
     </backstoryCategories>
     <forceNormalGearQuality>true</forceNormalGearQuality>

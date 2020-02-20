@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="ShipPartBaseOG">
+    <defName>OG_Necron_Monolith_Static</defName>
+    <label>Necron Monlith</label>
+    <description>A Monolith is a massive mobile fortress used by the Necrons as their primary planetary assault craft. A Monolith combines the properties of a transport craft, armoured destroyer and icon of undying Necron power. Its ponderous form can float across a battlefield upon its anti-gravitic engines, whilst its crystal core pulses with sickly energy that can be manipulated into powerful beams of Gauss lightning which whip out from its weapon mounts.
+
+When its massive silhouette looms over a battlefield, it will lay waste to entire armies with strobing torrents of gauss fire and the deafening crack of its particle whip.Few armies can stand long before the immense firepower of a Monolith. Living troops are reduced to their component atoms by its punishing gauss flux arcs, while tanks rupture and explode in showers of molten steel as it focuses its energies upon them. By contrast, enemy ordnance has little effect on the shell of a Monolith. When damaged, the war machine’s Necrodermis armour reflexively enacts self-repairs; sparking rents in its hull are sealed by living metal and impact craters smooth over as the reactive substance seeks to reassert its original form.</description>
+    <graphicData>
+      <texPath>Building/Necron/Monolith</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,6)</drawSize>
+    </graphicData>
+    <killedLeavings>
+      <Steel>2800</Steel>
+      <Silver>1440</Silver>
+      <ChunkSlagSteel>20</ChunkSlagSteel>
+    </killedLeavings>
+			<comps>
+			<li Class="CompProperties_SnowExpand" />
+			<li Class="CompProperties_PlantHarmRadius">
+				<radiusPerDayCurve>
+          <points>
+						<li>0,5</li>
+						<li>1.5,18</li>
+						<li>6,40</li>
+						<li>20,100</li>
+					</points>
+				</radiusPerDayCurve>
+				<harmFrequencyPerArea>0.015</harmFrequencyPerArea>
+			</li>
+			<li Class="CompProperties_PawnSpawnerOnDamaged">
+			<Faction>OG_Necron_Faction</Faction>
+			
+			</li>
+		</comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ShipPartBaseOG">
+    <defName>OG_Ork_Rok</defName>
+    <label>Ork Rok</label>
+    <description>A mysterious crashed piece of a spaceship. It may contain any manner of deadly defenders and exotic materials.</description>
+    <graphicData>
+      <texPath>Things/Building/Exotic/CrashedPoisonmechClusterBuilding</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,6)</drawSize>
+			<shadowData>
+				<volume>(5.5, 1.0, 2.45)</volume>
+			</shadowData>
+    </graphicData>
+		<comps>
+			<li Class="CompProperties_PawnSpawnerOnDamaged"> 
+			<Faction>OG_Ork_Rok</Faction>
+			</li>
+		</comps>
+  </ThingDef>
+  
+  <ThingDef ParentName="ShipPartBaseOG">
+    <defName>OG_SpaceHulk_Part</defName>
+    <label>Space Hulk Part</label>
+    <description>A mysterious crashed piece of a spaceship. It may contain any manner of deadly defenders and exotic materials.</description>
+    <graphicData>
+      <texPath>Things/Building/Exotic/CrashedPoisonmechClusterBuilding</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>(6,3)</drawSize>
+			<shadowData>
+				<volume>(5.5, 1.0, 2.45)</volume>
+			</shadowData>
+    </graphicData>
+		<comps>
+			<li Class="CompProperties_PawnSpawnerOnDamaged"> 
+			<Factions>
+			<li>OG_Ork_Hulk</li>
+			<li>OG_Chaos_Deamon_Faction</li>
+			<li>Pirate</li>
+			</Factions>
+			</li>
+		</comps>
+  </ThingDef>
+
+</Defs>

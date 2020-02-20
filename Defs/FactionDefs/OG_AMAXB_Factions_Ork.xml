@@ -27,7 +27,6 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>Warboss</leaderTitle>
     <earliestRaidDays>45</earliestRaidDays>
-    <expandingIconTexture>Icons/OrkIcon</expandingIconTexture>
 	<factionNameMaker>NamerOGOrkFaction</factionNameMaker>
     <settlementNameMaker>NamerOGOrkBases</settlementNameMaker>
 		<techLevel>Spacer</techLevel>
@@ -160,6 +159,7 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
       </li>
     </pawnGroupMakers>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <expandingIconTexture>Icons/Icon_Ork</expandingIconTexture>
   </FactionDef>
 
   <FactionDef ParentName="OG_Ork_Tek_Faction_Base">
@@ -198,7 +198,6 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
     <canSiege>false</canSiege>
     <canStageAttacks>true</canStageAttacks>
     <leaderTitle>Feral Warboss</leaderTitle>
-    <expandingIconTexture>Icons/FeralOrkIcon</expandingIconTexture>
     <permanentEnemy>true</permanentEnemy>
 	<factionNameMaker>NamerOGOrkFaction</factionNameMaker>
     <settlementNameMaker>NamerOGOrkBases</settlementNameMaker>
@@ -279,6 +278,7 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
       </li>
     </pawnGroupMakers>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <expandingIconTexture>Icons/Icon_Ork_Feral</expandingIconTexture>
   </FactionDef>
 
   <FactionDef ParentName="OG_Ork_Feral_Faction_Base">

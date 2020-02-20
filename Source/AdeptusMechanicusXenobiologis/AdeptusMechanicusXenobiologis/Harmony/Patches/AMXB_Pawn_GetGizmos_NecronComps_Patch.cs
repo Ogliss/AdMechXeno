@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using RimWorld;
+﻿using System.Collections.Generic;
 using Verse;
-using Verse.AI;
-using Verse.AI.Group;
-using Harmony;
-using Verse.Sound;
+using HarmonyLib;
 
-namespace AdeptusMechanicus.Harmony
+namespace AdeptusMechanicus
 {
     [HarmonyPatch(typeof(Pawn), "GetGizmos")]
     public static class AMXB_Pawn_GetGizmos_NecronComps_Patch

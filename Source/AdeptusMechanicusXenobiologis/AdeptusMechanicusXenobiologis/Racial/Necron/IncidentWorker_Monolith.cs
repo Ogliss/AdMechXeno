@@ -29,7 +29,7 @@ namespace RimWorld
         protected override bool CanFireNowSub(IncidentParms parms)
         {
             Map map = (Map)parms.target;
-            return map.listerThings.ThingsOfDef(this.def.shipPart).Count <= 0;
+            return map.listerThings.ThingsOfDef(this.def.mechClusterBuilding).Count <= 0;
         }
 
         // Token: 0x06000EA8 RID: 3752 RVA: 0x0006C2D0 File Offset: 0x0006A6D0
@@ -47,7 +47,7 @@ namespace RimWorld
                 {
                     break;
                 }
-                Building_CrashedShipPart building_CrashedShipPart = (Building_CrashedShipPart)ThingMaker.MakeThing(this.def.shipPart, null);
+                Building building_CrashedShipPart = (Building)ThingMaker.MakeThing(this.def.mechClusterBuilding, null);
                 building_CrashedShipPart.SetFaction(OfNecrons, null);
                 building_CrashedShipPart.GetComp<CompPawnSpawnerOnDamaged>().pointsLeft = Mathf.Max(parms.points * 0.9f, 300f);
                 Skyfaller skyfaller = SkyfallerMaker.MakeSkyfaller(ThingDefOf.CrashedShipPartIncoming, building_CrashedShipPart);
@@ -58,7 +58,7 @@ namespace RimWorld
             }
             if (num > 0)
             {
-                base.SendStandardLetter(list, null, new string[0]);
+                base.SendStandardLetter(parms, list, Array.Empty<NamedArgument>());
             }
             return num > 0;
         }

@@ -85,6 +85,7 @@
       </li>
     </pawnGroupMakers>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <expandingIconTexture>Icons/Icon_Chaos_Undivided</expandingIconTexture>
     <allowedArrivalTemperatureRange>
       <min>-9999</min>
       <max>9999</max>
@@ -105,14 +106,7 @@
   
   <FactionDef ParentName="OG_Chaos_Deamon_Faction_Base">
     <defName>OG_Chaos_Deamon_Faction</defName>
-	<requiredCountAtGameStart>0</requiredCountAtGameStart>
+	<requiredCountAtGameStart>1</requiredCountAtGameStart>
   </FactionDef>
   
-  <FactionDef ParentName="OG_Chaos_Deamon_Faction_Base">
-    <defName>OGChaosDeamonFaction</defName>
-    <label>Deamons of Chaos Old</label>
-    <!--
-	<requiredCountAtGameStart>0</requiredCountAtGameStart>
-	-->
-  </FactionDef>
 </Defs>
