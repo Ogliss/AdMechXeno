@@ -10,8 +10,8 @@
    <supportedGameVersions>
       <li>1.1</li>
    </supportedGameVersions>
-   <packageId>Ogliss.AdMech.Xenobiologis</packageId>
    -->
+   <packageId>Ogliss.AdMech.Xenobiologis</packageId>
 	<description>V1.5
 Adds factions using xenos weapons from my Armoury mod.
 Requires new start or one of those faction managers
