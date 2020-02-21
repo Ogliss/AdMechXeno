@@ -13,9 +13,13 @@
     <label>lord marshal</label>
     <labelPlural>lord marshals</labelPlural>
     <factionLeader>true</factionLeader>
-	<backstoryCategories>
-			<li>ImperialGuard_Standard_Leader</li>
-  	</backstoryCategories>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+      </li>
+    </backstoryFilters>
 	<minGenerationAge>50</minGenerationAge>
 	<maxGenerationAge>300</maxGenerationAge>
   </PawnKindDef>

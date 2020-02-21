@@ -8,15 +8,27 @@
     <isFighter>false</isFighter>
     <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
     <forceNormalGearQuality>true</forceNormalGearQuality>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+          <li>ImperialGuard_Standard</li>
+        </categories>
+        <commonality>0.95</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.05</commonality>
+      </li>
+    </backstoryFilters>
   </PawnKindDef>
 
   <PawnKindDef ParentName="BaseImperialGuardPawnKind">
     <defName>Colonist_OG_Militarum</defName>
     <label>colonist</label>
     <defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
-    <backstoryCategories>
-			<li>ImperialGuard_Standard</li>
-  	</backstoryCategories>
     <apparelTags>
       <li>OGIGClothing</li>
     </apparelTags>

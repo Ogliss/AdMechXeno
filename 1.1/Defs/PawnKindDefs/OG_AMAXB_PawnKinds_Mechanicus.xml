@@ -8,11 +8,17 @@
     <race>OG_Human_Mechanicus</race>
     <defaultFactionType>OG_Mechanicus_Faction</defaultFactionType>
     <combatPower>600</combatPower>
-    <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
-    <backstoryCategories>
-      <li>Civil</li>
-      <li>AdMech_TechPriest</li>
-    </backstoryCategories>
+    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>AdMech_TechPriest</li>
+          <li>Offworld</li>
+          <li>Outlander</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
     <forceNormalGearQuality>true</forceNormalGearQuality>
     <isFighter>true</isFighter>
     <chemicalAddictionChance>0.08</chemicalAddictionChance>
@@ -99,9 +105,15 @@
     <defaultFactionType>OG_Mechanicus_Faction</defaultFactionType>
     <combatPower>150</combatPower>
     <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
-    <backstoryCategories>
-      <li>Civil</li>
-    </backstoryCategories>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>Offworld</li>
+          <li>Outlander</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
     <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
     <chemicalAddictionChance>0.08</chemicalAddictionChance>
     <apparelMoney>

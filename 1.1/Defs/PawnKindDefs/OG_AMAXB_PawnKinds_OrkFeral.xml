@@ -392,9 +392,22 @@
     <combatPower>30</combatPower>
     <race>Human</race>
     <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
-    <backstoryCategories>
-      <li>Slave</li>
-    </backstoryCategories>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+          <li>Tribal</li>
+          <li>Pirate-</li>
+        </categories>
+        <commonality>0.95</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.05</commonality>
+      </li>
+    </backstoryFilters>
     <defaultFactionType>OG_Ork_Feral_Faction</defaultFactionType>
     <itemQuality>Poor</itemQuality>
     <backstoryCryptosleepCommonality>0.10</backstoryCryptosleepCommonality>

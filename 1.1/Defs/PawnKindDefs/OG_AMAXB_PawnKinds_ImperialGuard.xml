@@ -6,9 +6,21 @@
   <PawnKindDef Name="OG_Militarum_Base_Kind" Abstract="True">
     <defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
     <race>OG_Human_Imperial</race>
-	<backstoryCategories>
-			<li>ImperialGuard_Standard</li>
-  	</backstoryCategories>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+          <li>ImperialGuard_Standard</li>
+        </categories>
+        <commonality>0.95</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.05</commonality>
+      </li>
+    </backstoryFilters>
     <chemicalAddictionChance>0.005</chemicalAddictionChance>
     <baseRecruitDifficulty>0.60</baseRecruitDifficulty>
     <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
@@ -27,9 +39,6 @@
   <PawnKindDef Name="OG_Militarum_Civilian_Base" ParentName="OG_Militarum_Base_Kind" Abstract="True">
     <combatPower>25</combatPower>
 	<race>OG_Human_Imperial</race>
-	<backstoryCategories>
-			<li>Civil</li>
-  	</backstoryCategories>
     <itemQuality>Poor</itemQuality>
     <isFighter>false</isFighter>
     <gearHealthRange>
@@ -88,9 +97,22 @@
     <label>lord marshal</label>
     <labelPlural>lord marshals</labelPlural>
     <factionLeader>true</factionLeader>
-	<backstoryCategories>
-			<li>ImperialGuard_Standard_Leader</li>
-  	</backstoryCategories>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+          <li>ImperialGuard_Standard</li>
+        </categories>
+        <commonality>0.05</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+          <li>ImperialGuard_Standard_Leader</li>
+        </categories>
+        <commonality>1</commonality>
+      </li>
+    </backstoryFilters>
 	<minGenerationAge>50</minGenerationAge>
 	<maxGenerationAge>300</maxGenerationAge>
     <apparelTags>
@@ -128,9 +150,6 @@
     <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
     <isFighter>true</isFighter>
 	<race>OG_Human_Imperial</race>
-	<backstoryCategories>
-			<li>Civil</li>
-  	</backstoryCategories>
     <invNutrition>2.55</invNutrition>
     <itemQuality>Normal</itemQuality>
 	<minGenerationAge>19</minGenerationAge>

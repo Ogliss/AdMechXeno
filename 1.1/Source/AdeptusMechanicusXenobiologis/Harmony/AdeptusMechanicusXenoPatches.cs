@@ -10,7 +10,7 @@ namespace AdeptusMechanicus
         static AdeptusMechanicusXenoPatches()
         {
             //    HarmonyInstance.DEBUG = true;
-            var harmony = new Harmony("com.ogliss.rimworld.mod.adeptusmechanicus.xenobiologis");
+            var harmony = new Harmony("com.ogliss.rimworld.mod.adeptus.xenobiologis");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
 
         }

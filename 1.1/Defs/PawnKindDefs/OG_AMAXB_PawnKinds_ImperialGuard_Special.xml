@@ -13,9 +13,21 @@
     <race>OG_Human_Imperial</race>
     <chemicalAddictionChance>0.05</chemicalAddictionChance>
     <backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
-    <backstoryCategories>
-      <li>Traveler</li>
-    </backstoryCategories>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+          <li>ImperialGuard_Standard</li>
+        </categories>
+        <commonality>0.95</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.05</commonality>
+      </li>
+    </backstoryFilters>
     <invNutrition>10.0</invNutrition>
     <inventoryOptions>
       <subOptionsChooseOne>

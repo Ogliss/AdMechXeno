@@ -14,7 +14,7 @@ namespace AdeptusMechanicus
         {
             ThingDef thingDef = DefDatabase<ThingDef>.GetNamed("Human");
             OGAdeptusMechanicusDefOf.OG_Human_Mechanicus.recipes = thingDef.recipes;
-            Log.Message(string.Format("adding {0} to Mechanicus_Race", OGAdeptusMechanicusDefOf.OG_Human_Mechanicus.recipes.Count));
+        //    Log.Message(string.Format("adding {0} to Mechanicus_Race", OGAdeptusMechanicusDefOf.OG_Human_Mechanicus.recipes.Count));
             /*
             foreach (var item in ModLister.AllInstalledMods)
             {
@@ -27,7 +27,7 @@ namespace AdeptusMechanicus
                 ThingDef td = OGEldarDefOf.OG_Eldar_Wraithguard_Race;
                 Filter(fd,td);
             }
-            Log.Message(string.Format("post AllowEldarWraithguard"));
+        //    Log.Message(string.Format("post AllowEldarWraithguard"));
             if (!SettingsHelper.XBlatest.AllowKrootAuxiliaries)
             {
                 FactionDef fd = OGTauDefOf.OG_Tau_Faction;
@@ -40,14 +40,14 @@ namespace AdeptusMechanicus
                 td = OGKrootDefOf.KindredKrootOx;
                 Filter(fd, td);
             }
-            Log.Message(string.Format("post AllowKrootAuxiliaries"));
+        //    Log.Message(string.Format("post AllowKrootAuxiliaries"));
             if (!SettingsHelper.XBlatest.AllowGueVesaAuxiliaries)
             {
                 FactionDef fd = OGTauDefOf.OG_Tau_Faction;
                 ThingDef td = ThingDefOf.Human;
                 Filter(fd, td);
             }
-            Log.Message(string.Format("post AllowGueVesaAuxiliaries"));
+        //    Log.Message(string.Format("post AllowGueVesaAuxiliaries"));
         }
 
         public static void Filter(FactionDef fd, ThingDef rd)

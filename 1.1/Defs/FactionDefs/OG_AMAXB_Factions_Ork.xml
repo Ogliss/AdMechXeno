@@ -175,16 +175,6 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
     </colorSpectrum>
   </FactionDef>
 
-  <FactionDef ParentName="OG_Ork_Tek_Faction_Base">
-    <defName>OrkFaction</defName>
-    <label>ork warband</label>
-    <colorSpectrum>
-      <li>(0.35, 0.35, 0)</li>
-      <li>(0.4, 0.2, 0)</li>
-    </colorSpectrum>
-    <requiredCountAtGameStart>0</requiredCountAtGameStart>
-  </FactionDef>
-
   <FactionDef ParentName="OG_Ork_Faction_Base" Name="OG_Ork_Feral_Faction_Base" Abstract="True">
   <label>feral ork warband</label>
     <description>Feral Orks or Wildboyz are Orks who arise on a world that a spaceborne Ork WAAAGH! has already assaulted, though they possess only pre-industrial levels of technology and culture. Feral Orks appear after a WAAAGH! has already infested a planet and then moved on to seek new battles elsewhere. Usually Feral Orks are a new generation of Orks grown from the fungal reproductive spores released by spaceborne Orks and left behind on the world their spaceborne counterparts have abandoned.\n\nFeral Orks can also be derived from an original population of spaceborne Orks stranded on a world who effectively devolve back to a feral state, losing their access to more advanced technology. The Feral Orks, while less advanced than their fellow Greenskins, do have access to a variety of wargear in their armoury. However, much of it works due to the strange effects it has on the mind and behaviour of the Ork, rather than actually producing a physical effect upon the enemy.</description>
@@ -291,11 +281,6 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
 
   <FactionDef ParentName="OG_Ork_Feral_Faction_Base">
     <defName>OG_Ork_Feral_Faction</defName>
-  </FactionDef>
-
-  <FactionDef ParentName="OG_Ork_Feral_Faction_Base">
-    <defName>FeralOrkFaction</defName>
-    <requiredCountAtGameStart>0</requiredCountAtGameStart>
   </FactionDef>
 
 </Defs>
