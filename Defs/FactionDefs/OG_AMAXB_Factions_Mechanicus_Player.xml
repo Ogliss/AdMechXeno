@@ -16,16 +16,12 @@
     <pawnsPlural>mechanicus</pawnsPlural>
     <basicMemberKind>Colonist_OG_Mechanicus</basicMemberKind>
     <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
-		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
-		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
     <techLevel>Ultra</techLevel>
-    <backstoryFilters>
-      <li>
-        <categories>
-          <li>Offworld</li>
-        </categories>
-      </li>
-    </backstoryFilters>
+		<backstoryCategories>
+			<li>Raider</li>
+		</backstoryCategories>
     <startingResearchTags>
       <li>ClassicStart</li>
     </startingResearchTags>
