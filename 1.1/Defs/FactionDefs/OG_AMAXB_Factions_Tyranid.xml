@@ -102,6 +102,8 @@
 	  <li Class="AdeptusMechanicus.FactionDefExtension">
 		  <ActiveDropPod>OG_Active_Mycetic_Spore</ActiveDropPod>
 		  <DropPodIncoming>OG_Mycetic_Spore_Incoming</DropPodIncoming>
+		  <DeepStrikeChance>1</DeepStrikeChance>
+		  <InfiltrateChance>0.5</InfiltrateChance>
 	  </li>
 	</modExtensions>
   </FactionDef>

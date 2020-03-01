@@ -24,7 +24,7 @@
 		<li>Raider</li>
   	</backstoryCategories>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
-    <expandingIconTexture>World/WorldObjects/Expanding/Town</expandingIconTexture>
+    <expandingIconTexture>Icons/Icon_Adeptus_Militarum</expandingIconTexture>
     <startingResearchTags>
       <li>ClassicStart</li>
     </startingResearchTags>

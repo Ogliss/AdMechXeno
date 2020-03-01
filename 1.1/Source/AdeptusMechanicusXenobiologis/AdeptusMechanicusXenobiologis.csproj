@@ -61,6 +61,7 @@
     <Compile Include="Racial\Tyranid\CompTyranidRottable.cs" />
     <Compile Include="Racial\Tyranid\CompTyranidTemperatureDamaged.cs" />
     <Compile Include="Racial\Tyranid\OGTyranidDefOf.cs" />
+    <Compile Include="Util\Class1.cs" />
     <Compile Include="Util\NPCWithProgressBarStaticUtil.cs" />
     <Compile Include="Util\OGCommonDefOf.cs" />
     <Compile Include="Util\Settings\SettingsHelper.cs" />
@@ -109,8 +110,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=2.0.0.5, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\AdMechArmoury\1.1\Source\AdeptusMechanicusMain\packages\Lib.Harmony.2.0.0.5\lib\net472\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony, Version=2.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\AdMechArmoury\1.1\Source\AdeptusMechanicusMain\packages\Lib.Harmony.2.0.0.7\lib\net472\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="AdeptusMechanicusMain">
       <HintPath>..\..\..\..\AdMechArmoury\1.1\Assemblies\AdeptusMechanicusMain.dll</HintPath>

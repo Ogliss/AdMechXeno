@@ -121,4 +121,22 @@ you have my full permission to rebalance/patch/translate this mod, just please l
 Problems? Questions? Comments? Got something youd like to see added to the mod?
 [url=https://discord.gg/fR5cA7b/]Join us on Discord[/url]
 		</description>
+		
+  <loadBefore>
+    <li>Ogliss.AdMech.Astartes</li>
+    <li>Ogliss.AdMech.Xenobiologis.Tau</li>
+    <li>Ogliss.AdMech.Xenobiologis.Orkz</li>
+    <li>Ogliss.AdMech.Xenobiologis.Eldar</li>
+    <li>Ogliss.AdMech.Xenobiologis.DarkEldar</li>
+    <li>Ogliss.AdMech.Xenobiologis.Chaos</li>
+    <li>Ogliss.AdMech.Xenobiologis.Necrons</li>
+    <li>Ogliss.AdMech.Xenobiologis.Tyranids</li>
+  </loadBefore>
+  <loadAfter>
+    <li>Ogliss.AdMech.Armoury</li>
+  </loadAfter>
+  <incompatibleWith>
+  
+  </incompatibleWith>	
+	
 </ModMetaData>

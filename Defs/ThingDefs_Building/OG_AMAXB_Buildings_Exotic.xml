@@ -50,7 +50,7 @@ When its massive silhouette looms over a battlefield, it will lay waste to entir
     </graphicData>
 		<comps>
 			<li Class="CompProperties_PawnSpawnerOnDamaged"> 
-			<Faction>OG_Ork_Tek_Faction</Faction>
+			<Faction>OG_Ork_Rok</Faction>
 			</li>
 		</comps>
   </ThingDef>
@@ -70,7 +70,7 @@ When its massive silhouette looms over a battlefield, it will lay waste to entir
 		<comps>
 			<li Class="CompProperties_PawnSpawnerOnDamaged"> 
 			<Factions>
-			<li>OG_Ork_Tek_Faction</li>
+			<li>OG_Ork_Hulk</li>
 			<li>OG_Chaos_Deamon_Faction</li>
 			<li>Pirate</li>
 			</Factions>

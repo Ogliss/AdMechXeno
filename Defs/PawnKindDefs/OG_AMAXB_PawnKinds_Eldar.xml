@@ -3,9 +3,6 @@
 
   <PawnKindDef Name="OG_Eldar_Pawnkind_Base" Abstract="True">
     <defaultFactionType>OG_Eldar_Craftworld_Faction</defaultFactionType>
-    <backstoryCategories>
-      <li>Outlander</li>
-    </backstoryCategories>
     <invNutrition>2.55</invNutrition>
 		<aiAvoidCover>false</aiAvoidCover>
 		<weaponMoney>
@@ -35,8 +32,8 @@
 		
   <PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
 		<defName>OG_Eldar_Faction_Farseer</defName>
-		<label>aurtrach</label>
-		<race>Eldar_FactionFarseer</race>
+		<label>Farseer</label>
+		<race>Human</race>
 		<combatPower>15000</combatPower>
 		<itemQuality>Superior</itemQuality>
 		<factionLeader>true</factionLeader>

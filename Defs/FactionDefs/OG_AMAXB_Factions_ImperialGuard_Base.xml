@@ -111,7 +111,7 @@
       </li>
     </pawnGroupMakers>
     <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
-    <expandingIconTexture>Icons/Icon_Adetpus_Militarum</expandingIconTexture>
+    <expandingIconTexture>Icons/Icon_Adeptus_Militarum</expandingIconTexture>
   </FactionDef>
   
 </Defs>
