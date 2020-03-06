@@ -45,6 +45,7 @@
       <li>Advanced</li>
       <li>AdvancedWeapon</li>
       <li>AdMech_TechPriest</li>
+      <li>UseAllTechHediff</li>
     </techHediffsTags>
     <techHediffsChance>10</techHediffsChance>
   </PawnKindDef>
@@ -200,7 +201,7 @@
   </PawnKindDef>
   
 <!-- Base Construct -->
-  <PawnKindDef Name="BaseMechanicusConstructKind" Abstract="True">
+  <PawnKindDef Name="OG_Mechanicus_Construct_BaseKind" Abstract="True">
     <defaultFactionType>OG_Mechanicus_Faction</defaultFactionType>
     <aiAvoidCover>true</aiAvoidCover>
     <destroyGearOnDrop>false</destroyGearOnDrop>
@@ -208,7 +209,7 @@
 
 <!-- Mechanicus Sicarians -->
 <!-- Rust Stalker --> 
-  <PawnKindDef ParentName="BaseMechanicusConstructKind">
+  <PawnKindDef ParentName="OG_Mechanicus_Construct_BaseKind">
     <defName>OG_Mechanicus_Sicarian_Rust_Stalker</defName>
     <label>sicarian rust stalker</label>
     <race>Mechanicus_Sicarian</race>
@@ -237,7 +238,7 @@
   </PawnKindDef>
 
 <!-- Infiltrator --> 
-  <PawnKindDef ParentName="BaseMechanicusConstructKind">
+  <PawnKindDef ParentName="OG_Mechanicus_Construct_BaseKind">
     <defName>OG_Mechanicus_Sicarian_Rust_Infiltrator</defName>
     <label>sicarian infiltrator</label>
     <race>Mechanicus_Sicarian</race>

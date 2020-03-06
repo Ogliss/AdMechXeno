@@ -20,7 +20,7 @@ namespace AdeptusMechanicus
                     string defName = factionDef.defName;
                     if (factionDef.defName.Contains("OG_Astartes_"))
                     {
-                        if (!SettingsHelper.XBlatest.AllowAdeptusAstartes)
+                        if (!SettingsHelper.latest.AllowAdeptusAstartes)
                         {
                             AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                         }
@@ -31,7 +31,7 @@ namespace AdeptusMechanicus
                     }
                     if (factionDef.defName.Contains("OG_Mechanicus_"))
                     {
-                        if (!SettingsHelper.XBlatest.AllowAdeptusMechanicus)
+                        if (!SettingsHelper.latest.AllowAdeptusMechanicus)
                         {
                             AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                         }
@@ -42,7 +42,7 @@ namespace AdeptusMechanicus
                     }
                     if (factionDef.defName.Contains("OG_Militarum_"))
                     {
-                        if (!SettingsHelper.XBlatest.AllowAdeptusMilitarum)
+                        if (!SettingsHelper.latest.AllowAdeptusMilitarum)
                         {
                             AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                         }
@@ -53,7 +53,7 @@ namespace AdeptusMechanicus
                     }
                     if (factionDef.defName.Contains("OG_Sororitas_"))
                     {
-                        if (!SettingsHelper.XBlatest.AllowAdeptusSororitas)
+                        if (!SettingsHelper.latest.AllowAdeptusSororitas)
                         {
                             AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                         }
@@ -66,7 +66,7 @@ namespace AdeptusMechanicus
                     {
                         if (factionDef.defName.Contains("Deamon"))
                         {
-                            if (!SettingsHelper.XBlatest.AllowChaosDeamons)
+                            if (!SettingsHelper.latest.AllowChaosDeamons)
                             {
                                 AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                             }
@@ -77,7 +77,7 @@ namespace AdeptusMechanicus
                         }
                         if (factionDef.defName.Contains("Marine"))
                         {
-                            if (!SettingsHelper.XBlatest.AllowChaosMarine)
+                            if (!SettingsHelper.latest.AllowChaosMarine)
                             {
                                 AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                             }
@@ -88,7 +88,7 @@ namespace AdeptusMechanicus
                         }
                         if (factionDef.defName.Contains("Guard"))
                         {
-                            if (!SettingsHelper.XBlatest.AllowChaosGuard)
+                            if (!SettingsHelper.latest.AllowChaosGuard)
                             {
                                 AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                             }
@@ -99,7 +99,7 @@ namespace AdeptusMechanicus
                         }
                         if (factionDef.defName.Contains("Mechanicus"))
                         {
-                            if (!SettingsHelper.XBlatest.AllowChaosMechanicus)
+                            if (!SettingsHelper.latest.AllowChaosMechanicus)
                             {
                                 AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                             }
@@ -114,7 +114,7 @@ namespace AdeptusMechanicus
                     {
                         if (factionDef.defName.Contains("Craftworld"))
                         {
-                            if (!SettingsHelper.XBlatest.AllowEldarCraftworld)
+                            if (!SettingsHelper.latest.AllowEldarCraftworld)
                             {
                                 AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                             }
@@ -122,14 +122,14 @@ namespace AdeptusMechanicus
                             {
                                 AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 1);
                             }
-                            if (!SettingsHelper.XBlatest.AllowEldarWraithguard)
+                            if (!SettingsHelper.latest.AllowEldarWraithguard)
                             {
                                 AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefRemoveRace(factionDef, OGEldarDefOf.OG_Eldar_Wraithguard_Race);
                             }
                         }
                         if (factionDef.defName.Contains("Exodite"))
                         {
-                            if (!SettingsHelper.XBlatest.AllowEldarExodite)
+                            if (!SettingsHelper.latest.AllowEldarExodite)
                             {
                                 AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                             }
@@ -140,7 +140,7 @@ namespace AdeptusMechanicus
                         }
                         if (factionDef.defName.Contains("Harlequin"))
                         {
-                            if (!SettingsHelper.XBlatest.AllowEldarHarlequinn)
+                            if (!SettingsHelper.latest.AllowEldarHarlequinn)
                             {
                                 AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                             }
@@ -152,7 +152,7 @@ namespace AdeptusMechanicus
                     }
                     if (factionDef.defName.Contains("OG_Dark_Eldar_"))
                     {
-                        if (!SettingsHelper.XBlatest.AllowDarkEldar)
+                        if (!SettingsHelper.latest.AllowDarkEldar)
                         {
                             AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                         }
@@ -163,7 +163,7 @@ namespace AdeptusMechanicus
                     }
                     if (factionDef.defName.Contains("OG_Kroot_"))
                     {
-                        if (!SettingsHelper.XBlatest.AllowKroot)
+                        if (!SettingsHelper.latest.AllowKroot)
                         {
                             AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                         }
@@ -174,7 +174,7 @@ namespace AdeptusMechanicus
                     }
                     if (factionDef.defName.Contains("OG_Tau_"))
                     {
-                        if (!SettingsHelper.XBlatest.AllowTau)
+                        if (!SettingsHelper.latest.AllowTau)
                         {
                             AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                         }
@@ -186,7 +186,7 @@ namespace AdeptusMechanicus
 
                     if (factionDef.defName.Contains("OG_Necron_"))
                     {
-                        if (!SettingsHelper.XBlatest.AllowNecron)
+                        if (!SettingsHelper.latest.AllowNecron)
                         {
                             AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                         }
@@ -197,7 +197,7 @@ namespace AdeptusMechanicus
                     }
                     if (factionDef.defName.Contains("OG_Ork_Tek_"))
                     {
-                        if (!SettingsHelper.XBlatest.AllowOrkTek)
+                        if (!SettingsHelper.latest.AllowOrkTek)
                         {
                             AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                         }
@@ -208,7 +208,7 @@ namespace AdeptusMechanicus
                     }
                     if (factionDef.defName.Contains("OG_Ork_Feral_"))
                     {
-                        if (!SettingsHelper.XBlatest.AllowOrkFeral)
+                        if (!SettingsHelper.latest.AllowOrkFeral)
                         {
                             AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                         }
@@ -219,7 +219,7 @@ namespace AdeptusMechanicus
                     }
                     if (factionDef.defName.Contains("OG_Ork_Hulk") || factionDef.defName.Contains("OG_Ork_Rok"))
                     {
-                        if (!SettingsHelper.XBlatest.AllowOrkRok)
+                        if (!SettingsHelper.latest.AllowOrkRok)
                         {
                             AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                         }
@@ -231,7 +231,7 @@ namespace AdeptusMechanicus
                     
                     if (factionDef.defName.Contains("OG_Tyranid_") || factionDef.defName.Contains("OG_Genestealer_Cult"))
                     {
-                        if (!SettingsHelper.XBlatest.AllowTyranid)
+                        if (!SettingsHelper.latest.AllowTyranid)
                         {
                             AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                         }
@@ -242,7 +242,7 @@ namespace AdeptusMechanicus
                     }
                     if (factionDef.defName.Contains("OG_Vespid_") || factionDef.defName.Contains("OG_Vespid_Feral_"))
                     {
-                        if (!SettingsHelper.XBlatest.AllowVespid)
+                        if (!SettingsHelper.latest.AllowVespid)
                         {
                             AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.UpdateDefrequiredCount(factionDef, 0);
                         }

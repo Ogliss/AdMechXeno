@@ -19,6 +19,7 @@
         <bodyGraphicData>
           <texPath>Pawn/Necron/Warrior</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
+          <color>(205,205,205)</color>
           <drawSize>1.75</drawSize>
           <shadowData>
             <volume>(0.4, 0.8, 0.4)</volume>
@@ -47,6 +48,7 @@
         <bodyGraphicData>
           <texPath>Pawn/Necron/FlayedOne</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
+          <color>(205,205,205)</color>
           <drawSize>1.65</drawSize>
           <shadowData>
             <volume>(0.4, 0.8, 0.4)</volume>
@@ -80,6 +82,7 @@
         <bodyGraphicData>
           <texPath>Pawn/Necron/Wraith</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
+          <color>(205,205,205)</color>
           <drawSize>1.75</drawSize>
           <shadowData>
             <volume>(0.4, 0.8, 0.4)</volume>
@@ -109,6 +112,7 @@
         <bodyGraphicData>
           <texPath>Pawn/Necron/Immortal</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
+          <color>(205,205,205)</color>
           <drawSize>1.85</drawSize>
           <shadowData>
             <volume>(0.4, 0.8, 0.4)</volume>
@@ -143,6 +147,7 @@
         <bodyGraphicData>
           <texPath>Pawn/Necron/Lord</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
+          <color>(205,205,205)</color>
           <drawSize>1.75</drawSize>
           <shadowData>
             <volume>(0.4, 0.8, 0.4)</volume>
@@ -170,6 +175,7 @@
         <bodyGraphicData>
           <texPath>Pawn/Necron/Destroyer</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
+          <color>(205,205,205)</color>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.6, 0.8, 0.6)</volume>
@@ -199,6 +205,7 @@
         <bodyGraphicData>
           <texPath>Pawn/Necron/Destroyer</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
+          <color>(205,205,205)</color>
           <drawSize>2</drawSize>
           <shadowData>
             <volume>(0.6, 0.8, 0.6)</volume>
@@ -226,6 +233,7 @@
         <bodyGraphicData>
           <texPath>Pawn/Necron/ScarabSwarm</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
+          <color>(205,205,205)</color>
           <drawSize>1.0</drawSize>
           <shadowData>
             <volume>(0.4, 0.8, 0.4)</volume>
@@ -252,6 +260,7 @@
         <bodyGraphicData>
           <texPath>Pawn/Necron/TombSpyder</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
+          <color>(205,205,205)</color>
           <drawSize>3</drawSize>
           <shadowData>
             <volume>(0.6, 0.8, 0.6)</volume>

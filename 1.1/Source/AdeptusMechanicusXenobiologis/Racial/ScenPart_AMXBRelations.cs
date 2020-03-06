@@ -12,7 +12,7 @@ namespace RimWorld
 
         public override void PostWorldGenerate()
         {
-            if (SettingsHelper.XBlatest.ForceRelations)
+            if (SettingsHelper.latest.ForceRelations)
             {
                 int i = 0;
                 Faction faction = null;

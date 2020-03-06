@@ -88,8 +88,7 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-	  
+	  <li Class="AdeptusMechanicus.CompProperties_OversizedWeapon">
 	  </li> 
 	</comps>
   </ThingDef>
@@ -181,7 +180,7 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+	  <li Class="AdeptusMechanicus.CompProperties_OversizedWeapon">
 	  
 	  </li> 
 	</comps>
@@ -237,7 +236,7 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+	  <li Class="AdeptusMechanicus.CompProperties_OversizedWeapon">
 	  
 	  </li> 
 	</comps>
@@ -329,7 +328,7 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+	  <li Class="AdeptusMechanicus.CompProperties_OversizedWeapon">
 	  
 	  </li> 
 	</comps>
@@ -409,7 +408,7 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+	  <li Class="AdeptusMechanicus.CompProperties_OversizedWeapon">
 	  
 	  </li> 
 	</comps>
@@ -484,7 +483,7 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+	  <li Class="AdeptusMechanicus.CompProperties_OversizedWeapon">
 	  
 	  </li> 
 	</comps>
@@ -559,7 +558,7 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+	  <li Class="AdeptusMechanicus.CompProperties_OversizedWeapon">
 	  
 	  </li> 
 	</comps>

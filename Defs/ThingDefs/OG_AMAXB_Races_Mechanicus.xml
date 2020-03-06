@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- Mechanicus Base Abstract -->
-  <ThingDef ParentName="BasePawn" Name="BaseMechanicus" Abstract="True" >
-  <defName>Mechanicus_Race</defName>
+  <ThingDef ParentName="BasePawn" Name="OG_Mechanicus_Construct_Base" Abstract="True" >
     <label>Mechanicus Construct Race</label>
     <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <statBases>
@@ -29,7 +28,7 @@
   </ThingDef>
 
 <!-- Walker base -->
-  <ThingDef ParentName="BaseMechanicus" Name="BaseMechanicusWalker" Abstract="True">
+  <ThingDef ParentName="OG_Mechanicus_Construct_Base" Name="OG_Mechanicus_Construct_BaseWalker" Abstract="True">
     <race>
       <intelligence>ToolUser</intelligence>
       <thinkTreeMain>Mechanoid</thinkTreeMain>
@@ -57,7 +56,7 @@
   
 <!-- Mechanicus Sicarians -->
 <!--B19--> 
-  <ThingDef ParentName="BaseMechanicusWalker">
+  <ThingDef ParentName="OG_Mechanicus_Construct_BaseWalker">
     <defName>Mechanicus_Sicarian</defName>
     <label>sicarian warriors</label>
     <description>The Ruststalkers of the Skitarii Legions fall upon their foes in a slashing, stabbing frenzy. Their transonic blades blur as they dart and cut like the weapons of gladiatorial knife-fighters, the deadly resonances they transmit bypassing armour as if it offered no more resistance than a hologram. The Ruststalkers were originally devised as cybernetic assassins, sent into the Red Planet’s wastes to hunt down feral servitors and other undesirables excommunicated from the Cult Mechanicus.

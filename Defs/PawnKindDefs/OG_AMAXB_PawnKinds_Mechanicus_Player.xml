@@ -32,6 +32,7 @@
     </techHediffsMoney>
     <techHediffsTags>
 		<li>Advanced</li>
+      <li>UseAllTechHediff</li>
     </techHediffsTags>
     <techHediffsChance>0.75</techHediffsChance>
     <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>

@@ -40,7 +40,7 @@
     <Compile Include="Harmony\Patches\AMXB_Pawn_GetGizmos_NecronComps_Patch.cs" />
     <Compile Include="Harmony\Patches\AMXB_SettlementDefeatUtility_IsDefeated_Patch.cs" />
     <Compile Include="Harmony\Patches\AMXB_Page_ScenarioLister_ScenariosInCategory_Patch.cs" />
-    <Compile Include="Harmony\Patches\AMXB_AMAMod_ModOptions_Patches.cs" />
+    <Compile Include="Util\Settings\AMXB_AMAMod_ModOptions_Patches.cs" />
     <Compile Include="Harmony\Patches\AMXB_Pawn_AnythingToStrip_Necron_Patch.cs" />
     <Compile Include="Harmony\Patches\AMXB_Pawn_HealthTracker_MakeDowned_Necron_Patch.cs" />
     <Compile Include="Racial\AdeptusMechanicus\OGAdeptusMechanicusDefOf.cs" />
@@ -63,8 +63,6 @@
     <Compile Include="Racial\Tyranid\OGTyranidDefOf.cs" />
     <Compile Include="Util\NPCWithProgressBarStaticUtil.cs" />
     <Compile Include="Util\OGCommonDefOf.cs" />
-    <Compile Include="Util\Settings\SettingsHelper.cs" />
-    <Compile Include="Util\Settings\AMXBMod.cs" />
     <None Include="Util\DamageWorker_WarpFlameNoCamShake.cs.bak" />
     <None Include="Util\WarpSpark.cs.bak" />
     <Compile Include="Racial\Chaos\CompChaosDeamonOG.cs" />
@@ -89,10 +87,8 @@
     <Compile Include="Racial\Kroot\OGKrootDefOf.cs" />
     <Compile Include="Racial\Orkz\OGOrkDefOf.cs" />
     <Compile Include="Racial\Tau\OGTauDefOf.cs" />
-    <Compile Include="Util\Settings\AMXBSettings.cs" />
     <Compile Include="Util\Settings\AMXBSetIncidents.cs" />
     <Compile Include="Util\Settings\AMXBMain.cs" />
-    <Compile Include="Util\Settings\SettingsRef.cs" />
     <None Include="Racial\Necron\OGNecronModification.cs - Copy.bak" />
     <Compile Include="Util\OG_AMXB_CorpseModification.cs" />
     <Compile Include="Racial\Necron\NecronHediffUtility.cs" />
@@ -109,8 +105,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="0Harmony, Version=2.0.0.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\..\..\AdMechArmoury\1.1\Source\AdeptusMechanicusMain\packages\Lib.Harmony.2.0.0.4\lib\net472\0Harmony.dll</HintPath>
+    <Reference Include="0Harmony, Version=2.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\AdMechArmoury\1.1\Source\AdeptusMechanicusMain\packages\Lib.Harmony.2.0.0.7\lib\net472\0Harmony.dll</HintPath>
     </Reference>
     <Reference Include="AdeptusMechanicusMain">
       <HintPath>..\..\..\..\AdMechArmoury\1.1\Assemblies\AdeptusMechanicusMain.dll</HintPath>
