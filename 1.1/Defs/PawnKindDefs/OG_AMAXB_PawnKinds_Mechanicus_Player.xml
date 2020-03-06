@@ -25,6 +25,7 @@
     </backstoryFiltersOverride>
     <apparelTags>
       <li>OGAMClothing</li>
+      <li>OGIGClothing</li>
     </apparelTags>
     <apparelMoney>
       <min>1000</min>
