@@ -93,7 +93,6 @@
     <Compile Include="Util\OG_AMXB_CorpseModification.cs" />
     <Compile Include="Racial\Necron\NecronHediffUtility.cs" />
     <Compile Include="Racial\Necron\CompGlowerNecron.cs" />
-    <Compile Include="BodypartUtility.cs" />
     <Compile Include="Hediff_RegeneratingPart.cs" />
     <Compile Include="ThinkNode_OGAMXBChancePerHour.cs" />
     <Compile Include="ThinkNode_OGAMXBChancePerHour_Constant.cs" />

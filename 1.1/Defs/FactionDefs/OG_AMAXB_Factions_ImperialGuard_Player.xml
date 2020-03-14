@@ -23,6 +23,11 @@
     <backstoryFilters>
       <li>
         <categories>
+          <li>Imperium_Standard</li>
+        </categories>
+      </li>
+      <li>
+        <categories>
           <li>Offworld</li>
           <li>Pirate</li>
         </categories>
@@ -43,6 +48,7 @@
     </apparelStuffFilter>
 				<modExtensions>
 				  <li Class="AdeptusMechanicus.FactionDefExtension">
+					<!--
 					<ForcedTraits>
 						<li>
 							<def>Bloodlust</def>
@@ -50,6 +56,7 @@
 							<Chance>1</Chance>
 						</li>
 					</ForcedTraits>
+					-->
 				  </li>
 				</modExtensions>
   </FactionDef>

@@ -123,4 +123,18 @@ you have my full permission to rebalance/patch/translate this mod, just please l
 Problems? Questions? Comments? Got something youd like to see added to the mod?
 [url=https://discord.gg/fR5cA7b/]Join us on Discord[/url]
 		</description>
+    <modDependencies>
+      <li>
+        <packageId>Ogliss.AdMech.Armoury</packageId>
+        <displayName>Adeptus Mechanicus: Armoury R1.1</displayName>
+        <steamWorkshopUrl>steam://url/CommunityFilePage/1541438614</steamWorkshopUrl>
+        <downloadUrl>https://github.com/Ogliss/AdMechArmoury</downloadUrl>
+      </li>
+    </modDependencies>
+  <loadBefore>
+  
+  </loadBefore>
+  <loadAfter>
+    <li>Ogliss.AdMech.Armoury</li>
+  </loadAfter>
 </ModMetaData>

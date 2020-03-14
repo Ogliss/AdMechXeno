@@ -24,6 +24,11 @@
     <backstoryFilters>
       <li>
         <categories>
+          <li>Imperium_Standard</li>
+        </categories>
+      </li>
+      <li>
+        <categories>
           <li>Offworld</li>
           <li>Pirate</li>
         </categories>

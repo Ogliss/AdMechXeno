@@ -40,6 +40,21 @@
         <li>Synthread</li>
       </thingDefs>
     </apparelStuffFilter>
+		<modExtensions>
+		  <li Class="AdeptusMechanicus.FactionDefExtension">
+				<ForcedTraits>
+					<li>
+						<def>Transhumanist</def>
+						<degree>0</degree>
+						<Chance>1</Chance>
+						<replaceiffull>True</replaceiffull>
+					</li>
+				</ForcedTraits>
+				<hediffGivers>
+					<li>OG_Mechanicus_HediffSet</li>
+				</hediffGivers>
+		  </li>
+		</modExtensions>
   </FactionDef>
   
 </Defs>
