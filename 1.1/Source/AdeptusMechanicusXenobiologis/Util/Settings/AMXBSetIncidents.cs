@@ -15,7 +15,7 @@ namespace AdeptusMechanicus
             {
                 if (incidentDef == OGNecronDefOf.OGN_MonolithAppears)
                 {
-                    if (SettingsHelper.XBlatest.AllowNecronMonolith)
+                    if (SettingsHelper.latest.AllowNecronMonolith)
                     {
                         incidentDef.baseChance = 0.1f;
                     }
@@ -26,7 +26,7 @@ namespace AdeptusMechanicus
                 }
                 if (incidentDef == OGChaosDeamonDefOf.OG_Chaos_Deamon_Warpstorm_Deamonic)
                 {
-                    if (SettingsHelper.XBlatest.AllowWarpstorm)
+                    if (SettingsHelper.latest.AllowWarpstorm)
                     {
                         incidentDef.baseChance = 0.1f;
                     }
@@ -37,7 +37,7 @@ namespace AdeptusMechanicus
                 }
                 if (incidentDef == OGChaosDeamonDefOf.OG_Chaos_Deamon_Deamonic_Incursion)
                 {
-                    if (SettingsHelper.XBlatest.AllowChaosDeamonicIncursion)
+                    if (SettingsHelper.latest.AllowChaosDeamonicIncursion)
                     {
                         incidentDef.baseChance = 0.1f;
                     }
@@ -48,7 +48,7 @@ namespace AdeptusMechanicus
                 }
                 if (incidentDef == OGChaosDeamonDefOf.OG_Chaos_Deamon_Daemonic_Infestation)
                 {
-                    if (SettingsHelper.XBlatest.AllowChaosDeamonicInfestation)
+                    if (SettingsHelper.latest.AllowChaosDeamonicInfestation)
                     {
                         incidentDef.baseChance = 0.1f;
                     }
@@ -59,7 +59,7 @@ namespace AdeptusMechanicus
                 }
                 if (incidentDef == OGOrkDefOf.OG_Ork_Rok_Crash)
                 {
-                    if (SettingsHelper.XBlatest.AllowOrkRok)
+                    if (SettingsHelper.latest.AllowOrkRok)
                     {
                         incidentDef.baseChance = 0.1f;
                     }

@@ -40,7 +40,7 @@
     <Compile Include="Harmony\Patches\AMXB_Pawn_GetGizmos_NecronComps_Patch.cs" />
     <Compile Include="Harmony\Patches\AMXB_SettlementDefeatUtility_IsDefeated_Patch.cs" />
     <Compile Include="Harmony\Patches\AMXB_Page_ScenarioLister_ScenariosInCategory_Patch.cs" />
-    <Compile Include="Harmony\Patches\AMXB_AMAMod_ModOptions_Patches.cs" />
+    <Compile Include="Util\Settings\AMXB_AMAMod_ModOptions_Patches.cs" />
     <Compile Include="Harmony\Patches\AMXB_Pawn_AnythingToStrip_Necron_Patch.cs" />
     <Compile Include="Harmony\Patches\AMXB_Pawn_HealthTracker_MakeDowned_Necron_Patch.cs" />
     <Compile Include="Racial\AdeptusMechanicus\OGAdeptusMechanicusDefOf.cs" />
@@ -64,8 +64,6 @@
     <Compile Include="Util\Class1.cs" />
     <Compile Include="Util\NPCWithProgressBarStaticUtil.cs" />
     <Compile Include="Util\OGCommonDefOf.cs" />
-    <Compile Include="Util\Settings\SettingsHelper.cs" />
-    <Compile Include="Util\Settings\AMXBMod.cs" />
     <None Include="Util\DamageWorker_WarpFlameNoCamShake.cs.bak" />
     <None Include="Util\WarpSpark.cs.bak" />
     <Compile Include="Racial\Chaos\CompChaosDeamonOG.cs" />
@@ -90,15 +88,12 @@
     <Compile Include="Racial\Kroot\OGKrootDefOf.cs" />
     <Compile Include="Racial\Orkz\OGOrkDefOf.cs" />
     <Compile Include="Racial\Tau\OGTauDefOf.cs" />
-    <Compile Include="Util\Settings\AMXBSettings.cs" />
     <Compile Include="Util\Settings\AMXBSetIncidents.cs" />
     <Compile Include="Util\Settings\AMXBMain.cs" />
-    <Compile Include="Util\Settings\SettingsRef.cs" />
     <None Include="Racial\Necron\OGNecronModification.cs - Copy.bak" />
     <Compile Include="Util\OG_AMXB_CorpseModification.cs" />
     <Compile Include="Racial\Necron\NecronHediffUtility.cs" />
     <Compile Include="Racial\Necron\CompGlowerNecron.cs" />
-    <Compile Include="BodypartUtility.cs" />
     <Compile Include="Hediff_RegeneratingPart.cs" />
     <Compile Include="ThinkNode_OGAMXBChancePerHour.cs" />
     <Compile Include="ThinkNode_OGAMXBChancePerHour_Constant.cs" />

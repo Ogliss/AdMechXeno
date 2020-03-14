@@ -21,12 +21,14 @@
     </startingGoodwill>
 	<factionNameMaker>NamerOGIGFactionCadian</factionNameMaker>
     <backstoryFilters>
-      <li>
-        <categories>
-          <li>Offworld</li>
-          <li>Pirate</li>
-        </categories>
-      </li>
+		<!--
+		<li>
+			<categories>
+				<li>Imperium_Cadian</li>
+			</categories>
+			<commonality>0.95</commonality>
+		</li>
+		-->
     </backstoryFilters>
 		<hairTags>
 			<li>Urban</li>

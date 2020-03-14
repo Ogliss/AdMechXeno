@@ -21,63 +21,63 @@ namespace AdeptusMechanicus
                 {
                     if ((scenDef.defName.Contains("OG_Astartes_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowAdeptusAstartes)
+                        if (SettingsHelper.latest.AllowAdeptusAstartes)
                         {
                             yield return scenDef.scenario;
                         }
                     }
                     else if ((scenDef.defName.Contains("OG_Mechanicus_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowAdeptusMechanicus)
+                        if (SettingsHelper.latest.AllowAdeptusMechanicus)
                         {
                             yield return scenDef.scenario;
                         }
                     }
                     else if ((scenDef.defName.Contains("OG_Militarum_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowAdeptusMilitarum)
+                        if (SettingsHelper.latest.AllowAdeptusMilitarum)
                         {
                             yield return scenDef.scenario;
                         }
                     }
                     else if ((scenDef.defName.Contains("OG_Sororitas_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowAdeptusSororitas)
+                        if (SettingsHelper.latest.AllowAdeptusSororitas)
                         {
                             yield return scenDef.scenario;
                         }
                     }
                     else if ((scenDef.defName.Contains("OG_Choas_Deamons_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowChaosDeamons)
+                        if (SettingsHelper.latest.AllowChaosDeamons)
                         {
                             yield return scenDef.scenario;
                         }
                     }
                     else if ((scenDef.defName.Contains("OG_Choas_Guard_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowChaosGuard)
+                        if (SettingsHelper.latest.AllowChaosGuard)
                         {
                             yield return scenDef.scenario;
                         }
                     }
                     else if ((scenDef.defName.Contains("OG_Choas_Marine_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowChaosMarine)
+                        if (SettingsHelper.latest.AllowChaosMarine)
                         {
                             yield return scenDef.scenario;
                         }
                     }
                     else if ((scenDef.defName.Contains("OG_Choas_Mechanicus_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowChaosMechanicus)
+                        if (SettingsHelper.latest.AllowChaosMechanicus)
                         {
                             yield return scenDef.scenario;
                         }
                     }
                     else if ((scenDef.defName.Contains("OG_Dark_Eldar_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowDarkEldar)
+                        if (SettingsHelper.latest.AllowDarkEldar)
                         {
                             yield return scenDef.scenario;
                         }
@@ -86,21 +86,21 @@ namespace AdeptusMechanicus
                     {
                         if ((scenDef.defName.Contains("Craftworld")))
                         {
-                            if (SettingsHelper.XBlatest.AllowEldarCraftworld)
+                            if (SettingsHelper.latest.AllowEldarCraftworld)
                             {
                                 yield return scenDef.scenario;
                             }
                         }
                         if ((scenDef.defName.Contains("Exodite")))
                         {
-                            if (SettingsHelper.XBlatest.AllowEldarExodite)
+                            if (SettingsHelper.latest.AllowEldarExodite)
                             {
                                 yield return scenDef.scenario;
                             }
                         }
                         if ((scenDef.defName.Contains("Harlequinn")))
                         {
-                            if (SettingsHelper.XBlatest.AllowEldarHarlequinn)
+                            if (SettingsHelper.latest.AllowEldarHarlequinn)
                             {
                                 yield return scenDef.scenario;
                             }
@@ -108,21 +108,21 @@ namespace AdeptusMechanicus
                     }
                     else if ((scenDef.defName.Contains("OG_Tau_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowTau)
+                        if (SettingsHelper.latest.AllowTau)
                         {
                             yield return scenDef.scenario;
                         }
                     }
                     else if ((scenDef.defName.Contains("OG_Kroot_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowKroot)
+                        if (SettingsHelper.latest.AllowKroot)
                         {
                             yield return scenDef.scenario;
                         }
                     }
                     else if ((scenDef.defName.Contains("OG_Vespid_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowVespidAuxiliaries)
+                        if (SettingsHelper.latest.AllowVespidAuxiliaries)
                         {
                             yield return scenDef.scenario;
                         }
@@ -131,14 +131,14 @@ namespace AdeptusMechanicus
                     {
                         if ((scenDef.defName.Contains("Tek")))
                         {
-                            if (SettingsHelper.XBlatest.AllowOrkTek)
+                            if (SettingsHelper.latest.AllowOrkTek)
                             {
                                 yield return scenDef.scenario;
                             }
                         }
                         if ((scenDef.defName.Contains("Feral")))
                         {
-                            if (SettingsHelper.XBlatest.AllowOrkFeral)
+                            if (SettingsHelper.latest.AllowOrkFeral)
                             {
                                 yield return scenDef.scenario;
                             }
@@ -158,63 +158,63 @@ namespace AdeptusMechanicus
                 {
                     if ((scenDef.name.Contains("OG_Astartes_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowAdeptusAstartes)
+                        if (SettingsHelper.latest.AllowAdeptusAstartes)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Mechanicus_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowAdeptusMechanicus)
+                        if (SettingsHelper.latest.AllowAdeptusMechanicus)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Militarum_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowAdeptusMilitarum)
+                        if (SettingsHelper.latest.AllowAdeptusMilitarum)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Sororitas_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowAdeptusSororitas)
+                        if (SettingsHelper.latest.AllowAdeptusSororitas)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Choas_Deamons_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowChaosDeamons)
+                        if (SettingsHelper.latest.AllowChaosDeamons)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Choas_Guard_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowChaosGuard)
+                        if (SettingsHelper.latest.AllowChaosGuard)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Choas_Marine_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowChaosMarine)
+                        if (SettingsHelper.latest.AllowChaosMarine)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Choas_Mechanicus_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowChaosMechanicus)
+                        if (SettingsHelper.latest.AllowChaosMechanicus)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Dark_Eldar_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowDarkEldar)
+                        if (SettingsHelper.latest.AllowDarkEldar)
                         {
                             yield return scenDef;
                         }
@@ -223,21 +223,21 @@ namespace AdeptusMechanicus
                     {
                         if ((scenDef.name.Contains("Craftworld")))
                         {
-                            if (SettingsHelper.XBlatest.AllowEldarCraftworld)
+                            if (SettingsHelper.latest.AllowEldarCraftworld)
                             {
                                 yield return scenDef;
                             }
                         }
                         if ((scenDef.name.Contains("Exodite")))
                         {
-                            if (SettingsHelper.XBlatest.AllowEldarExodite)
+                            if (SettingsHelper.latest.AllowEldarExodite)
                             {
                                 yield return scenDef;
                             }
                         }
                         if ((scenDef.name.Contains("Harlequinn")))
                         {
-                            if (SettingsHelper.XBlatest.AllowEldarHarlequinn)
+                            if (SettingsHelper.latest.AllowEldarHarlequinn)
                             {
                                 yield return scenDef;
                             }
@@ -245,21 +245,21 @@ namespace AdeptusMechanicus
                     }
                     else if ((scenDef.name.Contains("OG_Tau_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowTau)
+                        if (SettingsHelper.latest.AllowTau)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Kroot_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowKroot)
+                        if (SettingsHelper.latest.AllowKroot)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Vespid_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowVespidAuxiliaries)
+                        if (SettingsHelper.latest.AllowVespidAuxiliaries)
                         {
                             yield return scenDef;
                         }
@@ -268,14 +268,14 @@ namespace AdeptusMechanicus
                     {
                         if ((scenDef.name.Contains("Tek")))
                         {
-                            if (SettingsHelper.XBlatest.AllowOrkTek)
+                            if (SettingsHelper.latest.AllowOrkTek)
                             {
                                 yield return scenDef;
                             }
                         }
                         if ((scenDef.name.Contains("Feral")))
                         {
-                            if (SettingsHelper.XBlatest.AllowOrkFeral)
+                            if (SettingsHelper.latest.AllowOrkFeral)
                             {
                                 yield return scenDef;
                             }
@@ -294,63 +294,63 @@ namespace AdeptusMechanicus
                 {
                     if ((scenDef.name.Contains("OG_Astartes_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowAdeptusAstartes)
+                        if (SettingsHelper.latest.AllowAdeptusAstartes)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Mechanicus_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowAdeptusMechanicus)
+                        if (SettingsHelper.latest.AllowAdeptusMechanicus)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Militarum_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowAdeptusMilitarum)
+                        if (SettingsHelper.latest.AllowAdeptusMilitarum)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Sororitas_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowAdeptusSororitas)
+                        if (SettingsHelper.latest.AllowAdeptusSororitas)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Choas_Deamons_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowChaosDeamons)
+                        if (SettingsHelper.latest.AllowChaosDeamons)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Choas_Guard_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowChaosGuard)
+                        if (SettingsHelper.latest.AllowChaosGuard)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Choas_Marine_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowChaosMarine)
+                        if (SettingsHelper.latest.AllowChaosMarine)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Choas_Mechanicus_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowChaosMechanicus)
+                        if (SettingsHelper.latest.AllowChaosMechanicus)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Dark_Eldar_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowDarkEldar)
+                        if (SettingsHelper.latest.AllowDarkEldar)
                         {
                             yield return scenDef;
                         }
@@ -359,21 +359,21 @@ namespace AdeptusMechanicus
                     {
                         if ((scenDef.name.Contains("Craftworld")))
                         {
-                            if (SettingsHelper.XBlatest.AllowEldarCraftworld)
+                            if (SettingsHelper.latest.AllowEldarCraftworld)
                             {
                                 yield return scenDef;
                             }
                         }
                         if ((scenDef.name.Contains("Exodite")))
                         {
-                            if (SettingsHelper.XBlatest.AllowEldarExodite)
+                            if (SettingsHelper.latest.AllowEldarExodite)
                             {
                                 yield return scenDef;
                             }
                         }
                         if ((scenDef.name.Contains("Harlequinn")))
                         {
-                            if (SettingsHelper.XBlatest.AllowEldarHarlequinn)
+                            if (SettingsHelper.latest.AllowEldarHarlequinn)
                             {
                                 yield return scenDef;
                             }
@@ -381,21 +381,21 @@ namespace AdeptusMechanicus
                     }
                     else if ((scenDef.name.Contains("OG_Tau_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowTau)
+                        if (SettingsHelper.latest.AllowTau)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Kroot_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowKroot)
+                        if (SettingsHelper.latest.AllowKroot)
                         {
                             yield return scenDef;
                         }
                     }
                     else if ((scenDef.name.Contains("OG_Vespid_")))
                     {
-                        if (SettingsHelper.XBlatest.AllowVespidAuxiliaries)
+                        if (SettingsHelper.latest.AllowVespidAuxiliaries)
                         {
                             yield return scenDef;
                         }
@@ -404,14 +404,14 @@ namespace AdeptusMechanicus
                     {
                         if ((scenDef.name.Contains("Tek")))
                         {
-                            if (SettingsHelper.XBlatest.AllowOrkTek)
+                            if (SettingsHelper.latest.AllowOrkTek)
                             {
                                 yield return scenDef;
                             }
                         }
                         if ((scenDef.name.Contains("Feral")))
                         {
-                            if (SettingsHelper.XBlatest.AllowOrkFeral)
+                            if (SettingsHelper.latest.AllowOrkFeral)
                             {
                                 yield return scenDef;
                             }
