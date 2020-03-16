@@ -6,14 +6,12 @@
 	Despite their boundless power, the heart of their civilisation was torn out by this catastrophe of their own making, forcing the surviving Aeldari, now calling themselves "Eldar," to flee upon gigantic, continent-size starships called Craftworlds. Now they cling to survival by a thread, fighting the horrors of the galaxy with ritualised discipline and consummate skill.</description>
     <pawnSingular>aeldar</pawnSingular>
     <pawnsPlural>aeldari</pawnsPlural>
-    <basicMemberKind>OG_Eldar_Guardian</basicMemberKind>
     <listOrderPriority>15</listOrderPriority>
     <requiredCountAtGameStart>1</requiredCountAtGameStart>
     <hidden>true</hidden>
     <canMakeRandomly>true</canMakeRandomly>
     <canSiege>false</canSiege>
     <canStageAttacks>true</canStageAttacks>
-    <leaderTitle>Farseer</leaderTitle>
     <colorSpectrum>
       <li>(0.35, 0.35, 0)</li>
       <li>(0.4, 0.2, 0)</li>
@@ -41,6 +39,24 @@
         <li>(100000, 10000)</li>
       </points>
     </maxPawnCostPerTotalPointsCurve>
+    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
+    <expandingIconTexture>Icons/Icon_Eldar</expandingIconTexture>
+	<modExtensions>
+	  <li Class="AdeptusMechanicus.FactionDefExtension">
+		  <!--
+		  <ActiveDropPod>OG_Active_Mycetic_Spore</ActiveDropPod>
+		  <DropPodIncoming>OG_Mycetic_Spore_Incoming</DropPodIncoming>
+		  -->
+		  <DeepStrikeChance>0.5</DeepStrikeChance>
+	  </li>
+	</modExtensions>
+  </FactionDef>
+
+  <FactionDef ParentName="OG_Eldar_Faction_Base">
+    <defName>OG_Eldar_Craftworld_Faction</defName>
+	<label>craftworld eldar strike force</label>
+    <basicMemberKind>OG_Eldar_Guardian</basicMemberKind>
+    <leaderTitle>Farseer</leaderTitle>
     <pawnGroupMakers>
       <li>
 				<!-- Normal fights, ranged with melee mix-ins -->
@@ -99,7 +115,6 @@
           <OG_Eldar_DireAvenger>8</OG_Eldar_DireAvenger>
           <OG_Eldar_Ranger>5</OG_Eldar_Ranger>
           <OG_Eldar_GuardianSupport>10</OG_Eldar_GuardianSupport>
-          <OG_Eldar_Warlock>1</OG_Eldar_Warlock>
           <OG_Eldar_Wraithguard>10</OG_Eldar_Wraithguard>
           <OG_Eldar_Farseer>1</OG_Eldar_Farseer>
         </options>
@@ -135,22 +150,6 @@
         </options>
       </li>
     </pawnGroupMakers>
-    <homeIconPath>World/WorldObjects/DefaultSettlement</homeIconPath>
-    <expandingIconTexture>Icons/Icon_Eldar</expandingIconTexture>
-	<modExtensions>
-	  <li Class="AdeptusMechanicus.FactionDefExtension">
-		  <!--
-		  <ActiveDropPod>OG_Active_Mycetic_Spore</ActiveDropPod>
-		  <DropPodIncoming>OG_Mycetic_Spore_Incoming</DropPodIncoming>
-		  -->
-		  <DeepStrikeChance>0.5</DeepStrikeChance>
-	  </li>
-	</modExtensions>
-  </FactionDef>
-
-  <FactionDef ParentName="OG_Eldar_Faction_Base">
-    <defName>OG_Eldar_Craftworld_Faction</defName>
-	<label>craftworld eldar strike force</label>
 	<!--
     <startingGoodwill>
       <min>0</min>
