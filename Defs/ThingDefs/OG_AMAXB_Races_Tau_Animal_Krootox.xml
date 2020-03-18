@@ -124,7 +124,7 @@
         <label>Kroot Ox calf</label>
         <labelPlural>Kroot Ox calves</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Animals/KrootOx/KrootOx</texPath>
+          <texPath>Things/Pawn/Animals/KrootOx/KrootOx</texPath>
           <drawSize>1.5</drawSize>
           <shadowData>
             <volume>(0.4, 0.3, 0.3)</volume>
@@ -138,7 +138,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Animals/KrootOx/KrootOx</texPath>
+          <texPath>Things/Pawn/Animals/KrootOx/KrootOx</texPath>
           <drawSize>2.0</drawSize>
           <shadowData>
             <volume>(0.6, 0.45, 0.45)</volume>
@@ -152,7 +152,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Animals/KrootOx/KrootOx</texPath>
+          <texPath>Things/Pawn/Animals/KrootOx/KrootOx</texPath>
           <drawSize>2.5</drawSize>
           <shadowData>
             <volume>(0.8, 0.6, 0.6)</volume>

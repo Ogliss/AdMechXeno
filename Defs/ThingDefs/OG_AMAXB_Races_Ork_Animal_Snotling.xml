@@ -153,7 +153,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Animals/Snotling/Snotling</texPath>
+          <texPath>Things/Pawn/Animals/Snotling/Snotling</texPath>
           <drawSize>1.0</drawSize>
           <color>(28,121,62)</color>
           <shaderType>CutoutComplex</shaderType>

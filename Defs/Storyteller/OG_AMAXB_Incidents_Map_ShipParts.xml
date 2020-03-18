@@ -53,7 +53,7 @@
   </IncidentDef>
   
   <IncidentDef>
-    <defName>OG_SpaceHulkPartCrash</defName>
+    <defName>OG_OG_Space_Hulk_Part_Crash</defName>
     <label>Space hulk part impact</label>
     <targetTags>
       <li>Map_PlayerHome</li>

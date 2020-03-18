@@ -144,7 +144,7 @@
         <label>kroothound pup</label>
         <labelPlural>kroothound pups</labelPlural>
         <bodyGraphicData>
-          <texPath>Things/Animals/KrootHound/Hound_Kroot</texPath>
+          <texPath>Things/Pawn/Animals/KrootHound/Hound_Kroot</texPath>
           <shaderType>CutoutComplex</shaderType>
           <drawSize>0.75</drawSize>
           <color>(96,172,70)</color>
@@ -156,7 +156,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Animals/KrootHound/Hound_Kroot</texPath>
+          <texPath>Things/Pawn/Animals/KrootHound/Hound_Kroot</texPath>
           <shaderType>CutoutComplex</shaderType>
           <drawSize>1</drawSize>
           <color>(96,172,70)</color>
@@ -172,7 +172,7 @@
       </li>
       <li>
         <bodyGraphicData>
-          <texPath>Things/Animals/KrootHound/Hound_Kroot</texPath>
+          <texPath>Things/Pawn/Animals/KrootHound/Hound_Kroot</texPath>
           <shaderType>CutoutComplex</shaderType>
           <drawSize>2</drawSize>
           <color>(96,172,70)</color>

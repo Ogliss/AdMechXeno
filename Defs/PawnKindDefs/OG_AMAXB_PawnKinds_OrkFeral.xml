@@ -60,7 +60,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Ork/OrkGrot</texPath>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkGrot</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1</drawSize>
 					<color>(74,88,26)</color>
@@ -91,7 +91,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Ork/OrkGrot</texPath>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkGrot</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1</drawSize>
 					<color>(74,88,26)</color>
@@ -121,7 +121,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Ork/OrkBoy</texPath>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkBoy</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>2</drawSize>
 					<color>(74,88,26)</color>
@@ -153,7 +153,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Ork/OrkBoy</texPath>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkBoy</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>2</drawSize>
 					<color>(74,88,26)</color>
@@ -184,7 +184,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Ork/OrkBoyEavy</texPath>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkBoyEavy</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>2</drawSize>
 					<color>(74,88,26)</color>
@@ -216,7 +216,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Ork/OrkNob</texPath>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkNob</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>2</drawSize>
 					<color>(74,88,26)</color>
@@ -253,7 +253,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Ork/OrkNob</texPath>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkNob</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>2</drawSize>
 					<color>(74,88,26)</color>
@@ -284,7 +284,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Ork/OrkNobEavy</texPath>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkNobEavy</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>2</drawSize>
 					<color>(74,88,26)</color>
@@ -317,7 +317,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Ork/OrkWarboss</texPath>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkWarboss</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>2</drawSize>
 					<color>(74,88,26)</color>

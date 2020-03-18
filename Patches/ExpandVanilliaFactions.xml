@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 	<!-- Pirate Faction Expansion: Adds additional Pirate units -->
+	
 	<Operation Class="PatchOperationSequence">
 	<success>Always</success>
 		<operations>		
@@ -8,6 +9,7 @@
 			<li Class="PatchOperationTest">
 				<xpath>/Defs/FactionDef[defName = "Pirate"]</xpath>
 			</li>
+			<!--
 			<li Class="PatchOperationAdd">
 				<xpath>/Defs/FactionDef[defName = "Pirate"]/pawnGroupMakers/li/options</xpath>
 					<value>
@@ -22,6 +24,8 @@
 						  <OG_Chaos_Deamon_Lessar_Screamer>3</OG_Chaos_Deamon_Lessar_Screamer>
 					</value>
 			</li>	
+			-->
 		</operations>	
 	</Operation>
+	
 </Patch>

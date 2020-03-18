@@ -1,6 +1,8 @@
 ﻿using Verse;
 using System.Reflection;
 using HarmonyLib;
+using System.Linq;
+using System;
 
 namespace AdeptusMechanicus
 {
@@ -13,6 +15,9 @@ namespace AdeptusMechanicus
             var harmony = new Harmony("com.ogliss.rimworld.mod.adeptus.xenobiologis");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
 
+
+
+            if (Prefs.DevMode) Log.Message(string.Format("Adeptus Mecanicus: Xenobiologis: successfully completed {0} harmony patches.", harmony.GetPatchedMethods().Select(new Func<MethodBase, Patches>(Harmony.GetPatchInfo)).SelectMany((Patches p) => p.Prefixes.Concat(p.Postfixes).Concat(p.Transpilers)).Count((Patch p) => p.owner.Contains(harmony.Id))), false);
         }
     }
     // 
