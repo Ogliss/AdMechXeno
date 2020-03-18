@@ -20,6 +20,7 @@
     <factionNameMaker>NamerFactionOutlander</factionNameMaker>
     <techLevel>Ultra</techLevel>
     <backstoryCategories>
+		<li>Imperium_Standard</li>
 		<li>Outlander</li>
 		<li>Raider</li>
   	</backstoryCategories>

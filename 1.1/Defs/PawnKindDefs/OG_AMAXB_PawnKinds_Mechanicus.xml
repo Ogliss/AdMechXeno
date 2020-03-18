@@ -242,7 +242,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Mechanicus/AdeptusMechanicusSicarian</texPath>
+          <texPath>Things/Pawn/ToolUser/Mechanicus/AdeptusMechanicusSicarian</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.25</drawSize>
           <shadowData>
@@ -271,7 +271,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Mechanicus/AdeptusMechanicusSicarian</texPath>
+          <texPath>Things/Pawn/ToolUser/Mechanicus/AdeptusMechanicusSicarian</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.5</drawSize>
           <shadowData>

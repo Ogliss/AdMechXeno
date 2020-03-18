@@ -50,7 +50,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Eldar/Farseer</texPath>
+					<texPath>Things/Pawn/ToolUser/Eldar/Farseer</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(255,255,209)</color>
@@ -85,7 +85,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Eldar/Farseer</texPath>
+					<texPath>Things/Pawn/ToolUser/Eldar/Farseer</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(255,255,209)</color>
@@ -121,7 +121,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Eldar/Warlock</texPath>
+					<texPath>Things/Pawn/ToolUser/Eldar/Warlock</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(255,255,209)</color>
@@ -157,7 +157,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Eldar/Guardian</texPath>
+					<texPath>Things/Pawn/ToolUser/Eldar/Guardian</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(255,255,209)</color>
@@ -193,7 +193,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Eldar/Guardian</texPath>
+					<texPath>Things/Pawn/ToolUser/Eldar/Guardian</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(255,255,209)</color>
@@ -230,7 +230,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Eldar/Guardian</texPath>
+					<texPath>Things/Pawn/ToolUser/Eldar/Guardian</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(255,255,209)</color>
@@ -267,7 +267,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Eldar/DireAvenger</texPath>
+					<texPath>Things/Pawn/ToolUser/Eldar/DireAvenger</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(49,100,157)</color>
@@ -302,7 +302,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Eldar/DireAvenger</texPath>
+					<texPath>Things/Pawn/ToolUser/Eldar/DireAvenger</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(49,100,157)</color>
@@ -339,7 +339,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Eldar/HowlingBanshee</texPath>
+					<texPath>Things/Pawn/ToolUser/Eldar/HowlingBanshee</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(255,255,209)</color>
@@ -376,7 +376,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Eldar/HowlingBanshee</texPath>
+					<texPath>Things/Pawn/ToolUser/Eldar/HowlingBanshee</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(255,255,209)</color>
@@ -415,7 +415,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Eldar/Ranger</texPath>
+					<texPath>Things/Pawn/ToolUser/Eldar/Ranger</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(255,255,209)</color>

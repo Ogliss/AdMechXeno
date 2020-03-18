@@ -17,7 +17,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Necron/Warrior</texPath>
+          <texPath>Things/Pawn/ToolUser/Necron/Warrior</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <color>(205,205,205)</color>
           <drawSize>1.75</drawSize>
@@ -46,7 +46,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Necron/FlayedOne</texPath>
+          <texPath>Things/Pawn/ToolUser/Necron/FlayedOne</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <color>(205,205,205)</color>
           <drawSize>1.65</drawSize>
@@ -80,7 +80,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Necron/Wraith</texPath>
+          <texPath>Things/Pawn/ToolUser/Necron/Wraith</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <color>(205,205,205)</color>
           <drawSize>1.75</drawSize>
@@ -110,7 +110,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Necron/Immortal</texPath>
+          <texPath>Things/Pawn/ToolUser/Necron/Immortal</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <color>(205,205,205)</color>
           <drawSize>1.85</drawSize>
@@ -145,7 +145,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Necron/Lord</texPath>
+          <texPath>Things/Pawn/ToolUser/Necron/Lord</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <color>(205,205,205)</color>
           <drawSize>1.75</drawSize>
@@ -173,7 +173,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Necron/Destroyer</texPath>
+          <texPath>Things/Pawn/ToolUser/Necron/Destroyer</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <color>(205,205,205)</color>
           <drawSize>2</drawSize>
@@ -203,7 +203,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Necron/Destroyer</texPath>
+          <texPath>Things/Pawn/ToolUser/Necron/Destroyer</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <color>(205,205,205)</color>
           <drawSize>2</drawSize>
@@ -231,7 +231,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Necron/ScarabSwarm</texPath>
+          <texPath>Things/Pawn/ToolUser/Necron/ScarabSwarm</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <color>(205,205,205)</color>
           <drawSize>1.0</drawSize>
@@ -258,7 +258,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Necron/TombSpyder</texPath>
+          <texPath>Things/Pawn/ToolUser/Necron/TombSpyder</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <color>(205,205,205)</color>
           <drawSize>3</drawSize>

@@ -17,7 +17,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Tyranid/Tyranid_Ripper</texPath>
+          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Ripper</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.50</drawSize>
           <shadowData>
@@ -47,7 +47,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Tyranid/Tyranid_Hormagaunt</texPath>
+          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Hormagaunt</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>2</drawSize>
           <shadowData>
@@ -82,7 +82,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Tyranid/Tyranid_Termagant</texPath>
+          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Termagant</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>2</drawSize>
           <shadowData>
@@ -110,7 +110,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Tyranid/Tyranid_Genestealer</texPath>
+          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Genestealer</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>2</drawSize>
           <shadowData>
@@ -140,7 +140,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Tyranid/Tyranid_Warrior</texPath>
+          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Warrior</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>2.5</drawSize>
           <shadowData>
@@ -168,7 +168,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Tyranid/Tyranid_Gargoyle</texPath>
+          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Gargoyle</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>2.0</drawSize>
           <shadowData>
@@ -201,7 +201,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Tyranid/Tyranid_Lictor</texPath>
+          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Lictor</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3.5</drawSize>
           <shadowData>
@@ -236,7 +236,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Tyranid/Tyranid_Ravener</texPath>
+          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Ravener</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>3.25</drawSize>
           <shadowData>
@@ -271,7 +271,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Tyranid/Tyranid_HiveTyrant</texPath>
+          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_HiveTyrant</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>4.0</drawSize>
           <shadowData>
@@ -300,7 +300,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Tyranid/Tyranid_Carnifex</texPath>
+          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Carnifex</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>4.5</drawSize>
           <shadowData>
@@ -328,7 +328,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Tyranid/Tyranid_Zoanthrope</texPath>
+          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Zoanthrope</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>2.25</drawSize>
           <shadowData>

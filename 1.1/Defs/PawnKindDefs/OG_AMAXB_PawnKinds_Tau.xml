@@ -114,7 +114,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Tau/Pathfinder</texPath>
+					<texPath>Things/Pawn/ToolUser/Tau/Pathfinder</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(221,160,99)</color>
@@ -155,7 +155,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Tau/PathfinderSgt</texPath>
+					<texPath>Things/Pawn/ToolUser/Tau/PathfinderSgt</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(221,160,99)</color>
@@ -196,7 +196,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Tau/Firewarrior</texPath>
+					<texPath>Things/Pawn/ToolUser/Tau/Firewarrior</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(221,160,99)</color>
@@ -233,7 +233,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Tau/FirewarriorSgt</texPath>
+					<texPath>Things/Pawn/ToolUser/Tau/FirewarriorSgt</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(221,160,99)</color>
@@ -270,7 +270,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Tau/Ethereal</texPath>
+					<texPath>Things/Pawn/ToolUser/Tau/Ethereal</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(221,160,99)</color>
@@ -306,7 +306,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Tau/Ethereal</texPath>
+					<texPath>Things/Pawn/ToolUser/Tau/Ethereal</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(221,160,99)</color>
@@ -342,7 +342,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Pawn/Kroot/Krootwarrior</texPath>
+					<texPath>Things/Pawn/ToolUser/Kroot/Krootwarrior</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<shadowData>

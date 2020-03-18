@@ -18,7 +18,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Eldar/WraithGuard</texPath>
+          <texPath>Things/Pawn/ToolUser/Eldar/WraithGuard</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.65</drawSize>
           <color>(255,255,209)</color>
@@ -47,7 +47,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Eldar/WraithGuard</texPath>
+          <texPath>Things/Pawn/ToolUser/Eldar/WraithGuard</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.65</drawSize>
           <color>(255,255,209)</color>
@@ -78,7 +78,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Eldar/WraithLord</texPath>
+          <texPath>Things/Pawn/ToolUser/Eldar/WraithLord</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.75</drawSize>
           <shadowData>
@@ -107,7 +107,7 @@
     <lifeStages>
       <li>
         <bodyGraphicData>
-          <texPath>Pawn/Eldar/WraithLord</texPath>
+          <texPath>Things/Pawn/ToolUser/Eldar/WraithLord</texPath>
           <graphicClass>Graphic_Multi</graphicClass>
           <drawSize>1.75</drawSize>
           <shadowData>

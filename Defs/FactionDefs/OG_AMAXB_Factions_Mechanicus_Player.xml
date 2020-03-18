@@ -19,9 +19,10 @@
     <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
     <factionNameMaker>NamerFactionOutlander</factionNameMaker>
     <techLevel>Ultra</techLevel>
-		<backstoryCategories>
-			<li>Raider</li>
-		</backstoryCategories>
+    <backstoryCategories>
+		<li>Outlander</li>
+		<li>Raider</li>
+  	</backstoryCategories>
     <startingResearchTags>
       <li>ClassicStart</li>
     </startingResearchTags>

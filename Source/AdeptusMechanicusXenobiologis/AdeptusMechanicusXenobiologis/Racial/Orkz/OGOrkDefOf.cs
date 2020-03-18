@@ -14,8 +14,6 @@ namespace RimWorld
         }
 
         // Ork ThingDefs
-        public static ThingDef Alien_Ork;
-        public static ThingDef Alien_Grot;
         public static ThingDef OG_Alien_Ork;
         public static ThingDef OG_Alien_Grot;
 
