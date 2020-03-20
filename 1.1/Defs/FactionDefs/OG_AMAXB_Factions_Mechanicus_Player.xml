@@ -51,7 +51,7 @@
 					</li>
 				</ForcedTraits>
 				<hediffGivers>
-					<li>OG_Mechanicus_HediffSet</li>
+					<!--li>OG_Mechanicus_HediffSet</li-->
 				</hediffGivers>
 		  </li>
 		</modExtensions>

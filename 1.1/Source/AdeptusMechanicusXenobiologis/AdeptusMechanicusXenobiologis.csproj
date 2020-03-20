@@ -45,7 +45,6 @@
     <Compile Include="Harmony\Patches\AMXB_Pawn_HealthTracker_MakeDowned_Necron_Patch.cs" />
     <Compile Include="Racial\AdeptusMechanicus\OGAdeptusMechanicusDefOf.cs" />
     <Compile Include="AMXenoBiologisHediffDefOf.cs" />
-    <Compile Include="AstraUtil - Copy.cs" />
     <Compile Include="Racial\AdeptusMilitarum\OGAdeptusMilitarumDefOf.cs" />
     <Compile Include="Racial\Chaos\CompProperties_RegenerationOG.cs" />
     <Compile Include="Racial\Chaos\OGCDeamonUtil.cs" />
@@ -70,7 +69,6 @@
     <None Include="Util\WarpfireUtility.cs.bak" />
     <Compile Include="Racial\Chaos\DeathActionWorker_OGChaosDeamon.cs" />
     <Compile Include="Racial\Chaos\OGChaosDeamonDefOf.cs" />
-    <Compile Include="AstraUtil.cs" />
     <Compile Include="AMXenoBiologisJobDefOf.cs" />
     <Compile Include="AMXenoBiologisDutyDefOf.cs" />
     <Compile Include="Racial\Chaos\JobGiver_OGChaosDeamon_Ranged.cs" />
