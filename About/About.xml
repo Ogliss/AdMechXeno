@@ -141,6 +141,7 @@ Problems? Questions? Comments? Got something youd like to see added to the mod?
     <li>Ogliss.AdMech.Xenobiologis.Tyranids</li>
   </loadBefore>
   <loadAfter>
+    <li>erdelf.HumanoidAlienRaces</li>
     <li>Ogliss.AdMech.Armoury</li>
   </loadAfter>
 </ModMetaData>
