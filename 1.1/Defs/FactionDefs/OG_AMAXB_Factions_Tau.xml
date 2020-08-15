@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <FactionDef Name="OG_Tau_Faction_Base" Abstract="True">
+		<label>hunter cadre</label>
+    <description>The Tau, known in their own language as the T'au, are a young, humanoid and technologically-advanced intelligent race native to the Eastern Fringes of the Milky Way Galaxy who are fighting to expand their interstellar empire and extend a philosophical concept they call the "Greater Good" (Tau'va in the Tau Lexicon) to all the intelligent species of the galaxy. 
+	The Tau claim to be a peaceful race when possible, asking if others will join their cause voluntarily instead of fighting against them. However, if their peaceful overtures are refused, the Tau may well decide to conquer a planet and add it to their growing interstellar empire for the Greater Good, searing the flesh from the bones of anyone who stands against their benign intentions.</description>
+    <pawnSingular>tau</pawnSingular>
+    <pawnsPlural>tau</pawnsPlural>
+    <basicMemberKind>OG_Tau_Firewarrior</basicMemberKind>
+    <listOrderPriority>10</listOrderPriority>
+    <settlementGenerationWeight>1</settlementGenerationWeight>
+    <requiredCountAtGameStart>1</requiredCountAtGameStart>
+    <maxCountAtGameStart>5</maxCountAtGameStart>
+    <canMakeRandomly>true</canMakeRandomly>
+    <earliestRaidDays>45</earliestRaidDays>
+    <canSiege>false</canSiege>
+    <canStageAttacks>true</canStageAttacks>
+    <leaderTitle>Aun'va</leaderTitle>
+    <colorSpectrum>
+      <li>(0.35, 0.35, 0)</li>
+      <li>(0.4, 0.2, 0)</li>
+    </colorSpectrum>
+    <permanentEnemy>true</permanentEnemy>
+		<factionNameMaker>NamerOGTauFaction</factionNameMaker>
+    <settlementNameMaker>NamerOGTauBases</settlementNameMaker>
+		<techLevel>Spacer</techLevel>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Offworld</li>
+          <li>Pirate</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+		<geneticVariance>0.8</geneticVariance>
+		<hairTags>
+			<li>Punk</li>
+		</hairTags>
+    <allowedArrivalTemperatureRange>
+      <min>-40</min>
+      <max>45</max>
+    </allowedArrivalTemperatureRange>
+    <maxPawnCostPerTotalPointsCurve>
+      <points>
+        <li>(0,35)</li>
+        <li>(70, 50)</li>
+        <li>(700, 100)</li>
+        <li>(1300, 150)</li>
+        <li>(100000, 10000)</li>
+      </points>
+    </maxPawnCostPerTotalPointsCurve>
+    <pawnGroupMakers>
+      <li>
+				<!-- Normal fights, ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
+        <commonality>100</commonality>
+        <options>
+          <KindredKroothound>10</KindredKroothound>
+          <KindredKnarloc>2</KindredKnarloc>
+          <OG_Kroot_Warrior>10</OG_Kroot_Warrior>
+          <OG_Kroot_Hunter>5</OG_Kroot_Hunter>
+          <OG_Kroot_Shaper>1</OG_Kroot_Shaper>
+          <OG_Guevesa_Cadet>7</OG_Guevesa_Cadet>
+          <OG_Guevesa_Sgt>4</OG_Guevesa_Sgt>
+          <OG_Guevesa_Soldier_HW>5</OG_Guevesa_Soldier_HW>
+          <OG_Guevesa_Soldier_SW>5</OG_Guevesa_Soldier_SW>
+          <OG_Guevesa_Soldier>10</OG_Guevesa_Soldier>
+          <OG_Tau_GunDrone>10</OG_Tau_GunDrone>
+          <OG_Tau_Firewarrior>10</OG_Tau_Firewarrior>
+          <OG_Tau_Firewarrior_Sgt>1</OG_Tau_Firewarrior_Sgt>
+          <OG_Tau_Pathfinder>10</OG_Tau_Pathfinder>
+          <OG_Tau_Pathfinder_Sgt>1</OG_Tau_Pathfinder_Sgt>
+          <OG_Tau_Ethereal>1</OG_Tau_Ethereal>
+          <OG_Tau_Faction_Ethereal>0</OG_Tau_Faction_Ethereal>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, melee-only -->
+        <kindDef>Combat</kindDef>
+        <commonality>30</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <OG_Kroot_Warrior>10</OG_Kroot_Warrior>
+          <OG_Kroot_Shaper>1</OG_Kroot_Shaper>
+          <KindredKroothound>10</KindredKroothound>
+          <KindredKnarloc>2</KindredKnarloc>
+          <OG_Tau_Ethereal>1</OG_Tau_Ethereal>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, ranged only -->
+        <kindDef>Combat</kindDef>
+        <commonality>20</commonality>
+        <options>
+          <OG_Kroot_Warrior>10</OG_Kroot_Warrior>
+          <OG_Kroot_Hunter>5</OG_Kroot_Hunter>
+          <OG_Kroot_Shaper>1</OG_Kroot_Shaper>
+          <OG_Guevesa_Cadet>15</OG_Guevesa_Cadet>
+          <OG_Guevesa_Sgt>10</OG_Guevesa_Sgt>
+          <OG_Guevesa_Soldier_HW>5</OG_Guevesa_Soldier_HW>
+          <OG_Guevesa_Soldier_SW>5</OG_Guevesa_Soldier_SW>
+          <OG_Guevesa_Soldier>10</OG_Guevesa_Soldier>
+          <OG_Tau_GunDrone>15</OG_Tau_GunDrone>
+          <OG_Tau_Pathfinder>10</OG_Tau_Pathfinder>
+          <OG_Tau_Pathfinder_Sgt>1</OG_Tau_Pathfinder_Sgt>
+          <OG_Tau_Firewarrior>10</OG_Tau_Firewarrior>
+          <OG_Tau_Firewarrior_Sgt>0.5</OG_Tau_Firewarrior_Sgt>
+          <OG_Tau_Ethereal>1</OG_Tau_Ethereal>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, explosives with ranged mix-ins -->
+        <kindDef>Combat</kindDef>
+        <commonality>15</commonality>
+        <disallowedStrategies>
+          <li>Siege</li>
+        </disallowedStrategies>
+        <options>
+          <OG_Tau_GunDrone>10</OG_Tau_GunDrone>
+          <OG_Tau_Pathfinder>10</OG_Tau_Pathfinder>
+          <OG_Tau_Pathfinder_Sgt>1</OG_Tau_Pathfinder_Sgt>
+          <OG_Tau_Firewarrior>10</OG_Tau_Firewarrior>
+          <OG_Tau_Firewarrior_Sgt>1</OG_Tau_Firewarrior_Sgt>
+          <OG_Tau_Ethereal>1</OG_Tau_Ethereal>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, snipers only -->
+        <kindDef>Combat</kindDef>
+        <commonality>10</commonality>
+        <options>
+          <OG_Tau_Pathfinder>10</OG_Tau_Pathfinder>
+          <OG_Tau_Pathfinder_Sgt>1</OG_Tau_Pathfinder_Sgt>
+          <OG_Tau_Firewarrior>10</OG_Tau_Firewarrior>
+          <OG_Tau_Firewarrior_Sgt>10</OG_Tau_Firewarrior_Sgt>
+          <OG_Guevesa_Cadet>15</OG_Guevesa_Cadet>
+          <OG_Guevesa_Sgt>10</OG_Guevesa_Sgt>
+          <OG_Guevesa_Soldier_HW>5</OG_Guevesa_Soldier_HW>
+          <OG_Guevesa_Soldier_SW>5</OG_Guevesa_Soldier_SW>
+          <OG_Guevesa_Soldier>10</OG_Guevesa_Soldier>
+        </options>
+      </li>
+      <li>
+        <!-- Normal fights, drifters only (very rare) -->
+        <kindDef>Combat</kindDef>
+        <commonality>2.5</commonality>
+        <maxTotalPoints>1000</maxTotalPoints>
+        <options>
+          <OG_Tau_Pathfinder>10</OG_Tau_Pathfinder>
+          <OG_Tau_Pathfinder_Sgt>1</OG_Tau_Pathfinder_Sgt>
+          <OG_Kroot_Warrior>10</OG_Kroot_Warrior>
+          <OG_Kroot_Hunter>5</OG_Kroot_Hunter>
+          <OG_Kroot_Shaper>1</OG_Kroot_Shaper>
+          <OG_Guevesa_Cadet>15</OG_Guevesa_Cadet>
+          <OG_Guevesa_Sgt>10</OG_Guevesa_Sgt>
+          <OG_Guevesa_Soldier_HW>5</OG_Guevesa_Soldier_HW>
+          <OG_Guevesa_Soldier_SW>5</OG_Guevesa_Soldier_SW>
+          <OG_Guevesa_Soldier>10</OG_Guevesa_Soldier>
+        </options>
+      </li>
+      <li>
+				<!-- Base defense, mainly ranged with melee mix-ins -->
+				<kindDef>Settlement</kindDef>
+        <options>
+          <OG_Kroot_Warrior>10</OG_Kroot_Warrior>
+          <OG_Kroot_Hunter>5</OG_Kroot_Hunter>
+          <OG_Kroot_Shaper>1</OG_Kroot_Shaper>
+          <OG_Tau_Pathfinder>10</OG_Tau_Pathfinder>
+          <OG_Tau_Pathfinder_Sgt>1</OG_Tau_Pathfinder_Sgt>
+          <OG_Tau_Firewarrior>10</OG_Tau_Firewarrior>
+          <OG_Tau_Firewarrior_Sgt>1</OG_Tau_Firewarrior_Sgt>
+          <OG_Tau_Ethereal>1</OG_Tau_Ethereal>
+          <OG_Tau_Faction_Ethereal>0</OG_Tau_Faction_Ethereal>
+          <OG_Guevesa_Cadet>15</OG_Guevesa_Cadet>
+          <OG_Guevesa_Sgt>10</OG_Guevesa_Sgt>
+          <OG_Guevesa_Soldier_HW>5</OG_Guevesa_Soldier_HW>
+          <OG_Guevesa_Soldier_SW>5</OG_Guevesa_Soldier_SW>
+          <OG_Guevesa_Soldier>10</OG_Guevesa_Soldier>
+        </options>
+      </li>
+    </pawnGroupMakers>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+    <factionIconPath>Icons/Tau/Icon_Tau</factionIconPath>
+  </FactionDef>
+
+  <FactionDef ParentName="OG_Tau_Faction_Base">
+    <defName>OG_Tau_Faction</defName>
+  </FactionDef>
+
+</Defs>

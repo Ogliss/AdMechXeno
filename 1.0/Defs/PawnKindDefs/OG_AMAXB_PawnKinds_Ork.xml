@@ -1,0 +1,564 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Ork Pawn Base -->
+  <PawnKindDef Name="OrkBase" Abstract="True">
+    <invNutrition>2.55</invNutrition>
+		<aiAvoidCover>true</aiAvoidCover>
+    <inventoryOptions>
+      <skipChance>0.9</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>30</min>
+            <max>70</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineHerbal</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>3</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>SmokeleafLeaves</thingDef>
+          <countRange>
+            <min>0</min>
+            <max>3</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>PsychoidLeaves</thingDef>
+          <countRange>
+            <min>0</min>
+            <max>3</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>
+<!-- Ork Pawn Base -->
+
+<!-- Tek Orkz -->  
+<!-- Tek Ork Base -->  
+  <PawnKindDef Name="TekOrkBase" ParentName="OrkBase" Abstract="True">
+	<defName>TekOrkBase</defName>
+    <defaultFactionType>OG_Ork_Tek_Faction</defaultFactionType>
+    <backstoryCategories>
+	<li>Raider</li>
+	</backstoryCategories>
+    <invNutrition>2.55</invNutrition>
+		<aiAvoidCover>false</aiAvoidCover>
+		<weaponMoney>
+			<min>500</min>
+			<max>10000</max>
+		</weaponMoney>
+		<techHediffsMoney>
+			<min>1000</min>
+			<max>1500</max>
+		</techHediffsMoney>
+		<combatEnhancingDrugsCount>
+			<min>0</min>
+			<max>2</max>
+		</combatEnhancingDrugsCount>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+    <inventoryOptions>
+      <skipChance>0.9</skipChance>
+      <subOptionsChooseOne>
+        <li>
+          <thingDef>Silver</thingDef>
+          <countRange>
+            <min>30</min>
+            <max>70</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>MedicineHerbal</thingDef>
+          <countRange>
+            <min>1</min>
+            <max>3</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>SmokeleafLeaves</thingDef>
+          <countRange>
+            <min>0</min>
+            <max>3</max>
+          </countRange>
+        </li>
+        <li>
+          <thingDef>PsychoidLeaves</thingDef>
+          <countRange>
+            <min>0</min>
+            <max>3</max>
+          </countRange>
+        </li>
+      </subOptionsChooseOne>
+    </inventoryOptions>
+  </PawnKindDef>  
+<!-- Tek Ork Base -->  
+
+<!-- Tek Ork Stabba Grot --> 
+  <PawnKindDef ParentName="TekOrkBase">
+		<defName>OG_Ork_Grot_Stabba</defName>
+		<label>stabba grot</label>
+		<race>Ork_Grot</race>
+		<combatPower>20</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkGrot</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1</drawSize>
+					<color>(74,88,26)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/HumanoidDessicated</texPath>
+				<drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>OCrudeChoppa</li>
+		</weaponTags>
+	</PawnKindDef>
+<!-- Tek Ork Stabba Grot --> 
+
+<!-- Tek Ork Blasta Grot -->    
+  <PawnKindDef ParentName="TekOrkBase">
+		<defName>OG_Ork_Grot_Blasta</defName>
+		<label>blasta grot</label>
+		<race>Ork_Grot</race>
+		<combatPower>30</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkGrot</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1</drawSize>
+					<color>(74,88,26)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/HumanoidDessicated</texPath>
+				<drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>GrotBlasta</li>
+		</weaponTags>
+	</PawnKindDef>
+<!-- Tek Ork Blasta Grot -->    
+
+<!-- Tek Ork Shoota Grot -->	
+  <PawnKindDef ParentName="TekOrkBase">
+		<defName>OG_Ork_Grot_Shoota</defName>
+		<label>shoota grot</label>
+		<race>Ork_Grot</race>
+		<combatPower>45</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkGrot</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1</drawSize>
+					<color>(74,88,26)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/HumanoidDessicated</texPath>
+				<drawSize>1</drawSize>
+        </dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>OShoota</li>
+			<li>OSlugga</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>750</min>
+			<max>1000</max>
+		</weaponMoney>
+	</PawnKindDef>
+<!-- Tek Ork Shoota Grot -->	
+
+<!-- Tek Ork Slugga Boy -->    
+  <PawnKindDef ParentName="TekOrkBase">
+		<defName>OG_Ork_Boy_Slugga</defName>
+		<label>slugga boy</label>
+		<race>Ork_Boy</race>
+		<combatPower>50</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkBoy</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2</drawSize>
+					<color>(74,88,26)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/HumanoidDessicated</texPath>
+				<drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>OSlugga</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>750</min>
+			<max>1000</max>
+		</weaponMoney>
+	</PawnKindDef>
+<!-- Tek Ork Slugga Boy -->    
+
+<!-- Tek Ork Choppa Boy --> 
+  <PawnKindDef ParentName="TekOrkBase">
+		<defName>OG_Ork_Boy_Choppa</defName>
+		<label>choppa boy</label>
+		<race>Ork_Boy</race>
+		<combatPower>25</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkBoy</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2</drawSize>
+					<color>(74,88,26)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/HumanoidDessicated</texPath>
+				<drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>OChoppa</li>
+		</weaponTags>
+	</PawnKindDef>
+<!-- Tek Ork Choppa Boy --> 
+
+<!-- Tek Ork Shoota Boy -->	
+  <PawnKindDef ParentName="TekOrkBase">
+		<defName>OG_Ork_Boy_Shoota</defName>
+		<label>shoota boy</label>
+		<race>Ork_Boy</race>
+		<combatPower>75</combatPower>
+		<itemQuality>Normal</itemQuality>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkBoy</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2</drawSize>
+					<color>(74,88,26)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/HumanoidDessicated</texPath>
+				<drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>OShoota</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>1500</min>
+			<max>3000</max>
+		</weaponMoney>
+	</PawnKindDef>
+<!-- Tek Ork Shoota Boy -->	
+
+<!-- Tek Ork Eavy Shoota Boy -->
+  <PawnKindDef ParentName="TekOrkBase">
+		<defName>OG_Ork_Eavy_Boy_Shoota</defName>
+		<label>eavy shoota boy</label>
+		<race>Ork_Eavy_Boy</race>
+		<combatPower>100</combatPower>
+		<itemQuality>Normal</itemQuality>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkBoyEavy</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2</drawSize>
+					<color>(74,88,26)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/HumanoidDessicated</texPath>
+				<drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>OTwinLinkedShoota</li>
+			<li>OShoota</li>
+			<li>OBigShoota</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>1500</min>
+			<max>6000</max>
+		</weaponMoney>
+	</PawnKindDef>
+<!-- Tek Ork Eavy Shoota Boy -->
+
+<!-- Tek Ork Shoota Nob -->
+  <PawnKindDef ParentName="TekOrkBase">
+		<defName>OG_Ork_Nob_Shoota</defName>
+		<label>shoota nob</label>
+		<race>Ork_Nob</race>
+		<combatPower>200</combatPower>
+		<itemQuality>Normal</itemQuality>
+		<aiAvoidCover>true</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkNob</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2</drawSize>
+					<color>(74,88,26)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/HumanoidDessicated</texPath>
+				<drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>OBigShoota</li>
+			<li>OSnazzgun</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>4000</min>
+			<max>9000</max>
+		</weaponMoney>
+	</PawnKindDef>
+<!-- Tek Ork Shoota Nob -->
+
+<!-- Tek Ork Choppa Nob -->
+  <PawnKindDef ParentName="TekOrkBase">
+		<defName>OG_Ork_Nob_Choppa</defName>
+		<label>choppa nob</label>
+		<race>Ork_Nob</race>
+		<combatPower>150</combatPower>
+		<itemQuality>Normal</itemQuality>
+		<aiAvoidCover>true</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkNob</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2</drawSize>
+					<color>(74,88,26)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/HumanoidDessicated</texPath>
+				<drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>OBigChoppa</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>4000</min>
+			<max>9000</max>
+		</weaponMoney>
+	</PawnKindDef>
+<!-- Tek Ork Choppa Nob -->
+
+<!-- Tek Ork Eavy Shoota Nob -->
+  <PawnKindDef ParentName="TekOrkBase">
+		<defName>OG_Ork_Eavy_Nob_Shoota</defName>
+		<label>eavy shoota nob</label>
+		<race>Ork_Eavy_Nob</race>
+		<combatPower>250</combatPower>
+		<itemQuality>Superior</itemQuality>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkNobEavy</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2</drawSize>
+					<color>(74,88,26)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/HumanoidDessicated</texPath>
+				<drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>OBigShoota</li>
+			<li>OZappKannon</li>
+			<li>OPlasmaDeffgun</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>4000</min>
+			<max>9000</max>
+		</weaponMoney>
+	</PawnKindDef>
+<!-- Tek Ork Eavy Shoota Nob -->
+
+<!-- Tek Ork Warboss -->	
+  <PawnKindDef ParentName="TekOrkBase">
+		<defName>OG_Ork_Warboss</defName>
+		<label>warboss</label>
+		<race>Ork_Warboss</race>
+		<combatPower>12500</combatPower>
+		<itemQuality>Superior</itemQuality>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Ork/OrkWarboss</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2</drawSize>
+					<color>(74,88,26)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Pawn/HumanoidDessicated</texPath>
+				<drawSize>2</drawSize>
+        </dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+
+		<weaponTags>
+			<li>OBigShoota</li>
+			<li>OZappKannon</li>
+			<li>OPlasmaDeffgun</li>
+		</weaponTags>
+    <apparelTags>
+      <li>OrkFactionBoss</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>0</min>
+      <max>350</max>
+    </apparelMoney>
+		<weaponMoney>
+			<min>4000</min>
+			<max>9000</max>
+		</weaponMoney>
+	</PawnKindDef>
+<!-- Tek Ork Faction Leader -->	
+
+<!-- Tek Ork Faction Leader -->	
+  <PawnKindDef ParentName="TekOrkBase">
+		<defName>OG_Ork_Faction_Warboss</defName>
+		<label>big warboss</label>
+		<race>Ork_FactionWarboss</race>
+		<combatPower>12500</combatPower>
+		<itemQuality>Superior</itemQuality>
+		<factionLeader>true</factionLeader>
+
+		<weaponTags>
+			<li>OBigShoota</li>
+			<li>OZappKannon</li>
+			<li>OPlasmaDeffgun</li>
+		</weaponTags>
+    <apparelTags>
+      <li>OrkFactionBoss</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>0</min>
+      <max>350</max>
+    </apparelMoney>
+		<weaponMoney>
+			<min>4000</min>
+			<max>9000</max>
+		</weaponMoney>
+	</PawnKindDef>
+<!-- Tek Ork Faction Leader -->	
+
+<!-- Ork 'Umie Slavez -->
+	 <PawnKindDef>
+    <defName>Slave_OG_Ork_Human</defName>
+    <label>'umie slave</label>
+    <combatPower>30</combatPower>
+    <race>Human</race>
+    <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
+    <backstoryCategories>
+      <li>Slave</li>
+    </backstoryCategories>
+    <defaultFactionType>OG_Ork_Tek_Faction</defaultFactionType>
+    <itemQuality>Poor</itemQuality>
+    <backstoryCryptosleepCommonality>0.10</backstoryCryptosleepCommonality>
+    <isFighter>false</isFighter>
+    <chemicalAddictionChance>0.05</chemicalAddictionChance>
+    <gearHealthRange>
+      <min>0.2</min>
+      <max>0.8</max>
+    </gearHealthRange>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>0</min>
+      <max>350</max>
+    </apparelMoney>
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <techHediffsChance>0.03</techHediffsChance>
+    <techHediffsMoney>
+      <min>50</min>
+      <max>800</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Poor</li>
+    </techHediffsTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <invNutrition>1</invNutrition>
+    <invFoodDef>Pemmican</invFoodDef>
+  </PawnKindDef>
+<!-- Ork 'Umie Slavez -->	
+</Defs>

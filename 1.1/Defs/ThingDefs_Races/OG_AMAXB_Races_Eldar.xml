@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Eldar Base Abstract -->
+
+  <ThingDef ParentName="BasePawn" Name="OG_Eldar_Pawn_Base" Abstract="True">
+    <label>Eldar Race</label>
+    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+    <statBases>
+      <MarketValue>1750</MarketValue>
+      <MoveSpeed>5.61</MoveSpeed>
+      <PsychicSensitivity>+0.5</PsychicSensitivity>
+      <Flammability>1</Flammability>
+      <ComfyTemperatureMin>-60</ComfyTemperatureMin>
+      <ComfyTemperatureMax>65</ComfyTemperatureMax>
+      <LeatherAmount>25</LeatherAmount>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>7</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>22</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>ToolUser</intelligence>
+      <fleshType>OG_Flesh_Eldar</fleshType>
+      <makesFootprints>true</makesFootprints>
+      <lifeExpectancy>1500</lifeExpectancy>
+      <meatColor>(200,135,100)</meatColor>
+      <hasGenders>false</hasGenders>
+      <foodType>OmnivoreHuman</foodType>
+      <baseHungerRate>0.15</baseHungerRate>
+      <baseBodySize>1.25</baseBodySize>
+      <baseHealthScale>1</baseHealthScale>
+      <predator>true</predator>
+      <lifeStageAges>
+        <li>
+          <def>HumanlikeAdult</def>
+          <minAge>18</minAge>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <specialShadowData>
+        <volume>(0.3, 0.8, 0.4)</volume>
+        <offset>(0,0,-0.3)</offset>
+      </specialShadowData>
+      <ageGenerationCurve>
+        <points>
+          <li>(14,0)</li>
+          <li>(16,100)</li>
+          <li>(50,100)</li>
+          <li>(60,30)</li>
+          <li>(70,18)</li>
+          <li>(80,10)</li>
+          <li>(90,3)</li>
+          <li>(100,0)</li>
+        </points>
+      </ageGenerationCurve>
+      <hediffGiverSets>
+        <li>OrganicStandard</li>
+      </hediffGiverSets>
+	  <leatherDef>Leather_Eldar</leatherDef>
+      <meatLabel>eldar meat</meatLabel>
+      <body>OG_Eldar_Body</body>
+    </race>
+  </ThingDef>
+
+  <ThingDef ParentName="OG_Eldar_Pawn_Base">
+    <defName>OG_Alien_Eldar</defName>
+  </ThingDef>
+  <ThingDef ParentName="OG_Eldar_Pawn_Base">
+    <defName>Alien_Eldar</defName>
+  </ThingDef>
+
+<!-- Eldar Faction Leader -->
+  <ThingDef ParentName="OG_Eldar_Pawn_Base">
+    <defName>Eldar_FactionFarseer</defName>
+    <label>Faction Leader</label>
+    <description>A Farseer is the most potent and respected form of Eldar psyker or Seer. A Farseer was once a Warlock, but has now become lost upon the Path of the Seer forever in the same way as the Exarchs are wed eternally to the Path of the Warrior. A council of the most powerful Farseers generally governs a Craftworld. Farseers possess a wide diversity of psychic specialities with divination being the most common skill. They are most often known for using their vast psychic powers to see the possibilities of the future so that they can manipulate events to better ensure the survival of the Eldar species in the wake of the Fall.</description>
+    <statBases>
+      <MoveSpeed>6.8</MoveSpeed>
+    </statBases>
+    <race>
+      <thinkTreeMain>Humanlike</thinkTreeMain>
+      <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+      <intelligence>Humanlike</intelligence>
+      <nameCategory>HumanStandard</nameCategory>
+      <lifeExpectancy>25000</lifeExpectancy>
+      <baseHealthScale>2.5</baseHealthScale>
+	  <useMeatFrom>Alien_Eldar</useMeatFrom>
+      <hediffGiverSets>
+        <li>OGE_Farseer_Options</li>
+      </hediffGiverSets>
+    </race>
+  </ThingDef>
+
+<!-- Eldar Farseer -->
+  <ThingDef ParentName="OG_Eldar_Pawn_Base">
+    <defName>Eldar_Farseer</defName>
+    <label>farseer</label>
+    <description>A Farseer is the most potent and respected form of Eldar psyker or Seer. A Farseer was once a Warlock, but has now become lost upon the Path of the Seer forever in the same way as the Exarchs are wed eternally to the Path of the Warrior. A council of the most powerful Farseers generally governs a Craftworld. Farseers possess a wide diversity of psychic specialities with divination being the most common skill. They are most often known for using their vast psychic powers to see the possibilities of the future so that they can manipulate events to better ensure the survival of the Eldar species in the wake of the Fall.</description>
+    <statBases>
+      <ArmorRating_Blunt>0.48</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.48</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.48</ArmorRating_Heat>
+	  <ShootingAccuracyPawn>1.16</ShootingAccuracyPawn>
+      <MoveSpeed>6.8</MoveSpeed>
+    </statBases>
+    <race>
+      <lifeExpectancy>25000</lifeExpectancy>
+      <baseHealthScale>1.50</baseHealthScale>
+	  <useMeatFrom>Alien_Eldar</useMeatFrom>
+      <hediffGiverSets>
+        <li>OGE_Farseer_Options</li>
+      </hediffGiverSets>
+    </race>
+  </ThingDef>
+
+
+  <!-- Elder Warlock -->
+  <ThingDef ParentName="OG_Eldar_Pawn_Base">
+    <defName>Eldar_Warlock</defName>
+    <label>warlock</label>
+    <description>A Warlock is an Eldar Seer or psyker who previously walked the Path of the Warrior as an Aspect Warrior of the Eldar Craftworlds and now uses his potent psychic powers to help lead Eldar warhosts. Warlocks who lose themselves upon this path ultimately become Farseers. The most aggressive and warlike of all the potential variants of the Path of the Seer is that of the Warlock. Since Warlocks are Seers who once trod the Path of the Warrior, their previous experience as Aspect Warriors allows them to harness their more destructive impulses when using their psychic powers in combat. The ornate helmets worn by Warlocks in the field are kept in the shrines of the Warrior Aspects as a sign of the close link between Warlocks and their former status as Warriors. A Warlock can only attain that status by returning to the Aspect Shrine that he once belonged to and receiving his helmet from the shrine's Exarch as part of the same blood-ritual undergone by Aspect Warriors.</description>
+    <statBases>
+      <MoveSpeed>6.5</MoveSpeed>
+	  <ShootingAccuracyPawn>1.16</ShootingAccuracyPawn>
+      <ArmorRating_Blunt>0.48</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.48</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.48</ArmorRating_Heat>
+    </statBases>
+    <race>
+      <lifeExpectancy>15000</lifeExpectancy>
+      <baseHealthScale>1.25</baseHealthScale>
+	  <useMeatFrom>Alien_Eldar</useMeatFrom>
+      <hediffGiverSets>
+        <li>OGE_Warlock_Options</li>
+      </hediffGiverSets>
+    </race>
+  </ThingDef>
+
+  <!-- Eldar Warrior -->
+  <ThingDef ParentName="OG_Eldar_Pawn_Base">
+    <defName>Eldar_Warrior</defName>
+    <label>guardian</label>
+    <description>A Guardian is one of the militia troops of the Eldar Craftworlds. In times of peace the Guardians pursue their normal civilian roles. All adult Eldar, however, are trained in the arts of warfare and can be called to arms if their Craftworld is threatened. It is a painful irony that, in the Eldar race's endless quest for survival, the very civilians the warhosts fight to protect are all too often forced to take up arms. Every Eldar is trained and ready to fight as a Guardian if need be. In some Craftworlds, Ulthwé foremost amongst them, the Guardians are the most common of all Eldar warriors. As the number of dedicated, professional Eldar troops -- the Aspect Warriors -- in a Craftworld are simply too few to meet all threats, those Eldar dedicated to a civilian path serve as Guardians in battle, forming the bulk of the Eldar armies. Guardians are also called upon to pilot and crew the majority of the Eldar's many war machines, providing vital armoured support and transportation for the warhost in battle. Guardian forces consist of two main types; the tactically flexible Defenders, and the more assault-oriented Storm Guardians. Both are equipped with Eldar Mesh Armour.</description>
+    <statBases>
+      <ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.32</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.32</ArmorRating_Heat>
+    </statBases>
+    <race>
+      <baseHealthScale>1</baseHealthScale>
+	  <useMeatFrom>Alien_Eldar</useMeatFrom>
+    </race>
+  </ThingDef>
+
+  <!-- Eldar Aspect Warrior -->
+  <ThingDef ParentName="OG_Eldar_Pawn_Base">
+    <defName>Eldar_Aspect_Warrior</defName>
+    <label>aspect warrior</label>
+    <description>A Guardian is one of the militia troops of the Eldar Craftworlds. In times of peace the Guardians pursue their normal civilian roles. All adult Eldar, however, are trained in the arts of warfare and can be called to arms if their Craftworld is threatened. It is a painful irony that, in the Eldar race's endless quest for survival, the very civilians the warhosts fight to protect are all too often forced to take up arms. Every Eldar is trained and ready to fight as a Guardian if need be. In some Craftworlds, Ulthwé foremost amongst them, the Guardians are the most common of all Eldar warriors. As the number of dedicated, professional Eldar troops -- the Aspect Warriors -- in a Craftworld are simply too few to meet all threats, those Eldar dedicated to a civilian path serve as Guardians in battle, forming the bulk of the Eldar armies. Guardians are also called upon to pilot and crew the majority of the Eldar's many war machines, providing vital armoured support and transportation for the warhost in battle. Guardian forces consist of two main types; the tactically flexible Defenders, and the more assault-oriented Storm Guardians. Both are equipped with Eldar Mesh Armour.</description>
+    <statBases>
+      <ArmorRating_Blunt>0.48</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.48</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.48</ArmorRating_Heat>
+	  <ShootingAccuracyPawn>1.16</ShootingAccuracyPawn>
+      <MoveSpeed>6.4</MoveSpeed>
+    </statBases>
+    <race>
+      <baseHealthScale>1</baseHealthScale>
+	  <useMeatFrom>Alien_Eldar</useMeatFrom>
+    </race>
+  </ThingDef>
+</Defs>

@@ -1,0 +1,272 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Tech-priests -->
+<!-- Base -->
+  <PawnKindDef Name="Mechanicus_TechPriestBase" Abstract="True">
+    <defName>OG_Mechanicus_Tech_Priest</defName>
+    <label>Tech-Priest</label>
+    <race>OG_Human_Mechanicus</race>
+    <defaultFactionType>OG_Mechanicus_Faction</defaultFactionType>
+    <combatPower>600</combatPower>
+    <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
+    <backstoryCategories>
+      <li>Outlander</li>
+      <li>Offworld</li>
+      <li>AdMech_TechPriest</li>
+    </backstoryCategories>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+    <isFighter>true</isFighter>
+    <chemicalAddictionChance>0.08</chemicalAddictionChance>
+    <gearHealthRange>
+      <min>0.4</min>
+      <max>1.4</max>
+    </gearHealthRange>
+    <apparelMoney>
+      <min>3800</min>
+      <max>3800</max>
+    </apparelMoney>
+    <apparelTags>
+      <li>AMTechPriest</li>
+    </apparelTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+	<weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>MacroStubber</li>
+    </weaponTags>
+    <techHediffsMoney>
+      <min>12000</min>
+      <max>15000</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>AdvancedWeapon</li>
+      <li>AdMech_TechPriest</li>
+      <li>UseAllTechHediff</li>
+    </techHediffsTags>
+    <techHediffsChance>10</techHediffsChance>
+  </PawnKindDef>
+
+<!-- Faction Leader -->
+  <PawnKindDef ParentName="Mechanicus_TechPriestBase">
+    <defName>OG_Mechanicus_Faction_Tech_Priest</defName>
+    <label>tech-priest lord</label>
+    <combatPower>600</combatPower>
+	<weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>MacroStubber</li>
+    </weaponTags>
+  </PawnKindDef>  
+
+<!-- Dominus -->
+  <PawnKindDef ParentName="Mechanicus_TechPriestBase">
+    <defName>OG_Mechanicus_Tech_Priest_Dominus</defName>
+    <label>tech-priest dominus</label>
+    <combatPower>500</combatPower>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>MacroStubber</li>
+    </weaponTags>
+  </PawnKindDef>  
+
+<!-- Enginseer -->
+  <PawnKindDef ParentName="Mechanicus_TechPriestBase">
+    <defName>OG_Mechanicus_Tech_Priest_Engineer</defName>
+    <label>tech-priest</label>
+    <combatPower>400</combatPower>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>MacroStubber</li>
+    </weaponTags>
+  </PawnKindDef>  
+
+<!-- Mechanicus Skitarii -->
+<!-- Base -->
+  <PawnKindDef Name="Mechanicus_SkitariiBase" Abstract="True">
+    <defName>OG_Mechanicus_Skitarii</defName>
+    <label>skitarii warrior</label>
+    <race>OG_Human_Mechanicus</race>
+    <defaultFactionType>OG_Mechanicus_Faction</defaultFactionType>
+    <combatPower>150</combatPower>
+    <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
+    <backstoryCategories>
+      <li>Civil</li>
+    </backstoryCategories>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+    <chemicalAddictionChance>0.08</chemicalAddictionChance>
+    <apparelMoney>
+      <min>3800</min>
+      <max>3800</max>
+    </apparelMoney>
+    <apparelTags>
+      <li>AMSkitariiLegionnaire</li>
+    </apparelTags>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+	<weaponMoney>
+      <min>1000</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <!-- <li>AMArmoury</li> -->
+    </weaponTags>
+    <techHediffsMoney>
+      <min>2000</min>
+      <max>3000</max>
+    </techHediffsMoney>
+    <techHediffsTags>
+      <li>Advanced</li>
+      <li>AdvancedWeapon</li>
+    </techHediffsTags>
+    <techHediffsChance>1</techHediffsChance>
+    <combatEnhancingDrugsChance>0.5</combatEnhancingDrugsChance>
+    <combatEnhancingDrugsCount>
+      <min>1</min>
+      <max>2</max>
+    </combatEnhancingDrugsCount>
+  </PawnKindDef>
+  
+<!-- Ranger --> 
+  <PawnKindDef ParentName="Mechanicus_SkitariiBase">
+    <defName>OG_Mechanicus_Skitarii_Ranger</defName>
+    <label>skitarii ranger</label>
+    <combatPower>20</combatPower>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+	  <li>RadiumPistol</li>
+      <li>GalvanicRifle</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+<!-- Ranger Prime -->
+  <PawnKindDef ParentName="Mechanicus_SkitariiBase">
+    <defName>OG_Mechanicus_Skitarii_Ranger_Primus</defName>
+    <label>skitarii ranger primus</label>
+    <combatPower>240</combatPower>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>RadiumPistol</li>
+      <li>GalvanicRifle</li>
+      <li>TransuranicArquebus</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!-- Vanguard --> 
+  <PawnKindDef ParentName="Mechanicus_SkitariiBase">
+    <defName>OG_Mechanicus_Skitarii_Vanguard</defName>
+    <label>skitarii vanguard</label>
+    <combatPower>160</combatPower>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>RadiumCarbine</li>
+      <li>RadiumPistol</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+<!-- Vanguard Prime --> 
+  <PawnKindDef ParentName="Mechanicus_SkitariiBase">
+    <defName>OG_Mechanicus_Skitarii_Vanguard_Primus</defName>
+    <label>skitarii vanguard primus</label>
+    <combatPower>180</combatPower>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>AMArmoury</li>
+      <li>RadiumCarbine</li>
+      <li>RadiumPistol</li>
+    </weaponTags>
+  </PawnKindDef>
+  
+<!-- Base Construct -->
+  <PawnKindDef Name="OG_Mechanicus_Construct_BaseKind" Abstract="True">
+    <defaultFactionType>OG_Mechanicus_Faction</defaultFactionType>
+    <aiAvoidCover>true</aiAvoidCover>
+    <destroyGearOnDrop>false</destroyGearOnDrop>
+  </PawnKindDef>  
+
+<!-- Mechanicus Sicarians -->
+<!-- Rust Stalker --> 
+  <PawnKindDef ParentName="OG_Mechanicus_Construct_BaseKind">
+    <defName>OG_Mechanicus_Sicarian_Rust_Stalker</defName>
+    <label>sicarian rust stalker</label>
+    <race>Mechanicus_Sicarian</race>
+    <combatPower>160</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/ToolUser/Mechanicus/AdeptusMechanicusSicarian</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.25</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>IGCDualLightningClaw</li>
+      <li>LightningClaw</li>
+    </weaponTags>
+  </PawnKindDef>
+
+<!-- Infiltrator --> 
+  <PawnKindDef ParentName="OG_Mechanicus_Construct_BaseKind">
+    <defName>OG_Mechanicus_Sicarian_Rust_Infiltrator</defName>
+    <label>sicarian infiltrator</label>
+    <race>Mechanicus_Sicarian</race>
+    <combatPower>160</combatPower>
+
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/ToolUser/Mechanicus/AdeptusMechanicusSicarian</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>1.5</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>
+      <min>9999</min>
+      <max>9999</max>
+    </weaponMoney>
+    <weaponTags>
+      <li>StubCarbine</li>
+    </weaponTags>
+    <modExtensions>
+      <li Class="AdeptusMechanicus.InfiltratorExtension">
+      </li>
+    </modExtensions>
+  </PawnKindDef>
+  
+</Defs>

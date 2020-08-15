@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BasePawn" Name="BaseTauDrone" Abstract="True">
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <statBases>
+      <PsychicSensitivity>0.0</PsychicSensitivity>
+      <ToxicSensitivity>0</ToxicSensitivity>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>250</ComfyTemperatureMax>
+      <MeatAmount>0</MeatAmount>
+      <ArmorRating_Heat>2.00</ArmorRating_Heat>
+    </statBases>
+    <receivesSignals>true</receivesSignals>
+    <race>
+      <fleshType>Mechanoid</fleshType>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <foodType>None</foodType>
+      <lifeExpectancy>2500</lifeExpectancy>
+      <bloodDef>Filth_MachineBits</bloodDef>
+    </race>
+    <comps>
+      <!--li Class="CompProperties_CanBeDormant" />
+      <li Class="CompProperties_WakeUpDormant">
+        <wakeUpOnDamage>true</wakeUpOnDamage>
+        <anyColonistCloseCheckRadius>30</anyColonistCloseCheckRadius>
+        <wakeUpSound>MechanoidsWakeUp</wakeUpSound>
+      </li-->
+      <li Class="AdeptusMechanicus.CompProperties_Floating">
+		<isFloater>true</isFloater>
+		<canCrossWater>true</canCrossWater>
+		<useZOffset>true</useZOffset>
+		<useShadow>true</useShadow>
+      </li>
+    </comps>
+  </ThingDef>
+
+
+  <!-- Drone base -->
+
+  <ThingDef ParentName="BaseTauDrone" Name="BaseGunDrone" Abstract="True">
+    <statBases>
+      <MoveSpeed>9.5</MoveSpeed>
+      <MeleeDodgeChance>1.5</MeleeDodgeChance>
+      <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.40</ArmorRating_Heat>
+    </statBases>
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <baseBodySize>1.0</baseBodySize>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>1000~2000</soundCallIntervalRange>
+    </race>
+    <butcherProducts>
+      <Steel>15</Steel>
+    </butcherProducts>
+  </ThingDef>
+
+  <!-- Gun Drone - Fast weak at close range -->
+  
+  <ThingDef ParentName="BaseGunDrone">
+    <defName>OG_Tau_GunDrone</defName>
+    <label>gun drone</label>
+    <description>A Gun Drone (Kor’vesa in the Tau Lexicon) is a type of Tau Drone (small, sleek, disc-shaped, semi-sentient machines) employed extensively alongside Tau units in battle. Gun Drones consist of an advanced processor unit, which individually has only a basic intelligence (approximately that of a small animal such as a pterasquirrel), and moves about by way of a small anti-gravitic generator and a smaller and much modified version of a Tau Jetpack. This allows the Gun Drone to hover over the ground and skim over most obstacles. As they hover over landscapes, rotating back and forth, their sensor vane constantly transmits vital information about their surroundings.</description>
+    <statBases>
+      <MoveSpeed>2.5</MoveSpeed>
+    </statBases>
+    <tools>
+      <li>
+        <label>ram</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
+    <race>
+      <body>OG_Tau_GunDrone</body>
+      <baseHealthScale>0.85</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <lifeStageAges Inherit="False">
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Pikeman_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Pikeman_Death</soundDeath>
+          <soundCall>Pawn_Mech_Pikeman_Call</soundCall>
+        </li>
+      </lifeStageAges>
+    </race>
+  </ThingDef>
+
+</Defs>

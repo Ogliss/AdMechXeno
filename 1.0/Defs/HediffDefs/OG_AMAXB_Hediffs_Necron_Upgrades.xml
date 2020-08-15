@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HediffDef ParentName="AddedBodyPartBase" Name="NecronUpgradedPart" abstract="true">
+    <defName>Necron_Upgraded_Part</defName>
+    <isBad>false</isBad>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase" Name="NecronUpgrade" abstract="true">
+    <defName>Necron_Upgrade</defName>
+    <isBad>false</isBad>
+  </HediffDef>
+  
+  <HediffDef ParentName="NecronUpgradedPart">
+    <defName>OG_Necron_Weapon_FlayingBlade</defName>
+    <label>flaying blade</label>
+    <labelNoun>a flaying blade</labelNoun>
+    <comps>
+      <li Class="HediffCompProperties_VerbGiver">
+        <tools>
+          <li>
+            <label>flaying blades</label>
+            <capacities>
+			  <li>OG_RendingWeapon_Cut</li>
+			  <li>OG_RendingWeapon_Stab</li>
+            </capacities>
+            <power>22.0</power>
+            <cooldownTime>1.5</cooldownTime>
+            <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+          </li>
+        </tools>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <statOffsets>
+			<MeleeHitChance>+0.16</MeleeHitChance>
+		</statOffsets>
+      </li>
+    </stages>
+    <!--<spawnThingOnRemoved>PowerClaw</spawnThingOnRemoved>-->
+    <addedPartProps>
+      <isGoodWeapon>true</isGoodWeapon>
+      <solid>true</solid>
+      <partEfficiency>1.25</partEfficiency>
+    </addedPartProps>
+  </HediffDef>
+  
+  <HediffDef ParentName="NecronUpgrade">
+    <defName>OG_Necron_Upgrade_RessurectionOrb</defName>
+    <label>orb of resurrection</label>
+    <labelNoun>an orb of resurrection</labelNoun>
+    <comps>
+	  <!--
+      <li Class="AdeptusMechanicus.HediffCompProperties_PhaseShifter">
+      </li>
+	  -->
+    </comps>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="NecronUpgrade">
+    <defName>OG_Necron_Upgrade_Phylactery</defName>
+    <label>phylactery</label>
+    <labelNoun>a phylactery</labelNoun>
+    <comps>
+	  <!--
+      <li Class="AdeptusMechanicus.HediffCompProperties_PhaseShifter">
+      </li>
+	  -->
+    </comps>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="NecronUpgrade">
+    <defName>OG_Necron_Upgrade_VeilOfDarkness</defName>
+    <label>veil of darkness</label>
+    <labelNoun>a veil of darkness</labelNoun>
+    <comps>
+	  <!--
+      <li Class="AdeptusMechanicus.HediffCompProperties_PhaseShifter">
+      </li>
+	  -->
+    </comps>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="NecronUpgrade">
+    <defName>OG_Necron_Upgrade_PhaseShifter</defName>
+    <label>phase shifter</label>
+    <labelNoun>a phase shifter device</labelNoun>
+    <comps>
+      <li Class="AdeptusMechanicus.HediffCompProperties_PhaseShifter">
+      </li>
+    </comps>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="NecronUpgrade">
+    <defName>OG_Necron_Upgrade_WraithPhaseShifter</defName>
+    <label>phase shifter</label>
+    <labelNoun>a phase shifter device</labelNoun>
+    <comps>
+      <li Class="AdeptusMechanicus.HediffCompProperties_PhaseShifter">
+      </li>
+      <li Class="AdeptusMechanicus.HediffCompProperties_MoveThroughCover">
+		<MoveThroughAll>true</MoveThroughAll>
+		<!--
+		<TerrainTagsList>
+			<li></li> 
+		</TerrainTagsList>
+		<BuildingClassList>
+			<li></li> 
+		</BuildingClassList> 
+		-->
+      </li>
+    </comps>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="NecronUpgrade">
+    <defName>OG_Necron_Upgrade_Regeneration</defName>
+    <label>regeneration</label>
+    <labelNoun>a regeneration biomorph</labelNoun>
+    <stages>
+      <li>
+        
+      </li>
+    </stages>
+  </HediffDef>
+  
+  <HediffDef ParentName="ImplantHediffBase">
+    <defName>OG_Necron_Painstopper</defName>
+    <label>painstopper</label>
+    <labelNoun>a painstopper</labelNoun>
+    <stages>
+      <li>
+		<becomeVisible>false</becomeVisible>
+        <painFactor>0</painFactor>
+      </li>
+    </stages>
+  </HediffDef>
+
+</Defs>

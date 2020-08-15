@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PawnKindDef Abstract="True" Name="BaseImperialGuardPawnKind">
+    <race>OG_Human_Imperial</race>
+    <combatPower>40</combatPower>
+    <baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+    <isFighter>false</isFighter>
+    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+    <forceNormalGearQuality>true</forceNormalGearQuality>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="BaseImperialGuardPawnKind">
+    <defName>Colonist_OG_Militarum</defName>
+    <label>colonist</label>
+    <defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
+    <backstoryCategories>
+			<li>ImperialGuard_Standard</li>
+  	</backstoryCategories>
+    <apparelTags>
+      <li>OGIGClothing</li>
+    </apparelTags>
+    <apparelMoney>
+      <min>1000</min>
+      <max>2400</max>
+    </apparelMoney>
+    <backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+  </PawnKindDef>
+
+</Defs>

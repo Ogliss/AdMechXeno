@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- ========================== Wild Kroot Knarloc ================================= -->
+  <ThingDef Name="KnarlocBase" ParentName="AnimalThingBase" ADogSaidBody="LegsArmsTail">
+    <defName>KrootKnarloc</defName>
+    <label>knarloc</label>
+    <description>The Great Knarloc is a Kroot lifeform native to the jungles of the Kroot homeworld of Pech that is often domesticated for use as a beast of burden, assault weapon or combat mount by the Kroot warriors who serve the Tau Empire. The Great Knarloc is much larger than the more common standard Knarloc. Like the Krootox and the Kroot Hound, the Great Knarloc is an evolutionary dead-end of the broader Kroot species, but its sheer raw power and strength make it a powerful living weapon for the Kroot mercenaries who serve the Tau.\n\n"It’s easy to dismiss such beasts as just that, little more than pests, when you’re sitting in the turret of a battle tank. At least until you’ve seen one rip the turret off a Leman Russ and eat its crew."\n\n— Captain Torvus Grymm, 14th Synford Armoured Brigade</description>
+    <statBases>
+      <MoveSpeed>4.0</MoveSpeed>
+      <MarketValue>300</MarketValue>
+      <ComfyTemperatureMin>-55</ComfyTemperatureMin>
+      <ComfyTemperatureMax>45</ComfyTemperatureMax>
+    </statBases>
+    <tools>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>23</power>
+        <cooldownTime>2.6</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+      <li>
+        <label>left claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftFootClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <label>right claw</label>
+        <capacities>
+          <li>Scratch</li>
+        </capacities>
+        <power>17</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightFootClaws</linkedBodyPartsGroup>
+      </li>
+      <li>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>30</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>Beak</linkedBodyPartsGroup>
+        <chanceFactor>0.5</chanceFactor>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>14</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+    </tools>
+	<!--
+    <comps>
+      <li Class="CompProperties_Milkable">
+        <milkDef>Milk</milkDef>
+        <milkIntervalDays>2</milkIntervalDays>
+        <milkAmount>12</milkAmount>
+      </li>
+      <li Class="CompProperties_Shearable">
+        <woolDef>WoolMuffalo</woolDef>
+        <shearIntervalDays>25</shearIntervalDays>
+        <woolAmount>100</woolAmount>
+      </li>
+    </comps>
+    -->
+	<race>
+      <herdAnimal>false</herdAnimal>
+      <predator>true</predator>
+      <body>Knarloc</body>
+      <maxPreyBodySize>3</maxPreyBodySize>
+      <baseBodySize>3.1</baseBodySize>
+      <baseHealthScale>5</baseHealthScale>
+			<baseHungerRate>0.85</baseHungerRate>
+      <foodType>OmnivoreAnimal, OvivoreAnimal</foodType>
+      <leatherDef>Leather_Kroot</leatherDef>
+      <gestationPeriodDays>28</gestationPeriodDays>
+      <wildness>0.6</wildness>
+      <trainability>Advanced</trainability>
+      <packAnimal>false</packAnimal>
+      <lifeExpectancy>30</lifeExpectancy>
+      <manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
+      <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+      <lifeStageAges>
+        <li>
+          <def>AnimalBaby</def>
+          <minAge>0</minAge>
+        </li>
+        <li>
+          <def>AnimalJuvenile</def>
+          <minAge>0.25</minAge>
+        </li>
+        <li>
+          <def>AnimalAdult</def>
+          <minAge>0.5</minAge>
+          <soundWounded>Pawn_Bear_Injured</soundWounded>
+          <soundDeath>Pawn_Bear_Death</soundDeath>
+          <soundCall>Pawn_Bear_Call</soundCall>
+          <soundAngry>Pawn_Bear_Angry</soundAngry>
+        </li>
+      </lifeStageAges>
+      <soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+    </race>
+    <tradeTags>
+      <li>AnimalUncommon</li>
+      <li>AnimalFighter</li>
+      <li>AnimalKroot</li>
+      <li>AnimalFighterKroot</li>
+    </tradeTags>
+  </ThingDef>
+  
+  <PawnKindDef Name="Knarloc" ParentName="AnimalKindBase">
+    <defName>Knarloc</defName>
+    <label>knarloc</label>
+    <race>KrootKnarloc</race>
+    <combatPower>150</combatPower>
+    <ecoSystemWeight>1.5</ecoSystemWeight>
+    <wildGroupSize>
+      <min>3</min>
+      <max>9</max>
+    </wildGroupSize>
+    <lifeStages>
+      <li>
+        <label>knarlock cub</label>
+        <labelPlural>knarlock cubs</labelPlural>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animals/Knarloc/Knarloc</texPath>
+          <drawSize>2.0</drawSize>
+          <shadowData>
+            <volume>(0.4, 0.3, 0.3)</volume>
+            <offset>(0,0,-0.2)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+          <drawSize>2.0</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animals/Knarloc/Knarloc</texPath>
+          <drawSize>3</drawSize>
+          <shadowData>
+            <volume>(0.6, 0.45, 0.45)</volume>
+            <offset>(0,0,-0.25)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+          <drawSize>3</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/Animals/Knarloc/Knarloc</texPath>
+          <drawSize>5</drawSize>
+          <shadowData>
+            <volume>(0.8, 0.6, 0.6)</volume>
+            <offset>(0,0,-0.3)</offset>
+          </shadowData>
+        </bodyGraphicData>
+        <dessicatedBodyGraphicData>
+          <texPath>Things/Pawn/Animal/Bear/Dessicated_Bear</texPath>
+          <drawSize>5</drawSize>
+        </dessicatedBodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef>
+
+  <!-- ========================== Trained Kroot Knarloc ================================= -->
+  <ThingDef ParentName="KnarlocBase">
+    <defName>KindredKrootKnarloc</defName>
+	<race>
+      <intelligence>ToolUser</intelligence>
+    </race>
+    <tradeTags Inherit="false"> </tradeTags>
+  </ThingDef>
+  
+  <PawnKindDef Name="KindredKnarloc" ParentName="Knarloc">
+    <defName>KindredKnarloc</defName>
+    <race>KindredKrootKnarloc</race>
+	<defaultFactionType>OG_Tau_Faction</defaultFactionType>
+  </PawnKindDef>
+</Defs>

@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using RimWorld;
+using Verse;
+using Verse.AI;
+using Verse.AI.Group;
+using HarmonyLib;
+using Verse.Sound;
+using UnityEngine;
+using System.Reflection;
+using AdeptusMechanicus.settings;
+using AdeptusMechanicus.ExtensionMethods;
+
+namespace AdeptusMechanicus.HarmonyInstance
+{// LocalTargetInfo castTarg, LocalTargetInfo destTarg, bool surpriseAttack = false, bool canHitNonTargetPawns = true
+    [HarmonyPatch(typeof(Verb), "TryStartCastOn", new Type[] { typeof(LocalTargetInfo), typeof(LocalTargetInfo), typeof(bool), typeof(bool) })]
+    public static class AM_Verb_TryStartCastOn_SporeMine_Patch
+    {
+        [HarmonyPrefix]
+        public static bool Prefix(ref Verb __instance, LocalTargetInfo castTarg, bool __result)
+        {
+            if (__instance.Caster!=null)
+            {
+                if (__instance.CasterPawn!=null)
+                {
+                    if (__instance.CasterPawn.kindDef == SporeMine.mineDef)
+                    {
+                    //    Log.Message(__instance.CasterPawn.LabelShortCap + " Spore Mine");
+                        CompSporeMine comp = __instance.CasterPawn.TryGetComp<CompSporeMine>();
+                        comp.Detonate(__instance.CasterPawn.Map);
+                        //    __instance.CasterPawn.Kill(null);
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+
+    }
+    
+    
+}

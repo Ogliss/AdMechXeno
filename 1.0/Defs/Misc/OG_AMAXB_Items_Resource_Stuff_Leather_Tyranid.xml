@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!--========== Basic leathers ============-->
+
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_TyranidSmall</defName>
+    <label>eldarskin</label>
+    <description>Tanned, dried, scraped eldar skin. Some find this material horrifying. Some find it fascinating. While a decent leather, it neither protects nor insulates particularly well.</description>
+    <graphicData>
+      <color>(242,218,165)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>4.2</MarketValue>
+      <StuffPower_Armor_Sharp>0.81</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0.27</StuffPower_Armor_Blunt>
+      <StuffPower_Insulation_Cold>30</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>12</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(242,218,165)</color>
+      <commonality>0.0025</commonality>
+    </stuffProps>
+  </ThingDef>
+
+</Defs>

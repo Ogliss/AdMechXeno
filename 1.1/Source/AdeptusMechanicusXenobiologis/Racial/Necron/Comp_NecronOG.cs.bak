@@ -1,0 +1,660 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using AdeptusMechanicus.settings;
+using RimWorld;
+using Verse;
+using Verse.AI;
+
+namespace AdeptusMechanicus
+{
+    public class CompProperties_NecronOG : CompProperties
+    {
+        // Token: 0x06000AB1 RID: 2737 RVA: 0x0005598C File Offset: 0x00053D8C
+        public CompProperties_NecronOG()
+        {
+            this.compClass = typeof(Comp_NecronOG);
+        }
+
+        // Token: 0x040004AB RID: 1195
+        public float overlightRadius;
+
+        // Token: 0x040004AC RID: 1196
+        public float glowRadius = 14f;
+
+        // Token: 0x040004AD RID: 1197
+        public ColorInt glowColor = new ColorInt(255, 255, 255, 0) * 1.45f;
+        public float chance;
+        public bool reviveFlag = true;
+        public bool repairFlag = false;
+        public bool PhaseShifter = false;
+        public float PhaseShifterMin = 0f;
+    }
+    // Token: 0x02000C66 RID: 3174
+    public class Comp_NecronOG : ThingComp
+    {
+        // Token: 0x17000AD2 RID: 2770
+        // (get) Token: 0x060045EE RID: 17902 RVA: 0x0020D7F1 File Offset: 0x0020BBF1
+        public CompProperties_NecronOG Props
+        {
+            get
+            {
+                return (CompProperties_NecronOG)this.props;
+            }
+        }
+
+        public override void PostExposeData()
+        {
+            base.PostExposeData();
+            Scribe_Values.Look<int>(ref this.ticksSinceHeal, "ticksSinceHeal");
+            Scribe_Values.Look<int>(ref this.reviveIntervalTicks, "reviveIntervalTicks", 0);
+            Scribe_Values.Look<bool>(ref this.reviveFlag, "reviveFlag", true);
+            Scribe_Values.Look<bool>(ref this.reviveTried, "reviveTried", false);
+            Scribe_References.Look<Thing>(ref this.originalWeapon, "originalWeapon");
+            Scribe_Collections.Look(ref this.healableHediffs, "healableHediffs");
+            Scribe_Collections.Look(ref this.unhealableHediffs, "unhealableHediffs");
+        }
+
+        public DamageInfo dInfo;
+        public DamageInfo fatalDinfo;
+        public DamageDef damageDef;
+        public DamageDef fatalDamageDef = null;
+        public Thing originalWeapon;
+        public bool reviveFlag = true;
+        public bool reviveTried = false;
+        public List<Hediff> HDlist = null;
+        public List<Hediff> healableHediffs = new List<Hediff>();
+        public List<Hediff> unhealableHediffs = new List<Hediff>();
+        public bool youngestHHeal;
+        public bool hasrun = false;
+        bool downed;
+        bool logging = false;
+        public int reviveIntervalTicks;
+        public int healIntervalTicks = 100;
+        public int ticksSinceHeal;
+
+        public Pawn pawn
+        {
+            get
+            {
+                return (Pawn)this.parent;
+            }
+        }
+
+        public List<Hediff> PawnHediffs
+        {
+            get
+            {
+                return pawn.health.hediffSet.hediffs;
+            }
+        }
+
+        public List<Hediff> HealableHediffs
+        {
+            get
+            {
+                List<Hediff> HealableHediffs = pawn.health.hediffSet.hediffs.FindAll(x => HealableHediff(x));
+                return HealableHediffs;
+            }
+        }
+
+        public List<Hediff> UnhealableHediffs
+        {
+            get
+            {
+                List<Hediff> UnhealableHediffs = pawn.health.hediffSet.hediffs.FindAll(x => !HealableHediff(x));
+                return UnhealableHediffs;
+            }
+        }
+
+        public DamageInfo FatalDinfo
+        {
+            get
+            {
+                return (DamageInfo)this.fatalDinfo;
+            }
+        }
+
+        public bool HasHealableWounds
+        {
+            get
+            {
+                return pawn.health.hediffSet.hediffs.Any(x => HealableHediff(x));
+            } 
+        }
+
+        public bool HasRegeneragtingLimbs
+        {
+            get
+            {
+                return pawn.health.hediffSet.hediffs.Any(x => x.def == AMXenoBiologisHediffDefOf.OG_Regenerating);
+            }
+        }
+
+        public override void PostSpawnSetup(bool respawningAfterLoad)
+        {
+            base.PostSpawnSetup(respawningAfterLoad);
+            if (!respawningAfterLoad)
+            {
+                originalWeapon = pawn.equipment.Primary;
+            }
+        }
+
+        public void Downed()
+        {
+            if (base.parent!=null && base.parent is Pawn pawn)
+            {
+                if (pawn.Downed)
+                {
+                    downed = true;
+                }
+                if (downed && !pawn.Downed)
+                {
+                    if (originalWeapon == null)
+                    {
+                        ThingDef thingDef = ThingDef.Named(pawn.kindDef.weaponTags[0]);
+                        Thing thing = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForDef(thingDef), PathEndMode.InteractionCell, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false));
+                        this.originalWeapon = thing;
+                    }
+                    ThingWithComps thingWithComps = (ThingWithComps)originalWeapon;
+                    if (thingWithComps != null)
+                    {
+                        thingWithComps.DeSpawn();
+                        pawn.equipment.AddEquipment(thingWithComps);
+                    }
+                }
+            }
+        }
+
+        public void Dead(Pawn pawn)
+        {
+            if (pawn!=null && pawn.health is Pawn_HealthTracker healthTracker)
+            {
+                bool healable = HasHealableWounds || HasRegeneragtingLimbs;
+                if (logging == true) Log.Message(string.Format("Dead {0}, healable: {1}, HasRegeneragtingLimbs: {2}, SummaryHealthPercent: {3}, LethalDamageThreshold: {4}, InPainShock: {5}, State: {6}, reviveTried {7}, reviveFlag {8}, HealableHediffs {9}, UnhealableHediffs {10}", pawn.Label, HasHealableWounds, HasRegeneragtingLimbs, healthTracker.summaryHealth.SummaryHealthPercent, healthTracker.LethalDamageThreshold, healthTracker.InPainShock, healthTracker.State, reviveTried, reviveFlag, HealableHediffs.Count, UnhealableHediffs.Count));
+                if (!healable && !reviveTried && reviveFlag)
+                {
+                    TryRevive(pawn);
+                }
+            }
+        }
+
+        public void TryRevive(Pawn pawn, bool ForcedRevive = false)
+        {
+            Map map = pawn.Dead ? pawn.Corpse.Map : pawn.Map;
+            IntVec3 pos = pawn.Dead ? pawn.Corpse.Position : pawn.Position;
+            if (Rand.Chance(0.5f) || ForcedRevive)
+            {
+                List<Hediff> hediffs = UnhealableHediffs;
+                ResurrectionUtility.Resurrect(pawn);
+                if (originalWeapon==null && pawn.kindDef.weaponTags.Count>0)
+                {
+                    ThingDef thingDef = ThingDef.Named(pawn.kindDef.weaponTags[0]);
+                    Thing thing2 = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForDef(thingDef), PathEndMode.InteractionCell, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false));
+                    this.originalWeapon = thing2;
+                }
+                if (originalWeapon!=null)
+                {
+                    ThingWithComps thing = (ThingWithComps)originalWeapon;
+                    thing.DeSpawn();
+                    pawn.equipment.AddEquipment(thing);
+                }
+                if (ForcedRevive)
+                {
+
+                }
+                else
+                {
+                    foreach (Hediff item in hediffs)
+                    {
+                        if (!pawn.health.hediffSet.PartIsMissing(item.Part))
+                        {
+                            if (pawn.health.WouldDieAfterAddingHediff(item))
+                            {
+                            //    log.message(string.Format("ERROR !!!!! Readding fatal HEDIFF: {0}", item.Label));
+                                reviveTried = true;
+                            }
+                            pawn.health.AddHediff(item);
+                        }
+                    }
+                }
+                MoteMaker.ThrowLightningGlow(pos.ToVector3(), map, 13f);
+                MoteMaker.MakeStaticMote(pos, map, ThingDefOf.Mote_ExplosionFlash, 6f);
+            }
+            else
+            {
+                reviveTried = true;
+            }
+            MoteMaker.MakeStaticMote(pos, map, ThingDefOf.Mote_ExplosionFlash, 1f);
+            if (Rand.Chance(0.5f) && !ForcedRevive)
+            {
+                pawn.Corpse.DeSpawn();
+                MoteMaker.ThrowLightningGlow(pos.ToVector3(), map, 1f);
+            }
+        }
+
+        public override void PostPreApplyDamage(DamageInfo dinfo, out bool absorbed)
+        {
+            if (base.parent is Pawn && dinfo.Def.defName.Contains("InEyes"))
+            {
+                absorbed = true;
+            }
+            else if (base.parent is Pawn pawn && dinfo.ArmorPenetrationInt < ((pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Blunt, 0f) + pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Sharp, 0f)) / 2))
+            {
+                absorbed = Rand.Chance(0.5f) ? true : false;
+            }
+            else
+            {
+                absorbed = false;
+            }
+            if (SettingsHelper.latest.AllowNecronWellBeBack)
+            {
+                if (!absorbed && base.parent != null && base.parent is Pawn)
+                {
+                    if (pawn.Dead)
+                    {
+                        fatalDinfo = dinfo;
+                        fatalDamageDef = dinfo.Def;
+                        float AP = FatalDinfo.ArmorPenetrationInt;
+                        float AV = ((pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Blunt, 0f) + pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Sharp, 0f)) / 2);
+                        if (AP >= AV)
+                        {
+                            dInfo.SetInstantPermanentInjury(true);
+                            reviveFlag = false;
+                            if (logging == true) Log.Message(string.Format("fatal damage, allow revive: {0} PostPreApplyDamage, AP: {1}, AV: {2}", reviveFlag, AP, AV));
+
+                        }
+                        else
+                        {
+                            dInfo.SetInstantPermanentInjury(false);
+                            if (logging == true) Log.Message(string.Format("fatal damage, allow revive: {0} PostPreApplyDamage, AP: {1}, AV: {2}", reviveFlag, AP, AV));
+                        }
+                        ThingWithComps thingWithComps = (ThingWithComps)originalWeapon;
+                        if (thingWithComps != null)
+                        {
+                            thingWithComps.DeSpawn();
+                            //    pawn.equipment.AddEquipment(thingWithComps);
+                            pawn.inventory.TryAddItemNotForSale(thingWithComps);
+                        }
+                    }
+                    else
+                    {
+                        dInfo = dinfo;
+                        damageDef = dinfo.Def;
+                        float AP = dinfo.ArmorPenetrationInt;
+                        float AV = ((pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Blunt, 0f) + pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Sharp, 0f)) / 2);
+                        if (AP >= AV)
+                        {
+                            dInfo.SetInstantPermanentInjury(true);
+                            reviveFlag = false;
+                            reviveIntervalTicks += Rand.RangeInclusive(10, 200);
+                            if (logging == true) Log.Message(string.Format("nonfatal damage, allow heal: {0}, PostPreApplyDamage, AP: {1}, AV: {2}", reviveFlag, AP, AV));
+                        }
+                        else
+                        {
+                            dInfo.SetInstantPermanentInjury(false);
+                            if (logging == true) Log.Message(string.Format("nonfatal damage, allow heal: {0}, PostPreApplyDamage, AP: {1}, AV: {2}", reviveFlag, AP, AV));
+                        }
+                    }
+                    if (logging == true) Log.Message(string.Format("dInfo SetInstantPermanentInjury: {0}", dInfo.InstantPermanentInjury));
+
+                }
+
+            }
+            base.PostPreApplyDamage(dinfo, out absorbed);
+
+        }
+        /*
+        public override void PostPostApplyDamage(DamageInfo dinfo, float totalDamageDealt)
+        {
+            base.PostPostApplyDamage(dinfo, totalDamageDealt);
+            if (base.parent is Pawn pawn)
+            {
+                if (pawn.Dead)
+                {
+                    fatalDinfo = dinfo;
+                    fatalDamageDef = dinfo.Def;
+                    float AP = FatalDinfo.ArmorPenetrationInt;
+                    float AV = ((pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Blunt, 0f) + pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Sharp, 0f)) / 2);
+                    if (AP >= AV)
+                    {
+                        dInfo.SetInstantPermanentInjury(true);
+                        reviveFlag = false;
+                        if (logging == true) Log.Message(string.Format("fatal damage, allow revive: {0} PostPostApplyDamage, AP: {1}, AV: {2}", reviveFlag, AP, AV));
+                    }
+                    else
+                    {
+                        dInfo.SetInstantPermanentInjury(false);
+                        reviveFlag = true;
+                        if (logging == true) Log.Message(string.Format("fatal damage, allow revive: {0}, PostPostApplyDamage, AP: {1}, AV: {2}", reviveFlag, AP, AV));
+                    }
+                }
+                else
+                {
+                    dInfo = dinfo;
+                    damageDef = dinfo.Def;
+                    float AP = dinfo.ArmorPenetrationInt;
+                    float AV = ((pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Blunt, 0f) + pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Sharp, 0f)) / 2);
+                    if (AP >= AV)
+                    {
+                        dInfo.SetInstantPermanentInjury(true);
+                        if (logging == true) Log.Message(string.Format("nonfatal damage, allow heal: {0}, PostPostApplyDamage, AP: {1}, AV: {2}", reviveFlag, AP, AV));
+                    }
+                    else
+                    {
+                        dInfo.SetInstantPermanentInjury(false);
+                        if (logging == true) Log.Message(string.Format("nonfatal damage, allow heal: {0}, PostPostApplyDamage, AP: {1}, AV: {2}", reviveFlag, AP, AV));
+                    }
+                }
+                if (logging == true) Log.Message(string.Format("dInfo SetInstantPermanentInjury: {0}", dInfo.InstantPermanentInjury));
+            }
+        }
+        */
+        public override void CompTick()
+        {
+            base.CompTick();
+            if (reviveIntervalTicks > 0)
+            {
+                reviveIntervalTicks--;
+                if (reviveIntervalTicks == 0)
+                {
+                    reviveFlag = true;
+                }
+            }
+            this.ticksSinceHeal++;
+        }
+
+        public override void CompTickRare()
+        {
+            if (base.parent != null && base.parent.Spawned && !reviveTried && reviveFlag && SettingsHelper.latest.AllowNecronWellBeBack)
+            {
+                if (base.parent is Pawn && pawn.kindDef != OGNecronDefOf.OG_Necron_Scarab_Swarm)
+                {
+                    Map map = pawn.Dead ? pawn.Corpse.Map : pawn.Map;
+                    IntVec3 pos = pawn.Dead ? pawn.Corpse.Position : pawn.Position;
+                    bool flag = pawn.Dead ? true : this.ticksSinceHeal > this.healIntervalTicks;
+                    if (logging == true) Log.Message(string.Format("CompTickRare {0}'s flag {1}, reviveFlag {2}, reviveTried {3}", pawn.Label, flag, reviveFlag, reviveTried));
+                    if (flag)
+                    {
+                        bool flag2 = pawn.health.hediffSet.hediffs.Any(x => HealableHediff(x) && !pawn.health.hediffSet.PartIsMissing(x.Part) && x is Hediff_Injury);
+                        bool flag3 = pawn.health.hediffSet.hediffs.Any(x => HealableHediff(x) && pawn.health.hediffSet.PartIsMissing(x.Part));
+                        bool flag4 = pawn.health.hediffSet.hediffs.Any(x => HealableHediff(x) && x.def==AMXenoBiologisHediffDefOf.OG_Regenerating);
+                        float num = Rand.RangeInclusive(1, 100);
+                        Hediff hediff;
+                        if (flag2)
+                        {
+                            if (logging == true) Log.Message(string.Format("flag2"));
+                            hediff = GenCollection.RandomElement<Hediff_Injury>(from x in pawn.health.hediffSet.GetHediffs<Hediff_Injury>()
+                                                                                                     where HediffUtility.CanHealNaturally(x) && HealableHediff(x)
+                                                                                                     select x);
+                            num = num * pawn.HealthScale * 0.1f;
+                            hediff.Heal(num);
+                            string text = string.Format("flag2 the {1} on {0}'s {2} healed by {3}.", pawn.LabelCap, hediff.Label, hediff.Part.customLabel, num);
+                            if (hediff.Severity == 0f)
+                            {
+                                text = text + " and was removed";
+                                pawn.health.RemoveHediff(hediff);
+                            }
+                            if (logging == true) Log.Message(string.Format(text));
+                        }
+                        else if (flag4)
+                        {
+                            if (logging == true) Log.Message(string.Format("flag4"));
+                            hediff = pawn.health.hediffSet.GetHediffs<Hediff_RegeneratingPart>().RandomElement();
+                            num = num * pawn.HealthScale * 0.001f;
+                            hediff.Heal(num);
+                            string text = string.Format("flag5 the {1} on {0}'s {2} regenerated by {3}.", pawn.LabelCap, hediff.Label, hediff.Part.customLabel, num);
+                            if (hediff.Severity == 0f)
+                            {
+                                text = text + " and was removed";
+                                pawn.health.RemoveHediff(hediff);
+                            }
+                            if (logging == true) Log.Message(string.Format(text));
+                        }
+                        else if (flag3)
+                        {
+                            if (logging == true) Log.Message(string.Format("flag3"));
+                            bool flag3B = pawn.health.hediffSet.hediffs.Any(x => pawn.health.hediffSet.PartIsMissing(x.Part) && HealableHediff(x));
+                            if (flag3B)
+                            {
+                                if (logging == true) Log.Message(string.Format("flag3B"));
+                                TryRegrowBodyparts();
+                            }
+                            else
+                            {
+                                if (logging == true) Log.Message(string.Format("flag3 {0}'s hediff_Injury flag3B: {1}", pawn.Label, flag3B));
+                            }
+                        }
+                        else
+                        {
+                            hediff = null;
+                        }
+
+                        MoteMaker.ThrowDustPuff(pos, map, 0.2f);
+                        if (pawn.Dead)
+                        {
+                            if (logging == true) Log.Message(string.Format("CompTickRare {0}'s Dead", pawn.Label));
+                            Dead(pawn);
+                        }
+                        else if (pawn.Downed)
+                        {
+                            if (logging == true) Log.Message(string.Format("CompTickRare {0}'s Downed", pawn.Label));
+                            Downed();
+                        }
+                    }
+                }
+            }
+            base.CompTickRare();
+        }
+
+        public bool HealableHediff(Hediff hd)
+        {
+            ThingWithComps Weapon;
+            ThingDef WeaponDef = null;
+        //    bool logging = true;
+            if (hd != null)
+            {
+                //   Log.Message(string.Format("hd Is defName: {0} on {1}", hd.def.defName, hd.Part.Label));
+                if (!hd.Visible)
+                {
+                    return false;
+                }
+                if (hd is Hediff_RegeneratingPart)
+                {
+                    return true;
+                }
+                if (hd is Hediff_MissingPart _missingPart && _missingPart!=null)
+                {
+                    if (pawn.health.hediffSet.PartIsMissing(hd.Part.parent))
+                    {
+                        return false;
+                    }
+                    if (_missingPart.combatLogEntry!=null)
+                    {
+                        if (_missingPart.combatLogEntry.Target != null)
+                        {
+                            if (_missingPart.combatLogEntry.Target.GetConcerns() != null && _missingPart.combatLogEntry.Target.GetConcerns() is IEnumerable<Thing> Concerns)
+                            {
+                                Pawn instigator = (Pawn)Concerns.First();
+                                if (instigator!=null && instigator != pawn)
+                                {
+                                    if (instigator.equipment.Primary !=null && instigator.equipment.Primary is ThingWithComps weapon)
+                                    {
+                                        Weapon = weapon;
+                                        WeaponDef = weapon.def;
+                                    }
+                                    else
+                                    {
+                                        if (logging == true) Log.Message(string.Format("hd Is Hediff_MissingPart: {0} on {1} instigator {2} equipment.Primary is not a ThingWithComps", hd.def.defName, hd.Part.Label, instigator.LabelShortCap));
+                                    }
+                                }
+                                else
+                                {
+                                    if (logging == true) Log.Message(string.Format("hd Is Hediff_MissingPart: {0} on {1} instigator is Null or not a Pawn", hd.def.defName, hd.Part.Label));
+                                }
+                            }
+                            else
+                            {
+                                if (logging == true) Log.Message(string.Format("hd Is Hediff_MissingPart: {0} on {1} combatLogEntry Target has no Concerns", hd.def.defName, hd.Part.Label));
+                            }
+                        }
+                        else
+                        {
+                            if (logging == true) Log.Message(string.Format("hd Is Hediff_MissingPart: {0} on {1} combatLogEntry has no Target", hd.def.defName, hd.Part.Label));
+                        }
+                    }
+                    else
+                    {
+                        if (logging == true) Log.Message(string.Format("hd Is Hediff_MissingPart: {0} on {1} has no combatLogEntry", hd.def.defName, hd.Part.Label));
+                        if (hd.Visible)
+                        {
+                            return true;
+                        }
+                    }
+                }
+                if (WeaponDef!=null)
+                {
+                    hd.source = WeaponDef;
+                }
+                if (hd.source != null)
+                {
+                    if (hd.source.IsWeapon)
+                    {
+                        if (hd.source.IsMeleeWeapon)
+                        {
+                            if (logging == true) Log.Message(string.Format("source IsMeleeWeapon defName: {0} on {1}", hd.source.defName, hd.Part.Label));
+                            if (hd.source.weaponTags.Contains("PowerWeapon"))
+                            {
+                                return false;
+                            }
+                        }
+                        else if (hd.source.IsRangedWeapon)
+                        {
+                            if (logging == true) Log.Message(string.Format("source IsRangedWeapon defName: {0} on {1}", hd.source.defName, hd.Part.Label));
+                            if (base.parent != null)
+                            {
+                                if (base.parent is Pawn pawn)
+                                {
+                                    if (pawn.Dead)
+                                    {
+                                        float ava = ((pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Blunt, 0f) + pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Sharp, 0f)) / 2);
+                                        ThingDef thingDef = hd.source.Verbs[0].defaultProjectile;
+                                        Thing thing = ThingMaker.MakeThing(thingDef);
+                                        float hdap = hd.source.Verbs[0].defaultProjectile.projectile.GetArmorPenetration(thing);
+                                        bool flag = hdap >= ava;
+                                        if (logging == true) Log.Message(string.Format("CheckHediff AP: {0} Vs AV: {1} = {2}", hdap, ava, flag));
+                                        if (flag)
+                                        {
+                                            return false;
+                                        }
+                                        else
+                                        {
+                                            return true;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        float ava = ((pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Blunt, 0f) + pawn.kindDef.race.statBases.GetStatValueFromList(StatDefOf.ArmorRating_Sharp, 0f)) / 2);
+                                        ThingDef thingDef = hd.source.Verbs[0].defaultProjectile;
+                                        Thing thing = ThingMaker.MakeThing(thingDef);
+                                        float hdap = hd.source.Verbs[0].defaultProjectile.projectile.GetArmorPenetration(thing);
+                                        bool flag = hdap >= ava;
+                                        if (logging == true) Log.Message(string.Format("CheckHediff AP: {0} Vs AV: {1} = {2}", hdap, ava, flag));
+                                        if (flag)
+                                        {
+                                            return false;
+                                        }
+                                        else
+                                        {
+                                            return true;
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    if (logging == true) Log.Message(string.Format("CheckHediff Parent is not a Pawn, this shouldnt happen"));
+                                }
+                            }
+                            else
+                            {
+                                if (logging == true) Log.Message(string.Format("CheckHediff Parent is null, this shouldnt happen"));
+                            }
+
+                        }
+                        else
+                        {
+                            if (logging == true) Log.Message(string.Format("source Is other thing defName: {0}", hd.source.defName));
+                        }
+                    }
+                    else
+                    {
+                        if (logging == true) Log.Message(string.Format("source defName: {0}", hd.source.defName));
+                    }
+                }
+                else
+                {
+                    if (logging == true) Log.Message(string.Format("source is Null defaulting to true"));
+                }
+
+                if (hd.sourceBodyPartGroup !=null)
+                {
+                    if (logging == true) Log.Message(string.Format("sourceBodyPartGroup defName: {0}", hd.sourceBodyPartGroup.defName));
+                }
+                else
+                {
+                    if (logging == true) Log.Message(string.Format("sourceBodyPartGroup is Null"));
+                }
+
+                if (hd.sourceHediffDef != null)
+                {
+                    if (logging == true) Log.Message(string.Format("sourceHediffDef defName: {0}", hd.sourceHediffDef.defName));
+                }
+                else
+                {
+                    if (logging == true) Log.Message(string.Format("sourceHediffDef is Null"));
+                }
+            }
+            return false;
+        }
+
+        public void TryRegrowBodyparts()
+        {
+            using (IEnumerator<BodyPartRecord> enumerator = this.pawn.GetFirstMatchingBodyparts(this.pawn.RaceProps.body.corePart, HediffDefOf.MissingBodyPart, AMXenoBiologisHediffDefOf.OG_Regenerating, (Hediff hediff) => hediff is Hediff_AddedPart).GetEnumerator())
+            {
+                while (enumerator.MoveNext())
+                {
+                    BodyPartRecord part = enumerator.Current;
+                    bool any = this.pawn.health.hediffSet.hediffs.Any((Hediff hediff) => hediff.Part == part && hediff.def == HediffDefOf.MissingBodyPart && HealableHediff(hediff));
+                    if (any)
+                    {
+                        Hediff hediff2 = this.pawn.health.hediffSet.hediffs.First((Hediff hediff) => hediff.Part == part && hediff.def == HediffDefOf.MissingBodyPart && HealableHediff(hediff));
+                        bool flag = hediff2 != null;
+                        if (flag)
+                        {
+                            this.pawn.health.RemoveHediff(hediff2);
+                            this.pawn.health.AddHediff(AMXenoBiologisHediffDefOf.OG_Regenerating, part, null, null);
+                            this.pawn.health.hediffSet.DirtyCache();
+                        }
+                    }
+
+                }
+            }
+        }
+
+        public void TryRemoveHediff()
+        {
+            bool any = this.pawn.health.hediffSet.hediffs.Any((Hediff hediff) => hediff.def != HediffDefOf.MissingBodyPart && HealableHediff(hediff));
+            if (any)
+            {
+                Hediff hediff2 = this.pawn.health.hediffSet.hediffs.First((Hediff hediff) => hediff.def != HediffDefOf.MissingBodyPart && HealableHediff(hediff));
+                bool flag = hediff2 != null;
+                if (flag)
+                {
+                    this.pawn.health.RemoveHediff(hediff2);
+                    this.pawn.health.hediffSet.DirtyCache();
+                }
+            }
+        }
+
+    }
+}

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--===================== Gun Drone ====================-->
+  <BodyDef>
+    <defName>OG_Tau_GunDrone</defName>
+    <label>Tau gun drone</label>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+    <corePart>
+      <def>OG_Tau_Drone_Hull</def>
+      <height>Middle</height>
+      <depth>Outside</depth>
+      <parts>
+        <li>
+          <def>OG_Tau_Drone_SensorVane</def>
+          <coverage>0.03</coverage>
+          <depth>Outside</depth>
+          <height>Top</height>
+        </li>
+        <li>
+          <def>OG_Tau_Drone_VisualSensor</def>
+          <coverage>0.03</coverage>
+          <depth>Outside</depth>
+          <height>Bottom</height>
+        </li>
+        <li>
+          <def>OG_Tau_Drone_Reactor</def>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+        <li>
+          <def>OG_Tau_Drone_Capacitor</def>
+          <coverage>0.03</coverage>
+          <depth>Inside</depth>
+        </li>
+		<li>
+		  <def>OG_Tau_Drone_Brain</def>
+		  <coverage>0.02</coverage>
+		  <depth>Inside</depth>
+		</li>
+		<li>
+          <def>OG_Tau_Drone_Mounting</def>
+          <coverage>0.06</coverage>
+          <depth>Outside</depth>
+          <height>Bottom</height>
+        </li>
+		<li>
+          <def>OG_Tau_Drone_Repulsor</def>
+          <coverage>0.06</coverage>
+          <height>Bottom</height>
+        </li>
+      </parts>
+	  <groups>
+		<li>HeadAttackTool</li>
+	  </groups>
+    </corePart>
+  </BodyDef>
+  
+</Defs>

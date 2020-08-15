@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <PawnKindDef Name="BaseTauDroneKind" Abstract="True">
+    <defaultFactionType>OG_Tau_Faction</defaultFactionType>
+	<itemQuality>Poor</itemQuality>
+    <aiAvoidCover>true</aiAvoidCover>
+    <destroyGearOnDrop>true</destroyGearOnDrop>
+  </PawnKindDef>
+  
+  <PawnKindDef ParentName="BaseTauDroneKind">
+    <defName>OG_Tau_GunDrone</defName>
+    <label>gun drone</label>
+    <labelPlural>gun drones</labelPlural>
+    <race>OG_Tau_GunDrone</race>
+    <combatPower>35</combatPower>
+    <lifeStages>
+      <li>
+		<bodyGraphicData>
+			<texPath>Things/Pawn/ToolUser/Tau/GunDrone</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>1.350</drawSize>
+			<color>(221,160,99)</color>
+			<colorTwo>(139,139,176)</colorTwo>
+			<shaderType>CutoutComplex</shaderType>
+			<shadowData>
+				<volume>(0.6, 0.8, 0.6)</volume>
+			</shadowData>
+		</bodyGraphicData>
+      </li>
+    </lifeStages>
+    <weaponMoney>9999~9999</weaponMoney>
+    <weaponTags>
+      <li>TPulseCarbineTwinLinked</li>
+    </weaponTags>
+  </PawnKindDef>
+
+	<!--==================== Tau - Twin linked Pulse Carbine (Drones only) =========================-->
+	<ThingDef ParentName="BaseGunWithQuality">
+		<defName>OGT_Gun_PulseCarbineTwinLinked</defName>
+		<label>twin-linked pulse carbine</label>
+		<description>Gun Drones are most commonly armed with twin-linked Pulse Carbines, a formidable weapon at short range, and are used by the Tau Fire Caste in combat alongside Fire Warriors as a form of fire support. Indeed, Gun Drones are the most common type of Drone found deployed by the Tau alongside their forces in battle. They are also ideal for many military applications that involve dangerous or tedious duties.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Tau/PulseCarbine</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<soundInteract>Interact_Autopistol</soundInteract>
+		<statBases>
+			<Mass>1.0</Mass>
+			<MarketValue>9990</MarketValue>
+			<AccuracyTouch>0.30</AccuracyTouch>
+			<AccuracyShort>0.40</AccuracyShort>
+			<AccuracyMedium>0.50</AccuracyMedium>
+			<AccuracyLong>0.20</AccuracyLong>
+			<RangedWeapon_Cooldown>1.85</RangedWeapon_Cooldown>
+		</statBases>
+		<equippedStatOffsets>
+			<ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
+		</equippedStatOffsets>
+		<comps>  
+			<li Class="OgsCompOversizedWeapon.CompProperties_OversizedWeapon">
+				<!--
+				<verticalFlipOutsideCombat>true</verticalFlipOutsideCombat>
+				-->	
+				<isDualWeapon>true</isDualWeapon>
+				<verticalFlipNorth>true</verticalFlipNorth>
+				<angleAdjustmentNorth>60</angleAdjustmentNorth>
+				<angleAdjustmentEast>-90</angleAdjustmentEast>
+				<angleAdjustmentWest>90</angleAdjustmentWest>
+				<angleAdjustmentSouth>60</angleAdjustmentSouth>
+				<northOffset>0.15,0.0,0.35</northOffset>
+				<eastOffset>0.0,1.0,0.15</eastOffset>
+				<westOffset>0.0,1.0,0.15</westOffset>
+				<southOffset>0.25,1.0,0.30</southOffset>
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
+				<VerbEntries>
+					<li>
+						<TwinLinked>true</TwinLinked>
+					</li>
+				</VerbEntries>
+			</li> 
+		</comps>
+		<verbs>
+			<li>
+				<verbClass>Verb_Shoot</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>OGT_Bullet_Pulse</defaultProjectile>
+				<warmupTime>0.75</warmupTime>
+				<range>20</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<burstShotCount>4</burstShotCount>
+				<soundCast>OG_Plasma_Pistol_Sound</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>8</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			</li>
+		</verbs>
+		<techLevel>Spacer</techLevel>
+		<weaponTags>
+			<li>TPulseCarbineTwinLinked</li>
+		</weaponTags>
+	</ThingDef>
+
+</Defs>

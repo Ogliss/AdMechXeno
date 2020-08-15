@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ============================== Big threats ============================== -->  
+  <IncidentDef>
+    <defName>OGN_MonolithAppears</defName>
+    <label>a strange monolith has appeared</label>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_Monolith</workerClass>
+    <letterLabel>Monolith</letterLabel>
+    <letterText>A Monolith is a massive mobile fortress used by the Necrons as their primary planetary assault craft. A Monolith combines the properties of a transport craft, armoured destroyer and icon of undying Necron power. Its ponderous form can float across a battlefield upon its anti-gravitic engines, whilst its crystal core pulses with sickly energy that can be manipulated into powerful beams of Gauss lightning which whip out from its weapon mounts.\n\nWhen its massive silhouette looms over a battlefield, it will lay waste to entire armies with strobing torrents of gauss fire and the deafening crack of its particle whip.Few armies can stand long before the immense firepower of a Monolith. Living troops are reduced to their component atoms by its punishing gauss flux arcs, while tanks rupture and explode in showers of molten steel as it focuses its energies upon them. By contrast, enemy ordnance has little effect on the shell of a Monolith. When damaged, the war machine’s Necrodermis armour reflexively enacts self-repairs; sparking rents in its hull are sealed by living metal and impact craters smooth over as the reactive substance seeks to reassert its original form.</letterText>
+    <letterDef>ThreatSmall</letterDef>
+    <baseChance>0.50</baseChance>
+    <minRefireDays>14</minRefireDays>
+	<earliestDay>90</earliestDay>
+    <tags>
+      <li>NecronShip</li>
+    </tags>
+    <refireCheckTags>
+      <li>NecronShip</li>
+    </refireCheckTags>
+    <category>ThreatBig</category>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>1500</minThreatPoints>
+    <shipPart>NecronMonolith</shipPart>
+    <tale>ShipPartCrash</tale>
+  </IncidentDef>
+    
+  <IncidentDef>
+    <defName>OG_Ork_Rok_Crash</defName>
+    <label>Rok Impact</label>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_CrashedShip</workerClass>
+    <letterLabel>Rok Impact</letterLabel>
+    <letterText>A large piece of an An Ork Rok is the most feared form of Ork spacecraft. A Rok was once an asteroid that has been hollowed out by Ork Mekboyz and then outfitted with Ork-made gunz, plasma engines, targeting systems and whatever other large, powerful weapons the Orks can get their green hands on.\n\nRoks possess no Warp-Drives and so are incapable of Warp travel, instead drifting from star system to star system as the solar winds dictate. It is common for Ork WAAAGHs! that are large enough to possess Roks to use these massive spacecraft as one-way reentry vehicles, positioning them to slam down onto the surface of a world the Orks intended to invade.\n\nWhile this means the Rok cannot be reused to get back into space, it does cause a horrific amount of damage to whatever world the Orks invade, greatly pleasing the Greenskins and weakening the defences of the planet's military forces.</letterText>
+    <letterDef>ThreatSmall</letterDef>
+    <baseChance>2.0</baseChance>
+    <minRefireDays>15</minRefireDays>
+    <tags>
+      <li>OrkShip</li>
+    </tags>
+    <refireCheckTags>
+      <li>OrkShip</li>
+    </refireCheckTags>
+    <category>ThreatBig</category>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>450</minThreatPoints>
+    <shipPart>OrkRok</shipPart>
+    <tale>ShipPartCrash</tale>
+  </IncidentDef>
+  
+  <IncidentDef>
+    <defName>OG_OG_Space_Hulk_Part_Crash</defName>
+    <label>Space hulk part impact</label>
+    <targetTags>
+      <li>Map_PlayerHome</li>
+    </targetTags>
+    <workerClass>IncidentWorker_CrashedShip</workerClass>
+    <letterLabel>Space hulk part Impact</letterLabel>
+    <letterText>A large piece of an ancient Space hulk has crashed nearby.\n\nIt's mysterious influence will kill all plants in an expanding circle around itself.\n\nDestroy it as soon as possible. But beware - it will probably defend itself.</letterText>
+    <letterDef>ThreatSmall</letterDef>
+    <baseChance>2.0</baseChance>
+    <minRefireDays>15</minRefireDays>
+    <tags>
+      <li>CrashedSpaceHulk</li>
+    </tags>
+    <refireCheckTags>
+      <li>CrashedSpaceHulk</li>
+    </refireCheckTags>
+    <category>ThreatBig</category>
+    <pointsScaleable>true</pointsScaleable>
+    <minThreatPoints>850</minThreatPoints>
+    <shipPart>SpaceHulkPart</shipPart>
+    <tale>ShipPartCrash</tale>
+  </IncidentDef>
+  
+</Defs>

@@ -1,0 +1,132 @@
+﻿using AdeptusMechanicus;
+using System;
+using System.Collections.Generic;
+using Verse;
+using Verse.AI;
+
+namespace RimWorld
+{
+    // Token: 0x02000082 RID: 130
+    public class JobDriver_TombSpyderRepair : JobDriver
+    {
+        // Token: 0x170000B6 RID: 182
+        // (get) Token: 0x06000371 RID: 881 RVA: 0x0001EEFC File Offset: 0x0001D2FC
+        protected Pawn DamagedNecron
+        {
+            get
+            {
+                if (this.job.GetTarget(TargetIndex.A).Thing is Corpse corpse)
+                {
+                    return corpse.InnerPawn;
+                }
+                return (Pawn)this.job.GetTarget(TargetIndex.A).Thing;
+            }
+        }
+        
+        protected Comp_NecronOG _Necron
+        {
+            get
+            {
+                return DamagedNecron.TryGetComp<Comp_NecronOG>();
+            }
+        }
+
+        // Token: 0x06000391 RID: 913 RVA: 0x00024554 File Offset: 0x00022954
+        public override void Notify_Starting()
+        {
+            base.Notify_Starting();
+        }
+
+        // Token: 0x06000372 RID: 882 RVA: 0x0001EF20 File Offset: 0x0001D320
+        public override bool TryMakePreToilReservations(bool errorOnFailed)
+        {
+            Pawn pawn = this.pawn;
+            LocalTargetInfo target = this.job.targetA;
+            Job job = this.job;
+            return pawn.Reserve(target, job, 1, -1, null, errorOnFailed);
+        }
+
+        // Token: 0x06000373 RID: 883 RVA: 0x0001EF58 File Offset: 0x0001D358
+        protected override IEnumerable<Toil> MakeNewToils()
+        {
+            this.FailOnIncapable(PawnCapacityDefOf.Manipulation);
+            yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);
+            if (_Necron==null)
+            {
+            //    log.message("ERROR!!!! _Necron null");
+                yield break;
+            }
+            if (!_Necron.PawnHediffs.NullOrEmpty())
+            {
+                if (_Necron.PawnHediffs.Any(x => x.def != HediffDefOf.MissingBodyPart))
+                {
+                    this.useDuration = (int)(50 * DamagedNecron.BodySize);
+                }
+                else if (_Necron.PawnHediffs.Any(x => x.def == HediffDefOf.MissingBodyPart))
+                {
+                    this.useDuration = (int)(300 * DamagedNecron.BodySize);
+                }
+                else
+                {
+                    this.useDuration = (int)(600 * DamagedNecron.BodySize);
+                }
+                Toil prepare = Toils_General.Wait(this.useDuration, TargetIndex.A);
+                prepare.NPCWithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
+                prepare.FailOnDespawnedNullOrForbidden(TargetIndex.A);
+                prepare.WithEffect(EffecterDefOf.ConstructMetal, TargetIndex.A);
+                prepare.PlaySustainerOrSound(() => SoundDefOf.Crunch);
+                yield return prepare;
+                Toil use = new Toil();
+                use.initAction = delegate ()
+                {
+                    Pawn Spyder = use.actor;
+                    if (_Necron != null)
+                    {
+                        if (DamagedNecron.Dead)
+                        {
+                            _Necron.TryRevive(true);
+                        }
+                        else
+                        if (_Necron.PawnHediffs.Any(x => x.def != HediffDefOf.MissingBodyPart && x.def.isBad && x.def.hediffClass == typeof(Hediff_Injury)))
+                        {
+                            _Necron.TryRemoveHediff(true);
+                        }
+                        else
+                        if (_Necron.PawnHediffs.Any(x => x.def == HediffDefOf.MissingBodyPart && x.def.isBad))
+                        {
+                            _Necron.TryRegrowBodyparts(true);
+                        }
+                        else
+                        {
+                        //    log.message("ERROR!!!! No Action Taken");
+                        }
+                    }
+                };
+                use.defaultCompleteMode = ToilCompleteMode.Instant;
+                yield return use;
+            }
+            if (DamagedNecron.Dead)
+            {
+                this.useDuration = (int)(600 * DamagedNecron.BodySize);
+                Toil prepare = Toils_General.Wait(this.useDuration, TargetIndex.A);
+                prepare.NPCWithProgressBarToilDelay(TargetIndex.A, false, -0.5f);
+                prepare.FailOnDespawnedNullOrForbidden(TargetIndex.A);
+                prepare.WithEffect(EffecterDefOf.ConstructMetal, TargetIndex.A);
+                prepare.PlaySustainerOrSound(() => SoundDefOf.Crunch);
+                yield return prepare;
+                Toil use = new Toil();
+                use.initAction = delegate ()
+                {
+                    Pawn Spyder = use.actor;
+                    _Necron.TryRevive(true);
+
+                };
+                use.defaultCompleteMode = ToilCompleteMode.Instant;
+                yield return use;
+            }
+            yield break;
+        }
+
+        private int useDuration = -1;
+    }
+}
