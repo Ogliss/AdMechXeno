@@ -12,7 +12,7 @@ using AdeptusMechanicus.ExtensionMethods;
 namespace AdeptusMechanicus.HarmonyInstance
 {
     [HarmonyPatch(typeof(AMAMod), "ModLoaded")]
-    public static class AMXB_AMAMod_SettingsCategory_Patch
+    public static class AMAMod_SettingsCategory_Patch
     {
         [HarmonyPostfix]
         public static void ModsLoaded(ref AMAMod __instance, ref string __result)
@@ -22,7 +22,7 @@ namespace AdeptusMechanicus.HarmonyInstance
     }
 
     [HarmonyPatch(typeof(AMAMod), "XenobiologisSettings")]
-    public static class AMXB_AMMod_XenobiologisSettings_Patch
+    public static class AMMod_XenobiologisSettings_Patch
     {
         [HarmonyPrefix]
         public static bool XenobiologisSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, ref float xenobiologisMenuLenght)
@@ -78,7 +78,7 @@ namespace AdeptusMechanicus.HarmonyInstance
     }
 
     [HarmonyPatch(typeof(AMAMod), "ImperialSettings")]
-    public static class AMXB_AMMod_ImperialSettings_Patch
+    public static class AMMod_ImperialSettings_Patch
     {
         [HarmonyPrefix]
         public static bool ImperialSettings_Prefix(ref AMAMod __instance ,ref Listing_Standard listing_Main, Rect rect, ref Rect inRect, float num, float num2)
@@ -156,7 +156,7 @@ namespace AdeptusMechanicus.HarmonyInstance
     }
 
     [HarmonyPatch(typeof(AMAMod), "ChaosSettings")]
-    public static class AMXB_AMMod_ChaosSettings_Patch
+    public static class AMMod_ChaosSettings_Patch
     {
         [HarmonyPrefix]
         public static void ChaosSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
@@ -234,7 +234,7 @@ namespace AdeptusMechanicus.HarmonyInstance
     }
 
     [HarmonyPatch(typeof(AMAMod), "EldarSettings")]
-    public static class AMXB_AMMod_EldarSettings_Patch
+    public static class AMMod_EldarSettings_Patch
     {
         [HarmonyPrefix]
         public static bool EldarSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
@@ -294,7 +294,7 @@ namespace AdeptusMechanicus.HarmonyInstance
     }
 
     [HarmonyPatch(typeof(AMAMod), "DarkEldarSettings")]
-    public static class AMXB_AMMod_DarkEldarSettings_Patch
+    public static class AMMod_DarkEldarSettings_Patch
     {
         [HarmonyPrefix]
         public static void DarkEldar_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
@@ -337,7 +337,7 @@ namespace AdeptusMechanicus.HarmonyInstance
     }
 
     [HarmonyPatch(typeof(AMAMod), "OrkSettings")]
-    public static class AMXB_AMMod_OrkSettings_Patch
+    public static class AMMod_OrkSettings_Patch
     {
         [HarmonyPrefix]
         public static void OrkSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
@@ -392,7 +392,7 @@ namespace AdeptusMechanicus.HarmonyInstance
     }
 
     [HarmonyPatch(typeof(AMAMod), "TauSettings")]
-    public static class AMXB_AMMod_TauSettings_Patch
+    public static class AMMod_TauSettings_Patch
     {
         [HarmonyPrefix]
         public static void TauSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
@@ -463,7 +463,7 @@ namespace AdeptusMechanicus.HarmonyInstance
     }
 
     [HarmonyPatch(typeof(AMAMod), "NecronSettings")]
-    public static class AMXB_AMMod_NecronSettings_Patch
+    public static class AMMod_NecronSettings_Patch
     {
         [HarmonyPrefix]
         public static void NecronSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
@@ -520,7 +520,7 @@ namespace AdeptusMechanicus.HarmonyInstance
     }
 
     [HarmonyPatch(typeof(AMAMod), "TyranidSettings")]
-    public static class AMXB_AMMod_TyranidSettings_Patch
+    public static class AMMod_TyranidSettings_Patch
     {
         [HarmonyPrefix]
         public static void TyranidSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)

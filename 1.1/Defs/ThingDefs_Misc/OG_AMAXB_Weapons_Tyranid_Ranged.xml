@@ -322,7 +322,7 @@
   </ThingDef>
  
   <!-- ====================== Barbed Strangler Seed ===================== -->
- <ThingDef Class="ThingDef_BulletExplosiveOG" ParentName="BaseBullet">
+ <ThingDef ParentName="BaseBullet">
 	<defName>OGTY_Bullet_BarbedStrangler</defName>
     <label>strangler seed</label>
     <graphicData>
@@ -340,9 +340,9 @@
 		<stoppingPower>0.5</stoppingPower>
 		<soundExplode>OG_BarbedStranglerBlast_Sound</soundExplode>
 		<speed>75</speed>
+	 	<explosionRadius>2.55</explosionRadius>
 	</projectile>
-	<thingClass>Projectile_ExplosiveOG</thingClass>
-	<explosionradius>3.5</explosionradius>
+	<thingClass>AdeptusMechanicus.Bullet_Explosive</thingClass>
   </ThingDef>
 
   <!-- ====================== Barbed Strangler ===================== -->

@@ -9,7 +9,7 @@ namespace AdeptusMechanicus.HarmonyInstance
 {
     // SettlementDefeatUtility.IsDefeated
     [HarmonyPatch(typeof(SettlementDefeatUtility), "IsDefeated")]
-    public static class AMXB_SettlementDefeatUtility_IsDefeated_Patch
+    public static class SettlementDefeatUtility_IsDefeated_Patch
     {
         [HarmonyPostfix]
         public static void IsDefeatedPostfix(Map map, Faction faction, ref bool __result)

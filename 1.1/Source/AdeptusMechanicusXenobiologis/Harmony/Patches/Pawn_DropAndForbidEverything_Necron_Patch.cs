@@ -5,14 +5,12 @@ using HarmonyLib;
 namespace AdeptusMechanicus.HarmonyInstance
 {
     // Disallows stripping of the Wristblade
-    [HarmonyPatch(typeof(Pawn), "AnythingToStrip")]
-    public static class AMXB_Pawn_AnythingToStrip_Necron_Patch
+    [HarmonyPatch(typeof(Pawn), "DropAndForbidEverything")]
+    public static class Pawn_DropAndForbidEverything_Necron_Patch
     {
-        [HarmonyPostfix]
-        public static void Postfix(Pawn __instance, ref bool __result)
+        public static bool Prefix(Pawn __instance)
         {
-            __result = __result && __instance.RaceProps.FleshType!=OGNecronDefOf.OG_Flesh_Construct_Necron;
-
+            return __instance.RaceProps.FleshType != OGNecronDefOf.OG_Flesh_Construct_Necron;
         }
     }
     /*

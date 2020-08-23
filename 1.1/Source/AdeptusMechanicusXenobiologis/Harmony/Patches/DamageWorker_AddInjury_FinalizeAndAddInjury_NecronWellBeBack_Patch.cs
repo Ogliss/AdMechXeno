@@ -7,7 +7,7 @@ namespace AdeptusMechanicus.HarmonyInstance
 {
     // DamageWorker_AddInjury.FinalizeAndAddInjury
     [HarmonyPatch(typeof(DamageWorker_AddInjury), "FinalizeAndAddInjury", new Type[] { typeof(Pawn), typeof(Hediff_Injury), typeof(DamageInfo), typeof(DamageWorker.DamageResult) })]
-    public static class AMXB_DamageWorker_AddInjury_FinalizeAndAddInjury_NecronWellBeBack_Patch 
+    public static class DamageWorker_AddInjury_FinalizeAndAddInjury_NecronWellBeBack_Patch
     {
         [HarmonyPostfix]
         public static void FinalizeAndAddInjuryPostfix(DamageWorker_AddInjury __instance, Pawn pawn, Hediff_Injury injury, DamageInfo dinfo, DamageWorker.DamageResult result)

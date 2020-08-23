@@ -8,7 +8,7 @@ namespace AdeptusMechanicus.HarmonyInstance
 {
     // ScenarioLister.ScenariosInCategory
  //   [HarmonyPatch(typeof(ScenarioLister), "ScenariosInCategory")]
-    public static class AMXB_Page_ScenarioLister_ScenariosInCategory_Patch
+    public static class Page_ScenarioLister_ScenariosInCategory_Patch
     {
         [HarmonyPostfix]
         public static IEnumerable<Scenario> ScenariosInCategoryPrefix(IEnumerable<Scenario> __result, ScenarioCategory cat)

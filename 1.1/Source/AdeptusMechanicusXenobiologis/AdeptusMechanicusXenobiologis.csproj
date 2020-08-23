@@ -35,17 +35,18 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Harmony\Patches\AMXB_DamageWorker_AddInjury_FinalizeAndAddInjury_NecronWellBeBack_Patch.cs" />
-    <Compile Include="Harmony\Patches\AMXB_Pawn_DropAndForbidEverything_Necron_Patch.cs" />
-    <Compile Include="Harmony\Patches\AMXB_Corpse_get_ShouldVanish_NecronComps_Patch.cs" />
-    <Compile Include="Harmony\Patches\AMXB_Pawn_GetGizmos_NecronComps_Patch.cs" />
-    <Compile Include="Harmony\Patches\AMXB_SettlementDefeatUtility_IsDefeated_Patch.cs" />
-    <Compile Include="Harmony\Patches\AMXB_Page_ScenarioLister_ScenariosInCategory_Patch.cs" />
-    <None Include="Harmony\Patches\AM_Verb_TryStartCastOn_SporeMine_Patch.cs.bak" />
+    <Compile Include="Harmony\Patches\DamageWorker_AddInjury_FinalizeAndAddInjury_NecronWellBeBack_Patch.cs" />
+    <Compile Include="Harmony\Patches\Pawn_DropAndForbidEverything_Necron_Patch.cs" />
+    <Compile Include="Harmony\Patches\Corpse_get_ShouldVanish_NecronComps_Patch.cs" />
+    <Compile Include="Harmony\Patches\ThingWithComps_GetGizmos_NecronCorpseComps_Patch.cs" />
+    <Compile Include="Harmony\Patches\SettlementDefeatUtility_IsDefeated_Patch.cs" />
+    <Compile Include="Harmony\Patches\Page_ScenarioLister_ScenariosInCategory_Patch.cs" />
+    <None Include="Harmony\Patches\Verb_TryStartCastOn_SporeMine_Patch.cs.bak" />
+    <Compile Include="Harmony\Patches\Pawn_GetGizmos_NecronComps_Patch.cs" />
     <Compile Include="Racial\Necron\NecronExtensions.cs" />
-    <Compile Include="Harmony\Patches\Settings\AMXB_AMAMod_ModOptions_Patches.cs" />
-    <Compile Include="Harmony\Patches\AMXB_Pawn_AnythingToStrip_Necron_Patch.cs" />
-    <Compile Include="Harmony\Patches\AMXB_Pawn_HealthTracker_MakeDowned_Necron_Patch.cs" />
+    <Compile Include="Harmony\Patches\Settings\AMAMod_ModOptions_Patches.cs" />
+    <Compile Include="Harmony\Patches\Pawn_AnythingToStrip_Necron_Patch.cs" />
+    <Compile Include="Harmony\Patches\Pawn_EquipmentTracker_DropAllEquipment_Necron_Patch.cs" />
     <Compile Include="Racial\AdeptusMechanicus\OGAdeptusMechanicusDefOf.cs" />
     <Compile Include="AMXenoBiologisHediffDefOf.cs" />
     <Compile Include="Racial\AdeptusMilitarum\OGAdeptusMilitarumDefOf.cs" />
@@ -77,7 +78,7 @@
     <Compile Include="AMXenoBiologisJobDefOf.cs" />
     <Compile Include="AMXenoBiologisDutyDefOf.cs" />
     <Compile Include="Racial\Chaos\JobGiver_OGChaosDeamon_Ranged.cs" />
-    <Compile Include="Harmony\Patches\AMXB_FactionGenerator_GenerateFactionsIntoWorld_Patch.cs" />
+    <Compile Include="Harmony\Patches\FactionGenerator_GenerateFactionsIntoWorld_Patch.cs" />
     <Compile Include="Hediff_SelfRemoving.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="JobGiver_OGANXBAttackBuilding.cs" />

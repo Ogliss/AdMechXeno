@@ -16,7 +16,7 @@ using AdeptusMechanicus.ExtensionMethods;
 namespace AdeptusMechanicus.HarmonyInstance
 {// LocalTargetInfo castTarg, LocalTargetInfo destTarg, bool surpriseAttack = false, bool canHitNonTargetPawns = true
     [HarmonyPatch(typeof(Verb), "TryStartCastOn", new Type[] { typeof(LocalTargetInfo), typeof(LocalTargetInfo), typeof(bool), typeof(bool) })]
-    public static class AM_Verb_TryStartCastOn_SporeMine_Patch
+    public static class Verb_TryStartCastOn_SporeMine_Patch
     {
         [HarmonyPrefix]
         public static bool Prefix(ref Verb __instance, LocalTargetInfo castTarg, bool __result)
