@@ -53,10 +53,13 @@ namespace RimWorld
         // Token: 0x060005B8 RID: 1464 RVA: 0x00037B7C File Offset: 0x00035F7C
         private Job MeleeAttackJob(Pawn pawn, Thing target)
         {
+            Rand.PushState();
+            int expiryInterval = Rand.Range(420, 900);
+            Rand.PopState();
             return new Job(JobDefOf.AttackMelee, target)
             {
                 maxNumMeleeAttacks = 1,
-                expiryInterval = Rand.Range(420, 900),
+                expiryInterval = expiryInterval,
                 attackDoorIfTargetLost = true
             };
         }

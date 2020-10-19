@@ -278,7 +278,7 @@
 					<linkedBodyPartsGroup>RightBlade</linkedBodyPartsGroup>
 					<armorPenetration>0.095</armorPenetration>
 				</li>
-				<li Class="CombatExtended.ToolCE">
+				<!--li Class="CombatExtended.ToolCE">
 					<label>head</label>
 					<capacities>
 						<li>Blunt</li>
@@ -288,7 +288,7 @@
 					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 					<chanceFactor>0.2</chanceFactor>
 					<armorPenetration>0.179</armorPenetration>
-				</li>
+				</li-->
 			</tools>
 		</value>
 	</li>

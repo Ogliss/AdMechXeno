@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Defs\Bodies\Bodies_Humanlike.xml -->
+	<!-- Human Humanoid Alien Races 2.0 -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<li Class="PatchOperationFindMod">
+				<mods>
+					<li>Humanoid Alien Races 2.0</li>
+				</mods>
+				<match Class="PatchOperationAdd">
+					<success>Always</success>
+					<xpath>Defs</xpath>
+					<value>
+					
+					  <AlienRace.ThingDef_AlienRace ParentName="HumanRace" Name="OG_Ogryn_Base">
+						<defName>OG_Abhuman_Ogryn</defName>
+						<alienRace>
+							<generalSettings>
+								<alienPartGenerator>
+									<useGenderedHeads>false</useGenderedHeads>
+									<aliencrowntypes Inherit="false">
+										<li>Average_Normal</li>
+									</aliencrowntypes>
+									<headOffset>(0.0, 0.15)</headOffset>
+									<customHeadDrawSize>(1.00, 1.00)</customHeadDrawSize>
+									<!-- <customPortraitHeadDrawSize>(0.7, 0.7)</customPortraitHeadDrawSize> -->
+									<useGenderedBodies>false</useGenderedBodies>
+									<alienbodytypes Inherit="false">
+										<li>Hulk</li>
+									</alienbodytypes>
+									<customDrawSize>(1.75, 1.75)</customDrawSize>
+									<!-- <customPortraitDrawSize>(0.8, 0.8)</customPortraitDrawSize> -->
+									<bodyAddons>
+									</bodyAddons>
+								</alienPartGenerator>
+							</generalSettings>
+							<graphicPaths Inherit="false">
+								<li>
+									<!-- <body>Things/Pawn/Humanlike/Ogryn/Bodies/</body> -->
+									<head>Things/Pawn/Humanlike/Ogryn/Heads/</head>
+								</li>
+							</graphicPaths>
+							<hairSettings>
+								<hasHair>false</hasHair>
+							</hairSettings>
+							<thoughtSettings>
+								<cannotReceiveThoughts>
+								</cannotReceiveThoughts>
+								<canStillReceiveThoughts>
+								</canStillReceiveThoughts>
+							</thoughtSettings>
+							<relationSettings>
+								<renamer>
+								</renamer>
+							</relationSettings>
+							<raceRestriction>
+								<apparelList>
+								</apparelList>
+								<whiteApparelList>
+								</whiteApparelList>
+								<weaponList>
+								</weaponList>
+								<whiteWeaponList>
+								</whiteWeaponList>
+								<buildingList>
+								</buildingList>
+								<whiteBuildingList>
+								</whiteBuildingList>
+								<recipeList>
+								</recipeList>
+								<plantList>
+								</plantList>
+								<whitePlantList>
+								</whitePlantList>
+								<traitList>
+								</traitList>
+								<whiteTraitList>
+								</whiteTraitList>
+								<foodList>
+								</foodList>
+								<petList>
+								</petList>
+								<conceptList>
+								</conceptList>
+								<workGiverList>
+								</workGiverList>
+							</raceRestriction>
+						</alienRace>
+					  </AlienRace.ThingDef_AlienRace>
+
+					</value>
+				</match>
+				<nomatch Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+						  <xpath>Defs/ThingDef[@Name="HumanRace"]</xpath>
+						  <success>Invert</success>
+						</li>
+						<li Class="PatchOperationAttributeSet">
+						  <xpath>/Defs/ThingDef[defName = "Human"]</xpath>
+							<attribute>Name</attribute>
+							<value>HumanRace</value>
+						</li>
+						<li Class="PatchOperationAdd">
+						  <xpath>Defs</xpath>
+							<value>
+							
+							  <ThingDef ParentName="HumanRace" Name="OG_Ogryn_Base">
+								<defName>OG_Abhuman_Ogryn</defName>
+							  </ThingDef>
+							  
+							</value>
+						</li>
+					</operations>
+				</nomatch>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>
+			  /Defs/ThingDef[@Name="OG_Ogryn_Base"] |
+			  /Defs/AlienRace.ThingDef_AlienRace[@Name="OG_Ogryn_Base"]
+			  </xpath>
+				<value>
+					
+					<label>ogryn</label>
+					<description>The dim-witted human sub-species called Ogryns (Homo sapiens gigantus) evolved on high-gravity, low-temperature prison planets. They are huge and unusually stupid for a human subrace, but unquestionably loyal to the Imperium once introduced to the faith of the Imperial Cult. Ogryns are used as the Imperial Guard's shock troops, and for this role, they are commonly outfitted with the Ripper Gun. The Ripper Gun is a weapon simple enough for them to operate, although some feral Ogryn cannot even fathom this device. Ogryn are also frequently used as bodyguards by Imperial Commanders.</description>
+					<statBases>
+					  <MarketValue>2500</MarketValue>
+					  <MoveSpeed>3.5</MoveSpeed>
+					  <ComfyTemperatureMin>-4</ComfyTemperatureMin>
+					  <ComfyTemperatureMax>32</ComfyTemperatureMax>
+					  <LeatherAmount>150</LeatherAmount>
+					  <!--
+					  <Flammability>1.0</Flammability>
+					  -->
+					</statBases>
+					<tools>
+					
+					</tools>
+					<race>
+					  <useMeatFrom>Human</useMeatFrom>
+					<!--
+					  <thinkTreeMain>Humanlike</thinkTreeMain>
+					  <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+					  <intelligence>Humanlike</intelligence>
+					  <makesFootprints>true</makesFootprints>
+					  -->
+					  <leatherDef>Leather_Human</leatherDef>
+					  <nameCategory>HumanStandard</nameCategory>
+					  <lifeExpectancy>50</lifeExpectancy>
+					  <body>Human</body>
+					  <baseBodySize>3</baseBodySize>
+					  <baseHealthScale>3</baseHealthScale>
+					  <foodType>OmnivoreHuman</foodType>
+					  <!--
+					  <gestationPeriodDays>45</gestationPeriodDays>
+					  <meatMarketValue>0.8</meatMarketValue>
+					  <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+					  <manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
+					  -->
+					  <!--
+					  <lifeStageAges>
+						<li>
+						  <def>HumanlikeBaby</def>
+						  <minAge>0</minAge>
+						</li>
+						<li>
+						  <def>HumanlikeToddler</def>
+						  <minAge>1.2</minAge>
+						</li>
+						<li>
+						  <def>HumanlikeChild</def>
+						  <minAge>4</minAge>
+						</li>
+						<li>
+						  <def>HumanlikeTeenager</def>
+						  <minAge>13</minAge>
+						</li>
+						<li>
+						  <def>HumanlikeAdult</def>
+						  <minAge>18</minAge>
+						</li>
+					  </lifeStageAges>
+					  -->
+					  <specialShadowData>
+					  <!--
+						<volume>(0.3, 0.8, 0.4)</volume>
+						<offset>(0,0,-0.3)</offset>
+						-->
+					  </specialShadowData>
+					  <ageGenerationCurve>
+						<points>
+						  <li>(14,0)</li>
+						  <li>(16,100)</li>
+						  <li>(50,100)</li>
+						  <li>(60,30)</li>
+						  <li>(70,18)</li>
+						  <li>(80,10)</li>
+						  <li>(90,3)</li>
+						  <li>(100,0)</li>
+						</points>
+					  </ageGenerationCurve>
+					  <hediffGiverSets Inherit="false">
+						<li>Human</li>
+					  <!--
+						<li>OrganicStandard</li>
+					  -->
+					  </hediffGiverSets>
+					</race>
+					<recipes>
+					
+					</recipes>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/RecipeDef[@Name="SurgeryInstallImplantBase"]/recipeUsers</xpath>
+				<value>
+					<li>OG_Abhuman_Ogryn</li>
+				</value>
+			</li>
+			<li Class="PatchOperationAdd">
+			  <xpath>/Defs/RecipeDef[@Name="SurgeryRemoveImplantBase"]/recipeUsers</xpath>
+				<value>
+					<li>OG_Abhuman_Ogryn</li>
+				</value>
+			</li>
+		</operations>	
+	</Operation>
+	 
+</Patch>

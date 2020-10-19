@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef Name="TurretBase" Abstract="True">
+    <tickerType>Normal</tickerType>
+    <category>Building</category>
+    <thingClass>Building</thingClass>
+    <useHitPoints>false</useHitPoints>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <selectable>false</selectable>
+    <drawerType>MapMeshAndRealTime</drawerType>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <repairEffect>Repair</repairEffect>
+    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+		<statBases>
+			<SellPriceFactor>0.00</SellPriceFactor>
+		</statBases>
+  </ThingDef>
+
+    <ThingDef ParentName="TurretBase">
+    <defName>OGN_Turret_MonolithGuassFluxArc</defName>
+    <label>gauss flux arc</label>
+    <description>A gauss flux arc arry turret. Its dumb AI brain can't be directly controlled, so beware of friendly fire.</description>
+	<thingClass>Building_TurretGun</thingClass>
+    <graphicData>
+      <texPath>Things/Buildings/DummyTexture</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stealable>false</stealable>
+    <rotatable>false</rotatable>
+    <selectable>false</selectable>
+    <statBases>
+      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+    </statBases>
+    <tickerType>Normal</tickerType>
+    <comps>
+	
+    </comps>
+    <passability>Standable</passability>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+    <building>
+	  <ai_combatDangerous>false</ai_combatDangerous>
+      <turretGunDef>OGN_TurretGun_MonolithGuassFluxArc</turretGunDef>
+      <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
+      <turretBurstWarmupTime>1</turretBurstWarmupTime>
+	  
+	  <isInert>true</isInert>
+      <isEdifice>false</isEdifice>
+      <deconstructible>false</deconstructible>
+    </building>
+    <placeWorkers>
+      <li>PlaceWorker_TurretTop</li>
+    </placeWorkers>
+  </ThingDef>
+
+	<!--==================== Necron - Gauss Flux Arc =========================-->
+  <ThingDef ParentName="OG_Bullet_LaserGeneric" Class="AdeptusMechanicus.LaserBeamDef">
+    <defName>OGN_Bullet_MonolithGuassFluxArc</defName>
+    <label>guass blast</label>
+    
+    <textures>
+      <li>Things/Projectile/GaussBoltSml</li>
+    </textures>
+    <seam>0</seam>
+
+    <projectile>
+		<damageDef>OG_N_Gauss_Damage</damageDef>
+		<damageAmountBase>8</damageAmountBase>
+		<armorPenetrationBase>0.16</armorPenetrationBase>
+		<stoppingPower>1.00</stoppingPower>
+    </projectile>
+  </ThingDef>
+
+	<ThingDef ParentName="BaseWeaponTurret" Class="AdeptusMechanicus.LaserGunDef">
+		<defName>OGN_TurretGun_MonolithGuassFluxArc</defName>
+		<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
+		<label>gauss flux arc (N)</label>
+		<description>A Gauss Flux Arc is a type of Necron Gauss Weapon that can strip a target down molecule by molecule, reducing it to its constituent atoms in a matter of seconds. Gauss Flux Arcs consist of linked batteries of three Gauss Flayers, which each feature a single barrel that leads to a transparent conduit containing the unholy and unknown viridian energy the weapon fires, and an axe-like bayonet underneath the muzzle.</description>
+		<graphicData>
+			<texPath>Things/Item/Equipment/WeaponRanged/Necron/GaussFlayer</texPath>
+			<graphicClass>Graphic_Single</graphicClass>		
+		</graphicData>
+		<soundInteract>Interact_Autopistol</soundInteract>
+		<statBases>
+		  <DeteriorationRate>0</DeteriorationRate>
+		  <Mass>5</Mass>
+		  <Flammability>0</Flammability>
+			<AccuracyTouch>0.80</AccuracyTouch>
+			<AccuracyShort>0.75</AccuracyShort>
+			<AccuracyMedium>0.60</AccuracyMedium>
+			<AccuracyLong>0.50</AccuracyLong>
+			<RangedWeapon_Cooldown>0.85</RangedWeapon_Cooldown>
+		</statBases>
+		<verbs>
+			<li>
+				<verbClass>CompTurret.Verb_ShootCompMounted</verbClass>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>OGN_Bullet_MonolithGuassFluxArc</defaultProjectile>
+				<warmupTime>0.3</warmupTime>
+				<range>31</range>
+				<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+				<burstShotCount>2</burstShotCount>
+				<soundCast>OG_Gauss_Flayer_Sound</soundCast>
+				<soundCastTail>GunTail_Light</soundCastTail>
+				<muzzleFlashScale>8</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+			</li>
+		</verbs>
+	<comps>    
+		<!--li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
+		<VerbEntries>
+			<li>
+				<RapidFire>true</RapidFire>
+				<Rending>true</Rending>
+			</li>
+		</VerbEntries>
+		</li--> 
+	</comps>
+    <weaponTags Inherit="false">
+      <li>TurretGun</li>
+    </weaponTags>
+	</ThingDef>
+
+</Defs>

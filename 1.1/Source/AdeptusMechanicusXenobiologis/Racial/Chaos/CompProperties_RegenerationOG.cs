@@ -52,7 +52,10 @@ namespace AdeptusMechanicus
                 int num2 = (int)num;
                 for (int i = 0; i < num2; i++)
                 {
+                    Rand.PushState();
                     MoteMaker.ThrowDustPuff(loc, base.parent.Map, Rand.Range(0.8f, 1.2f));
+                    float angle = (float)Rand.Range(0, 360);
+                    Rand.PopState();
 
 
                     float num3 = Mathf.Lerp(1.2f, 1.55f, 2f);
@@ -65,7 +68,6 @@ namespace AdeptusMechanicus
                         vector += impactAngleVect * num5;
                         num3 -= num5;
                     }
-                    float angle = (float)Rand.Range(0, 360);
                     Vector3 s = new Vector3(num3, 1f, num3);
                     Matrix4x4 matrix = default(Matrix4x4);
                     matrix.SetTRS(vector, Quaternion.AngleAxis(angle, Vector3.up), s);

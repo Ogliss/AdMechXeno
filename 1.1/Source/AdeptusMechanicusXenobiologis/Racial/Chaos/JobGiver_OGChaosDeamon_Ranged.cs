@@ -20,7 +20,11 @@ namespace RimWorld
         {
             //  pawn.mindState.mentalStateHandler.TryStartMentalState(OGChaosDeamonDefOf.MentalState_OGChaosDeamon, null, false, false, null, false);
             //  pawn.mindState.duty.def = DutyDefOf.AssaultColony;
-            if (Rand.Value < WaitChance)
+            Rand.PushState();
+            float wait = Rand.Value;
+            int expiryInterval = Rand.Range(42, 200);
+            Rand.PopState();
+            if (wait < WaitChance)
             {
                 return new Job(JobDefOf.Wait_Combat)
                 {
@@ -43,7 +47,7 @@ namespace RimWorld
                         return new Job(JobDefOf.UseVerbOnThing, pawn2)
                         {
                             verbToUse = pawn.equipment.PrimaryEq.PrimaryVerb,
-                            expiryInterval = Rand.Range(42, 200),
+                            expiryInterval = expiryInterval,
                             attackDoorIfTargetLost = true
                         };
                     }
@@ -52,7 +56,7 @@ namespace RimWorld
                         return new Job(JobDefOf.AttackMelee, pawn2)
                         {
                             maxNumMeleeAttacks = 1,
-                            expiryInterval = Rand.Range(42, 200),
+                            expiryInterval = expiryInterval,
                             canBash = true
                         };
                     }
@@ -62,7 +66,7 @@ namespace RimWorld
                     return new Job(JobDefOf.AttackMelee, pawn2)
                     {
                         maxNumMeleeAttacks = 1,
-                        expiryInterval = Rand.Range(42, 200),
+                        expiryInterval = expiryInterval,
                         canBash = true
                     };
                 }

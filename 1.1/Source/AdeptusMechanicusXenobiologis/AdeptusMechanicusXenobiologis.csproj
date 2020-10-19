@@ -38,7 +38,7 @@
     <Compile Include="Harmony\Patches\DamageWorker_AddInjury_FinalizeAndAddInjury_NecronWellBeBack_Patch.cs" />
     <Compile Include="Harmony\Patches\Pawn_DropAndForbidEverything_Necron_Patch.cs" />
     <Compile Include="Harmony\Patches\Corpse_get_ShouldVanish_NecronComps_Patch.cs" />
-    <Compile Include="Harmony\Patches\ThingWithComps_GetGizmos_NecronCorpseComps_Patch.cs" />
+    <None Include="Harmony\Patches\ThingWithComps_GetGizmos_NecronCorpseComps_Patch.cs.bak" />
     <Compile Include="Harmony\Patches\SettlementDefeatUtility_IsDefeated_Patch.cs" />
     <Compile Include="Harmony\Patches\Page_ScenarioLister_ScenariosInCategory_Patch.cs" />
     <None Include="Harmony\Patches\Verb_TryStartCastOn_SporeMine_Patch.cs.bak" />
@@ -78,7 +78,6 @@
     <Compile Include="AMXenoBiologisJobDefOf.cs" />
     <Compile Include="AMXenoBiologisDutyDefOf.cs" />
     <Compile Include="Racial\Chaos\JobGiver_OGChaosDeamon_Ranged.cs" />
-    <Compile Include="Harmony\Patches\FactionGenerator_GenerateFactionsIntoWorld_Patch.cs" />
     <Compile Include="Hediff_SelfRemoving.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
     <Compile Include="JobGiver_OGANXBAttackBuilding.cs" />
@@ -113,7 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
-      <Version>1.2.2719</Version>
+      <Version>1.2.2753</Version>
     </PackageReference>
     <PackageReference Include="Lib.Harmony">
       <Version>2.0.2</Version>
@@ -127,8 +126,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="CrashedShipsExtension">
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Users\User\Desktop\OgsTools\ExpandedCrashedShips\bin\Debug\CrashedShipsExtension.dll</HintPath>
+    </Reference>
     <Reference Include="ExtraHives">
       <HintPath>..\..\..\..\..\..\..\..\..\..\Users\User\Desktop\OgsTools\FactionHives\bin\Debug\ExtraHives.dll</HintPath>
+    </Reference>
+    <Reference Include="ShipsHaveInsides">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\1909914131\1.2\Assemblies\ShipsHaveInsides.dll</HintPath>
+      <Private>False</Private>
     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

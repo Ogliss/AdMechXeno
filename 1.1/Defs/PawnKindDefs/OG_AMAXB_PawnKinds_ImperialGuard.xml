@@ -149,6 +149,7 @@
     <chemicalAddictionChance>0</chemicalAddictionChance>
     <apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
     <isFighter>true</isFighter>
+    <requiredWorkTags>Violent</requiredWorkTags>
 	<race>Human</race>
     <invNutrition>2.55</invNutrition>
     <itemQuality>Normal</itemQuality>
@@ -816,9 +817,7 @@
       <min>0.7</min>
       <max>2.3</max>
     </gearHealthRange>
-    <apparelTags>
-      <li>OGIGFieldCap</li>
-      <li>OGIWargear</li>
+    <apparelTags Inherit="false">
 	  <!--
       <li>IndustrialAdvanced</li>
       <li>IndustrialMilitaryBasic</li>

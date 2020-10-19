@@ -1,55 +1,98 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef ParentName="BuildingHivelikeBase">
-    <defName>OGTY_WarpRift</defName>
-    <label>warp rift</label>
+  <ThingDef ParentName="BuildingNaturalBase">
+    <defName>OG_Tyranid_TunnelEntrance</defName>
+    <label>tunnel entrance</label>
     <description>A tare in the fabric of reality. If activated, it will spawn additional deamons and rifts over time.</description>
     <thingClass>ExtraHives.Hive</thingClass>
     <graphicData>
-      <texPath>Things/Special/WarpRiftA</texPath>
+      <texPath>Things/Special/TunnelExit</texPath>
       <graphicClass>Graphic_Single</graphicClass>
       <shaderType>TransparentPostLight</shaderType>
       <drawSize>2.6</drawSize>
+      <damageData>
+        <rect>(0.1,0.1,1.8,1.8)</rect>
+      </damageData>
     </graphicData>
+    <size>(1,1)</size>
+    <uiIconScale>0.65</uiIconScale>
     <altitudeLayer>Building</altitudeLayer>
     <rotatable>false</rotatable>
     <fillPercent>0.5</fillPercent>
     <statBases>
       <MaxHitPoints>130</MaxHitPoints>
-      <Flammability>0.0</Flammability>
+      <Flammability>1.0</Flammability>
     </statBases>
     <pathCost>50</pathCost>
+    <receivesSignals>true</receivesSignals>
     <blockWind>true</blockWind>
     <tickerType>Normal</tickerType>
     <passability>PassThroughOnly</passability>
-    <drawerType>RealtimeOnly</drawerType>
     <killedLeavings>
-      <InsectJelly>30</InsectJelly>
+      <!--InsectJelly>30</InsectJelly-->
     </killedLeavings>
-    <placeWorkers>
-      <li>PlaceWorker_Heater</li>
-    </placeWorkers>
+	<modExtensions>
+		<li Class="ExtraHives.HiveDefExtension">
+			<Faction>OG_Tyranid_Faction</Faction>
+			<TunnelDef>OG_Tyranid_Tunnel</TunnelDef>
+			<mustBeNearColony>true</mustBeNearColony>
+			<requiresRoofed>false</requiresRoofed>
+			<mustBeThickRoof>false</mustBeThickRoof>
+			<maxTemp>200</maxTemp>
+			<minTemp>-200</minTemp>
+			<minMountainouseness>0</minMountainouseness>
+		</li>
+	</modExtensions>
     <comps>
-      <li Class="AdeptusMechanicus.CompProperties_SpawnerHiveLikes" />
-      <li Class="CompProperties_Spawner">
-        <thingToSpawn>InsectJelly</thingToSpawn>
-        <spawnCount>5</spawnCount>
-        <spawnIntervalRange>
-          <min>13000</min>
-          <max>15000</max>
-        </spawnIntervalRange>
+      <li Class="CompProperties_CanBeDormant">
+        <startsDormant>true</startsDormant>
+        <canWakeUpFogged>false</canWakeUpFogged>
       </li>
-      <li Class="CompProperties_Spawner">
+      <li Class="CompProperties_WakeUpDormant" />
+      <li Class="ExtraHives.CompProperties_SpawnerPawn">
+        <spawnablePawnKinds>
+          <!--BETA_SoldierClass>1000</BETA_SoldierClass>
+          <BETA_WarriorClass>1000</BETA_WarriorClass>
+          <BETA_TankClass>800</BETA_TankClass>
+          <BETA_LaserClass>100</BETA_LaserClass>
+          <BETA_GrapplerClass>500</BETA_GrapplerClass>
+          <BETA_DestroyerClass>20</BETA_DestroyerClass>
+          <BETA_FortClass>1</BETA_FortClass>
+          <BETA_HeavyLaserClass>25</BETA_HeavyLaserClass-->
+        </spawnablePawnKinds>
+		<!--AlwaysSpawnWith>
+		  <li>BETA_GrapplerClass</li>
+		  <li>BETA_LaserClass</li>
+		</AlwaysSpawnWith-->
+		<!--
+        <lordJob>LordJob_DefendAndExpandHive</lordJob>
+		-->
+        <lordJob>ExtraHives.LordJob_DefendAndExpandHive</lordJob>
+        <spawnSound>Hive_Spawn</spawnSound>
+        <showNextSpawnInInspect>false</showNextSpawnInInspect>
+        <initialPawnsPoints>250</initialPawnsPoints>
+        <maxSpawnedPawnsPoints>5500</maxSpawnedPawnsPoints>
+      </li>
+      <li Class="CompProperties_SelfhealHitpoints">
+        <ticksPerHeal>6000</ticksPerHeal> <!-- 60k ticks = 1 day, 10 hp per day -->
+      </li>
+      <li Class="ExtraHives.CompProperties_SpawnerHives" />
+      <!--li Class="CompProperties_Spawner">
+        <thingToSpawn>InsectJelly</thingToSpawn>
+        <spawnCount>20</spawnCount>
+        <spawnIntervalRange>26000~30000</spawnIntervalRange>
+        <spawnMaxAdjacent>40</spawnMaxAdjacent>
+        <spawnForbidden>true</spawnForbidden>
+        <saveKeysPrefix>jelly</saveKeysPrefix>
+      </li-->
+      <!--li Class="CompProperties_Spawner">
         <thingToSpawn>GlowPod</thingToSpawn>
         <spawnCount>1</spawnCount>
-        <spawnIntervalRange>
-          <min>30000</min>
-          <max>60000</max>
-        </spawnIntervalRange>
+        <spawnIntervalRange>30000~60000</spawnIntervalRange>
         <spawnMaxAdjacent>1</spawnMaxAdjacent>
         <saveKeysPrefix>pod</saveKeysPrefix>
         <inheritFaction>true</inheritFaction>
-      </li>
+      </li-->
       <li Class="CompProperties_HeatPusher">
         <heatPerSecond>6</heatPerSecond>
         <heatPushMaxTemperature>38</heatPushMaxTemperature>
@@ -60,43 +103,26 @@
         <spawnMtbHours>4</spawnMtbHours>
         <spawnRadius>5</spawnRadius>
       </li>
-      <li Class="CompProperties_Maintainable">
+      <!--li Class="CompProperties_Maintainable">
         <ticksHealthy>60000</ticksHealthy>
-        <ticksNeedsMaintenance>40000</ticksNeedsMaintenance>
+        <ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
         <damagePerTickRare>10</damagePerTickRare>
-      </li>
+      </li-->
     </comps>
-    <modExtensions>
-      <li Class="ExtraHives.HiveDefExtension">
-		<Faction>OG_Tyranid_Faction</Faction>
-		<TunnelDef>OGTY_Tunnel</TunnelDef>
-      </li>
-    </modExtensions>
   </ThingDef>
 
-  <ThingDef Class="AdeptusMechanicus.ThingDef_TunnelHiveLikeSpawner"  ParentName="EtherealThingBase">
-    <defName>OGTY_Tunnel</defName>
-    <label>warp tunnel</label>
-    <thingClass>AdeptusMechanicus.TunnelHiveLikeSpawner</thingClass>
-		<Faction>OG_Chaos_Deamon_Faction</Faction>
-		<HiveDef>OGC_WarpRift</HiveDef>
-		<strikespreexplode>true</strikespreexplode>
-		<explodesprespawn>true</explodesprespawn>
-		<damageDef>OG_WarpStormStrike</damageDef>
-		<blastradius>5</blastradius>
+  <ThingDef ParentName="EtherealThingBase">
+    <defName>OG_Tyranid_Tunnel</defName>
+    <label>tyranid tunnel</label>
+    <thingClass>ExtraHives.TunnelHiveSpawner</thingClass>
+	<modExtensions>
+		<li Class="ExtraHives.TunnelExtension">
+			<Faction>OG_Tyranid_Faction</Faction>
+			<HiveDef>OG_Tyranid_TunnelEntrance</HiveDef>
+		</li>
+	</modExtensions>
     <tickerType>Normal</tickerType>
     <drawerType>RealtimeOnly</drawerType>
     <alwaysFlee>true</alwaysFlee>
-    <comps>
-      <li Class="AdeptusMechanicus.CompProperties_SpawnerHiveLikes" />
-      <li Class="CompProperties_Glower">
-        <glowRadius>5</glowRadius>
-        <glowColor>(245,109,160,0)</glowColor>
-      </li>
-      <li Class="CompProperties_WarpFireOverlay">
-        <fireSize>1</fireSize>
-      </li>
-    </comps>
   </ThingDef>
-  
 </Defs>

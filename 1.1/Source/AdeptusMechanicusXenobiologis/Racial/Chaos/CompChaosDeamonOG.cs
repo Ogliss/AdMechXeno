@@ -38,7 +38,9 @@ namespace AdeptusMechanicus
                 int num2 = (int)num;
                 for (int i = 0; i < num2; i++)
                 {
+                    Rand.PushState();
                     MoteMaker.ThrowDustPuff(loc, base.parent.Map, Rand.Range(0.8f, 1.2f));
+                    Rand.PopState();
                 }
             }
             else base.PostPreApplyDamage(dinfo, out absorbed);
@@ -67,6 +69,7 @@ namespace AdeptusMechanicus
             {
 
             }
+            Rand.PushState();
             if (base.parent.IsHashIntervalTick(Rand.RangeInclusive(300, 1200)) && base.parent != null)
             {
                 if (base.parent is Pawn pawn && pawn != null )
@@ -120,6 +123,7 @@ namespace AdeptusMechanicus
                     }
                 }
             }
+            Rand.PopState();
         }
     }
 }

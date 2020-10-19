@@ -107,7 +107,7 @@
 		<defName>OG_Ork_Grot_Stabba</defName>
 		<label>stabba grot</label>
 		<race>Ork_Grot</race>
-		<combatPower>20</combatPower>
+		<combatPower>25</combatPower>
 		<itemQuality>Poor</itemQuality>
 		<lifeStages>
 			<li>
@@ -138,7 +138,7 @@
 		<defName>OG_Ork_Grot_Blasta</defName>
 		<label>blasta grot</label>
 		<race>Ork_Grot</race>
-		<combatPower>30</combatPower>
+		<combatPower>35</combatPower>
 		<itemQuality>Poor</itemQuality>
 		<lifeStages>
 			<li>
@@ -169,7 +169,7 @@
 		<defName>OG_Ork_Grot_Shoota</defName>
 		<label>shoota grot</label>
 		<race>Ork_Grot</race>
-		<combatPower>45</combatPower>
+		<combatPower>40</combatPower>
 		<itemQuality>Poor</itemQuality>
 		<lifeStages>
 			<li>
@@ -205,7 +205,7 @@
 		<defName>OG_Ork_Boy_Slugga</defName>
 		<label>slugga boy</label>
 		<race>Ork_Boy</race>
-		<combatPower>50</combatPower>
+		<combatPower>60</combatPower>
 		<itemQuality>Poor</itemQuality>
 		<lifeStages>
 			<li>
@@ -240,7 +240,7 @@
 		<defName>OG_Ork_Boy_Choppa</defName>
 		<label>choppa boy</label>
 		<race>Ork_Boy</race>
-		<combatPower>25</combatPower>
+		<combatPower>50</combatPower>
 		<itemQuality>Poor</itemQuality>
 		<lifeStages>
 			<li>
@@ -453,7 +453,7 @@
 		<defName>OG_Ork_Warboss</defName>
 		<label>warboss</label>
 		<race>Ork_Warboss</race>
-		<combatPower>12500</combatPower>
+		<combatPower>300</combatPower>
 		<itemQuality>Superior</itemQuality>
 		<lifeStages>
 			<li>
@@ -521,44 +521,4 @@
 	</PawnKindDef>
 <!-- Tek Ork Faction Leader -->	
 
-<!-- Ork 'Umie Slavez -->
-	 <PawnKindDef>
-    <defName>Slave_OG_Ork_Human</defName>
-    <label>'umie slave</label>
-    <combatPower>30</combatPower>
-    <race>Human</race>
-    <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
-    <backstoryCategories>
-      <li>Slave</li>
-    </backstoryCategories>
-    <defaultFactionType>OG_Ork_Tek_Faction</defaultFactionType>
-    <itemQuality>Poor</itemQuality>
-    <backstoryCryptosleepCommonality>0.10</backstoryCryptosleepCommonality>
-    <isFighter>false</isFighter>
-    <chemicalAddictionChance>0.05</chemicalAddictionChance>
-    <gearHealthRange>
-      <min>0.2</min>
-      <max>0.8</max>
-    </gearHealthRange>
-    <apparelTags>
-      <li>IndustrialBasic</li>
-    </apparelTags>
-    <apparelMoney>
-      <min>0</min>
-      <max>350</max>
-    </apparelMoney>
-    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
-    <techHediffsChance>0.03</techHediffsChance>
-    <techHediffsMoney>
-      <min>50</min>
-      <max>800</max>
-    </techHediffsMoney>
-    <techHediffsTags>
-      <li>Poor</li>
-    </techHediffsTags>
-    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-    <invNutrition>1</invNutrition>
-    <invFoodDef>Pemmican</invFoodDef>
-  </PawnKindDef>
-<!-- Ork 'Umie Slavez -->	
 </Defs>

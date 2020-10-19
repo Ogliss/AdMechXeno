@@ -10,9 +10,9 @@
 			<texPath>Things/Item/Equipment/WeaponMelee/Tyranid/ScythingTalons_Hormagaunt</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>1.25</drawSize>			
+			<drawSize>1.5</drawSize>			
 		</graphicData>
-		<equippedAngleOffset>10</equippedAngleOffset>
+		<equippedAngleOffset>0</equippedAngleOffset>
 		<comps>     
 		  <li Class="OgsCompOversizedWeapon.CompProperties_OversizedWeapon">
 			<isDualWeapon>true</isDualWeapon>
@@ -21,10 +21,10 @@
 			<angleAdjustmentSouth>-45</angleAdjustmentSouth>
 			<angleAdjustmentEast>-70</angleAdjustmentEast>
 			<angleAdjustmentWest>70</angleAdjustmentWest>
-			<eastOffset>-0.0,0,0.25</eastOffset>
-			<westOffset>-0.0,0,0.25</westOffset>
-			<southOffset>0.150,0,0.250</southOffset>
-			<northOffset>0.0050,0,0.350</northOffset>
+			<eastOffset>-0.0,0,-0.25</eastOffset>
+			<westOffset>-0.0,0,-0.25</westOffset>
+			<southOffset>0.150,0,-0.250</southOffset>
+			<northOffset>0.0050,0,-0.350</northOffset>
 		  </li> 
 		</comps>
 		<modExtensions>
@@ -93,19 +93,19 @@
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>1.25</drawSize>			
 		</graphicData>
-		<equippedAngleOffset>10</equippedAngleOffset>
+		<equippedAngleOffset>-45</equippedAngleOffset>
 		<comps>     
 		  <li Class="OgsCompOversizedWeapon.CompProperties_OversizedWeapon">
 			<isDualWeapon>true</isDualWeapon>
 			<verticalFlipNorth>true</verticalFlipNorth>
-			<angleAdjustmentNorth>-45</angleAdjustmentNorth>
+			<angleAdjustmentNorth>45</angleAdjustmentNorth>
 			<angleAdjustmentSouth>-45</angleAdjustmentSouth>
 			<angleAdjustmentEast>-70</angleAdjustmentEast>
 			<angleAdjustmentWest>70</angleAdjustmentWest>
-			<eastOffset>0.035,0,0.15</eastOffset>
-			<westOffset>-0.0350,0,0.15</westOffset>
-			<southOffset>-0.350,0,0.350</southOffset>
-			<northOffset>0.350,0,0.50</northOffset>
+			<eastOffset>0.035,0,-0.15</eastOffset>
+			<westOffset>-0.0350,0,-0.15</westOffset>
+			<southOffset>0.750,0,-0.250</southOffset>
+			<northOffset>0.0,0,-0.250</northOffset>
 		  </li> 
 		</comps>
 		<modExtensions>
@@ -174,7 +174,7 @@
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>2.5</drawSize>			
 		</graphicData>
-		<equippedAngleOffset>10</equippedAngleOffset>
+		<equippedAngleOffset>-45</equippedAngleOffset>
 		<comps>     
 		  <li Class="OgsCompOversizedWeapon.CompProperties_OversizedWeapon">
 			<isDualWeapon>true</isDualWeapon>
@@ -183,10 +183,10 @@
 			<angleAdjustmentSouth>-45</angleAdjustmentSouth>
 			<angleAdjustmentEast>-70</angleAdjustmentEast>
 			<angleAdjustmentWest>70</angleAdjustmentWest>
-			<eastOffset>0.0,0,0.25</eastOffset>
-			<westOffset>-0.0,0,0.25</westOffset>
-			<southOffset>0.50,0,0.250</southOffset>
-			<northOffset>0.350,0,0.350</northOffset>
+			<eastOffset>0.0,0,-0.450</eastOffset>
+			<westOffset>-0.0,0,-0.450</westOffset>
+			<southOffset>0.0,0,-0.050</southOffset>
+			<northOffset>0.0,0,-0.150</northOffset>
 		  </li> 
 		</comps>
 		<modExtensions>
@@ -248,10 +248,10 @@
 			<angleAdjustmentSouth>-45</angleAdjustmentSouth>
 			<angleAdjustmentEast>-70</angleAdjustmentEast>
 			<angleAdjustmentWest>70</angleAdjustmentWest>
-			<eastOffset>0.250,0,0.35</eastOffset>
-			<westOffset>-0.250,0,0.35</westOffset>
-			<southOffset>0.650,0,0.450</southOffset>
-			<northOffset>0.550,0,0.450</northOffset>
+			<eastOffset>-0.50,0,-0.45</eastOffset>
+			<westOffset>0.50,0,-0.45</westOffset>
+			<southOffset>0.0,0,-0.150</southOffset>
+			<northOffset>0.0,0,-0.150</northOffset>
 		  </li> 
 		</comps>
 		<modExtensions>
@@ -309,14 +309,14 @@
 		  <li Class="OgsCompOversizedWeapon.CompProperties_OversizedWeapon">
 			<isDualWeapon>true</isDualWeapon>
 			<verticalFlipNorth>true</verticalFlipNorth>
-			<angleAdjustmentNorth>135</angleAdjustmentNorth>
+			<angleAdjustmentNorth>45</angleAdjustmentNorth>
 			<angleAdjustmentSouth>-45</angleAdjustmentSouth>
 			<angleAdjustmentEast>-70</angleAdjustmentEast>
 			<angleAdjustmentWest>70</angleAdjustmentWest>
-			<eastOffset>1.35,0,1.0</eastOffset>
-			<westOffset>-1.350,0,1.0</westOffset>
-			<southOffset>1.750,0,-0.2500</southOffset>
-			<northOffset>1.750,0,1.50</northOffset>
+			<eastOffset>-1.750,0,-01</eastOffset>
+			<westOffset>1.750,0,-01</westOffset>
+			<southOffset>-01.250,0,1.2500</southOffset>
+			<northOffset>-01.250,0,-1.750</northOffset>
 		  </li> 
 		</comps>
 		<modExtensions>

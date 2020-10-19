@@ -16,6 +16,9 @@ namespace RimWorld
         // Deamon ThingDefs
         public static ThingDef OG_Chaos_Deamon_WarpTunnel;
 
+        // Deamon FleshTypeDefs
+        public static FleshTypeDef OG_Flesh_Chaos_Deamon;
+
         // Deamon FactionDefs
         public static FactionDef OG_Chaos_Deamon_Faction;
 

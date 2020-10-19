@@ -115,6 +115,7 @@ namespace AdeptusMechanicus
                     }
                     if (Necrodermis)
                     {
+                        Rand.PushState();
                         if (Rand.Chance(regenChance))
                         {
                             if (pawn.Downed)
@@ -126,6 +127,7 @@ namespace AdeptusMechanicus
                                 TryHeal();
                             }
                         }
+                        Rand.PopState();
                     }
                     if (Phasic)
                     {
@@ -179,6 +181,7 @@ namespace AdeptusMechanicus
 
         public void TryPhase()
         {
+            Rand.PushState();
             if (Rand.Chance(phaseChance))
             {
                 if (pawn.Corpse.Spawned)
@@ -192,6 +195,7 @@ namespace AdeptusMechanicus
             {
                 phaseTried = true;
             }
+            Rand.PopState();
         }
 
         public void Dead(Pawn pawn)
@@ -221,6 +225,7 @@ namespace AdeptusMechanicus
             string str = "sucessful";
             reviveIntervalTicks = -1;
             reviveTried = true;
+            Rand.PushState();
             if (Rand.Chance(reanimateChance) || ForcedRevive)
             {
                 List<Hediff> hediffs = unhealableHediffs;
@@ -286,8 +291,9 @@ namespace AdeptusMechanicus
             {
 
                 str = "failiure: roll";
-            //    log.message(string.Format("{0} revive {1}", pawn, str));
+                //    log.message(string.Format("{0} revive {1}", pawn, str));
             }
+            Rand.PopState();
         }
 
         public void TryHeal(bool Forced = false)
@@ -296,7 +302,9 @@ namespace AdeptusMechanicus
             bool flag2 = HealableHediffs.Any(x => !pawn.health.hediffSet.PartIsMissing(x.Part) && x is Hediff_Injury);
             bool flag3 = HealableHediffs.Any(x => pawn.health.hediffSet.PartIsMissing(x.Part));
             bool flag4 = HealableHediffs.Any(x => x.def == AMXenoBiologisHediffDefOf.OG_Regenerating);
+            Rand.PushState();
             float num = Rand.RangeInclusive(1, 100);
+            Rand.PopState();
             Hediff hediff;
             if (flag2)
             {
@@ -395,10 +403,12 @@ namespace AdeptusMechanicus
                 return;
             }
             MoteThrown moteThrown = (MoteThrown)ThingMaker.MakeThing(DefDatabase<ThingDef>.GetNamedSilentFail("Mote_OG_NecronLightningGlow"), null);
+            Rand.PushState();
             moteThrown.Scale = Rand.Range(4f, 6f) * size;
             moteThrown.rotationRate = Rand.Range(-3f, 3f);
             moteThrown.exactPosition = loc + size * new Vector3(Rand.Value - 0.5f, 0f, Rand.Value - 0.5f);
             moteThrown.SetVelocity((float)Rand.Range(0, 360), 1.2f);
+            Rand.PopState();
             GenSpawn.Spawn(moteThrown, loc.ToIntVec3(), map, WipeMode.Vanish);
         }
 
@@ -416,18 +426,6 @@ namespace AdeptusMechanicus
             bool missing =  pawn.health.hediffSet.hediffs.Any(x => x.def.hediffClass == typeof(Hediff_MissingPart) && x.def.isBad);
             if (selected)
             {
-                //    Log.Message("Comp_Necron CompGetGizmosExtra selected");
-                /*
-                yield return new Command_Action
-                {
-                    action = Detonate,
-                    defaultLabel = "WearableExplosives_Detonate_Label".Translate(),
-                    defaultDesc = "WearableExplosives_Detonate_Desc".Translate(),
-                    icon = ContentFinder<Texture2D>.Get("Ui/Commands/CommandButton_BOOM", true),
-                    activateSound = SoundDef.Named("Click"),
-                    groupKey = num + 1
-                };
-                */
                 if (pawn.Dead)
                 {
                     Command_Action command_Action = new Command_Action();
@@ -524,8 +522,8 @@ namespace AdeptusMechanicus
             Scribe_Values.Look<bool>(ref this.phaseTried, "phaseTried", false);
             Scribe_References.Look<ThingWithComps>(ref this.originalWeapon, "originalWeapon");
             Scribe_References.Look<ThingWithComps>(ref this.secondryWeapon, "secondryWeapon");
-            Scribe_Collections.Look(ref this.healableHediffs, "healableHediffs");
-            Scribe_Collections.Look(ref this.unhealableHediffs, "unhealableHediffs");
+            Scribe_Collections.Look(ref this.healableHediffs, "healableHediffs", LookMode.Reference);
+            Scribe_Collections.Look(ref this.unhealableHediffs, "unhealableHediffs", LookMode.Reference);
         }
 
         public ThingWithComps originalWeapon;

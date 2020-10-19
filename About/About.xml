@@ -8,6 +8,9 @@
       <li>1.2</li>
    </supportedVersions>
    <packageId>Ogliss.AdMech.Xenobiologis</packageId>
+	  <loadAfter>
+		<li>erdelf.HumanoidAlienRaces</li>
+	  </loadAfter>
 	<description>V1.5.0.1
 Adds factions using xenos weapons from my Armoury mod.
 Requires new start or one of those faction managers
