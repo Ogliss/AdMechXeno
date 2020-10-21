@@ -13,6 +13,10 @@
       <LeatherAmount>75</LeatherAmount>
       <MoveSpeed>4.81</MoveSpeed>
 	  <ShootingAccuracyPawn>-10</ShootingAccuracyPawn>
+      <MeleeDodgeChance>1.125</MeleeDodgeChance>
+      <MeleeHitChance>1.25</MeleeHitChance>
+      <MeleeCritChance MayRequire="CETeam.CombatExtended">1.15</MeleeCritChance>
+      <MeleeParryChance MayRequire="CETeam.CombatExtended">1.15</MeleeParryChance>
       <ArmorRating_Blunt>0.16</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.16</ArmorRating_Sharp>
       <ArmorRating_Heat>0.16</ArmorRating_Heat>
@@ -65,12 +69,17 @@
       <meatLabel>ork meat</meatLabel>
     </race>
     <comps>
-	  <!--
-      <li Class="AdeptusMechanicus.CompProperties_ButcherBloodReplacer">
-        <bloodDef>OG_FilthBlood_ChaosDeamon</bloodDef>
-      </li>
-	  -->
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+		<li MayRequire="CETeam.CombatExtended">
+		  <compClass>CombatExtended.CompPawnGizmo</compClass>
+		</li>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
     </comps>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+    </modExtensions>
   </ThingDef>
 
 <!-- Alien Ork -->
@@ -108,7 +117,10 @@
     <label>grot</label>
     <description>Gretchin or Grotz are basically a smaller subspecies of Orks, who are more cowardly than normal Orks and are usually used as living shields, to clear mine fields, are stepped on to get through difficult terrain, and sometimes even as emergency rations. Gretchins are quite low in the strict hierarchy of Ork society because of their small size (the lowest Orkoids being the Snotlings) and are often used for the dirtiest jobs like scavenging and being used as the football when the bigger Orks get bored. While they are not as aggressive as standard Orks, they enjoy fighting weaker opponents and are less likely to flee if they comfortably outnumber their opponents. If a Gretchin is particularly wealthy, he may purchase a second-hand, worn-down, low-tech gun. These guns are mainly to reassure the Gretchin that they have a chance of killing something, provided they remember which way to hold the gun.</description>
     <statBases>
-	
+      <MeleeDodgeChance>1.35</MeleeDodgeChance>
+      <MeleeHitChance>0.85</MeleeHitChance>
+      <MeleeCritChance MayRequire="CETeam.CombatExtended">0.75</MeleeCritChance>
+      <MeleeParryChance MayRequire="CETeam.CombatExtended">0.75</MeleeParryChance>
     </statBases>
     <race>
       <lifeExpectancy>9999</lifeExpectancy>

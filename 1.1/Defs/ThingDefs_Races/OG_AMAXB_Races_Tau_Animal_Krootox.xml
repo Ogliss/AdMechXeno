@@ -8,6 +8,11 @@
     <statBases>
       <MoveSpeed>4.5</MoveSpeed>
       <MarketValue>300</MarketValue>
+	  <MeleeDodgeChance>0.06</MeleeDodgeChance>
+	  <MeleeCritChance MayRequire="CETeam.CombatExtended">0.41</MeleeCritChance>
+	  <MeleeParryChance MayRequire="CETeam.CombatExtended">0.48</MeleeParryChance>
+	  <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+	  <ArmorRating_Sharp>0.125</ArmorRating_Sharp>
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
@@ -107,6 +112,11 @@
       <li>AnimalKroot</li>
       <li>AnimalFarmKroot</li>
     </tradeTags>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Quadruped</bodyShape>
+		</li>
+    </modExtensions>
   </ThingDef>
   
   <PawnKindDef Name="Krootox" ParentName="AnimalKindBase">

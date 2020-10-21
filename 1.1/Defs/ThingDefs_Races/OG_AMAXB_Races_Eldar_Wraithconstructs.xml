@@ -9,6 +9,10 @@
       <PsychicSensitivity>+0.5</PsychicSensitivity>
       <ToxicSensitivity>0</ToxicSensitivity>
       <Flammability>0</Flammability>
+		<MeleeDodgeChance>1</MeleeDodgeChance>
+		<MeleeHitChance>1</MeleeHitChance>
+		<MeleeCritChance MayRequire="CETeam.CombatExtended">1</MeleeCritChance>
+		<MeleeParryChance MayRequire="CETeam.CombatExtended">1</MeleeParryChance>
       <ComfyTemperatureMin>-100</ComfyTemperatureMin>
       <ComfyTemperatureMax>250</ComfyTemperatureMax>
       <MeatAmount>0</MeatAmount>
@@ -26,6 +30,18 @@
       <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
       <trainability>Advanced</trainability>
     </race>
+    <comps>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+		<li MayRequire="CETeam.CombatExtended">
+		  <compClass>CombatExtended.CompPawnGizmo</compClass>
+		</li>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
+    </comps>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+    </modExtensions>
   </ThingDef>
 
   <!-- Walker (Wraithguard/wraithblade/wraithknight/wraithlord) base -->

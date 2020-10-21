@@ -1,0 +1,556 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<Operation Class="PatchOperationSequence">
+  <!--success>Always</success-->
+  <operations>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Tyranid_RipperSwarm"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left claws</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>LeftBlade</linkedBodyPartsGroup>
+					<armorPenetration>0.195</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right claws</label>
+					<capacities>
+						<li>Cut</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>RightBlade</linkedBodyPartsGroup>
+					<armorPenetration>0.195</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>gaping maw</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>9</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Tyranid_Hormagaunt"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>6</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>6</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>gaping maw</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>7</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Tyranid_Termagant"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>6</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>6</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>gaping maw</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>7</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Tyranid_Genestealer"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>gaping maw</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>9</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Tyranid_Warrior"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>fangs</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>15</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Tyranid_Gargoyle"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>4</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>fangs</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>6</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>7</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Tyranid_Lictor"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>gaping maw</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>15</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Tyranid_Ravener"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>10</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>gaping maw</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>15</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Tyranid_Hive_Tyrant"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>12</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>gaping maw</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>16</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>20</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Tyranid_Carnifex"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>15</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>15</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>gaping maw</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>20</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>25</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Tyranid_Biovore"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>2</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>2</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>gaping maw</label>
+					<capacities>
+						<li>Bite</li>
+					</capacities>
+					<power>3</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>5</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Tyranid_SporeMine_HE"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>detonate</label>
+					<capacities>
+					  <li>Blunt</li>
+					</capacities>
+					<power>1</power>
+					<cooldownTime>2</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li>
+  </operations>
+</Operation>
+
+</Patch>

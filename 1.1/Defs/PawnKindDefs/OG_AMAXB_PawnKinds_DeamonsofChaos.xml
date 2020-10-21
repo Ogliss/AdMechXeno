@@ -160,7 +160,7 @@
   <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
     <defName>OG_Chaos_Deamon_Lessar_Screamer</defName>
     <label>Screamer of Tzeentch</label>
-    <race>ChaosDeamon_Screamer</race>
+    <race>OG_Chaos_Deamon_Screamer</race>
     <combatPower>50</combatPower>
 
     <lifeStages>
@@ -189,7 +189,7 @@
   <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
     <defName>OG_Chaos_Deamon_Lessar_Nurgling</defName>
     <label>Nurgling</label>
-    <race>ChaosDeamon_Nurgling</race>
+    <race>OG_Chaos_Deamon_Nurgling</race>
     <combatPower>50</combatPower>
 
     <lifeStages>
@@ -218,7 +218,7 @@
   <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
     <defName>OG_Chaos_Deamon_Plague_Bearer</defName>
     <label>Plague Bearer</label>
-    <race>ChaosDeamon_PlagueBearer</race>
+    <race>OG_Chaos_Deamon_PlagueBearer</race>
     <combatPower>50</combatPower>
 
     <lifeStages>
@@ -249,7 +249,7 @@
   <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
     <defName>OG_Chaos_Deamon_Lessar_Deamonette</defName>
     <label>Deamonette</label>
-    <race>ChaosDeamon_Deamonette</race>
+    <race>OG_Chaos_Deamon_Deamonette</race>
     <combatPower>50</combatPower>
 
     <lifeStages>

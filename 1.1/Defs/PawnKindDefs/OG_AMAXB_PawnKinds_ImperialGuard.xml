@@ -87,6 +87,14 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+			<primaryMagazineCount>
+			  <min>2</min>
+			  <max>5</max>
+			</primaryMagazineCount>
+		</li>
+    </modExtensions>
   </PawnKindDef>
   
   <!-- ============================ ImperialGuard Faction Leader ========================== -->
@@ -197,6 +205,14 @@
         </li>
       </subOptionsChooseOne>
     </inventoryOptions>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+			<primaryMagazineCount>
+			  <min>5</min>
+			  <max>8</max>
+			</primaryMagazineCount>
+		</li>
+    </modExtensions>
   </PawnKindDef>
   
   <!-- ============================ ImperialGuard Military ========================== -->

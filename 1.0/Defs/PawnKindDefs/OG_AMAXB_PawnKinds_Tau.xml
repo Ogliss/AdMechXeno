@@ -112,7 +112,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Pawn/HumanoidDessicated</texPath>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
         </dessicatedBodyGraphicData>
 			</li>
@@ -153,7 +153,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Pawn/HumanoidDessicated</texPath>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
         </dessicatedBodyGraphicData>
 			</li>
@@ -194,7 +194,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Pawn/HumanoidDessicated</texPath>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
         </dessicatedBodyGraphicData>
 			</li>
@@ -231,7 +231,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Pawn/HumanoidDessicated</texPath>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
         </dessicatedBodyGraphicData>
 			</li>
@@ -268,7 +268,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Pawn/HumanoidDessicated</texPath>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
         </dessicatedBodyGraphicData>
 			</li>
@@ -304,7 +304,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Pawn/HumanoidDessicated</texPath>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
         </dessicatedBodyGraphicData>
 			</li>
@@ -337,7 +337,7 @@
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-					<texPath>Pawn/HumanoidDessicated</texPath>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
         </dessicatedBodyGraphicData>
 			</li>

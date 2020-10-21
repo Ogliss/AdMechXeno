@@ -103,7 +103,7 @@
 	</li>
 	
 	<li Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="ChaosDeamon_Flamer" or defName="ChaosDeamon_Flamer_Exalted"]/tools</xpath>
+		<xpath>Defs/ThingDef[defName="ChaosDeamon_Flamer" or defName="OG_Chaos_Deamon_Flamer_Exalted"]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
@@ -153,7 +153,7 @@
 	</li>
 	
 	<li Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="ChaosDeamon_Screamer"]/tools</xpath>
+		<xpath>Defs/ThingDef[defName="OG_Chaos_Deamon_Screamer"]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
@@ -203,7 +203,7 @@
 	</li>
 	
 	<li Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="ChaosDeamon_Nurgling"]/tools</xpath>
+		<xpath>Defs/ThingDef[defName="OG_Chaos_Deamon_Nurgling"]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
@@ -253,7 +253,7 @@
 	</li>
 	
 	<li Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="ChaosDeamon_PlagueBearer"]/tools</xpath>
+		<xpath>Defs/ThingDef[defName="OG_Chaos_Deamon_PlagueBearer"]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
@@ -303,7 +303,7 @@
 	</li>
 	
 	<li Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="ChaosDeamon_Deamonette"]/tools</xpath>
+		<xpath>Defs/ThingDef[defName="OG_Chaos_Deamon_Deamonette"]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">

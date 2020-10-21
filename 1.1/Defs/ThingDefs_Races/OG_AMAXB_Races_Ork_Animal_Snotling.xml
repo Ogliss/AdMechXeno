@@ -8,6 +8,11 @@
     <statBases>
       <MoveSpeed>3.0</MoveSpeed>
       <MarketValue>450</MarketValue>
+	  <MeleeDodgeChance>0.25</MeleeDodgeChance>
+	  <MeleeCritChance MayRequire="CETeam.CombatExtended">0.1</MeleeCritChance>
+	  <MeleeParryChance MayRequire="CETeam.CombatExtended">0.1</MeleeParryChance>
+	  <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+	  <ArmorRating_Sharp>0.125</ArmorRating_Sharp>
       <ComfyTemperatureMin>-10</ComfyTemperatureMin>
     </statBases>
     <tools>
@@ -112,6 +117,11 @@
       <li>AnimalSnotling</li>
       <li>AnimalOrk</li>
     </tradeTags>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+    </modExtensions>
   </ThingDef>
   
   <PawnKindDef ParentName="AnimalKindBase">
@@ -131,7 +141,7 @@
           <shaderType>CutoutComplex</shaderType>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Pawn/HumanoidDessicated</texPath>
+          <texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
           <drawSize>0.55</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -147,7 +157,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Pawn/HumanoidDessicated</texPath>
+          <texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
           <drawSize>0.7</drawSize>
         </dessicatedBodyGraphicData>
       </li>
@@ -163,7 +173,7 @@
           </shadowData>
         </bodyGraphicData>
         <dessicatedBodyGraphicData>
-          <texPath>Pawn/HumanoidDessicated</texPath>
+          <texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
           <drawSize>1.05</drawSize>
         </dessicatedBodyGraphicData>
       </li>

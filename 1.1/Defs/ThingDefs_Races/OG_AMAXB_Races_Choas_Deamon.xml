@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- ChaosDeamon Base Abstract -->
-
-  <ThingDef Name="OG_Chaos_Deamon_Pawn_Base" Abstract="True">
+<ThingDef ParentName="BasePawn" Name="OG_Chaos_Deamon_Pawn_Base" Abstract="True">
+	<!--
     <thingClass>Pawn</thingClass>
     <category>Pawn</category>
     <selectable>true</selectable>
@@ -11,30 +11,35 @@
     <useHitPoints>false</useHitPoints>
     <hasTooltip>true</hasTooltip>
     <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
-    <statBases>
-      <Mass>70</Mass>
-    </statBases>
     <inspectorTabs>
-      <li>ITab_Pawn_Health</li>
-      <li>ITab_Pawn_Needs</li>
-      <li>ITab_Pawn_Character</li>
-      <li>ITab_Pawn_Training</li>
-      <li>ITab_Pawn_Social</li>
-      <li>ITab_Pawn_Guest</li>
-      <li>ITab_Pawn_Prisoner</li>
-      <li>ITab_Pawn_FormingCaravan</li>
-      <li>ITab_Pawn_Gear</li>
-      <li>ITab_Pawn_Log</li>
+        <li>ITab_Pawn_Health</li>
+        <li>ITab_Pawn_Needs</li>
+        <li>ITab_Pawn_Character</li>
+        <li>ITab_Pawn_Training</li>
+        <li>ITab_Pawn_Gear</li>
+        <li>ITab_Pawn_Guest</li>
+        <li>ITab_Pawn_Prisoner</li>
+        <li>ITab_Pawn_Social</li>
+        <li>ITab_Pawn_Log</li>
+        <li>ITab_Pawn_FormingCaravan</li>
     </inspectorTabs>
     <comps>
-      <li>
-        <compClass>CompAttachBase</compClass>
-      </li>
+        <li>
+            <compClass>CompAttachBase</compClass>
+        </li>
     </comps>
     <drawGUIOverlay>true</drawGUIOverlay>
-  </ThingDef>
-  
-  <ThingDef ParentName="OG_Chaos_Deamon_Pawn_Base" Name="OG_Chaos_Deamon_Base" Abstract="True">
+	-->
+    <comps>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+		<li MayRequire="CETeam.CombatExtended">
+		  <compClass>CombatExtended.CompPawnGizmo</compClass>
+		</li>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
+    </comps>
+</ThingDef>
+
+<ThingDef ParentName="OG_Chaos_Deamon_Pawn_Base" Name="OG_Chaos_Deamon_Base" Abstract="True">
   <defName>ChaosDeamon_Race</defName>
     <label>Chaos Deamon Race</label>
     <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
@@ -42,6 +47,10 @@
       <PsychicSensitivity>5</PsychicSensitivity>
       <ToxicSensitivity>0</ToxicSensitivity>
       <Flammability>0</Flammability>
+		<MeleeDodgeChance>1</MeleeDodgeChance>
+		<MeleeHitChance>1</MeleeHitChance>
+		<MeleeCritChance MayRequire="CETeam.CombatExtended">1</MeleeCritChance>
+		<MeleeParryChance MayRequire="CETeam.CombatExtended">1</MeleeParryChance>
       <ComfyTemperatureMin>-9999</ComfyTemperatureMin>
       <ComfyTemperatureMax>9999</ComfyTemperatureMax>
       <MeatAmount>0</MeatAmount>
@@ -91,6 +100,45 @@
       <ComponentIndustrial>1</ComponentIndustrial>
 	-->
     </butcherProducts>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+    </modExtensions>
+  </ThingDef>
+  
+<!-- Walker (Warrior/Immortal/Lord) base -->
+  <ThingDef ParentName="OG_Chaos_Deamon_Base" Name="OG_Chaos_Deamon_Flyer" Abstract="True">
+    <race>
+      <deathActionWorkerClass>DeathActionWorker_OGChaosDeamon</deathActionWorkerClass>
+      <intelligence>ToolUser</intelligence>
+      <baseBodySize>1.0</baseBodySize>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+    </race>
+    <butcherProducts>
+	<!--
+      <Steel>20</Steel>
+      <Plasteel>5</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+	-->
+    </butcherProducts>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Quadruped</bodyShape>
+		</li>
+    </modExtensions>
   </ThingDef>
   
 <!-- ChaosDeamon Lord -->
@@ -338,7 +386,7 @@
 
 <!-- Exalted --> 
   <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>ChaosDeamon_Flamer_Exalted</defName>
+    <defName>OG_Chaos_Deamon_Flamer_Exalted</defName>
     <label>Exalted Flamer of Tzeentch</label>
     <description>An Exalted Flamer, also called the Pyrodaemons of Tzeentch, Keepers of the True Flame of Change, Bearers of the True Flame of Change, or Candelabra Mutationi are Lesser Daemons of Tzeentch. Flamers are amongst the most strange and disturbing of all Tzeentch's daemons, and their absurd physiologies are more than most mortals can stand. The body of a Flamer is a headless conical torso. It has two long arms, both terminating in fingerless stumps, which are adorned with razor-sharp teeth and flickering tongues, and continuously belching acrid and sulphuric smoke.</description>
     <statBases>
@@ -403,8 +451,8 @@
   </ThingDef>
 
   <!-- ChaosDeamon Screamer -->
-  <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>ChaosDeamon_Screamer</defName>
+  <ThingDef ParentName="OG_Chaos_Deamon_Flyer">
+    <defName>OG_Chaos_Deamon_Screamer</defName>
     <label>Screamer of Tzeentch</label>
     <description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
     <statBases>
@@ -484,7 +532,7 @@
   <!-- Deamons of Nurgle --> 
   <!-- ChaosDeamon Nurgling -->
   <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>ChaosDeamon_Nurgling</defName>
+    <defName>OG_Chaos_Deamon_Nurgling</defName>
     <label>Nurgling</label>
     <description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
     <statBases>
@@ -557,7 +605,7 @@
 
   <!-- ChaosDeamon Plague Bearer --> 
   <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>ChaosDeamon_PlagueBearer</defName>
+    <defName>OG_Chaos_Deamon_PlagueBearer</defName>
     <label>Plague Bearer</label>
     <description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
     <statBases>
@@ -631,7 +679,7 @@
   <!-- Deamons of Slannesh --> 
   <!-- ChaosDeamon Deamonette --> 
   <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>ChaosDeamon_Deamonette</defName>
+    <defName>OG_Chaos_Deamon_Deamonette</defName>
     <label>Deamonette</label>
     <description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
     <statBases>

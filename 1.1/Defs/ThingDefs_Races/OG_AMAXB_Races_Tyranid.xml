@@ -38,6 +38,11 @@
         <glowColor>(252,187,113,0)</glowColor>
       </li>
 	  -->
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+		<li MayRequire="CETeam.CombatExtended">
+		  <compClass>CombatExtended.CompPawnGizmo</compClass>
+		</li>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
     </comps>
     <drawGUIOverlay>true</drawGUIOverlay>
   </ThingDef>
@@ -99,6 +104,11 @@
     <butcherProducts>
 	
     </butcherProducts>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+    </modExtensions>
   </ThingDef>
  
 <!-- Tyranid Ripper Swarm-->
@@ -190,6 +200,11 @@
       <li>AnimalFighter</li>
 	  -->
     </tradeTags>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Quadruped</bodyShape>
+		</li>
+    </modExtensions>
   </ThingDef>
 
 <!-- Tyranid Hormagaunt -->

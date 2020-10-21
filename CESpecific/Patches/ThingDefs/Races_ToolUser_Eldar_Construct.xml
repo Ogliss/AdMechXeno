@@ -1,23 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 <Operation Class="PatchOperationSequence">
-  <success>Always</success>
+  <!--success>Always</success-->
   <operations>
-    <li Class="PatchOperationTest">
-      <xpath>Defs/ResearchTabDef[defName="CE_Turrets"]</xpath>
-    </li>
-	
-	<li Class="PatchOperationAddModExtension">
-		<xpath>Defs/ThingDef[defName="Mechanicus_Sicarian"]</xpath>
-		<value>
-			<li Class="CombatExtended.RacePropertiesExtensionCE">
-				<bodyShape>Humanoid</bodyShape>
-			</li>
-		</value>
-	</li>
-		
 	<li Class="PatchOperationReplace">
-		<xpath>Defs/ThingDef[defName="Mechanicus_Sicarian"]/tools</xpath>
+		<xpath>Defs/ThingDef[defName="OG_Eldar_Wraithguard_Race"]/tools</xpath>
 		<value>
 			<tools>
 				<li Class="CombatExtended.ToolCE">
@@ -52,16 +39,6 @@
 					<armorPenetration>0.179</armorPenetration>
 				</li>
 			</tools>
-		</value>
-	</li>
-	
-	<li Class="PatchOperationAdd">
-		<xpath>Defs/ThingDef[defName="Mechanicus_Sicarian"]/comps</xpath>
-		<value>
-			<li>
-			  <compClass>CombatExtended.CompPawnGizmo</compClass>
-			</li>
-			<li Class="CombatExtended.CompProperties_Suppressable" />
 		</value>
 	</li>
   </operations>

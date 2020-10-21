@@ -12,6 +12,10 @@
       <ComfyTemperatureMin>-60</ComfyTemperatureMin>
       <ComfyTemperatureMax>65</ComfyTemperatureMax>
       <LeatherAmount>25</LeatherAmount>
+		<MeleeDodgeChance>0.85</MeleeDodgeChance>
+		<MeleeHitChance>0.85</MeleeHitChance>
+		<MeleeCritChance MayRequire="CETeam.CombatExtended">0.825</MeleeCritChance>
+		<MeleeParryChance MayRequire="CETeam.CombatExtended">0.825</MeleeParryChance>
       <ArmorRating_Blunt>0.32</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.32</ArmorRating_Sharp>
       <ArmorRating_Heat>0.32</ArmorRating_Heat>
@@ -98,6 +102,18 @@
 	  <leatherDef>Leather_Tau</leatherDef>
       <meatLabel>tau meat</meatLabel>
     </race>
+    <comps>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+		<li MayRequire="CETeam.CombatExtended">
+		  <compClass>CombatExtended.CompPawnGizmo</compClass>
+		</li>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
+    </comps>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="OG_Tau_Pawn_Base">
@@ -105,7 +121,7 @@
     <label>Faction Leader</label>
     <description>An Ethereal is a member of the fifth caste of the Tau species, forming a ruling elite above the Fire, Earth, Air, and Water Castes that make up the bulk of the T'au population. Known as the Aun in the Tau Lexicon, their name translates variously as the "Celestial" or "Ethereal Caste." Though their numbers are small compared to the other castes, the Ethereals are the rulers of the T'au Empire, and command near total authority and loyalty from every other Tau. Born to counsel, advise and steer their comrades towards the chosen path, the Ethereals embody the roles of royalty and the priesthood, and the deference paid to them is the closest thing to mysticism in T'au society.</description>
     <statBases>
-      <MoveSpeed>5.8</MoveSpeed>
+		<MoveSpeed>5.8</MoveSpeed>
     </statBases>
     <race>
       <thinkTreeMain>Humanlike</thinkTreeMain>
@@ -125,7 +141,11 @@
     <label>Faction Leader</label>
     <description>An Ethereal is a member of the fifth caste of the Tau species, forming a ruling elite above the Fire, Earth, Air, and Water Castes that make up the bulk of the T'au population. Known as the Aun in the Tau Lexicon, their name translates variously as the "Celestial" or "Ethereal Caste." Though their numbers are small compared to the other castes, the Ethereals are the rulers of the T'au Empire, and command near total authority and loyalty from every other Tau. Born to counsel, advise and steer their comrades towards the chosen path, the Ethereals embody the roles of royalty and the priesthood, and the deference paid to them is the closest thing to mysticism in T'au society.</description>
     <statBases>
-      <MoveSpeed>5.8</MoveSpeed>
+		<MoveSpeed>6</MoveSpeed>
+        <MeleeDodgeChance>1.25</MeleeDodgeChance>
+        <MeleeHitChance>1.85</MeleeHitChance>
+        <MeleeCritChance MayRequire="CETeam.CombatExtended">1.125</MeleeCritChance>
+		<MeleeParryChance MayRequire="CETeam.CombatExtended">1.125</MeleeParryChance>
     </statBases>
     <race>
       <thinkTreeMain>Humanlike</thinkTreeMain>
@@ -183,6 +203,10 @@
       <ArmorRating_Blunt>0.16</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.16</ArmorRating_Sharp>
       <ArmorRating_Heat>0.16</ArmorRating_Heat>
+      <MeleeDodgeChance>1.25</MeleeDodgeChance>
+      <MeleeHitChance>1.25</MeleeHitChance>
+      <MeleeCritChance MayRequire="CETeam.CombatExtended">1.25</MeleeCritChance>
+      <MeleeParryChance MayRequire="CETeam.CombatExtended">1.25</MeleeParryChance>
     </statBases>
     <race>
       <lifeExpectancy>120</lifeExpectancy>
@@ -192,6 +216,52 @@
 	  <leatherDef>Leather_Kroot</leatherDef>
       <meatLabel>kroot meat</meatLabel>
     </race>
+  <tools>
+	  <li>
+		<label>left fist</label>
+		<capacities>
+		  <li>Blunt</li>
+		</capacities>
+		<power>8</power>
+		<cooldownTime>1.6</cooldownTime>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		<surpriseAttack>
+		  <extraMeleeDamages>
+			<li>
+			  <def>Stun</def>
+			  <amount>11</amount>
+			</li>
+		  </extraMeleeDamages>
+		</surpriseAttack>
+	  </li>
+	  <li>
+		<label>right fist</label>
+		<capacities>
+		  <li>Blunt</li>
+		</capacities>
+		<power>8</power>
+		<cooldownTime>1.6</cooldownTime>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		<surpriseAttack>
+		  <extraMeleeDamages>
+			<li>
+			  <def>Stun</def>
+			  <amount>11</amount>
+			</li>
+		  </extraMeleeDamages>
+		</surpriseAttack>
+	  </li>
+	  <li>
+		<label>beak</label>
+		<capacities>
+		  <li>Cut</li>
+		</capacities>
+		<power>9</power>
+		<cooldownTime>1.8</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<chanceFactor>0.2</chanceFactor>
+	  </li>
+	</tools>
   </ThingDef>
 
 </Defs>

@@ -2,7 +2,7 @@
 
 <Defs>
 <ScenarioDef>
-	<defName>OG_Mechanicus_Start</defName>
+	<defName>OGAM_Scenario_Mechanicus_Crashlanded</defName>
 	<label>Mechanicus Exploritas</label>	
 		<description>basic start for testing a race</description>
 		<scenario>
@@ -15,6 +15,7 @@
 			<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
 				<def>ConfigPage_ConfigureStartingPawns</def>
 				<pawnCount>4</pawnCount>
+				<pawnChoiceCount>8</pawnChoiceCount>
 			</li>
 			<li Class="ScenPart_PlayerPawnsArriveMethod">
 				<def>PlayerPawnsArriveMethod</def>

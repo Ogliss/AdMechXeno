@@ -8,6 +8,11 @@
     <statBases>
       <MoveSpeed>4.0</MoveSpeed>
       <MarketValue>300</MarketValue>
+	  <MeleeDodgeChance>0.09</MeleeDodgeChance>
+	  <MeleeCritChance MayRequire="CETeam.CombatExtended">1.76</MeleeCritChance>
+	  <MeleeParryChance MayRequire="CETeam.CombatExtended">1.0</MeleeParryChance>
+	  <ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+	  <ArmorRating_Sharp>0.4</ArmorRating_Sharp>
       <ComfyTemperatureMin>-55</ComfyTemperatureMin>
       <ComfyTemperatureMax>45</ComfyTemperatureMax>
     </statBases>
@@ -125,6 +130,11 @@
       <li>AnimalKroot</li>
       <li>AnimalFighterKroot</li>
     </tradeTags>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Birdlike</bodyShape>
+		</li>
+    </modExtensions>
   </ThingDef>
   
   <PawnKindDef Name="Knarloc" ParentName="AnimalKindBase">

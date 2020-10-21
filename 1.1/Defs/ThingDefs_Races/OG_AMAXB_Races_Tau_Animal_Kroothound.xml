@@ -7,6 +7,11 @@
     <description>Heavily-muscled creatures with vicious unnatural claws and an absurdly powerful bite. They will only eat meat or corpses. If disturbed in the wild, they are very likely to attack. Kroothounds are usually found in and around Kroot Settlements and camps, often kept as Guard/Attack Dogs.</description>
     <statBases>
       <MoveSpeed>5.0</MoveSpeed>
+	  <MeleeDodgeChance>0.21</MeleeDodgeChance>
+	  <MeleeCritChance MayRequire="CETeam.CombatExtended">0.20</MeleeCritChance>
+	  <MeleeParryChance MayRequire="CETeam.CombatExtended">0.09</MeleeParryChance>
+	  <ArmorRating_Blunt>0.075</ArmorRating_Blunt>
+	  <ArmorRating_Sharp>0.125</ArmorRating_Sharp>
       <MarketValue>450</MarketValue>
       <ComfyTemperatureMin>-20</ComfyTemperatureMin>
     </statBases>
@@ -131,6 +136,11 @@
       <li>AnimalKroot</li>
       <li>AnimalFighterKroot</li>
     </tradeTags>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Quadruped</bodyShape>
+		</li>
+    </modExtensions>
   </ThingDef>
   
   <PawnKindDef Name="KrootHound" ParentName="AnimalKindBase">

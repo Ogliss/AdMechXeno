@@ -2,7 +2,7 @@
 
 <Defs>
 <ScenarioDef>
-	<defName>OG_Militarum_Start</defName>
+	<defName>OGAM_Scenario_Militarum_Crashlanded</defName>
 	<label>Imperial Guard</label>	
 		<description>basic start for testing a race</description>
 		<scenario>

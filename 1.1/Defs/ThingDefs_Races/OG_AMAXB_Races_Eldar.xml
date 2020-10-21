@@ -96,13 +96,22 @@
       <meatLabel>eldar meat</meatLabel>
       <body>OG_Eldar_Body</body>
     </race>
+    <comps>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+		<li MayRequire="CETeam.CombatExtended">
+		  <compClass>CombatExtended.CompPawnGizmo</compClass>
+		</li>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
+    </comps>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+    </modExtensions>
   </ThingDef>
 
   <ThingDef ParentName="OG_Eldar_Pawn_Base">
     <defName>OG_Alien_Eldar</defName>
-  </ThingDef>
-  <ThingDef ParentName="OG_Eldar_Pawn_Base">
-    <defName>Alien_Eldar</defName>
   </ThingDef>
 
 <!-- Eldar Faction Leader -->
@@ -120,7 +129,7 @@
       <nameCategory>HumanStandard</nameCategory>
       <lifeExpectancy>25000</lifeExpectancy>
       <baseHealthScale>2.5</baseHealthScale>
-	  <useMeatFrom>Alien_Eldar</useMeatFrom>
+	  <useMeatFrom>OG_Alien_Eldar</useMeatFrom>
       <hediffGiverSets>
         <li>OGE_Farseer_Options</li>
       </hediffGiverSets>
@@ -142,7 +151,7 @@
     <race>
       <lifeExpectancy>25000</lifeExpectancy>
       <baseHealthScale>1.50</baseHealthScale>
-	  <useMeatFrom>Alien_Eldar</useMeatFrom>
+	  <useMeatFrom>OG_Alien_Eldar</useMeatFrom>
       <hediffGiverSets>
         <li>OGE_Farseer_Options</li>
       </hediffGiverSets>
@@ -165,7 +174,7 @@
     <race>
       <lifeExpectancy>15000</lifeExpectancy>
       <baseHealthScale>1.25</baseHealthScale>
-	  <useMeatFrom>Alien_Eldar</useMeatFrom>
+	  <useMeatFrom>OG_Alien_Eldar</useMeatFrom>
       <hediffGiverSets>
         <li>OGE_Warlock_Options</li>
       </hediffGiverSets>
@@ -184,7 +193,7 @@
     </statBases>
     <race>
       <baseHealthScale>1</baseHealthScale>
-	  <useMeatFrom>Alien_Eldar</useMeatFrom>
+	  <useMeatFrom>OG_Alien_Eldar</useMeatFrom>
     </race>
   </ThingDef>
 
@@ -202,7 +211,7 @@
     </statBases>
     <race>
       <baseHealthScale>1</baseHealthScale>
-	  <useMeatFrom>Alien_Eldar</useMeatFrom>
+	  <useMeatFrom>OG_Alien_Eldar</useMeatFrom>
     </race>
   </ThingDef>
 </Defs>

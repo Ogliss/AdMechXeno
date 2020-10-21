@@ -330,7 +330,7 @@
 
 <!-- Exalted --> 
   <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>ChaosDeamon_Flamer_Exalted</defName>
+    <defName>OG_Chaos_Deamon_Flamer_Exalted</defName>
     <label>Exalted Flamer of Tzeentch</label>
     <description>An Exalted Flamer, also called the Pyrodaemons of Tzeentch, Keepers of the True Flame of Change, Bearers of the True Flame of Change, or Candelabra Mutationi are Lesser Daemons of Tzeentch. Flamers are amongst the most strange and disturbing of all Tzeentch's daemons, and their absurd physiologies are more than most mortals can stand. The body of a Flamer is a headless conical torso. It has two long arms, both terminating in fingerless stumps, which are adorned with razor-sharp teeth and flickering tongues, and continuously belching acrid and sulphuric smoke.</description>
     <statBases>
@@ -392,7 +392,7 @@
 
   <!-- ChaosDeamon Screamer -->
   <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>ChaosDeamon_Screamer</defName>
+    <defName>OG_Chaos_Deamon_Screamer</defName>
     <label>Screamer of Tzeentch</label>
     <description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
     <statBases>
@@ -465,7 +465,7 @@
   <!-- Deamons of Nurgle --> 
   <!-- ChaosDeamon Nurgling -->
   <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>ChaosDeamon_Nurgling</defName>
+    <defName>OG_Chaos_Deamon_Nurgling</defName>
     <label>Nurgling</label>
     <description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
     <statBases>
@@ -537,7 +537,7 @@
 
   <!-- ChaosDeamon Plague Bearer --> 
   <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>ChaosDeamon_PlagueBearer</defName>
+    <defName>OG_Chaos_Deamon_PlagueBearer</defName>
     <label>Plague Bearer</label>
     <description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
     <statBases>
@@ -610,7 +610,7 @@
   <!-- Deamons of Slannesh --> 
   <!-- ChaosDeamon Deamonette --> 
   <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>ChaosDeamon_Deamonette</defName>
+    <defName>OG_Chaos_Deamon_Deamonette</defName>
     <label>Deamonette</label>
     <description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
     <statBases>

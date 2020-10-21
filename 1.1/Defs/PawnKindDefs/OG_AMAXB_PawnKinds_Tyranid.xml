@@ -5,6 +5,14 @@
     <defaultFactionType>OG_Tyranid_Faction</defaultFactionType>
     <aiAvoidCover>true</aiAvoidCover>
     <destroyGearOnDrop>false</destroyGearOnDrop>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+			<primaryMagazineCount>
+			  <min>5</min>
+			  <max>8</max>
+			</primaryMagazineCount>
+		</li>
+    </modExtensions>
   </PawnKindDef>  
   
   <PawnKindDef Name="BaseTyranidKindColoured" ParentName="BaseTyranidKind" Abstract="True">
