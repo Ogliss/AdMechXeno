@@ -1,81 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs> 
 
-  <!-- ====================== Fleshborer Beetles ===================== -->
-  <ThingDef ParentName="BaseBullet">
-	<defName>OGTY_Bullet_Fleshborer</defName>
-    <label>fleshborer beetles</label>
-    <graphicData>
-		<texPath>Things/Projectile/FleshborerShotSml</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
-		<flyOverhead>false</flyOverhead>
-		<damageDef>Bullet</damageDef>
-		<damageAmountBase>12</damageAmountBase>
-		<armorPenetrationBase>0.32</armorPenetrationBase>
-		<stoppingPower>0.5</stoppingPower>
-		<speed>55</speed>
-	</projectile>
-  </ThingDef>
-
-  <!-- ====================== Fleshborer ===================== -->
-  <ThingDef ParentName="OG_Tyranid_Gun_Base">
-	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
-	<defName>OGTY_Gun_Fleshborer</defName>
-    <label>fleshborer</label>
-    <description>The Fleshborer, designated by the binomial Pulpa terebro, contains a compact brood nest where Borer beetles lay their eggs, which hatch and mature, sustained by the weapon for future use as ammunition. These beetles are kept in their mature state in a hormone-induced dormancy until the weapon is ready to be fired. At this point, neural impulses from the wielder forces one of the insects into a firing sphincter. From here, the beetle can be fired at a target by a further impulse.</description>
-    <graphicData>
-		<texPath>Things/Item/Equipment/WeaponRanged/Tyranid/Fleshborer</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
-		<drawSize>1.0</drawSize>			
-		<shaderType>CutoutComplex</shaderType>	
-	</graphicData>
-    <soundInteract>Interact_Autopistol</soundInteract>
-    <statBases>
-		<MarketValue>400</MarketValue>
-		<reliability>1</reliability>
-		<Mass>0</Mass>
-		<AccuracyTouch>0.91</AccuracyTouch>
-		<AccuracyShort>0.81</AccuracyShort>
-		<AccuracyMedium>0.70</AccuracyMedium>
-		<AccuracyLong>0.42</AccuracyLong>
-		<RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
-    </statBases>
-	<weaponTags>
-		<li>OGTY_Fleshborer</li>
-		<li>OGTY_Gun</li>
-	</weaponTags>
-    <verbs>
-		<li>
-			<verbClass>Verb_Shoot</verbClass>
-			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>OGTY_Bullet_Fleshborer</defaultProjectile>
-			<warmupTime>0.4</warmupTime>
-			<range>25</range>
-			<burstShotCount>3</burstShotCount>
-			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-			<soundCast>OG_Devourer_Sound</soundCast>
-			<soundCastTail>GunTail_Heavy</soundCastTail>
-			<muzzleFlashScale>10</muzzleFlashScale>
-			<targetParams>
-				<canTargetLocations>true</canTargetLocations>
-			</targetParams>
-		</li>
-    </verbs>
-	<comps>    
-		<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
-		<VerbEntries>
-			<li>
-				
-			</li>
-		</VerbEntries>
-		</li> 
-	  <li Class="OgsCompOversizedWeapon.CompProperties_OversizedWeapon">
-	  </li> 
-	</comps>
-  </ThingDef>
- 
   <!-- ====================== Spinefist Spines ===================== -->
   <ThingDef ParentName="BaseBullet">
 	<defName>OGTY_Bullet_Spinefist</defName>
@@ -112,6 +37,63 @@
 	</projectile>
   </ThingDef>
 
+  <!-- ====================== Spinefist ===================== -->
+  <ThingDef ParentName="OG_Tyranid_Gun_Base">
+	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
+	<defName>OGTY_Gun_Spinefist</defName>
+    <label>spinefist</label>
+    <description>A Spinefist is a Tyranid Bio-weapon of a symbiotic living gun, typically carried in pairs, which connects its own air-bladder to the airways of its host via a long tube-like tail that burrows through the host's limb into their torso. A spinefist's lethally poisonous spines are coated with neuro-toxins which assault the nervous system of its victims, and are fired by a sharp exhalation of the host. Thus, a larger and more powerful host can exhale more spines in each salvo, ripping through the flesh of any caught victims.</description>
+    <graphicData>
+		<texPath>Things/Item/Equipment/WeaponRanged/Tyranid/SpineFist</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>1.0</drawSize>			
+	</graphicData>
+    <soundInteract>Interact_Autopistol</soundInteract>
+    <statBases>
+		<MarketValue>200</MarketValue>
+		<reliability>1</reliability>
+		<Mass>1</Mass>
+		<AccuracyTouch>0.91</AccuracyTouch>
+		<AccuracyShort>0.81</AccuracyShort>
+		<AccuracyMedium>0.70</AccuracyMedium>
+		<AccuracyLong>0.42</AccuracyLong>
+		<RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
+    </statBases>
+	<weaponTags>
+		<li>OGTY_Spinefist</li>
+		<li>OGTY_Gun</li>
+	</weaponTags>
+    <verbs>
+		<li>
+			<verbClass>Verb_Shoot</verbClass>
+			<hasStandardCommand>true</hasStandardCommand>
+			<defaultProjectile>OGTY_Bullet_Spinefist</defaultProjectile>
+			<warmupTime>0.4</warmupTime>
+			<range>25</range>
+			<burstShotCount>3</burstShotCount>
+			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<soundCast>OG_Fleshhook_Sound</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>0</muzzleFlashScale>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</li>
+    </verbs>
+	<comps>    
+		<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
+		<VerbEntries>
+			<li>
+				
+			</li>
+		</VerbEntries>
+		</li> 
+	  <li Class="OgsCompOversizedWeapon.CompProperties_OversizedWeapon">
+	  
+	  </li> 
+	</comps>
+  </ThingDef>
+ 
   <!-- ====================== Dual Spinefist ===================== -->
   <ThingDef ParentName="OG_Tyranid_Gun_Base">
 	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
@@ -170,22 +152,41 @@
 	</comps>
   </ThingDef>
  
-  <!-- ====================== Spinefist ===================== -->
-  <ThingDef ParentName="OG_Tyranid_Gun_Base">
-	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
-	<defName>OGTY_Gun_Spinefist</defName>
-    <label>spinefist</label>
-    <description>A Spinefist is a Tyranid Bio-weapon of a symbiotic living gun, typically carried in pairs, which connects its own air-bladder to the airways of its host via a long tube-like tail that burrows through the host's limb into their torso. A spinefist's lethally poisonous spines are coated with neuro-toxins which assault the nervous system of its victims, and are fired by a sharp exhalation of the host. Thus, a larger and more powerful host can exhale more spines in each salvo, ripping through the flesh of any caught victims.</description>
+  <!-- ====================== Fleshborer Beetles ===================== -->
+  <ThingDef ParentName="BaseBullet">
+	<defName>OGTY_Bullet_Fleshborer</defName>
+    <label>fleshborer beetles</label>
     <graphicData>
-		<texPath>Things/Item/Equipment/WeaponRanged/Tyranid/SpineFist</texPath>
+		<texPath>Things/Projectile/FleshborerShotSml</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <projectile>
+		<flyOverhead>false</flyOverhead>
+		<damageDef>Bullet</damageDef>
+		<damageAmountBase>12</damageAmountBase>
+		<armorPenetrationBase>0.32</armorPenetrationBase>
+		<stoppingPower>0.5</stoppingPower>
+		<speed>55</speed>
+	</projectile>
+  </ThingDef>
+
+  <!-- ====================== Fleshborer ===================== -->
+  <ThingDef ParentName="OG_Tyranid_Gun_Base">
+	<defName>OGTY_Gun_Fleshborer</defName>
+	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
+    <label>fleshborer</label>
+    <description>The Fleshborer, designated by the binomial Pulpa terebro, contains a compact brood nest where Borer beetles lay their eggs, which hatch and mature, sustained by the weapon for future use as ammunition. These beetles are kept in their mature state in a hormone-induced dormancy until the weapon is ready to be fired. At this point, neural impulses from the wielder forces one of the insects into a firing sphincter. From here, the beetle can be fired at a target by a further impulse.</description>
+    <graphicData>
+		<texPath>Things/Item/Equipment/WeaponRanged/Tyranid/Fleshborer</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 		<drawSize>1.0</drawSize>			
+		<shaderType>CutoutComplex</shaderType>	
 	</graphicData>
     <soundInteract>Interact_Autopistol</soundInteract>
     <statBases>
-		<MarketValue>200</MarketValue>
+		<MarketValue>400</MarketValue>
 		<reliability>1</reliability>
-		<Mass>0</Mass>
+		<Mass>2</Mass>
 		<AccuracyTouch>0.91</AccuracyTouch>
 		<AccuracyShort>0.81</AccuracyShort>
 		<AccuracyMedium>0.70</AccuracyMedium>
@@ -193,21 +194,21 @@
 		<RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
     </statBases>
 	<weaponTags>
-		<li>OGTY_Spinefist</li>
+		<li>OGTY_Fleshborer</li>
 		<li>OGTY_Gun</li>
 	</weaponTags>
     <verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
-			<defaultProjectile>OGTY_Bullet_Spinefist</defaultProjectile>
+			<defaultProjectile>OGTY_Bullet_Fleshborer</defaultProjectile>
 			<warmupTime>0.4</warmupTime>
 			<range>25</range>
 			<burstShotCount>3</burstShotCount>
 			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
-			<soundCast>OG_Fleshhook_Sound</soundCast>
-			<soundCastTail>GunTail_Heavy</soundCastTail>
-			<muzzleFlashScale>0</muzzleFlashScale>
+			<soundCast>OG_Devourer_Sound</soundCast>
+			<soundCastTail>GunTail_Light</soundCastTail>
+			<muzzleFlashScale>10</muzzleFlashScale>
 			<targetParams>
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
@@ -222,7 +223,6 @@
 		</VerbEntries>
 		</li> 
 	  <li Class="OgsCompOversizedWeapon.CompProperties_OversizedWeapon">
-	  
 	  </li> 
 	</comps>
   </ThingDef>
@@ -361,7 +361,7 @@
     <statBases>
 		<MarketValue>400</MarketValue>
 		<reliability>1</reliability>
-		<Mass>0</Mass>
+		<Mass>6</Mass>
 		<AccuracyTouch>0.91</AccuracyTouch>
 		<AccuracyShort>0.81</AccuracyShort>
 		<AccuracyMedium>0.70</AccuracyMedium>
@@ -379,8 +379,8 @@
 			<defaultProjectile>OGTY_Bullet_BarbedStrangler</defaultProjectile>
 			<warmupTime>0.4</warmupTime>
 			<range>45</range>
-			<burstShotCount>3</burstShotCount>
-			<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+			<burstShotCount>2</burstShotCount>
+			<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
 			<soundCast>OG_BarbedStrangler_Sound</soundCast>
 			<soundCastTail>GunTail_Heavy</soundCastTail>
 			<muzzleFlashScale>10</muzzleFlashScale>
