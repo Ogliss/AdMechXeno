@@ -71,7 +71,9 @@ namespace AdeptusMechanicus
                     Vector3 s = new Vector3(num3, 1f, num3);
                     Matrix4x4 matrix = default(Matrix4x4);
                     matrix.SetTRS(vector, Quaternion.AngleAxis(angle, Vector3.up), s);
+#pragma warning disable CS0436 // Type conflicts with imported type
                     Graphics.DrawMesh(MeshPool.plane10, matrix, CompInvunerableSaveOGStatic.BubbleMat, 0);
+#pragma warning restore CS0436 // Type conflicts with imported type
                 }
                 this.lastAbsorbDamageTick = Find.TickManager.TicksGame;
             }

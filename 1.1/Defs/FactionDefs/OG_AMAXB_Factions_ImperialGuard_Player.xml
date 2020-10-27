@@ -1,64 +1,63 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  <FactionDef Abstract="True" Name="OG_Militarum_PlayerFaction_Base">
-    <colorSpectrum>
-      <li>(0, 0.737, 0.847)</li>
-    </colorSpectrum>
-  </FactionDef>
+	<FactionDef Abstract="True" Name="OG_Militarum_PlayerFaction_Base">
+		<colorSpectrum>
+			<li>(0, 0.737, 0.847)</li>
+		</colorSpectrum>
+	</FactionDef>
   
-  <FactionDef Parent="OG_Militarum_PlayerFaction_Base">
-    <defName>OG_Militarum_PlayerColony</defName>
-    <label>Imperial Guard</label>
-    <description>Your Imperial Outpost.</description>
-    <isPlayer>true</isPlayer>
-    <pawnSingular>guardsman</pawnSingular>
-    <pawnsPlural>guardsmen</pawnsPlural>
-    <categoryTag>Outlander</categoryTag>
-    <basicMemberKind>Colonist_OG_Militarum</basicMemberKind>
-    <settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
-    <playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
-    <factionNameMaker>NamerFactionOutlander</factionNameMaker>
-    <techLevel>Ultra</techLevel>
-    <backstoryFilters>
-      <li>
-        <categories>
-          <li>Imperium_Standard</li>
-        </categories>
-      </li>
-      <li>
-        <categories>
-          <li>Offworld</li>
-          <li>Pirate</li>
-        </categories>
-      </li>
-    </backstoryFilters>
-    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
-    <factionIconPath>Icons/Imperial/Militarum/Icon_Adeptus_MilitarumB</factionIconPath>
-    <startingResearchTags>
-      <li>ClassicStart</li>
-    </startingResearchTags>
-    <hairTags>
-		<li>Urban</li>
-    </hairTags>
-    <apparelStuffFilter>
-      <thingDefs>
-        <li>Synthread</li>
-      </thingDefs>
-    </apparelStuffFilter>
-				<modExtensions>
-				  <li Class="AdeptusMechanicus.FactionDefExtension">
-					<!--
-					<ForcedTraits>
-						<li>
-							<def>Bloodlust</def>
-							<degree>0</degree>
-							<Chance>1</Chance>
-						</li>
-					</ForcedTraits>
-					-->
-				  </li>
-				</modExtensions>
-  </FactionDef>
+	<FactionDef Parent="OG_Militarum_PlayerFaction_Base">
+		<defName>OG_Militarum_PlayerColony</defName>
+		<label>Imperial Guard</label>
+		<description>Your Imperial Outpost.</description>
+		<isPlayer>true</isPlayer>
+		<pawnSingular>guardsman</pawnSingular>
+		<pawnsPlural>guardsmen</pawnsPlural>
+		<categoryTag>Outlander</categoryTag>
+		<basicMemberKind>Colonist_OG_Militarum</basicMemberKind>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
+		<techLevel>Ultra</techLevel>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Imperium_Standard</li>
+				</categories>
+			</li>
+			<li>
+				<categories>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<factionIconPath>Icons/Imperial/Militarum/Icon_Adeptus_MilitarumB</factionIconPath>
+		<startingResearchTags>
+			<li>ClassicStart</li>
+		</startingResearchTags>
+		<hairTags>
+				<li>Urban</li>
+		</hairTags>
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Synthread</li>
+			</thingDefs>
+		</apparelStuffFilter>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.FactionDefExtension">
+				<!--
+				<ForcedTraits>
+					<li>
+						<def>Bloodlust</def>
+						<degree>0</degree>
+						<Chance>1</Chance>
+					</li>
+				</ForcedTraits>
+				-->
+			</li>
+		</modExtensions>
+	</FactionDef>
   
 </Defs>

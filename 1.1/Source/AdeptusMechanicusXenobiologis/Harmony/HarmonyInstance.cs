@@ -4,6 +4,7 @@ using HarmonyLib;
 using System.Linq;
 using System;
 using RimWorld;
+using System.Collections.Generic;
 
 namespace AdeptusMechanicus.HarmonyInstance
 {

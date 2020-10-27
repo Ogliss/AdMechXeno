@@ -15,9 +15,22 @@ namespace RimWorld
 
         // Kroot ThingDefs
         public static ThingDef OG_Alien_Kroot;
-        public static ThingDef KindredKrootHound;
-        public static ThingDef KindredKrootOx;
-        public static ThingDef KindredKrootKnarloc;
+        public static ThingDef OG_FilthBlood_Kroot;
+        public static ThingDef OG_Alien_Tau;
+        //    public static ThingDef OG_Alien_Vespid;
+
+        public static ThingDef OG_Kroothound;
+        public static ThingDef OG_KrootOx;
+        public static ThingDef OG_Knarloc;
+
+        public static ThingDef OG_Kroothound_Kindred;
+        public static ThingDef OG_KrootOx_Kindred;
+        public static ThingDef OG_Knarloc_Kindred;
+
+        // Kroot BodyDefs
+        public static BodyDef OG_Tau_Body;
+        public static BodyDef OG_Kroot_Body;
+    //    public static BodyDef OG_Vespid;
 
         // Kroot FactionDefs
         //    public static FactionDef KrootFaction;

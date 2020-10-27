@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  <ThingDef ParentName="BasePawn" Name="BaseTauDrone" Abstract="True">
+  <ThingDef ParentName="BasePawn" Name="OG_Tau_Drone_Base" Abstract="True">
     <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
     <statBases>
       <PsychicSensitivity>0.0</PsychicSensitivity>
@@ -34,20 +33,39 @@
 		<useZOffset>true</useZOffset>
 		<useShadow>true</useShadow>
       </li>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+		<li MayRequire="CETeam.CombatExtended">
+		  <compClass>CombatExtended.CompPawnGizmo</compClass>
+		</li>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
     </comps>
   </ThingDef>
 
 
   <!-- Drone base -->
 
-  <ThingDef ParentName="BaseTauDrone" Name="BaseGunDrone" Abstract="True">
+  <ThingDef ParentName="OG_Tau_Drone_Base" Name="OG_Tau_Drone" Abstract="True">
     <statBases>
       <MoveSpeed>9.5</MoveSpeed>
       <MeleeDodgeChance>1.5</MeleeDodgeChance>
+	  <MeleeCritChance MayRequire="CETeam.CombatExtended">0.06</MeleeCritChance>
+	  <MeleeParryChance MayRequire="CETeam.CombatExtended">0.0</MeleeParryChance>
       <ArmorRating_Blunt>0.40</ArmorRating_Blunt>
       <ArmorRating_Sharp>0.40</ArmorRating_Sharp>
       <ArmorRating_Heat>0.40</ArmorRating_Heat>
     </statBases>
+    <tools>
+      <li>
+        <label>ram</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>4.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+      </li>
+    </tools>
     <race>
       <intelligence>ToolUser</intelligence>
       <thinkTreeMain>Mechanoid</thinkTreeMain>
@@ -66,29 +84,22 @@
     <butcherProducts>
       <Steel>15</Steel>
     </butcherProducts>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Birdlike</bodyShape>
+		</li>
+    </modExtensions>
   </ThingDef>
 
   <!-- Gun Drone - Fast weak at close range -->
   
-  <ThingDef ParentName="BaseGunDrone">
+  <ThingDef ParentName="OG_Tau_Drone">
     <defName>OG_Tau_GunDrone</defName>
     <label>gun drone</label>
     <description>A Gun Drone (Kor’vesa in the Tau Lexicon) is a type of Tau Drone (small, sleek, disc-shaped, semi-sentient machines) employed extensively alongside Tau units in battle. Gun Drones consist of an advanced processor unit, which individually has only a basic intelligence (approximately that of a small animal such as a pterasquirrel), and moves about by way of a small anti-gravitic generator and a smaller and much modified version of a Tau Jetpack. This allows the Gun Drone to hover over the ground and skim over most obstacles. As they hover over landscapes, rotating back and forth, their sensor vane constantly transmits vital information about their surroundings.</description>
     <statBases>
       <MoveSpeed>2.5</MoveSpeed>
     </statBases>
-    <tools>
-      <li>
-        <label>ram</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>4.5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-      </li>
-    </tools>
     <race>
       <body>OG_Tau_GunDrone</body>
       <baseHealthScale>0.85</baseHealthScale>

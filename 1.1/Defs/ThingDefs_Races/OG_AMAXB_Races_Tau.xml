@@ -129,7 +129,7 @@
       <intelligence>Humanlike</intelligence>
       <nameCategory>HumanStandard</nameCategory>
       <lifeExpectancy>150</lifeExpectancy>
-      <body>Ethereal</body>
+      <body>OG_Tau_Body</body>
       <baseHealthScale>1</baseHealthScale>
     </race>
   </ThingDef>
@@ -153,7 +153,7 @@
       <intelligence>Humanlike</intelligence>
       <nameCategory>HumanStandard</nameCategory>
       <lifeExpectancy>150</lifeExpectancy>
-      <body>Ethereal</body>
+      <body>OG_Tau_Body</body>
 	  <useMeatFrom>OG_Alien_Tau</useMeatFrom>
       <baseHealthScale>2.5</baseHealthScale>
     </race>
@@ -170,7 +170,7 @@
     </statBases>
     <race>
       <lifeExpectancy>150</lifeExpectancy>
-      <body>Ethereal</body>
+      <body>OG_Tau_Body</body>
       <baseHealthScale>2.5</baseHealthScale>
 	  <useMeatFrom>OG_Alien_Tau</useMeatFrom>
     </race>
@@ -186,14 +186,13 @@
     </statBases>
     <race>
       <lifeExpectancy>50</lifeExpectancy>
-      <body>FireWarrior</body>
+      <body>OG_Tau_Body</body>
       <baseHealthScale>1.5</baseHealthScale>
 	  <useMeatFrom>OG_Alien_Tau</useMeatFrom>
     </race>
   </ThingDef>
 
   <!-- Kroot Warrior -->
-
   <ThingDef ParentName="OG_Tau_Pawn_Base">
     <defName>OG_Alien_Kroot</defName>
     <label>Kroot Warrior</label>
@@ -210,7 +209,7 @@
     </statBases>
     <race>
       <lifeExpectancy>120</lifeExpectancy>
-      <body>Kroot</body>
+      <body>OG_Kroot_Body</body>
       <baseHungerRate>0.25</baseHungerRate>
       <baseHealthScale>1.8</baseHealthScale>
 	  <leatherDef>Leather_Kroot</leatherDef>
@@ -261,6 +260,77 @@
 		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 		<chanceFactor>0.2</chanceFactor>
 	  </li>
+	</tools>
+  </ThingDef>
+
+  <!-- Vespid Warrior -->
+  <ThingDef ParentName="OG_Tau_Pawn_Base">
+    <defName>OG_Alien_Vespid</defName>
+    <label>Vespid Stingwing</label>
+    <description>The Vespid are a unique race of insect-like aliens who are members of the T'au Empire. In the T'au Lexicon, they are called "Mal'kor." This derives from the T'au words for insect, "Mal," and air, "Kor." The soldiers of the Imperium of Man often refer to them as "Stingwings." The Vespids' homeworld is a gas giant also called Vespid, three light years to the galactic south of the T'au's D'yanoi Sept.</description>
+    <statBases>
+      <MoveSpeed>6.2</MoveSpeed>
+      <ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+      <ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+      <ArmorRating_Heat>0.16</ArmorRating_Heat>
+      <MeleeDodgeChance>1.25</MeleeDodgeChance>
+      <MeleeHitChance>1.25</MeleeHitChance>
+      <MeleeCritChance MayRequire="CETeam.CombatExtended">1.25</MeleeCritChance>
+      <MeleeParryChance MayRequire="CETeam.CombatExtended">1.25</MeleeParryChance>
+    </statBases>
+    <race>
+      <lifeExpectancy>120</lifeExpectancy>
+      <body>OG_Vespid_Body</body>
+      <baseHungerRate>0.25</baseHungerRate>
+      <baseHealthScale>1.8</baseHealthScale>
+	  <leatherDef>Leather_Kroot</leatherDef>
+      <meatLabel>kroot meat</meatLabel>
+    </race>
+  <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>11</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8</power>
+        <cooldownTime>1.6</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <surpriseAttack>
+          <extraMeleeDamages>
+            <li>
+              <def>Stun</def>
+              <amount>11</amount>
+            </li>
+          </extraMeleeDamages>
+        </surpriseAttack>
+      </li>
+      <li>
+        <label>bite</label>
+        <capacities>
+          <li>Bite</li>
+        </capacities>
+        <power>9</power>
+        <cooldownTime>1.8</cooldownTime>
+        <linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
 	</tools>
   </ThingDef>
 

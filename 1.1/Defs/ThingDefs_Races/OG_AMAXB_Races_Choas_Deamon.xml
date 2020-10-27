@@ -1,752 +1,751 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<!-- ChaosDeamon Base Abstract -->
-<ThingDef ParentName="BasePawn" Name="OG_Chaos_Deamon_Pawn_Base" Abstract="True">
+	<!-- ChaosDeamon Base Abstract -->
+	<ThingDef ParentName="BasePawn" Name="OG_Chaos_Deamon_Pawn_Base" Abstract="True">
+		<!--
+		<thingClass>Pawn</thingClass>
+		<category>Pawn</category>
+		<selectable>true</selectable>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Pawn</altitudeLayer>
+		<useHitPoints>false</useHitPoints>
+		<hasTooltip>true</hasTooltip>
+		<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+		<inspectorTabs>
+			<li>ITab_Pawn_Health</li>
+			<li>ITab_Pawn_Needs</li>
+			<li>ITab_Pawn_Character</li>
+			<li>ITab_Pawn_Training</li>
+			<li>ITab_Pawn_Gear</li>
+			<li>ITab_Pawn_Guest</li>
+			<li>ITab_Pawn_Prisoner</li>
+			<li>ITab_Pawn_Social</li>
+			<li>ITab_Pawn_Log</li>
+			<li>ITab_Pawn_FormingCaravan</li>
+		</inspectorTabs>
+		<comps>
+			<li>
+				<compClass>CompAttachBase</compClass>
+			</li>
+		</comps>
+		<drawGUIOverlay>true</drawGUIOverlay>
+		-->
+		<comps>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+			<li MayRequire="CETeam.CombatExtended">
+				<compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="OG_Chaos_Deamon_Pawn_Base" Name="OG_Chaos_Deamon_Base" Abstract="True">
+		<defName>ChaosDeamon_Race</defName>
+		<label>Chaos Deamon Race</label>
+		<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+		<statBases>
+			<PsychicSensitivity>5</PsychicSensitivity>
+			<ToxicSensitivity>0</ToxicSensitivity>
+			<Flammability>0</Flammability>
+			<MeleeDodgeChance>1</MeleeDodgeChance>
+			<MeleeHitChance>1</MeleeHitChance>
+			<MeleeCritChance MayRequire="CETeam.CombatExtended">1</MeleeCritChance>
+			<MeleeParryChance MayRequire="CETeam.CombatExtended">1</MeleeParryChance>
+			<ComfyTemperatureMin>-9999</ComfyTemperatureMin>
+			<ComfyTemperatureMax>9999</ComfyTemperatureMax>
+			<MeatAmount>0</MeatAmount>
+			<ImmunityGainSpeed>5</ImmunityGainSpeed>
+			<PainShockThreshold>5</PainShockThreshold>
+		</statBases>
+		<race>
+			<body>Human</body>
+			<fleshType>OG_Flesh_Chaos_Deamon</fleshType>
+			<bloodDef>OG_FilthBlood_ChaosDeamon</bloodDef>	
+			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
+			<needsRest>false</needsRest>
+			<hasGenders>false</hasGenders>
+			<foodType>None</foodType>
+			<lifeExpectancy>99999</lifeExpectancy>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<trainability>Advanced</trainability>
+		</race>
+	</ThingDef>
+
+	<!-- Walker (Warrior/Immortal/Lord) base -->
+		<ThingDef ParentName="OG_Chaos_Deamon_Base" Name="OG_Chaos_Deamon_Walker" Abstract="True">
+		<race>
+			<deathActionWorkerClass>DeathActionWorker_OGChaosDeamon</deathActionWorkerClass>
+			<intelligence>ToolUser</intelligence>
+			<baseBodySize>1.0</baseBodySize>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+					<soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>
+				<min>1000</min>
+				<max>2000</max>
+			</soundCallIntervalRange>
+		</race>
+		<butcherProducts>
+			<!--
+			<Steel>20</Steel>
+			<Plasteel>5</Plasteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			-->
+		</butcherProducts>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</modExtensions>
+	</ThingDef>
+		
+	<!-- Walker (Warrior/Immortal/Lord) base -->
+	<ThingDef ParentName="OG_Chaos_Deamon_Base" Name="OG_Chaos_Deamon_Flyer" Abstract="True">
+		<race>
+			<deathActionWorkerClass>DeathActionWorker_OGChaosDeamon</deathActionWorkerClass>
+			<intelligence>ToolUser</intelligence>
+			<baseBodySize>1.0</baseBodySize>
+			<lifeStageAges>
+				<li>
+					<def>MechanoidFullyFormed</def>
+					<minAge>0</minAge>
+					<soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+					<soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+					<soundCall>Pawn_Mech_Scyther_Call</soundCall>
+				</li>
+			</lifeStageAges>
+			<soundCallIntervalRange>
+				<min>1000</min>
+				<max>2000</max>
+			</soundCallIntervalRange>
+		</race>
+		<butcherProducts>
+			<!--
+			<Steel>20</Steel>
+			<Plasteel>5</Plasteel>
+			<ComponentIndustrial>1</ComponentIndustrial>
+			-->
+		</butcherProducts>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Quadruped</bodyShape>
+			</li>
+		</modExtensions>
+	</ThingDef>
+		
+	<!-- ChaosDeamon Lord -->
 	<!--
-    <thingClass>Pawn</thingClass>
-    <category>Pawn</category>
-    <selectable>true</selectable>
-    <tickerType>Normal</tickerType>
-    <altitudeLayer>Pawn</altitudeLayer>
-    <useHitPoints>false</useHitPoints>
-    <hasTooltip>true</hasTooltip>
-    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
-    <inspectorTabs>
-        <li>ITab_Pawn_Health</li>
-        <li>ITab_Pawn_Needs</li>
-        <li>ITab_Pawn_Character</li>
-        <li>ITab_Pawn_Training</li>
-        <li>ITab_Pawn_Gear</li>
-        <li>ITab_Pawn_Guest</li>
-        <li>ITab_Pawn_Prisoner</li>
-        <li>ITab_Pawn_Social</li>
-        <li>ITab_Pawn_Log</li>
-        <li>ITab_Pawn_FormingCaravan</li>
-    </inspectorTabs>
-    <comps>
-        <li>
-            <compClass>CompAttachBase</compClass>
-        </li>
-    </comps>
-    <drawGUIOverlay>true</drawGUIOverlay>
-	-->
-    <comps>
-		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
-		<li MayRequire="CETeam.CombatExtended">
-		  <compClass>CombatExtended.CompPawnGizmo</compClass>
-		</li>
-		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
-    </comps>
-</ThingDef>
+	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
+		<defName>OG_Chaos_Deamon_Lord</defName>
+		<label>ChaosDeamon lord</label>
+		<description>A ChaosDeamon Lord is the most sophisticated of the ancient race of soulless xenos known as the ChaosDeamons. A ChaosDeamon Lord serves as the commander and energy supply for the much larger ChaosDeamon armies composed of the standard ChaosDeamon Warriors. When the ChaosDeamontyr gave up their organic bodies to serve the C'tan, they transferred their consciousnesses into bodies made of the living metal "Necrodermis". However, they soon discovered that over an extended period of time, their new robotic bodies dulled their minds and their ability to feel any type of emotion or pleasure. Over many millennia, the ultimate outcome of this process of gradual desensitisation was that the ChaosDeamons became the soulless warrior-slaves of the C'tan, harvesting intelligent life from across the galaxy to feed these souls to their insatiable masters.</description>
+		<statBases>
+			<MoveSpeed>4.0</MoveSpeed>
+			<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.8</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<	li>Blunt</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>ChaosDeamonWarrior</body>
+			<baseHealthScale>2.5</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+		</race>
+	</ThingDef>
 
-<ThingDef ParentName="OG_Chaos_Deamon_Pawn_Base" Name="OG_Chaos_Deamon_Base" Abstract="True">
-  <defName>ChaosDeamon_Race</defName>
-    <label>Chaos Deamon Race</label>
-    <soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
-    <statBases>
-      <PsychicSensitivity>5</PsychicSensitivity>
-      <ToxicSensitivity>0</ToxicSensitivity>
-      <Flammability>0</Flammability>
-		<MeleeDodgeChance>1</MeleeDodgeChance>
-		<MeleeHitChance>1</MeleeHitChance>
-		<MeleeCritChance MayRequire="CETeam.CombatExtended">1</MeleeCritChance>
-		<MeleeParryChance MayRequire="CETeam.CombatExtended">1</MeleeParryChance>
-      <ComfyTemperatureMin>-9999</ComfyTemperatureMin>
-      <ComfyTemperatureMax>9999</ComfyTemperatureMax>
-      <MeatAmount>0</MeatAmount>
-        <ImmunityGainSpeed>5</ImmunityGainSpeed>
-        <PainShockThreshold>5</PainShockThreshold>
-    </statBases>
-    <race>
-      <body>Human</body>
-      <fleshType>OG_Flesh_Chaos_Deamon</fleshType>
-      <bloodDef>OG_FilthBlood_ChaosDeamon</bloodDef>	
-      <thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
-      <needsRest>false</needsRest>
-      <hasGenders>false</hasGenders>
-      <foodType>None</foodType>
-      <lifeExpectancy>99999</lifeExpectancy>
-      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-      <trainability>Advanced</trainability>
-    </race>
-  </ThingDef>
+	<PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+		<defName>ChaosDeamonLord</defName>
+		<label>ChaosDeamon lord</label>
+		<race>OG_Chaos_Deamon_Lord</race>
+		<combatPower>500</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Pawn/ChaosDeamonLord</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.5</drawSize>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>40000</min>
+			<max>40000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>NStaffOfLight</li>
+		</weaponTags>
+	</PawnKindDef>	
+		-->
 
-<!-- Walker (Warrior/Immortal/Lord) base -->
-  <ThingDef ParentName="OG_Chaos_Deamon_Base" Name="OG_Chaos_Deamon_Walker" Abstract="True">
-    <race>
-      <deathActionWorkerClass>DeathActionWorker_OGChaosDeamon</deathActionWorkerClass>
-      <intelligence>ToolUser</intelligence>
-      <baseBodySize>1.0</baseBodySize>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
-          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
-          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
-        </li>
-      </lifeStageAges>
-      <soundCallIntervalRange>
-        <min>1000</min>
-        <max>2000</max>
-      </soundCallIntervalRange>
-    </race>
-    <butcherProducts>
-	<!--
-      <Steel>20</Steel>
-      <Plasteel>5</Plasteel>
-      <ComponentIndustrial>1</ComponentIndustrial>
-	-->
-    </butcherProducts>
-    <modExtensions>
-		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
-			<bodyShape>Humanoid</bodyShape>
-		</li>
-    </modExtensions>
-  </ThingDef>
-  
-<!-- Walker (Warrior/Immortal/Lord) base -->
-  <ThingDef ParentName="OG_Chaos_Deamon_Base" Name="OG_Chaos_Deamon_Flyer" Abstract="True">
-    <race>
-      <deathActionWorkerClass>DeathActionWorker_OGChaosDeamon</deathActionWorkerClass>
-      <intelligence>ToolUser</intelligence>
-      <baseBodySize>1.0</baseBodySize>
-      <lifeStageAges>
-        <li>
-          <def>MechanoidFullyFormed</def>
-          <minAge>0</minAge>
-          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
-          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
-          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
-        </li>
-      </lifeStageAges>
-      <soundCallIntervalRange>
-        <min>1000</min>
-        <max>2000</max>
-      </soundCallIntervalRange>
-    </race>
-    <butcherProducts>
-	<!--
-      <Steel>20</Steel>
-      <Plasteel>5</Plasteel>
-      <ComponentIndustrial>1</ComponentIndustrial>
-	-->
-    </butcherProducts>
-    <modExtensions>
-		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
-			<bodyShape>Quadruped</bodyShape>
-		</li>
-    </modExtensions>
-  </ThingDef>
-  
-<!-- ChaosDeamon Lord -->
-<!--
-  <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>OG_Chaos_Deamon_Lord</defName>
-    <label>ChaosDeamon lord</label>
-    <description>A ChaosDeamon Lord is the most sophisticated of the ancient race of soulless xenos known as the ChaosDeamons. A ChaosDeamon Lord serves as the commander and energy supply for the much larger ChaosDeamon armies composed of the standard ChaosDeamon Warriors. When the ChaosDeamontyr gave up their organic bodies to serve the C'tan, they transferred their consciousnesses into bodies made of the living metal "Necrodermis". However, they soon discovered that over an extended period of time, their new robotic bodies dulled their minds and their ability to feel any type of emotion or pleasure. Over many millennia, the ultimate outcome of this process of gradual desensitisation was that the ChaosDeamons became the soulless warrior-slaves of the C'tan, harvesting intelligent life from across the galaxy to feed these souls to their insatiable masters.</description>
-    <statBases>
-      <MoveSpeed>4.0</MoveSpeed>
-      <ArmorRating_Blunt>0.8</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.8</ArmorRating_Sharp>
-      <ArmorRating_Heat>0.8</ArmorRating_Heat>
-    </statBases>
-    <tools>
-      <li>
-        <label>left fist</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>12.0</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>right fist</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>12.0</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>8.5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
-    <race>
-      <body>ChaosDeamonWarrior</body>
-      <baseHealthScale>2.5</baseHealthScale>
-      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-	  <useMeatFrom>Mech_Centipede</useMeatFrom>
-    </race>
-  </ThingDef>
+	<!-- Deamons of Tzeentch --> 
+	<!-- ChaosDeamon Horrors of Tzeentch -->
+	<!-- --> 
+	<ThingDef ParentName="OG_Chaos_Deamon_Walker" Name="ChaosDeamonHorrorBase">
+		<defName>OG_Chaos_Deamon_Horror</defName>
+		<label>Horror of Tzeentch</label>
+		<description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
+		<statBases>
+			<MoveSpeed>4.5</MoveSpeed>
+			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+			<ShootingAccuracyPawn>0.32</ShootingAccuracyPawn>
+			<AimingDelayFactor>-0.25</AimingDelayFactor>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>gaping maw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>Human</body>
+			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>1.0</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+			<hediffGiverSets>
+				<li>OGCD_Horror_Options</li>
+			</hediffGiverSets>
+		</race>
+		<comps> 
+			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
+				<InvunerableSaveChance>0.16</InvunerableSaveChance>
+			</li> 
+		</comps>
+	</ThingDef>
 
-  <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
-    <defName>ChaosDeamonLord</defName>
-    <label>ChaosDeamon lord</label>
-    <race>OG_Chaos_Deamon_Lord</race>
-    <combatPower>500</combatPower>
+	<!-- ChaosDeamon Flamer of Tzeentch	-->
+	<!-- Standard --> 
+	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
+		<defName>OG_Chaos_Deamon_Flamer</defName>
+		<label>Flamer of Tzeentch</label>
+		<description>A Flamer, also called the Pyrodaemons of Tzeentch, Keepers of the True Flame of Change, Bearers of the True Flame of Change, or Candelabra Mutationi are Lesser Daemons of Tzeentch. Flamers are amongst the most strange and disturbing of all Tzeentch's daemons, and their absurd physiologies are more than most mortals can stand. The body of a Flamer is a headless conical torso. It has two long arms, both terminating in fingerless stumps, which are adorned with razor-sharp teeth and flickering tongues, and continuously belching acrid and sulphuric smoke.</description>
+		<statBases>
+			<MoveSpeed>3.5</MoveSpeed>
+			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+			<ShootingAccuracyPawn>0.32</ShootingAccuracyPawn>
+			<AimingDelayFactor>-0.25</AimingDelayFactor>
+		</statBases>
+		<tools>
+			<li>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>12.0</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>12.0</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>8.5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>Human</body>
+			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>2</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+			<hediffGiverSets>
+			<li>OGCD_Flamer_Options</li>
+			</hediffGiverSets>
+		</race>
+		<comps> 
+			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
+			<InvunerableSaveChance>0.32</InvunerableSaveChance>
+			</li> 
+		</comps>
+	</ThingDef>
 
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Pawn/ChaosDeamonLord</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.5</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>NStaffOfLight</li>
-    </weaponTags>
-  </PawnKindDef>  
-  -->
+	<!-- Exalted --> 
+	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
+		<defName>OG_Chaos_Deamon_Flamer_Exalted</defName>
+		<label>Exalted Flamer of Tzeentch</label>
+		<description>An Exalted Flamer, also called the Pyrodaemons of Tzeentch, Keepers of the True Flame of Change, Bearers of the True Flame of Change, or Candelabra Mutationi are Lesser Daemons of Tzeentch. Flamers are amongst the most strange and disturbing of all Tzeentch's daemons, and their absurd physiologies are more than most mortals can stand. The body of a Flamer is a headless conical torso. It has two long arms, both terminating in fingerless stumps, which are adorned with razor-sharp teeth and flickering tongues, and continuously belching acrid and sulphuric smoke.</description>
+		<statBases>
+			<MoveSpeed>3.25</MoveSpeed>
+			<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>Human</body>
+			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>2.5</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+			<hediffGiverSets>
+				<li>OGCD_Flamer_Options</li>
+			</hediffGiverSets>
+		</race>
+		<comps> 
+			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
+				<InvunerableSaveChance>0.48</InvunerableSaveChance>
+			</li> 
+		</comps>
+	</ThingDef>
 
-<!-- Deamons of Tzeentch --> 
-<!-- ChaosDeamon Horrors of Tzeentch -->
-<!-- --> 
-  <ThingDef ParentName="OG_Chaos_Deamon_Walker" Name="ChaosDeamonHorrorBase">
-    <defName>OG_Chaos_Deamon_Horror</defName>
-    <label>Horror of Tzeentch</label>
-    <description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
-    <statBases>
-      <MoveSpeed>4.5</MoveSpeed>
-      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-      <ArmorRating_Heat>0.50</ArmorRating_Heat>
-		<ShootingAccuracyPawn>0.32</ShootingAccuracyPawn>
-		<AimingDelayFactor>-0.25</AimingDelayFactor>
-    </statBases>
-    <tools>
-      <li>
-        <label>left claws</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>12.0</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>right claws</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>12.0</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>right fist</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>8.0</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>gaping maw</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>8.5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>8.5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
-    <race>
-      <body>Human</body>
-      <thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
-      <baseBodySize>1</baseBodySize>
-      <baseHealthScale>1.0</baseHealthScale>
-      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-	  <useMeatFrom>Mech_Centipede</useMeatFrom>
-      <hediffGiverSets>
-        <li>OGCD_Horror_Options</li>
-      </hediffGiverSets>
-    </race>
-    <comps> 
-      <li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
-      </li> 
-      <li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
-        <InvunerableSaveChance>0.16</InvunerableSaveChance>
-      </li> 
-    </comps>
-  </ThingDef>
+	<!-- ChaosDeamon Screamer -->
+	<ThingDef ParentName="OG_Chaos_Deamon_Flyer">
+		<defName>OG_Chaos_Deamon_Screamer</defName>
+		<label>Screamer of Tzeentch</label>
+		<description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
+		<statBases>
+			<MoveSpeed>9.5</MoveSpeed>
+			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.16</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>8.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>8.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>gaping maw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>12.5</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10.5</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>Human</body>
+			<baseBodySize>0.5</baseBodySize>
+			<baseHealthScale>0.75</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+		</race>
+		<comps> 
+			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
+				<InvunerableSaveChance>0.16</InvunerableSaveChance>
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_Floating">
+				<isFloater>true</isFloater>
+				<canCrossWater>true</canCrossWater>
+				<useZOffset>true</useZOffset>
+				<useShadow>true</useShadow>
+			</li>
+		</comps>
+	</ThingDef>
+		
+	<!-- Deamons of Nurgle --> 
+	<!-- ChaosDeamon Nurgling -->
+	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
+		<defName>OG_Chaos_Deamon_Nurgling</defName>
+		<label>Nurgling</label>
+		<description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
+		<statBases>
+			<MoveSpeed>2.5</MoveSpeed>
+			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>4.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>4.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>gaping maw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>Human</body>
+			<baseBodySize>0.25</baseBodySize>
+			<baseHealthScale>2.5</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+		</race>
+		<comps> 
+			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
+				<InvunerableSaveChance>0.50</InvunerableSaveChance>
+			</li> 
+		</comps>
+	</ThingDef>
 
-<!-- ChaosDeamon Flamer of Tzeentch  -->
-<!-- Standard --> 
-  <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>OG_Chaos_Deamon_Flamer</defName>
-    <label>Flamer of Tzeentch</label>
-    <description>A Flamer, also called the Pyrodaemons of Tzeentch, Keepers of the True Flame of Change, Bearers of the True Flame of Change, or Candelabra Mutationi are Lesser Daemons of Tzeentch. Flamers are amongst the most strange and disturbing of all Tzeentch's daemons, and their absurd physiologies are more than most mortals can stand. The body of a Flamer is a headless conical torso. It has two long arms, both terminating in fingerless stumps, which are adorned with razor-sharp teeth and flickering tongues, and continuously belching acrid and sulphuric smoke.</description>
-    <statBases>
-      <MoveSpeed>3.5</MoveSpeed>
-      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-      <ArmorRating_Heat>0.50</ArmorRating_Heat>
-		<ShootingAccuracyPawn>0.32</ShootingAccuracyPawn>
-		<AimingDelayFactor>-0.25</AimingDelayFactor>
-    </statBases>
-    <tools>
-      <li>
-        <label>left fist</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>12.0</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>right fist</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>12.0</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>8.5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
-    <race>
-      <body>Human</body>
-      <thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
-      <baseBodySize>1</baseBodySize>
-      <baseHealthScale>2</baseHealthScale>
-      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-	  <useMeatFrom>Mech_Centipede</useMeatFrom>
-      <hediffGiverSets>
-        <li>OGCD_Flamer_Options</li>
-      </hediffGiverSets>
-    </race>
-    <comps> 
-      <li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
-      </li> 
-      <li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
-        <InvunerableSaveChance>0.32</InvunerableSaveChance>
-      </li> 
-    </comps>
-  </ThingDef>
+	<!-- ChaosDeamon Plague Bearer --> 
+	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
+		<defName>OG_Chaos_Deamon_PlagueBearer</defName>
+		<label>Plague Bearer</label>
+		<description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
+		<statBases>
+			<MoveSpeed>3.75</MoveSpeed>
+			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>8.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>8.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>gaping maw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>Human</body>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>2.5</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+		</race>
+		<comps> 
+			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
+				<InvunerableSaveChance>0.32</InvunerableSaveChance>
+			</li> 
+		</comps>
+	</ThingDef>
 
-<!-- Exalted --> 
-  <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>OG_Chaos_Deamon_Flamer_Exalted</defName>
-    <label>Exalted Flamer of Tzeentch</label>
-    <description>An Exalted Flamer, also called the Pyrodaemons of Tzeentch, Keepers of the True Flame of Change, Bearers of the True Flame of Change, or Candelabra Mutationi are Lesser Daemons of Tzeentch. Flamers are amongst the most strange and disturbing of all Tzeentch's daemons, and their absurd physiologies are more than most mortals can stand. The body of a Flamer is a headless conical torso. It has two long arms, both terminating in fingerless stumps, which are adorned with razor-sharp teeth and flickering tongues, and continuously belching acrid and sulphuric smoke.</description>
-    <statBases>
-      <MoveSpeed>3.25</MoveSpeed>
-      <ArmorRating_Blunt>0.75</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.75</ArmorRating_Sharp>
-      <ArmorRating_Heat>0.75</ArmorRating_Heat>
-    </statBases>
-    <tools>
-      <li>
-        <label>left fist</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>12.0</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>right fist</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>12.0</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>8.5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
-    <race>
-      <body>Human</body>
-      <thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
-      <baseBodySize>1</baseBodySize>
-      <baseHealthScale>2.5</baseHealthScale>
-      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-	  <useMeatFrom>Mech_Centipede</useMeatFrom>
-      <hediffGiverSets>
-        <li>OGCD_Flamer_Options</li>
-      </hediffGiverSets>
-    </race>
-    <comps> 
-      <li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
-      </li> 
-      <li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
-        <InvunerableSaveChance>0.48</InvunerableSaveChance>
-      </li> 
-    </comps>
-  </ThingDef>
-
-  <!-- ChaosDeamon Screamer -->
-  <ThingDef ParentName="OG_Chaos_Deamon_Flyer">
-    <defName>OG_Chaos_Deamon_Screamer</defName>
-    <label>Screamer of Tzeentch</label>
-    <description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
-    <statBases>
-      <MoveSpeed>9.5</MoveSpeed>
-      <ArmorRating_Blunt>0.16</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.16</ArmorRating_Sharp>
-      <ArmorRating_Heat>0.16</ArmorRating_Heat>
-    </statBases>
-    <tools>
-      <li>
-        <label>left claws</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>8.0</power>
-        <cooldownTime>1</cooldownTime>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>right claws</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>8.0</power>
-        <cooldownTime>1</cooldownTime>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>gaping maw</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>12.5</power>
-        <cooldownTime>1</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>10.5</power>
-        <cooldownTime>1</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
-    <race>
-      <body>Human</body>
-      <baseBodySize>0.5</baseBodySize>
-      <baseHealthScale>0.75</baseHealthScale>
-      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-	  <useMeatFrom>Mech_Centipede</useMeatFrom>
-    </race>
-    <comps> 
-      <li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
-      </li> 
-      <li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
-        <InvunerableSaveChance>0.16</InvunerableSaveChance>
-      </li> 
-      <li Class="AdeptusMechanicus.CompProperties_Floating">
-		<isFloater>true</isFloater>
-		<canCrossWater>true</canCrossWater>
-		<useZOffset>true</useZOffset>
-		<useShadow>true</useShadow>
-      </li>
-    </comps>
-  </ThingDef>
-  
-  <!-- Deamons of Nurgle --> 
-  <!-- ChaosDeamon Nurgling -->
-  <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>OG_Chaos_Deamon_Nurgling</defName>
-    <label>Nurgling</label>
-    <description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
-    <statBases>
-      <MoveSpeed>2.5</MoveSpeed>
-      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-      <ArmorRating_Heat>0.50</ArmorRating_Heat>
-    </statBases>
-    <tools>
-      <li>
-        <label>left claws</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>4.0</power>
-        <cooldownTime>1</cooldownTime>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>right claws</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>4.0</power>
-        <cooldownTime>1</cooldownTime>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>gaping maw</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>8.5</power>
-        <cooldownTime>1</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>8.5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
-    <race>
-      <body>Human</body>
-      <baseBodySize>0.25</baseBodySize>
-      <baseHealthScale>2.5</baseHealthScale>
-      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-	  <useMeatFrom>Mech_Centipede</useMeatFrom>
-    </race>
-    <comps> 
-      <li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
-      </li> 
-      <li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
-        <InvunerableSaveChance>0.50</InvunerableSaveChance>
-      </li> 
-    </comps>
-  </ThingDef>
-
-  <!-- ChaosDeamon Plague Bearer --> 
-  <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>OG_Chaos_Deamon_PlagueBearer</defName>
-    <label>Plague Bearer</label>
-    <description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
-    <statBases>
-      <MoveSpeed>3.75</MoveSpeed>
-      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-      <ArmorRating_Heat>0.50</ArmorRating_Heat>
-    </statBases>
-    <tools>
-      <li>
-        <label>left claws</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>8.0</power>
-        <cooldownTime>1</cooldownTime>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>right claws</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>8.0</power>
-        <cooldownTime>1</cooldownTime>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>gaping maw</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>8.5</power>
-        <cooldownTime>1</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>8.5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
-    <race>
-      <body>Human</body>
-      <baseBodySize>1</baseBodySize>
-      <baseHealthScale>2.5</baseHealthScale>
-      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-	  <useMeatFrom>Mech_Centipede</useMeatFrom>
-    </race>
-    <comps> 
-      <li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
-      </li> 
-      <li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
-        <InvunerableSaveChance>0.32</InvunerableSaveChance>
-      </li> 
-    </comps>
-  </ThingDef>
-
-  <!-- Deamons of Slannesh --> 
-  <!-- ChaosDeamon Deamonette --> 
-  <ThingDef ParentName="OG_Chaos_Deamon_Walker">
-    <defName>OG_Chaos_Deamon_Deamonette</defName>
-    <label>Deamonette</label>
-    <description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
-    <statBases>
-      <MoveSpeed>5.5</MoveSpeed>
-      <ArmorRating_Blunt>0.50</ArmorRating_Blunt>
-      <ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-      <ArmorRating_Heat>0.50</ArmorRating_Heat>
-    </statBases>
-    <tools>
-      <li>
-        <label>left claws</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>4.0</power>
-        <cooldownTime>1</cooldownTime>
-        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>right claws</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>4.0</power>
-        <cooldownTime>1</cooldownTime>
-        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-      </li>
-      <li>
-        <label>gaping maw</label>
-        <capacities>
-          <li>Cut</li>
-        </capacities>
-        <power>8.5</power>
-        <cooldownTime>1</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-      <li>
-        <label>head</label>
-        <capacities>
-          <li>Blunt</li>
-        </capacities>
-        <power>8.5</power>
-        <cooldownTime>2</cooldownTime>
-        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-        <chanceFactor>0.2</chanceFactor>
-      </li>
-    </tools>
-    <race>
-      <body>Human</body>
-      <baseBodySize>1</baseBodySize>
-      <baseHealthScale>1.5</baseHealthScale>
-      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-	  <useMeatFrom>Mech_Centipede</useMeatFrom>
-    </race>
-    <comps> 
-      <li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
-      </li> 
-      <li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
-        <InvunerableSaveChance>0.32</InvunerableSaveChance>
-      </li> 
-    </comps>
-  </ThingDef>
+	<!-- Deamons of Slannesh --> 
+	<!-- ChaosDeamon Deamonette --> 
+	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
+		<defName>OG_Chaos_Deamon_Deamonette</defName>
+		<label>Deamonette</label>
+		<description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
+		<statBases>
+			<MoveSpeed>5.5</MoveSpeed>
+			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>4.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>4.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>gaping maw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>Human</body>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>1.5</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+		</race>
+		<comps> 
+			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
+				<InvunerableSaveChance>0.32</InvunerableSaveChance>
+			</li> 
+		</comps>
+	</ThingDef>
 </Defs>

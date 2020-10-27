@@ -60,6 +60,7 @@
     <Compile Include="Racial\Necron\JobDriver_TombSpyderRepair.cs" />
     <Compile Include="Racial\Necron\JobGiver_TombSpyderRepair.cs" />
     <Compile Include="Racial\Necron\TombSpyderUtility.cs" />
+    <Compile Include="Racial\Vespid\OGVespidDefOf.cs" />
     <Compile Include="Racial\Tyranid\CompSporeMine.cs" />
     <Compile Include="Racial\Tyranid\DeathActionWorker_SporeMine.cs" />
     <Compile Include="Racial\Tyranid\SporeMineBullet.cs" />
@@ -91,7 +92,6 @@
     <Compile Include="Racial\Orkz\OGOrkDefOf.cs" />
     <Compile Include="Racial\Tau\OGTauDefOf.cs" />
     <Compile Include="Util\AMXBMain.cs" />
-    <None Include="Racial\Necron\OGNecronModification.cs - Copy.bak" />
     <Compile Include="Util\OG_AMXB_CorpseModification.cs" />
     <Compile Include="Racial\Necron\NecronHediffUtility.cs" />
     <Compile Include="Racial\Necron\CompGlowerNecron.cs" />
@@ -108,7 +108,6 @@
   <ItemGroup>
     <Folder Include="Racial\AdeptusAstartes\" />
     <Folder Include="Racial\AdeptusSororitas\" />
-    <Folder Include="Racial\Vespid\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
@@ -119,13 +118,17 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\AdMechArmoury\1.1\Source\AdeptusMechanicusMain\AdeptusMechanicusMain.csproj">
+    <ProjectReference Include="..\..\..\..\AdMechArmoury\1.1\Source\AdeptusMechanicusMain\AdeptusMechanicusArmoury.csproj">
       <Project>{2ac73323-b4f2-4592-b3ea-53ac4f8d73a7}</Project>
-      <Name>AdeptusMechanicusMain</Name>
+      <Name>AdeptusMechanicusArmoury</Name>
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AlienRace">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\839005762\1.2\Assemblies\AlienRace.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
     <Reference Include="CrashedShipsExtension">
       <HintPath>..\..\..\..\..\..\..\..\..\..\Users\User\Desktop\OgsTools\ExpandedCrashedShips\bin\Debug\CrashedShipsExtension.dll</HintPath>
     </Reference>

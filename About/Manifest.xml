@@ -1,13 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Manifest>
   <identifier>Ogliss.AdMech.Xenobiologis</identifier>
-  <version>1.5.0.0</version>
+  <version>1.6.1.1</version>
   <dependencies>
     <li>Ogliss.AdMech.Armoury</li>
   </dependencies>
-  <!--incompatibleWith>
+  <incompatibleWith>
     <li>Ogliss.FeralOrkz</li>
-  </incompatibleWith-->	
+  </incompatibleWith>	
   <loadBefore>
     <li>Ogliss.AdMech.Xenobiologis.Tau</li>
     <li>Ogliss.AdMech.Xenobiologis.Orkz</li>

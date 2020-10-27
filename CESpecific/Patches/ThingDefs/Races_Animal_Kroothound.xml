@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<!-- ========== KrootHound ========== -->
+	<!-- ========== Kroothound ========== -->
 	<Operation Class="PatchOperationSequence">
-		<!--success>Always</success-->
+		<success>Always</success>
 		<operations>
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="KrootHound" or defName="KindredKrootHound"]/tools</xpath>
+				<xpath>Defs/ThingDef[@Name="OG_KrootHound_Base"]/tools</xpath>
 				<value>
 					<tools>
 						<li Class="CombatExtended.ToolCE">

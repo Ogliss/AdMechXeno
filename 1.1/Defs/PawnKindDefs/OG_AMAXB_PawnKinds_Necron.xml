@@ -1,19 +1,22 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- Necron Base Abstracts -->
-  <PawnKindDef Name="BaseNecronKind" Abstract="True">
+  <PawnKindDef Name="OG_Necron_BaseKind" Abstract="True">
     <defaultFactionType>OG_Necron_Faction</defaultFactionType>
     <aiAvoidCover>true</aiAvoidCover>
     <destroyGearOnDrop>false</destroyGearOnDrop>
+    <weaponMoney>
+      <min>99999</min>
+      <max>99999</max>
+    </weaponMoney>
   </PawnKindDef>  
     
 <!-- Necron Warrior -->
-  <PawnKindDef ParentName="BaseNecronKind">
+  <PawnKindDef ParentName="OG_Necron_BaseKind">
     <defName>OG_Necron_Warrior</defName>
     <label>necron warrior</label>
     <race>Necron_Warrior</race>
     <combatPower>100</combatPower>
-
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -27,22 +30,17 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
     <weaponTags>
       <li>OGN_Gun_GaussFlayer</li>
     </weaponTags>
   </PawnKindDef>
   
 <!-- Flayed One -->
-  <PawnKindDef ParentName="BaseNecronKind">
+  <PawnKindDef ParentName="OG_Necron_BaseKind">
     <defName>OG_Necron_Flayed_One</defName>
     <label>necron Flayed One</label>
     <race>Necron_FlayedOne</race>
     <combatPower>100</combatPower>
-
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -56,10 +54,6 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-    <weaponMoney>
-      <min>4000</min>
-      <max>4000</max>
-    </weaponMoney>
     <weaponTags>
       <li>OGN_Melee_FlayingTalon</li>
       <li>AlwaysDualWield</li>
@@ -71,12 +65,11 @@
   </PawnKindDef>
   
 <!-- Wraith -->
-  <PawnKindDef ParentName="BaseNecronKind">
+  <PawnKindDef ParentName="OG_Necron_BaseKind">
     <defName>OG_Necron_Wraith</defName>
     <label>necron wraith</label>
     <race>Necron_Wraith</race>
     <combatPower>150</combatPower>
-
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -90,10 +83,6 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-    <weaponMoney>
-      <min>4000</min>
-      <max>4000</max>
-    </weaponMoney>
     <weaponTags>
       <li>OGN_Melee_FlayingTalon</li>
       <li>AlwaysDualWield</li>
@@ -101,12 +90,11 @@
   </PawnKindDef>
   
 <!-- Necron Immortal -->
-  <PawnKindDef ParentName="BaseNecronKind">
+  <PawnKindDef ParentName="OG_Necron_BaseKind">
     <defName>OG_Necron_Immortal</defName>
     <label>necron immortal</label>
     <race>Necron_Immortal</race>
     <combatPower>200</combatPower>
-
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -120,10 +108,6 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
     <weaponTags>
       <li>OGN_Gun_GaussBlaster</li>
       <li>OGN_Gun_TeslaCarbine</li>
@@ -136,12 +120,11 @@
   </PawnKindDef>  
   
 <!-- Necron Lord -->
-  <PawnKindDef ParentName="BaseNecronKind">
+  <PawnKindDef ParentName="OG_Necron_BaseKind">
     <defName>OG_Necron_Lord</defName>
     <label>necron lord</label>
     <race>Necron_Lord</race>
     <combatPower>500</combatPower>
-
     <lifeStages>
       <li>
         <bodyGraphicData>
@@ -155,17 +138,13 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
     <weaponTags>
       <li>OGN_Gun_StaffOfLight</li>
     </weaponTags>
   </PawnKindDef>  
   
 <!-- Necron Destroyer -->
-  <PawnKindDef ParentName="BaseNecronKind">
+  <PawnKindDef ParentName="OG_Necron_BaseKind">
     <defName>OG_Necron_Destroyer</defName>
     <label>necron destroyer</label>
     <race>Necron_Destroyer</race>
@@ -183,10 +162,6 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-    <weaponMoney>
-      <min>30000</min>
-      <max>30000</max>
-    </weaponMoney>
     <weaponTags>
       <li>OGN_Gun_GaussCannon</li>
       <li>OGN_Gun_GaussBlasterTwinLinked</li>
@@ -195,7 +170,7 @@
   </PawnKindDef>
 
 <!-- Necron Heavy Destroyer -->
-  <PawnKindDef ParentName="BaseNecronKind">
+  <PawnKindDef ParentName="OG_Necron_BaseKind">
     <defName>OG_Necron_Destroyer_Heavy</defName>
     <label>necron heavy destroyer</label>
     <race>Necron_HeavyDestroyer</race>
@@ -213,17 +188,13 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-    <weaponMoney>
-      <min>30000</min>
-      <max>30000</max>
-    </weaponMoney>
     <weaponTags>
       <li>OGN_Gun_GaussCannon</li>
     </weaponTags>
   </PawnKindDef>
 
 <!-- Necron Scarab -->
-  <PawnKindDef ParentName="BaseNecronKind">
+  <PawnKindDef ParentName="OG_Necron_BaseKind">
     <defName>OG_Necron_Scarab_Swarm</defName>
     <label>necron scarab swarm</label>
     <race>Necron_ScarabSwarm</race>
@@ -250,7 +221,7 @@
   </PawnKindDef>
 
 <!-- Tomb Spyder -->
-  <PawnKindDef ParentName="BaseNecronKind">
+  <PawnKindDef ParentName="OG_Necron_BaseKind">
     <defName>OG_Necron_Tomb_Spyder</defName>
     <label>tomb spyder</label>
     <race>Necron_TombSpyder</race>
@@ -268,10 +239,6 @@
         </bodyGraphicData>
       </li>
     </lifeStages>
-    <weaponMoney>
-      <min>9999</min>
-      <max>9999</max>
-    </weaponMoney>
     <weaponTags>
       <li>OGN_Gun_ParticleBeamer</li>
       <li>OGN_Melee_FabricatorClaw</li>

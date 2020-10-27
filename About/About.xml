@@ -8,10 +8,31 @@
       <li>1.2</li>
    </supportedVersions>
    <packageId>Ogliss.AdMech.Xenobiologis</packageId>
-	  <loadAfter>
-		<li>erdelf.HumanoidAlienRaces</li>
-	  </loadAfter>
-	<description>V1.5.0.1
+    <modDependencies>
+      <li>
+        <packageId>Ogliss.AdMech.Armoury</packageId>
+        <displayName>Adeptus Mechanicus: Armoury</displayName>
+        <steamWorkshopUrl>steam://url/CommunityFilePage/1541438614</steamWorkshopUrl>
+        <downloadUrl>https://github.com/Ogliss/AdMechArmoury</downloadUrl>
+      </li>
+    </modDependencies>
+  <loadAfter>
+    <li>erdelf.HumanoidAlienRaces</li>
+    <li>Ogliss.AdMech.Armoury</li>
+  </loadAfter>
+  <loadBefore>
+    <li>Ogliss.AdMech.Astartes</li>
+    <li>Ogliss.AdMech.Xenobiologis.Orkz</li>
+    <li>Ogliss.AdMech.Xenobiologis.Eldar</li>
+    <li>Ogliss.AdMech.Xenobiologis.DarkEldar</li>
+    <li>Ogliss.AdMech.Xenobiologis.Tau</li>
+    <li>Ogliss.AdMech.Xenobiologis.Necrons</li>
+    <li>Ogliss.AdMech.Xenobiologis.Tyranids</li>
+  </loadBefore>
+  <incompatibleWith>
+    <li>Ogliss.FeralOrkz</li>
+  </incompatibleWith>	
+	<description>V1.6.1.1
 Adds factions using xenos weapons from my Armoury mod.
 Requires new start or one of those faction managers
 	

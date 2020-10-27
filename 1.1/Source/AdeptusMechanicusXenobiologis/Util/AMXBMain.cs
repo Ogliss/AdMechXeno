@@ -33,11 +33,11 @@ namespace AdeptusMechanicus
                 FactionDef fd = OGTauDefOf.OG_Tau_Faction;
                 ThingDef td = OGKrootDefOf.OG_Alien_Kroot;
                 Filter(fd, td);
-                td = OGKrootDefOf.KindredKrootHound;
+                td = OGKrootDefOf.OG_Kroothound_Kindred;
                 Filter(fd, td);
-                td = OGKrootDefOf.KindredKrootKnarloc;
+                td = OGKrootDefOf.OG_Knarloc_Kindred;
                 Filter(fd, td);
-                td = OGKrootDefOf.KindredKrootOx;
+                td = OGKrootDefOf.OG_KrootOx_Kindred;
                 Filter(fd, td);
             }
         //    Log.Message(string.Format("post AllowKrootAuxiliaries"));

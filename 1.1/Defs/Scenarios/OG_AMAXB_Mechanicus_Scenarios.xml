@@ -99,6 +99,10 @@
 			<li Class="ScenPart_AMXBRelations">
 				<def>OG_Rule_EnforceFactionRelations</def>
 			</li>
+			<li MayRequire="CptVHOhu970.CorruptionWorship" Class="Corruption.Worship.ScenPart_StartingReligion">
+				<def>StartingReligion</def>
+				<pantheon>ImperialCult</pantheon>
+			</li>
 		</parts>
 	</scenario>
 </ScenarioDef>

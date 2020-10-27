@@ -2,41 +2,12 @@
 <Patch>
 	<!-- ========== KrootOx ========== -->
 	<Operation Class="PatchOperationSequence">
-		<!--success>Always</success-->
+		<success>Always</success>
 		<operations>
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="KrootOx" or defName="KindredKrootOx"]/tools</xpath>
+				<xpath>Defs/ThingDef[@Name="OG_KrootOx_Base"]/tools</xpath>
 				<value>
 					<tools>
-						<li Class="CombatExtended.ToolCE">
-							<label>left claw</label>
-							<capacities>
-								<li>Scratch</li>
-							</capacities>
-							<power>27</power>
-							<cooldownTime>2.3</cooldownTime>
-							<linkedBodyPartsGroup>FrontLeftLeg</linkedBodyPartsGroup>
-							<armorPenetration>0.282</armorPenetration>
-						</li>
-						<li Class="CombatExtended.ToolCE">
-							<label>right claw</label>
-							<capacities>
-								<li>Scratch</li>
-							</capacities>
-							<power>27</power>
-							<cooldownTime>2.3</cooldownTime>
-							<linkedBodyPartsGroup>FrontRightLeg</linkedBodyPartsGroup>
-							<armorPenetration>0.282</armorPenetration>
-						</li>
-						<li Class="CombatExtended.ToolCE">
-							<capacities>
-								<li>Bite</li>
-							</capacities>
-							<power>21</power>
-							<cooldownTime>2.2</cooldownTime>
-							<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
-							<armorPenetration>0.282</armorPenetration>
-						</li>
 						<li Class="CombatExtended.ToolCE">
 							<label>head</label>
 							<capacities>
@@ -47,6 +18,40 @@
 							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 							<chanceFactor>0.2</chanceFactor>
 							<armorPenetration>0.14</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>left hand</label>
+							<capacities>
+								<li>Blunt</li>
+								<li>Poke</li>
+								<li>Scratch</li>
+							</capacities>
+							<power>20</power>
+							<cooldownTime>2.0</cooldownTime>
+							<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+							<armorPenetration>0.282</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>right hand</label>
+							<capacities>
+								<li>Blunt</li>
+								<li>Poke</li>
+								<li>Scratch</li>
+							</capacities>
+							<power>20</power>
+							<cooldownTime>2.0</cooldownTime>
+							<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+							<armorPenetration>0.282</armorPenetration>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<capacities>
+								<li>Bite</li>
+							</capacities>
+							<power>30</power>
+							<cooldownTime>2.3</cooldownTime>
+							<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+							<chanceFactor>0.1</chanceFactor>
+							<armorPenetration>0.582</armorPenetration>
 						</li>
 					</tools>
 				</value>

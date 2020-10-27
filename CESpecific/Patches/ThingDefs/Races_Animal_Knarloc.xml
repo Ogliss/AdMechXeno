@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<!-- ========== KrootKnarloc ========== -->
+	<!-- ========== Knarloc ========== -->
 	<Operation Class="PatchOperationSequence">
-		<!--success>Always</success-->
+		<success>Always</success>
 		<operations>
 			<li Class="PatchOperationReplace">
-				<xpath>Defs/ThingDef[defName="KrootKnarloc" or defName="KindredKrootKnarloc"]/tools</xpath>
+				<xpath>Defs/ThingDef[@Name="OG_Knarloc_Base"]/tools</xpath>
 				<value>
 					<tools>
 						<li Class="CombatExtended.ToolCE">
@@ -25,7 +25,7 @@
 							</capacities>
 							<power>16</power>
 							<cooldownTime>1.65</cooldownTime>
-							<linkedBodyPartsGroup>LeftFootClaws</linkedBodyPartsGroup>
+							<linkedBodyPartsGroup>OG_Knarloc_LeftFootClaws</linkedBodyPartsGroup>
 							<armorPenetration>0.163</armorPenetration>
 						</li>
 						<li Class="CombatExtended.ToolCE">
@@ -35,7 +35,7 @@
 							</capacities>
 							<power>16</power>
 							<cooldownTime>1.65</cooldownTime>
-							<linkedBodyPartsGroup>RightFootClaws</linkedBodyPartsGroup>
+							<linkedBodyPartsGroup>OG_Knarloc_RightFootClaws</linkedBodyPartsGroup>
 							<armorPenetration>0.163</armorPenetration>
 						</li>
 						<li Class="CombatExtended.ToolCE">
