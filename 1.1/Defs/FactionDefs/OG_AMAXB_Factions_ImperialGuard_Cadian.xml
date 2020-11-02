@@ -2,8 +2,8 @@
 <Defs>
 	<FactionDef ParentName="OG_Militarum_Faction_Base">
 		<defName>OG_Militarum_Cadian_Faction</defName>
-		<label>Imperial Guard</label>
-		<description>An Imperial outpost.</description>
+		<label>Cadian Regiment</label>
+		<description>The Cadian Shock Troops, also sometimes called Cadian Shock Troopers, are the highly disciplined Astra Militarum Militarum Regimentum soldiers conscripted in large numbers from the Fortress World of Cadia, which once stood sentinel as the preeminent bastion of the Imperium of Man in the fight against the Emperor's ancient Archenemy, Chaos.\n\nCadia was one world amongst many tens of thousands in the Imperium of Man, and has an honoured and violent place in its history, for Cadia stood upon the edge of the Eye of Terror within the Segmentum Obscurus, in a narrow corridor of navigable space known as the Cadian Gate.</description>
 		<pawnSingular>cadian</pawnSingular>
 		<pawnsPlural>cadians</pawnsPlural>
 		<categoryTag>Outlander</categoryTag>
@@ -18,7 +18,7 @@
 			<min>10</min>
 			<max>40</max>
 		</startingGoodwill>
-		<factionNameMaker>NamerOGIGFactionCadian</factionNameMaker>
+		<factionNameMaker>OG_NamerFaction_Militarum_Cadian</factionNameMaker>
 		<backstoryFilters>
 			<!--
 			<li>

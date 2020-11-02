@@ -1,1188 +1,1188 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!--===================== Scarab single ====================-->
-  <BodyDef>
-    <defName>OG_Necron_Scarab_Single</defName>
-    <label>necron scarab beetle</label>
+<!--===================== Scarab single ====================-->
+<BodyDef>
+	<defName>OG_Necron_Scarab_Single</defName>
+	<label>necron scarab beetle</label>
 	<ignoreConfigErrors>true</ignoreConfigErrors>
-    <corePart>
-      <def>OG_Necron_Carapace</def>
-      <height>Middle</height>
-      <depth>Outside</depth>
-      <parts>
-        <li>
-          <def>OG_Necron_NecrodermisRegulator</def>
-          <coverage>0.05</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_Reactor</def>
-          <coverage>0.03</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_HeadMount</def>
-          <coverage>0.18</coverage>
-          <height>Top</height>
-          <parts>
-            <li>
-              <def>OG_Necron_Head</def>
-              <coverage>0.65</coverage>
-              <groups>
-                <li>HeadAttackTool</li>
-              </groups>
-              <parts>
-                <li>
-                  <def>OG_Necron_Brain</def>
-                  <coverage>0.2</coverage>
-                  <depth>Inside</depth>
-                </li>
-                <li>
-                  <def>OG_Necron_ViasalSensor</def>
-                  <customLabel>left eye</customLabel>
-                  <coverage>0.12</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_ViasalSensor</def>
-                  <customLabel>right eye</customLabel>
-                  <coverage>0.12</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_AuditorySensor</def>
-                  <coverage>0.06</coverage>
-                </li>
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>right blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>                
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>left blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>front left leg</customLabel>
-          <coverage>0.06</coverage>
-          <height>Bottom</height>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>front right leg</customLabel>
-          <coverage>0.06</coverage>
-          <height>Bottom</height>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>middle left leg</customLabel>
-          <coverage>0.06</coverage>
-          <height>Bottom</height>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>middle right leg</customLabel>
-          <coverage>0.06</coverage>
-          <height>Bottom</height>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>rear left leg</customLabel>
-          <coverage>0.06</coverage>
-          <height>Bottom</height>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>rear right leg</customLabel>
-          <coverage>0.06</coverage>
-          <height>Bottom</height>
-        </li>
-      </parts>
-    </corePart>
-  </BodyDef>
-  
-  <!--===================== Scarab swarm ====================-->
-  <BodyDef>
-    <defName>OG_Necron_Scarab_Swarm</defName>
-    <label>scarab swarm</label>
-	<ignoreConfigErrors>true</ignoreConfigErrors>
-    <corePart>
-      <def>OG_Necron_ScarabSwarmCore</def>
-      <height>Middle</height>
-      <depth>Outside</depth>
-      <parts>
-        <li>
-          <def>OG_Necron_SwarmScarab</def>
-          <coverage>0.2</coverage>
-          <depth>Outside</depth>
-			  <parts>
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>right blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>                
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>left blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
-			  </parts>
-        </li>
-        <li>
-          <def>OG_Necron_SwarmScarab</def>
-          <coverage>0.2</coverage>
-          <depth>Outside</depth>
-			  <parts>
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>right blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>                
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>left blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
-			  </parts>
-        </li>
-        <li>
-          <def>OG_Necron_SwarmScarab</def>
-          <coverage>0.2</coverage>
-          <depth>Outside</depth>
-			  <parts>
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>right blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>                
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>left blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
-			  </parts>
-        </li>
-        <li>
-          <def>OG_Necron_SwarmScarab</def>
-          <coverage>0.2</coverage>
-          <depth>Outside</depth>
-			  <parts>
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>right blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>                
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>left blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
-			  </parts>
-        </li>
-        <li>
-          <def>OG_Necron_SwarmScarab</def>
-          <coverage>0.2</coverage>
-          <depth>Outside</depth>
-			  <parts>
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>right blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>                
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>left blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
-			  </parts>
-        </li>
-      </parts>
-    </corePart>
-  </BodyDef>
-
-  <!--===================== Destroyer/Heavy Destroyer/Destroyer Lord ====================-->
-  <BodyDef>
-    <defName>OG_Necron_Destroyer</defName>
-    <label>necron destroyer</label>
-	<ignoreConfigErrors>true</ignoreConfigErrors>
-    <corePart>
-      <def>OG_Necron_HumanoidTorso</def>
-      <height>Middle</height>
-      <depth>Outside</depth>
-      <parts>
-        <li>
-          <def>OG_Necron_Neck</def>
-          <coverage>0.10</coverage>
-          <height>Top</height>
-          <parts>
-            <li>
-              <def>OG_Necron_Head</def>
-              <coverage>0.80</coverage>
-              <groups>
-                <li>HeadAttackTool</li>
-              </groups>
-              <parts>
-                <li>
-                  <def>OG_Necron_Brain</def>
-                  <coverage>0.10</coverage>
-                  <depth>Inside</depth>
-                </li>
-                <li>
-                  <def>OG_Necron_ViasalSensor</def>
-                  <customLabel>left sight sensor</customLabel>
-                  <coverage>0.13</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_ViasalSensor</def>
-                  <customLabel>right sight sensor</customLabel>
-                  <coverage>0.13</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_AuditorySensor</def>
-                  <customLabel>left hearing sensor</customLabel>
-                  <coverage>0.10</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_AuditorySensor</def>
-                  <customLabel>right hearing sensor</customLabel>
-                  <coverage>0.10</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_OlfactorySensor</def>
-                  <coverage>0.10</coverage>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_Shoulder</def>
-          <customLabel>left shoulder</customLabel>
-          <coverage>0.17</coverage>
-          <parts>
-            <li>
-              <def>OG_Necron_Arm</def>
-              <customLabel>left arm</customLabel>
-              <coverage>0.85</coverage>
-              <parts>
-                <li>
-                  <def>OG_Necron_Hand</def>
-                  <customLabel>left hand</customLabel>
-                  <coverage>0.2</coverage>
-                  <height>Bottom</height>
-                  <parts>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left pinky</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left middle finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left index finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left thumb</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                  </parts>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_Shoulder</def>
-          <customLabel>right Necron shoulder</customLabel>
-          <coverage>0.17</coverage>
-          <parts>
-            <li>
-              <def>OG_Necron_Arm</def>
-              <customLabel>right arm</customLabel>
-              <coverage>0.85</coverage>
-              <parts>
-                <li>
-                  <def>OG_Necron_Hand</def>
-                  <customLabel>right hand</customLabel>
-                  <coverage>0.2</coverage>
-                  <height>Bottom</height>
-                  <parts>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right pinky</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right middle finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right index finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right thumb</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                  </parts>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_DestoyerBaseCore</def>
-          <customLabel>destroyer core</customLabel>
-          <coverage>0.1</coverage>
-          <height>Bottom</height>
-          <parts>
+	<corePart>
+		<def>OG_Necron_Carapace</def>
+		<height>Middle</height>
+		<depth>Outside</depth>
+		<parts>
+		<li>
+			<def>OG_Necron_NecrodermisRegulator</def>
+			<coverage>0.05</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_Reactor</def>
+			<coverage>0.03</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_HeadMount</def>
+			<coverage>0.18</coverage>
+			<height>Top</height>
+			<parts>
 			<li>
-			  <def>OG_Necron_DestoyerBaseSide</def>
-			  <customLabel>left side</customLabel>
-			  <coverage>0.15</coverage>
-			  <height>Bottom</height>
-			  <parts>
+				<def>OG_Necron_Head</def>
+				<coverage>0.65</coverage>
+				<groups>
+				<li>HeadAttackTool</li>
+				</groups>
+				<parts>
 				<li>
-				  <def>OG_Necron_DestoryerFirstFloat</def>
-				  <customLabel>left front floatation unit</customLabel>
-				  <coverage>0.06</coverage>
+					<def>OG_Necron_Brain</def>
+					<coverage>0.2</coverage>
+					<depth>Inside</depth>
 				</li>
 				<li>
-				  <def>OG_Necron_DestoryerSecondFloat</def>
-				  <customLabel>left middle floatation unit</customLabel>
-				  <coverage>0.08</coverage>
+					<def>OG_Necron_ViasalSensor</def>
+					<customLabel>left eye</customLabel>
+					<coverage>0.12</coverage>
 				</li>
 				<li>
-				  <def>OG_Necron_DestoryerThirdFloat</def>
-				  <customLabel>left rear floatation unit</customLabel>
-				  <coverage>0.06</coverage>
+					<def>OG_Necron_ViasalSensor</def>
+					<customLabel>right eye</customLabel>
+					<coverage>0.12</coverage>
 				</li>
-			  </parts>
+				<li>
+					<def>OG_Necron_AuditorySensor</def>
+					<coverage>0.06</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_FlayingBlade</def>
+					<customLabel>right blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>RightBlade</li>
+					</groups>
+				 </li>				
+				<li>
+					<def>OG_Necron_FlayingBlade</def>
+					<customLabel>left blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>LeftBlade</li>
+					</groups>
+				 </li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>front left leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>front right leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>middle left leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>middle right leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>rear left leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>rear right leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		</parts>
+	</corePart>
+</BodyDef>
+
+<!--===================== Scarab swarm ====================-->
+<BodyDef>
+	<defName>OG_Necron_Scarab_Swarm</defName>
+	<label>scarab swarm</label>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+	<corePart>
+		<def>OG_Necron_ScarabSwarmCore</def>
+		<height>Middle</height>
+		<depth>Outside</depth>
+		<parts>
+		<li>
+			<def>OG_Necron_SwarmScarab</def>
+			<coverage>0.2</coverage>
+			<depth>Outside</depth>
+				<parts>
+				<li>
+					<def>OG_Necron_FlayingBlade</def>
+					<customLabel>right blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>RightBlade</li>
+					</groups>
+				 </li>				
+				<li>
+					<def>OG_Necron_FlayingBlade</def>
+					<customLabel>left blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>LeftBlade</li>
+					</groups>
+				 </li>
+				</parts>
+		</li>
+		<li>
+			<def>OG_Necron_SwarmScarab</def>
+			<coverage>0.2</coverage>
+			<depth>Outside</depth>
+				<parts>
+				<li>
+					<def>OG_Necron_FlayingBlade</def>
+					<customLabel>right blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>RightBlade</li>
+					</groups>
+				 </li>				
+				<li>
+					<def>OG_Necron_FlayingBlade</def>
+					<customLabel>left blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>LeftBlade</li>
+					</groups>
+				 </li>
+				</parts>
+		</li>
+		<li>
+			<def>OG_Necron_SwarmScarab</def>
+			<coverage>0.2</coverage>
+			<depth>Outside</depth>
+				<parts>
+				<li>
+					<def>OG_Necron_FlayingBlade</def>
+					<customLabel>right blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>RightBlade</li>
+					</groups>
+				 </li>				
+				<li>
+					<def>OG_Necron_FlayingBlade</def>
+					<customLabel>left blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>LeftBlade</li>
+					</groups>
+				 </li>
+				</parts>
+		</li>
+		<li>
+			<def>OG_Necron_SwarmScarab</def>
+			<coverage>0.2</coverage>
+			<depth>Outside</depth>
+				<parts>
+				<li>
+					<def>OG_Necron_FlayingBlade</def>
+					<customLabel>right blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>RightBlade</li>
+					</groups>
+				 </li>				
+				<li>
+					<def>OG_Necron_FlayingBlade</def>
+					<customLabel>left blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>LeftBlade</li>
+					</groups>
+				 </li>
+				</parts>
+		</li>
+		<li>
+			<def>OG_Necron_SwarmScarab</def>
+			<coverage>0.2</coverage>
+			<depth>Outside</depth>
+				<parts>
+				<li>
+					<def>OG_Necron_FlayingBlade</def>
+					<customLabel>right blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>RightBlade</li>
+					</groups>
+				 </li>				
+				<li>
+					<def>OG_Necron_FlayingBlade</def>
+					<customLabel>left blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>LeftBlade</li>
+					</groups>
+				 </li>
+				</parts>
+		</li>
+		</parts>
+	</corePart>
+</BodyDef>
+
+<!--===================== Destroyer/Heavy Destroyer/Destroyer Lord ====================-->
+<BodyDef>
+	<defName>OG_Necron_Destroyer</defName>
+	<label>necron destroyer</label>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+	<corePart>
+		<def>OG_Necron_HumanoidTorso</def>
+		<height>Middle</height>
+		<depth>Outside</depth>
+		<parts>
+		<li>
+			<def>OG_Necron_Neck</def>
+			<coverage>0.10</coverage>
+			<height>Top</height>
+			<parts>
+			<li>
+				<def>OG_Necron_Head</def>
+				<coverage>0.80</coverage>
+				<groups>
+				<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+				<li>
+					<def>OG_Necron_Brain</def>
+					<coverage>0.10</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>OG_Necron_ViasalSensor</def>
+					<customLabel>left sight sensor</customLabel>
+					<coverage>0.13</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_ViasalSensor</def>
+					<customLabel>right sight sensor</customLabel>
+					<coverage>0.13</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_AuditorySensor</def>
+					<customLabel>left hearing sensor</customLabel>
+					<coverage>0.10</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_AuditorySensor</def>
+					<customLabel>right hearing sensor</customLabel>
+					<coverage>0.10</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_OlfactorySensor</def>
+					<coverage>0.10</coverage>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_Shoulder</def>
+			<customLabel>left shoulder</customLabel>
+			<coverage>0.17</coverage>
+			<parts>
+			<li>
+				<def>OG_Necron_Arm</def>
+				<customLabel>left arm</customLabel>
+				<coverage>0.85</coverage>
+				<parts>
+				<li>
+					<def>OG_Necron_Hand</def>
+					<customLabel>left hand</customLabel>
+					<coverage>0.2</coverage>
+					<height>Bottom</height>
+					<parts>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left pinky</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left middle finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left index finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left thumb</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					</parts>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_Shoulder</def>
+			<customLabel>right Necron shoulder</customLabel>
+			<coverage>0.17</coverage>
+			<parts>
+			<li>
+				<def>OG_Necron_Arm</def>
+				<customLabel>right arm</customLabel>
+				<coverage>0.85</coverage>
+				<parts>
+				<li>
+					<def>OG_Necron_Hand</def>
+					<customLabel>right hand</customLabel>
+					<coverage>0.2</coverage>
+					<height>Bottom</height>
+					<parts>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right pinky</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right middle finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right index finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right thumb</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					</parts>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_DestoyerBaseCore</def>
+			<customLabel>destroyer core</customLabel>
+			<coverage>0.1</coverage>
+			<height>Bottom</height>
+			<parts>
+			<li>
+				<def>OG_Necron_DestoyerBaseSide</def>
+				<customLabel>left side</customLabel>
+				<coverage>0.15</coverage>
+				<height>Bottom</height>
+				<parts>
+				<li>
+					<def>OG_Necron_DestoryerFirstFloat</def>
+					<customLabel>left front floatation unit</customLabel>
+					<coverage>0.06</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_DestoryerSecondFloat</def>
+					<customLabel>left middle floatation unit</customLabel>
+					<coverage>0.08</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_DestoryerThirdFloat</def>
+					<customLabel>left rear floatation unit</customLabel>
+					<coverage>0.06</coverage>
+				</li>
+				</parts>
 			</li>
 			<li>
-			  <def>OG_Necron_DestoyerBaseSide</def>
-			  <customLabel>right side</customLabel>
-			  <coverage>0.15</coverage>
-			  <height>Bottom</height>
-			  <parts>
+				<def>OG_Necron_DestoyerBaseSide</def>
+				<customLabel>right side</customLabel>
+				<coverage>0.15</coverage>
+				<height>Bottom</height>
+				<parts>
 				<li>
-				  <def>OG_Necron_DestoryerFirstFloat</def>
-				  <customLabel>right front floatation unit</customLabel>
-				  <coverage>0.06</coverage>
+					<def>OG_Necron_DestoryerFirstFloat</def>
+					<customLabel>right front floatation unit</customLabel>
+					<coverage>0.06</coverage>
 				</li>
 				<li>
-				  <def>OG_Necron_DestoryerSecondFloat</def>
-				  <customLabel>right middle floatation unit</customLabel>
-				  <coverage>0.08</coverage>
+					<def>OG_Necron_DestoryerSecondFloat</def>
+					<customLabel>right middle floatation unit</customLabel>
+					<coverage>0.08</coverage>
 				</li>
 				<li>
-				  <def>OG_Necron_DestoryerThirdFloat</def>
-				  <customLabel>right rear floatation unit</customLabel>
-				  <coverage>0.06</coverage>
+					<def>OG_Necron_DestoryerThirdFloat</def>
+					<customLabel>right rear floatation unit</customLabel>
+					<coverage>0.06</coverage>
 				</li>
-			  </parts>
+				</parts>
 			</li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_Reactor</def>
-          <coverage>0.06</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_NecrodermisRegulator</def>
-          <coverage>0.04</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_PhasicCapacitor</def>
-          <coverage>0.02</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_ReanimationMatrix</def>
-          <coverage>0.02</coverage>
-          <depth>Inside</depth>
-        </li>
-      </parts>
-    </corePart>
-  </BodyDef>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_Reactor</def>
+			<coverage>0.06</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_NecrodermisRegulator</def>
+			<coverage>0.04</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_PhasicCapacitor</def>
+			<coverage>0.02</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_ReanimationMatrix</def>
+			<coverage>0.02</coverage>
+			<depth>Inside</depth>
+		</li>
+		</parts>
+	</corePart>
+</BodyDef>
 
-  <!--===================== Warrior/Immortal/Lord ====================-->
-  <BodyDef>
-    <defName>OG_Necron_Warrior</defName>
-    <label>necron warrior</label>
+<!--===================== Warrior/Immortal/Lord ====================-->
+<BodyDef>
+	<defName>OG_Necron_Warrior</defName>
+	<label>necron warrior</label>
 	<ignoreConfigErrors>true</ignoreConfigErrors>
-    <corePart>
-      <def>OG_Necron_HumanoidTorso</def>
-      <height>Middle</height>
-      <depth>Outside</depth>
-      <parts>
-        <li>
-          <def>OG_Necron_Neck</def>
-          <coverage>0.10</coverage>
-          <height>Top</height>
-          <parts>
-            <li>
-              <def>OG_Necron_Head</def>
-              <coverage>0.80</coverage>
-              <groups>
-                <li>HeadAttackTool</li>
-              </groups>
-              <parts>
-                <li>
-                  <def>OG_Necron_Brain</def>
-                  <coverage>0.10</coverage>
-                  <depth>Inside</depth>
-                </li>
-                <li>
-                  <def>OG_Necron_ViasalSensor</def>
-                  <customLabel>left sight sensor</customLabel>
-                  <coverage>0.13</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_ViasalSensor</def>
-                  <customLabel>right sight sensor</customLabel>
-                  <coverage>0.13</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_AuditorySensor</def>
-                  <customLabel>left hearing sensor</customLabel>
-                  <coverage>0.10</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_AuditorySensor</def>
-                  <customLabel>right hearing sensor</customLabel>
-                  <coverage>0.10</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_OlfactorySensor</def>
-                  <coverage>0.10</coverage>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_Shoulder</def>
-          <customLabel>left shoulder</customLabel>
-          <coverage>0.17</coverage>
-          <parts>
-            <li>
-              <def>OG_Necron_Arm</def>
-              <customLabel>left arm</customLabel>
-              <coverage>0.85</coverage>
-              <parts>
-                <li>
-                  <def>OG_Necron_Hand</def>
-                  <customLabel>left hand</customLabel>
-                  <coverage>0.2</coverage>
-                  <height>Bottom</height>
-                  <parts>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left pinky</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left middle finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left index finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left thumb</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                  </parts>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_Shoulder</def>
-          <customLabel>right Necron shoulder</customLabel>
-          <coverage>0.17</coverage>
-          <parts>
-            <li>
-              <def>OG_Necron_Arm</def>
-              <customLabel>right arm</customLabel>
-              <coverage>0.85</coverage>
-              <parts>
-                <li>
-                  <def>OG_Necron_Hand</def>
-                  <customLabel>right hand</customLabel>
-                  <coverage>0.2</coverage>
-                  <height>Bottom</height>
-                  <parts>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right pinky</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right middle finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right index finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right thumb</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                  </parts>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>left leg</customLabel>
-          <coverage>0.2</coverage>
-          <height>Bottom</height>
-          <parts>
-            <li>
-              <def>OG_Necron_HumanoidFoot</def>
-              <customLabel>left foot</customLabel>
-              <coverage>0.2</coverage>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>right leg</customLabel>
-          <coverage>0.2</coverage>
-          <height>Bottom</height>
-          <parts>
-            <li>
-              <def>OG_Necron_HumanoidFoot</def>
-              <customLabel>right foot</customLabel>
-              <coverage>0.2</coverage>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_Reactor</def>
-          <coverage>0.06</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_NecrodermisRegulator</def>
-          <coverage>0.04</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_PhasicCapacitor</def>
-          <coverage>0.02</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_ReanimationMatrix</def>
-          <coverage>0.02</coverage>
-          <depth>Inside</depth>
-        </li>
-      </parts>
-    </corePart>
-  </BodyDef>
-   
-  <!--===================== Flayed One ====================-->
-  <BodyDef>
-    <defName>OG_Necron_Flayed_One</defName>
-    <label>flayed one</label>
+	<corePart>
+		<def>OG_Necron_HumanoidTorso</def>
+		<height>Middle</height>
+		<depth>Outside</depth>
+		<parts>
+		<li>
+			<def>OG_Necron_Neck</def>
+			<coverage>0.10</coverage>
+			<height>Top</height>
+			<parts>
+			<li>
+				<def>OG_Necron_Head</def>
+				<coverage>0.80</coverage>
+				<groups>
+				<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+				<li>
+					<def>OG_Necron_Brain</def>
+					<coverage>0.10</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>OG_Necron_ViasalSensor</def>
+					<customLabel>left sight sensor</customLabel>
+					<coverage>0.13</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_ViasalSensor</def>
+					<customLabel>right sight sensor</customLabel>
+					<coverage>0.13</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_AuditorySensor</def>
+					<customLabel>left hearing sensor</customLabel>
+					<coverage>0.10</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_AuditorySensor</def>
+					<customLabel>right hearing sensor</customLabel>
+					<coverage>0.10</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_OlfactorySensor</def>
+					<coverage>0.10</coverage>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_Shoulder</def>
+			<customLabel>left shoulder</customLabel>
+			<coverage>0.17</coverage>
+			<parts>
+			<li>
+				<def>OG_Necron_Arm</def>
+				<customLabel>left arm</customLabel>
+				<coverage>0.85</coverage>
+				<parts>
+				<li>
+					<def>OG_Necron_Hand</def>
+					<customLabel>left hand</customLabel>
+					<coverage>0.2</coverage>
+					<height>Bottom</height>
+					<parts>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left pinky</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left middle finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left index finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left thumb</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					</parts>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_Shoulder</def>
+			<customLabel>right Necron shoulder</customLabel>
+			<coverage>0.17</coverage>
+			<parts>
+			<li>
+				<def>OG_Necron_Arm</def>
+				<customLabel>right arm</customLabel>
+				<coverage>0.85</coverage>
+				<parts>
+				<li>
+					<def>OG_Necron_Hand</def>
+					<customLabel>right hand</customLabel>
+					<coverage>0.2</coverage>
+					<height>Bottom</height>
+					<parts>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right pinky</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right middle finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right index finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right thumb</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					</parts>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>left leg</customLabel>
+			<coverage>0.2</coverage>
+			<height>Bottom</height>
+			<parts>
+			<li>
+				<def>OG_Necron_HumanoidFoot</def>
+				<customLabel>left foot</customLabel>
+				<coverage>0.2</coverage>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>right leg</customLabel>
+			<coverage>0.2</coverage>
+			<height>Bottom</height>
+			<parts>
+			<li>
+				<def>OG_Necron_HumanoidFoot</def>
+				<customLabel>right foot</customLabel>
+				<coverage>0.2</coverage>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_Reactor</def>
+			<coverage>0.06</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_NecrodermisRegulator</def>
+			<coverage>0.04</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_PhasicCapacitor</def>
+			<coverage>0.02</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_ReanimationMatrix</def>
+			<coverage>0.02</coverage>
+			<depth>Inside</depth>
+		</li>
+		</parts>
+	</corePart>
+</BodyDef>
+ 
+<!--===================== Flayed One ====================-->
+<BodyDef>
+	<defName>OG_Necron_Flayed_One</defName>
+	<label>flayed one</label>
 	<ignoreConfigErrors>true</ignoreConfigErrors>
-    <corePart>
-      <def>OG_Necron_HumanoidTorso</def>
-      <height>Middle</height>
-      <depth>Outside</depth>
-      <parts>
-        <li>
-          <def>OG_Necron_Neck</def>
-          <coverage>0.10</coverage>
-          <height>Top</height>
-          <parts>
-            <li>
-              <def>OG_Necron_Head</def>
-              <coverage>0.80</coverage>
-              <groups>
-                <li>HeadAttackTool</li>
-              </groups>
-              <parts>
-                <li>
-                  <def>OG_Necron_Brain</def>
-                  <coverage>0.10</coverage>
-                  <depth>Inside</depth>
-                </li>
-                <li>
-                  <def>OG_Necron_ViasalSensor</def>
-                  <customLabel>left sight sensor</customLabel>
-                  <coverage>0.13</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_ViasalSensor</def>
-                  <customLabel>right sight sensor</customLabel>
-                  <coverage>0.13</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_AuditorySensor</def>
-                  <customLabel>left hearing sensor</customLabel>
-                  <coverage>0.10</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_AuditorySensor</def>
-                  <customLabel>right hearing sensor</customLabel>
-                  <coverage>0.10</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_OlfactorySensor</def>
-                  <coverage>0.10</coverage>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_Shoulder</def>
-          <customLabel>left shoulder</customLabel>
-          <coverage>0.17</coverage>
-          <parts>
-            <li>
-              <def>OG_Necron_Arm</def>
-              <customLabel>left arm</customLabel>
-              <coverage>0.85</coverage>
-              <parts>
-                <li>
-                  <def>OG_Necron_Hand</def>
-                  <customLabel>left hand</customLabel>
-                  <coverage>0.2</coverage>
-                  <height>Bottom</height>
-                  <parts>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left pinky</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left middle finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left index finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left thumb</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                  </parts>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_Shoulder</def>
-          <customLabel>right shoulder</customLabel>
-          <coverage>0.17</coverage>
-          <parts>
-            <li>
-              <def>OG_Necron_Arm</def>
-              <customLabel>right arm</customLabel>
-              <coverage>0.85</coverage>
-              <parts>
-                <li>
-                  <def>OG_Necron_Hand</def>
-                  <customLabel>right hand</customLabel>
-                  <coverage>0.2</coverage>
-                  <height>Bottom</height>
-                  <parts>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right pinky</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right middle finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right index finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right thumb</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                  </parts>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>left leg</customLabel>
-          <coverage>0.2</coverage>
-          <height>Bottom</height>
-          <parts>
-            <li>
-              <def>OG_Necron_HumanoidFoot</def>
-              <customLabel>left foot</customLabel>
-              <coverage>0.2</coverage>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>right leg</customLabel>
-          <coverage>0.2</coverage>
-          <height>Bottom</height>
-          <parts>
-            <li>
-              <def>OG_Necron_HumanoidFoot</def>
-              <customLabel>right foot</customLabel>
-              <coverage>0.2</coverage>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_Reactor</def>
-          <coverage>0.06</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_NecrodermisRegulator</def>
-          <coverage>0.04</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_PhasicCapacitor</def>
-          <coverage>0.02</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_ReanimationMatrix</def>
-          <coverage>0.02</coverage>
-          <depth>Inside</depth>
-        </li>
-      </parts>
-    </corePart>
-  </BodyDef>
-  
-  <!--===================== Wraith ====================-->
-  <BodyDef>
-    <defName>OG_Necron_Wraith</defName>
-    <label>wraith</label>
+	<corePart>
+		<def>OG_Necron_HumanoidTorso</def>
+		<height>Middle</height>
+		<depth>Outside</depth>
+		<parts>
+		<li>
+			<def>OG_Necron_Neck</def>
+			<coverage>0.10</coverage>
+			<height>Top</height>
+			<parts>
+			<li>
+				<def>OG_Necron_Head</def>
+				<coverage>0.80</coverage>
+				<groups>
+				<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+				<li>
+					<def>OG_Necron_Brain</def>
+					<coverage>0.10</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>OG_Necron_ViasalSensor</def>
+					<customLabel>left sight sensor</customLabel>
+					<coverage>0.13</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_ViasalSensor</def>
+					<customLabel>right sight sensor</customLabel>
+					<coverage>0.13</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_AuditorySensor</def>
+					<customLabel>left hearing sensor</customLabel>
+					<coverage>0.10</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_AuditorySensor</def>
+					<customLabel>right hearing sensor</customLabel>
+					<coverage>0.10</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_OlfactorySensor</def>
+					<coverage>0.10</coverage>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_Shoulder</def>
+			<customLabel>left shoulder</customLabel>
+			<coverage>0.17</coverage>
+			<parts>
+			<li>
+				<def>OG_Necron_Arm</def>
+				<customLabel>left arm</customLabel>
+				<coverage>0.85</coverage>
+				<parts>
+				<li>
+					<def>OG_Necron_Hand</def>
+					<customLabel>left hand</customLabel>
+					<coverage>0.2</coverage>
+					<height>Bottom</height>
+					<parts>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left pinky</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left middle finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left index finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left thumb</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					</parts>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_Shoulder</def>
+			<customLabel>right shoulder</customLabel>
+			<coverage>0.17</coverage>
+			<parts>
+			<li>
+				<def>OG_Necron_Arm</def>
+				<customLabel>right arm</customLabel>
+				<coverage>0.85</coverage>
+				<parts>
+				<li>
+					<def>OG_Necron_Hand</def>
+					<customLabel>right hand</customLabel>
+					<coverage>0.2</coverage>
+					<height>Bottom</height>
+					<parts>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right pinky</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right middle finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right index finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right thumb</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					</parts>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>left leg</customLabel>
+			<coverage>0.2</coverage>
+			<height>Bottom</height>
+			<parts>
+			<li>
+				<def>OG_Necron_HumanoidFoot</def>
+				<customLabel>left foot</customLabel>
+				<coverage>0.2</coverage>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>right leg</customLabel>
+			<coverage>0.2</coverage>
+			<height>Bottom</height>
+			<parts>
+			<li>
+				<def>OG_Necron_HumanoidFoot</def>
+				<customLabel>right foot</customLabel>
+				<coverage>0.2</coverage>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_Reactor</def>
+			<coverage>0.06</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_NecrodermisRegulator</def>
+			<coverage>0.04</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_PhasicCapacitor</def>
+			<coverage>0.02</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_ReanimationMatrix</def>
+			<coverage>0.02</coverage>
+			<depth>Inside</depth>
+		</li>
+		</parts>
+	</corePart>
+</BodyDef>
+
+<!--===================== Wraith ====================-->
+<BodyDef>
+	<defName>OG_Necron_Wraith</defName>
+	<label>wraith</label>
 	<ignoreConfigErrors>true</ignoreConfigErrors>
-    <corePart>
-      <def>OG_Necron_HumanoidTorso</def>
-      <height>Middle</height>
-      <depth>Outside</depth>
-      <parts>
-        <li>
-          <def>OG_Necron_Neck</def>
-          <coverage>0.10</coverage>
-          <height>Top</height>
-          <parts>
-            <li>
-              <def>OG_Necron_Head</def>
-              <coverage>0.80</coverage>
-              <groups>
-                <li>HeadAttackTool</li>
-              </groups>
-              <parts>
-                <li>
-                  <def>OG_Necron_Brain</def>
-                  <coverage>0.10</coverage>
-                  <depth>Inside</depth>
-                </li>
-                <li>
-                  <def>OG_Necron_ViasalSensor</def>
-                  <customLabel>left sight sensor</customLabel>
-                  <coverage>0.13</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_ViasalSensor</def>
-                  <customLabel>right sight sensor</customLabel>
-                  <coverage>0.13</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_AuditorySensor</def>
-                  <customLabel>left hearing sensor</customLabel>
-                  <coverage>0.10</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_AuditorySensor</def>
-                  <customLabel>right hearing sensor</customLabel>
-                  <coverage>0.10</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_OlfactorySensor</def>
-                  <coverage>0.10</coverage>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_Shoulder</def>
-          <customLabel>left shoulder</customLabel>
-          <coverage>0.17</coverage>
-          <parts>
-            <li>
-              <def>OG_Necron_Arm</def>
-              <customLabel>left arm</customLabel>
-              <coverage>0.85</coverage>
-              <parts>
-                <li>
-                  <def>OG_Necron_Hand</def>
-                  <customLabel>left hand</customLabel>
-                  <coverage>0.2</coverage>
-                  <height>Bottom</height>
-                  <parts>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left pinky</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left middle finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left index finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left thumb</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                  </parts>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_Shoulder</def>
-          <customLabel>right shoulder</customLabel>
-          <coverage>0.17</coverage>
-          <parts>
-            <li>
-              <def>OG_Necron_Arm</def>
-              <customLabel>right arm</customLabel>
-              <coverage>0.85</coverage>
-              <parts>
-                <li>
-                  <def>OG_Necron_Hand</def>
-                  <customLabel>right hand</customLabel>
-                  <coverage>0.2</coverage>
-                  <height>Bottom</height>
-                  <parts>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right pinky</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right middle finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right index finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right thumb</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                  </parts>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_WraithTailFirstSegment</def>
-          <coverage>0.4</coverage>
-          <parts>
-            <li>
-              <def>OG_Necron_WraithTailSecondSegment</def>
-              <coverage>0.8</coverage>
-              <parts>
-                <li>
-                  <def>OG_Necron_WraithTailThirdSegment</def>
-                  <coverage>0.75</coverage>
-                  <parts>
-                    <li>
-                      <def>OG_Necron_WraithTailFourthSegment</def>
-                      <coverage>0.66</coverage>
-                      <parts>
-                        <li>
-                          <def>OG_Necron_WraithTailFifthSegment</def>
-                          <coverage>0.5</coverage>
-                        </li>
-                      </parts>
-                    </li>
-                  </parts>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li><li>
-          <def>OG_Necron_Reactor</def>
-          <coverage>0.06</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_NecrodermisRegulator</def>
-          <coverage>0.04</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_PhasicCapacitor</def>
-          <coverage>0.02</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_ReanimationMatrix</def>
-          <coverage>0.02</coverage>
-          <depth>Inside</depth>
-        </li>
-      </parts>
-    </corePart>
-  </BodyDef>
-  
-  <!--===================== Tomb Spyder ====================-->
-  <BodyDef>
-    <defName>OG_Necron_Tomb_Spyder</defName>
-    <label>tomb spyder</label>
+	<corePart>
+		<def>OG_Necron_HumanoidTorso</def>
+		<height>Middle</height>
+		<depth>Outside</depth>
+		<parts>
+		<li>
+			<def>OG_Necron_Neck</def>
+			<coverage>0.10</coverage>
+			<height>Top</height>
+			<parts>
+			<li>
+				<def>OG_Necron_Head</def>
+				<coverage>0.80</coverage>
+				<groups>
+				<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+				<li>
+					<def>OG_Necron_Brain</def>
+					<coverage>0.10</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>OG_Necron_ViasalSensor</def>
+					<customLabel>left sight sensor</customLabel>
+					<coverage>0.13</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_ViasalSensor</def>
+					<customLabel>right sight sensor</customLabel>
+					<coverage>0.13</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_AuditorySensor</def>
+					<customLabel>left hearing sensor</customLabel>
+					<coverage>0.10</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_AuditorySensor</def>
+					<customLabel>right hearing sensor</customLabel>
+					<coverage>0.10</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_OlfactorySensor</def>
+					<coverage>0.10</coverage>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_Shoulder</def>
+			<customLabel>left shoulder</customLabel>
+			<coverage>0.17</coverage>
+			<parts>
+			<li>
+				<def>OG_Necron_Arm</def>
+				<customLabel>left arm</customLabel>
+				<coverage>0.85</coverage>
+				<parts>
+				<li>
+					<def>OG_Necron_Hand</def>
+					<customLabel>left hand</customLabel>
+					<coverage>0.2</coverage>
+					<height>Bottom</height>
+					<parts>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left pinky</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left middle finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left index finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left thumb</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					</parts>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_Shoulder</def>
+			<customLabel>right shoulder</customLabel>
+			<coverage>0.17</coverage>
+			<parts>
+			<li>
+				<def>OG_Necron_Arm</def>
+				<customLabel>right arm</customLabel>
+				<coverage>0.85</coverage>
+				<parts>
+				<li>
+					<def>OG_Necron_Hand</def>
+					<customLabel>right hand</customLabel>
+					<coverage>0.2</coverage>
+					<height>Bottom</height>
+					<parts>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right pinky</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right middle finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right index finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right thumb</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					</parts>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_WraithTailFirstSegment</def>
+			<coverage>0.4</coverage>
+			<parts>
+			<li>
+				<def>OG_Necron_WraithTailSecondSegment</def>
+				<coverage>0.8</coverage>
+				<parts>
+				<li>
+					<def>OG_Necron_WraithTailThirdSegment</def>
+					<coverage>0.75</coverage>
+					<parts>
+					<li>
+						<def>OG_Necron_WraithTailFourthSegment</def>
+						<coverage>0.66</coverage>
+						<parts>
+						<li>
+							<def>OG_Necron_WraithTailFifthSegment</def>
+							<coverage>0.5</coverage>
+						</li>
+						</parts>
+					</li>
+					</parts>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li><li>
+			<def>OG_Necron_Reactor</def>
+			<coverage>0.06</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_NecrodermisRegulator</def>
+			<coverage>0.04</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_PhasicCapacitor</def>
+			<coverage>0.02</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_ReanimationMatrix</def>
+			<coverage>0.02</coverage>
+			<depth>Inside</depth>
+		</li>
+		</parts>
+	</corePart>
+</BodyDef>
+
+<!--===================== Tomb Spyder ====================-->
+<BodyDef>
+	<defName>OG_Necron_Tomb_Spyder</defName>
+	<label>tomb spyder</label>
 	<ignoreConfigErrors>true</ignoreConfigErrors>
-    <corePart>
-      <def>OG_Necron_Carapace</def>
-      <height>Middle</height>
-      <depth>Outside</depth>
-      <parts>
-        <li>
-          <def>OG_Necron_NecrodermisRegulator</def>
-          <coverage>0.03</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_PhasicCapacitor</def>
-          <coverage>0.03</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_ReanimationMatrix</def>
-          <coverage>0.03</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_Reactor</def>
-          <coverage>0.03</coverage>
-          <depth>Inside</depth>
-        </li>
-        <li>
-          <def>OG_Necron_HeadMount</def>
-          <coverage>0.18</coverage>
-          <height>Top</height>
-          <parts>
-            <li>
-              <def>OG_Necron_Head</def>
-              <coverage>0.65</coverage>
-              <groups>
-                <li>HeadAttackTool</li>
-              </groups>
-              <parts>
-                <li>
-                  <def>OG_Necron_Brain</def>
-                  <coverage>0.2</coverage>
-                  <depth>Inside</depth>
-                </li>
-                <li>
-                  <def>OG_Necron_ViasalSensor</def>
-                  <customLabel>left eye</customLabel>
-                  <coverage>0.12</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_ViasalSensor</def>
-                  <customLabel>right eye</customLabel>
-                  <coverage>0.12</coverage>
-                </li>
-                <li>
-                  <def>OG_Necron_AuditorySensor</def>
-                  <coverage>0.06</coverage>
-                </li>
+	<corePart>
+		<def>OG_Necron_Carapace</def>
+		<height>Middle</height>
+		<depth>Outside</depth>
+		<parts>
+		<li>
+			<def>OG_Necron_NecrodermisRegulator</def>
+			<coverage>0.03</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_PhasicCapacitor</def>
+			<coverage>0.03</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_ReanimationMatrix</def>
+			<coverage>0.03</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_Reactor</def>
+			<coverage>0.03</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_Necron_HeadMount</def>
+			<coverage>0.18</coverage>
+			<height>Top</height>
+			<parts>
+			<li>
+				<def>OG_Necron_Head</def>
+				<coverage>0.65</coverage>
+				<groups>
+				<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+				<li>
+					<def>OG_Necron_Brain</def>
+					<coverage>0.2</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>OG_Necron_ViasalSensor</def>
+					<customLabel>left eye</customLabel>
+					<coverage>0.12</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_ViasalSensor</def>
+					<customLabel>right eye</customLabel>
+					<coverage>0.12</coverage>
+				</li>
+				<li>
+					<def>OG_Necron_AuditorySensor</def>
+					<coverage>0.06</coverage>
+				</li>
 				<li>
 					<def>OG_Necron_FlayingBlade</def>
 					<customLabel>right blade</customLabel>
@@ -1190,7 +1190,7 @@
 					<groups>
 						<li>RightBlade</li>
 					</groups>
-				 </li>                
+				 </li>				
 				<li>
 					<def>OG_Necron_FlayingBlade</def>
 					<customLabel>left blade</customLabel>
@@ -1199,140 +1199,140 @@
 						<li>LeftBlade</li>
 					</groups>
 				 </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_Shoulder</def>
-          <customLabel>left shoulder</customLabel>
-          <coverage>0.07</coverage>
-          <parts>
-            <li>
-              <def>OG_Necron_Arm</def>
-              <customLabel>left arm</customLabel>
-              <coverage>0.85</coverage>
-              <parts>
-                <li>
-                  <def>OG_Necron_Hand</def>
-                  <customLabel>left hand</customLabel>
-                  <coverage>0.2</coverage>
-                  <height>Bottom</height>
-                  <parts>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left pinky</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left middle finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>left index finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>LeftHand</li>
-                      </groups>
-                    </li>
-                  </parts>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_Shoulder</def>
-          <customLabel>right Necron shoulder</customLabel>
-          <coverage>0.07</coverage>
-          <parts>
-            <li>
-              <def>OG_Necron_Arm</def>
-              <customLabel>right arm</customLabel>
-              <coverage>0.85</coverage>
-              <parts>
-                <li>
-                  <def>OG_Necron_Hand</def>
-                  <customLabel>right hand</customLabel>
-                  <coverage>0.2</coverage>
-                  <height>Bottom</height>
-                  <parts>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right pinky</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right middle finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                    <li>
-                      <def>OG_Necron_Finger</def>
-                      <customLabel>right index finger</customLabel>
-                      <coverage>0.15</coverage>
-                      <groups>
-                        <li>RightHand</li>
-                      </groups>
-                    </li>
-                  </parts>
-                </li>
-              </parts>
-            </li>
-          </parts>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>front left leg</customLabel>
-          <coverage>0.06</coverage>
-          <height>Bottom</height>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>front right leg</customLabel>
-          <coverage>0.06</coverage>
-          <height>Bottom</height>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>middle left leg</customLabel>
-          <coverage>0.06</coverage>
-          <height>Bottom</height>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>middle right leg</customLabel>
-          <coverage>0.06</coverage>
-          <height>Bottom</height>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>rear left leg</customLabel>
-          <coverage>0.06</coverage>
-          <height>Bottom</height>
-        </li>
-        <li>
-          <def>OG_Necron_HumanoidLeg</def>
-          <customLabel>rear right leg</customLabel>
-          <coverage>0.06</coverage>
-          <height>Bottom</height>
-        </li>
-      </parts>
-    </corePart>
-  </BodyDef>
-  
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_Shoulder</def>
+			<customLabel>left shoulder</customLabel>
+			<coverage>0.07</coverage>
+			<parts>
+			<li>
+				<def>OG_Necron_Arm</def>
+				<customLabel>left arm</customLabel>
+				<coverage>0.85</coverage>
+				<parts>
+				<li>
+					<def>OG_Necron_Hand</def>
+					<customLabel>left hand</customLabel>
+					<coverage>0.2</coverage>
+					<height>Bottom</height>
+					<parts>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left pinky</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left middle finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>left index finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>LeftHand</li>
+						</groups>
+					</li>
+					</parts>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_Shoulder</def>
+			<customLabel>right Necron shoulder</customLabel>
+			<coverage>0.07</coverage>
+			<parts>
+			<li>
+				<def>OG_Necron_Arm</def>
+				<customLabel>right arm</customLabel>
+				<coverage>0.85</coverage>
+				<parts>
+				<li>
+					<def>OG_Necron_Hand</def>
+					<customLabel>right hand</customLabel>
+					<coverage>0.2</coverage>
+					<height>Bottom</height>
+					<parts>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right pinky</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right middle finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_Necron_Finger</def>
+						<customLabel>right index finger</customLabel>
+						<coverage>0.15</coverage>
+						<groups>
+						<li>RightHand</li>
+						</groups>
+					</li>
+					</parts>
+				</li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>front left leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>front right leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>middle left leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>middle right leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>rear left leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_Necron_HumanoidLeg</def>
+			<customLabel>rear right leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		</parts>
+	</corePart>
+</BodyDef>
+
 </Defs>

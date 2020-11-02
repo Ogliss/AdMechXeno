@@ -111,10 +111,10 @@
 			</li>
 		</modExtensions>
 	</FactionDef>
-  
+
 	<FactionDef ParentName="OG_Chaos_Deamon_Faction_Base">
 		<defName>OG_Chaos_Deamon_Faction</defName>
 		<requiredCountAtGameStart>0</requiredCountAtGameStart>
 	</FactionDef>
-  
+
 </Defs>

@@ -19,19 +19,19 @@
 		</colorSpectrum>
 		<earliestRaidDays>90</earliestRaidDays>
 		<permanentEnemy>true</permanentEnemy>
-			<factionNameMaker>NamerOGOG_Mechanicus_Faction</factionNameMaker>
-			<techLevel>Spacer</techLevel>
+		<factionNameMaker>NamerOGOG_Mechanicus_Faction</factionNameMaker>
+		<techLevel>Spacer</techLevel>
 		<backstoryFilters>
 			<li>
-			<categories>
-			  <li>Imperium_Standard</li>
-			</categories>
+				<categories>
+					<li>Imperium_Standard</li>
+				</categories>
 			</li>
 			<li>
-			<categories>
-			  <li>Offworld</li>
-			  <li>Pirate</li>
-			</categories>
+				<categories>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categories>
 			</li>
 		</backstoryFilters>
 		<geneticVariance>0.8</geneticVariance>
@@ -42,21 +42,17 @@
 			<min>-40</min>
 			<max>45</max>
 		</allowedArrivalTemperatureRange>
-		<modExtensions>
-			<li Class="AdeptusMechanicus.FactionDefExtension">
-				<ForcedTraits>
-					<li>
-						<def>Transhumanist</def>
-						<degree>0</degree>
-						<Chance>1</Chance>
-						<replaceiffull>True</replaceiffull>
-					</li>
-				</ForcedTraits>
-				<hediffGivers>
-					<li>OG_Mechanicus_HediffSet</li>
-				</hediffGivers>
-			</li>
-		</modExtensions>
+		<visitorTraderKinds>
+			<li>OG_Mechanicus_Trader_Visitor_Standard</li>
+		</visitorTraderKinds>
+		 <caravanTraderKinds>
+			<li>OG_Mechanicus_Trader_Caravan_BulkGoods</li>
+			<li>OG_Mechanicus_Trader_Caravan_CombatSupplier</li>
+			<li>OG_Mechanicus_Trader_Caravan_Exotic</li>
+		</caravanTraderKinds>
+		<baseTraderKinds>
+			<li>OG_Mechanicus_Trader_Base_Standard</li>
+		</baseTraderKinds>
 		<maxPawnCostPerTotalPointsCurve>
 			<points>
 				<li>(0,35)</li>
@@ -111,7 +107,7 @@
 				<kindDef>Combat</kindDef>
 				<commonality>15</commonality>
 				<disallowedStrategies>
-				  <li>Siege</li>
+					<li>Siege</li>
 				</disallowedStrategies>
 				<options>
 					<OG_Mechanicus_Skitarii_Vanguard_Primus>1</OG_Mechanicus_Skitarii_Vanguard_Primus>
@@ -179,6 +175,21 @@
 		</pawnGroupMakers>
 		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 		<factionIconPath>Icons/Imperial/Mechanicus/Icon_Adeptus_Mechanicus</factionIconPath>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.FactionDefExtension">
+				<ForcedTraits>
+					<li>
+						<def>Transhumanist</def>
+						<degree>0</degree>
+						<Chance>1</Chance>
+						<replaceiffull>True</replaceiffull>
+					</li>
+				</ForcedTraits>
+				<hediffGivers>
+					<li>OG_Mechanicus_HediffSet</li>
+				</hediffGivers>
+			</li>
+		</modExtensions>
 	</FactionDef>
 
 	<FactionDef ParentName="OG_Mechanicus_Faction_Base">

@@ -1,19 +1,19 @@
 <Defs>
-  <JobDef>
-    <defName>OGAMXBDeconstruct</defName>
-    <driverClass>JobDriver_OGAMXBDeconstruct</driverClass>
-    <reportString>deconstructing TargetA.</reportString>
-  </JobDef>
-  
-    <JobDef>
-    <defName>OGAMXBWaitCombatBuilding</defName>
-    <driverClass>JobDriver_OGAMXBWaitBuilding</driverClass>
-    <reportString>watching for targets.</reportString>
-    <alwaysShowWeapon>true</alwaysShowWeapon>
-    <suspendable>false</suspendable>
-  </JobDef>
+<JobDef>
+	<defName>OGAMXBDeconstruct</defName>
+	<driverClass>JobDriver_OGAMXBDeconstruct</driverClass>
+	<reportString>deconstructing TargetA.</reportString>
+</JobDef>
 
-    <JobDef>
+	<JobDef>
+	<defName>OGAMXBWaitCombatBuilding</defName>
+	<driverClass>JobDriver_OGAMXBWaitBuilding</driverClass>
+	<reportString>watching for targets.</reportString>
+	<alwaysShowWeapon>true</alwaysShowWeapon>
+	<suspendable>false</suspendable>
+</JobDef>
+
+	<JobDef>
 		<defName>OGAMXBWaitBuilding</defName>
 		<driverClass>JobDriver_OGAMXBWaitBuilding</driverClass>
 		<reportString>standing.</reportString>
@@ -26,5 +26,5 @@
 		<alwaysShowWeapon>true</alwaysShowWeapon>
 		<casualInterruptible>false</casualInterruptible>
 		<collideWithPawns>true</collideWithPawns>
-  </JobDef>
+</JobDef>
 </Defs>

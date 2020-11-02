@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <PawnKindDef Name="BaseTauDroneKind" Abstract="True">
-    <defaultFactionType>OG_Tau_Faction</defaultFactionType>
+<PawnKindDef Name="BaseTauDroneKind" Abstract="True">
+	<defaultFactionType>OG_Tau_Faction</defaultFactionType>
 	<itemQuality>Poor</itemQuality>
-    <aiAvoidCover>true</aiAvoidCover>
-    <destroyGearOnDrop>true</destroyGearOnDrop>
-  </PawnKindDef>
-  
-  <PawnKindDef ParentName="BaseTauDroneKind">
-    <defName>OG_Tau_GunDrone</defName>
-    <label>gun drone</label>
-    <labelPlural>gun drones</labelPlural>
-    <race>OG_Tau_GunDrone</race>
-    <combatPower>35</combatPower>
-    <lifeStages>
-      <li>
+	<aiAvoidCover>true</aiAvoidCover>
+	<destroyGearOnDrop>true</destroyGearOnDrop>
+</PawnKindDef>
+
+<PawnKindDef ParentName="BaseTauDroneKind">
+	<defName>OG_Tau_GunDrone</defName>
+	<label>gun drone</label>
+	<labelPlural>gun drones</labelPlural>
+	<race>OG_Tau_GunDrone</race>
+	<combatPower>35</combatPower>
+	<lifeStages>
+		<li>
 		<bodyGraphicData>
 			<texPath>Things/Pawn/ToolUser/Tau/GunDrone</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
@@ -26,13 +26,13 @@
 				<volume>(0.6, 0.8, 0.6)</volume>
 			</shadowData>
 		</bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponMoney>9999~9999</weaponMoney>
-    <weaponTags>
-      <li>TPulseCarbineTwinLinked</li>
-    </weaponTags>
-  </PawnKindDef>
+		</li>
+	</lifeStages>
+	<weaponMoney>9999~9999</weaponMoney>
+	<weaponTags>
+		<li>TPulseCarbineTwinLinked</li>
+	</weaponTags>
+</PawnKindDef>
 
 	<!--==================== Tau - Twin linked Pulse Carbine (Drones only) =========================-->
 	<ThingDef ParentName="BaseGunWithQuality">
@@ -56,7 +56,7 @@
 		<equippedStatOffsets>
 			<ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
 		</equippedStatOffsets>
-		<comps>  
+		<comps>
 			<li Class="OgsCompOversizedWeapon.CompProperties_OversizedWeapon">
 				<!--
 				<verticalFlipOutsideCombat>true</verticalFlipOutsideCombat>

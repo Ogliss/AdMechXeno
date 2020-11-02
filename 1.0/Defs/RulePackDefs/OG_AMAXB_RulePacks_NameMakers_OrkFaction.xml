@@ -2,12 +2,12 @@
 <Defs>
 
 	<RulePackDef>
-		<defName>NamerOGOrkFaction</defName>
+		<defName>OG_NamerFaction_Ork</defName>
 		<rulePack>
-		  <rulesStrings>
+			<rulesStrings>
 			<li>name->[OGOrkClans1] [OGOrkClans2] [OGOrkClans3]</li>
-		  </rulesStrings>
-		  <rulesRaw>
+			</rulesStrings>
+			<rulesRaw>
 			<li Class="Rule_File">
 				<keyword>OGOrkClans1</keyword>
 				<path>NameBanks/OGOrkClans1</path>
@@ -20,7 +20,7 @@
 				<keyword>OGOrkClans3</keyword>
 				<path>NameBanks/OGOrkClans3</path>
 			</li>
-		  </rulesRaw>
+			</rulesRaw>
 		</rulePack>
 	</RulePackDef>
 	
@@ -42,11 +42,11 @@
 	<RulePackDef>
 		<defName>NamerPersonOrk</defName>
 		<rulePack>
-		  <rulesStrings>
+			<rulesStrings>
 			<li>name(p=6)->[OGOrkFirst] [OGOrkSecond]</li>
 			<li>name(p=1)->[OGOrkFirst] '[OGOrkNick]' [OGOrkSecond]</li>
 			<li>OGOrkFirst->[OGOrkFirstA][OGOrkFirstB]</li>
-		  </rulesStrings>
+			</rulesStrings>
 			<rulesRaw>
 			<li Class="Rule_File">
 				<keyword>OGOrkFirstA</keyword>
@@ -64,17 +64,17 @@
 				<keyword>OGOrkNick</keyword>
 				<path>NameBanks/OGOrkNick</path>
 			</li>
-		  </rulesRaw>
+			</rulesRaw>
 		</rulePack>
 	</RulePackDef>
 
 	<RulePackDef>
 		<defName>NamerSnotling</defName>
 		<rulePack>
-		  <rulesStrings>
+			<rulesStrings>
 			<li>name->[OGSnotFirst]</li>
 			<li>OGSnotFirst->[OGSnot][OGOrkFirstB]</li>
-		  </rulesStrings>
+			</rulesStrings>
 			<rulesRaw>
 			<li Class="Rule_File">
 				<keyword>OGOrkFirstB</keyword>
@@ -84,7 +84,7 @@
 				<keyword>OGSnot</keyword>
 				<path>NameBanks/Snot</path>
 			</li>
-		  </rulesRaw>
+			</rulesRaw>
 		</rulePack>
 	</RulePackDef>
 

@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Defs>  
-  <ThingDef Name="OGCDeamonBaseGun" ParentName="OGBaseGun" Abstract="True">
-    <weaponTags>
-      <li>CDeamonRanged</li>
-      <li>CDeamonWeapon</li>
-    </weaponTags>
+<Defs>
+<ThingDef Name="OGCDeamonBaseGun" ParentName="OGBaseGun" Abstract="True">
+	<weaponTags>
+		<li>CDeamonRanged</li>
+		<li>CDeamonWeapon</li>
+	</weaponTags>
 	<tradeability>None</tradeability>
-    <menuHidden>true</menuHidden>
-    <destroyOnDrop>true</destroyOnDrop>
+	<menuHidden>true</menuHidden>
+	<destroyOnDrop>true</destroyOnDrop>
 	<techLevel>Spacer</techLevel>
-  </ThingDef> 
+</ThingDef> 
 
 
-  <!-- ====================== Warpfire Bolt ===================== -->
+<!-- ====================== Warpfire Bolt ===================== -->
  <ThingDef Class="ThingDef_BulletExplosiveOG" ParentName="BaseBullet">
 	<defName>OGCD_Bullet_WarpfireBolt</defName>
-    <label>warpfire bolt</label>
-    <graphicData>
+	<label>warpfire bolt</label>
+	<graphicData>
 		<texPath>Things/Projectile/Warpfire</texPath>
 		<graphicClass>Graphic_Random</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <projectile>
+		<shaderType>TransparentPostLight</shaderType>
+	</graphicData>
+	<projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OG_Warpfire</damageDef>
 		<armorPenetrationBase>0.16</armorPenetrationBase>
@@ -35,16 +35,16 @@
 	<explosionradius>0.5</explosionradius>
  </ThingDef>
  <!--
-  <ThingDef ParentName="BaseBullet">
+<ThingDef ParentName="BaseBullet">
 	<defName>OGCD_Bullet_WarpfireBolt</defName>
-    <label>warpfire bolt</label>
-    <graphicData>
+	<label>warpfire bolt</label>
+	<graphicData>
 		<texPath>Things/Projectile/Warpfire</texPath>
 		<graphicClass>Graphic_Random</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
+		<shaderType>TransparentPostLight</shaderType>
+	</graphicData>
 	<thingClass>Projectile_Explosive</thingClass>
-    <projectile>
+	<projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OG_Warpfire</damageDef>
 		<explosionRadius>0.5</explosionRadius>
@@ -56,21 +56,21 @@
 		<speed>55</speed>
 		<soundExplode>OGIFL_Explosion</soundExplode>
 	</projectile>
-  </ThingDef>
+</ThingDef>
 -->
-  <!-- ====================== Warpfire Deamon Weapons ===================== -->
-  <!-- ====================== Warpfire_Horror ===================== -->
-  <ThingDef ParentName="OGCDeamonBaseGun">
+<!-- ====================== Warpfire Deamon Weapons ===================== -->
+<!-- ====================== Warpfire_Horror ===================== -->
+<ThingDef ParentName="OGCDeamonBaseGun">
 	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
 	<defName>OGCD_Gun_Warpfire_Horror</defName>
-    <label>Warpfire Bolt</label>
-    <description>Warpfire Bolt.</description>
-    <graphicData>
+	<label>Warpfire Bolt</label>
+	<description>Warpfire Bolt.</description>
+	<graphicData>
 		<texPath>DummyTexture</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
-    <soundInteract>Interact_Autopistol</soundInteract>
-    <statBases>
+	<soundInteract>Interact_Autopistol</soundInteract>
+	<statBases>
 			<MarketValue>1</MarketValue>
 		<reliability>1</reliability>
 		<Mass>0</Mass>
@@ -79,11 +79,11 @@
 		<AccuracyMedium>0.70</AccuracyMedium>
 		<AccuracyLong>0.42</AccuracyLong>
 		<RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
-    </statBases>
+	</statBases>
 	<weaponTags>
 		<li>Warpfire_Horror_Pink</li>
 	</weaponTags>
-    <verbs>
+	<verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
@@ -98,8 +98,8 @@
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
 		</li>
-    </verbs>
-	<comps>    
+	</verbs>
+	<comps>	
 		<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
 		<VerbEntries>
 			<li>
@@ -109,20 +109,20 @@
 		</li> 
 		
 	</comps>
-  </ThingDef>
+</ThingDef>
  
-  <!-- ====================== Warpfire_Horror_Blue ===================== -->
-  <ThingDef ParentName="OGCDeamonBaseGun">
+<!-- ====================== Warpfire_Horror_Blue ===================== -->
+<ThingDef ParentName="OGCDeamonBaseGun">
 	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
 	<defName>OGCD_Gun_Warpfire_Horror_Blue</defName>
-    <label>Warpfire Bolt</label>
-    <description>Warpfire Bolt.</description>
-    <graphicData>
+	<label>Warpfire Bolt</label>
+	<description>Warpfire Bolt.</description>
+	<graphicData>
 		<texPath>DummyTexture</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
-    <soundInteract>Interact_Autopistol</soundInteract>
-    <statBases>
+	<soundInteract>Interact_Autopistol</soundInteract>
+	<statBases>
 			<MarketValue>1</MarketValue>
 		<reliability>1</reliability>
 		<Mass>0</Mass>
@@ -131,11 +131,11 @@
 		<AccuracyMedium>0.70</AccuracyMedium>
 		<AccuracyLong>0.42</AccuracyLong>
 		<RangedWeapon_Cooldown>1.56</RangedWeapon_Cooldown>
-    </statBases>
+	</statBases>
 	<weaponTags>
 		<li>Warpfire_Horror_Blue</li>
 	</weaponTags>
-    <verbs>
+	<verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
@@ -150,8 +150,8 @@
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
 		</li>
-    </verbs>
-	<comps>    
+	</verbs>
+	<comps>	
 		<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
 		<VerbEntries>
 			<li>
@@ -161,20 +161,20 @@
 		</li> 
 		
 	</comps>
-  </ThingDef>
+</ThingDef>
 
-  <!-- ====================== Flamer ===================== -->
-  <ThingDef ParentName="BaseBullet">
+<!-- ====================== Flamer ===================== -->
+<ThingDef ParentName="BaseBullet">
 	<defName>OGCD_Bullet_Flamer</defName>
-    <label>warpflames</label>
-    <tickerType>Normal</tickerType>
-    <graphicData>
-      <texPath>Things/Projectile/Warpfire</texPath>
-      <graphicClass>Graphic_Flicker</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
-    <projectile>
+	<label>warpflames</label>
+	<tickerType>Normal</tickerType>
+	<graphicData>
+		<texPath>Things/Projectile/Warpfire</texPath>
+		<graphicClass>Graphic_Flicker</graphicClass>
+		<shaderType>TransparentPostLight</shaderType>
+	</graphicData>
+	<thingClass>Projectile_Explosive</thingClass>
+	<projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OG_Warpfire</damageDef>
 		<damageAmountBase>1</damageAmountBase>
@@ -186,19 +186,19 @@
 		<stoppingPower>0.75</stoppingPower>
 		<speed>20</speed>
 		<soundExplode>OGIFL_Explosion</soundExplode>
-    </projectile>
-  </ThingDef>
-  
-  <ThingDef ParentName="OGCDeamonBaseGun">
-    <defName>OGCD_Gun_Flamer</defName>
-    <label>Flamer</label>
-    <description>Flamer.</description>
-    <graphicData>
+	</projectile>
+</ThingDef>
+
+<ThingDef ParentName="OGCDeamonBaseGun">
+	<defName>OGCD_Gun_Flamer</defName>
+	<label>Flamer</label>
+	<description>Flamer.</description>
+	<graphicData>
 		<texPath>DummyTexture</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>Interact_Rifle</soundInteract>
-    <statBases>
+	</graphicData>
+	<soundInteract>Interact_Rifle</soundInteract>
+	<statBases>
 			<MarketValue>1</MarketValue>
 		<Mass>0</Mass>
 		<AccuracyTouch>0.90</AccuracyTouch>
@@ -206,11 +206,11 @@
 		<AccuracyMedium>0.55</AccuracyMedium>
 		<AccuracyLong>0.50</AccuracyLong>
 		<RangedWeapon_Cooldown>4.00</RangedWeapon_Cooldown>
-    </statBases>
-    <weaponTags>
+	</statBases>
+	<weaponTags>
 		<li>Warpfire_Flamer</li>
 	</weaponTags>
-    <verbs>
+	<verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
@@ -227,9 +227,9 @@
 			<targetParams>
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
-      </li>
-    </verbs>
-	<comps>    
+		</li>
+	</verbs>
+	<comps>	
 		<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
 		<VerbEntries>
 			<li>
@@ -239,6 +239,6 @@
 		</li> 
 		
 	</comps>
-  </ThingDef>
+</ThingDef>
 	
 </Defs>

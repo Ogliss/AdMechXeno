@@ -4,15 +4,15 @@
 	<RulePackDef>
 		<defName>NamerOGTauFaction</defName>
 		<rulePack>
-		  <rulesStrings>
+			<rulesStrings>
 			<li>name->[OGTauRegiments]</li>
-		  </rulesStrings>
-		  <rulesRaw>
+			</rulesStrings>
+			<rulesRaw>
 			<li Class="Rule_File">
 				<keyword>OGTauRegiments</keyword>
 				<path>NameBanks/OGTauRegiments</path>
 			</li>
-		  </rulesRaw>
+			</rulesRaw>
 		</rulePack>
 	</RulePackDef>
 	
@@ -34,11 +34,11 @@
 	<RulePackDef>
 		<defName>NamerOGTauPawns</defName>
 		<rulePack>
-		  <rulesStrings>
+			<rulesStrings>
 			<li>name->[OGTauFirst] [OGTauSurNom]</li>
 			<li>name->[OGTauSurNom] [TOGTauFirst]</li>
-		  </rulesStrings>
-		  <rulesRaw>
+			</rulesStrings>
+			<rulesRaw>
 			<li Class="Rule_File">
 				<keyword>OGTauFirst</keyword>
 				<path>NameBanks/OGTauFirst</path>
@@ -47,7 +47,7 @@
 				<keyword>OGTauSurNom</keyword>
 				<path>NameBanks/OGTauSurNom</path>
 			</li>
-		  </rulesRaw>
+			</rulesRaw>
 		</rulePack>
 	</RulePackDef>
 

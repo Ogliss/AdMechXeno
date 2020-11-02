@@ -2,121 +2,121 @@
 <Defs>
 
 <!-- Mechanicus Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Mechanicus</defName>
-      <label>mechanicus corpses</label>
-      <parent>CorpsesHumanlike</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Mechanicus</defName>
+		<label>mechanicus corpses</label>
+		<parent>CorpsesHumanlike</parent>
+	</ThingCategoryDef>
 	
 <!-- Mechanicus Construct Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Mechanicus_Construct</defName>
-      <label>mechanicus construct remains</label>
-      <parent>CorpsesMechanoid</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Mechanicus_Construct</defName>
+		<label>mechanicus construct remains</label>
+		<parent>CorpsesMechanoid</parent>
+	</ThingCategoryDef>
 	
 <!-- Xenos Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Xenos</defName>
-      <label>xenos corpses</label>
-      <parent>Corpses</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Xenos</defName>
+		<label>xenos corpses</label>
+		<parent>Corpses</parent>
+	</ThingCategoryDef>
 
 <!-- Chaos Deamon Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Chaos_Deamon</defName>
-      <label>deamon remains</label>
-      <parent>OG_Corpses_Xenos</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Chaos_Deamon</defName>
+		<label>deamon remains</label>
+		<parent>OG_Corpses_Xenos</parent>
+	</ThingCategoryDef>
 	
 <!-- Chaos Deamon Construct Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Chaos_Deamon_Construct</defName>
-      <label>deamon construct remains</label>
-      <parent>CorpsesMechanoid</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Chaos_Deamon_Construct</defName>
+		<label>deamon construct remains</label>
+		<parent>CorpsesMechanoid</parent>
+	</ThingCategoryDef>
 	
 <!-- Dark Eldar Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Dark_Eldar</defName>
-      <label>dark eldar corpses</label>
-      <parent>OG_Corpses_Xenos</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Dark_Eldar</defName>
+		<label>dark eldar corpses</label>
+		<parent>OG_Corpses_Xenos</parent>
+	</ThingCategoryDef>
 	
 <!-- Dark Eldar Construct Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Dark_Eldar_Construct</defName>
-      <label>dark eldar construct remains</label>
-      <parent>CorpsesMechanoid</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Dark_Eldar_Construct</defName>
+		<label>dark eldar construct remains</label>
+		<parent>CorpsesMechanoid</parent>
+	</ThingCategoryDef>
 	
 <!-- Eldar Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Eldar</defName>
-      <label>eldar corpses</label>
-      <parent>OG_Corpses_Xenos</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Eldar</defName>
+		<label>eldar corpses</label>
+		<parent>OG_Corpses_Xenos</parent>
+	</ThingCategoryDef>
 	
 <!-- Eldar Construct Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Eldar_Construct</defName>
-      <label>eldar construct remains</label>
-      <parent>CorpsesMechanoid</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Eldar_Construct</defName>
+		<label>eldar construct remains</label>
+		<parent>CorpsesMechanoid</parent>
+	</ThingCategoryDef>
 	
 <!-- Tau Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Tau</defName>
-      <label>tau corpses</label>
-      <parent>OG_Corpses_Xenos</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Tau</defName>
+		<label>tau corpses</label>
+		<parent>OG_Corpses_Xenos</parent>
+	</ThingCategoryDef>
 	
 <!-- Tau Construct Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Tau_Construct</defName>
-      <label>tau construct remains</label>
-      <parent>CorpsesMechanoid</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Tau_Construct</defName>
+		<label>tau construct remains</label>
+		<parent>CorpsesMechanoid</parent>
+	</ThingCategoryDef>
 <!-- Kroot Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Kroot</defName>
-      <label>kroot corpses</label>
-      <parent>OG_Corpses_Xenos</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Kroot</defName>
+		<label>kroot corpses</label>
+		<parent>OG_Corpses_Xenos</parent>
+	</ThingCategoryDef>
 	
 <!-- Vespid Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Vespid</defName>
-      <label>vespid corpses</label>
-      <parent>OG_Corpses_Xenos</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Vespid</defName>
+		<label>vespid corpses</label>
+		<parent>OG_Corpses_Xenos</parent>
+	</ThingCategoryDef>
 	
 <!-- Ork Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Orkoid</defName>
-      <label>ork corpses</label>
-      <parent>OG_Corpses_Xenos</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Orkoid</defName>
+		<label>ork corpses</label>
+		<parent>OG_Corpses_Xenos</parent>
+	</ThingCategoryDef>
 	
 <!-- Ork Construct Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Orkoid_Construct</defName>
-      <label>ork construct remains</label>
-      <parent>CorpsesMechanoid</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Orkoid_Construct</defName>
+		<label>ork construct remains</label>
+		<parent>CorpsesMechanoid</parent>
+	</ThingCategoryDef>
 	
 <!-- Tyranid Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Tyranid</defName>
-      <label>tyranid corpses</label>
-      <parent>OG_Corpses_Xenos</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Tyranid</defName>
+		<label>tyranid corpses</label>
+		<parent>OG_Corpses_Xenos</parent>
+	</ThingCategoryDef>
 	
 <!-- Necron Corpse -->
-    <ThingCategoryDef>
-      <defName>OG_Corpses_Necron</defName>
-      <label>necron remains</label>
-      <parent>CorpsesMechanoid</parent>
-    </ThingCategoryDef>
+	<ThingCategoryDef>
+		<defName>OG_Corpses_Necron</defName>
+		<label>necron remains</label>
+		<parent>CorpsesMechanoid</parent>
+	</ThingCategoryDef>
 	
 </Defs>

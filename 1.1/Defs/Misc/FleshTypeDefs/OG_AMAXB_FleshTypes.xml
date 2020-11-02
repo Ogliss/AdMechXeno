@@ -1,222 +1,222 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- Construct Fleshtype Base -->
-  <FleshTypeDef Name="OG_Flesh_Construct_Base" Abstract="True">
-    <wounds>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundMechA</texture>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundMechB</texture>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundMechC</texture>
-      </li>
-    </wounds>
-  </FleshTypeDef>
-  
+<FleshTypeDef Name="OG_Flesh_Construct_Base" Abstract="True">
+	<wounds>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundMechA</texture>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundMechB</texture>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundMechC</texture>
+		</li>
+	</wounds>
+</FleshTypeDef>
+
 <!-- Adeptus Mechanicus Fleshtypes -->
 <!-- Adeptus Mechanicus Construct Fleshtype -->
-  <FleshTypeDef ParentName="OG_Flesh_Construct_Base">
-    <defName>OG_Flesh_Construct_Mechanicus</defName>
-    <corpseCategory>OG_Corpses_Mechanicus_Construct</corpseCategory>
-  </FleshTypeDef>
+<FleshTypeDef ParentName="OG_Flesh_Construct_Base">
+	<defName>OG_Flesh_Construct_Mechanicus</defName>
+	<corpseCategory>OG_Corpses_Mechanicus_Construct</corpseCategory>
+</FleshTypeDef>
  
 <!-- Chaos Fleshtypes --> 
 <!-- Chaos Deamon Fleshtype -->
-  <FleshTypeDef>
-    <defName>OG_Flesh_Chaos_Deamon</defName>
-    <corpseCategory>OG_Corpses_Chaos_Deamon</corpseCategory>
-    <wounds>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundA</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundB</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundC</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-    </wounds>
-  </FleshTypeDef>
-  
+<FleshTypeDef>
+	<defName>OG_Flesh_Chaos_Deamon</defName>
+	<corpseCategory>OG_Corpses_Chaos_Deamon</corpseCategory>
+	<wounds>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundA</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundB</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundC</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+	</wounds>
+</FleshTypeDef>
+
 <!-- Chaos Deamon Construct Fleshtype -->
-  <FleshTypeDef ParentName="OG_Flesh_Construct_Base">
-    <defName>OG_Flesh_Construct_Chaos</defName>
-    <corpseCategory>OG_Corpses_Chaos_Deamon_Construct</corpseCategory>
-  </FleshTypeDef>
-  
+<FleshTypeDef ParentName="OG_Flesh_Construct_Base">
+	<defName>OG_Flesh_Construct_Chaos</defName>
+	<corpseCategory>OG_Corpses_Chaos_Deamon_Construct</corpseCategory>
+</FleshTypeDef>
+
 <!-- Dark Eldar Fleshtypes -->
 <!-- Dark Eldar Fleshtype -->
-  <FleshTypeDef>
-    <defName>OG_Flesh_DarkEldar</defName>
-    <corpseCategory>OG_Corpses_Dark_Eldar</corpseCategory>
-    <wounds>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundA</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundB</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundC</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-    </wounds>
-  </FleshTypeDef>
-  
+<FleshTypeDef>
+	<defName>OG_Flesh_DarkEldar</defName>
+	<corpseCategory>OG_Corpses_Dark_Eldar</corpseCategory>
+	<wounds>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundA</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundB</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundC</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+	</wounds>
+</FleshTypeDef>
+
 <!-- Dark Eldar Construct Fleshtype -->
-  <FleshTypeDef ParentName="OG_Flesh_Construct_Base">
-    <defName>OG_Flesh_Construct_DarkEldar</defName>
-    <corpseCategory>OG_Corpses_Dark_Eldar_Construct</corpseCategory>
-  </FleshTypeDef>
-  
+<FleshTypeDef ParentName="OG_Flesh_Construct_Base">
+	<defName>OG_Flesh_Construct_DarkEldar</defName>
+	<corpseCategory>OG_Corpses_Dark_Eldar_Construct</corpseCategory>
+</FleshTypeDef>
+
 <!-- Eldar Fleshtypes -->
 <!-- Eldar Fleshtype -->
-  <FleshTypeDef>
-    <defName>OG_Flesh_Eldar</defName>
-    <corpseCategory>OG_Corpses_Eldar</corpseCategory>
-    <wounds>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundA</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundB</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundC</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-    </wounds>
-  </FleshTypeDef>
-  
+<FleshTypeDef>
+	<defName>OG_Flesh_Eldar</defName>
+	<corpseCategory>OG_Corpses_Eldar</corpseCategory>
+	<wounds>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundA</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundB</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundC</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+	</wounds>
+</FleshTypeDef>
+
 <!-- Eldar Construct Fleshtype -->
-  <FleshTypeDef ParentName="OG_Flesh_Construct_Base">
-    <defName>OG_Flesh_Construct_Eldar</defName>
-    <corpseCategory>OG_Corpses_Eldar_Construct</corpseCategory>
-  </FleshTypeDef>
-  
+<FleshTypeDef ParentName="OG_Flesh_Construct_Base">
+	<defName>OG_Flesh_Construct_Eldar</defName>
+	<corpseCategory>OG_Corpses_Eldar_Construct</corpseCategory>
+</FleshTypeDef>
+
 <!-- Ork Fleshtypes -->
 <!-- Ork Fleshtype -->
-  <FleshTypeDef>
-    <defName>OG_Flesh_Ork</defName>
-    <corpseCategory>OG_Corpses_Orkoid</corpseCategory>
-    <wounds>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundA</texture>
-        <color>(179, 185, 73)</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundB</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundC</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-    </wounds>
-  </FleshTypeDef>
-  
+<FleshTypeDef>
+	<defName>OG_Flesh_Ork</defName>
+	<corpseCategory>OG_Corpses_Orkoid</corpseCategory>
+	<wounds>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundA</texture>
+		<color>(179, 185, 73)</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundB</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundC</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+	</wounds>
+</FleshTypeDef>
+
 <!-- Ork Construct Fleshtype -->
-  <FleshTypeDef ParentName="OG_Flesh_Construct_Base">
-    <defName>OG_Flesh_Construct_Ork</defName>
-    <corpseCategory>OG_Corpses_Orkoid_Construct</corpseCategory>
-  </FleshTypeDef>
-  
+<FleshTypeDef ParentName="OG_Flesh_Construct_Base">
+	<defName>OG_Flesh_Construct_Ork</defName>
+	<corpseCategory>OG_Corpses_Orkoid_Construct</corpseCategory>
+</FleshTypeDef>
+
 <!-- Tau Empre Fleshtypes -->
 <!-- Tau Fleshtype -->
-  <FleshTypeDef>
-    <defName>OG_Flesh_Tau</defName>
-    <corpseCategory>OG_Corpses_Tau</corpseCategory>
-    <wounds>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundA</texture>
-        <color>0.0,0.0,0.30</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundB</texture>
-        <color>0.0,0.0,0.30</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundC</texture>
-        <color>0.0,0.0,0.30</color>
-      </li>
-    </wounds>
-  </FleshTypeDef>
+<FleshTypeDef>
+	<defName>OG_Flesh_Tau</defName>
+	<corpseCategory>OG_Corpses_Tau</corpseCategory>
+	<wounds>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundA</texture>
+		<color>0.0,0.0,0.30</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundB</texture>
+		<color>0.0,0.0,0.30</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundC</texture>
+		<color>0.0,0.0,0.30</color>
+		</li>
+	</wounds>
+</FleshTypeDef>
 
 <!-- Kroot Fleshtype -->
-  <FleshTypeDef>
-    <defName>OG_Flesh_Kroot</defName>
-    <corpseCategory>OG_Corpses_Kroot</corpseCategory>
-    <wounds>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundA</texture>
-        <color>0.0,0.30,0.0</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundB</texture>
-        <color>0.0,0.30,0.0</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundC</texture>
-        <color>0.0,0.30,0.0</color>
-      </li>
-    </wounds>
-  </FleshTypeDef>
-  
+<FleshTypeDef>
+	<defName>OG_Flesh_Kroot</defName>
+	<corpseCategory>OG_Corpses_Kroot</corpseCategory>
+	<wounds>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundA</texture>
+		<color>0.0,0.30,0.0</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundB</texture>
+		<color>0.0,0.30,0.0</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundC</texture>
+		<color>0.0,0.30,0.0</color>
+		</li>
+	</wounds>
+</FleshTypeDef>
+
 <!-- Vespid Fleshtype -->
-  <FleshTypeDef>
-    <defName>OG_Flesh_Vespid</defName>
-    <corpseCategory>OG_Corpses_Vespid</corpseCategory>
-    <wounds>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundA</texture>
-        <color>0.0,0.30,0.0</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundB</texture>
-        <color>0.0,0.30,0.0</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundC</texture>
-        <color>0.0,0.30,0.0</color>
-      </li>
-    </wounds>
-  </FleshTypeDef>
-  
+<FleshTypeDef>
+	<defName>OG_Flesh_Vespid</defName>
+	<corpseCategory>OG_Corpses_Vespid</corpseCategory>
+	<wounds>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundA</texture>
+		<color>0.0,0.30,0.0</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundB</texture>
+		<color>0.0,0.30,0.0</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundC</texture>
+		<color>0.0,0.30,0.0</color>
+		</li>
+	</wounds>
+</FleshTypeDef>
+
 <!-- Tyranid Fleshtypes -->
 <!-- Tyranid Fleshtype -->
-  <FleshTypeDef>
-    <defName>OG_Flesh_Tyranid</defName>
-    <corpseCategory>OG_Corpses_Tyranid</corpseCategory>
-    <wounds>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundA</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundB</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-      <li>
-        <texture>Things/Pawn/Wounds/WoundC</texture>
-        <color>0.675,0,0.529</color>
-      </li>
-    </wounds>
-  </FleshTypeDef>
-  
+<FleshTypeDef>
+	<defName>OG_Flesh_Tyranid</defName>
+	<corpseCategory>OG_Corpses_Tyranid</corpseCategory>
+	<wounds>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundA</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundB</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+		<li>
+		<texture>Things/Pawn/Wounds/WoundC</texture>
+		<color>0.675,0,0.529</color>
+		</li>
+	</wounds>
+</FleshTypeDef>
+
 <!-- Necron Fleshtypes -->
 <!-- Necron Fleshtype -->
-  <FleshTypeDef ParentName="OG_Flesh_Construct_Base">
-    <defName>OG_Flesh_Construct_Necron</defName>
-    <corpseCategory>OG_Corpses_Necron</corpseCategory>
-  </FleshTypeDef>
-  
+<FleshTypeDef ParentName="OG_Flesh_Construct_Base">
+	<defName>OG_Flesh_Construct_Necron</defName>
+	<corpseCategory>OG_Corpses_Necron</corpseCategory>
+</FleshTypeDef>
+
 </Defs>

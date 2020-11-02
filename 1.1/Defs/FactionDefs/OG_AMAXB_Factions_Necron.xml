@@ -98,7 +98,7 @@
 			</li>
 		</modExtensions>
 	</FactionDef>
-	  
+		
 	<FactionDef ParentName="OG_Necron_Faction_Base">
 		<defName>OG_Necron_Faction</defName>
 	</FactionDef>

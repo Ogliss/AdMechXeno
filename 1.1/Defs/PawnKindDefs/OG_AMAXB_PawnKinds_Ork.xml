@@ -2,69 +2,69 @@
 <Defs>
 
 <!-- Ork Pawn Base -->
-  <PawnKindDef Name="OrkBase" Abstract="True">
-    <invNutrition>2.55</invNutrition>
+<PawnKindDef Name="OrkBase" Abstract="True">
+	<invNutrition>2.55</invNutrition>
 		<aiAvoidCover>true</aiAvoidCover>
-    <inventoryOptions>
-      <skipChance>0.9</skipChance>
-      <subOptionsChooseOne>
-        <li>
-          <thingDef>Silver</thingDef>
-          <countRange>
-            <min>30</min>
-            <max>70</max>
-          </countRange>
-        </li>
-        <li>
-          <thingDef>MedicineHerbal</thingDef>
-          <countRange>
-            <min>1</min>
-            <max>3</max>
-          </countRange>
-        </li>
-        <li>
-          <thingDef>SmokeleafLeaves</thingDef>
-          <countRange>
-            <min>0</min>
-            <max>3</max>
-          </countRange>
-        </li>
-        <li>
-          <thingDef>PsychoidLeaves</thingDef>
-          <countRange>
-            <min>0</min>
-            <max>3</max>
-          </countRange>
-        </li>
-      </subOptionsChooseOne>
-    </inventoryOptions>
-    <modExtensions>
+	<inventoryOptions>
+		<skipChance>0.9</skipChance>
+		<subOptionsChooseOne>
+		<li>
+			<thingDef>Silver</thingDef>
+			<countRange>
+			<min>30</min>
+			<max>70</max>
+			</countRange>
+		</li>
+		<li>
+			<thingDef>MedicineHerbal</thingDef>
+			<countRange>
+			<min>1</min>
+			<max>3</max>
+			</countRange>
+		</li>
+		<li>
+			<thingDef>SmokeleafLeaves</thingDef>
+			<countRange>
+			<min>0</min>
+			<max>3</max>
+			</countRange>
+		</li>
+		<li>
+			<thingDef>PsychoidLeaves</thingDef>
+			<countRange>
+			<min>0</min>
+			<max>3</max>
+			</countRange>
+		</li>
+		</subOptionsChooseOne>
+	</inventoryOptions>
+	<modExtensions>
 		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
 			<primaryMagazineCount>
-			  <min>5</min>
-			  <max>8</max>
+				<min>5</min>
+				<max>8</max>
 			</primaryMagazineCount>
 		</li>
-    </modExtensions>
-  </PawnKindDef>
+	</modExtensions>
+</PawnKindDef>
 <!-- Ork Pawn Base -->
 
-<!-- Tek Orkz -->  
-<!-- Tek Ork Base -->  
-  <PawnKindDef Name="TekOrkBase" ParentName="OrkBase" Abstract="True">
+<!-- Tek Orkz -->
+<!-- Tek Ork Base -->
+<PawnKindDef Name="TekOrkBase" ParentName="OrkBase" Abstract="True">
 	<defName>TekOrkBase</defName>
-    <defaultFactionType>OG_Ork_Tek_Faction</defaultFactionType>
-    <backstoryFiltersOverride>
-      <li>
-        <categories>
-          <li>Offworld</li>
-          <li>Outlander</li>
-          
-          <li>Pirate</li>
-        </categories>
-      </li>
-    </backstoryFiltersOverride>
-    <invNutrition>2.55</invNutrition>
+	<defaultFactionType>OG_Ork_Tek_Faction</defaultFactionType>
+	<backstoryFiltersOverride>
+		<li>
+		<categories>
+			<li>Offworld</li>
+			<li>Outlander</li>
+			
+			<li>Pirate</li>
+		</categories>
+		</li>
+	</backstoryFiltersOverride>
+	<invNutrition>2.55</invNutrition>
 		<aiAvoidCover>false</aiAvoidCover>
 		<weaponMoney>
 			<min>500</min>
@@ -81,44 +81,44 @@
 		<techHediffsTags>
 			<li>Advanced</li>
 		</techHediffsTags>
-    <inventoryOptions>
-      <skipChance>0.9</skipChance>
-      <subOptionsChooseOne>
-        <li>
-          <thingDef>Silver</thingDef>
-          <countRange>
-            <min>30</min>
-            <max>70</max>
-          </countRange>
-        </li>
-        <li>
-          <thingDef>MedicineHerbal</thingDef>
-          <countRange>
-            <min>1</min>
-            <max>3</max>
-          </countRange>
-        </li>
-        <li>
-          <thingDef>SmokeleafLeaves</thingDef>
-          <countRange>
-            <min>0</min>
-            <max>3</max>
-          </countRange>
-        </li>
-        <li>
-          <thingDef>PsychoidLeaves</thingDef>
-          <countRange>
-            <min>0</min>
-            <max>3</max>
-          </countRange>
-        </li>
-      </subOptionsChooseOne>
-    </inventoryOptions>
-  </PawnKindDef>  
-<!-- Tek Ork Base -->  
+	<inventoryOptions>
+		<skipChance>0.9</skipChance>
+		<subOptionsChooseOne>
+		<li>
+			<thingDef>Silver</thingDef>
+			<countRange>
+			<min>30</min>
+			<max>70</max>
+			</countRange>
+		</li>
+		<li>
+			<thingDef>MedicineHerbal</thingDef>
+			<countRange>
+			<min>1</min>
+			<max>3</max>
+			</countRange>
+		</li>
+		<li>
+			<thingDef>SmokeleafLeaves</thingDef>
+			<countRange>
+			<min>0</min>
+			<max>3</max>
+			</countRange>
+		</li>
+		<li>
+			<thingDef>PsychoidLeaves</thingDef>
+			<countRange>
+			<min>0</min>
+			<max>3</max>
+			</countRange>
+		</li>
+		</subOptionsChooseOne>
+	</inventoryOptions>
+</PawnKindDef>
+<!-- Tek Ork Base -->
 
 <!-- Tek Ork Stabba Grot --> 
-  <PawnKindDef ParentName="TekOrkBase">
+<PawnKindDef ParentName="TekOrkBase">
 		<defName>OG_Ork_Grot_Stabba</defName>
 		<label>stabba grot</label>
 		<race>Ork_Grot</race>
@@ -139,7 +139,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -148,8 +148,8 @@
 	</PawnKindDef>
 <!-- Tek Ork Stabba Grot --> 
 
-<!-- Tek Ork Blasta Grot -->    
-  <PawnKindDef ParentName="TekOrkBase">
+<!-- Tek Ork Blasta Grot -->	
+<PawnKindDef ParentName="TekOrkBase">
 		<defName>OG_Ork_Grot_Blasta</defName>
 		<label>blasta grot</label>
 		<race>Ork_Grot</race>
@@ -170,17 +170,17 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
 			<li>GrotBlasta</li>
 		</weaponTags>
 	</PawnKindDef>
-<!-- Tek Ork Blasta Grot -->    
+<!-- Tek Ork Blasta Grot -->	
 
 <!-- Tek Ork Shoota Grot -->	
-  <PawnKindDef ParentName="TekOrkBase">
+<PawnKindDef ParentName="TekOrkBase">
 		<defName>OG_Ork_Grot_Shoota</defName>
 		<label>shoota grot</label>
 		<race>Ork_Grot</race>
@@ -201,7 +201,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -215,8 +215,8 @@
 	</PawnKindDef>
 <!-- Tek Ork Shoota Grot -->	
 
-<!-- Tek Ork Slugga Boy -->    
-  <PawnKindDef ParentName="TekOrkBase">
+<!-- Tek Ork Slugga Boy -->	
+<PawnKindDef ParentName="TekOrkBase">
 		<defName>OG_Ork_Boy_Slugga</defName>
 		<label>slugga boy</label>
 		<race>Ork_Boy</race>
@@ -237,7 +237,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -248,10 +248,10 @@
 			<max>1000</max>
 		</weaponMoney>
 	</PawnKindDef>
-<!-- Tek Ork Slugga Boy -->    
+<!-- Tek Ork Slugga Boy -->	
 
 <!-- Tek Ork Choppa Boy --> 
-  <PawnKindDef ParentName="TekOrkBase">
+<PawnKindDef ParentName="TekOrkBase">
 		<defName>OG_Ork_Boy_Choppa</defName>
 		<label>choppa boy</label>
 		<race>Ork_Boy</race>
@@ -272,7 +272,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -282,7 +282,7 @@
 <!-- Tek Ork Choppa Boy --> 
 
 <!-- Tek Ork Shoota Boy -->	
-  <PawnKindDef ParentName="TekOrkBase">
+<PawnKindDef ParentName="TekOrkBase">
 		<defName>OG_Ork_Boy_Shoota</defName>
 		<label>shoota boy</label>
 		<race>Ork_Boy</race>
@@ -303,7 +303,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -317,7 +317,7 @@
 <!-- Tek Ork Shoota Boy -->	
 
 <!-- Tek Ork Eavy Shoota Boy -->
-  <PawnKindDef ParentName="TekOrkBase">
+<PawnKindDef ParentName="TekOrkBase">
 		<defName>OG_Ork_Eavy_Boy_Shoota</defName>
 		<label>eavy shoota boy</label>
 		<race>Ork_Eavy_Boy</race>
@@ -338,7 +338,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -354,7 +354,7 @@
 <!-- Tek Ork Eavy Shoota Boy -->
 
 <!-- Tek Ork Shoota Nob -->
-  <PawnKindDef ParentName="TekOrkBase">
+<PawnKindDef ParentName="TekOrkBase">
 		<defName>OG_Ork_Nob_Shoota</defName>
 		<label>shoota nob</label>
 		<race>Ork_Nob</race>
@@ -376,7 +376,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -391,7 +391,7 @@
 <!-- Tek Ork Shoota Nob -->
 
 <!-- Tek Ork Choppa Nob -->
-  <PawnKindDef ParentName="TekOrkBase">
+<PawnKindDef ParentName="TekOrkBase">
 		<defName>OG_Ork_Nob_Choppa</defName>
 		<label>choppa nob</label>
 		<race>Ork_Nob</race>
@@ -413,7 +413,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -427,7 +427,7 @@
 <!-- Tek Ork Choppa Nob -->
 
 <!-- Tek Ork Eavy Shoota Nob -->
-  <PawnKindDef ParentName="TekOrkBase">
+<PawnKindDef ParentName="TekOrkBase">
 		<defName>OG_Ork_Eavy_Nob_Shoota</defName>
 		<label>eavy shoota nob</label>
 		<race>Ork_Eavy_Nob</race>
@@ -448,7 +448,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -464,7 +464,7 @@
 <!-- Tek Ork Eavy Shoota Nob -->
 
 <!-- Tek Ork Warboss -->	
-  <PawnKindDef ParentName="TekOrkBase">
+<PawnKindDef ParentName="TekOrkBase">
 		<defName>OG_Ork_Warboss</defName>
 		<label>warboss</label>
 		<race>Ork_Warboss</race>
@@ -485,7 +485,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 
@@ -502,7 +502,7 @@
 <!-- Tek Ork Faction Leader -->	
 
 <!-- Tek Ork Faction Leader -->	
-  <PawnKindDef ParentName="TekOrkBase">
+<PawnKindDef ParentName="TekOrkBase">
 		<defName>OG_Ork_Faction_Warboss</defName>
 		<label>big warboss</label>
 		<race>Human</race>

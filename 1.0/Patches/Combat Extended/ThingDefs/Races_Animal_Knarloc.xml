@@ -4,15 +4,15 @@
 	<!-- ========== KrootKnarloc ========== -->
 
 <Operation Class="PatchOperationSequence">
-  <success>Always</success>
-  <operations>
-    <li Class="PatchOperationTest">
-      <xpath>Defs/ResearchTabDef[defName="CE_Turrets"]</xpath>
-    </li>
-    <li Class="PatchOperationTest">
-      <xpath>Defs/ThingDef[defName="KrootKnarloc" or defName="KindredKrootKnarloc"]/statBases/MeleeParryChance</xpath>
+<success>Always</success>
+<operations>
+	<li Class="PatchOperationTest">
+		<xpath>Defs/ResearchTabDef[defName="CE_Turrets"]</xpath>
+	</li>
+	<li Class="PatchOperationTest">
+		<xpath>Defs/ThingDef[defName="KrootKnarloc" or defName="KindredKrootKnarloc"]/statBases/MeleeParryChance</xpath>
 		<success>Invert</success>
-    </li>
+	</li>
 
 	<li Class="PatchOperationAdd">
 		<xpath>Defs/ThingDef[defName="KrootKnarloc" or defName="KindredKrootKnarloc"]/statBases</xpath>
@@ -99,7 +99,7 @@
 		</value>
 	</li>
 
-  </operations>
+</operations>
 </Operation>
 
 </Patch>

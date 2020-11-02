@@ -4,10 +4,10 @@
 	<RulePackDef>
 		<defName>NamerOGOG_Mechanicus_Faction</defName>
 		<rulePack>
-		  <rulesStrings>
+			<rulesStrings>
 			<li>name->[OGMechanicusForgeWorld] [OGMechanicusRegiments] [OGMechanicusRegiment]</li>
-		  </rulesStrings>
-		  <rulesRaw>
+			</rulesStrings>
+			<rulesRaw>
 			<li Class="Rule_File">
 				<keyword>OGMechanicusForgeWorld</keyword>
 				<path>NameBanks/OGMechanicusForgeWorld</path>
@@ -20,7 +20,7 @@
 				<keyword>OGMechanicusRegiment</keyword>
 				<path>NameBanks/OGMechanicusRegiment</path>
 			</li>
-		  </rulesRaw>
+			</rulesRaw>
 		</rulePack>
 	</RulePackDef>
 

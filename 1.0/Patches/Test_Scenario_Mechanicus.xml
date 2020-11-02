@@ -2,21 +2,21 @@
 <Patch>
 
 <Operation Class="PatchOperationSequence">
-  <operations>
-  
-            <li Class="PatchOperationConditional">
-                <xpath>/Defs/ScenarioDef[defName = "OG_WeaponsTest_Mechanicus"]/scenario/playerFaction/factionDef</xpath>
-                <success>Always</success>
-                <match Class="PatchOperationReplace">
-                    <success>Always</success>
-                    <xpath>Defs/ScenarioDef[defName = "OG_WeaponsTest_Mechanicus"]/scenario/playerFaction/factionDef</xpath>
-                    <value>
+<operations>
+
+			<li Class="PatchOperationConditional">
+				<xpath>/Defs/ScenarioDef[defName = "OG_WeaponsTest_Mechanicus"]/scenario/playerFaction/factionDef</xpath>
+				<success>Always</success>
+				<match Class="PatchOperationReplace">
+					<success>Always</success>
+					<xpath>Defs/ScenarioDef[defName = "OG_WeaponsTest_Mechanicus"]/scenario/playerFaction/factionDef</xpath>
+					<value>
 						<factionDef>OG_Mechanicus_PlayerColony</factionDef>
-                    </value>
-                </match>
-            </li>
+					</value>
+				</match>
+			</li>
 	
-  </operations>
+</operations>
 </Operation>
 
 </Patch>

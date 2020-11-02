@@ -12,7 +12,7 @@
 					<xpath>Defs</xpath>
 					<value>
 					
-					  <AlienRace.ThingDef_AlienRace ParentName="HumanRace" Name="OG_Ogryn_Base">
+						<AlienRace.ThingDef_AlienRace ParentName="HumanRace" Name="OG_Ogryn_Base">
 						<defName>OG_Abhuman_Ogryn</defName>
 						<alienRace>
 							<generalSettings>
@@ -36,91 +36,91 @@
 								<factionRelations>
 									<li>
 										<factions>
-										   <li>PlayerColony</li>
-										   <li>PlayerTribe</li>
-										   <li>OutlanderCivil</li>
-										   <li>OutlanderRough</li>
-										   <li>TribeCivil</li>
-										   <li>TribeRough</li>
+											 <li>PlayerColony</li>
+											 <li>PlayerTribe</li>
+											 <li>OutlanderCivil</li>
+											 <li>OutlanderRough</li>
+											 <li>TribeCivil</li>
+											 <li>TribeRough</li>
 										</factions>
 										<goodwill>
-										   <min>-100</min>
-										   <max>50</max>
+											 <min>-100</min>
+											 <max>50</max>
 										</goodwill>
 									</li>
 									<li>
 										<factions>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Tau_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Tau_PlayerColony</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Kroot_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Kroot_PlayerColony</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Kroot_PlayerTribe</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Vespid_Faction</li>
-										   <!--li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Vespid_PlayerColony</li-->
-										   <!--li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Vespid_PlayerTribe</li-->
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Tau_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Tau_PlayerColony</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Kroot_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Kroot_PlayerColony</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Kroot_PlayerTribe</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Vespid_Faction</li>
+											 <!--li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Vespid_PlayerColony</li-->
+											 <!--li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Vespid_PlayerTribe</li-->
 										</factions>
 										<goodwill>
-										   <min>-100</min>
-										   <max>10</max>
-										</goodwill>
-									</li>  
-									<li>
-										<factions>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">OG_Eldar_Craftworld_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">OG_Eldar_Craftworld_PlayerColony</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.EldarExodite">OG_Eldar_Exodite_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.EldarExodite">OG_Eldar_Player_Exodite</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.EldarHarlequin">OG_Eldar_Harlequin_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.EldarHarlequin">OG_Eldar_Player_Harlequin</li>
-										</factions>
-										<goodwill>
-										   <min>-100</min>
-										   <max>25</max>
+											 <min>-100</min>
+											 <max>10</max>
 										</goodwill>
 									</li>
 									<li>
 										<factions>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_PlayerColony</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_Cadian_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_Cadian_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_PlayerColony</li>
-										   <li MayRequire="Ogliss.AdMech.Astartes">OG_Astartes_PlayerColony</li>
-										   <li MayRequire="Ogliss.AdMech.Astartes">OG_AstartesNeophyte_PlayerColony</li>
-										   <li MayRequire="CptOhu.CorruptionCore">PlayerColony_IoM</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">OG_Eldar_Craftworld_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">OG_Eldar_Craftworld_PlayerColony</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.EldarExodite">OG_Eldar_Exodite_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.EldarExodite">OG_Eldar_Player_Exodite</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.EldarHarlequin">OG_Eldar_Harlequin_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.EldarHarlequin">OG_Eldar_Player_Harlequin</li>
 										</factions>
 										<goodwill>
-										   <min>-10</min>
-										   <max>100</max>
+											 <min>-100</min>
+											 <max>25</max>
 										</goodwill>
 									</li>
 									<li>
 										<factions>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Tek_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Feral_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_PlayerColony</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_PlayerTribe</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Hulk</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Rok</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.DarkEldar">OG_DarkEldar_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.DarkEldar">OG_DarkEldar_PlayerColony</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Necrons">OG_Necron_PlayerColony</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Necrons">OG_Necron_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Tyranids">OG_Tyranid_PlayerColony</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis.Tyranids">OG_Tyranid_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Necron_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Tyranid_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Chaos_Deamon_Faction</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Ork_Hulk</li>
-										   <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Ork_Rok</li>
-										   <li MayRequire="CptOhu.CorruptionCore">PlayerColony_Chaos</li>
-										   <li MayRequire="QX.AstraMilitarum.Factions">IG_ChaosMarineFaction</li>
-										   <li MayRequire="QX.AstraMilitarum.Factions">TraitorGuardFaction</li>
-										   <li MayRequire="QX.AstraMilitarum.Factions">TyranidFaction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_PlayerColony</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_Cadian_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_Cadian_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_PlayerColony</li>
+											 <li MayRequire="Ogliss.AdMech.Astartes">OG_Astartes_PlayerColony</li>
+											 <li MayRequire="Ogliss.AdMech.Astartes">OG_AstartesNeophyte_PlayerColony</li>
+											 <li MayRequire="CptOhu.CorruptionCore">PlayerColony_IoM</li>
 										</factions>
 										<goodwill>
-										   <min>-100</min>
-										   <max>-100</max>
+											 <min>-10</min>
+											 <max>100</max>
+										</goodwill>
+									</li>
+									<li>
+										<factions>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Tek_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Feral_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_PlayerColony</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_PlayerTribe</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Hulk</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Rok</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.DarkEldar">OG_DarkEldar_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.DarkEldar">OG_DarkEldar_PlayerColony</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Necrons">OG_Necron_PlayerColony</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Necrons">OG_Necron_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tyranids">OG_Tyranid_PlayerColony</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tyranids">OG_Tyranid_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Necron_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Tyranid_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Chaos_Deamon_Faction</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Ork_Hulk</li>
+											 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Ork_Rok</li>
+											 <li MayRequire="CptOhu.CorruptionCore">PlayerColony_Chaos</li>
+											 <li MayRequire="QX.AstraMilitarum.Factions">IG_ChaosMarineFaction</li>
+											 <li MayRequire="QX.AstraMilitarum.Factions">TraitorGuardFaction</li>
+											 <li MayRequire="QX.AstraMilitarum.Factions">TyranidFaction</li>
+										</factions>
+										<goodwill>
+											 <min>-100</min>
+											 <max>-100</max>
 										</goodwill>
 									</li>
 								</factionRelations>
@@ -185,7 +185,7 @@
 								</workGiverList>
 							</raceRestriction>
 						</alienRace>
-					  </AlienRace.ThingDef_AlienRace>
+						</AlienRace.ThingDef_AlienRace>
 
 					</value>
 				</match>
@@ -201,13 +201,13 @@
 							</nomatch>
 						</li>
 						<li Class="PatchOperationAdd">
-						  <xpath>Defs</xpath>
+							<xpath>Defs</xpath>
 							<value>
 							
-							  <ThingDef ParentName="HumanRace" Name="OG_Ogryn_Base">
+								<ThingDef ParentName="HumanRace" Name="OG_Ogryn_Base">
 								<defName>OG_Abhuman_Ogryn</defName>
-							  </ThingDef>
-							  
+								</ThingDef>
+								
 							</value>
 						</li>
 					</operations>
@@ -215,110 +215,115 @@
 			</li>
 			<!-- Vanilla Ogryn Stats -->
 			<li Class="PatchOperationAdd">
-			  <xpath>
-			  /Defs/ThingDef[@Name="OG_Ogryn_Base"] |
-			  /Defs/AlienRace.ThingDef_AlienRace[@Name="OG_Ogryn_Base"]
-			  </xpath>
+				<xpath>
+				/Defs/ThingDef[@Name="OG_Ogryn_Base"] |
+				/Defs/AlienRace.ThingDef_AlienRace[@Name="OG_Ogryn_Base"]
+				</xpath>
 				<value>
 					
 					<label>ogryn</label>
 					<description>The dim-witted human sub-species called Ogryns (Homo sapiens gigantus) evolved on high-gravity, low-temperature prison planets. They are huge and unusually stupid for a human subrace, but unquestionably loyal to the Imperium once introduced to the faith of the Imperial Cult. Ogryns are used as the Imperial Guard's shock troops, and for this role, they are commonly outfitted with the Ripper Gun. The Ripper Gun is a weapon simple enough for them to operate, although some feral Ogryn cannot even fathom this device. Ogryn are also frequently used as bodyguards by Imperial Commanders.</description>
 					<statBases>
-					  <MarketValue>2500</MarketValue>
-					  <MoveSpeed>3.5</MoveSpeed>
-					  <ComfyTemperatureMin>-4</ComfyTemperatureMin>
-					  <ComfyTemperatureMax>32</ComfyTemperatureMax>
-					  <LeatherAmount>150</LeatherAmount>
-					  <!--
-					  <Flammability>1.0</Flammability>
-					  -->
+						<MarketValue>2500</MarketValue>
+						<MoveSpeed>3.5</MoveSpeed>
+						<ComfyTemperatureMin>-4</ComfyTemperatureMin>
+						<ComfyTemperatureMax>32</ComfyTemperatureMax>
+						<LeatherAmount>150</LeatherAmount>
+						<!--
+						<Flammability>1.0</Flammability>
+						-->
 					</statBases>
 					<tools>
 					
 					</tools>
 					<race>
-					  <useMeatFrom>Human</useMeatFrom>
+						<useMeatFrom>Human</useMeatFrom>
 					<!--
-					  <thinkTreeMain>Humanlike</thinkTreeMain>
-					  <thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-					  <intelligence>Humanlike</intelligence>
-					  <makesFootprints>true</makesFootprints>
-					  -->
-					  <leatherDef>Leather_Human</leatherDef>
-					  <nameCategory>HumanStandard</nameCategory>
-					  <lifeExpectancy>50</lifeExpectancy>
-					  <body>Human</body>
-					  <baseBodySize>3</baseBodySize>
-					  <baseHealthScale>3</baseHealthScale>
-					  <foodType>OmnivoreHuman</foodType>
-					  <!--
-					  <gestationPeriodDays>45</gestationPeriodDays>
-					  <meatMarketValue>0.8</meatMarketValue>
-					  <manhunterOnDamageChance>0.20</manhunterOnDamageChance>
-					  <manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
-					  -->
-					  <!--
-					  <lifeStageAges>
+						<thinkTreeMain>Humanlike</thinkTreeMain>
+						<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+						<intelligence>Humanlike</intelligence>
+						<makesFootprints>true</makesFootprints>
+						-->
+						<leatherDef>Leather_Human</leatherDef>
+						<nameCategory>HumanStandard</nameCategory>
+						<lifeExpectancy>50</lifeExpectancy>
+						<body>Human</body>
+						<baseBodySize>3</baseBodySize>
+						<baseHealthScale>3</baseHealthScale>
+						<foodType>OmnivoreHuman</foodType>
+						<!--
+						<gestationPeriodDays>45</gestationPeriodDays>
+						<meatMarketValue>0.8</meatMarketValue>
+						<manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+						<manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
+						-->
+						<!--
+						<lifeStageAges>
 						<li>
-						  <def>HumanlikeBaby</def>
-						  <minAge>0</minAge>
+							<def>HumanlikeBaby</def>
+							<minAge>0</minAge>
 						</li>
 						<li>
-						  <def>HumanlikeToddler</def>
-						  <minAge>1.2</minAge>
+							<def>HumanlikeToddler</def>
+							<minAge>1.2</minAge>
 						</li>
 						<li>
-						  <def>HumanlikeChild</def>
-						  <minAge>4</minAge>
+							<def>HumanlikeChild</def>
+							<minAge>4</minAge>
 						</li>
 						<li>
-						  <def>HumanlikeTeenager</def>
-						  <minAge>13</minAge>
+							<def>HumanlikeTeenager</def>
+							<minAge>13</minAge>
 						</li>
 						<li>
-						  <def>HumanlikeAdult</def>
-						  <minAge>18</minAge>
+							<def>HumanlikeAdult</def>
+							<minAge>18</minAge>
 						</li>
-					  </lifeStageAges>
-					  -->
-					  <specialShadowData>
-					  <!--
+						</lifeStageAges>
+						-->
+						<specialShadowData>
+						<!--
 						<volume>(0.3, 0.8, 0.4)</volume>
 						<offset>(0,0,-0.3)</offset>
 						-->
-					  </specialShadowData>
-					  <ageGenerationCurve>
+						</specialShadowData>
+						<ageGenerationCurve>
 						<points>
-						  <li>(14,0)</li>
-						  <li>(16,100)</li>
-						  <li>(50,100)</li>
-						  <li>(60,30)</li>
-						  <li>(70,18)</li>
-						  <li>(80,10)</li>
-						  <li>(90,3)</li>
-						  <li>(100,0)</li>
+							<li>(14,0)</li>
+							<li>(16,100)</li>
+							<li>(50,100)</li>
+							<li>(60,30)</li>
+							<li>(70,18)</li>
+							<li>(80,10)</li>
+							<li>(90,3)</li>
+							<li>(100,0)</li>
 						</points>
-					  </ageGenerationCurve>
-					  <hediffGiverSets Inherit="false">
+						</ageGenerationCurve>
+						<hediffGiverSets Inherit="false">
 						<li>Human</li>
-					  <!--
+						<!--
 						<li>OrganicStandard</li>
-					  -->
-					  </hediffGiverSets>
+						-->
+						</hediffGiverSets>
 					</race>
 					<recipes>
 					
 					</recipes>
+					<modExtensions>
+						<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+							<bodyShape>Humanoid</bodyShape>
+						</li>
+					</modExtensions>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-			  <xpath>/Defs/RecipeDef[@Name="SurgeryInstallImplantBase"]/recipeUsers</xpath>
+				<xpath>/Defs/RecipeDef[@Name="SurgeryInstallImplantBase"]/recipeUsers</xpath>
 				<value>
 					<li>OG_Abhuman_Ogryn</li>
 				</value>
 			</li>
 			<li Class="PatchOperationAdd">
-			  <xpath>/Defs/RecipeDef[@Name="SurgeryRemoveImplantBase"]/recipeUsers</xpath>
+				<xpath>/Defs/RecipeDef[@Name="SurgeryRemoveImplantBase"]/recipeUsers</xpath>
 				<value>
 					<li>OG_Abhuman_Ogryn</li>
 				</value>

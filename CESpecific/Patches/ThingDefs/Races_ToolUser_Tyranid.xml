@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 <Operation Class="PatchOperationSequence">
-  <!--success>Always</success-->
-  <operations>
+<!--success>Always</success-->
+<operations>
 	<li Class="PatchOperationReplace">
 		<xpath>Defs/ThingDef[defName="Tyranid_RipperSwarm"]/tools</xpath>
 		<value>
@@ -538,7 +538,7 @@
 				<li Class="CombatExtended.ToolCE">
 					<label>detonate</label>
 					<capacities>
-					  <li>Blunt</li>
+						<li>Blunt</li>
 					</capacities>
 					<power>1</power>
 					<cooldownTime>2</cooldownTime>
@@ -550,7 +550,7 @@
 			</tools>
 		</value>
 	</li>
-  </operations>
+</operations>
 </Operation>
 
 </Patch>

@@ -6,21 +6,21 @@
 		<label>Kroot Ox</label>
 		<description>A large herding herbivore descended from the Kroot and locked into an evolutionary Dead end. While enraged Kroot Ox are deadly, tamed Kroot Ox are quite docile and can be used as pack animals.</description>
 		<statBases>
-		  <MoveSpeed>4.5</MoveSpeed>
-		  <MarketValue>300</MarketValue>
-		  <MeleeDodgeChance>0.06</MeleeDodgeChance>
-		  <MeleeCritChance MayRequire="CETeam.CombatExtended">0.41</MeleeCritChance>
-		  <MeleeParryChance MayRequire="CETeam.CombatExtended">0.48</MeleeParryChance>
-		  <ArmorRating_Blunt>0.10</ArmorRating_Blunt>
-		  <ArmorRating_Sharp>0.125</ArmorRating_Sharp>
-		  <ComfyTemperatureMin>-55</ComfyTemperatureMin>
-		  <ComfyTemperatureMax>45</ComfyTemperatureMax>
+			<MoveSpeed>4.5</MoveSpeed>
+			<MarketValue>300</MarketValue>
+			<MeleeDodgeChance>0.06</MeleeDodgeChance>
+			<MeleeCritChance MayRequire="CETeam.CombatExtended">0.41</MeleeCritChance>
+			<MeleeParryChance MayRequire="CETeam.CombatExtended">0.48</MeleeParryChance>
+			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.125</ArmorRating_Sharp>
+			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
+			<ComfyTemperatureMax>45</ComfyTemperatureMax>
 		</statBases>
 		<tools>
 			<li>
 				<label>head</label>
 				<capacities>
-				  <li>Blunt</li>
+					<li>Blunt</li>
 				</capacities>
 				<power>13</power>
 				<cooldownTime>1.6</cooldownTime>
@@ -52,7 +52,7 @@
 			<li>
 				<label>beak</label>
 				<capacities>
-				  <li>Bite</li>
+					<li>Bite</li>
 				</capacities>
 				<power>30</power>
 				<cooldownTime>2.3</cooldownTime>
@@ -121,7 +121,7 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
-	  
+		
 	<PawnKindDef Name="OG_KrootOx_BaseKind" ParentName="AnimalKindBase">
 		<defName>OG_KrootOx</defName>
 		<label>Kroot Ox</label>
@@ -190,7 +190,7 @@
 		</race>
 		<tradeTags Inherit="false"> </tradeTags>
 	</ThingDef>
-	  
+		
 	<PawnKindDef ParentName="OG_KrootOx_BaseKind">
 		<defName>OG_KrootOx_Kindred</defName>
 		<race>OG_KrootOx_Kindred</race>

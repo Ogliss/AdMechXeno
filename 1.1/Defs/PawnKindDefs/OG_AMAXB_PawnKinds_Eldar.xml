@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <PawnKindDef Name="OG_Eldar_Pawnkind_Base" Abstract="True">
-    <defaultFactionType>OG_Eldar_Craftworld_Faction</defaultFactionType>
-    <backstoryFiltersOverride>
-      <li>
-        <categories>
-          <li>Offworld</li>
-          <li>Outlander</li>
-          
-        </categories>
-      </li>
-    </backstoryFiltersOverride>
-    <invNutrition>2.55</invNutrition>
+<PawnKindDef Name="OG_Eldar_Pawnkind_Base" Abstract="True">
+	<defaultFactionType>OG_Eldar_Craftworld_Faction</defaultFactionType>
+	<backstoryFiltersOverride>
+		<li>
+		<categories>
+			<li>Offworld</li>
+			<li>Outlander</li>
+			
+		</categories>
+		</li>
+	</backstoryFiltersOverride>
+	<invNutrition>2.55</invNutrition>
 		<aiAvoidCover>false</aiAvoidCover>
 		<weaponMoney>
 			<min>7500</min>
@@ -37,17 +37,17 @@
 				</li>
 			</subOptionsChooseOne>
 		</inventoryOptions>
-    <modExtensions>
+	<modExtensions>
 		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
 			<primaryMagazineCount>
-			  <min>5</min>
-			  <max>8</max>
+				<min>5</min>
+				<max>8</max>
 			</primaryMagazineCount>
 		</li>
-    </modExtensions>
-  </PawnKindDef>
+	</modExtensions>
+</PawnKindDef>
 		
-  <PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
+<PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
 		<defName>OG_Eldar_Farseer_Faction</defName>
 		<label>aurtrach</label>
 		<race>Human</race>
@@ -70,7 +70,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -78,12 +78,12 @@
 			<max>15000</max>
 		</weaponMoney>
 		<weaponTags>
-		  <li>EShurikenPistol</li>
-		  <li>EPsykerMelee</li>
+			<li>EShurikenPistol</li>
+			<li>EPsykerMelee</li>
 		</weaponTags>
 	</PawnKindDef>
 	
-  <PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
+<PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
 		<defName>OG_Eldar_Farseer</defName>
 		<label>farseer</label>
 		<race>Eldar_Farseer</race>
@@ -105,7 +105,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -113,12 +113,12 @@
 			<max>15000</max>
 		</weaponMoney>
 		<weaponTags>
-		  <li>EShurikenPistol</li>
-		  <li>EPsykerMelee</li>
+			<li>EShurikenPistol</li>
+			<li>EPsykerMelee</li>
 		</weaponTags>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
+<PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
 		<defName>OG_Eldar_Warlock</defName>
 		<label>warlock</label>
 		<race>Eldar_Warlock</race>
@@ -141,7 +141,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -149,12 +149,12 @@
 			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-		  <li>EShurikenPistol</li>
-		  <li>EPsykerMelee</li>
+			<li>EShurikenPistol</li>
+			<li>EPsykerMelee</li>
 		</weaponTags>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
+<PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
 		<defName>OG_Eldar_Guardian</defName>
 		<label>guardian</label>
 		<race>Eldar_Warrior</race>
@@ -177,7 +177,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -190,7 +190,7 @@
 		</weaponTags>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
+<PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
 		<defName>OG_Eldar_GuardianStorm</defName>
 		<label>storm guardian</label>
 		<race>Eldar_Warrior</race>
@@ -213,7 +213,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -221,13 +221,13 @@
 			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-		  <li>EShurikenPistol</li>
-		  <li>EScorpionChainsword</li>
-		  <li>EPowerSword</li>
+			<li>EShurikenPistol</li>
+			<li>EScorpionChainsword</li>
+			<li>EPowerSword</li>
 		</weaponTags>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
+<PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
 		<defName>OG_Eldar_GuardianSupport</defName>
 		<label>support guardian</label>
 		<race>Eldar_Warrior</race>
@@ -250,7 +250,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -258,13 +258,13 @@
 			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-		  <li>EShurikenCannon</li>
-		  <li>EStarcannon</li>
-		  <li>EBrightlance</li>
+			<li>EShurikenCannon</li>
+			<li>EStarcannon</li>
+			<li>EBrightlance</li>
 		</weaponTags>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
+<PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
 		<defName>OG_Eldar_DireAvenger</defName>
 		<label>dire avenger</label>
 		<race>Eldar_Aspect_Warrior</race>
@@ -287,7 +287,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -299,7 +299,7 @@
 		</weaponTags>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
+<PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
 		<defName>OG_Eldar_DireAvenger_Exarch</defName>
 		<label>dire avenger exarch</label>
 		<race>Eldar_Aspect_Warrior</race>
@@ -322,7 +322,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -330,13 +330,13 @@
 			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-		  <li>EShurikenCatapultA</li>
-		  <li>EShurikenPistol</li>
-		  <li>EDireSword</li>
+			<li>EShurikenCatapultA</li>
+			<li>EShurikenPistol</li>
+			<li>EDireSword</li>
 		</weaponTags>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
+<PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
 		<defName>OG_Eldar_HowlingBanshee</defName>
 		<label>howling banshee</label>
 		<race>Eldar_Aspect_Warrior</race>
@@ -359,7 +359,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -367,13 +367,13 @@
 			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-		  <li>EShurikenPistol</li>
-		  <li>EPowerSword</li>
-		  <li>EMirrorsword</li>
+			<li>EShurikenPistol</li>
+			<li>EPowerSword</li>
+			<li>EMirrorsword</li>
 		</weaponTags>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
+<PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
 		<defName>OG_Eldar_HowlingBanshee_Exarch</defName>
 		<label>howling banshee exarch</label>
 		<race>Eldar_Aspect_Warrior</race>
@@ -396,7 +396,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -404,15 +404,15 @@
 			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-		  <li>EShurikenPistol</li>
-		  <li>EPowerSword</li>
-		  <li>EMirrorsword</li>
-		  <li>EDMirrorswords</li>
-		  <li>EExecutioner</li>
+			<li>EShurikenPistol</li>
+			<li>EPowerSword</li>
+			<li>EMirrorsword</li>
+			<li>EDMirrorswords</li>
+			<li>EExecutioner</li>
 		</weaponTags>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
+<PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
 		<defName>OG_Eldar_Ranger</defName>
 		<label>ranger</label>
 		<race>Eldar_Aspect_Warrior</race>
@@ -435,7 +435,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -446,10 +446,10 @@
 			<li>EPrismRifle</li>
 			<li>ERangerLongrifle</li>
 		</weaponTags>
-    <modExtensions>
-      <li Class="AdeptusMechanicus.InfiltratorExtension">
-      </li>
-    </modExtensions>
+	<modExtensions>
+		<li Class="AdeptusMechanicus.InfiltratorExtension">
+		</li>
+	</modExtensions>
 	</PawnKindDef>
 
 </Defs>

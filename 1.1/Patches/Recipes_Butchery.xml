@@ -50,12 +50,12 @@
 	</Operation>
 
 <Operation Class="PatchOperationFindMod">
-    <mods>
-        <li>Harvest Organs Post Mortem</li>
-    </mods>
-    <match Class="PatchOperationSequence">
-        <success>Always</success>
-        <operations>
+	<mods>
+		<li>Harvest Organs Post Mortem</li>
+	</mods>
+	<match Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
 				
 			<!-- Adds Non-Humanlike Corpses to Autopsy disallowedCategories -->
 			<li Class="PatchOperationAdd">
@@ -65,8 +65,8 @@
 						<li>OG_Corpses_Chaos_Deamon</li>
 					</value>
 			</li>	
-        </operations>
-    </match>
+		</operations>
+	</match>
 </Operation>
 
 </Patch>

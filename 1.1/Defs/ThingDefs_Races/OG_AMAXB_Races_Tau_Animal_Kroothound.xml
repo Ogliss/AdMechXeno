@@ -142,7 +142,7 @@
 			</li>
 		</modExtensions>
 	</ThingDef>
-	  
+		
 	<PawnKindDef Name="KrootHound" ParentName="AnimalKindBase">
 		<defName>OG_Kroothound</defName>
 		<label>Kroothound</label>
@@ -208,7 +208,7 @@
 		</race>
 		<tradeTags Inherit="false"> </tradeTags>
 	</ThingDef>
-	  
+		
 	<PawnKindDef Name="OG_Kroothound_Kindred" ParentName="KrootHound">
 		<defName>OG_Kroothound_Kindred</defName>
 		<race>OG_Kroothound_Kindred</race>

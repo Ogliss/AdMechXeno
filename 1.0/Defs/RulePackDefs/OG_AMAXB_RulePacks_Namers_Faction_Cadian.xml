@@ -3,10 +3,10 @@
 	<RulePackDef>
 		<defName>NamerOGIGFactionCadian</defName>
 		<rulePack>
-		  <rulesStrings>
+			<rulesStrings>
 			<li>name->[OGIGCadian] [OGIGRegiments] [OGIGRegiment]</li>
-		  </rulesStrings>
-		  <rulesRaw>
+			</rulesStrings>
+			<rulesRaw>
 			<li Class="Rule_File">
 				<keyword>OGIGCadian</keyword>
 				<path>Names/OGIGCadian</path>
@@ -19,7 +19,7 @@
 				<keyword>OGIGRegiment</keyword>
 				<path>Names/OGIGRegiment</path>
 			</li>
-		  </rulesRaw>
+			</rulesRaw>
 		</rulePack>
 	</RulePackDef>
 	

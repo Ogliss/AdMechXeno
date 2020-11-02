@@ -1,30 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <HediffGiverSetDef>
-    <defName>OGE_Farseer_Options</defName>
-    <hediffGivers>
-      <li Class="AdeptusMechanicus.HediffGiver_StartWithHediff">
-        <hediff>OG_Eldar_Farseer_Shield</hediff>
+<HediffGiverSetDef>
+	<defName>OGE_Farseer_Options</defName>
+	<hediffGivers>
+		<li Class="AdeptusMechanicus.HediffGiver_StartWithHediff">
+		<hediff>OG_Eldar_Farseer_Shield</hediff>
 		<partsToAffect>
 		<li>Brain</li>
 		</partsToAffect>
 		<chance>100</chance>
-      </li>
-    </hediffGivers>
-  </HediffGiverSetDef>
-  
-  <HediffGiverSetDef>
-    <defName>OGE_Warlock_Options</defName>
-    <hediffGivers>
-      <li Class="AdeptusMechanicus.HediffGiver_StartWithHediff">
-        <hediff>OG_Eldar_Warlock_Shield</hediff>
+		</li>
+	</hediffGivers>
+</HediffGiverSetDef>
+
+<HediffGiverSetDef>
+	<defName>OGE_Warlock_Options</defName>
+	<hediffGivers>
+		<li Class="AdeptusMechanicus.HediffGiver_StartWithHediff">
+		<hediff>OG_Eldar_Warlock_Shield</hediff>
 		<partsToAffect>
 		<li>Brain</li>
 		</partsToAffect>
 		<chance>100</chance>
-      </li>
-    </hediffGivers>
-  </HediffGiverSetDef>
+		</li>
+	</hediffGivers>
+</HediffGiverSetDef>
 
 </Defs>

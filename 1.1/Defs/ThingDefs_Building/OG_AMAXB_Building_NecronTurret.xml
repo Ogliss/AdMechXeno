@@ -1,75 +1,75 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <ThingDef Name="TurretBase" Abstract="True">
-    <tickerType>Normal</tickerType>
-    <category>Building</category>
-    <thingClass>Building</thingClass>
-    <useHitPoints>false</useHitPoints>
-    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
-    <selectable>false</selectable>
-    <drawerType>MapMeshAndRealTime</drawerType>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <repairEffect>Repair</repairEffect>
-    <leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
-    <filthLeaving>Filth_RubbleBuilding</filthLeaving>
+<ThingDef Name="TurretBase" Abstract="True">
+	<tickerType>Normal</tickerType>
+	<category>Building</category>
+	<thingClass>Building</thingClass>
+	<useHitPoints>false</useHitPoints>
+	<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+	<selectable>false</selectable>
+	<drawerType>MapMeshAndRealTime</drawerType>
+	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	<repairEffect>Repair</repairEffect>
+	<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
+	<filthLeaving>Filth_RubbleBuilding</filthLeaving>
 		<statBases>
 			<SellPriceFactor>0.00</SellPriceFactor>
 		</statBases>
-  </ThingDef>
+</ThingDef>
 
-    <ThingDef ParentName="TurretBase">
-    <defName>OGN_Turret_MonolithGuassFluxArc</defName>
-    <label>gauss flux arc</label>
-    <description>A gauss flux arc arry turret. Its dumb AI brain can't be directly controlled, so beware of friendly fire.</description>
+	<ThingDef ParentName="TurretBase">
+	<defName>OGN_Turret_MonolithGuassFluxArc</defName>
+	<label>gauss flux arc</label>
+	<description>A gauss flux arc arry turret. Its dumb AI brain can't be directly controlled, so beware of friendly fire.</description>
 	<thingClass>Building_TurretGun</thingClass>
-    <graphicData>
-      <texPath>Things/Buildings/DummyTexture</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <stealable>false</stealable>
-    <rotatable>false</rotatable>
-    <selectable>false</selectable>
-    <statBases>
-      <ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
-    </statBases>
-    <tickerType>Normal</tickerType>
-    <comps>
+	<graphicData>
+		<texPath>Things/Buildings/DummyTexture</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+	</graphicData>
+	<stealable>false</stealable>
+	<rotatable>false</rotatable>
+	<selectable>false</selectable>
+	<statBases>
+		<ShootingAccuracyTurret>0.96</ShootingAccuracyTurret>
+	</statBases>
+	<tickerType>Normal</tickerType>
+	<comps>
 	
-    </comps>
-    <passability>Standable</passability>
-    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
-    <building>
-	  <ai_combatDangerous>false</ai_combatDangerous>
-      <turretGunDef>OGN_TurretGun_MonolithGuassFluxArc</turretGunDef>
-      <turretBurstCooldownTime>3.0</turretBurstCooldownTime>
-      <turretBurstWarmupTime>1</turretBurstWarmupTime>
-	  
-	  <isInert>true</isInert>
-      <isEdifice>false</isEdifice>
-      <deconstructible>false</deconstructible>
-    </building>
-    <placeWorkers>
-      <li>PlaceWorker_TurretTop</li>
-    </placeWorkers>
-  </ThingDef>
+	</comps>
+	<passability>Standable</passability>
+	<terrainAffordanceNeeded>Light</terrainAffordanceNeeded>
+	<building>
+		<ai_combatDangerous>false</ai_combatDangerous>
+		<turretGunDef>OGN_TurretGun_MonolithGuassFluxArc</turretGunDef>
+		<turretBurstCooldownTime>3.0</turretBurstCooldownTime>
+		<turretBurstWarmupTime>1</turretBurstWarmupTime>
+		
+		<isInert>true</isInert>
+		<isEdifice>false</isEdifice>
+		<deconstructible>false</deconstructible>
+	</building>
+	<placeWorkers>
+		<li>PlaceWorker_TurretTop</li>
+	</placeWorkers>
+</ThingDef>
 
 	<!--==================== Necron - Gauss Flux Arc =========================-->
-  <ThingDef ParentName="OG_Bullet_LaserGeneric" Class="AdeptusMechanicus.LaserBeamDef">
-    <defName>OGN_Bullet_MonolithGuassFluxArc</defName>
-    <label>guass blast</label>
-    
-    <textures>
-      <li>Things/Projectile/GaussBoltSml</li>
-    </textures>
-    <seam>0</seam>
+<ThingDef ParentName="OG_Bullet_LaserGeneric" Class="AdeptusMechanicus.LaserBeamDef">
+	<defName>OGN_Bullet_MonolithGuassFluxArc</defName>
+	<label>guass blast</label>
+	
+	<textures>
+		<li>Things/Projectile/GaussBoltSml</li>
+	</textures>
+	<seam>0</seam>
 
-    <projectile>
+	<projectile>
 		<damageDef>OG_N_Gauss_Damage</damageDef>
 		<damageAmountBase>8</damageAmountBase>
 		<armorPenetrationBase>0.16</armorPenetrationBase>
 		<stoppingPower>1.00</stoppingPower>
-    </projectile>
-  </ThingDef>
+	</projectile>
+</ThingDef>
 
 	<ThingDef ParentName="BaseWeaponTurret" Class="AdeptusMechanicus.LaserGunDef">
 		<defName>OGN_TurretGun_MonolithGuassFluxArc</defName>
@@ -82,9 +82,9 @@
 		</graphicData>
 		<soundInteract>Interact_Autopistol</soundInteract>
 		<statBases>
-		  <DeteriorationRate>0</DeteriorationRate>
-		  <Mass>5</Mass>
-		  <Flammability>0</Flammability>
+			<DeteriorationRate>0</DeteriorationRate>
+			<Mass>5</Mass>
+			<Flammability>0</Flammability>
 			<AccuracyTouch>0.80</AccuracyTouch>
 			<AccuracyShort>0.75</AccuracyShort>
 			<AccuracyMedium>0.60</AccuracyMedium>
@@ -108,7 +108,7 @@
 			</targetParams>
 			</li>
 		</verbs>
-	<comps>    
+	<comps>	
 		<!--li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
 		<VerbEntries>
 			<li>
@@ -118,9 +118,9 @@
 		</VerbEntries>
 		</li--> 
 	</comps>
-    <weaponTags Inherit="false">
-      <li>TurretGun</li>
-    </weaponTags>
+	<weaponTags Inherit="false">
+		<li>TurretGun</li>
+	</weaponTags>
 	</ThingDef>
 
 </Defs>

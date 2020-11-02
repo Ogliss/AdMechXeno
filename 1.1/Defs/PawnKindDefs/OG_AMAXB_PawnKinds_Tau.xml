@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <PawnKindDef Name="TauBase" Abstract="True">
-    <defaultFactionType>OG_Tau_Faction</defaultFactionType>
-    <backstoryFiltersOverride>
-      <li>
-        <categories>
-          <li>Offworld</li>
-          <li>Outlander</li>
-          
-        </categories>
-      </li>
-    </backstoryFiltersOverride>
-    <invNutrition>2.55</invNutrition>
+<PawnKindDef Name="TauBase" Abstract="True">
+	<defaultFactionType>OG_Tau_Faction</defaultFactionType>
+	<backstoryFiltersOverride>
+		<li>
+		<categories>
+			<li>Offworld</li>
+			<li>Outlander</li>
+			
+		</categories>
+		</li>
+	</backstoryFiltersOverride>
+	<invNutrition>2.55</invNutrition>
 		<!--aiAvoidCover>true</aiAvoidCover-->
 		<weaponMoney>
 			<min>7500</min>
@@ -37,17 +37,17 @@
 				</li>
 			</subOptionsChooseOne>
 		</inventoryOptions>
-    <modExtensions>
+	<modExtensions>
 		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
 			<primaryMagazineCount>
-			  <min>5</min>
-			  <max>8</max>
+				<min>5</min>
+				<max>8</max>
 			</primaryMagazineCount>
 		</li>
-    </modExtensions>
-  </PawnKindDef>
+	</modExtensions>
+</PawnKindDef>
 
-  <PawnKindDef ParentName="TauBase">
+<PawnKindDef ParentName="TauBase">
 		<defName>OG_Tau_Faction_Ethereal</defName>
 		<label>Aun'O</label>
 		<race>Human</race>
@@ -72,7 +72,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -84,7 +84,7 @@
 		</weaponTags>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="TauBase">
+<PawnKindDef ParentName="TauBase">
 		<defName>OG_Tau_Firewarrior</defName>
 		<label>Fire Warrior Shas'La</label>
 		<race>Tau_Firewarrior</race>
@@ -108,7 +108,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -121,7 +121,7 @@
 		</weaponTags>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="TauBase">
+<PawnKindDef ParentName="TauBase">
 		<defName>OG_Tau_Firewarrior_Sgt</defName>
 		<label>Fire Warrior Shas'Ui</label>
 		<race>Tau_Firewarrior</race>
@@ -145,7 +145,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -157,7 +157,7 @@
 		</weaponTags>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="TauBase">
+<PawnKindDef ParentName="TauBase">
 		<defName>OG_Tau_Pathfinder</defName>
 		<label>pathfinder shas'la</label>
 		<race>Tau_Firewarrior</race>
@@ -181,7 +181,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -191,13 +191,13 @@
 		<weaponTags>
 			<li>TPulseCarbine</li>
 		</weaponTags>
-    <modExtensions>
-      <li Class="AdeptusMechanicus.InfiltratorExtension">
-      </li>
-    </modExtensions>
+	<modExtensions>
+		<li Class="AdeptusMechanicus.InfiltratorExtension">
+		</li>
+	</modExtensions>
 	</PawnKindDef>
 	
-  <PawnKindDef ParentName="TauBase">
+<PawnKindDef ParentName="TauBase">
 		<defName>OG_Tau_PathfinderSniper</defName>
 		<label>pathfinder shas'la</label>
 		<race>Tau_Firewarrior</race>
@@ -221,7 +221,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -231,13 +231,13 @@
 		<weaponTags>
 			<li>TRailRifle</li>
 		</weaponTags>
-    <modExtensions>
-      <li Class="AdeptusMechanicus.InfiltratorExtension">
-      </li>
-    </modExtensions>
+	<modExtensions>
+		<li Class="AdeptusMechanicus.InfiltratorExtension">
+		</li>
+	</modExtensions>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="TauBase">
+<PawnKindDef ParentName="TauBase">
 		<defName>OG_Tau_Pathfinder_Sgt</defName>
 		<label>pathfinder shas'ui</label>
 		<race>Tau_Firewarrior</race>
@@ -261,7 +261,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -272,13 +272,13 @@
 			<li>TRailRifle</li>
 			<li>TIonRifle</li>
 		</weaponTags>
-    <modExtensions>
-      <li Class="AdeptusMechanicus.InfiltratorExtension">
-      </li>
-    </modExtensions>
+	<modExtensions>
+		<li Class="AdeptusMechanicus.InfiltratorExtension">
+		</li>
+	</modExtensions>
 	</PawnKindDef>
 
-  <PawnKindDef ParentName="TauBase">
+<PawnKindDef ParentName="TauBase">
 		<defName>OG_Tau_Ethereal</defName>
 		<label>Aun</label>
 		<race>Tau_Ethereal</race>
@@ -302,7 +302,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1.350</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>

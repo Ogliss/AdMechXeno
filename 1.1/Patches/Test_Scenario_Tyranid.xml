@@ -4,22 +4,22 @@
 	<names>
 		<li>Ogliss</li>
 	</names>
-  <success>Always</success>
-    <match Class="PatchOperationAdd">
-        <success>Always</success>
-        <xpath>Defs</xpath>
-        <value>
+<success>Always</success>
+	<match Class="PatchOperationAdd">
+		<success>Always</success>
+		<xpath>Defs</xpath>
+		<value>
 		<ScenarioDef>
 	<defName>OGAM_TestScenario_Tyranid</defName>
 		<label>Testing (Tyranid)</label>
 		<description>Tyranid Testing Scenario.</description>
-    <scenario>
-      <summary>Five pawns, All Tyranid Weapons.</summary>
-      <playerFaction>
-        <def>PlayerFaction</def>
-        <factionDef>PlayerColony</factionDef>
-      </playerFaction>
-      <parts>
+	<scenario>
+		<summary>Five pawns, All Tyranid Weapons.</summary>
+		<playerFaction>
+		<def>PlayerFaction</def>
+		<factionDef>PlayerColony</factionDef>
+		</playerFaction>
+		<parts>
 		
 		<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
 			<def>ConfigPage_ConfigureStartingPawns</def>
@@ -40,8 +40,8 @@
 		</parts>
 	</scenario>
 	</ScenarioDef>
-        </value>
-    </match>
+		</value>
+	</match>
 </Operation>
 
 </Patch>

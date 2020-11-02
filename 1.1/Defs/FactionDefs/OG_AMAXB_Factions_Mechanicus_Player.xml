@@ -5,7 +5,7 @@
 			<li>(0, 0.737, 0.847)</li>
 		</colorSpectrum>
 	</FactionDef>
-	  
+		
 	<FactionDef Parent="OG_Mechanicus_PlayerFaction_Base">
 		<defName>OG_Mechanicus_PlayerColony</defName>
 		<label>Mechanicus Colony</label>

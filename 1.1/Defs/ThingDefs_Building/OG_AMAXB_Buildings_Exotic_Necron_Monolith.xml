@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-  <!-- ========================= Necron Monolith ========================= -->
-  <ThingDef ParentName="ShipPartBaseOG">
-    <defName>OG_Necron_Monolith_Static</defName>
-    <label>Necron Monlith</label>
-    <description>A Monolith is a massive mobile fortress used by the Necrons as their primary planetary assault craft. A Monolith combines the properties of a transport craft, armoured destroyer and icon of undying Necron power. Its ponderous form can float across a battlefield upon its anti-gravitic engines, whilst its crystal core pulses with sickly energy that can be manipulated into powerful beams of Gauss lightning which whip out from its weapon mounts.\n\nWhen its massive silhouette looms over a battlefield, it will lay waste to entire armies with strobing torrents of gauss fire and the deafening crack of its particle whip.Few armies can stand long before the immense firepower of a Monolith. Living troops are reduced to their component atoms by its punishing gauss flux arcs, while tanks rupture and explode in showers of molten steel as it focuses its energies upon them. By contrast, enemy ordnance has little effect on the shell of a Monolith. When damaged, the war machine’s Necrodermis armour reflexively enacts self-repairs; sparking rents in its hull are sealed by living metal and impact craters smooth over as the reactive substance seeks to reassert its original form.</description>
-    <graphicData>
-      <texPath>Building/Necron/Monolith</texPath>
-      <graphicClass>Graphic_Single</graphicClass>
-      <drawSize>(6,6)</drawSize>
-      <drawOffsetNorth>-0.0,0.0,0.0</drawOffsetNorth>
-      <drawOffsetSouth>0.0,0.0,0.0</drawOffsetSouth>
-      <drawOffsetEast>-1.3,0.0,0.35</drawOffsetEast>
-      <drawOffsetWest>1.3,0.0,0.65</drawOffsetWest>
-    </graphicData>
-    <drawerType>MapMeshAndRealTime</drawerType>
-     <size>(5,5)</size>
-    <killedLeavings>
-      <Steel>2800</Steel>
-      <Silver>1440</Silver>
-      <ChunkSlagSteel>20</ChunkSlagSteel>
-    </killedLeavings>
+<!-- ========================= Necron Monolith ========================= -->
+<ThingDef ParentName="ShipPartBaseOG">
+	<defName>OG_Necron_Monolith_Static</defName>
+	<label>Necron Monlith</label>
+	<description>A Monolith is a massive mobile fortress used by the Necrons as their primary planetary assault craft. A Monolith combines the properties of a transport craft, armoured destroyer and icon of undying Necron power. Its ponderous form can float across a battlefield upon its anti-gravitic engines, whilst its crystal core pulses with sickly energy that can be manipulated into powerful beams of Gauss lightning which whip out from its weapon mounts.\n\nWhen its massive silhouette looms over a battlefield, it will lay waste to entire armies with strobing torrents of gauss fire and the deafening crack of its particle whip.Few armies can stand long before the immense firepower of a Monolith. Living troops are reduced to their component atoms by its punishing gauss flux arcs, while tanks rupture and explode in showers of molten steel as it focuses its energies upon them. By contrast, enemy ordnance has little effect on the shell of a Monolith. When damaged, the war machine’s Necrodermis armour reflexively enacts self-repairs; sparking rents in its hull are sealed by living metal and impact craters smooth over as the reactive substance seeks to reassert its original form.</description>
+	<graphicData>
+		<texPath>Building/Necron/Monolith</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>(6,6)</drawSize>
+		<drawOffsetNorth>-0.0,0.0,0.0</drawOffsetNorth>
+		<drawOffsetSouth>0.0,0.0,0.0</drawOffsetSouth>
+		<drawOffsetEast>-1.3,0.0,0.35</drawOffsetEast>
+		<drawOffsetWest>1.3,0.0,0.65</drawOffsetWest>
+	</graphicData>
+	<drawerType>MapMeshAndRealTime</drawerType>
+	 <size>(5,5)</size>
+	<killedLeavings>
+		<Steel>2800</Steel>
+		<Silver>1440</Silver>
+		<ChunkSlagSteel>20</ChunkSlagSteel>
+	</killedLeavings>
 	<comps>
 		<li Class="CompProperties_PawnSpawnerOnDamaged">
 			<Faction>OG_Necron_Faction</Faction>
@@ -34,109 +34,109 @@
 			<mote>Mote_PsychicConditionCauserEffect</mote>
 			<emissionInterval>300</emissionInterval>
 		</li>
-	  <li Class="CompTurret.CompProperties_Turret"> 
-        <projectileOffset>1</projectileOffset>
+		<li Class="CompTurret.CompProperties_Turret"> 
+		<projectileOffset>1</projectileOffset>
 		<TurretDef>OGN_Turret_MonolithGuassFluxArc</TurretDef>
 		<iconPath>Things/Building/Security/TurretMortar_Top</iconPath>
 		<gizmoID>1</gizmoID>
-        <hotKey>Misc4</hotKey>
+		<hotKey>Misc4</hotKey>
 		<offsetNorth>-1.3,0.0,0.0</offsetNorth>
 		<offsetSouth>1.3,0.0,0.65</offsetSouth>
 		<offsetEast>-1.3,0.0,0.35</offsetEast>
 		<offsetWest>1.3,0.0,0.65</offsetWest>
-	  </li>
-	  
-	  <li Class="CompTurret.CompProperties_Turret"> 
-        <projectileOffset>1</projectileOffset>
+		</li>
+		
+		<li Class="CompTurret.CompProperties_Turret"> 
+		<projectileOffset>1</projectileOffset>
 		<TurretDef>OGN_Turret_MonolithGuassFluxArc</TurretDef>
 		<iconPath>Things/Building/Security/TurretMortar_Top</iconPath>
 		<gizmoID>2</gizmoID>
-        <hotKey>Misc4</hotKey>
+		<hotKey>Misc4</hotKey>
 		<offsetNorth>1.3,0.0,0.0</offsetNorth>
 		<offsetSouth>-1.3,0.0,0.65</offsetSouth>
 		<offsetEast>1.3,-0.0,0.65</offsetEast>
 		<offsetWest>-1.3,-2.0,0.35</offsetWest>
-	  </li>
-	  
-	  <li Class="CompTurret.CompProperties_Turret"> 
-        <projectileOffset>1</projectileOffset>
+		</li>
+		
+		<li Class="CompTurret.CompProperties_Turret"> 
+		<projectileOffset>1</projectileOffset>
 		<TurretDef>OGN_Turret_MonolithGuassFluxArc</TurretDef>
 		<iconPath>Things/Building/Security/TurretMortar_Top</iconPath>
 		<gizmoID>3</gizmoID>
-        <hotKey>Misc4</hotKey>
+		<hotKey>Misc4</hotKey>
 		<offsetNorth>-1.3,0.0,0.65</offsetNorth>
 		<offsetSouth>1.3,2.0,0.0</offsetSouth>
 		<offsetEast>-1.3,0.0,0.35</offsetEast>
 		<offsetWest>1.3,0.0,0.65</offsetWest>
-	  </li>
-	  
-	  <li Class="CompTurret.CompProperties_Turret"> 
-        <projectileOffset>1</projectileOffset>
+		</li>
+		
+		<li Class="CompTurret.CompProperties_Turret"> 
+		<projectileOffset>1</projectileOffset>
 		<TurretDef>OGN_Turret_MonolithGuassFluxArc</TurretDef>
 		<iconPath>Things/Building/Security/TurretMortar_Top</iconPath>
 		<gizmoID>4</gizmoID>
-        <hotKey>Misc4</hotKey>
+		<hotKey>Misc4</hotKey>
 		<offsetNorth>1.3,0.0,0.65</offsetNorth>
 		<offsetSouth>-1.3,1.0,0.0</offsetSouth>
 		<offsetEast>1.3,-0.0,0.65</offsetEast>
 		<offsetWest>-1.3,0.0,0.35</offsetWest>
-	  </li>
+		</li>
 	</comps>
-  </ThingDef>
+</ThingDef>
 
-  <HediffDef ParentName="DiseaseBase">
-    <defName>OG_Necron_PsychicSuppression</defName>
-    <label>psychic suppression</label>
-    <description>The effect of a psychic suppression field. Coordination and reasoning are muddled.</description>
-    <isBad>true</isBad>
-    <priceImpact>false</priceImpact>
-    <comps>
-      <li Class="HediffCompProperties">
-        <compClass>HediffComp_PsychicSuppression</compClass>
-      </li>
-    </comps>
-    <stages>
-      <li>
-        <capMods>
-          <li>
-            <capacity>Consciousness</capacity>
-            <setMaxCurveOverride>
-              <points>
-                <li>0, 1</li>
-                <li>1, 0.5</li>
-              </points>
-            </setMaxCurveOverride>
-            <setMaxCurveEvaluateStat>PsychicSensitivity</setMaxCurveEvaluateStat>
-          </li>
-        </capMods>
-      </li>
-    </stages>
-  </HediffDef>
+<HediffDef ParentName="DiseaseBase">
+	<defName>OG_Necron_PsychicSuppression</defName>
+	<label>psychic suppression</label>
+	<description>The effect of a psychic suppression field. Coordination and reasoning are muddled.</description>
+	<isBad>true</isBad>
+	<priceImpact>false</priceImpact>
+	<comps>
+		<li Class="HediffCompProperties">
+		<compClass>HediffComp_PsychicSuppression</compClass>
+		</li>
+	</comps>
+	<stages>
+		<li>
+		<capMods>
+			<li>
+			<capacity>Consciousness</capacity>
+			<setMaxCurveOverride>
+				<points>
+				<li>0, 1</li>
+				<li>1, 0.5</li>
+				</points>
+			</setMaxCurveOverride>
+			<setMaxCurveEvaluateStat>PsychicSensitivity</setMaxCurveEvaluateStat>
+			</li>
+		</capMods>
+		</li>
+	</stages>
+</HediffDef>
 
-  <GameConditionDef>
-    <defName>OG_Necron_PsychicSuppression</defName>
-    <conditionClass>GameCondition_PsychicSuppression</conditionClass>
-    <label>psychic suppression</label>
-    <description>A psychic suppression field is affecting {0}s and reducing their consciousness. The effect is modulated by an individual's psychic sensitivity.</description>
-    <descriptionFuture>a psychic suppression wave will reduce the consciousness of all [psychicSuppressorGender]s around [map_definite] for [gameConditionDuration_duration]</descriptionFuture>
-    <endMessage>The psychic suppressor field has dissipated.</endMessage>
-    <letterText>A psychic suppressor field has begun reducing the consciousness of {0}s across the whole region. The effect is modulated by an individual's psychic sensitivity.</letterText>
-    <letterDef>NegativeEvent</letterDef>
-    <canBePermanent>false</canBePermanent>
-  </GameConditionDef>
+<GameConditionDef>
+	<defName>OG_Necron_PsychicSuppression</defName>
+	<conditionClass>GameCondition_PsychicSuppression</conditionClass>
+	<label>psychic suppression</label>
+	<description>A psychic suppression field is affecting {0}s and reducing their consciousness. The effect is modulated by an individual's psychic sensitivity.</description>
+	<descriptionFuture>a psychic suppression wave will reduce the consciousness of all [psychicSuppressorGender]s around [map_definite] for [gameConditionDuration_duration]</descriptionFuture>
+	<endMessage>The psychic suppressor field has dissipated.</endMessage>
+	<letterText>A psychic suppressor field has begun reducing the consciousness of {0}s across the whole region. The effect is modulated by an individual's psychic sensitivity.</letterText>
+	<letterDef>NegativeEvent</letterDef>
+	<canBePermanent>false</canBePermanent>
+</GameConditionDef>
 <!--
-  <SitePartDef ParentName="ConditionCauserSitePartBase">
-    <defName>OG_Necron_PsychicSuppressor</defName>
-    <label>psychic suppressor</label>
-    <description>A psychic suppressor.</description>
-    <conditionCauserDef>OG_Necron_Monolith_Static</conditionCauserDef>
-    <workerClass>SitePartWorker_ConditionCauser_PsychicSuppressor</workerClass>
-  </SitePartDef>
+<SitePartDef ParentName="ConditionCauserSitePartBase">
+	<defName>OG_Necron_PsychicSuppressor</defName>
+	<label>psychic suppressor</label>
+	<description>A psychic suppressor.</description>
+	<conditionCauserDef>OG_Necron_Monolith_Static</conditionCauserDef>
+	<workerClass>SitePartWorker_ConditionCauser_PsychicSuppressor</workerClass>
+</SitePartDef>
 
-  <GenStepDef ParentName="ConditionCauserGenStepBase">
-    <defName>OG_Necron_PsychicSuppressor</defName>
-    <linkWithSite>OG_Necron_PsychicSuppressor</linkWithSite>
-  </GenStepDef>
+<GenStepDef ParentName="ConditionCauserGenStepBase">
+	<defName>OG_Necron_PsychicSuppressor</defName>
+	<linkWithSite>OG_Necron_PsychicSuppressor</linkWithSite>
+</GenStepDef>
 -->
 
 </Defs>

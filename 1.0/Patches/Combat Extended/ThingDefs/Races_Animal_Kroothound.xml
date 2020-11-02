@@ -4,15 +4,15 @@
 	<!-- ========== KrootHound ========== -->
 
 <Operation Class="PatchOperationSequence">
-  <success>Always</success>
-  <operations>
-    <li Class="PatchOperationTest">
-      <xpath>Defs/ResearchTabDef[defName="CE_Turrets"]</xpath>
-    </li>
-    <li Class="PatchOperationTest">
-      <xpath>Defs/ThingDef[defName="KrootHound" or defName="KindredKrootHound"]/statBases/MeleeParryChance</xpath>
+<success>Always</success>
+<operations>
+	<li Class="PatchOperationTest">
+		<xpath>Defs/ResearchTabDef[defName="CE_Turrets"]</xpath>
+	</li>
+	<li Class="PatchOperationTest">
+		<xpath>Defs/ThingDef[defName="KrootHound" or defName="KindredKrootHound"]/statBases/MeleeParryChance</xpath>
 		<success>Invert</success>
-    </li>
+	</li>
 
 	<li Class="PatchOperationAddModExtension">
 		<xpath>Defs/ThingDef[defName="KrootHound" or defName="KindredKrootHound"]</xpath>
@@ -121,7 +121,7 @@
 		</value>
 	</li>
 
-  </operations>
+</operations>
 </Operation>
 
 </Patch>

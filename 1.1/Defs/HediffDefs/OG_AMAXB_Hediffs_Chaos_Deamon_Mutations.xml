@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <HediffDef ParentName="ImplantHediffBase" Name="ChaosDeamonPower" Abstract="true">
-    <description>a deamonic mutation</description>
-  </HediffDef>
+<HediffDef ParentName="ImplantHediffBase" Name="ChaosDeamonPower" Abstract="true">
+	<description>a deamonic mutation</description>
+</HediffDef>
 
-  <!-- ====================== Deamonic Powers ===================== -->
-  <!-- ====================== Warpfire Bolt ===================== -->
+<!-- ====================== Deamonic Powers ===================== -->
+<!-- ====================== Warpfire Bolt ===================== -->
  <ThingDef ParentName="BaseBullet">
 	<defName>OGCD_Bullet_Warpfire_Bolt</defName>
-    <label>warpfire bolt</label>
-    <tickerType>Normal</tickerType>
-    <graphicData>
-      <texPath>Things/Projectile/Warpfire</texPath>
-      <graphicClass>AdeptusMechanicus.Graphic_Cycle</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <thingClass>AdeptusMechanicus.Projectile_Fire</thingClass>
-    <modExtensions>
-      <li Class="AnimatedProjectile.AnimatedProjectileExtension">
-        <ticksPerFrame>15</ticksPerFrame>
-      </li>
-    </modExtensions>
-    <projectile>
+	<label>warpfire bolt</label>
+	<tickerType>Normal</tickerType>
+	<graphicData>
+		<texPath>Things/Projectile/Warpfire</texPath>
+		<graphicClass>AdeptusMechanicus.Graphic_Cycle</graphicClass>
+		<shaderType>TransparentPostLight</shaderType>
+	</graphicData>
+	<thingClass>AdeptusMechanicus.Projectile_Fire</thingClass>
+	<modExtensions>
+		<li Class="AnimatedProjectile.AnimatedProjectileExtension">
+		<ticksPerFrame>15</ticksPerFrame>
+		</li>
+	</modExtensions>
+	<projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OG_Chaos_Deamon_Warpfire</damageDef>
 		<damageAmountBase>3</damageAmountBase>
@@ -34,25 +34,25 @@
 		<stoppingPower>0.5</stoppingPower>
 		<speed>20</speed>
 		<soundExplode>OGIFL_Explosion</soundExplode>
-    </projectile>
-  </ThingDef>
+	</projectile>
+</ThingDef>
  
-  <HediffDef ParentName="ChaosDeamonPower">
-    <defName>OG_ChaosDeamon_Power_Warpfire_Bolt</defName>
-    <label>Warpfire maw</label>
-    <labelNoun>a Warpfire maw</labelNoun>
-    <stages>
-      <li>
-        <label>warpfire ranged attack</label>
-      </li>
-    </stages>
-    <comps>
-      <li Class="AdeptusMechanicus.HediffCompProperties_VerbGiverExtra">
+<HediffDef ParentName="ChaosDeamonPower">
+	<defName>OG_ChaosDeamon_Power_Warpfire_Bolt</defName>
+	<label>Warpfire maw</label>
+	<labelNoun>a Warpfire maw</labelNoun>
+	<stages>
+		<li>
+		<label>warpfire ranged attack</label>
+		</li>
+	</stages>
+	<comps>
+		<li Class="AdeptusMechanicus.HediffCompProperties_VerbGiverExtra">
 		<verbEntrys>
 			<li>
-			  <Multishot>true</Multishot>
-			  <ScattershotCount>2</ScattershotCount>
-			  <VerbProps>
+				<Multishot>true</Multishot>
+				<ScattershotCount>2</ScattershotCount>
+				<VerbProps>
 				<label>warpfire</label>
 				<verbClass>Verb_Shoot</verbClass>
 				<accuracyTouch>0.15</accuracyTouch>
@@ -74,30 +74,30 @@
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
-			  </VerbProps>
+				</VerbProps>
 			</li>
 		</verbEntrys>
-      </li>
-    </comps>
-  </HediffDef>
-  
-  <!-- ====================== Lesser Warpfire Bolt ===================== -->
-  <HediffDef ParentName="ChaosDeamonPower">
-    <defName>OG_ChaosDeamon_Power_Warpfire_Bolt_Lesser</defName>
-    <label>Warpfire maw</label>
-    <labelNoun>a Warpfire maw</labelNoun>
-    <stages>
-      <li>
-        <label>warpfire ranged attack</label>
-      </li>
-    </stages>
-    <comps>
-      <li Class="AdeptusMechanicus.HediffCompProperties_VerbGiverExtra">
+		</li>
+	</comps>
+</HediffDef>
+
+<!-- ====================== Lesser Warpfire Bolt ===================== -->
+<HediffDef ParentName="ChaosDeamonPower">
+	<defName>OG_ChaosDeamon_Power_Warpfire_Bolt_Lesser</defName>
+	<label>Warpfire maw</label>
+	<labelNoun>a Warpfire maw</labelNoun>
+	<stages>
+		<li>
+		<label>warpfire ranged attack</label>
+		</li>
+	</stages>
+	<comps>
+		<li Class="AdeptusMechanicus.HediffCompProperties_VerbGiverExtra">
 		<verbEntrys>
 			<li>
-			  <Multishot>true</Multishot>
-			  <ScattershotCount>2</ScattershotCount>
-			  <VerbProps>
+				<Multishot>true</Multishot>
+				<ScattershotCount>2</ScattershotCount>
+				<VerbProps>
 				<label>warpfire</label>
 				<verbClass>Verb_Shoot</verbClass>
 				<accuracyTouch>0.15</accuracyTouch>
@@ -119,30 +119,30 @@
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
-			  </VerbProps>
+				</VerbProps>
 			</li>
 		</verbEntrys>
-      </li>
-    </comps>
-  </HediffDef>
-  
-  <!-- ====================== Warpfire Flamer ===================== -->
+		</li>
+	</comps>
+</HediffDef>
+
+<!-- ====================== Warpfire Flamer ===================== -->
  <ThingDef ParentName="BaseBullet">
 	<defName>OGCD_Bullet_Warpfire_Flamer</defName>
-    <label>warpflames</label>
-    <tickerType>Normal</tickerType>
-    <graphicData>
-      <texPath>Things/Projectile/Warpfire</texPath>
-      <graphicClass>AdeptusMechanicus.Graphic_Cycle</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <thingClass>AdeptusMechanicus.Projectile_Fire</thingClass>
-    <modExtensions>
-      <li Class="AnimatedProjectile.AnimatedProjectileExtension">
-        <ticksPerFrame>15</ticksPerFrame>
-      </li>
-    </modExtensions>
-    <projectile>
+	<label>warpflames</label>
+	<tickerType>Normal</tickerType>
+	<graphicData>
+		<texPath>Things/Projectile/Warpfire</texPath>
+		<graphicClass>AdeptusMechanicus.Graphic_Cycle</graphicClass>
+		<shaderType>TransparentPostLight</shaderType>
+	</graphicData>
+	<thingClass>AdeptusMechanicus.Projectile_Fire</thingClass>
+	<modExtensions>
+		<li Class="AnimatedProjectile.AnimatedProjectileExtension">
+		<ticksPerFrame>15</ticksPerFrame>
+		</li>
+	</modExtensions>
+	<projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OG_Chaos_Deamon_Warpfire</damageDef>
 		<damageAmountBase>1</damageAmountBase>
@@ -154,25 +154,25 @@
 		<stoppingPower>0.5</stoppingPower>
 		<speed>20</speed>
 		<soundExplode>OGIFL_Explosion</soundExplode>
-    </projectile>
-  </ThingDef>
-  
-  <HediffDef ParentName="ChaosDeamonPower">
-    <defName>OG_ChaosDeamon_Power_Warpfire_Flamer</defName>
-    <label>Warpfire maw</label>
-    <labelNoun>a Warpfire maw</labelNoun>
-    <stages>
-      <li>
-        <label>warpfire ranged attack</label>
-      </li>
-    </stages>
-    <comps>
-      <li Class="AdeptusMechanicus.HediffCompProperties_VerbGiverExtra">
+	</projectile>
+</ThingDef>
+
+<HediffDef ParentName="ChaosDeamonPower">
+	<defName>OG_ChaosDeamon_Power_Warpfire_Flamer</defName>
+	<label>Warpfire maw</label>
+	<labelNoun>a Warpfire maw</labelNoun>
+	<stages>
+		<li>
+		<label>warpfire ranged attack</label>
+		</li>
+	</stages>
+	<comps>
+		<li Class="AdeptusMechanicus.HediffCompProperties_VerbGiverExtra">
 		<verbEntrys>
 			<li>
-			  <Multishot>true</Multishot>
-			  <ScattershotCount>2</ScattershotCount>
-			  <VerbProps>
+				<Multishot>true</Multishot>
+				<ScattershotCount>2</ScattershotCount>
+				<VerbProps>
 				<label>warpfire</label>
 				<verbClass>Verb_Shoot</verbClass>
 				<accuracyTouch>0.15</accuracyTouch>
@@ -195,11 +195,11 @@
 				<targetParams>
 					<canTargetLocations>true</canTargetLocations>
 				</targetParams>
-			  </VerbProps>
+				</VerbProps>
 			</li>
 		</verbEntrys>
-      </li>
-    </comps>
-  </HediffDef>
-  
+		</li>
+	</comps>
+</HediffDef>
+
 </Defs>

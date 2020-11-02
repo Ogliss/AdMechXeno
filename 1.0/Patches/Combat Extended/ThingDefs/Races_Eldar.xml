@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
 <Operation Class="PatchOperationSequence">
-  <success>Always</success>
-  <operations>
-    <li Class="PatchOperationTest">
-      <xpath>Defs/ResearchTabDef[defName="CE_Turrets"]</xpath>
-    </li>
+<success>Always</success>
+<operations>
+	<li Class="PatchOperationTest">
+		<xpath>Defs/ResearchTabDef[defName="CE_Turrets"]</xpath>
+	</li>
 	
 	<li Class="PatchOperationAddModExtension">
 		<xpath>Defs/ThingDef[@Name="OG_Eldar_Pawn_Base"]</xpath>
@@ -59,12 +59,12 @@
 		<xpath>Defs/ThingDef[@Name="OG_Eldar_Pawn_Base"]/comps</xpath>
 		<value>
 			<li>
-			  <compClass>CombatExtended.CompPawnGizmo</compClass>
+				<compClass>CombatExtended.CompPawnGizmo</compClass>
 			</li>
 			<li Class="CombatExtended.CompProperties_Suppressable" />
 		</value>
 	</li>
-  </operations>
+</operations>
 </Operation>
 
 </Patch>

@@ -2,16 +2,16 @@
 
 <Defs>
 
-  <ToolCapacityDef>
-    <defName>OGTY_ToxicStab</defName>
-  </ToolCapacityDef>
+<ToolCapacityDef>
+	<defName>OGTY_ToxicStab</defName>
+</ToolCapacityDef>
 
-  <ToolCapacityDef>
-    <defName>OGTY_AcidBite</defName>
-  </ToolCapacityDef>
+<ToolCapacityDef>
+	<defName>OGTY_AcidBite</defName>
+</ToolCapacityDef>
 
-  <ToolCapacityDef>
-    <defName>OGTY_BlindingVenom</defName>
-  </ToolCapacityDef>
+<ToolCapacityDef>
+	<defName>OGTY_BlindingVenom</defName>
+</ToolCapacityDef>
 
 </Defs>

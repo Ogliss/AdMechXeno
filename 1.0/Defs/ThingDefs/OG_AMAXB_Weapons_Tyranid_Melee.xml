@@ -3,16 +3,16 @@
 
 	<!-- ==================== Mod - Base Tranid Melee Weapon Template ========================= -->
 	<ThingDef Name="OGTYBaseMeleeWeapon" Abstract="True" ParentName="OGBaseWeapon">
-    <techLevel>Industrial</techLevel>
+	<techLevel>Industrial</techLevel>
 	<smeltable>false</smeltable>
 	<thingCategories>
-	  <li>OGTYMelee</li>
+		<li>OGTYMelee</li>
 	</thingCategories>
-    <weaponTags>
-	  <li>OGTYMelee</li>
-      <li>TyranidMelee</li>
-      <li>TyranidWeapon</li>
-    </weaponTags>
+	<weaponTags>
+		<li>OGTYMelee</li>
+		<li>TyranidMelee</li>
+		<li>TyranidWeapon</li>
+	</weaponTags>
 
 		<comps>
 		

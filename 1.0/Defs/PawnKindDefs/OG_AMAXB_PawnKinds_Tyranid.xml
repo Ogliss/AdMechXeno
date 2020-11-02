@@ -1,351 +1,351 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- Tyranid Base Abstracts -->
-  <PawnKindDef Name="BaseTyranidKind" Abstract="True">
-    <defaultFactionType>OG_Tyranid_Faction</defaultFactionType>
-    <aiAvoidCover>true</aiAvoidCover>
-    <destroyGearOnDrop>false</destroyGearOnDrop>
-  </PawnKindDef>  
-    
+<PawnKindDef Name="BaseTyranidKind" Abstract="True">
+	<defaultFactionType>OG_Tyranid_Faction</defaultFactionType>
+	<aiAvoidCover>true</aiAvoidCover>
+	<destroyGearOnDrop>false</destroyGearOnDrop>
+</PawnKindDef>
+	
 <!-- Tyranid Ripper Swarm -->
-  <PawnKindDef ParentName="BaseTyranidKind">
-    <defName>OG_Tyranid_Ripper_Swarm</defName>
-    <label>tyranid Ripper</label>
-    <race>Tyranid_RipperSwarm</race>
-    <combatPower>25</combatPower>
+<PawnKindDef ParentName="BaseTyranidKind">
+	<defName>OG_Tyranid_Ripper_Swarm</defName>
+	<label>tyranid Ripper</label>
+	<race>Tyranid_RipperSwarm</race>
+	<combatPower>25</combatPower>
 
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Ripper</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>1.50</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
+	<lifeStages>
+		<li>
+		<bodyGraphicData>
+			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Ripper</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>1.50</drawSize>
+			<shadowData>
+			<volume>(0.4, 0.8, 0.4)</volume>
+			</shadowData>
+		</bodyGraphicData>
+		</li>
+	</lifeStages>
 	<!--
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
+	<weaponMoney>
+		<min>40000</min>
+		<max>40000</max>
+	</weaponMoney>
 	-->
-    <weaponTags>
-      
-    </weaponTags>
-  </PawnKindDef>
-  
+	<weaponTags>
+		
+	</weaponTags>
+</PawnKindDef>
+
 <!-- Tyranid Hormagaunt -->
-  <PawnKindDef ParentName="BaseTyranidKind">
-    <defName>OG_Tyranid_Hormagaunt</defName>
-    <label>tyranid hormagaunt</label>
-    <race>Tyranid_Hormagaunt</race>
-    <combatPower>40</combatPower>
+<PawnKindDef ParentName="BaseTyranidKind">
+	<defName>OG_Tyranid_Hormagaunt</defName>
+	<label>tyranid hormagaunt</label>
+	<race>Tyranid_Hormagaunt</race>
+	<combatPower>40</combatPower>
 
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Hormagaunt</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>2</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
+	<lifeStages>
+		<li>
+		<bodyGraphicData>
+			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Hormagaunt</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>2</drawSize>
+			<shadowData>
+			<volume>(0.4, 0.8, 0.4)</volume>
+			</shadowData>
+		</bodyGraphicData>
+		</li>
+	</lifeStages>
 	<!--
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
+	<weaponMoney>
+		<min>40000</min>
+		<max>40000</max>
+	</weaponMoney>
 	-->
-    <weaponTags>
-      
-    </weaponTags>
-    <modExtensions>
-      <li Class="AdeptusMechanicus.DeepStrikeExtension">
+	<weaponTags>
+		
+	</weaponTags>
+	<modExtensions>
+		<li Class="AdeptusMechanicus.DeepStrikeExtension">
 		<pawnsArrivalMode>Drop</pawnsArrivalMode>
-      </li>
-    </modExtensions>
-  </PawnKindDef>
-  
+		</li>
+	</modExtensions>
+</PawnKindDef>
+
 <!-- Tyranid Termagant -->
-  <PawnKindDef ParentName="BaseTyranidKind">
-    <defName>OG_Tyranid_Termagant</defName>
-    <label>tyranid termagant</label>
-    <race>Tyranid_Termagant</race>
-    <combatPower>40</combatPower>
+<PawnKindDef ParentName="BaseTyranidKind">
+	<defName>OG_Tyranid_Termagant</defName>
+	<label>tyranid termagant</label>
+	<race>Tyranid_Termagant</race>
+	<combatPower>40</combatPower>
 
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Termagant</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>2</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>OGTY_Gun</li>
-    </weaponTags>
-  </PawnKindDef>
-  
+	<lifeStages>
+		<li>
+		<bodyGraphicData>
+			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Termagant</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>2</drawSize>
+			<shadowData>
+			<volume>(0.4, 0.8, 0.4)</volume>
+			</shadowData>
+		</bodyGraphicData>
+		</li>
+	</lifeStages>
+	<weaponMoney>
+		<min>40000</min>
+		<max>40000</max>
+	</weaponMoney>
+	<weaponTags>
+		<li>OGTY_Gun</li>
+	</weaponTags>
+</PawnKindDef>
+
 <!-- Tyranid Genestealer -->
-  <PawnKindDef ParentName="BaseTyranidKind">
-    <defName>OG_Tyranid_Genestealer</defName>
-    <label>tyranid genestealer</label>
-    <race>Tyranid_Genestealer</race>
-    <combatPower>80</combatPower>
+<PawnKindDef ParentName="BaseTyranidKind">
+	<defName>OG_Tyranid_Genestealer</defName>
+	<label>tyranid genestealer</label>
+	<race>Tyranid_Genestealer</race>
+	<combatPower>80</combatPower>
 
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Genestealer</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>2</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
+	<lifeStages>
+		<li>
+		<bodyGraphicData>
+			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Genestealer</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>2</drawSize>
+			<shadowData>
+			<volume>(0.4, 0.8, 0.4)</volume>
+			</shadowData>
+		</bodyGraphicData>
+		</li>
+	</lifeStages>
 	<!--
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
+	<weaponMoney>
+		<min>40000</min>
+		<max>40000</max>
+	</weaponMoney>
 	-->
-    <weaponTags>
-      
-    </weaponTags>
-  </PawnKindDef>
-  
+	<weaponTags>
+		
+	</weaponTags>
+</PawnKindDef>
+
 <!-- Tyranid Warrior -->
-  <PawnKindDef ParentName="BaseTyranidKind">
-    <defName>OG_Tyranid_Warrior</defName>
-    <label>tyranid warrior</label>
-    <race>Tyranid_Warrior</race>
-    <combatPower>100</combatPower>
+<PawnKindDef ParentName="BaseTyranidKind">
+	<defName>OG_Tyranid_Warrior</defName>
+	<label>tyranid warrior</label>
+	<race>Tyranid_Warrior</race>
+	<combatPower>100</combatPower>
 
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Warrior</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>2.5</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>OGTY_EliteGun</li>
-    </weaponTags>
-  </PawnKindDef>
-  
+	<lifeStages>
+		<li>
+		<bodyGraphicData>
+			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Warrior</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>2.5</drawSize>
+			<shadowData>
+			<volume>(0.4, 0.8, 0.4)</volume>
+			</shadowData>
+		</bodyGraphicData>
+		</li>
+	</lifeStages>
+	<weaponMoney>
+		<min>40000</min>
+		<max>40000</max>
+	</weaponMoney>
+	<weaponTags>
+		<li>OGTY_EliteGun</li>
+	</weaponTags>
+</PawnKindDef>
+
 <!-- Tyranid Gargoyle -->
-  <PawnKindDef ParentName="BaseTyranidKind">
-    <defName>OG_Tyranid_Gargoyle</defName>
-    <label>tyranid gargoyle</label>
-    <race>Tyranid_Gargoyle</race>
-    <combatPower>60</combatPower>
+<PawnKindDef ParentName="BaseTyranidKind">
+	<defName>OG_Tyranid_Gargoyle</defName>
+	<label>tyranid gargoyle</label>
+	<race>Tyranid_Gargoyle</race>
+	<combatPower>60</combatPower>
 
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Gargoyle</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>2.0</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>OGTY_Fleshborer</li>
-    </weaponTags>
-    <modExtensions>
-      <li Class="AdeptusMechanicus.DeepStrikeExtension">
+	<lifeStages>
+		<li>
+		<bodyGraphicData>
+			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Gargoyle</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>2.0</drawSize>
+			<shadowData>
+			<volume>(0.4, 0.8, 0.4)</volume>
+			</shadowData>
+		</bodyGraphicData>
+		</li>
+	</lifeStages>
+	<weaponMoney>
+		<min>40000</min>
+		<max>40000</max>
+	</weaponMoney>
+	<weaponTags>
+		<li>OGTY_Fleshborer</li>
+	</weaponTags>
+	<modExtensions>
+		<li Class="AdeptusMechanicus.DeepStrikeExtension">
 		<pawnsArrivalMode>Fly</pawnsArrivalMode>
-      </li>
-    </modExtensions>
-  </PawnKindDef>
-  
-<!-- Tyranid Lictor -->
-  <PawnKindDef ParentName="BaseTyranidKind">
-    <defName>OG_Tyranid_Lictor</defName>
-    <label>tyranid lictor</label>
-    <race>Tyranid_Lictor</race>
-    <combatPower>150</combatPower>
+		</li>
+	</modExtensions>
+</PawnKindDef>
 
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Lictor</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3.5</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
+<!-- Tyranid Lictor -->
+<PawnKindDef ParentName="BaseTyranidKind">
+	<defName>OG_Tyranid_Lictor</defName>
+	<label>tyranid lictor</label>
+	<race>Tyranid_Lictor</race>
+	<combatPower>150</combatPower>
+
+	<lifeStages>
+		<li>
+		<bodyGraphicData>
+			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Lictor</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>3.5</drawSize>
+			<shadowData>
+			<volume>(0.4, 0.8, 0.4)</volume>
+			</shadowData>
+		</bodyGraphicData>
+		</li>
+	</lifeStages>
 	<!--
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
+	<weaponMoney>
+		<min>40000</min>
+		<max>40000</max>
+	</weaponMoney>
 	-->
-    <weaponTags>
-      
-    </weaponTags>
-    <modExtensions>
-      <li Class="AdeptusMechanicus.InfiltratorExtension">
-      </li>
-    </modExtensions>
-  </PawnKindDef>
-  
+	<weaponTags>
+		
+	</weaponTags>
+	<modExtensions>
+		<li Class="AdeptusMechanicus.InfiltratorExtension">
+		</li>
+	</modExtensions>
+</PawnKindDef>
+
 <!-- Tyranid Ravener -->
-  <PawnKindDef ParentName="BaseTyranidKind">
-    <defName>OG_Tyranid_Ravener</defName>
-    <label>tyranid ravener</label>
-    <race>Tyranid_Ravener</race>
-    <combatPower>200</combatPower>
+<PawnKindDef ParentName="BaseTyranidKind">
+	<defName>OG_Tyranid_Ravener</defName>
+	<label>tyranid ravener</label>
+	<race>Tyranid_Ravener</race>
+	<combatPower>200</combatPower>
 	<ignoreConfigErrors>true</ignoreConfigErrors>
 
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Ravener</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>3.25</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponMoney>
-      <min>0</min>
-      <max>400</max>
-    </weaponMoney>
-    <weaponTags>
+	<lifeStages>
+		<li>
+		<bodyGraphicData>
+			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Ravener</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>3.25</drawSize>
+			<shadowData>
+			<volume>(0.4, 0.8, 0.4)</volume>
+			</shadowData>
+		</bodyGraphicData>
+		</li>
+	</lifeStages>
+	<weaponMoney>
+		<min>0</min>
+		<max>400</max>
+	</weaponMoney>
+	<weaponTags>
 		<li>OGTY_Spinefist</li>
 		<li>OGTY_Devourer</li>
 		<li>OGTY_Deathspitter</li>
-    </weaponTags>
-    <modExtensions>
-      <li Class="AdeptusMechanicus.DeepStrikeExtension">
+	</weaponTags>
+	<modExtensions>
+		<li Class="AdeptusMechanicus.DeepStrikeExtension">
 		<pawnsArrivalMode>Tunnel</pawnsArrivalMode>
-      </li>
-    </modExtensions>
-  </PawnKindDef>
-  
+		</li>
+	</modExtensions>
+</PawnKindDef>
+
 <!-- Tyranid Hive Tyrant -->
-  <PawnKindDef ParentName="BaseTyranidKind">
-    <defName>OG_Tyranid_Hive_Tyrant</defName>
-    <label>tyranid hive tyrant</label>
-    <race>Tyranid_Hive_Tyrant</race>
-    <combatPower>400</combatPower>
+<PawnKindDef ParentName="BaseTyranidKind">
+	<defName>OG_Tyranid_Hive_Tyrant</defName>
+	<label>tyranid hive tyrant</label>
+	<race>Tyranid_Hive_Tyrant</race>
+	<combatPower>400</combatPower>
 
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_HiveTyrant</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>4.0</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>OGTY_EliteGun</li>
-      <li>OGTY_HeavyGun</li>
-    </weaponTags>
-  </PawnKindDef>
-  
+	<lifeStages>
+		<li>
+		<bodyGraphicData>
+			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_HiveTyrant</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>4.0</drawSize>
+			<shadowData>
+			<volume>(0.4, 0.8, 0.4)</volume>
+			</shadowData>
+		</bodyGraphicData>
+		</li>
+	</lifeStages>
+	<weaponMoney>
+		<min>40000</min>
+		<max>40000</max>
+	</weaponMoney>
+	<weaponTags>
+		<li>OGTY_EliteGun</li>
+		<li>OGTY_HeavyGun</li>
+	</weaponTags>
+</PawnKindDef>
+
 <!-- Tyranid Carnifex -->
-  <PawnKindDef ParentName="BaseTyranidKind">
-    <defName>OG_Tyranid_Carnifex</defName>
-    <label>tyranid carnifex</label>
-    <race>Tyranid_Carnifex</race>
-    <combatPower>500</combatPower>
+<PawnKindDef ParentName="BaseTyranidKind">
+	<defName>OG_Tyranid_Carnifex</defName>
+	<label>tyranid carnifex</label>
+	<race>Tyranid_Carnifex</race>
+	<combatPower>500</combatPower>
 
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Carnifex</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>4.5</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>OGTY_HeavyGun</li>
-    </weaponTags>
-  </PawnKindDef>
-  
+	<lifeStages>
+		<li>
+		<bodyGraphicData>
+			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Carnifex</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>4.5</drawSize>
+			<shadowData>
+			<volume>(0.4, 0.8, 0.4)</volume>
+			</shadowData>
+		</bodyGraphicData>
+		</li>
+	</lifeStages>
+	<weaponMoney>
+		<min>40000</min>
+		<max>40000</max>
+	</weaponMoney>
+	<weaponTags>
+		<li>OGTY_HeavyGun</li>
+	</weaponTags>
+</PawnKindDef>
+
 <!-- Tyranid Zoanthrope -->
-  <PawnKindDef ParentName="BaseTyranidKind">
-    <defName>OG_Tyranid_Zoanthrope</defName>
-    <label>tyranid zoanthrope</label>
-    <race>Tyranid_Zoanthrope</race>
-    <combatPower>500</combatPower>
+<PawnKindDef ParentName="BaseTyranidKind">
+	<defName>OG_Tyranid_Zoanthrope</defName>
+	<label>tyranid zoanthrope</label>
+	<race>Tyranid_Zoanthrope</race>
+	<combatPower>500</combatPower>
 
-    <lifeStages>
-      <li>
-        <bodyGraphicData>
-          <texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Zoanthrope</texPath>
-          <graphicClass>Graphic_Multi</graphicClass>
-          <drawSize>2.25</drawSize>
-          <shadowData>
-            <volume>(0.4, 0.8, 0.4)</volume>
-          </shadowData>
-        </bodyGraphicData>
-      </li>
-    </lifeStages>
+	<lifeStages>
+		<li>
+		<bodyGraphicData>
+			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Zoanthrope</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<drawSize>2.25</drawSize>
+			<shadowData>
+			<volume>(0.4, 0.8, 0.4)</volume>
+			</shadowData>
+		</bodyGraphicData>
+		</li>
+	</lifeStages>
 	
-    <weaponMoney>
-      <min>40000</min>
-      <max>40000</max>
-    </weaponMoney>
-    <weaponTags>
-      <li>OGTY_Zoanthrope</li>
-    </weaponTags>
+	<weaponMoney>
+		<min>40000</min>
+		<max>40000</max>
+	</weaponMoney>
+	<weaponTags>
+		<li>OGTY_Zoanthrope</li>
+	</weaponTags>
 	
-  </PawnKindDef>
-  
+</PawnKindDef>
+
 </Defs>

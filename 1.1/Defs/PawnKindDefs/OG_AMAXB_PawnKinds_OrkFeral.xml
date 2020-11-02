@@ -2,69 +2,69 @@
 <Defs>
 <!-- Feral Orkz -->
 <!-- Feral Ork Base --> 
-  <PawnKindDef Abstract="True" Name="FeralOrkBase" ParentName="OrkBase">
+<PawnKindDef Abstract="True" Name="FeralOrkBase" ParentName="OrkBase">
 	<defName>FeralOrkBase</defName>
-    <defaultFactionType>OG_Ork_Feral_Faction</defaultFactionType>
-    <backstoryFiltersOverride>
-      <li>
-        <categories>
-          
-          <li>Tribal</li>
-        </categories>
-      </li>
-    </backstoryFiltersOverride>
-    <invNutrition>2.55</invNutrition>
+	<defaultFactionType>OG_Ork_Feral_Faction</defaultFactionType>
+	<backstoryFiltersOverride>
+		<li>
+		<categories>
+			
+			<li>Tribal</li>
+		</categories>
+		</li>
+	</backstoryFiltersOverride>
+	<invNutrition>2.55</invNutrition>
 		<aiAvoidCover>false</aiAvoidCover>
 		<weaponMoney>
 			<min>2000</min>
 			<max>2000</max>
 		</weaponMoney>
-    <inventoryOptions>
-      <skipChance>0.9</skipChance>
-      <subOptionsChooseOne>
-        <li>
-          <thingDef>Silver</thingDef>
-          <countRange>
-            <min>30</min>
-            <max>70</max>
-          </countRange>
-        </li>
-        <li>
-          <thingDef>MedicineHerbal</thingDef>
-          <countRange>
-            <min>1</min>
-            <max>3</max>
-          </countRange>
-        </li>
-        <li>
-          <thingDef>SmokeleafLeaves</thingDef>
-          <countRange>
-            <min>0</min>
-            <max>3</max>
-          </countRange>
-        </li>
-        <li>
-          <thingDef>PsychoidLeaves</thingDef>
-          <countRange>
-            <min>0</min>
-            <max>3</max>
-          </countRange>
-        </li>
-      </subOptionsChooseOne>
-    </inventoryOptions>
-    <modExtensions>
+	<inventoryOptions>
+		<skipChance>0.9</skipChance>
+		<subOptionsChooseOne>
+		<li>
+			<thingDef>Silver</thingDef>
+			<countRange>
+			<min>30</min>
+			<max>70</max>
+			</countRange>
+		</li>
+		<li>
+			<thingDef>MedicineHerbal</thingDef>
+			<countRange>
+			<min>1</min>
+			<max>3</max>
+			</countRange>
+		</li>
+		<li>
+			<thingDef>SmokeleafLeaves</thingDef>
+			<countRange>
+			<min>0</min>
+			<max>3</max>
+			</countRange>
+		</li>
+		<li>
+			<thingDef>PsychoidLeaves</thingDef>
+			<countRange>
+			<min>0</min>
+			<max>3</max>
+			</countRange>
+		</li>
+		</subOptionsChooseOne>
+	</inventoryOptions>
+	<modExtensions>
 		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
 			<primaryMagazineCount>
-			  <min>5</min>
-			  <max>8</max>
+				<min>5</min>
+				<max>8</max>
 			</primaryMagazineCount>
 		</li>
-    </modExtensions>
-  </PawnKindDef>  
+	</modExtensions>
+</PawnKindDef>
 <!-- Feral Ork Base --> 
 
 <!-- Feral Ork Stabba Grot --> 
-  <PawnKindDef ParentName="FeralOrkBase">
+<PawnKindDef ParentName="FeralOrkBase">
 		<defName>OG_Ork_Feral_Grot_Stabba</defName>
 		<label>stabba grot</label>
 		<race>Ork_Grot</race>
@@ -85,7 +85,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -94,8 +94,8 @@
 	</PawnKindDef>
 <!-- Feral Ork Stabba Grot --> 
 
-<!-- Feral Ork Blasta Grot -->    
-  <PawnKindDef ParentName="FeralOrkBase">
+<!-- Feral Ork Blasta Grot -->	
+<PawnKindDef ParentName="FeralOrkBase">
 		<defName>OG_Ork_Feral_Grot_Arry</defName>
 		<label>arry grot</label>
 		<race>Ork_Grot</race>
@@ -116,17 +116,17 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>1</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
 			<li>NeolithicRangedBasic</li>
 		</weaponTags>
 	</PawnKindDef>
-<!-- Feral Ork Blasta Grot -->    
+<!-- Feral Ork Blasta Grot -->	
 
 <!-- Feral Ork Choppa Boy --> 
-  <PawnKindDef ParentName="FeralOrkBase">
+<PawnKindDef ParentName="FeralOrkBase">
 		<defName>OG_Ork_Feral_Boy_Choppa</defName>
 		<label>Ork Choppa Boy</label>
 		<race>Ork_Boy</race>
@@ -146,7 +146,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -157,7 +157,7 @@
 <!-- Feral Ork Choppa Boy --> 
 
 <!-- Feral Ork Shoota Boy -->	
-  <PawnKindDef ParentName="FeralOrkBase">
+<PawnKindDef ParentName="FeralOrkBase">
 		<defName>OG_Ork_Feral_Boy_Shoota</defName>
 		<label>Ork Shoota Boy</label>
 		<race>Ork_Boy</race>
@@ -178,7 +178,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -188,7 +188,7 @@
 <!-- Feral Ork Shoota Boy -->	
 
 <!-- Feral Ork Eavy Shoota Boy -->	
-  <PawnKindDef ParentName="FeralOrkBase">
+<PawnKindDef ParentName="FeralOrkBase">
 		<defName>OG_Ork_Feral_Eavy_Boy_Shoota</defName>
 		<label>Ork Eavy Shoota Boy</label>
 		<race>Ork_Boy</race>
@@ -209,7 +209,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -219,7 +219,7 @@
 <!-- Feral Ork Eavy Shoota Boy -->	
 	
 <!-- Feral Ork Shoota Nob -->
-  <PawnKindDef ParentName="FeralOrkBase">
+<PawnKindDef ParentName="FeralOrkBase">
 		<defName>OG_Ork_Feral_Nob_Shoota</defName>
 		<label>Ork Nob</label>
 		<race>Ork_Nob</race>
@@ -241,7 +241,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -252,7 +252,7 @@
 <!-- Feral Ork Shoota Nob -->
  
 <!-- Feral Ork Choppa Nob -->
-  <PawnKindDef ParentName="FeralOrkBase">
+<PawnKindDef ParentName="FeralOrkBase">
 		<defName>OG_Ork_Feral_Nob_Choppa</defName>
 		<label>Ork Nob</label>
 		<race>Ork_Nob</race>
@@ -278,7 +278,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -288,7 +288,7 @@
 <!-- Feral Ork Choppa Nob -->
 
 <!-- Feral Ork Eavy Shoota Nob -->
-  <PawnKindDef ParentName="FeralOrkBase">
+<PawnKindDef ParentName="FeralOrkBase">
 		<defName>OG_Ork_Feral_Eavy_Nob_Shoota</defName>
 		<label>Ork Eavy Nob</label>
 		<race>Ork_Eavy_Nob</race>
@@ -309,7 +309,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
@@ -321,7 +321,7 @@
 <!-- Feral Ork Eavy Shoota Nob -->
  
 <!-- Feral Ork Warboss -->	
-  <PawnKindDef ParentName="FeralOrkBase">
+<PawnKindDef ParentName="FeralOrkBase">
 		<defName>OG_Ork_Feral_Warboss</defName>
 		<label>warboss</label>
 		<race>Ork_Warboss</race>
@@ -342,7 +342,7 @@
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 				<drawSize>2</drawSize>
-        </dessicatedBodyGraphicData>
+		</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 
@@ -352,13 +352,13 @@
 			<li>NeolithicRangedHeavy</li>
 			<li>OBigChoppa</li>
 		</weaponTags>
-    <apparelTags>
+	<apparelTags>
 	
-    </apparelTags>
-    <apparelMoney>
-      <min>0</min>
-      <max>350</max>
-    </apparelMoney>
+	</apparelTags>
+	<apparelMoney>
+		<min>0</min>
+		<max>350</max>
+	</apparelMoney>
 		<weaponMoney>
 			<min>4000</min>
 			<max>9000</max>
@@ -367,7 +367,7 @@
 <!-- Feral Ork Faction Leader -->	
 
 <!-- Feral Ork Faction Leader -->	
-  <PawnKindDef ParentName="FeralOrkBase">
+<PawnKindDef ParentName="FeralOrkBase">
 		<defName>OG_Ork_Feral_Faction_Warboss</defName>
 		<label>Feral Big Boss</label>
 		<race>Human</race>
@@ -379,13 +379,13 @@
 			<li>NeolithicRangedChief</li>
 			<li>OBigChoppa</li>
 		</weaponTags>
-    <apparelTags>
-      <li>OrkFactionBoss</li>
-    </apparelTags>
-    <apparelMoney>
-      <min>0</min>
-      <max>350</max>
-    </apparelMoney>
+	<apparelTags>
+		<li>OrkFactionBoss</li>
+	</apparelTags>
+	<apparelMoney>
+		<min>0</min>
+		<max>350</max>
+	</apparelMoney>
 	<fixedInventory>
 <!--<li>OG_Ork_BossBody</li>-->
 <!--<li>OG_Ork_BossHead</li>-->
@@ -395,55 +395,55 @@
 
 <!-- Feral Ork Faction 'Umie Slavez -->
 	 <PawnKindDef>
-    <defName>Slave_OG_Ork_Feral_Human</defName>
-    <label>'umie slave</label>
-    <combatPower>30</combatPower>
-    <race>Human</race>
-    <baseRecruitDifficulty>0.30</baseRecruitDifficulty>
-    <backstoryFilters>
-      <li>
-        <categories>
-          <li>Outlander</li>
-          <li>Tribal</li>
-          <li>Pirate-</li>
-        </categories>
-        <commonality>0.95</commonality>
-      </li>
-      <li>
-        <categories>
-          <li>Offworld</li>
-        </categories>
-        <commonality>0.05</commonality>
-      </li>
-    </backstoryFilters>
-    <defaultFactionType>OG_Ork_Feral_Faction</defaultFactionType>
-    <itemQuality>Poor</itemQuality>
-    <backstoryCryptosleepCommonality>0.10</backstoryCryptosleepCommonality>
-    <isFighter>false</isFighter>
-    <chemicalAddictionChance>0.05</chemicalAddictionChance>
-    <gearHealthRange>
-      <min>0.2</min>
-      <max>0.8</max>
-    </gearHealthRange>
-    <apparelTags>
-      <li>IndustrialBasic</li>
-    </apparelTags>
-    <apparelMoney>
-      <min>0</min>
-      <max>350</max>
-    </apparelMoney>
-    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
-    <techHediffsChance>0.03</techHediffsChance>
-    <techHediffsMoney>
-      <min>50</min>
-      <max>800</max>
-    </techHediffsMoney>
-    <techHediffsTags>
-      <li>Poor</li>
-    </techHediffsTags>
-    <apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-    <invNutrition>1</invNutrition>
-    <invFoodDef>Pemmican</invFoodDef>
-  </PawnKindDef>
+	<defName>Slave_OG_Ork_Feral_Human</defName>
+	<label>'umie slave</label>
+	<combatPower>30</combatPower>
+	<race>Human</race>
+	<baseRecruitDifficulty>0.30</baseRecruitDifficulty>
+	<backstoryFilters>
+		<li>
+		<categories>
+			<li>Outlander</li>
+			<li>Tribal</li>
+			<li>Pirate-</li>
+		</categories>
+		<commonality>0.95</commonality>
+		</li>
+		<li>
+		<categories>
+			<li>Offworld</li>
+		</categories>
+		<commonality>0.05</commonality>
+		</li>
+	</backstoryFilters>
+	<defaultFactionType>OG_Ork_Feral_Faction</defaultFactionType>
+	<itemQuality>Poor</itemQuality>
+	<backstoryCryptosleepCommonality>0.10</backstoryCryptosleepCommonality>
+	<isFighter>false</isFighter>
+	<chemicalAddictionChance>0.05</chemicalAddictionChance>
+	<gearHealthRange>
+		<min>0.2</min>
+		<max>0.8</max>
+	</gearHealthRange>
+	<apparelTags>
+		<li>IndustrialBasic</li>
+	</apparelTags>
+	<apparelMoney>
+		<min>0</min>
+		<max>350</max>
+	</apparelMoney>
+	<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+	<techHediffsChance>0.03</techHediffsChance>
+	<techHediffsMoney>
+		<min>50</min>
+		<max>800</max>
+	</techHediffsMoney>
+	<techHediffsTags>
+		<li>Poor</li>
+	</techHediffsTags>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+	<invNutrition>1</invNutrition>
+	<invFoodDef>Pemmican</invFoodDef>
+</PawnKindDef>
 <!-- Feral Ork Faction 'Umie Slavez-->
 </Defs>

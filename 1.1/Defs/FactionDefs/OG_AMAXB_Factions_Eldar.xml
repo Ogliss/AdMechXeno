@@ -149,7 +149,7 @@
 				<ActiveDropPod>OG_Active_Mycetic_Spore</ActiveDropPod>
 				<DropPodIncoming>OG_Mycetic_Spore_Incoming</DropPodIncoming>
 				-->
-			  <DeepStrikeChance>0.5</DeepStrikeChance>
+				<DeepStrikeChance>0.5</DeepStrikeChance>
 			</li>
 		</modExtensions>
 	</FactionDef>

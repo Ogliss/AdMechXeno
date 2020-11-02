@@ -1,411 +1,411 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-  <!--===================== Necron specific ====================-->
-  <!--======== Common to various Necrons ========-->
+<!--===================== Necron specific ====================-->
+<!--======== Common to various Necrons ========-->
 
-  <BodyPartDef>
-    <defName>OG_Necron_Neck</defName>
-    <label>neck</label>
-    <hitPoints>35</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <bleedRate>0</bleedRate>
-    <alive>false</alive>
-    <tags>
-      <li>BreathingPathway</li>
-      <li>EatingPathway</li>
-      <li>TalkingPathway</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_Neck</defName>
+	<label>neck</label>
+	<hitPoints>35</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+	<alive>false</alive>
+	<tags>
+		<li>BreathingPathway</li>
+		<li>EatingPathway</li>
+		<li>TalkingPathway</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_Head</defName>
-    <label>head</label>
-    <hitPoints>40</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <bleedRate>0</bleedRate>
-    <alive>false</alive>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_Head</defName>
+	<label>head</label>
+	<hitPoints>40</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+	<alive>false</alive>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_Brain</defName>
-    <label>artificial brain</label>
-    <hitPoints>15</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>ConsciousnessSource</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_Brain</defName>
+	<label>artificial brain</label>
+	<hitPoints>15</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>ConsciousnessSource</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_Reactor</defName>
-    <label>reactor</label>
-    <hitPoints>25</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>BloodPumpingSource</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_Reactor</defName>
+	<label>reactor</label>
+	<hitPoints>25</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>BloodPumpingSource</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_NecrodermisRegulator</defName>
-    <label>necrodermis regulator</label>
-    <hitPoints>20</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>BloodFiltrationSource</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_NecrodermisRegulator</defName>
+	<label>necrodermis regulator</label>
+	<hitPoints>20</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>BloodFiltrationSource</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_PhasicCapacitor</defName>
-    <label>phasic capacitor</label>
-    <hitPoints>5</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_PhasicCapacitor</defName>
+	<label>phasic capacitor</label>
+	<hitPoints>5</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_ReanimationMatrix</defName>
-    <label>reanimation matrix</label>
-    <hitPoints>10</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_ReanimationMatrix</defName>
+	<label>reanimation matrix</label>
+	<hitPoints>10</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_ViasalSensor</defName>
-    <label>visual sensor</label>
-    <hitPoints>15</hitPoints>
-    <frostbiteVulnerability>0</frostbiteVulnerability>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <socketed>true</socketed>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>SightSource</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_ViasalSensor</defName>
+	<label>visual sensor</label>
+	<hitPoints>15</hitPoints>
+	<frostbiteVulnerability>0</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<socketed>true</socketed>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>SightSource</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_AuditorySensor</defName>
-    <label>auditory sensor</label>
-    <hitPoints>15</hitPoints>
-    <frostbiteVulnerability>0</frostbiteVulnerability>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>HearingSource</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_AuditorySensor</defName>
+	<label>auditory sensor</label>
+	<hitPoints>15</hitPoints>
+	<frostbiteVulnerability>0</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>HearingSource</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_OlfactorySensor</defName>
-    <label>chemical analyzer</label>
-    <hitPoints>15</hitPoints>
-    <frostbiteVulnerability>0</frostbiteVulnerability>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_OlfactorySensor</defName>
+	<label>chemical analyzer</label>
+	<hitPoints>15</hitPoints>
+	<frostbiteVulnerability>0</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_Shoulder</defName>
-    <label>shoulder</label>
-    <hitPoints>30</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>ManipulationLimbSegment</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_Shoulder</defName>
+	<label>shoulder</label>
+	<hitPoints>30</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>ManipulationLimbSegment</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_Arm</defName>
-    <label>arm</label>
-    <hitPoints>35</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>ManipulationLimbCore</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_Arm</defName>
+	<label>arm</label>
+	<hitPoints>35</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_Hand</defName>
-    <label>hand</label>
-    <hitPoints>25</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>ManipulationLimbSegment</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_Hand</defName>
+	<label>hand</label>
+	<hitPoints>25</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>ManipulationLimbSegment</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_Finger</defName>
-    <label>finger</label>
-    <hitPoints>13</hitPoints>
-    <frostbiteVulnerability>0</frostbiteVulnerability>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
-    <tags>
-      <li>ManipulationLimbDigit</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_Finger</defName>
+	<label>finger</label>
+	<hitPoints>13</hitPoints>
+	<frostbiteVulnerability>0</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+	<tags>
+		<li>ManipulationLimbDigit</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_HumanoidLeg</defName>
-    <label>leg</label>
-    <hitPoints>35</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>MovingLimbCore</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_HumanoidLeg</defName>
+	<label>leg</label>
+	<hitPoints>35</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_HumanoidFoot</defName>
-    <label>foot</label>
-    <hitPoints>25</hitPoints>
-    <frostbiteVulnerability>0</frostbiteVulnerability>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>MovingLimbSegment</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_HumanoidFoot</defName>
+	<label>foot</label>
+	<hitPoints>25</hitPoints>
+	<frostbiteVulnerability>0</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>MovingLimbSegment</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_HumanoidTorso</defName>
-    <label>torso</label>
-    <hitPoints>45</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_HumanoidTorso</defName>
+	<label>torso</label>
+	<hitPoints>45</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+</BodyPartDef>
 
-  <!--===================== Scarab specific ====================-->
-  <BodyPartDef>
-    <defName>OG_Necron_HeadMount</defName>
-    <label>intake</label>
-    <hitPoints>20</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>BreathingPathway</li>
-      <li>EatingPathway</li>
-      <li>TalkingPathway</li>
-    </tags>
-  </BodyPartDef>
-  
-  <BodyPartDef>
-    <defName>OG_Necron_Carapace</defName>
-    <label>carapace</label>
-    <hitPoints>30</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <solid>true</solid>
-  </BodyPartDef>
+<!--===================== Scarab specific ====================-->
+<BodyPartDef>
+	<defName>OG_Necron_HeadMount</defName>
+	<label>intake</label>
+	<hitPoints>20</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>BreathingPathway</li>
+		<li>EatingPathway</li>
+		<li>TalkingPathway</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_ScarabSwarmCore</defName>
-    <label>scarab swarm</label>
-    <conceptual>true</conceptual>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_Carapace</defName>
+	<label>carapace</label>
+	<hitPoints>30</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<solid>true</solid>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_SwarmScarab</defName>
-    <label>swarm scarab</label>
-    <hitPoints>30</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>ConsciousnessSource</li>
-      <li>BloodPumpingSource</li>
-      <li>BloodFiltrationSource</li>
-      <li>SightSource</li>
-      <li>HearingSource</li>
-      <li>ManipulationLimbSegment</li>
-      <li>ManipulationLimbCore</li>
-      <li>MovingLimbSegment</li>
-      <li>MovingLimbCore</li>
-    </tags>
-  </BodyPartDef>
-  <!--===================== Flayed One/Wraith specific ====================-->
-  <BodyPartDef>
-    <defName>OG_Necron_FlayingBlade</defName>
-    <label>blade</label>
-    <hitPoints>25</hitPoints>
-    <frostbiteVulnerability>0</frostbiteVulnerability>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_ScarabSwarmCore</defName>
+	<label>scarab swarm</label>
+	<conceptual>true</conceptual>
+</BodyPartDef>
 
-  <BodyPartDef Abstract="True" Name="OG_Necron_WraithTailBase">
-    <labelShort>tail segment</labelShort>
-    <hitPoints>50</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>MovingLimbCore</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef>
+	<defName>OG_Necron_SwarmScarab</defName>
+	<label>swarm scarab</label>
+	<hitPoints>30</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>ConsciousnessSource</li>
+		<li>BloodPumpingSource</li>
+		<li>BloodFiltrationSource</li>
+		<li>SightSource</li>
+		<li>HearingSource</li>
+		<li>ManipulationLimbSegment</li>
+		<li>ManipulationLimbCore</li>
+		<li>MovingLimbSegment</li>
+		<li>MovingLimbCore</li>
+	</tags>
+</BodyPartDef>
+<!--===================== Flayed One/Wraith specific ====================-->
+<BodyPartDef>
+	<defName>OG_Necron_FlayingBlade</defName>
+	<label>blade</label>
+	<hitPoints>25</hitPoints>
+	<frostbiteVulnerability>0</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+</BodyPartDef>
 
-  <BodyPartDef ParentName="OG_Necron_WraithTailBase">
-    <defName>OG_Necron_WraithTailFirstSegment</defName>
-    <label>first body ring</label>
-    <hitPoints>50</hitPoints>
-  </BodyPartDef>
+<BodyPartDef Abstract="True" Name="OG_Necron_WraithTailBase">
+	<labelShort>tail segment</labelShort>
+	<hitPoints>50</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef ParentName="OG_Necron_WraithTailBase">
-    <defName>OG_Necron_WraithTailSecondSegment</defName>
-    <label>second body ring</label>
-    <hitPoints>45</hitPoints>
-  </BodyPartDef>
+<BodyPartDef ParentName="OG_Necron_WraithTailBase">
+	<defName>OG_Necron_WraithTailFirstSegment</defName>
+	<label>first body ring</label>
+	<hitPoints>50</hitPoints>
+</BodyPartDef>
 
-  <BodyPartDef ParentName="OG_Necron_WraithTailBase">
-    <defName>OG_Necron_WraithTailThirdSegment</defName>
-    <label>third body ring</label>
-    <hitPoints>40</hitPoints>
-  </BodyPartDef>
+<BodyPartDef ParentName="OG_Necron_WraithTailBase">
+	<defName>OG_Necron_WraithTailSecondSegment</defName>
+	<label>second body ring</label>
+	<hitPoints>45</hitPoints>
+</BodyPartDef>
 
-  <BodyPartDef ParentName="OG_Necron_WraithTailBase">
-    <defName>OG_Necron_WraithTailFourthSegment</defName>
-    <label>fourth body ring</label>
-    <hitPoints>35</hitPoints>
-  </BodyPartDef>
+<BodyPartDef ParentName="OG_Necron_WraithTailBase">
+	<defName>OG_Necron_WraithTailThirdSegment</defName>
+	<label>third body ring</label>
+	<hitPoints>40</hitPoints>
+</BodyPartDef>
 
-  <BodyPartDef ParentName="OG_Necron_WraithTailBase">
-    <defName>OG_Necron_WraithTailFifthSegment</defName>
-    <label>fifth body ring</label>
-    <hitPoints>30</hitPoints>
-  </BodyPartDef>
+<BodyPartDef ParentName="OG_Necron_WraithTailBase">
+	<defName>OG_Necron_WraithTailFourthSegment</defName>
+	<label>fourth body ring</label>
+	<hitPoints>35</hitPoints>
+</BodyPartDef>
 
-  <!--===================== Destroyer specific ====================-->
+<BodyPartDef ParentName="OG_Necron_WraithTailBase">
+	<defName>OG_Necron_WraithTailFifthSegment</defName>
+	<label>fifth body ring</label>
+	<hitPoints>30</hitPoints>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_DestoyerBaseCore</defName>
-    <labelShort>body ring</labelShort>
-    <hitPoints>100</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
+<!--===================== Destroyer specific ====================-->
+
+<BodyPartDef>
+	<defName>OG_Necron_DestoyerBaseCore</defName>
+	<labelShort>body ring</labelShort>
+	<hitPoints>100</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
 	
-    </tags>
-  </BodyPartDef>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef>
-    <defName>OG_Necron_DestoyerBaseSide</defName>
-    <labelShort>body ring</labelShort>
-    <hitPoints>50</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
+<BodyPartDef>
+	<defName>OG_Necron_DestoyerBaseSide</defName>
+	<labelShort>body ring</labelShort>
+	<hitPoints>50</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
 	
-    </tags>
-  </BodyPartDef>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef Abstract="True" Name="OG_Necron_DestoryerFloatationBase">
-    <labelShort>floatation unit</labelShort>
-    <hitPoints>50</hitPoints>
-    <permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-    <skinCovered>false</skinCovered>
-    <solid>true</solid>
-    <alive>false</alive>
-    <bleedRate>0</bleedRate>
-    <tags>
-      <li>MovingLimbCore</li>
-      <li>ManipulationLimbCore</li>
-    </tags>
-  </BodyPartDef>
+<BodyPartDef Abstract="True" Name="OG_Necron_DestoryerFloatationBase">
+	<labelShort>floatation unit</labelShort>
+	<hitPoints>50</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>MovingLimbCore</li>
+		<li>ManipulationLimbCore</li>
+	</tags>
+</BodyPartDef>
 
-  <BodyPartDef ParentName="OG_Necron_DestoryerFloatationBase">
-    <defName>OG_Necron_DestoryerFirstFloat</defName>
-    <label>first floatation unit</label>
-    <hitPoints>50</hitPoints>
-  </BodyPartDef>
+<BodyPartDef ParentName="OG_Necron_DestoryerFloatationBase">
+	<defName>OG_Necron_DestoryerFirstFloat</defName>
+	<label>first floatation unit</label>
+	<hitPoints>50</hitPoints>
+</BodyPartDef>
 
-  <BodyPartDef ParentName="OG_Necron_DestoryerFloatationBase">
-    <defName>OG_Necron_DestoryerSecondFloat</defName>
-    <label>second floatation unit</label>
-    <hitPoints>45</hitPoints>
-  </BodyPartDef>
+<BodyPartDef ParentName="OG_Necron_DestoryerFloatationBase">
+	<defName>OG_Necron_DestoryerSecondFloat</defName>
+	<label>second floatation unit</label>
+	<hitPoints>45</hitPoints>
+</BodyPartDef>
 
-  <BodyPartDef ParentName="OG_Necron_DestoryerFloatationBase">
-    <defName>OG_Necron_DestoryerThirdFloat</defName>
-    <label>third floatation unit</label>
-    <hitPoints>40</hitPoints>
-  </BodyPartDef>
+<BodyPartDef ParentName="OG_Necron_DestoryerFloatationBase">
+	<defName>OG_Necron_DestoryerThirdFloat</defName>
+	<label>third floatation unit</label>
+	<hitPoints>40</hitPoints>
+</BodyPartDef>
 
 </Defs>

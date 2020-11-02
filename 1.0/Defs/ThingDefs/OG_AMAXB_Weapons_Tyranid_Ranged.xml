@@ -1,34 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Defs> 
 
-  <!-- ====================== Tyranid Base Gun ===================== -->
-  <ThingDef Name="OGTYBaseGun" ParentName="OGBaseGun" Abstract="True">
-    <weaponTags>
-      <li>TYRanged</li>
-      <li>TYWeapon</li>
-    </weaponTags>
-    <tickerType>Normal</tickerType>
+<!-- ====================== Tyranid Base Gun ===================== -->
+<ThingDef Name="OGTYBaseGun" ParentName="OGBaseGun" Abstract="True">
+	<weaponTags>
+		<li>TYRanged</li>
+		<li>TYWeapon</li>
+	</weaponTags>
+	<tickerType>Normal</tickerType>
 	<tradeability>None</tradeability>
-    <menuHidden>true</menuHidden>
-    <destroyOnDrop>true</destroyOnDrop>
+	<menuHidden>true</menuHidden>
+	<destroyOnDrop>true</destroyOnDrop>
 	<techLevel>Spacer</techLevel>
-	<comps>    
+	<comps>	
 		<li Class="CompProperties_TyranidRottable">
 			<daysToRotStart>2</daysToRotStart>
 			<rotDestroys>true</rotDestroys>
 		</li>
 	</comps>
-  </ThingDef> 
+</ThingDef> 
 
-  <!-- ====================== Fleshborer Beetles ===================== -->
-  <ThingDef ParentName="BaseBullet">
+<!-- ====================== Fleshborer Beetles ===================== -->
+<ThingDef ParentName="BaseBullet">
 	<defName>OGTY_Bullet_Fleshborer</defName>
-    <label>fleshborer beetles</label>
-    <graphicData>
+	<label>fleshborer beetles</label>
+	<graphicData>
 		<texPath>Things/Projectile/FleshborerShotSml</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
+	</graphicData>
+	<projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>Bullet</damageDef>
 		<damageAmountBase>12</damageAmountBase>
@@ -36,20 +36,20 @@
 		<stoppingPower>0.5</stoppingPower>
 		<speed>55</speed>
 	</projectile>
-  </ThingDef>
+</ThingDef>
 
-  <!-- ====================== Fleshborer ===================== -->
-  <ThingDef ParentName="OGTYBaseGun">
+<!-- ====================== Fleshborer ===================== -->
+<ThingDef ParentName="OGTYBaseGun">
 	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
 	<defName>OGTY_Gun_Fleshborer</defName>
-    <label>fleshborer</label>
-    <description>The Fleshborer, designated by the binomial Pulpa terebro, contains a compact brood nest where Borer beetles lay their eggs, which hatch and mature, sustained by the weapon for future use as ammunition. These beetles are kept in their mature state in a hormone-induced dormancy until the weapon is ready to be fired. At this point, neural impulses from the wielder forces one of the insects into a firing sphincter. From here, the beetle can be fired at a target by a further impulse.</description>
-    <graphicData>
+	<label>fleshborer</label>
+	<description>The Fleshborer, designated by the binomial Pulpa terebro, contains a compact brood nest where Borer beetles lay their eggs, which hatch and mature, sustained by the weapon for future use as ammunition. These beetles are kept in their mature state in a hormone-induced dormancy until the weapon is ready to be fired. At this point, neural impulses from the wielder forces one of the insects into a firing sphincter. From here, the beetle can be fired at a target by a further impulse.</description>
+	<graphicData>
 		<texPath>Things/Item/Equipment/WeaponRanged/Tyranid/Fleshborer</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
-    <soundInteract>Interact_Autopistol</soundInteract>
-    <statBases>
+	<soundInteract>Interact_Autopistol</soundInteract>
+	<statBases>
 		<MarketValue>400</MarketValue>
 		<reliability>1</reliability>
 		<Mass>0</Mass>
@@ -58,12 +58,12 @@
 		<AccuracyMedium>0.70</AccuracyMedium>
 		<AccuracyLong>0.42</AccuracyLong>
 		<RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
-    </statBases>
+	</statBases>
 	<weaponTags>
 		<li>OGTY_Fleshborer</li>
 		<li>OGTY_Gun</li>
 	</weaponTags>
-    <verbs>
+	<verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
@@ -79,8 +79,8 @@
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
 		</li>
-    </verbs>
-	<comps>    
+	</verbs>
+	<comps>	
 		<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
 		<VerbEntries>
 			<li>
@@ -88,21 +88,21 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-	  
-	  </li> 
+		<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+		
+		</li> 
 	</comps>
-  </ThingDef>
+</ThingDef>
  
-  <!-- ====================== Spinefist Spines ===================== -->
-  <ThingDef ParentName="BaseBullet">
+<!-- ====================== Spinefist Spines ===================== -->
+<ThingDef ParentName="BaseBullet">
 	<defName>OGTY_Bullet_Spinefist</defName>
-    <label>spines</label>
-    <graphicData>
+	<label>spines</label>
+	<graphicData>
 		<texPath>Things/Projectile/SpinefistShotSml</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
+	</graphicData>
+	<projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>Bullet</damageDef>
 		<damageAmountBase>4</damageAmountBase>
@@ -110,17 +110,17 @@
 		<stoppingPower>0.5</stoppingPower>
 		<speed>75</speed>
 	</projectile>
-  </ThingDef>
+</ThingDef>
 
-  <!-- ====================== Heavy Spines ===================== -->
-  <ThingDef ParentName="BaseBullet">
+<!-- ====================== Heavy Spines ===================== -->
+<ThingDef ParentName="BaseBullet">
 	<defName>OGTY_Bullet_SpinefistHeavy</defName>
-    <label>heavy spines</label>
-    <graphicData>
+	<label>heavy spines</label>
+	<graphicData>
 		<texPath>Things/Projectile/SpinefistShotLrg</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
+	</graphicData>
+	<projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>Bullet</damageDef>
 		<damageAmountBase>7</damageAmountBase>
@@ -128,20 +128,20 @@
 		<stoppingPower>0.5</stoppingPower>
 		<speed>75</speed>
 	</projectile>
-  </ThingDef>
+</ThingDef>
 
-  <!-- ====================== Dual Spinefist ===================== -->
-  <ThingDef ParentName="OGTYBaseGun">
+<!-- ====================== Dual Spinefist ===================== -->
+<ThingDef ParentName="OGTYBaseGun">
 	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
 	<defName>OGTY_Gun_SpinefistDual</defName>
-    <label>dual spinefist</label>
-    <description>A Spinefist is a Tyranid Bio-weapon of a symbiotic living gun, typically carried in pairs, which connects its own air-bladder to the airways of its host via a long tube-like tail that burrows through the host's limb into their torso. A spinefist's lethally poisonous spines are coated with neuro-toxins which assault the nervous system of its victims, and are fired by a sharp exhalation of the host. Thus, a larger and more powerful host can exhale more spines in each salvo, ripping through the flesh of any caught victims.</description>
-    <graphicData>
+	<label>dual spinefist</label>
+	<description>A Spinefist is a Tyranid Bio-weapon of a symbiotic living gun, typically carried in pairs, which connects its own air-bladder to the airways of its host via a long tube-like tail that burrows through the host's limb into their torso. A spinefist's lethally poisonous spines are coated with neuro-toxins which assault the nervous system of its victims, and are fired by a sharp exhalation of the host. Thus, a larger and more powerful host can exhale more spines in each salvo, ripping through the flesh of any caught victims.</description>
+	<graphicData>
 		<texPath>Things/Item/Equipment/WeaponRanged/Tyranid/SpinefistDual</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
-    <soundInteract>Interact_Autopistol</soundInteract>
-    <statBases>
+	<soundInteract>Interact_Autopistol</soundInteract>
+	<statBases>
 		<MarketValue>400</MarketValue>
 		<reliability>1</reliability>
 		<Mass>0</Mass>
@@ -150,13 +150,13 @@
 		<AccuracyMedium>0.70</AccuracyMedium>
 		<AccuracyLong>0.42</AccuracyLong>
 		<RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
-    </statBases>
+	</statBases>
 	<weaponTags>
 		<li>OGTY_SpinefistDual</li>
 		<li>OGTY_Spinefist</li>
 		<li>OGTY_Gun</li>
 	</weaponTags>
-    <verbs>
+	<verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
@@ -172,8 +172,8 @@
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
 		</li>
-    </verbs>
-	<comps>    
+	</verbs>
+	<comps>	
 		<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
 		<VerbEntries>
 			<li>
@@ -181,24 +181,24 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-	  
-	  </li> 
+		<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+		
+		</li> 
 	</comps>
-  </ThingDef>
+</ThingDef>
  
-  <!-- ====================== Spinefist ===================== -->
-  <ThingDef ParentName="OGTYBaseGun">
+<!-- ====================== Spinefist ===================== -->
+<ThingDef ParentName="OGTYBaseGun">
 	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
 	<defName>OGTY_Gun_Spinefist</defName>
-    <label>spinefist</label>
-    <description>A Spinefist is a Tyranid Bio-weapon of a symbiotic living gun, typically carried in pairs, which connects its own air-bladder to the airways of its host via a long tube-like tail that burrows through the host's limb into their torso. A spinefist's lethally poisonous spines are coated with neuro-toxins which assault the nervous system of its victims, and are fired by a sharp exhalation of the host. Thus, a larger and more powerful host can exhale more spines in each salvo, ripping through the flesh of any caught victims.</description>
-    <graphicData>
+	<label>spinefist</label>
+	<description>A Spinefist is a Tyranid Bio-weapon of a symbiotic living gun, typically carried in pairs, which connects its own air-bladder to the airways of its host via a long tube-like tail that burrows through the host's limb into their torso. A spinefist's lethally poisonous spines are coated with neuro-toxins which assault the nervous system of its victims, and are fired by a sharp exhalation of the host. Thus, a larger and more powerful host can exhale more spines in each salvo, ripping through the flesh of any caught victims.</description>
+	<graphicData>
 		<texPath>Things/Item/Equipment/WeaponRanged/Tyranid/SpineFist</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
-    <soundInteract>Interact_Autopistol</soundInteract>
-    <statBases>
+	<soundInteract>Interact_Autopistol</soundInteract>
+	<statBases>
 		<MarketValue>200</MarketValue>
 		<reliability>1</reliability>
 		<Mass>0</Mass>
@@ -207,12 +207,12 @@
 		<AccuracyMedium>0.70</AccuracyMedium>
 		<AccuracyLong>0.42</AccuracyLong>
 		<RangedWeapon_Cooldown>2.00</RangedWeapon_Cooldown>
-    </statBases>
+	</statBases>
 	<weaponTags>
 		<li>OGTY_Spinefist</li>
 		<li>OGTY_Gun</li>
 	</weaponTags>
-    <verbs>
+	<verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
@@ -228,8 +228,8 @@
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
 		</li>
-    </verbs>
-	<comps>    
+	</verbs>
+	<comps>	
 		<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
 		<VerbEntries>
 			<li>
@@ -237,21 +237,21 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-	  
-	  </li> 
+		<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+		
+		</li> 
 	</comps>
-  </ThingDef>
+</ThingDef>
  
-  <!-- ====================== Devourer worms ===================== -->
-  <ThingDef ParentName="BaseBullet">
+<!-- ====================== Devourer worms ===================== -->
+<ThingDef ParentName="BaseBullet">
 	<defName>OGTY_Bullet_Devourer</defName>
-    <label>devourer worms</label>
-    <graphicData>
+	<label>devourer worms</label>
+	<graphicData>
 		<texPath>Things/Projectile/DevourerShot</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
+	</graphicData>
+	<projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>Bullet</damageDef>
 		<damageAmountBase>12</damageAmountBase>
@@ -259,17 +259,17 @@
 		<stoppingPower>0.5</stoppingPower>
 		<speed>75</speed>
 	</projectile>
-  </ThingDef>
-  
-  <!-- ====================== Brainleech worms ===================== -->
-  <ThingDef ParentName="BaseBullet">
+</ThingDef>
+
+<!-- ====================== Brainleech worms ===================== -->
+<ThingDef ParentName="BaseBullet">
 	<defName>OGTY_Bullet_DevourerBrainleech</defName>
-    <label>brainleech worms</label>
-    <graphicData>
+	<label>brainleech worms</label>
+	<graphicData>
 		<texPath>Things/Projectile/DevourerShot</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
+	</graphicData>
+	<projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>Bullet</damageDef>
 		<damageAmountBase>18</damageAmountBase>
@@ -277,20 +277,20 @@
 		<stoppingPower>0.5</stoppingPower>
 		<speed>75</speed>
 	</projectile>
-  </ThingDef>
+</ThingDef>
 
-  <!-- ====================== Devourer ===================== -->
-  <ThingDef ParentName="OGTYBaseGun">
+<!-- ====================== Devourer ===================== -->
+<ThingDef ParentName="OGTYBaseGun">
 	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
 	<defName>OGTY_Gun_Devourer</defName>
-    <label>devourer</label>
-    <description>The devourer is a conical lump of partly rotted flesh, infested by writhing Flesh-worms, parasites with black, shiny heads. When the weapon is triggered, a bio-electric jolt hurls a shower of these creatures at the enemy, where they immediately start burrowing into the flesh, eating their way through the victim's nervous system towards the brain. The agony caused by this process is enough to drive the victim insane.</description>
-    <graphicData>
+	<label>devourer</label>
+	<description>The devourer is a conical lump of partly rotted flesh, infested by writhing Flesh-worms, parasites with black, shiny heads. When the weapon is triggered, a bio-electric jolt hurls a shower of these creatures at the enemy, where they immediately start burrowing into the flesh, eating their way through the victim's nervous system towards the brain. The agony caused by this process is enough to drive the victim insane.</description>
+	<graphicData>
 		<texPath>Things/Item/Equipment/WeaponRanged/Tyranid/Devourer</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
-    <soundInteract>Interact_Autopistol</soundInteract>
-    <statBases>
+	<soundInteract>Interact_Autopistol</soundInteract>
+	<statBases>
 		<MarketValue>400</MarketValue>
 		<reliability>1</reliability>
 		<Mass>0</Mass>
@@ -299,12 +299,12 @@
 		<AccuracyMedium>0.70</AccuracyMedium>
 		<AccuracyLong>0.42</AccuracyLong>
 		<RangedWeapon_Cooldown>2.20</RangedWeapon_Cooldown>
-    </statBases>
+	</statBases>
 	<weaponTags>
 		<li>OGTY_Devourer</li>
 		<li>OGTY_Gun</li>
 	</weaponTags>
-    <verbs>
+	<verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
@@ -320,8 +320,8 @@
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
 		</li>
-    </verbs>
-	<comps>    
+	</verbs>
+	<comps>	
 		<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
 		<VerbEntries>
 			<li>
@@ -329,21 +329,21 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-	  
-	  </li> 
+		<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+		
+		</li> 
 	</comps>
-  </ThingDef>
+</ThingDef>
  
-  <!-- ====================== Barbed Strangler Seed ===================== -->
+<!-- ====================== Barbed Strangler Seed ===================== -->
  <ThingDef Class="ThingDef_BulletExplosiveOG" ParentName="BaseBullet">
 	<defName>OGTY_Bullet_BarbedStrangler</defName>
-    <label>strangler seed</label>
-    <graphicData>
+	<label>strangler seed</label>
+	<graphicData>
 		<texPath>Things/Projectile/StranglerShotSml</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
+	</graphicData>
+	<projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>Bullet</damageDef>
 		<damageAmountBase>12</damageAmountBase>
@@ -356,21 +356,21 @@
 	</projectile>
 	<thingClass>Projectile_ExplosiveOG</thingClass>
 	<explosionradius>3.5</explosionradius>
-  </ThingDef>
+</ThingDef>
 
-  <!-- ====================== Barbed Strangler ===================== -->
-  <ThingDef ParentName="OGTYBaseGun">
+<!-- ====================== Barbed Strangler ===================== -->
+<ThingDef ParentName="OGTYBaseGun">
 	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
 	<defName>OGTY_Gun_BarbedStrangler</defName>
-    <label>barbed strangler</label>
-    <description>the Barbed Strangler is a fairly simple weapon consisting of a seed sac and a muscled tube. A seed moves from the sac to the barrel where it grows in seconds. When it is launched it grows further in all directions, reaching maturity in seconds. It sends out hooked tendrils to bind and tear apart its prey. The seed has some similarity to some ground-based xenomorphs and is in actual fact a sentient alien flora.</description>
-    <graphicData>
+	<label>barbed strangler</label>
+	<description>the Barbed Strangler is a fairly simple weapon consisting of a seed sac and a muscled tube. A seed moves from the sac to the barrel where it grows in seconds. When it is launched it grows further in all directions, reaching maturity in seconds. It sends out hooked tendrils to bind and tear apart its prey. The seed has some similarity to some ground-based xenomorphs and is in actual fact a sentient alien flora.</description>
+	<graphicData>
 		<texPath>Things/Item/Equipment/WeaponRanged/Tyranid/BarbedStrangler</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 		<drawSize>2.0</drawSize>			
 	</graphicData>
-    <soundInteract>Interact_Autopistol</soundInteract>
-    <statBases>
+	<soundInteract>Interact_Autopistol</soundInteract>
+	<statBases>
 		<MarketValue>400</MarketValue>
 		<reliability>1</reliability>
 		<Mass>0</Mass>
@@ -379,12 +379,12 @@
 		<AccuracyMedium>0.70</AccuracyMedium>
 		<AccuracyLong>0.42</AccuracyLong>
 		<RangedWeapon_Cooldown>2.20</RangedWeapon_Cooldown>
-    </statBases>
+	</statBases>
 	<weaponTags>
 		<li>OGTY_BarbedStrangler</li>
 		<li>OGTY_EliteGun</li>
 	</weaponTags>
-    <verbs>
+	<verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
@@ -400,8 +400,8 @@
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
 		</li>
-    </verbs>
-	<comps>    
+	</verbs>
+	<comps>	
 		<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
 		<VerbEntries>
 			<li>
@@ -409,21 +409,21 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-	  
-	  </li> 
+		<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+		
+		</li> 
 	</comps>
-  </ThingDef>
+</ThingDef>
  
-  <!-- ====================== Venom Cannon Blast ===================== -->
-  <ThingDef ParentName="BaseBullet">
+<!-- ====================== Venom Cannon Blast ===================== -->
+<ThingDef ParentName="BaseBullet">
 	<defName>OGTY_Bullet_VenomCannon</defName>
-    <label>venom blast</label>
-    <graphicData>
+	<label>venom blast</label>
+	<graphicData>
 		<texPath>Things/Projectile/VenomCannonShotSml</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
+	</graphicData>
+	<projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>Bullet</damageDef>
 		<damageAmountBase>32</damageAmountBase>
@@ -431,21 +431,21 @@
 		<stoppingPower>0.5</stoppingPower>
 		<speed>75</speed>
 	</projectile>
-  </ThingDef>
+</ThingDef>
 
-  <!-- ====================== Venom Cannon ===================== -->
-  <ThingDef ParentName="OGTYBaseGun">
+<!-- ====================== Venom Cannon ===================== -->
+<ThingDef ParentName="OGTYBaseGun">
 	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
 	<defName>OGTY_Gun_VenomCannon</defName>
-    <label>venom cannon</label>
-    <description>The Venom Cannon fires salvos of crystals formed of highly corrosive poison and then coated in a metallic, venomous reside. They are launched with an electrostatic charge at tremendous velocities. A target, if not killed outright by the impact, will be shredded by the hailing shards of shattered crystal, or by the corrosive poison from the shattered crystals. They are also effective against vehicle armour, shattering within the bulkheads of a tank and killing the crew.</description>
-    <graphicData>
+	<label>venom cannon</label>
+	<description>The Venom Cannon fires salvos of crystals formed of highly corrosive poison and then coated in a metallic, venomous reside. They are launched with an electrostatic charge at tremendous velocities. A target, if not killed outright by the impact, will be shredded by the hailing shards of shattered crystal, or by the corrosive poison from the shattered crystals. They are also effective against vehicle armour, shattering within the bulkheads of a tank and killing the crew.</description>
+	<graphicData>
 		<texPath>Things/Item/Equipment/WeaponRanged/Tyranid/VenomCannon</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 		<drawSize>2.0</drawSize>			
 	</graphicData>
-    <soundInteract>Interact_Autopistol</soundInteract>
-    <statBases>
+	<soundInteract>Interact_Autopistol</soundInteract>
+	<statBases>
 		<MarketValue>400</MarketValue>
 		<reliability>1</reliability>
 		<Mass>0</Mass>
@@ -454,12 +454,12 @@
 		<AccuracyMedium>0.70</AccuracyMedium>
 		<AccuracyLong>0.42</AccuracyLong>
 		<RangedWeapon_Cooldown>2.20</RangedWeapon_Cooldown>
-    </statBases>
+	</statBases>
 	<weaponTags>
 		<li>OGTY_VenomCannon</li>
 		<li>OGTY_EliteGun</li>
 	</weaponTags>
-    <verbs>
+	<verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
@@ -475,8 +475,8 @@
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
 		</li>
-    </verbs>
-	<comps>    
+	</verbs>
+	<comps>	
 		<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
 		<VerbEntries>
 			<li>
@@ -484,21 +484,21 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-	  
-	  </li> 
+		<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+		
+		</li> 
 	</comps>
-  </ThingDef>
+</ThingDef>
  
-  <!-- ====================== Impaler Cannon Barb ===================== -->
-  <ThingDef ParentName="BaseBullet">
+<!-- ====================== Impaler Cannon Barb ===================== -->
+<ThingDef ParentName="BaseBullet">
 	<defName>OGTY_Bullet_ImpalerCannon</defName>
-    <label>impaler barb</label>
-    <graphicData>
+	<label>impaler barb</label>
+	<graphicData>
 		<texPath>Things/Projectile/ImpalerCannonShot</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <projectile>
+	</graphicData>
+	<projectile>
 		<flyOverhead>true</flyOverhead>
 		<damageDef>Bullet</damageDef>
 		<damageAmountBase>12</damageAmountBase>
@@ -506,21 +506,21 @@
 		<stoppingPower>0.5</stoppingPower>
 		<speed>65</speed>
 	</projectile>
-  </ThingDef>
+</ThingDef>
 
-  <!-- ====================== Impaler Cannon ===================== -->
-  <ThingDef ParentName="OGTYBaseGun">
+<!-- ====================== Impaler Cannon ===================== -->
+<ThingDef ParentName="OGTYBaseGun">
 	<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
 	<defName>OGTY_Gun_ImpalerCannon</defName>
-    <label>impaler cannon</label>
-    <description>The devourer is a conical lump of partly rotted flesh, infested by writhing Flesh-worms, parasites with black, shiny heads. When the weapon is triggered, a bio-electric jolt hurls a shower of these creatures at the enemy, where they immediately start burrowing into the flesh, eating their way through the victim's nervous system towards the brain. The agony caused by this process is enough to drive the victim insane.</description>
-    <graphicData>
+	<label>impaler cannon</label>
+	<description>The devourer is a conical lump of partly rotted flesh, infested by writhing Flesh-worms, parasites with black, shiny heads. When the weapon is triggered, a bio-electric jolt hurls a shower of these creatures at the enemy, where they immediately start burrowing into the flesh, eating their way through the victim's nervous system towards the brain. The agony caused by this process is enough to drive the victim insane.</description>
+	<graphicData>
 		<texPath>Things/Item/Equipment/WeaponRanged/Tyranid/ImpalerCannon</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 		<drawSize>2.0</drawSize>			
 	</graphicData>
-    <soundInteract>Interact_Autopistol</soundInteract>
-    <statBases>
+	<soundInteract>Interact_Autopistol</soundInteract>
+	<statBases>
 		<MarketValue>400</MarketValue>
 		<reliability>1</reliability>
 		<Mass>0</Mass>
@@ -529,12 +529,12 @@
 		<AccuracyMedium>0.70</AccuracyMedium>
 		<AccuracyLong>0.42</AccuracyLong>
 		<RangedWeapon_Cooldown>2.20</RangedWeapon_Cooldown>
-    </statBases>
+	</statBases>
 	<weaponTags>
 		<li>OGTY_ImpalerCannon</li>
 		<li>OGTY_HeavyGun</li>
 	</weaponTags>
-    <verbs>
+	<verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
@@ -550,8 +550,8 @@
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
 		</li>
-    </verbs>
-	<comps>    
+	</verbs>
+	<comps>	
 		<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
 		<VerbEntries>
 			<li>
@@ -559,24 +559,24 @@
 			</li>
 		</VerbEntries>
 		</li> 
-	  <li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
-	  
-	  </li> 
+		<li Class="CompOversizedWeapon.CompProperties_OversizedWeapon">
+		
+		</li> 
 	</comps>
-  </ThingDef>
+</ThingDef>
  
-  <!-- ====================== Zoanthrope Powers ===================== -->
-  <ThingDef ParentName="BaseBullet">
+<!-- ====================== Zoanthrope Powers ===================== -->
+<ThingDef ParentName="BaseBullet">
 	<defName>OGTY_Bullet_Zoanthrope</defName>
-    <label>psychic blast</label>
-    <tickerType>Normal</tickerType>
-    <graphicData>
-      <texPath>Things/Projectile/Warpfire</texPath>
-      <graphicClass>Graphic_Flicker</graphicClass>
-      <shaderType>TransparentPostLight</shaderType>
-    </graphicData>
-    <thingClass>Projectile_Explosive</thingClass>
-    <projectile>
+	<label>psychic blast</label>
+	<tickerType>Normal</tickerType>
+	<graphicData>
+		<texPath>Things/Projectile/Warpfire</texPath>
+		<graphicClass>Graphic_Flicker</graphicClass>
+		<shaderType>TransparentPostLight</shaderType>
+	</graphicData>
+	<thingClass>Projectile_Explosive</thingClass>
+	<projectile>
 		<flyOverhead>false</flyOverhead>
 		<damageDef>OG_Warpfire</damageDef>
 		<damageAmountBase>30</damageAmountBase>
@@ -588,19 +588,19 @@
 		<stoppingPower>0.75</stoppingPower>
 		<speed>75</speed>
 		<soundExplode>OG_ZoanthropeBlast_Sound</soundExplode>
-    </projectile>
-  </ThingDef>
-  
-  <ThingDef ParentName="OGTYBaseGun">
-    <defName>OGTY_Gun_ZoanthropeBlast</defName>
-    <label>psychic blast</label>
-    <description>A blast of warp energy released by a Zoanthrope.</description>
-    <graphicData>
+	</projectile>
+</ThingDef>
+
+<ThingDef ParentName="OGTYBaseGun">
+	<defName>OGTY_Gun_ZoanthropeBlast</defName>
+	<label>psychic blast</label>
+	<description>A blast of warp energy released by a Zoanthrope.</description>
+	<graphicData>
 		<texPath>DummyTexture</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
-    </graphicData>
-    <soundInteract>Interact_Rifle</soundInteract>
-    <statBases>
+	</graphicData>
+	<soundInteract>Interact_Rifle</soundInteract>
+	<statBases>
 			<MarketValue>1</MarketValue>
 		<Mass>0</Mass>
 		<AccuracyTouch>0.90</AccuracyTouch>
@@ -608,11 +608,11 @@
 		<AccuracyMedium>0.55</AccuracyMedium>
 		<AccuracyLong>0.50</AccuracyLong>
 		<RangedWeapon_Cooldown>4.00</RangedWeapon_Cooldown>
-    </statBases>
-    <weaponTags>
+	</statBases>
+	<weaponTags>
 		<li>OGTY_Zoanthrope</li>
 	</weaponTags>
-    <verbs>
+	<verbs>
 		<li>
 			<verbClass>Verb_Shoot</verbClass>
 			<hasStandardCommand>true</hasStandardCommand>
@@ -629,9 +629,9 @@
 			<targetParams>
 				<canTargetLocations>true</canTargetLocations>
 			</targetParams>
-      </li>
-    </verbs>
-	<comps>    
+		</li>
+	</verbs>
+	<comps>	
 		<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
 		<VerbEntries>
 			<li>
@@ -640,6 +640,6 @@
 		</VerbEntries>
 		</li> 
 	</comps>
-  </ThingDef>
+</ThingDef>
 	
 </Defs>
