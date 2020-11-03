@@ -2,6 +2,12 @@ obj/
 bin/
 .vs/
 .zip/
+*.zip
 .7z/
+*.7z
 .rar/
+*.rar
 .pdb/
+*.pdb
+.psd/
+*.psd

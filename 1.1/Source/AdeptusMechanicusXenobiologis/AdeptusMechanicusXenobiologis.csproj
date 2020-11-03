@@ -35,6 +35,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Harmony\Patches\BackCompatibility_BackCompatibleDefName_Patch.cs" />
     <Compile Include="Harmony\Patches\DamageWorker_AddInjury_FinalizeAndAddInjury_NecronWellBeBack_Patch.cs" />
     <Compile Include="Harmony\Patches\Pawn_DropAndForbidEverything_Necron_Patch.cs" />
     <Compile Include="Harmony\Patches\Corpse_get_ShouldVanish_NecronComps_Patch.cs" />

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationFindModID">
+		<mods>
+			<li>ludeon.rimworld.royalty</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<operations>
+				<!-- Plasteel -->
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/FactionDef[defName="Empire"]/permanentEnemyToEveryoneExcept</xpath>
+					<value>
+						<li>OG_Militarum_Cadian_Faction</li>
+						<li>OG_Militarum_PlayerColony</li>
+						<li>OG_Mechanicus_Faction</li>
+						<li>OG_Mechanicus_PlayerColony</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+</Patch>

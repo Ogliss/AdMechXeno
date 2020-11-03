@@ -81,7 +81,6 @@
 			<li>
 				<kindDef>Combat</kindDef>
 				<options>
-					<OG_Militarum_LordMarshal>1</OG_Militarum_LordMarshal>
 					<OG_Militarum_Guardsman_Ranged>230</OG_Militarum_Guardsman_Ranged>
 					<OG_Militarum_Guardsman_Melee>100</OG_Militarum_Guardsman_Melee>
 					<OG_Militarum_Guardsman_Ranged_Special>65</OG_Militarum_Guardsman_Ranged_Special>
@@ -89,7 +88,8 @@
 					<OG_Militarum_Guardsman_Heavy_Weapons>30</OG_Militarum_Guardsman_Heavy_Weapons>
 					<OG_Militarum_Guardsman_Marksman>30</OG_Militarum_Guardsman_Marksman>
 					<OG_Militarum_Sergeant>10</OG_Militarum_Sergeant>
-					<OG_Mechanicus_Tech_Priest_Engineer>10</OG_Mechanicus_Tech_Priest_Engineer>
+					<OG_Mechanicus_Tech_Priest_Engineer>1</OG_Mechanicus_Tech_Priest_Engineer>
+					<OG_Militarum_LordMarshal>1</OG_Militarum_LordMarshal>
 				</options>
 			</li>
 			<li>
