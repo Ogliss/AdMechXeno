@@ -33,10 +33,9 @@
 		<baseHealthScale>1.0</baseHealthScale>
 		<predator>true</predator>
 		<lifeStageAges>
-		<li>
-			<def>HumanlikeAdult</def>
-			<minAge>16</minAge>
-		</li>
+			<li>
+				<def>HumanlikeAdult</def>
+			</li>
 		</lifeStageAges>
 		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
 		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>

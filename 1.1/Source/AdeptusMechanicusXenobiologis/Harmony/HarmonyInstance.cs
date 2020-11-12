@@ -30,9 +30,9 @@ namespace AdeptusMechanicus.HarmonyInstance
             harmony.Patch(typeof(SaveOurShip2.ShipInteriorMod2).GetMethod("hasSpaceSuit"),new HarmonyMethod(typeof(AdeptusMechanicusXenoPatches), nameof(SOSDaemonSpaceSuitPostfix)));
         }
 
-        private static bool SOSDaemonSpaceSuitPostfix(Pawn thePawn, ref bool __result)
+        private static bool SOSDaemonSpaceSuitPostfix(Pawn pawn, ref bool __result)
         {
-            if (thePawn.RaceProps.FleshType == OGChaosDeamonDefOf.OG_Flesh_Chaos_Deamon || thePawn.RaceProps.FleshType.defName.Contains("OG_Flesh_Construct"))
+            if (pawn.RaceProps.FleshType == OGChaosDeamonDefOf.OG_Flesh_Chaos_Deamon || pawn.RaceProps.FleshType.defName.Contains("OG_Flesh_Construct"))
             {
                 __result = true;
                 return false;
