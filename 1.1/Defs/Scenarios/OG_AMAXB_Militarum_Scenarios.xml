@@ -120,17 +120,20 @@
 		<parts>
 			<li Class="AdeptusMechanicus.ScenPart_ConfigPage_ConfigureStartingPawnsSpecific">
 				<def>ConfigPage_ConfigureStartingPawns</def>
-				<sets>
+				<Pawns>
 					<li>
-						<kindDef>OG_Militarum_Guardsman_Ranged_Cadian</kindDef>
+						<kindDef>Colonist_OG_Militarum_Kreig_Guardsmen</kindDef>
 						<count>6</count>
 					</li>
 					<li>
-						<kindDef>OG_Mechanicus_Tech_Priest_Engineer</kindDef>
-						<count>4</count>
+						<kindDef>Colonist_OG_Mechanicus_Tech_Priest_Enginseer</kindDef>
+						<count>2</count>
 					</li>
-				</sets>
-				<pawnCount>10</pawnCount>
+					<li>
+						<kindDef>Colonist_OG_Mechanicus</kindDef>
+						<count>2</count>
+					</li>
+				</Pawns>
 			</li>
 			<li Class="ScenPart_PlayerPawnsArriveMethod">
 				<def>PlayerPawnsArriveMethod</def>

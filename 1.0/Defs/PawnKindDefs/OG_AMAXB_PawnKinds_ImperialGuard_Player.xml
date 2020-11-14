@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<PawnKindDef Abstract="True" Name="BaseImperialGuardPawnKind">
+<PawnKindDef Abstract="True" Name="OG_Miliatrum_Base_PawnKind">
 	<race>OG_Human_Imperial</race>
 	<combatPower>40</combatPower>
 	<baseRecruitDifficulty>0.50</baseRecruitDifficulty>
@@ -10,7 +10,7 @@
 	<forceNormalGearQuality>true</forceNormalGearQuality>
 </PawnKindDef>
 
-<PawnKindDef ParentName="BaseImperialGuardPawnKind">
+<PawnKindDef ParentName="OG_Miliatrum_Base_PawnKind">
 	<defName>Colonist_OG_Militarum</defName>
 	<label>colonist</label>
 	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>

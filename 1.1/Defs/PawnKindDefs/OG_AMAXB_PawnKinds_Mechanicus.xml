@@ -11,18 +11,18 @@
 	<baseRecruitDifficulty>0.50</baseRecruitDifficulty>
 	<backstoryFiltersOverride>
 		<li>
-		<categories>
-			<li>AdMech_TechPriest</li>
-			<li>Outlander</li>
-			<li>Imperium_Standard</li>
-		</categories>
-		<commonality>0.95</commonality>
+			<categories>
+				<li>AdMech_TechPriest</li>
+				<li>Outlander</li>
+				<li>Imperium_Standard</li>
+			</categories>
+			<commonality>0.95</commonality>
 		</li>
 		<li>
-		<categories>
-			<li>Offworld</li>
-		</categories>
-		<commonality>0.05</commonality>
+			<categories>
+				<li>Offworld</li>
+			</categories>
+			<commonality>0.05</commonality>
 		</li>
 	</backstoryFiltersOverride>
 	<forceNormalGearQuality>true</forceNormalGearQuality>

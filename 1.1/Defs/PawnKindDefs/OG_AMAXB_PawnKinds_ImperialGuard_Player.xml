@@ -1,31 +1,39 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<PawnKindDef Abstract="True" Name="BaseImperialGuardPawnKind">
+<PawnKindDef Abstract="True" Name="OG_Miliatrum_Base_PawnKind">
 	<race>Human</race>
 	<combatPower>40</combatPower>
 	<baseRecruitDifficulty>0.50</baseRecruitDifficulty>
 	<isFighter>false</isFighter>
 	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
 	<forceNormalGearQuality>true</forceNormalGearQuality>
-	<backstoryFilters>
+	<backstoryFiltersOverride>
 		<li>
-		<categories>
-			<li>Outlander</li>
-			<li>Imperium_Standard</li>
-		</categories>
-		<commonality>0.95</commonality>
+			<categories>
+				<li>Imperium_Standard</li>
+			</categories>
+			<commonality>0.95</commonality>
 		</li>
 		<li>
-		<categories>
-			<li>Offworld</li>
-		</categories>
-		<commonality>0.05</commonality>
+			<categories>
+				<li>Outlander</li>
+			</categories>
+			<commonality>0.5</commonality>
 		</li>
-	</backstoryFilters>
+		<li>
+			<categories>
+				<li>Offworld</li>
+			</categories>
+			<commonality>0.05</commonality>
+		</li>
+	</backstoryFiltersOverride>
+	<apparelTags>
+		<li>OGIGClothing</li>
+	</apparelTags>
 </PawnKindDef>
 
-<PawnKindDef ParentName="BaseImperialGuardPawnKind">
+<PawnKindDef ParentName="OG_Miliatrum_Base_PawnKind">
 	<defName>Colonist_OG_Militarum</defName>
 	<label>colonist</label>
 	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
@@ -36,6 +44,39 @@
 		<min>1000</min>
 		<max>2400</max>
 	</apparelMoney>
+	<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+</PawnKindDef>
+
+<PawnKindDef ParentName="OG_Miliatrum_Base_PawnKind" Name="OG_Kreig_Base_PawnKind">
+	<defName>Colonist_OG_Militarum_Kreig_Guardsmen</defName>
+	<label>guardsman</label>
+	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
+	<backstoryFiltersOverride Inherit="false">
+		<li>
+			<categories>
+				<li>Imperium_Kreig</li>
+			</categories>
+		</li>
+	</backstoryFiltersOverride>
+	<apparelTags>
+		<li>OGDeathKorps</li>
+	</apparelTags>
+	<apparelMoney>
+		<min>1000</min>
+		<max>2400</max>
+	</apparelMoney>
+	<apparelRequired>
+		<li>OGIG_Apparel_Krieg_FlakHelmet_TOGGLEDEF_A</li>
+		<li>OGIG_Apparel_Krieg_Uniform_Trenchcoat</li>
+		<li>OGIG_Apparel_Krieg_Gasmask</li>
+	</apparelRequired>
+	<weaponMoney>
+		<min>1400</min>
+		<max>28000</max>
+	</weaponMoney>
+	<weaponTags Inherit="false">
+		<li>KriegGun</li>
+	</weaponTags>
 	<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
 </PawnKindDef>
 
