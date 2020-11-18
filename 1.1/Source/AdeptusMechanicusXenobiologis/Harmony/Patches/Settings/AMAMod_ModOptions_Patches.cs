@@ -129,7 +129,7 @@ namespace AdeptusMechanicus.HarmonyInstance
                     null, 
                     !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Sororitas")) || !AMSettings.Instance.AllowImperialWeapons);
                 listing_Race.EndSection(listing_General);
-                if (AdeptusIntergrationUtil.enabled_AdeptusAstartes && settings.AllowAdeptusAstartes)
+                if (AdeptusIntergrationUtility.enabled_AdeptusAstartes && settings.AllowAdeptusAstartes)
                 {
                     __instance.AstartesSettings(ref listing_Race, rect, inRect, w, __instance.MenuLengthXenobiologisRacesAstartes);
                 }

@@ -245,6 +245,33 @@
 	</weaponTags>
 </PawnKindDef>
 
+<!-- Great Unclean One -->
+	<PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+		<defName>OG_Chaos_Deamon_Great_Unclean_One</defName>
+		<label>Great Unclean One</label>
+		<race>OG_Chaos_Deamon_GreatUncleanOne</race>
+		<combatPower>500</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Chaos_GreatUncleanOne</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>5</drawSize>
+					<shadowData>
+						<volume>(2, 2, 2)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>40000</min>
+			<max>40000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>GreatUncleanOne</li>
+		</weaponTags>
+	</PawnKindDef>	
+
 <!-- Deamonette -->
 <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
 	<defName>OG_Chaos_Deamon_Lessar_Deamonette</defName>

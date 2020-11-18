@@ -18,6 +18,7 @@
 		<leaderTitle>Aun'va</leaderTitle>
 		<colorSpectrum>
 			<li>(0.35, 0.35, 0)</li>
+			<li>(218, 141, 71)</li>
 			<li>(0.4, 0.2, 0)</li>
 		</colorSpectrum>
 		<permanentEnemy>true</permanentEnemy>

@@ -675,6 +675,61 @@
 		</comps>
 	</ThingDef>
 
+	<!-- Great Unclean One -->
+	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
+		<defName>OG_Chaos_Deamon_GreatUncleanOne</defName>
+		<label>Great Unclean One</label>
+		<description>A Great Unclean One is a grotesquely corpulent Greater Daemon of the Plague God Nurgle, the Chaos God of disease, death and decay. These loathsome daemons are the harbingers of the lord of rot and ruin, and amongst Grandfather Nurgle's greatest servants, bearers of his most sacred plagues and poxes. Their forms are squat and mountainous, covered in rotting flesh and open sores that weep foul rivulets of pus. Hot ropes of intestines dribble out of huge tears in their enormous, bloated and distended bellies. This horrific girth is supported by two impossibly small and atrophied-looking legs, and their inordinately large, bulbous heads are crowned by enormous stag-like antlers.</description>
+		<statBases>
+			<MoveSpeed>2.0</MoveSpeed>
+			<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.5</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>Human</body>
+			<baseBodySize>10</baseBodySize>
+			<baseHealthScale>10</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+		</race>
+	</ThingDef>
+
 	<!-- Deamons of Slannesh --> 
 	<!-- ChaosDeamon Deamonette --> 
 	<ThingDef ParentName="OG_Chaos_Deamon_Walker">

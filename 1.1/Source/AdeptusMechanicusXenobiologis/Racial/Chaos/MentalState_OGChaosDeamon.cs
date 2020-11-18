@@ -13,7 +13,7 @@ namespace Verse.AI
 
         public override bool ForceHostileTo(Faction f)
         {
-            return f.def.humanlikeFaction || f == Faction.OfMechanoids || f != Find.FactionManager.FirstFactionOfDef(OGChaosDeamonDefOf.OG_Chaos_Deamon_Faction) || f != AdeptusMechanicus.AdeptusIntergrationUtil.OfChaosMarine || f != AdeptusMechanicus.AdeptusIntergrationUtil.OfTraitorGuard;
+            return f.def.humanlikeFaction || f == Faction.OfMechanoids || f != Find.FactionManager.FirstFactionOfDef(OGChaosDeamonDefOf.OG_Chaos_Deamon_Faction) || f != AdeptusMechanicus.AdeptusIntergrationUtility.OfChaosMarine || f != AdeptusMechanicus.AdeptusIntergrationUtility.OfTraitorGuard;
         }
 
         public override RandomSocialMode SocialModeMax()
