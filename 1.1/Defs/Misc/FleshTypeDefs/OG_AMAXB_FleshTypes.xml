@@ -110,16 +110,16 @@
 	<corpseCategory>OG_Corpses_Orkoid</corpseCategory>
 	<wounds>
 		<li>
-		<texture>Things/Pawn/Wounds/WoundA</texture>
-		<color>(179, 185, 73)</color>
+			<texture>Things/Pawn/Wounds/WoundA</texture>
+			<color>(9, 121, 0)</color>
 		</li>
 		<li>
-		<texture>Things/Pawn/Wounds/WoundB</texture>
-		<color>0.675,0,0.529</color>
+			<texture>Things/Pawn/Wounds/WoundB</texture>
+			<color>(9, 121, 0)</color>
 		</li>
 		<li>
-		<texture>Things/Pawn/Wounds/WoundC</texture>
-		<color>0.675,0,0.529</color>
+			<texture>Things/Pawn/Wounds/WoundC</texture>
+			<color>(9, 121, 0)</color>
 		</li>
 	</wounds>
 </FleshTypeDef>

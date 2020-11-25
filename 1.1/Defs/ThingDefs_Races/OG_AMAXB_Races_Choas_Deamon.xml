@@ -223,6 +223,81 @@
 	</PawnKindDef>	
 		-->
 
+	<!-- Deamons of Khorne -->
+	<!-- ChaosDeamon Bloodletter -->
+	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
+		<defName>OG_Chaos_Deamon_Bloodletter</defName>
+		<label>Bloodletter</label>
+		<description>A Bloodletter, also known as a "Chosen of Khorne," a "Warmonger of Khorne," "Slaughter-kin" and the "Crimson Death," is a Lesser Daemon (Khak'akamshy'y in the Dark Tongue) that serves as one of the eager daemonic foot soldiers of the Chaos God Khorne's Blood Legions. As a host, they march as one, in formations with supernatural precision, but in battle, they try to outdo each other in ruthless acts of cruelty and savagery.</description>
+		<statBases>
+			<MoveSpeed>9.5</MoveSpeed>
+			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.16</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>8.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>8.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>gaping maw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>12.5</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10.5</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>Human</body>
+			<baseBodySize>0.5</baseBodySize>
+			<baseHealthScale>0.75</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+		</race>
+		<comps> 
+			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
+				<InvunerableSaveChance>0.16</InvunerableSaveChance>
+			</li> 
+		</comps>
+	</ThingDef>
+		
+	
 	<!-- Deamons of Tzeentch --> 
 	<!-- ChaosDeamon Horrors of Tzeentch -->
 	<!-- --> 
@@ -528,6 +603,61 @@
 		</comps>
 	</ThingDef>
 		
+	<!-- Lord of Change -->
+	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
+		<defName>OG_Chaos_Deamon_LordofChange</defName>
+		<label>Lord of Change</label>
+		<description>A Lord of Change, also called a "Supreme Mutator," and one of the "Eyes of Tzeentch," is an insidious Greater Daemon of Tzeentch, the Chaos God of change and sorcery. Lords of Change are creatures born from some impossible nightmare, immense bird-like Daemons with shimmering skin, wicked curved beaks and multi-coloured, spectrum-shattering wings.</description>
+		<statBases>
+			<MoveSpeed>4.0</MoveSpeed>
+			<ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.5</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>Human</body>
+			<baseBodySize>10</baseBodySize>
+			<baseHealthScale>10</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+		</race>
+	</ThingDef>
+
 	<!-- Deamons of Nurgle --> 
 	<!-- ChaosDeamon Nurgling -->
 	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
@@ -803,4 +933,60 @@
 			</li> 
 		</comps>
 	</ThingDef>
+	
+	<!-- Keeper of Secrets -->
+	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
+		<defName>OG_Chaos_Deamon_KeeperofSecrets</defName>
+		<label>Keeper of Secrets</label>
+		<description>A Lord of Change, also called a "Supreme Mutator," and one of the "Eyes of Tzeentch," is an insidious Greater Daemon of Tzeentch, the Chaos God of change and sorcery. Lords of Change are creatures born from some impossible nightmare, immense bird-like Daemons with shimmering skin, wicked curved beaks and multi-coloured, spectrum-shattering wings.</description>
+		<statBases>
+			<MoveSpeed>6.0</MoveSpeed>
+			<ArmorRating_Blunt>1.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.25</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.25</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>Human</body>
+			<baseBodySize>7.5</baseBodySize>
+			<baseHealthScale>7.5</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+		</race>
+	</ThingDef>
+
 </Defs>

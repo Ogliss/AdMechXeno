@@ -7,6 +7,36 @@
 	<destroyGearOnDrop>true</destroyGearOnDrop>
 </PawnKindDef>
  
+<!-- Bloodletterr -->
+<PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+	<defName>OG_Chaos_Deamon_Lessar_Bloodletter</defName>
+	<label>Bloodletter</label>
+	<race>OG_Chaos_Deamon_Bloodletter</race>
+	<combatPower>100</combatPower>
+
+	<lifeStages>
+		<li>
+		<bodyGraphicData>
+			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Khorne/Bloodletter</texPath>
+			<graphicClass>Graphic_Multi</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<drawSize>1.50</drawSize>
+			<!--color>(219,79,156)</color-->
+			<shadowData>
+			<volume>(0.4, 0.8, 0.4)</volume>
+			</shadowData>
+		</bodyGraphicData>
+		</li>
+	</lifeStages>
+	<weaponMoney>
+		<min>99999</min>
+		<max>99999</max>
+	</weaponMoney>
+	<weaponTags>
+	 <li>Bloodletter</li>
+	</weaponTags>
+</PawnKindDef>
+
 <!-- Pink Horror -->
 <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
 	<defName>OG_Chaos_Deamon_Lessar_Horror_Pink</defName>
@@ -17,11 +47,11 @@
 	<lifeStages>
 		<li>
 		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Chaos_Horror</texPath>
+			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Tzeentch/Horror_Pink</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>1.0</drawSize>
-			<color>(170,0,170)</color>
+			<drawSize>1.50</drawSize>
+			<!--color>(219,79,156)</color-->
 			<shadowData>
 			<volume>(0.4, 0.8, 0.4)</volume>
 			</shadowData>
@@ -47,11 +77,11 @@
 	<lifeStages>
 		<li>
 		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Chaos_Horror</texPath>
+			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Tzeentch/Horror_Blue</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>0.75</drawSize>
-			<color>(29,40,255)</color>
+			<drawSize>1</drawSize>
+			<!--color>(0,168,227)</color-->
 			<shadowData>
 			<volume>(0.4, 0.8, 0.4)</volume>
 			</shadowData>
@@ -77,7 +107,7 @@
 	<lifeStages>
 		<li>
 		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Chaos_Horror</texPath>
+			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Tzeentch/Horror_Brimstone</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>0.5</drawSize>
@@ -106,7 +136,7 @@
 	<lifeStages>
 		<li>
 		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Chaos_Flamer</texPath>
+			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Tzeentch/Flamer</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>2.0</drawSize>
@@ -136,10 +166,10 @@
 	<lifeStages>
 		<li>
 		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Chaos_ExaltedFlamer</texPath>
+			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Tzeentch/ExaltedFlamer</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>2.0</drawSize>
+			<drawSize>2.5</drawSize>
 			<color>(170,0,170)</color>
 			<shadowData>
 			<volume>(0.4, 0.8, 0.4)</volume>
@@ -166,7 +196,7 @@
 	<lifeStages>
 		<li>
 		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Chaos_Screamer</texPath>
+			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Tzeentch/Screamer</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>2.0</drawSize>
@@ -185,6 +215,33 @@
 	</weaponTags>
 </PawnKindDef>
 	
+<!-- Lord of Change -->
+	<PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+		<defName>OG_Chaos_Deamon_Lord_of_Change</defName>
+		<label>Lord of Change</label>
+		<race>OG_Chaos_Deamon_LordofChange</race>
+		<combatPower>500</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Tzeentch/LordofChange</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>5</drawSize>
+					<shadowData>
+						<volume>(2, 2, 2)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>40000</min>
+			<max>40000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>LordofChange</li>
+		</weaponTags>
+	</PawnKindDef>	
+
 <!-- Nurgling -->
 <PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
 	<defName>OG_Chaos_Deamon_Lessar_Nurgling</defName>
@@ -195,7 +252,7 @@
 	<lifeStages>
 		<li>
 		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Chaos_Nurgling</texPath>
+			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/Nurgling</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>1.0</drawSize>
@@ -224,7 +281,7 @@
 	<lifeStages>
 		<li>
 		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Chaos_PlagueBearer</texPath>
+			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/PlagueBearer</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
 			<drawSize>2.0</drawSize>
@@ -254,7 +311,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Chaos_GreatUncleanOne</texPath>
+					<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/GreatUncleanOne</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>5</drawSize>
 					<shadowData>
@@ -282,10 +339,10 @@
 	<lifeStages>
 		<li>
 		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Chaos_Deamonette</texPath>
+			<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Slaanesh/Deamonette</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
 			<shaderType>CutoutComplex</shaderType>
-			<drawSize>2.0</drawSize>
+			<drawSize>1.50</drawSize>
 			<color>(255,255,255)</color>
 			<shadowData>
 			<volume>(0.4, 0.8, 0.4)</volume>
@@ -302,5 +359,32 @@
 			<li>CPowerSword</li>
 	</weaponTags>
 </PawnKindDef>
+
+	<!-- Keeper of Secrets -->
+	<PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+		<defName>OG_Chaos_Deamon_Keeper_of_Secrets</defName>
+		<label>Keeper of Secrets</label>
+		<race>OG_Chaos_Deamon_KeeperofSecrets</race>
+		<combatPower>500</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Slaanesh/KeeperOfSecrets</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>5</drawSize>
+					<shadowData>
+						<volume>(2, 2, 2)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>40000</min>
+			<max>40000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>KeeperOfSecrets</li>
+		</weaponTags>
+	</PawnKindDef>	
 
 </Defs>

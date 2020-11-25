@@ -23,7 +23,7 @@
 	<description>A gauss flux arc arry turret. Its dumb AI brain can't be directly controlled, so beware of friendly fire.</description>
 	<thingClass>Building_TurretGun</thingClass>
 	<graphicData>
-		<texPath>Things/Buildings/DummyTexture</texPath>
+		<texPath>Things/Building/DummyTexture</texPath>
 		<graphicClass>Graphic_Single</graphicClass>
 	</graphicData>
 	<stealable>false</stealable>
