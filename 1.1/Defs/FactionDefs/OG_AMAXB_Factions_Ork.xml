@@ -267,5 +267,10 @@
 
 	<FactionDef ParentName="OG_Ork_Feral_Faction_Base">
 		<defName>OG_Ork_Feral_Faction</defName>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.FactionDefRaidSoundExtension">
+				<raidSound>LetterArrive_OG_Ork_Raid_Alert_A</raidSound>
+			</li>
+		</modExtensions>
 	</FactionDef>
 </Defs>

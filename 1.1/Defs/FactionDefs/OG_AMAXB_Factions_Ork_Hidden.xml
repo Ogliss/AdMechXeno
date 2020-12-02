@@ -105,6 +105,11 @@
 			<min>-100</min>
 			<max>200</max>
 		</allowedArrivalTemperatureRange>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.FactionDefRaidSoundExtension">
+				<raidSound>LetterArrive_OG_Ork_Raid_Alert_A</raidSound>
+			</li>
+		</modExtensions>
 	</FactionDef>
 
 	<FactionDef ParentName="OG_Ork_Hidden_Faction_Base">

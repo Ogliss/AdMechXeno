@@ -3,12 +3,11 @@
 <!--B19-->
 
 <FactionDef Name="OG_Ork_Faction_Base" Abstract="True">
-
-				<modExtensions>
-					<li Class="AdeptusMechanicus.FactionDefExtension">
-					<raidSound>LetterArrive_OG_Ork_Raid_Alert_A</raidSound>
-					</li>
-				</modExtensions>
+	<modExtensions>
+		<li Class="AdeptusMechanicus.FactionDefExtension">
+			<raidSound>LetterArrive_OG_Ork_Raid_Alert_A</raidSound>
+		</li>
+	</modExtensions>
 </FactionDef>
 
 <FactionDef ParentName="OG_Ork_Faction_Base" Name="OG_Ork_Tek_Faction_Base" Abstract="True">

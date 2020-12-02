@@ -20,6 +20,10 @@
 									<useGenderedHeads>false</useGenderedHeads>
 									<aliencrowntypes Inherit="false">
 										<li>Average_Normal</li>
+										<li>Average_Normal1</li>
+										<li>Average_Normal2</li>
+										<li>Average_Normal3</li>
+										<li>Average_Normal4</li>
 									</aliencrowntypes>
 									<headOffset>(0.0, 0.15)</headOffset>
 									<customHeadDrawSize>(1.00, 1.00)</customHeadDrawSize>
@@ -127,7 +131,7 @@
 							</generalSettings>
 							<graphicPaths Inherit="false">
 								<li>
-									<!-- <body>Things/Pawn/Humanlike/Ogryn/Bodies/</body> -->
+									<body>Things/Pawn/Humanlike/Ogryn/Bodies/</body>
 									<head>Things/Pawn/Humanlike/Ogryn/Heads/</head>
 								</li>
 							</graphicPaths>
