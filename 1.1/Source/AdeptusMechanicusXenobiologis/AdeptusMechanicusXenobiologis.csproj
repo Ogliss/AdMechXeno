@@ -140,6 +140,10 @@
       <HintPath>..\..\..\..\..\..\..\workshop\content\294100\1909914131\1.2\Assemblies\ShipsHaveInsides.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <Reference Include="TheEndTimes">
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2008718043\Assemblies\TheEndTimes.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

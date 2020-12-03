@@ -22,7 +22,76 @@ namespace AdeptusMechanicus.HarmonyInstance
             {
                 SOSDeamonConstructPatch();
             }
+
+            MethodInfo method3 = AccessTools.TypeByName("TheEndTimes.ChaosPortalGreat").GetMethod("ResetStaticData");
+            MethodInfo method4 = typeof(AdeptusMechanicusXenoPatches).GetMethod("EndTimesWithGunsDeamonPatch");
+            MethodInfo method5 = AccessTools.TypeByName("TheEndTimes.ChaosPortalSmall").GetMethod("ResetStaticData");
+            if (method3 != null || method5 != null)
+            {
+                Log.Message("Rimhammer: End Times WITH GUNS detected");
+                if (settings.AMSettings.Instance.EndTimesIntergrateDeamons)
+                {
+                    if (method3 == null)
+                    {
+                        Log.Warning("TheEndTimes.ChaosPortalGreat ResetStaticData method null");
+                    }
+                    else
+                    {
+                        if (settings.AMSettings.Instance.EndTimesIntergrateDeamonsGreat)
+                        {
+                            if (harmony.Patch(method3, postfix: new HarmonyMethod(method4)) != null)
+                            {
+                                Log.Message("Magos Xenobiologis: successfully added chaos deamons to End Times Great Portal spawns");
+                            }
+                            else
+                            {
+                                Log.Warning("Magos Xenobiologis: Failed to add chaos deamons to End Times Great Portal spawns");
+                            }
+                        }
+                    }
+                    if (method5 == null)
+                    {
+                        Log.Warning("TheEndTimes.ChaosPortalSmall ResetStaticData method null");
+                    }
+                    else
+                    {
+                        if (settings.AMSettings.Instance.EndTimesIntergrateDeamonsSmall)
+                        {
+                            if (harmony.Patch(method5, postfix: new HarmonyMethod(method4)) != null)
+                            {
+                                Log.Message("Magos Xenobiologis: successfully added chaos deamons to End Times Small Portal spawns");
+                            }
+                            else
+                            {
+                                Log.Warning("Magos Xenobiologis: Failed to add chaos deamons to End Times Small Portal spawns");
+                            }
+                        }
+                    }
+                }
+            }
             if (Prefs.DevMode) Log.Message(string.Format("Magos Xenobiologis: successfully completed {0} harmony patches.", harmony.GetPatchedMethods().Select(new Func<MethodBase, Patches>(Harmony.GetPatchInfo)).SelectMany((Patches p) => p.Prefixes.Concat(p.Postfixes).Concat(p.Transpilers)).Count((Patch p) => p.owner.Contains(harmony.Id))), false);
+        }
+
+        public static void EndTimesWithGunsDeamonPatch(Building __instance)
+        {
+            TheEndTimes.ChaosPortalGreat PortalGreat = __instance as TheEndTimes.ChaosPortalGreat;
+            if (PortalGreat != null)
+            {
+                foreach (PawnKindDef item in DefDatabase<PawnKindDef>.AllDefsListForReading.Where(x => x.RaceProps.FleshType == OGChaosDeamonDefOf.OG_Flesh_Chaos_Deamon))
+                {
+                    TheEndTimes.ChaosPortalGreat.spawnablePawnKinds.Add(item);
+                }
+                return;
+            }
+            TheEndTimes.ChaosPortalSmall PortalSmall = __instance as TheEndTimes.ChaosPortalSmall;
+            if (PortalSmall != null)
+            {
+                foreach (PawnKindDef item in DefDatabase<PawnKindDef>.AllDefsListForReading.Where(x => x.RaceProps.FleshType == OGChaosDeamonDefOf.OG_Flesh_Chaos_Deamon))
+                {
+                    TheEndTimes.ChaosPortalSmall.spawnablePawnKinds.Add(item);
+                }
+                return;
+            }
         }
 
         public static void SOSDeamonConstructPatch()

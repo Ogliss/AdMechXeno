@@ -184,7 +184,7 @@ namespace AdeptusMechanicus.HarmonyInstance
             if (setting)
             {
                 Listing_Standard listing_General = listing_Race.BeginSection(options, true);
-                listing_General.ColumnWidth *= 0.488f;
+                listing_General.ColumnWidth *= AdeptusIntergrationUtility.enabled_EndTimesWithGuns ? 0.32f : 0.488f;
 
                 listing_General.CheckboxLabeled("AMXB_AllowChaosMarine".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Marine")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_HiddenFaction".Translate()), 
                     ref settings.AllowChaosMarine, 
@@ -223,7 +223,27 @@ namespace AdeptusMechanicus.HarmonyInstance
                     null, 
                     !DefDatabase<IncidentDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon_Daemonic_Infestation")) || !settings.AllowChaosDeamons,
                     DefDatabase<IncidentDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon_Daemonic_Infestation")) && settings.AllowChaosDeamons);
+                if (AdeptusIntergrationUtility.enabled_EndTimesWithGuns)
+                {
+                    listing_General.NewColumn();
 
+                    listing_General.CheckboxLabeled("AMXB_EndTimesChaosDeamonIntergration".Translate(),
+                        ref settings.EndTimesIntergrateDeamons,
+                        "AMXB_EndTimesChaosDeamonIntergrationDesc".Translate(),
+                        !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")),
+                        DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")));
+                    listing_General.CheckboxLabeled("AMXB_EndTimesChaosDeamonIntergration_GreatPortal".Translate(),
+                        ref settings.EndTimesIntergrateDeamonsGreat,
+                        "AMXB_EndTimesChaosDeamonIntergration_GreatPortalDesc".Translate(),
+                        !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")) || !settings.EndTimesIntergrateDeamons,
+                        DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")) && settings.EndTimesIntergrateDeamons);
+                    listing_General.CheckboxLabeled("AMXB_EndTimesChaosDeamonIntergration_SmallPortal".Translate(),
+                        ref settings.EndTimesIntergrateDeamonsSmall,
+                        "AMXB_EndTimesChaosDeamonIntergration_SmallPortalDesc".Translate(),
+                        !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")) || !settings.EndTimesIntergrateDeamons,
+                        DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")) && settings.EndTimesIntergrateDeamons);
+
+                }
                 listing_Race.EndSection(listing_General);
             }
             listing_Main.EndSection(listing_Race);
