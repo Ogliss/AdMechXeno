@@ -151,6 +151,12 @@
 	</wounds>
 </FleshTypeDef>
 
+<!-- Tau Construct Fleshtype -->
+<FleshTypeDef ParentName="OG_Flesh_Construct_Base">
+	<defName>OG_Flesh_Construct_Tau</defName>
+	<corpseCategory>OG_Corpses_Tau_Construct</corpseCategory>
+</FleshTypeDef>
+
 <!-- Kroot Fleshtype -->
 <FleshTypeDef>
 	<defName>OG_Flesh_Kroot</defName>

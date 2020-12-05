@@ -13,7 +13,7 @@
 	</statBases>
 	<receivesSignals>true</receivesSignals>
 	<race>
-		<fleshType>Mechanoid</fleshType>
+		<fleshType>OG_Flesh_Construct_Tau</fleshType>
 		<needsRest>false</needsRest>
 		<hasGenders>false</hasGenders>
 		<foodType>None</foodType>
