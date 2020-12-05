@@ -449,8 +449,8 @@
 		<max>25000</max>
 	</apparelMoney>
 	<weaponMoney>
-		<min>1750</min>
-		<max>1750</max>
+		<min>2750</min>
+		<max>5750</max>
 	</weaponMoney>
 	<weaponTags Inherit="false">
 		<li>LongLas</li>

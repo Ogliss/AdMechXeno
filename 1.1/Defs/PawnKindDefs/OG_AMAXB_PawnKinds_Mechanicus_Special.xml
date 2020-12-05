@@ -38,11 +38,12 @@
 	</gearHealthRange>
 	<itemQuality>Good</itemQuality>
 	<weaponMoney>
-		<min>500</min>
-		<max>500</max>
+		<min>600</min>
+		<max>1200</max>
 	</weaponMoney>
 	<weaponTags>
 		<li>LasPistol</li>
+		<li>BoltPistol</li>
 	</weaponTags>
 	<apparelRequired>
 		<li>Apparel_CollarShirt</li>

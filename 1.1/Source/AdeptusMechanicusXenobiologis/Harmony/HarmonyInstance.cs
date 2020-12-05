@@ -22,7 +22,15 @@ namespace AdeptusMechanicus.HarmonyInstance
             {
                 SOSDeamonConstructPatch();
             }
+            if (AdeptusIntergrationUtility.enabled_EndTimesWithGuns)
+            {
+                EndTimesPortalPatch();
+            }
+            if (Prefs.DevMode) Log.Message(string.Format("Magos Xenobiologis: successfully completed {0} harmony patches.", harmony.GetPatchedMethods().Select(new Func<MethodBase, Patches>(Harmony.GetPatchInfo)).SelectMany((Patches p) => p.Prefixes.Concat(p.Postfixes).Concat(p.Transpilers)).Count((Patch p) => p.owner.Contains(harmony.Id))), false);
+        }
 
+        public static void EndTimesPortalPatch()
+        {
             MethodInfo method3 = AccessTools.TypeByName("TheEndTimes.ChaosPortalGreat").GetMethod("ResetStaticData");
             MethodInfo method4 = typeof(AdeptusMechanicusXenoPatches).GetMethod("EndTimesWithGunsDeamonPatch");
             MethodInfo method5 = AccessTools.TypeByName("TheEndTimes.ChaosPortalSmall").GetMethod("ResetStaticData");
@@ -69,9 +77,7 @@ namespace AdeptusMechanicus.HarmonyInstance
                     }
                 }
             }
-            if (Prefs.DevMode) Log.Message(string.Format("Magos Xenobiologis: successfully completed {0} harmony patches.", harmony.GetPatchedMethods().Select(new Func<MethodBase, Patches>(Harmony.GetPatchInfo)).SelectMany((Patches p) => p.Prefixes.Concat(p.Postfixes).Concat(p.Transpilers)).Count((Patch p) => p.owner.Contains(harmony.Id))), false);
         }
-
         public static void EndTimesWithGunsDeamonPatch(Building __instance)
         {
             TheEndTimes.ChaosPortalGreat PortalGreat = __instance as TheEndTimes.ChaosPortalGreat;

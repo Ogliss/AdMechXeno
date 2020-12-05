@@ -8,6 +8,7 @@
 	<statBases>
 		<MoveSpeed>3.0</MoveSpeed>
 		<MarketValue>450</MarketValue>
+		<MinimumHandlingSkill>3</MinimumHandlingSkill>
 		<MeleeDodgeChance>0.25</MeleeDodgeChance>
 		<MeleeCritChance MayRequire="CETeam.CombatExtended">0.1</MeleeCritChance>
 		<MeleeParryChance MayRequire="CETeam.CombatExtended">0.1</MeleeParryChance>
@@ -77,7 +78,6 @@
 		<gestationPeriodDays>26</gestationPeriodDays>
 		<nameOnTameChance>0</nameOnTameChance>
 		<!-- <thinkTreeMain>Snotling</thinkTreeMain> -->
-		<trainability>Advanced</trainability>
 		<wildness>0.75</wildness>
 		<manhunterOnTameFailChance>0.55</manhunterOnTameFailChance>
 		<manhunterOnDamageChance>0.95</manhunterOnDamageChance>

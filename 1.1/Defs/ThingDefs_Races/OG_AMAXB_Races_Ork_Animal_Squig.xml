@@ -8,6 +8,7 @@
 	<statBases>
 		<MoveSpeed>6.0</MoveSpeed>
 		<MarketValue>450</MarketValue>
+		<MinimumHandlingSkill>4</MinimumHandlingSkill>
 		<MeleeDodgeChance>0.06</MeleeDodgeChance>
 		<MeleeCritChance MayRequire="CETeam.CombatExtended">0.41</MeleeCritChance>
 		<MeleeParryChance MayRequire="CETeam.CombatExtended">0.48</MeleeParryChance>
