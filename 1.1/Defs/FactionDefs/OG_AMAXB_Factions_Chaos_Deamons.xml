@@ -114,7 +114,7 @@
 
 	<FactionDef ParentName="OG_Chaos_Deamon_Faction_Base">
 		<defName>OG_Chaos_Deamon_Faction</defName>
-		<requiredCountAtGameStart>0</requiredCountAtGameStart>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 	</FactionDef>
 
 </Defs>

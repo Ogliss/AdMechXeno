@@ -26,7 +26,7 @@
 										<li>Average_Normal4</li>
 									</aliencrowntypes>
 									<headOffset>(0.0, 0.15)</headOffset>
-									<customHeadDrawSize>(1.00, 1.00)</customHeadDrawSize>
+									<customHeadDrawSize>(1.25, 1.25)</customHeadDrawSize>
 									<!-- <customPortraitHeadDrawSize>(0.7, 0.7)</customPortraitHeadDrawSize> -->
 									<useGenderedBodies>false</useGenderedBodies>
 									<alienbodytypes Inherit="false">
@@ -34,6 +34,12 @@
 									</alienbodytypes>
 									<customDrawSize>(1.75, 1.75)</customDrawSize>
 									<!-- <customPortraitDrawSize>(0.8, 0.8)</customPortraitDrawSize> -->
+									<headOffsetDirectional>
+										<north>(0.0, 0.10)</north>
+										<south>(0.0, -0.10)</south>
+										<east>(0.40, -0.10)</east>
+										<west>(-0.40, -0.10)</west>
+									</headOffsetDirectional>
 									<bodyAddons>
 									</bodyAddons>
 								</alienPartGenerator>
@@ -230,15 +236,71 @@
 					<statBases>
 						<MarketValue>2500</MarketValue>
 						<MoveSpeed>3.5</MoveSpeed>
-						<ComfyTemperatureMin>-4</ComfyTemperatureMin>
+						<ComfyTemperatureMin>-10</ComfyTemperatureMin>
 						<ComfyTemperatureMax>32</ComfyTemperatureMax>
 						<LeatherAmount>150</LeatherAmount>
 						<!--
 						<Flammability>1.0</Flammability>
 						-->
 					</statBases>
-					<tools>
-					
+					<tools Inherit="False">
+					  <li>
+						<label>left fist</label>
+						<capacities>
+						  <li>Blunt</li>
+						</capacities>
+						<power>12.5</power>
+						<cooldownTime>2</cooldownTime>
+						<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+						<surpriseAttack>
+						  <extraMeleeDamages>
+							<li>
+							  <def>Stun</def>
+							  <amount>20</amount>
+							</li>
+						  </extraMeleeDamages>
+						</surpriseAttack>
+					  </li>
+					  <li>
+						<label>right fist</label>
+						<capacities>
+						  <li>Blunt</li>
+						</capacities>
+						<power>12.5</power>
+						<cooldownTime>2</cooldownTime>
+						<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+						<surpriseAttack>
+						  <extraMeleeDamages>
+							<li>
+							  <def>Stun</def>
+							  <amount>20</amount>
+							</li>
+						  </extraMeleeDamages>
+						</surpriseAttack>
+					  </li>
+					  <li>
+						<label>teeth</label>
+						<capacities>
+						  <li>Bite</li>
+						</capacities>
+						<power>10.2</power>
+						<cooldownTime>2</cooldownTime>
+						<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+						<chanceFactor>0.07</chanceFactor>
+						<soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+						<soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+					  </li>
+					  <li>
+						<label>head</label>
+						<capacities>
+						  <li>Blunt</li>
+						</capacities>
+						<power>8</power>
+						<cooldownTime>2</cooldownTime>
+						<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+						<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+						<chanceFactor>0.2</chanceFactor>
+					  </li>
 					</tools>
 					<race>
 						<useMeatFrom>Human</useMeatFrom>
@@ -303,11 +365,9 @@
 							<li>(100,0)</li>
 						</points>
 						</ageGenerationCurve>
-						<hediffGiverSets Inherit="false">
-						<li>Human</li>
-						<!--
-						<li>OrganicStandard</li>
-						-->
+						<hediffGiverSets>
+							<!--li>Human</li>
+							<li>OrganicStandard</li-->
 						</hediffGiverSets>
 					</race>
 					<recipes>

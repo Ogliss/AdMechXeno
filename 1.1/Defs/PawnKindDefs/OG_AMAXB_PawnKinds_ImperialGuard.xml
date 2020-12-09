@@ -825,6 +825,9 @@
 		<max>2.3</max>
 	</gearHealthRange>
 	<apparelTags Inherit="false">
+		<li>OGIGLightFlak</li>
+		<li>OGIGClothing</li>
+		<li>IndustrialBasic</li>
 		<!--
 		<li>IndustrialAdvanced</li>
 		<li>IndustrialMilitaryBasic</li>
@@ -855,7 +858,7 @@
 		<li>Advanced</li>
 	</techHediffsTags>
 	<techHediffsChance>0.73</techHediffsChance>
-	<inventoryOptions>
+	<!--inventoryOptions>
 		<skipChance>0.8</skipChance>
 		<subOptionsChooseOne>
 		<li>
@@ -873,7 +876,7 @@
 			</countRange>
 		</li>
 		</subOptionsChooseOne>
-	</inventoryOptions>
+	</inventoryOptions-->
 </PawnKindDef>
 
 </Defs>
