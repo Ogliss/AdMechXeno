@@ -224,7 +224,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Tzeentch/LordofChange</texPath>
+					<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Tzeentch/LordOfChange</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>5</drawSize>
 					<shadowData>
