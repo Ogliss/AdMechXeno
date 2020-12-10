@@ -60,64 +60,64 @@
 		<solidTimeSecs>2</solidTimeSecs>
 		</li-->
 		<li Class="CompProperties_CanBeDormant">
-		<startsDormant>true</startsDormant>
-		<canWakeUpFogged>false</canWakeUpFogged>
+			<startsDormant>true</startsDormant>
+			<canWakeUpFogged>false</canWakeUpFogged>
 		</li>
 		<li Class="CompProperties_WakeUpDormant" />
 		<li Class="ExtraHives.CompProperties_SpawnerPawn">
-		<spawnablePawnKinds>
-			<!--BETA_SoldierClass>1000</BETA_SoldierClass-->
-		</spawnablePawnKinds>
-		<!--AlwaysSpawnWith>
-			<li>BETA_LaserClass</li>
-		</AlwaysSpawnWith-->
-		<!--
-		<lordJob>LordJob_DefendAndExpandHive</lordJob>
-		-->
-		<lordJob>ExtraHives.LordJob_DefendAndExpandHive</lordJob>
-		<spawnSound>Hive_Spawn</spawnSound>
-		<showNextSpawnInInspect>false</showNextSpawnInInspect>
-		<initialPawnsPoints>250</initialPawnsPoints>
-		<maxSpawnedPawnsPoints>5500</maxSpawnedPawnsPoints>
+			<spawnablePawnKinds>
+				<!--BETA_SoldierClass>1000</BETA_SoldierClass-->
+			</spawnablePawnKinds>
+			<!--AlwaysSpawnWith>
+				<li>BETA_LaserClass</li>
+			</AlwaysSpawnWith-->
+			<!--
+			<lordJob>LordJob_DefendAndExpandHive</lordJob>
+			-->
+			<lordJob>ExtraHives.LordJob_DefendAndExpandHive</lordJob>
+			<spawnSound>Hive_Spawn</spawnSound>
+			<showNextSpawnInInspect>false</showNextSpawnInInspect>
+			<initialPawnsPoints>400</initialPawnsPoints>
+			<maxSpawnedPawnsPoints>2000</maxSpawnedPawnsPoints>
 		</li>
 		<li Class="CompProperties_SelfhealHitpoints">
-		<ticksPerHeal>6000</ticksPerHeal> <!-- 60k ticks = 1 day, 10 hp per day -->
+			<ticksPerHeal>6000</ticksPerHeal> <!-- 60k ticks = 1 day, 10 hp per day -->
 		</li>
 		<li Class="ExtraHives.CompProperties_SpawnerHives" />
 		<!--li Class="CompProperties_Spawner">
-		<thingToSpawn>InsectJelly</thingToSpawn>
-		<spawnCount>20</spawnCount>
-		<spawnIntervalRange>26000~30000</spawnIntervalRange>
-		<spawnMaxAdjacent>40</spawnMaxAdjacent>
-		<spawnForbidden>true</spawnForbidden>
-		<saveKeysPrefix>jelly</saveKeysPrefix>
+			<thingToSpawn>InsectJelly</thingToSpawn>
+			<spawnCount>20</spawnCount>
+			<spawnIntervalRange>26000~30000</spawnIntervalRange>
+			<spawnMaxAdjacent>40</spawnMaxAdjacent>
+			<spawnForbidden>true</spawnForbidden>
+			<saveKeysPrefix>jelly</saveKeysPrefix>
 		</li-->
 		<!--li Class="CompProperties_Spawner">
-		<thingToSpawn>GlowPod</thingToSpawn>
-		<spawnCount>1</spawnCount>
-		<spawnIntervalRange>30000~60000</spawnIntervalRange>
-		<spawnMaxAdjacent>1</spawnMaxAdjacent>
-		<saveKeysPrefix>pod</saveKeysPrefix>
-		<inheritFaction>true</inheritFaction>
+			<thingToSpawn>GlowPod</thingToSpawn>
+			<spawnCount>1</spawnCount>
+			<spawnIntervalRange>30000~60000</spawnIntervalRange>
+			<spawnMaxAdjacent>1</spawnMaxAdjacent>
+			<saveKeysPrefix>pod</saveKeysPrefix>
+			<inheritFaction>true</inheritFaction>
 		</li-->
-		<li Class="CompProperties_HeatPusher">
-		<heatPerSecond>6</heatPerSecond>
-		<heatPushMaxTemperature>38</heatPushMaxTemperature>
-		</li>
-		<li Class="CompProperties_SpawnerFilth">
-		<filthDef>Filth_Slime</filthDef>
-		<spawnCountOnSpawn>10</spawnCountOnSpawn>
-		<spawnMtbHours>4</spawnMtbHours>
-		<spawnRadius>5</spawnRadius>
-		</li>
+		<!--li Class="CompProperties_HeatPusher">
+			<heatPerSecond>6</heatPerSecond>
+			<heatPushMaxTemperature>38</heatPushMaxTemperature>
+		</li-->
+		<!--li Class="CompProperties_SpawnerFilth">
+			<filthDef>Filth_Slime</filthDef>
+			<spawnCountOnSpawn>10</spawnCountOnSpawn>
+			<spawnMtbHours>4</spawnMtbHours>
+			<spawnRadius>5</spawnRadius>
+		</li-->
 		<!--li Class="CompProperties_Maintainable">
-		<ticksHealthy>60000</ticksHealthy>
-		<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
-		<damagePerTickRare>10</damagePerTickRare>
+			<ticksHealthy>60000</ticksHealthy>
+			<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+			<damagePerTickRare>10</damagePerTickRare>
 		</li-->
 		<li Class="CompProperties_WarpFireOverlay">
-		<fireSize>5</fireSize>
-		<offset>0,-4,-1</offset>
+			<fireSize>5</fireSize>
+			<offset>0,-4,-1</offset>
 		</li>
 	</comps>
 </ThingDef>
