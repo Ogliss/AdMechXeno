@@ -12,7 +12,7 @@
 	<defName>OG_Chaos_Deamon_Lessar_Bloodletter</defName>
 	<label>Bloodletter</label>
 	<race>OG_Chaos_Deamon_Bloodletter</race>
-	<combatPower>100</combatPower>
+	<combatPower>150</combatPower>
 
 	<lifeStages>
 		<li>
