@@ -27,7 +27,7 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
 	<leaderTitle>Warboss</leaderTitle>
 	<earliestRaidDays>45</earliestRaidDays>
 	<factionNameMaker>OG_NamerFaction_Ork</factionNameMaker>
-	<settlementNameMaker>NamerOGOrkBases</settlementNameMaker>
+	<settlementNameMaker>OG_NamerBases_Ork</settlementNameMaker>
 		<techLevel>Spacer</techLevel>
 		<backstoryCategories>
 			<li>Raider</li>
@@ -188,7 +188,7 @@ Greenskins are one of the most dangerous alien races to plague the galaxy. Numer
 	<leaderTitle>Feral Warboss</leaderTitle>
 	<permanentEnemy>true</permanentEnemy>
 	<factionNameMaker>OG_NamerFaction_Ork</factionNameMaker>
-	<settlementNameMaker>NamerOGOrkBases</settlementNameMaker>
+	<settlementNameMaker>OG_NamerBases_Ork</settlementNameMaker>
 		<techLevel>Neolithic</techLevel>
 		<backstoryCategories>
 			<li>Tribal</li>

@@ -30,7 +30,7 @@
 		<makesFootprints>true</makesFootprints>
 		<lifeExpectancy>9999</lifeExpectancy>
 		<meatColor>(200,135,100)</meatColor>
-		<nameGenerator>NamerPersonOrk</nameGenerator>
+		<nameGenerator>OG_NamerPerson_Ork</nameGenerator>
 		<hasGenders>false</hasGenders>
 		<foodType>OmnivoreHuman</foodType>
 		<baseHungerRate>0.15</baseHungerRate>

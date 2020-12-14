@@ -15,7 +15,7 @@
 		<leaderTitle>Warboss</leaderTitle>
 		<earliestRaidDays>45</earliestRaidDays>
 		<factionNameMaker>OG_NamerFaction_Ork</factionNameMaker>
-		<settlementNameMaker>NamerOGOrkBases</settlementNameMaker>
+		<settlementNameMaker>OG_NamerBases_Ork</settlementNameMaker>
 		<techLevel>Spacer</techLevel>
 		<backstoryFilters>
 			<li>
@@ -180,7 +180,7 @@
 		<leaderTitle>Feral Warboss</leaderTitle>
 		<permanentEnemy>true</permanentEnemy>
 		<factionNameMaker>OG_NamerFaction_Ork</factionNameMaker>
-		<settlementNameMaker>NamerOGOrkBases</settlementNameMaker>
+		<settlementNameMaker>OG_NamerBases_Ork</settlementNameMaker>
 		<techLevel>Neolithic</techLevel>
 		<backstoryFilters>
 			<li>

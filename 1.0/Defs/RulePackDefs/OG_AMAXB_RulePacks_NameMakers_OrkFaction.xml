@@ -25,7 +25,7 @@
 	</RulePackDef>
 	
 	<RulePackDef>
-		<defName>NamerOGOrkBases</defName>
+		<defName>OG_NamerBases_Ork</defName>
 		<rulePack>
 			<rulesStrings>
 				<li>name->[OGOrkBaseNames]</li>
