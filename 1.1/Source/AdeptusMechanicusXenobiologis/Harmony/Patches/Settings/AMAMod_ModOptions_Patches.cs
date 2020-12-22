@@ -30,7 +30,7 @@ namespace AdeptusMechanicus.HarmonyInstance
             Listing_Standard listing_XenobiologisSettings = new Listing_Standard();
             Listing_Standard listing_Races = new Listing_Standard();
             Listing_Standard listing_General = new Listing_Standard();
-            AMSettings settings = __instance.settings;
+            AMSettings settings = AMAMod.settings;
             bool XBOptions = settings.ShowXenobiologisSettings;
             bool XBRaceOptions = settings.ShowAllowedRaceSettings && XBOptions;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -83,7 +83,7 @@ namespace AdeptusMechanicus.HarmonyInstance
         [HarmonyPrefix]
         public static bool ImperialSettings_Prefix(ref AMAMod __instance ,ref Listing_Standard listing_Main, Rect rect, ref Rect inRect, float num, float num2)
         {
-            AMSettings settings = __instance.settings;
+            AMSettings settings = AMAMod.settings;
             string ImperialLabel = "AMXB_ShowImperium".Translate() + " Settings";
             string ImperialToolTip = " Main: " + __instance.MenuLengthXenobiologisRacesImperial;
             ImperialToolTip += " Options: " + __instance.MenuLengthXenobiologisRacesImperialOptions;
@@ -161,7 +161,7 @@ namespace AdeptusMechanicus.HarmonyInstance
         [HarmonyPrefix]
         public static void ChaosSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
-            AMSettings settings = __instance.settings;
+            AMSettings settings = AMAMod.settings;
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowChaos;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -259,7 +259,7 @@ namespace AdeptusMechanicus.HarmonyInstance
         [HarmonyPrefix]
         public static bool EldarSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
-            AMSettings settings = __instance.settings;
+            AMSettings settings = AMAMod.settings;
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowEldar;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -319,7 +319,7 @@ namespace AdeptusMechanicus.HarmonyInstance
         [HarmonyPrefix]
         public static void DarkEldar_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
-            AMSettings settings = __instance.settings;
+            AMSettings settings = AMAMod.settings;
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowDarkEldar;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -362,7 +362,7 @@ namespace AdeptusMechanicus.HarmonyInstance
         [HarmonyPrefix]
         public static void OrkSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
-            AMSettings settings = __instance.settings;
+            AMSettings settings = AMAMod.settings;
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowOrk;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -418,7 +418,7 @@ namespace AdeptusMechanicus.HarmonyInstance
         public static void TauSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
 
-            AMSettings settings = __instance.settings;
+            AMSettings settings = AMAMod.settings;
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowTau;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -488,7 +488,7 @@ namespace AdeptusMechanicus.HarmonyInstance
         [HarmonyPrefix]
         public static void NecronSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
-            AMSettings settings = __instance.settings;
+            AMSettings settings = AMAMod.settings;
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowNecron;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -546,7 +546,7 @@ namespace AdeptusMechanicus.HarmonyInstance
         public static void TyranidSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
 
-            AMSettings settings = __instance.settings;
+            AMSettings settings = AMAMod.settings;
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowTyranid;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
