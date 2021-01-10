@@ -126,7 +126,7 @@
 			<def>OG_Necron_SwarmScarab</def>
 			<coverage>0.2</coverage>
 			<depth>Outside</depth>
-				<parts>
+			<parts>
 				<li>
 					<def>OG_Necron_FlayingBlade</def>
 					<customLabel>right blade</customLabel>
@@ -134,7 +134,7 @@
 					<groups>
 						<li>RightBlade</li>
 					</groups>
-				 </li>				
+				</li>				
 				<li>
 					<def>OG_Necron_FlayingBlade</def>
 					<customLabel>left blade</customLabel>
@@ -142,8 +142,8 @@
 					<groups>
 						<li>LeftBlade</li>
 					</groups>
-				 </li>
-				</parts>
+				</li>
+			</parts>
 		</li>
 		<li>
 			<def>OG_Necron_SwarmScarab</def>

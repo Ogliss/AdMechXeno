@@ -266,6 +266,11 @@
 <BodyPartDef>
 	<defName>OG_Necron_ScarabSwarmCore</defName>
 	<label>scarab swarm</label>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<solid>true</solid>
 	<conceptual>true</conceptual>
 </BodyPartDef>
 

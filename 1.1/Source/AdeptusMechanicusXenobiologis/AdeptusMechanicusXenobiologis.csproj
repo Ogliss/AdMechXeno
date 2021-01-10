@@ -44,6 +44,10 @@
     <Compile Include="Harmony\Patches\Page_ScenarioLister_ScenariosInCategory_Patch.cs" />
     <None Include="Harmony\Patches\Verb_TryStartCastOn_SporeMine_Patch.cs.bak" />
     <Compile Include="Harmony\Patches\Pawn_GetGizmos_NecronComps_Patch.cs" />
+    <Compile Include="Harmony\Patches\TraitSet_DegreeOfTrait_Mechanicus_Patch.cs" />
+    <Compile Include="Harmony\Patches\TraitSet_GetTrait_Mechanicus_Patch.cs" />
+    <Compile Include="Harmony\Patches\TraitSet_HasTrait_Mechanicus_Patch.cs" />
+    <Compile Include="Racial\AdeptusMechanicus\AdeptusMechanicusExtensions.cs" />
     <Compile Include="Racial\Necron\NecronExtensions.cs" />
     <Compile Include="Harmony\Patches\Settings\AMAMod_ModOptions_Patches.cs" />
     <Compile Include="Harmony\Patches\Pawn_AnythingToStrip_Necron_Patch.cs" />

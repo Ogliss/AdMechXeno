@@ -24,13 +24,13 @@ namespace AdeptusMechanicus.HarmonyInstance
     [HarmonyPatch(typeof(AMAMod), "XenobiologisSettings")]
     public static class AMMod_XenobiologisSettings_Patch
     {
+        private static AMSettings settings = AMAMod.settings;
         [HarmonyPrefix]
-        public static bool XenobiologisSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, ref float xenobiologisMenuLenght)
+        public static void XenobiologisSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, ref float xenobiologisMenuLenght)
         {
             Listing_Standard listing_XenobiologisSettings = new Listing_Standard();
             Listing_Standard listing_Races = new Listing_Standard();
             Listing_Standard listing_General = new Listing_Standard();
-            AMSettings settings = AMAMod.settings;
             bool XBOptions = settings.ShowXenobiologisSettings;
             bool XBRaceOptions = settings.ShowAllowedRaceSettings && XBOptions;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -40,50 +40,56 @@ namespace AdeptusMechanicus.HarmonyInstance
 
             //    __instance.XenobiologisMenuLength = __instance.Length(XBRaceOptions, 1, lineheight, 4) + (XBOptions ? __instance.XenobiologisRules + __instance.AllowedRaceSettings : 0);
             float w = rect.width * 0.480f;
-            listing_XenobiologisSettings = listing_Main.BeginSection(__instance.MenuLengthXenobiologis, false, 3);
-            listing_XenobiologisSettings.CheckboxLabeled("AMXB_ModName".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + (__instance.MenuLengthXenobiologis) : "") + " Options" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + __instance.MenuLengthXenobiologisRaces : ""), ref settings.ShowXenobiologisSettings, null, false, true);
-            
-            if (XBOptions)
-            {
-                {
-                    listing_General = listing_XenobiologisSettings.BeginSection(__instance.MenuLengthXenobiologisBaseOptions, true);
-                    listing_General.ColumnWidth = w;
-                    listing_General.CheckboxLabeled("AMXB_ForceRelations".Translate(), ref settings.ForceRelations, "AMXB_ForceRelationsDesc".Translate());
-                    listing_General.NewColumn();
-                    listing_General.CheckboxLabeled("AMXB_AllowWarpstorm".Translate(), ref settings.AllowWarpstorm, "AMXB_AllowWarpstormDesc".Translate());
-                    listing_XenobiologisSettings.EndSection(listing_General);
-                }
 
-                listing_Races = listing_XenobiologisSettings.BeginSection(__instance.MenuLengthXenobiologisRaces, false, 3);
-                listing_Races.CheckboxLabeled("AMXB_AllowedRaces".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + __instance.MenuLengthXenobiologisRaces : ""), ref settings.ShowAllowedRaceSettings, null, false, true);
-                if (XBRaceOptions)
-                {
-                    __instance.ImperialSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisImperialMenuLength);
-                    __instance.ChaosSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisChaosMenuLength);
-                    __instance.EldarSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisEldarMenuLength);
-                    __instance.DarkEldarSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisDarkEldarMenuLength);
-                    __instance.OrkSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisOrkMenuLength);
-                    __instance.TauSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisTauMenuLength);
-                    __instance.NecronSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisNecronMenuLength);
-                    __instance.TyranidSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisTyranidMenuLength);
-                    
-                }
-                listing_XenobiologisSettings.EndSection(listing_Races);
-                __instance.XenobiologisRaceMenuLength = menuLengthXBRace;
+            //    listing_XenobiologisSettings = listing_Main.BeginSection(__instance.MenuLengthXenobiologis, false, 3);
+            //    listing_XenobiologisSettings.CheckboxLabeled("AMXB_ModName".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + __instance.MenuLengthXenobiologis : "") + " Options" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + __instance.MenuLengthXenobiologisRaces : ""), ref settings.ShowXenobiologisSettings, null, false, true);
+
+            listing_XenobiologisSettings = listing_Main.BeginSection(__instance.MenuLengthXenobiologis - 4, false, 3, 4, 0);
+            {
+                listing_General = listing_XenobiologisSettings.BeginSection(__instance.MenuLengthXenobiologisBaseOptions, true);
+                listing_General.ColumnWidth = w;
+                listing_General.CheckboxLabeled("AMXB_ForceRelations".Translate(), ref settings.ForceRelations, "AMXB_ForceRelationsDesc".Translate());
+                listing_General.NewColumn();
+                listing_General.CheckboxLabeled("AMXB_AllowWarpstorm".Translate(), ref settings.AllowWarpstorm, "AMXB_AllowWarpstormDesc".Translate());
+                listing_XenobiologisSettings.EndSection(listing_General);
             }
+
+            listing_Races = listing_XenobiologisSettings.BeginSection(__instance.MenuLengthXenobiologisRaces, false, 3, 4, 4);
+
+            string labelR = "AMXB_AllowedRaces".Translate() + " Settings";
+            if (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss"))
+            {
+                labelR = "AMXB_AllowedRaces".Translate() + " Menu Length: " + __instance.MenuLengthXenobiologisRaces;
+            }
+            string tooltipR = "AMA_ShowSpecialRulesDesc".Translate();
+            listing_Races.CheckboxLabeled(labelR, ref settings.ShowAllowedRaceSettings, tooltipR, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex);
+            if (XBRaceOptions)
+            {
+                __instance.ImperialSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisImperialMenuLength);
+                __instance.ChaosSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisChaosMenuLength);
+                __instance.EldarSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisEldarMenuLength);
+                __instance.DarkEldarSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisDarkEldarMenuLength);
+                __instance.OrkSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisOrkMenuLength);
+                __instance.TauSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisTauMenuLength);
+                __instance.NecronSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisNecronMenuLength);
+                __instance.TyranidSettings(ref listing_Races, rect, inRect, w, __instance.XenobiologisTyranidMenuLength);
+
+            }
+            listing_XenobiologisSettings.EndSection(listing_Races);
+            __instance.XenobiologisRaceMenuLength = menuLengthXBRace;
             listing_Main.EndSection(listing_XenobiologisSettings);
-            __instance.XenobiologisMenuLength = menuLengthXBMain;
-            return false;
+            __instance.XenobiologisMenuLength = listing_XenobiologisSettings.CurHeight;
         }
     }
 
     [HarmonyPatch(typeof(AMAMod), "ImperialSettings")]
     public static class AMMod_ImperialSettings_Patch
     {
+        private static AMSettings settings = AMAMod.settings;
         [HarmonyPrefix]
         public static bool ImperialSettings_Prefix(ref AMAMod __instance ,ref Listing_Standard listing_Main, Rect rect, ref Rect inRect, float num, float num2)
         {
-            AMSettings settings = AMAMod.settings;
+            
             string ImperialLabel = "AMXB_ShowImperium".Translate() + " Settings";
             string ImperialToolTip = " Main: " + __instance.MenuLengthXenobiologisRacesImperial;
             ImperialToolTip += " Options: " + __instance.MenuLengthXenobiologisRacesImperialOptions;
@@ -95,16 +101,12 @@ namespace AdeptusMechanicus.HarmonyInstance
             float options = __instance.Length(setting, 2, lineheight, 0, 0);
 
             Listing_Standard listing_Race;
-            if (AccessTools.GetMethodNames(typeof(Listing_Standard)).Contains("BeginSection_NewTemp"))
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointTwo(ref listing_Main, __instance.MenuLengthXenobiologisRacesImperial);
-            }
+            if (AMAMod.VOPT)
+                listing_Race = listing_Main.BeginSection_OnePointTwo(__instance.MenuLengthXenobiologisRacesImperial);
             else
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointOne(ref listing_Main, __instance.MenuLengthXenobiologisRacesImperial);
-            }
+                listing_Race = listing_Main.BeginSection_OnePointOne(__instance.MenuLengthXenobiologisRacesImperial);
 
-            listing_Race.CheckboxLabeled(ImperialLabel, ref settings.ShowImperium, ImperialToolTip, false, true);
+            listing_Race.CheckboxLabeled(ImperialLabel, ref settings.ShowImperium, ImperialToolTip, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex);
             if (setting)
             {
                 Listing_Standard listing_General = listing_Race.BeginSection(__instance.MenuLengthXenobiologisRacesImperialOptions, true);
@@ -158,10 +160,14 @@ namespace AdeptusMechanicus.HarmonyInstance
     [HarmonyPatch(typeof(AMAMod), "ChaosSettings")]
     public static class AMMod_ChaosSettings_Patch
     {
+        private static AMSettings settings = AMAMod.settings;
         [HarmonyPrefix]
         public static void ChaosSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
-            AMSettings settings = AMAMod.settings;
+            if (AdeptusIntergrationUtility.enabled_XenobiologisChaos)
+            {
+                return;
+            }
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowChaos;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -171,15 +177,11 @@ namespace AdeptusMechanicus.HarmonyInstance
             float options = __instance.Length(setting, Options - 1, lineheight, 0, 0);
 
             Listing_Standard listing_Race;
-            if (AccessTools.GetMethodNames(typeof(Listing_Standard)).Contains("BeginSection_NewTemp"))
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointTwo(ref listing_Main, RaceSettings);
-            }
+            if (AMAMod.VOPT)
+                listing_Race = listing_Main.BeginSection_OnePointTwo(RaceSettings);
             else
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointOne(ref listing_Main, RaceSettings);
-            }
-            listing_Race.CheckboxLabeled("AMXB_ShowChaos".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + RaceSettings : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowChaos, null, false, true);
+                listing_Race = listing_Main.BeginSection_OnePointOne(RaceSettings);
+            listing_Race.CheckboxLabeled("AMXB_ShowChaos".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + RaceSettings : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowChaos, null, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex);
 
             if (setting)
             {
@@ -257,8 +259,12 @@ namespace AdeptusMechanicus.HarmonyInstance
     public static class AMMod_EldarSettings_Patch
     {
         [HarmonyPrefix]
-        public static bool EldarSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
+        public static void EldarSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
+            if (AdeptusIntergrationUtility.enabled_XenobiologisEldar)
+            {
+                return;
+            }
             AMSettings settings = AMAMod.settings;
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowEldar;
@@ -269,15 +275,11 @@ namespace AdeptusMechanicus.HarmonyInstance
             float options = __instance.Length(setting, Options - 1, lineheight, 0, 0);
 
             Listing_Standard listing_Race;
-            if (AccessTools.GetMethodNames(typeof(Listing_Standard)).Contains("BeginSection_NewTemp"))
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointTwo(ref listing_Main, RaceSettings);
-            }
+            if (AMAMod.VOPT)
+                listing_Race = listing_Main.BeginSection_OnePointTwo(RaceSettings);
             else
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointOne(ref listing_Main, RaceSettings);
-            }
-            listing_Race.CheckboxLabeled("AMXB_ShowEldar".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + __instance.XenobiologisEldarMenuLength : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowEldar, null, false, true);
+                listing_Race = listing_Main.BeginSection_OnePointOne(RaceSettings);
+            listing_Race.CheckboxLabeled("AMXB_ShowEldar".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + __instance.XenobiologisEldarMenuLength : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowEldar, null, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex);
 
             if (setting)
             {
@@ -308,18 +310,20 @@ namespace AdeptusMechanicus.HarmonyInstance
             }
             listing_Main.EndSection(listing_Race);
             __instance.XenobiologisEldarMenuLength = listing_Race.CurHeight;
-
-            return false;
         }
     }
 
     [HarmonyPatch(typeof(AMAMod), "DarkEldarSettings")]
     public static class AMMod_DarkEldarSettings_Patch
     {
+        private static AMSettings settings = AMAMod.settings;
         [HarmonyPrefix]
         public static void DarkEldar_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
-            AMSettings settings = AMAMod.settings;
+            if (AdeptusIntergrationUtility.enabled_XenobiologisDarkEldar)
+            {
+                return;
+            }
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowDarkEldar;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -329,15 +333,11 @@ namespace AdeptusMechanicus.HarmonyInstance
             float options = __instance.Length(setting, Options - 1, lineheight, 0, 0);
 
             Listing_Standard listing_Race;
-            if (AccessTools.GetMethodNames(typeof(Listing_Standard)).Contains("BeginSection_NewTemp"))
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointTwo(ref listing_Main, RaceSettings);
-            }
+            if (AMAMod.VOPT)
+                listing_Race = listing_Main.BeginSection_OnePointTwo(RaceSettings);
             else
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointOne(ref listing_Main, RaceSettings);
-            }
-            listing_Race.CheckboxLabeled("AMXB_ShowDarkEldar".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + RaceSettings : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowDarkEldar, null, false, true);
+                listing_Race = listing_Main.BeginSection_OnePointOne(RaceSettings);
+            listing_Race.CheckboxLabeled("AMXB_ShowDarkEldar".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + RaceSettings : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowDarkEldar, null, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex);
 
             if (setting)
             {
@@ -359,10 +359,14 @@ namespace AdeptusMechanicus.HarmonyInstance
     [HarmonyPatch(typeof(AMAMod), "OrkSettings")]
     public static class AMMod_OrkSettings_Patch
     {
+        private static AMSettings settings = AMAMod.settings;
         [HarmonyPrefix]
         public static void OrkSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
-            AMSettings settings = AMAMod.settings;
+            if (AdeptusIntergrationUtility.enabled_XenobiologisOrk)
+            {
+                return;
+            }
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowOrk;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -372,15 +376,11 @@ namespace AdeptusMechanicus.HarmonyInstance
             float options = __instance.Length(setting, Options - 1, lineheight, 0, 0);
 
             Listing_Standard listing_Race;
-            if (AccessTools.GetMethodNames(typeof(Listing_Standard)).Contains("BeginSection_NewTemp"))
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointTwo(ref listing_Main, RaceSettings);
-            }
+            if (AMAMod.VOPT)
+                listing_Race = listing_Main.BeginSection_OnePointTwo(RaceSettings);
             else
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointOne(ref listing_Main, RaceSettings);
-            }
-            listing_Race.CheckboxLabeled("AMXB_ShowOrk".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + RaceSettings : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowOrk, null, false, true);
+                listing_Race = listing_Main.BeginSection_OnePointOne(RaceSettings);
+            listing_Race.CheckboxLabeled("AMXB_ShowOrk".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + RaceSettings : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowOrk, null, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex);
 
             if (setting)
             {
@@ -414,11 +414,15 @@ namespace AdeptusMechanicus.HarmonyInstance
     [HarmonyPatch(typeof(AMAMod), "TauSettings")]
     public static class AMMod_TauSettings_Patch
     {
+        private static AMSettings settings = AMAMod.settings;
         [HarmonyPrefix]
         public static void TauSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
 
-            AMSettings settings = AMAMod.settings;
+            if (AdeptusIntergrationUtility.enabled_XenobiologisTau)
+            {
+                return;
+            }
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowTau;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -428,15 +432,11 @@ namespace AdeptusMechanicus.HarmonyInstance
             float options = __instance.Length(setting, Options - 1, lineheight, 0, 0);
 
             Listing_Standard listing_Race;
-            if (AccessTools.GetMethodNames(typeof(Listing_Standard)).Contains("BeginSection_NewTemp"))
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointTwo(ref listing_Main, RaceSettings);
-            }
+            if (AMAMod.VOPT)
+                listing_Race = listing_Main.BeginSection_OnePointTwo(RaceSettings);
             else
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointOne(ref listing_Main, RaceSettings);
-            }
-            listing_Race.CheckboxLabeled("AMXB_ShowTau".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + RaceSettings : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowTau, null, false, true);
+                listing_Race = listing_Main.BeginSection_OnePointOne(RaceSettings);
+            listing_Race.CheckboxLabeled("AMXB_ShowTau".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + RaceSettings : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowTau, null, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex);
 
             if (setting)
             {
@@ -485,10 +485,14 @@ namespace AdeptusMechanicus.HarmonyInstance
     [HarmonyPatch(typeof(AMAMod), "NecronSettings")]
     public static class AMMod_NecronSettings_Patch
     {
+        private static AMSettings settings = AMAMod.settings;
         [HarmonyPrefix]
         public static void NecronSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
-            AMSettings settings = AMAMod.settings;
+            if (AdeptusIntergrationUtility.enabled_XenobiologisNecron)
+            {
+                return;
+            }
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowNecron;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -498,15 +502,11 @@ namespace AdeptusMechanicus.HarmonyInstance
             float options = __instance.Length(setting, Options - 1, lineheight, 0, 0);
 
             Listing_Standard listing_Race;
-            if (AccessTools.GetMethodNames(typeof(Listing_Standard)).Contains("BeginSection_NewTemp"))
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointTwo(ref listing_Main, RaceSettings);
-            }
+            if (AMAMod.VOPT)
+                listing_Race = listing_Main.BeginSection_OnePointTwo(RaceSettings);
             else
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointOne(ref listing_Main, RaceSettings);
-            }
-            listing_Race.CheckboxLabeled("AMXB_ShowNecron".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + RaceSettings : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowNecron, null, false, true);
+                listing_Race = listing_Main.BeginSection_OnePointOne(RaceSettings);
+            listing_Race.CheckboxLabeled("AMXB_ShowNecron".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + RaceSettings : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowNecron, null, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex);
 
             if (setting)
             {
@@ -542,11 +542,15 @@ namespace AdeptusMechanicus.HarmonyInstance
     [HarmonyPatch(typeof(AMAMod), "TyranidSettings")]
     public static class AMMod_TyranidSettings_Patch
     {
+        private static AMSettings settings = AMAMod.settings;
         [HarmonyPrefix]
         public static void TyranidSettings_Prefix(ref AMAMod __instance, ref Listing_Standard listing_Main, Rect rect, Rect inRect, float num, float num2)
         {
 
-            AMSettings settings = AMAMod.settings;
+            if (AdeptusIntergrationUtility.enabled_XenobiologisTyranid)
+            {
+                return;
+            }
             bool showRaces = settings.ShowAllowedRaceSettings;
             bool setting = settings.ShowAllowedRaceSettings && settings.ShowTyranid;
             float lineheight = (Text.LineHeight + listing_Main.verticalSpacing);
@@ -556,15 +560,11 @@ namespace AdeptusMechanicus.HarmonyInstance
             float options = __instance.Length(setting, Options - 1, lineheight, 0, 0);
 
             Listing_Standard listing_Race;
-            if (AccessTools.GetMethodNames(typeof(Listing_Standard)).Contains("BeginSection_NewTemp"))
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointTwo(ref listing_Main, RaceSettings);
-            }
+            if (AMAMod.VOPT)
+                listing_Race = listing_Main.BeginSection_OnePointTwo(RaceSettings);
             else
-            {
-                listing_Race = ArmouryMain.BeginSection_OnePointOne(ref listing_Main, RaceSettings);
-            }
-            listing_Race.CheckboxLabeled("AMXB_ShowTyranid".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + RaceSettings : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowTyranid, null, false, true);
+                listing_Race = listing_Main.BeginSection_OnePointOne(RaceSettings);
+            listing_Race.CheckboxLabeled("AMXB_ShowTyranid".Translate() + " Settings" + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") ? " Menu Length: " + RaceSettings : "") + (Prefs.DevMode && SteamUtility.SteamPersonaName.Contains("Ogliss") && setting ? " options length: " + options : ""), ref settings.ShowTyranid, null, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex);
 
             if (setting)
             {
