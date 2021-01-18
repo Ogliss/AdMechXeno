@@ -247,7 +247,7 @@ namespace AdeptusMechanicus
             {
                 absorbed = false;
             }
-            if (SettingsHelper.latest.AllowNecronWellBeBack)
+            if (AMAMod.settings.AllowNecronWellBeBack)
             {
                 if (!absorbed && base.parent != null && base.parent is Pawn)
                 {
@@ -366,7 +366,7 @@ namespace AdeptusMechanicus
 
         public override void CompTickRare()
         {
-            if (base.parent != null && base.parent.Spawned && !reviveTried && reviveFlag && SettingsHelper.latest.AllowNecronWellBeBack)
+            if (base.parent != null && base.parent.Spawned && !reviveTried && reviveFlag && AMAMod.settings.AllowNecronWellBeBack)
             {
                 if (base.parent is Pawn && pawn.kindDef != OGNecronDefOf.OG_Necron_Scarab_Swarm)
                 {

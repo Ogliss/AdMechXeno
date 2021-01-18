@@ -21,14 +21,14 @@ namespace AdeptusMechanicus
             //    log.message(string.Format("{0}", item));
             }
             */
-            if (!SettingsHelper.latest.AllowEldarWraithguard)
+            if (!AMAMod.settings.AllowEldarWraithguard)
             {
                 FactionDef fd = OGEldarDefOf.OG_Eldar_Craftworld_Faction;
                 ThingDef td = OGEldarDefOf.OG_Eldar_Wraithguard_Race;
                 Filter(fd,td);
             }
         //    Log.Message(string.Format("post AllowEldarWraithguard"));
-            if (!SettingsHelper.latest.AllowKrootAuxiliaries)
+            if (!AMAMod.settings.AllowKrootAuxiliaries)
             {
                 FactionDef fd = OGTauDefOf.OG_Tau_Faction;
                 ThingDef td = OGKrootDefOf.OG_Alien_Kroot;
@@ -41,7 +41,7 @@ namespace AdeptusMechanicus
                 Filter(fd, td);
             }
         //    Log.Message(string.Format("post AllowKrootAuxiliaries"));
-            if (!SettingsHelper.latest.AllowGueVesaAuxiliaries)
+            if (!AMAMod.settings.AllowGueVesaAuxiliaries)
             {
                 FactionDef fd = OGTauDefOf.OG_Tau_Faction;
                 ThingDef td = ThingDefOf.Human;

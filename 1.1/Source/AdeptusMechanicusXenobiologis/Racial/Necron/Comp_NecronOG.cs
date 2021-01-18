@@ -105,7 +105,7 @@ namespace AdeptusMechanicus
             {
                 return;
             }
-            if (base.parent != null && (base.parent.Spawned || pawn.Dead) && reviveFlag && SettingsHelper.latest.AllowNecronWellBeBack)
+            if (base.parent != null && (base.parent.Spawned || pawn.Dead) && reviveFlag && AMAMod.settings.AllowNecronWellBeBack)
             {
                 if (base.parent is Pawn && pawn.kindDef != OGNecronDefOf.OG_Necron_Scarab_Swarm)
                 {

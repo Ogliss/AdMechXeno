@@ -12,7 +12,7 @@
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<maxCountAtGameStart>5</maxCountAtGameStart>
 		<canMakeRandomly>true</canMakeRandomly>
-		<earliestRaidDays>45</earliestRaidDays>
+		<earliestRaidDays>90</earliestRaidDays>
 		<canSiege>false</canSiege>
 		<canStageAttacks>true</canStageAttacks>
 		<leaderTitle>Aun'va</leaderTitle>

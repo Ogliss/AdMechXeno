@@ -35,6 +35,14 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Harmony\Patches\ModOptions\AMAMod_ChaosSettings_Patch.cs" />
+    <Compile Include="Harmony\Patches\ModOptions\AMAMod_DarkEldarSettings_Patch.cs" />
+    <Compile Include="Harmony\Patches\ModOptions\AMAMod_EldarSettings_Patch.cs" />
+    <Compile Include="Harmony\Patches\ModOptions\AMAMod_ImperialSettings_Patch.cs" />
+    <Compile Include="Harmony\Patches\ModOptions\AMAMod_NecronSettings_Patch.cs" />
+    <Compile Include="Harmony\Patches\ModOptions\AMAMod_OrkSettings_Patch.cs" />
+    <Compile Include="Harmony\Patches\ModOptions\AMAMod_TauSettings_Patch.cs" />
+    <Compile Include="Harmony\Patches\ModOptions\AMAMod_TyranidSettings_Patch.cs" />
     <Compile Include="Harmony\Patches\BackCompatibility_BackCompatibleDefName_Patch.cs" />
     <Compile Include="Harmony\Patches\DamageWorker_AddInjury_FinalizeAndAddInjury_NecronWellBeBack_Patch.cs" />
     <Compile Include="Harmony\Patches\Pawn_DropAndForbidEverything_Necron_Patch.cs" />
@@ -49,7 +57,7 @@
     <Compile Include="Harmony\Patches\TraitSet_HasTrait_Mechanicus_Patch.cs" />
     <Compile Include="Racial\AdeptusMechanicus\AdeptusMechanicusExtensions.cs" />
     <Compile Include="Racial\Necron\NecronExtensions.cs" />
-    <Compile Include="Harmony\Patches\Settings\AMAMod_ModOptions_Patches.cs" />
+    <Compile Include="Harmony\Patches\ModOptions\AMAMod_XenobiologisSettings_Patch.cs" />
     <Compile Include="Harmony\Patches\Pawn_AnythingToStrip_Necron_Patch.cs" />
     <Compile Include="Harmony\Patches\Pawn_EquipmentTracker_DropAllEquipment_Necron_Patch.cs" />
     <Compile Include="Racial\AdeptusMechanicus\OGAdeptusMechanicusDefOf.cs" />
@@ -72,6 +80,7 @@
     <Compile Include="Racial\Tyranid\CompTyranidRottable.cs" />
     <Compile Include="Racial\Tyranid\CompTyranidTemperatureDamaged.cs" />
     <Compile Include="Racial\Tyranid\OGTyranidDefOf.cs" />
+    <None Include="Settings\XenobiologisMenus.cs.bak" />
     <Compile Include="Util\NPCWithProgressBarStaticUtil.cs" />
     <Compile Include="Util\OGCommonDefOf.cs" />
     <None Include="Util\DamageWorker_WarpFlameNoCamShake.cs.bak" />
@@ -99,7 +108,6 @@
     <Compile Include="Util\AMXBMain.cs" />
     <Compile Include="Util\OG_AMXB_CorpseModification.cs" />
     <Compile Include="Racial\Necron\NecronHediffUtility.cs" />
-    <Compile Include="Racial\Necron\CompGlowerNecron.cs" />
     <Compile Include="Hediff_RegeneratingPart.cs" />
     <Compile Include="ThinkNode_OGAMXBChancePerHour.cs" />
     <Compile Include="ThinkNode_OGAMXBChancePerHour_Constant.cs" />
