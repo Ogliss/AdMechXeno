@@ -85,7 +85,7 @@
 	</weaponTags>
 	<modExtensions>
 		<li Class="AdeptusMechanicus.DeepStrikeExtension">
-		<pawnsArrivalMode>Drop</pawnsArrivalMode>
+		<pawnsArrivalMode>DropPod</pawnsArrivalMode>
 		</li>
 	</modExtensions>
 </PawnKindDef>
