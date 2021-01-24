@@ -1,23 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<!-- Human Humanoid Alien Races 2.0 -->
-	<Operation Class="PatchOperationSequence">
-		<operations>
-			<li Class="PatchOperationFindModID">
-				<mods>
-					<li>erdelf.HumanoidAlienRaces</li>
-				</mods>
-				<match Class="PatchOperationAdd">
-					<success>Always</success>
-					<xpath>Defs</xpath>
+	<!-- Humanoid Alien Races 2.0 -->
+	<Operation Class="PatchOperationFindModID">
+		<mods>
+			<li>Humanoid Alien Races 2.0</li>
+			<li>erdelf.HumanoidAlienRaces</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<!-- success>Always</success-->
+				<operations>
+				<!-- Human Subraces -->
+				<!-- Beastman. -->
+				<li Class="PatchOperationAttributeSet">
+					<xpath>Defs/ThingDef[defName="OG_Abhuman_Beastman"]</xpath>
+					<attribute>Class</attribute>
+					<value>AlienRace.ThingDef_AlienRace</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="OG_Abhuman_Beastman"]</xpath>
 					<value>
-					
-						<AlienRace.ThingDef_AlienRace ParentName="HumanRace" Name="OG_Ratlin_Base">
-						<defName>OG_Abhuman_Ratling</defName>
 						<alienRace>
 							<generalSettings>
 								<alienPartGenerator>
-									<aliencrowntypes Inherit="False">
+									<aliencrowntypes>
 										<li>Average_Normal</li>
 										<li>Average_Wide</li>
 										<li>Average_Pointy</li>
@@ -25,21 +30,15 @@
 										<li>Narrow_Pointy</li>
 										<li>Narrow_Wide</li>
 									</aliencrowntypes>
-									<customHeadDrawSize>(0.75, 0.75)</customHeadDrawSize>
-									<!-- <customPortraitHeadDrawSize>(0.7, 0.7)</customPortraitHeadDrawSize> -->
-									<headOffset>(0.0, -0.15)</headOffset>
-									<alienbodytypes Inherit="False">
-										<li>Fat</li>
+									<alienbodytypes>
 										<li>Thin</li>
 										<li>Female</li>
 										<li>Male</li>
 									</alienbodytypes>
-									<customDrawSize>(0.75, 0.75)</customDrawSize>
-									<!-- <customPortraitDrawSize>(0.8, 0.8)</customPortraitDrawSize> -->
 									<bodyAddons>
 									</bodyAddons>
 								</alienPartGenerator>
-								<factionRelations>
+								<factionRelations Inherit="False">
 									<li>
 										<factions>
 											 <li>PlayerColony</li>
@@ -50,8 +49,8 @@
 											 <li>TribeRough</li>
 										</factions>
 										<goodwill>
-											 <min>-50</min>
-											 <max>100</max>
+											 <min>-100</min>
+											 <max>50</max>
 										</goodwill>
 									</li>
 									<li>
@@ -67,7 +66,7 @@
 										</factions>
 										<goodwill>
 											 <min>-100</min>
-											 <max>50</max>
+											 <max>10</max>
 										</goodwill>
 									</li>
 									<li>
@@ -186,149 +185,22 @@
 								</workGiverList>
 							</raceRestriction>
 						</alienRace>
-						</AlienRace.ThingDef_AlienRace>
-
 					</value>
-				</match>
-				<nomatch Class="PatchOperationSequence">
-					<success>Always</success>
-					<operations>
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[@Name="HumanRace"]</xpath>
-							<nomatch Class="PatchOperationAttributeSet">
-								<xpath>/Defs/ThingDef[defName = "Human"]</xpath>
-								<attribute>Name</attribute>
-								<value>HumanRace</value>
-							</nomatch>
-						</li>
-						<li Class="PatchOperationAdd">
-							<xpath>Defs</xpath>
-							<value>
-							
-								<ThingDef ParentName="HumanRace" Name="OG_Ratlin_Base">
-								<defName>OG_Abhuman_Ratling</defName>
-								</ThingDef>
-								
-							</value>
-						</li>
-					</operations>
-				</nomatch>
-			</li>
-			<!-- Vanilla Ratlin Stats -->
-			<li Class="PatchOperationAdd">
-				<xpath>
-				/Defs/ThingDef[@Name="OG_Ratlin_Base"] |
-				/Defs/AlienRace.ThingDef_AlienRace[@Name="OG_Ratlin_Base"]
-				</xpath>
-				<value>
-					<label>ratling</label>
-					<description>Ratlings (Homo sapiens minimus) are small, loud, hungry and lecherous Abhumans who often serve as snipers in the Astra Militarum, a role at which they excel. Ratlings also serve as cooks for Imperial Guard regiments, a skill they no doubt learned in order to feed their own seemingly bottomless stomachs; and they also have kleptomaniac tendencies, as Commissars report petty theft and illegal gambling rings increase substantially when Ratlings are attached to a platoon, company or regiment.</description>
-					<statBases>
-						<MarketValue>1750</MarketValue>
-						<!--
-						<MoveSpeed>4.6</MoveSpeed>
-						<Flammability>1.0</Flammability>
-						<ComfyTemperatureMin>16</ComfyTemperatureMin>
-						<ComfyTemperatureMax>26</ComfyTemperatureMax>
-						<LeatherAmount>50</LeatherAmount>
-						-->
-					</statBases>
-					<tools>
-					
-					</tools>
-					<race>
-						<useMeatFrom>Human</useMeatFrom>
-					<!--
-						<thinkTreeMain>Humanlike</thinkTreeMain>
-						<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-						<intelligence>Humanlike</intelligence>
-						<makesFootprints>true</makesFootprints>
-						-->
-						<leatherDef>Leather_Human</leatherDef>
-						<nameCategory>HumanStandard</nameCategory>
-						<lifeExpectancy>80</lifeExpectancy>
-						<body>Human</body>
-						<baseBodySize>0.5</baseBodySize>
-						<baseHealthScale>0.65</baseHealthScale>
-						<foodType>OmnivoreHuman</foodType>
-						<!--
-						<gestationPeriodDays>45</gestationPeriodDays>
-						<meatMarketValue>0.8</meatMarketValue>
-						<manhunterOnDamageChance>0.20</manhunterOnDamageChance>
-						<manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
-						-->
-						<!--
-						<lifeStageAges>
-						<li>
-							<def>HumanlikeBaby</def>
-							<minAge>0</minAge>
-						</li>
-						<li>
-							<def>HumanlikeToddler</def>
-							<minAge>1.2</minAge>
-						</li>
-						<li>
-							<def>HumanlikeChild</def>
-							<minAge>4</minAge>
-						</li>
-						<li>
-							<def>HumanlikeTeenager</def>
-							<minAge>13</minAge>
-						</li>
-						<li>
-							<def>HumanlikeAdult</def>
-							<minAge>18</minAge>
-						</li>
-						</lifeStageAges>
-						-->
-						<specialShadowData>
-						<!--
-						<volume>(0.3, 0.8, 0.4)</volume>
-						<offset>(0,0,-0.3)</offset>
-						-->
-						</specialShadowData>
-						<ageGenerationCurve>
-						<points>
-							<li>(14,0)</li>
-							<li>(16,100)</li>
-							<li>(50,100)</li>
-							<li>(60,30)</li>
-							<li>(70,18)</li>
-							<li>(80,10)</li>
-							<li>(90,3)</li>
-							<li>(100,0)</li>
-						</points>
-						</ageGenerationCurve>
-						<hediffGiverSets Inherit="false">
-						<li>Human</li>
-						<!--
-						<li>OrganicStandard</li>
-						-->
-						</hediffGiverSets>
-					</race>
-					<recipes>
-					
-					</recipes>
-					<modExtensions>
-						<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
-							<bodyShape>Humanoid</bodyShape>
-						</li>
-					</modExtensions>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/RecipeDef[@Name="SurgeryInstallImplantBase"]/recipeUsers</xpath>
-				<value>
-					<li>OG_Abhuman_Ratling</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/RecipeDef[@Name="SurgeryRemoveImplantBase"]/recipeUsers</xpath>
-				<value>
-					<li>OG_Abhuman_Ratling</li>
-				</value>
-			</li>
-		</operations>	
+				</li>	
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="SurgeryInstallImplantBase"]/recipeUsers</xpath>
+					<value>
+						<li>OG_Abhuman_Beastman</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="SurgeryRemoveImplantBase"]/recipeUsers</xpath>
+					<value>
+						<li>OG_Abhuman_Beastman</li>
+					</value>
+				</li>
+			</operations>
+		</match>
 	</Operation>
 	 
 </Patch>

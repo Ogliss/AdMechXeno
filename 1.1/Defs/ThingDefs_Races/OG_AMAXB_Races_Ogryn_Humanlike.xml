@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="HumanRace" Name="OG_Ogryn_Base">
+	<defName>OG_Abhuman_Ogryn</defName>
+	<label>ogryn</label>
+	<description>The dim-witted human sub-species called Ogryns (Homo sapiens gigantus) evolved on high-gravity, low-temperature prison planets. They are huge and unusually stupid for a human subrace, but unquestionably loyal to the Imperium once introduced to the faith of the Imperial Cult. Ogryns are used as the Imperial Guard's shock troops, and for this role, they are commonly outfitted with the Ripper Gun. The Ripper Gun is a weapon simple enough for them to operate, although some feral Ogryn cannot even fathom this device. Ogryn are also frequently used as bodyguards by Imperial Commanders.</description>
+	<statBases>
+		<MarketValue>2500</MarketValue>
+		<MoveSpeed>3.5</MoveSpeed>
+		<ComfyTemperatureMin>-10</ComfyTemperatureMin>
+		<ComfyTemperatureMax>32</ComfyTemperatureMax>
+		<LeatherAmount>150</LeatherAmount>
+		<!--
+		<Flammability>1.0</Flammability>
+		-->
+	</statBases>
+	<tools Inherit="False">
+		<li>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>12.5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>20</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
+		</li>
+		<li>
+			<label>right fist</label>
+			<capacities>
+			  <li>Blunt</li>
+			</capacities>
+			<power>12.5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			  <extraMeleeDamages>
+				<li>
+				  <def>Stun</def>
+				  <amount>20</amount>
+				</li>
+			  </extraMeleeDamages>
+			</surpriseAttack>
+		</li>
+		<li>
+			<label>teeth</label>
+			<capacities>
+				<li>Bite</li>
+			</capacities>
+			<power>10.2</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+			<chanceFactor>0.07</chanceFactor>
+			<soundMeleeHit>Pawn_Melee_HumanBite_Hit</soundMeleeHit>
+			<soundMeleeMiss>Pawn_Melee_HumanBite_Miss</soundMeleeMiss>
+		</li>
+		<li>
+			<label>head</label>
+			<capacities>
+				  <li>Blunt</li>
+			</capacities>
+			<power>8</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<useMeatFrom>Human</useMeatFrom>
+	<!--
+		<thinkTreeMain>Humanlike</thinkTreeMain>
+		<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+		<intelligence>Humanlike</intelligence>
+		<makesFootprints>true</makesFootprints>
+		-->
+		<leatherDef>Leather_Human</leatherDef>
+		<nameCategory>HumanStandard</nameCategory>
+		<lifeExpectancy>50</lifeExpectancy>
+		<body>Human</body>
+		<baseBodySize>3</baseBodySize>
+		<baseHealthScale>3</baseHealthScale>
+		<foodType>OmnivoreHuman</foodType>
+		<!--
+		<gestationPeriodDays>45</gestationPeriodDays>
+		<meatMarketValue>0.8</meatMarketValue>
+		<manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+		<manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
+		-->
+		<!--
+		<lifeStageAges>
+		<li>
+			<def>HumanlikeBaby</def>
+			<minAge>0</minAge>
+		</li>
+		<li>
+			<def>HumanlikeToddler</def>
+			<minAge>1.2</minAge>
+		</li>
+		<li>
+			<def>HumanlikeChild</def>
+			<minAge>4</minAge>
+		</li>
+		<li>
+			<def>HumanlikeTeenager</def>
+			<minAge>13</minAge>
+		</li>
+		<li>
+			<def>HumanlikeAdult</def>
+			<minAge>18</minAge>
+		</li>
+		</lifeStageAges>
+		-->
+		<specialShadowData>
+		<!--
+		<volume>(0.3, 0.8, 0.4)</volume>
+		<offset>(0,0,-0.3)</offset>
+		-->
+		</specialShadowData>
+		<ageGenerationCurve>
+		<points>
+			<li>(14,0)</li>
+			<li>(16,100)</li>
+			<li>(50,100)</li>
+			<li>(60,30)</li>
+			<li>(70,18)</li>
+			<li>(80,10)</li>
+			<li>(90,3)</li>
+			<li>(100,0)</li>
+		</points>
+		</ageGenerationCurve>
+		<hediffGiverSets>
+			<!--li>Human</li>
+			<li>OrganicStandard</li-->
+		</hediffGiverSets>
+	</race>
+	<recipes>
+	
+	</recipes>
+	<modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+	</modExtensions>
+</ThingDef>
+
+</Defs>

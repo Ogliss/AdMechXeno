@@ -750,7 +750,7 @@
 <!-- ============================ Ratling Marksman ========================== -->
 <PawnKindDef ParentName="OG_Militarum_Military_Base">
 	<defName>OG_Militarum_Ratling_Marksman</defName>
-	<race>OG_Abhuman_Ratling</race>
+	<race>OG_Abhuman_Ratlin</race>
 	<label>ratling marksman</label>
 	<combatPower>120</combatPower>
 	<minGenerationAge>25</minGenerationAge>

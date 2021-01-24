@@ -1,22 +1,28 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Patch>
-	<!-- Human Humanoid Alien Races 2.0 -->
-	<Operation Class="PatchOperationSequence">
-		<operations>
-			<li Class="PatchOperationFindModID">
-				<mods>
-					<li>erdelf.HumanoidAlienRaces</li>
-				</mods>
-				<match Class="PatchOperationAdd">
-					<success>Always</success>
-					<xpath>Defs</xpath>
+	<!-- Humanoid Alien Races 2.0 -->
+	<Operation Class="PatchOperationFindModID">
+		<mods>
+			<li>Humanoid Alien Races 2.0</li>
+			<li>erdelf.HumanoidAlienRaces</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<!-- success>Always</success-->
+				<operations>
+				<!-- Human Subraces -->
+				<!-- Ratling. -->
+				<li Class="PatchOperationAttributeSet">
+					<xpath>Defs/ThingDef[defName="OG_Abhuman_Ratlin"]</xpath>
+					<attribute>Class</attribute>
+					<value>AlienRace.ThingDef_AlienRace</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>Defs/ThingDef[defName="OG_Abhuman_Ratlin"]</xpath>
 					<value>
-						<AlienRace.ThingDef_AlienRace ParentName="HumanRace" Name="OG_Beastman_Base">
-						<defName>OG_Abhuman_Beastman</defName>
 						<alienRace>
 							<generalSettings>
 								<alienPartGenerator>
-									<aliencrowntypes>
+									<aliencrowntypes Inherit="False">
 										<li>Average_Normal</li>
 										<li>Average_Wide</li>
 										<li>Average_Pointy</li>
@@ -24,14 +30,23 @@
 										<li>Narrow_Pointy</li>
 										<li>Narrow_Wide</li>
 									</aliencrowntypes>
-									<alienbodytypes>
+									<customHeadDrawSize>(0.75, 0.75)</customHeadDrawSize>
+									<!-- <customPortraitHeadDrawSize>(0.7, 0.7)</customPortraitHeadDrawSize> -->
+									<headOffset>(0.0, -0.15)</headOffset>
+									<alienbodytypes Inherit="False">
+										<li>Fat</li>
 										<li>Thin</li>
 										<li>Female</li>
 										<li>Male</li>
 									</alienbodytypes>
+									<customDrawSize>(0.75, 0.75)</customDrawSize>
+									<!-- <customPortraitDrawSize>(0.8, 0.8)</customPortraitDrawSize> -->
 									<bodyAddons>
 									</bodyAddons>
 								</alienPartGenerator>
+								<!--notXenophobistTowards>
+									<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Abhuman_Ogryn</li>
+								</notXenophobistTowards-->
 								<factionRelations>
 									<li>
 										<factions>
@@ -43,8 +58,8 @@
 											 <li>TribeRough</li>
 										</factions>
 										<goodwill>
-											 <min>-100</min>
-											 <max>50</max>
+											 <min>-50</min>
+											 <max>100</max>
 										</goodwill>
 									</li>
 									<li>
@@ -60,7 +75,7 @@
 										</factions>
 										<goodwill>
 											 <min>-100</min>
-											 <max>10</max>
+											 <max>50</max>
 										</goodwill>
 									</li>
 									<li>
@@ -179,179 +194,22 @@
 								</workGiverList>
 							</raceRestriction>
 						</alienRace>
-						</AlienRace.ThingDef_AlienRace>
-
 					</value>
-				</match>
-				<nomatch Class="PatchOperationSequence">
-					<success>Always</success>
-					<operations>
-						<li Class="PatchOperationConditional">
-							<xpath>Defs/ThingDef[@Name="HumanRace"]</xpath>
-							<nomatch Class="PatchOperationAttributeSet">
-								<xpath>/Defs/ThingDef[defName = "Human"]</xpath>
-								<attribute>Name</attribute>
-								<value>HumanRace</value>
-							</nomatch>
-						</li>
-						
-						<li Class="PatchOperationAdd">
-							<xpath>Defs</xpath>
-							<value>
-									<ThingDef ParentName="HumanRace" Name="OG_Beastman_Base">
-									<defName>OG_Abhuman_Beastman</defName>
-									</ThingDef>
-							</value>
-						</li>
-					</operations>
-				</nomatch>
-			</li>
-			<!-- Vanilla Beastman Stats -->
-			<li Class="PatchOperationAdd">
-				<xpath>
-				/Defs/ThingDef[@Name="OG_Beastman_Base"] |
-				/Defs/AlienRace.ThingDef_AlienRace[@Name="OG_Beastman_Base"]
-				</xpath>
-				<value>
-					<label>beastman</label>
-					<description>Beastmen (Homo sapiens variatus) are horned, hoofed, and quite hairy Abhumans who appear like nothing so much as humanoid goats or rams. They were formerly recruited for the Imperial Army and later the Astra Militarum, where they used their bloodlust to fight for the Emperor and atone for the sin of being born as mutants. They were led by other Beastmen called Packmasters.</description>
-					<statBases>
-					
-						<MarketValue>1750</MarketValue>
-						<!--
-						<MoveSpeed>4.6</MoveSpeed>
-						<Flammability>1.0</Flammability>
-						<ComfyTemperatureMin>16</ComfyTemperatureMin>
-						<ComfyTemperatureMax>26</ComfyTemperatureMax>
-						<LeatherAmount>50</LeatherAmount>
-						-->
-					</statBases>
-					<tools>
-					
-					</tools>
-					<race>
-						<useMeatFrom>Human</useMeatFrom>
-					<!--
-						<thinkTreeMain>Humanlike</thinkTreeMain>
-						<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-						<intelligence>Humanlike</intelligence>
-						<makesFootprints>true</makesFootprints>
-						-->
-						<leatherDef>Leather_Human</leatherDef>
-						<nameCategory>HumanStandard</nameCategory>
-						<lifeExpectancy>80</lifeExpectancy>
-						<body>Human</body>
-						<baseBodySize>1</baseBodySize>
-						<baseHealthScale>1</baseHealthScale>
-						<foodType>OmnivoreHuman</foodType>
-						<!--
-						<gestationPeriodDays>45</gestationPeriodDays>
-						<meatMarketValue>0.8</meatMarketValue>
-						<manhunterOnDamageChance>0.20</manhunterOnDamageChance>
-						<manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
-						-->
-						<!--
-						<lifeStageAges>
-						<li>
-							<def>HumanlikeBaby</def>
-							<minAge>0</minAge>
-						</li>
-						<li>
-							<def>HumanlikeToddler</def>
-							<minAge>1.2</minAge>
-						</li>
-						<li>
-							<def>HumanlikeChild</def>
-							<minAge>4</minAge>
-						</li>
-						<li>
-							<def>HumanlikeTeenager</def>
-							<minAge>13</minAge>
-						</li>
-						<li>
-							<def>HumanlikeAdult</def>
-							<minAge>18</minAge>
-						</li>
-						</lifeStageAges>
-						-->
-						<specialShadowData>
-						<!--
-						<volume>(0.3, 0.8, 0.4)</volume>
-						<offset>(0,0,-0.3)</offset>
-						-->
-						</specialShadowData>
-						<ageGenerationCurve>
-						<points>
-							<li>(14,0)</li>
-							<li>(16,100)</li>
-							<li>(50,100)</li>
-							<li>(60,30)</li>
-							<li>(70,18)</li>
-							<li>(80,10)</li>
-							<li>(90,3)</li>
-							<li>(100,0)</li>
-						</points>
-						</ageGenerationCurve>
-						<hediffGiverSets Inherit="false">
-						<li>Human</li>
-						<!--
-						<li>OrganicStandard</li>
-						-->
-						</hediffGiverSets>
-					</race>
-					<recipes>
-					<!--
-						<li>InstallArchotechEye</li>
-						<li>InstallArchotechArm</li>
-						<li>InstallArchotechLeg</li>
-						<li>InstallPowerClaw</li>
-						<li>InstallBionicEye</li>
-						<li>InstallBionicArm</li>
-						<li>InstallBionicLeg</li>
-						<li>InstallBionicSpine</li>
-						<li>InstallBionicHeart</li>
-						<li>InstallBionicStomach</li>
-						<li>InstallBionicEar</li>
-						<li>InstallSimpleProstheticArm</li>
-						<li>InstallSimpleProstheticLeg</li>
-						<li>InstallSimpleProstheticHeart</li>
-						<li>InstallCochlearImplant</li>
-						<li>InstallPegLeg</li>
-						<li>InstallWoodenFoot</li>
-						<li>InstallDenture</li>
-						<li>InstallJoywire</li>
-						<li>InstallPainstopper</li>
-						<li>InstallNaturalHeart</li>
-						<li>InstallNaturalLung</li>
-						<li>InstallNaturalKidney</li>
-						<li>InstallNaturalLiver</li>
-						<li>ExciseCarcinoma</li>
-						<li>AdministerMechSerumHealer</li>
-						<li>RemoveBodyPart</li>
-						<li>Euthanize</li>
-						<li>Anesthetize</li>
-					-->
-					</recipes>
-					<modExtensions>
-						<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
-							<bodyShape>Humanoid</bodyShape>
-						</li>
-					</modExtensions>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/RecipeDef[@Name="SurgeryInstallImplantBase"]/recipeUsers</xpath>
-				<value>
-					<li>OG_Abhuman_Beastman</li>
-				</value>
-			</li>
-			<li Class="PatchOperationAdd">
-				<xpath>/Defs/RecipeDef[@Name="SurgeryRemoveImplantBase"]/recipeUsers</xpath>
-				<value>
-					<li>OG_Abhuman_Beastman</li>
-				</value>
-			</li>
-		</operations>	
+				</li>	
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="SurgeryInstallImplantBase"]/recipeUsers</xpath>
+					<value>
+						<li>OG_Abhuman_Ratlin</li>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/RecipeDef[@Name="SurgeryRemoveImplantBase"]/recipeUsers</xpath>
+					<value>
+						<li>OG_Abhuman_Ratlin</li>
+					</value>
+				</li>
+			</operations>
+		</match>
 	</Operation>
 	 
 </Patch>

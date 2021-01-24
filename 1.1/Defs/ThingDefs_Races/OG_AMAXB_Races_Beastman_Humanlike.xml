@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<ThingDef ParentName="HumanRace" Name="OG_Mechanicus_Base">
-	<defName>OG_Human_Mechanicus</defName>
-	<label>human</label>
-	<description>A baseline human, mostly unmodified by gene engineering and mostly unchanged by evolutionary pressures on non-Earth planets.</description>
+<ThingDef ParentName="HumanRace" Name="OG_Beastman_Base">
+	<defName>OG_Abhuman_Beastman</defName>
+	<label>beastman</label>
+	<description>Beastmen (Homo sapiens variatus) are horned, hoofed, and quite hairy Abhumans who appear like nothing so much as humanoid goats or rams. They were formerly recruited for the Imperial Army and later the Astra Militarum, where they used their bloodlust to fight for the Emperor and atone for the sin of being born as mutants. They were led by other Beastmen called Packmasters.</description>
 	<statBases>
+	
 		<MarketValue>1750</MarketValue>
 		<!--
 		<MoveSpeed>4.6</MoveSpeed>
@@ -19,6 +20,7 @@
 	
 	</tools>
 	<race>
+		<useMeatFrom>Human</useMeatFrom>
 	<!--
 		<thinkTreeMain>Humanlike</thinkTreeMain>
 		<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
@@ -26,7 +28,6 @@
 		<makesFootprints>true</makesFootprints>
 		-->
 		<leatherDef>Leather_Human</leatherDef>
-		<useMeatFrom>Human</useMeatFrom>
 		<nameCategory>HumanStandard</nameCategory>
 		<lifeExpectancy>80</lifeExpectancy>
 		<body>Human</body>
@@ -82,10 +83,6 @@
 		</points>
 		</ageGenerationCurve>
 		<hediffGiverSets Inherit="false">
-		<!--
-		<li>OG_Mechanicus_HediffSet</li>
-		-->
-		
 		<li>Human</li>
 		<!--
 		<li>OrganicStandard</li>
