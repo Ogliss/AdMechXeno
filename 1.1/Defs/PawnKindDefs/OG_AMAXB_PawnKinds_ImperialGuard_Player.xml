@@ -5,7 +5,7 @@
 	<race>Human</race>
 	<combatPower>40</combatPower>
 	<baseRecruitDifficulty>0.50</baseRecruitDifficulty>
-	<isFighter>false</isFighter>
+	<isFighter>true</isFighter>
 	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
 	<forceNormalGearQuality>true</forceNormalGearQuality>
 	<backstoryFiltersOverride>

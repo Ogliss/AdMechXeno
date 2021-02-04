@@ -2,11 +2,11 @@
 <Defs>
 
 <!-- Mechanicus Corpse -->
-	<ThingCategoryDef>
+	<!--ThingCategoryDef>
 		<defName>OG_Corpses_Mechanicus</defName>
 		<label>mechanicus corpses</label>
 		<parent>CorpsesHumanlike</parent>
-	</ThingCategoryDef>
+	</ThingCategoryDef-->
 	
 <!-- Mechanicus Construct Corpse -->
 	<ThingCategoryDef>

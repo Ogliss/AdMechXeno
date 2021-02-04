@@ -16,9 +16,16 @@
 				<def>ConfigPage_ConfigureStartingPawns</def>
 				<pawnCount>4</pawnCount>
 			</li>
-			<li Class="ScenPart_PlayerPawnsArriveMethod">
+			<li Class="AdeptusMechanicus.ScenPart_PlayerPawnsArriveMethod_DropShip">
 				<def>PlayerPawnsArriveMethod</def>
+				<method>DropPods</method>
+				<DropshipDef>OGI_Dropship_Valkyrie</DropshipDef>
 			</li>
+			<!--li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>OGI_Dropship_Valkyrie</thingDef>
+				<count>1</count>
+			</li-->
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
 				<thingDef>Silver</thingDef>
@@ -135,8 +142,10 @@
 					</li>
 				</Pawns>
 			</li>
-			<li Class="ScenPart_PlayerPawnsArriveMethod">
+			<li Class="AdeptusMechanicus.ScenPart_PlayerPawnsArriveMethod_DropShip">
 				<def>PlayerPawnsArriveMethod</def>
+				<method>DropPods</method>
+				<DropshipDef>OGI_Dropship_Valkyrie</DropshipDef>
 			</li>
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>

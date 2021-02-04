@@ -108,7 +108,7 @@
 	<backstoryFiltersOverride>
 		<li>
 		<categories>
-			<li>Imperium_WarMaster</li>
+			<li>Imperium_Imperial_WarMaster</li>
 		</categories>
 		</li>
 	</backstoryFiltersOverride>
@@ -612,6 +612,20 @@
 	<label>commissar</label>
 	<combatPower>125</combatPower>
 	<minGenerationAge>23</minGenerationAge>
+	<backstoryFiltersOverride>
+		<li>
+			<categories>
+				<li>Imperium_Schola_Cadet</li>
+			</categories>
+			<commonality>0.95</commonality>
+		</li>
+		<li>
+			<categories>
+				<li>Imperium_Commissariat_Lord</li>
+			</categories>
+			<commonality>0.5</commonality>
+		</li>
+	</backstoryFiltersOverride>
 	<gearHealthRange>
 		<min>0.7</min>
 		<max>2.3</max>
