@@ -400,7 +400,7 @@
 	<combatPower>30</combatPower>
 	<race>Human</race>
 	<baseRecruitDifficulty>0.30</baseRecruitDifficulty>
-	<backstoryFilters>
+	<backstoryFiltersOverride>
 		<li>
 		<categories>
 			<li>Outlander</li>
@@ -415,7 +415,7 @@
 		</categories>
 		<commonality>0.05</commonality>
 		</li>
-	</backstoryFilters>
+	</backstoryFiltersOverride>
 	<defaultFactionType>OG_Ork_Feral_Faction</defaultFactionType>
 	<itemQuality>Poor</itemQuality>
 	<backstoryCryptosleepCommonality>0.10</backstoryCryptosleepCommonality>

@@ -28,7 +28,7 @@ namespace AdeptusMechanicus.HarmonyInstance
                     if (__instance.CasterPawn.kindDef == SporeMine.mineDef)
                     {
                     //    Log.Message(__instance.CasterPawn.LabelShortCap + " Spore Mine");
-                        CompSporeMine comp = __instance.CasterPawn.TryGetComp<CompSporeMine>();
+                        CompSporeMine comp = __instance.CasterPawn.TryGetCompFast<CompSporeMine>();
                         comp.Detonate(__instance.CasterPawn.Map);
                         //    __instance.CasterPawn.Kill(null);
                         return false;

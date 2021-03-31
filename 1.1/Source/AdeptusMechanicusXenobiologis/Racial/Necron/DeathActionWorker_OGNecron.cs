@@ -1,5 +1,6 @@
 ﻿using System;
 using AdeptusMechanicus;
+using AdeptusMechanicus.ExtensionMethods;
 using RimWorld;
 using Verse.AI;
 using Verse.AI.Group;
@@ -13,7 +14,7 @@ namespace Verse
         // Token: 0x0600403D RID: 16445 RVA: 0x001E1AD3 File Offset: 0x001DFED3
         public override void PawnDied(Corpse corpse)
         {
-            Comp_NecronOG _Necron = corpse.InnerPawn.TryGetComp<Comp_NecronOG>();
+            Comp_NecronOG _Necron = corpse.InnerPawn.TryGetCompFast<Comp_NecronOG>();
             if (_Necron==null)
             {
                 return;

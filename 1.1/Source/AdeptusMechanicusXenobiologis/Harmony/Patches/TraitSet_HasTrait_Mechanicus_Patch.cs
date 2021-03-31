@@ -23,7 +23,7 @@ namespace AdeptusMechanicus.HarmonyInstance
             {
                 if (tDef == TraitDefOf.Transhumanist)
                 {
-                    if (___pawn.isMechanicus())
+                    if (___pawn.IsMechanicus())
                     {
                         __result = true;
                     }

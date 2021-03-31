@@ -886,7 +886,7 @@
 </HediffDef>
 
 <!-- ====================== Zoanthrope Powers ===================== -->
-<ThingDef ParentName="OG_Bullet_LaserGeneric" Class="AdeptusMechanicus.LaserBeamDef">
+<ThingDef ParentName="OG_Bullet_LaserGeneric" Class="AdeptusMechanicus.Lasers.LaserBeamDef">
 	<defName>OGTY_Bullet_Zoanthrope</defName>
 	<label>psychic blast</label>
 	

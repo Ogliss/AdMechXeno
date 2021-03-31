@@ -19,7 +19,7 @@
 			<!--li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[@Name="OGN_LaserTurretBase"]/thingClass</xpath>
 				<value>
-					<thingClass>AdeptusMechanicus.Building_LaserGunCE</thingClass>
+					<thingClass>AdeptusMechanicus.Lasers.Building_LaserGunCE</thingClass>
 				</value>
 			</li-->
 			<!--=============== Auto turrets ===============-->
@@ -68,7 +68,7 @@
 			<li Class="PatchOperationReplace">
 				<xpath>Defs/ThingDef[defName="OGN_Bullet_MonolithGuassFluxArc"]</xpath>
 				<value>
-					<ThingDef Class="AdeptusMechanicus.LaserBeamDefCE" ParentName="OG_Bullet_LaserGeneric">
+					<ThingDef Class="AdeptusMechanicus.Lasers.LaserBeamDefCE" ParentName="OG_Bullet_LaserGeneric">
 						<defName>OGN_Bullet_MonolithGuassFluxArc</defName>
 							<label>guass blast</label>
 							<!--description>A high power laser beam which is effective against the more durable alien bodies and stronger types of personal armour.</description-->
@@ -84,13 +84,12 @@
 							<pelletCount>2</pelletCount>
 						</projectile>
 						<!--modExtensions>
-							<li Class="AdeptusMechanicus.EffectProjectileExtension">
-								<explosionMote>true</explosionMote>
+							<li Class="AdeptusMechanicus.ProjectileVFX"><explosionMote>true</explosionMote>
 								<explosionMoteSize>0.75</explosionMoteSize>
-								<ImpactMoteDef>Mote_JumpFlame</ImpactMoteDef>
-								<ImpactMoteSize>2</ImpactMoteSize>
-								<ImpactGlowMoteDef>Mote_ExplosionFlash</ImpactGlowMoteDef>
-								<ImpactGlowMoteSize>2.5</ImpactGlowMoteSize>
+								<impactMoteDef>Mote_JumpFlame</impactMoteDef>
+								<impactMoteSize>2</impactMoteSize>
+								<impactGlowMoteDef>Mote_ExplosionFlash</impactGlowMoteDef>
+								<impactGlowMoteSize>2.5</impactGlowMoteSize>
 							</li>
 						</modExtensions-->
 					</ThingDef>

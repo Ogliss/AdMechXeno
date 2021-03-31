@@ -1,4 +1,5 @@
 ﻿using AdeptusMechanicus;
+using AdeptusMechanicus.ExtensionMethods;
 using System;
 using System.Collections.Generic;
 using Verse;
@@ -27,7 +28,7 @@ namespace RimWorld
         {
             get
             {
-                return DamagedNecron.TryGetComp<Comp_NecronOG>();
+                return DamagedNecron.TryGetCompFast<Comp_NecronOG>();
             }
         }
 

@@ -13,7 +13,7 @@
 	<race>Human</race>
 	<chemicalAddictionChance>0.05</chemicalAddictionChance>
 	<backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
-	<backstoryFilters>
+	<backstoryFiltersOverride>
 		<li>
 		<categories>
 			<li>Outlander</li>
@@ -27,7 +27,7 @@
 		</categories>
 		<commonality>0.05</commonality>
 		</li>
-	</backstoryFilters>
+	</backstoryFiltersOverride>
 	<invNutrition>10.0</invNutrition>
 	<inventoryOptions>
 		<subOptionsChooseOne>

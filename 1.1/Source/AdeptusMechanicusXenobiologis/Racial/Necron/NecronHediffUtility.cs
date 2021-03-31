@@ -8,7 +8,7 @@ namespace AdeptusMechanicus
     public static class NecronHediffUtility
     {
         // Token: 0x06004CA5 RID: 19621 RVA: 0x0023A37C File Offset: 0x0023877C
-        public static T TryGetComp<T>(this Hediff hd) where T : HediffComp
+        public static T TryGetCompFast<T>(this Hediff hd) where T : HediffComp
         {
             HediffWithComps hediffWithComps = hd as HediffWithComps;
             if (hediffWithComps == null)
@@ -37,7 +37,7 @@ namespace AdeptusMechanicus
             {
                 return false;
             }
-            HediffComp_TendDuration hediffComp_TendDuration = hediffWithComps.TryGetComp<HediffComp_TendDuration>();
+            HediffComp_TendDuration hediffComp_TendDuration = hediffWithComps.TryGetCompFast<HediffComp_TendDuration>();
             return hediffComp_TendDuration != null && hediffComp_TendDuration.IsTended;
         }
 
@@ -49,7 +49,7 @@ namespace AdeptusMechanicus
             {
                 return false;
             }
-            HediffComp_GetsPermanent hediffComp_GetsPermanent = hediffWithComps.TryGetComp<HediffComp_GetsPermanent>();
+            HediffComp_GetsPermanent hediffComp_GetsPermanent = hediffWithComps.TryGetCompFast<HediffComp_GetsPermanent>();
             return hediffComp_GetsPermanent != null && hediffComp_GetsPermanent.IsPermanent;
         }
 
@@ -61,7 +61,7 @@ namespace AdeptusMechanicus
             {
                 return false;
             }
-            HediffComp_Immunizable hediffComp_Immunizable = hediffWithComps.TryGetComp<HediffComp_Immunizable>();
+            HediffComp_Immunizable hediffComp_Immunizable = hediffWithComps.TryGetCompFast<HediffComp_Immunizable>();
             return hediffComp_Immunizable != null && hediffComp_Immunizable.FullyImmune;
         }
 

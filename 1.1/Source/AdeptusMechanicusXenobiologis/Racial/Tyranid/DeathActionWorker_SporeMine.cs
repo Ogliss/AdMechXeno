@@ -34,6 +34,30 @@ namespace AdeptusMechanicus
 			{
 				return;
 			}
+			Pawn innerPawn = corpse.InnerPawn;
+			IntVec3 position = corpse.Position;
+			Detonate(corpse, position);
+			corpse.Destroy(0);
+			ThingOwner<Thing> thingOwner = new ThingOwner<Thing>();
+			if (innerPawn.def.killedLeavings!=null)
+			{
+				for (int i = 0; i < innerPawn.def.killedLeavings.Count; i++)
+				{
+					Thing thing = ThingMaker.MakeThing(innerPawn.def.killedLeavings[i].thingDef, null);
+					thing.stackCount = innerPawn.def.killedLeavings[i].count;
+					thingOwner.TryAdd(thing, true);
+				}
+				for (int j = 0; j < thingOwner.Count; j++)
+				{
+					GenPlace.TryPlaceThing(thingOwner[j], position, this.map, ThingPlaceMode.Near, null, null, default(Rot4));
+				}
+			}
+		}
+
+		private Map map;
+		public void Detonate(Corpse corpse, IntVec3 position)
+		{
+			Pawn innerPawn = corpse.InnerPawn;
 			float radius;
 			if (corpse.InnerPawn.ageTracker.CurLifeStageIndex == 0)
 			{
@@ -48,8 +72,6 @@ namespace AdeptusMechanicus
 				radius = 2.9f;
 			};
 			this.map = corpse.Map;
-			IntVec3 position = corpse.Position;
-			Pawn innerPawn = corpse.InnerPawn;
 			DamageDef damage = DamageDefOf.Flame;
 			int damageAmount = 0;
 			float ap = 0f;
@@ -77,27 +99,6 @@ namespace AdeptusMechanicus
 			*/
 			GenExplosion.DoExplosion(position, this.map, radius, damage, corpse.InnerPawn, damageAmount, ap, null, null, null, null, null, 0f, 1, false, null, 0f, 1, 0f, false, null, null);
 
-			corpse.Destroy(0);
-			ThingOwner<Thing> thingOwner = new ThingOwner<Thing>();
-			if (innerPawn.def.killedLeavings!=null)
-			{
-				for (int i = 0; i < innerPawn.def.killedLeavings.Count; i++)
-				{
-					Thing thing = ThingMaker.MakeThing(innerPawn.def.killedLeavings[i].thingDef, null);
-					thing.stackCount = innerPawn.def.killedLeavings[i].count;
-					thingOwner.TryAdd(thing, true);
-				}
-				for (int j = 0; j < thingOwner.Count; j++)
-				{
-					GenPlace.TryPlaceThing(thingOwner[j], position, this.map, ThingPlaceMode.Near, null, null, default(Rot4));
-				}
-			}
-		}
-
-		private Map map;
-		public void Detonate()
-		{
-			
 		}
 	}
 }

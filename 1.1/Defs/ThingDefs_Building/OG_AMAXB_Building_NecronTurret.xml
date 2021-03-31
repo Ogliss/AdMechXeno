@@ -53,7 +53,7 @@
 	</ThingDef>
 
 	<!--==================== Necron - Gauss Flux Arc =========================-->
-<ThingDef ParentName="OG_Bullet_LaserGeneric" Class="AdeptusMechanicus.LaserBeamDef">
+<ThingDef ParentName="OG_Bullet_LaserGeneric" Class="AdeptusMechanicus.Lasers.LaserBeamDef">
 	<defName>OGN_Bullet_MonolithGuassFluxArc</defName>
 	<label>guass blast</label>
 	
@@ -70,7 +70,7 @@
 	</projectile>
 </ThingDef>
 
-	<ThingDef ParentName="BaseWeaponTurret" Class="AdeptusMechanicus.LaserGunDef">
+	<ThingDef ParentName="BaseWeaponTurret" Class="AdeptusMechanicus.Lasers.LaserGunDef">
 		<defName>OGN_TurretGun_MonolithGuassFluxArc</defName>
 		<thingClass>AdeptusMechanicus.ThingDef_GunOG</thingClass>
 		<label>gauss flux arc (N)</label>

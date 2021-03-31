@@ -1,5 +1,6 @@
 ﻿using Verse;
 using HarmonyLib;
+using AdeptusMechanicus.ExtensionMethods;
 
 namespace AdeptusMechanicus.HarmonyInstance
 {
@@ -20,7 +21,7 @@ namespace AdeptusMechanicus.HarmonyInstance
                 __result = false;
                 return false;
             }
-            if (__instance.TryGetComp<Comp_NecronOG>() != null)
+            if (__instance.TryGetCompFast<Comp_NecronOG>() != null)
             {
                 __result = false;
                 return false;

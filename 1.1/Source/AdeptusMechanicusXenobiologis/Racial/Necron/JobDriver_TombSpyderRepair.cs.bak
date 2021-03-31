@@ -27,7 +27,7 @@ namespace RimWorld
         {
             get
             {
-                return DamagedNecron.TryGetComp<Comp_NecronOG>();
+                return DamagedNecron.TryGetCompFast<Comp_NecronOG>();
             }
         }
 

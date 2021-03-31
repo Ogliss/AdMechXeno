@@ -39,7 +39,6 @@ namespace AdeptusMechanicus
 				yield return "CompExplosive requires Normal ticker type";
 			}
 			yield break;
-			yield break;
 		}
 
 		// Token: 0x04001C4F RID: 7247

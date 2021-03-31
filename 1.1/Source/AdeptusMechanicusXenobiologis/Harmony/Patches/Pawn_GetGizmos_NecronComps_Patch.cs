@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using Verse;
 using HarmonyLib;
+using AdeptusMechanicus.ExtensionMethods;
 
 namespace AdeptusMechanicus.HarmonyInstance
 {
@@ -27,7 +28,7 @@ namespace AdeptusMechanicus.HarmonyInstance
             for (int o = 0; o < __instance.AllComps.Count; o++)
             {
                 Comp_NecronOG _Necron;
-                if ((_Necron = __instance.TryGetComp<Comp_NecronOG>()) != null)
+                if ((_Necron = __instance.TryGetCompFast<Comp_NecronOG>()) != null)
                 {
                     foreach (Gizmo gizmo in _Necron.CompGetGizmosExtra())
                     {
@@ -36,7 +37,7 @@ namespace AdeptusMechanicus.HarmonyInstance
                 }
                 /*
                 HediffComp_VerbGiverExtra _VerbGiverExtra;
-                if ((_VerbGiverExtra = __instance.health.hediffSet.hediffs[o].TryGetComp<HediffComp_VerbGiverExtra>()) != null)
+                if ((_VerbGiverExtra = __instance.health.hediffSet.hediffs[o].TryGetCompFast<HediffComp_VerbGiverExtra>()) != null)
                 {
                     foreach (Gizmo gizmo in _VerbGiverExtra.GetVerbsCommands())
                     {

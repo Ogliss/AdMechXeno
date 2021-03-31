@@ -12,7 +12,7 @@
 
 <PawnKindDef ParentName="OG_Mechanicus_Base_KindDef">
 	<defName>Colonist_OG_Mechanicus</defName>
-	<label>colonist</label>
+    <label>colonist (Mechanicus)</label>
 	<defaultFactionType>OG_Mechanicus_PlayerColony</defaultFactionType>
 	<backstoryFiltersOverride>
 		<li>

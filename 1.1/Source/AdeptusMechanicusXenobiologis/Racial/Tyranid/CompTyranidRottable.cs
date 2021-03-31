@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdeptusMechanicus.ExtensionMethods;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
@@ -159,7 +160,7 @@ namespace RimWorld
             get
             {
                 Pawn holder;
-                CompEquippable equippable = this.parent.TryGetComp<CompEquippable>();
+                CompEquippable equippable = this.parent.TryGetCompFast<CompEquippable>();
                 holder = equippable?.PrimaryVerb?.CasterPawn;
                 return holder?.RaceProps?.FleshType == OGTyranidDefOf.OG_Flesh_Tyranid || holder?.RaceProps?.BloodDef == OGTyranidDefOf.OG_FilthBlood_Tyranid || holder?.Faction?.def == OGTyranidDefOf.OG_Tyranid_Faction;
             }
@@ -177,7 +178,7 @@ namespace RimWorld
                 }
                 if (this.PropsRot.disableIfHatcher)
                 {
-                    CompHatcher compHatcher = this.parent.TryGetComp<CompHatcher>();
+                    CompHatcher compHatcher = this.parent.TryGetCompFast<CompHatcher>();
                     if (compHatcher != null && !compHatcher.TemperatureDamaged)
                     {
                         return false;

@@ -35,7 +35,7 @@
 
 <PawnKindDef ParentName="OG_Miliatrum_Base_PawnKind">
 	<defName>Colonist_OG_Militarum</defName>
-	<label>colonist</label>
+    <label>colonist (Militarum)</label>
 	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
 	<apparelTags>
 		<li>OGIGClothing</li>

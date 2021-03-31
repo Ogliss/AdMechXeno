@@ -2,6 +2,7 @@
 using Verse;
 using HarmonyLib;
 using System;
+using AdeptusMechanicus.ExtensionMethods;
 
 namespace AdeptusMechanicus.HarmonyInstance
 {
@@ -16,7 +17,7 @@ namespace AdeptusMechanicus.HarmonyInstance
             {
                 if (injury!=null)
                 {
-                    Comp_NecronOG _Necron = pawn.TryGetComp<Comp_NecronOG>();
+                    Comp_NecronOG _Necron = pawn.TryGetCompFast<Comp_NecronOG>();
                     if (_Necron != null)
                     {
                         DamageInfo dInfo = dinfo;

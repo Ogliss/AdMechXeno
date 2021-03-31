@@ -1,4 +1,5 @@
 ﻿using AdeptusMechanicus;
+using AdeptusMechanicus.ExtensionMethods;
 using RimWorld;
 using System;
 using System.Collections.Generic;
@@ -43,7 +44,7 @@ namespace AdeptusMechanicus
             {
                 BodypartUtility.ReplaceHediffFromBodypart(this.pawn, base.Part, AMXenoBiologisHediffDefOf.MissingBodyPart, AMXenoBiologisHediffDefOf.OG_Regenerated);
             }
-            if (this.Part.parts != null && this.Part.parts.Any(x => pawn.health.hediffSet.PartIsMissing(x)) && pawn.TryGetComp<Comp_NecronOG>() is Comp_NecronOG _Necron)
+            if (this.Part.parts != null && this.Part.parts.Any(x => pawn.health.hediffSet.PartIsMissing(x)) && pawn.TryGetCompFast<Comp_NecronOG>() is Comp_NecronOG _Necron)
             {
                 _Necron.TryRegrowBodyparts();
             }

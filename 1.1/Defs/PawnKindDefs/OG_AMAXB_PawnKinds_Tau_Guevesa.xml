@@ -69,7 +69,7 @@
 <!-- ============================ Gue'vesa Civilians ========================== -->
 <PawnKindDef ParentName="GuevesaCivBase">
 	<defName>Colonist_OG_Guevesa</defName>
-	<label>Gue'vesa colonist</label>
+    <label>colonist (Gue'vesa)</label>
 	<backstoryFiltersOverride>
 		<li>
 		<categories>

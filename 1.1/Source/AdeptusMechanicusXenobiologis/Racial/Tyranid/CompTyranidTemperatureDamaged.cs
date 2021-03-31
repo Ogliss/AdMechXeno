@@ -1,4 +1,5 @@
 ﻿using System;
+using AdeptusMechanicus.ExtensionMethods;
 using RimWorld;
 using Verse;
 
@@ -53,7 +54,7 @@ namespace AdeptusMechanicus
             get
             {
                 Pawn holder;
-                CompEquippable equippable = this.parent.TryGetComp<CompEquippable>();
+                CompEquippable equippable = this.parent.TryGetCompFast<CompEquippable>();
                 holder = equippable?.PrimaryVerb?.CasterPawn;
                 return holder?.RaceProps?.FleshType == OGTyranidDefOf.OG_Flesh_Tyranid || holder?.RaceProps?.BloodDef == OGTyranidDefOf.OG_FilthBlood_Tyranid  || holder?.Faction?.def == OGTyranidDefOf.OG_Tyranid_Faction;
             }
