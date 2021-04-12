@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using RimWorld;
+using Verse.AI;
+using Verse;
 
-namespace Verse.AI
+namespace AdeptusMechanicus
 {
-    // Token: 0x02000A70 RID: 2672
-    public class JobDriver_OGAMXBAttackBuilding : JobDriver
+    // AdeptusMechanicus.JobDriver_XBAttackBuilding
+    public class JobDriver_XBAttackBuilding : JobDriver
     {
         //// Token: 0x06003B7D RID: 15229 RVA: 0x001BFF59 File Offset: 0x001BE359
         public override void ExposeData()

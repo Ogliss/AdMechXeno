@@ -102,7 +102,7 @@
 				<thingDef>Plasteel</thingDef>
 				<count>75</count>
 			</li>
-			<li Class="ScenPart_AMXBRelations">
+			<li Class="AdeptusMechanicus.ScenPart_AMXBRelations">
 				<def>OG_Rule_EnforceFactionRelations</def>
 			</li>
 			<li MayRequire="CptVHOhu970.CorruptionWorship" Class="Corruption.Worship.ScenPart_StartingReligion">
@@ -223,7 +223,7 @@
 				<thingDef>Plasteel</thingDef>
 				<count>75</count>
 			</li>
-			<li Class="ScenPart_AMXBRelations">
+			<li Class="AdeptusMechanicus.ScenPart_AMXBRelations">
 				<def>OG_Rule_EnforceFactionRelations</def>
 			</li>
 			<li MayRequire="CptVHOhu970.CorruptionWorship" Class="Corruption.Worship.ScenPart_StartingReligion">

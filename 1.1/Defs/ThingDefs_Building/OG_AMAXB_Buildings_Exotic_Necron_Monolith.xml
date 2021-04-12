@@ -22,7 +22,7 @@
 		<ChunkSlagSteel>20</ChunkSlagSteel>
 	</killedLeavings>
 	<comps>
-		<li Class="CompProperties_PawnSpawnerOnDamaged">
+		<li Class="AdeptusMechanicus.CompProperties_PawnSpawnerOnDamaged">
 			<Faction>OG_Necron_Faction</Faction>
 		</li>
 		<li Class="CompProperties_CausesGameCondition">

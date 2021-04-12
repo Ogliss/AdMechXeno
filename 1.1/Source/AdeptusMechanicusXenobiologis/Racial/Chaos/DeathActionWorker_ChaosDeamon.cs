@@ -1,12 +1,14 @@
 ﻿using System;
+using AdeptusMechanicus;
 using RimWorld;
+using Verse;
 using Verse.AI;
 using Verse.AI.Group;
 
-namespace Verse
+namespace AdeptusMechanicus
 {
-    // Token: 0x02000B58 RID: 2904
-    public class DeathActionWorker_OGChaosDeamon : DeathActionWorker
+    // AdeptusMechanicus.DeathActionWorker_ChaosDeamon
+    public class DeathActionWorker_ChaosDeamon : DeathActionWorker
     {
         Pawn pawn;
         Pawn oldpawn;

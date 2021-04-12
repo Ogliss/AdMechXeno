@@ -1,13 +1,13 @@
 <Defs>
 <JobDef>
 	<defName>OGAMXBDeconstruct</defName>
-	<driverClass>JobDriver_OGAMXBDeconstruct</driverClass>
+	<driverClass>AdeptusMechanicus.JobDriver_XBDeconstruct</driverClass>
 	<reportString>deconstructing TargetA.</reportString>
 </JobDef>
 
 	<JobDef>
 	<defName>OGAMXBWaitCombatBuilding</defName>
-	<driverClass>JobDriver_OGAMXBWaitBuilding</driverClass>
+	<driverClass>AdeptusMechanicus.JobDriver_XBWaitBuilding</driverClass>
 	<reportString>watching for targets.</reportString>
 	<alwaysShowWeapon>true</alwaysShowWeapon>
 	<suspendable>false</suspendable>
@@ -15,13 +15,13 @@
 
 	<JobDef>
 		<defName>OGAMXBWaitBuilding</defName>
-		<driverClass>JobDriver_OGAMXBWaitBuilding</driverClass>
+		<driverClass>AdeptusMechanicus.JobDriver_XBWaitBuilding</driverClass>
 		<reportString>standing.</reportString>
 	</JobDef>
 
 	<JobDef>
 		<defName>OGAMXBAttackBuilding</defName>
-		<driverClass>JobDriver_OGAMXBAttackBuilding</driverClass>
+		<driverClass>AdeptusMechanicus.JobDriver_XBAttackBuilding</driverClass>
 		<reportString>attacking TargetA.</reportString>
 		<alwaysShowWeapon>true</alwaysShowWeapon>
 		<casualInterruptible>false</casualInterruptible>

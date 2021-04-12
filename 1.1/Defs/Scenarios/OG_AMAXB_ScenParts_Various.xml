@@ -13,7 +13,7 @@
 <ScenPartDef>
 	<defName>OG_Rule_EnforceFactionRelations</defName>
 	<label>Faction Relations Control</label>
-	<scenPartClass>ScenPart_AMXBRelations</scenPartClass>
+	<scenPartClass>AdeptusMechanicus.ScenPart_AMXBRelations</scenPartClass>
 	<category>Rule</category>
 	<selectionWeight>1.0</selectionWeight>
 	<summaryPriority>359</summaryPriority>

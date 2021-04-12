@@ -1,11 +1,12 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using Verse;
 using Verse.AI;
 
-namespace RimWorld
+namespace AdeptusMechanicus
 {
-    // Token: 0x02000113 RID: 275 
-    public class JobGiver_OGNecron : ThinkNode_JobGiver
+    // AdeptusMechanicus.JobGiver_OGNecron
+    public class JobGiver_Necron : ThinkNode_JobGiver
     {
         // Token: 0x060005B7 RID: 1463 RVA: 0x00037A28 File Offset: 0x00035E28
         protected override Job TryGiveJob(Pawn pawn)

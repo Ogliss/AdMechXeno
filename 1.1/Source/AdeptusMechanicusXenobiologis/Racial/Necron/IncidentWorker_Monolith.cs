@@ -1,11 +1,12 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Verse;
 
-namespace RimWorld
+namespace AdeptusMechanicus
 {
-    // Token: 0x0200034F RID: 847
+    // AdeptusMechanicus.IncidentWorker_Monolith
     public class IncidentWorker_Monolith : IncidentWorker
     {
         // Token: 0x17000227 RID: 551

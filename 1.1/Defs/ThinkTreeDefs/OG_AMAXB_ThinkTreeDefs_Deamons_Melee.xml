@@ -5,7 +5,7 @@
 		<defName>OGChaosDeamons</defName>
 		<thinkRoot Class="ThinkNode_Priority">
 		<subNodes>
-		<li Class="JobGiver_OGChaosDeamon" />
+		<li Class="AdeptusMechanicus.JobGiver_ChaosDeamon" />
 		<!-- Keep lying down if we have to -->
 				<li Class="ThinkNode_ConditionalMustKeepLyingDown">
 					<subNodes>
@@ -33,7 +33,7 @@
 		<li Class="ThinkNode_ConditionalOfPlayerFaction">
 			<invert>true</invert>
 			<subNodes>
-				<li Class="JobGiver_OGChaosDeamon" />
+				<li Class="AdeptusMechanicus.JobGiver_ChaosDeamon" />
 			
 				<li Class="ThinkNode_ConditionalMentalState">
 					<state>OG_MentalState_ChaosDeamon</state>
@@ -47,7 +47,7 @@
 							</li>
 							</subNodes>
 						</li>
-						<li Class="JobGiver_OGChaosDeamon" />
+						<li Class="AdeptusMechanicus.JobGiver_ChaosDeamon" />
 						<li Class="JobGiver_WanderAnywhere">
 							<maxDanger>Deadly</maxDanger>
 						</li>

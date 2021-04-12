@@ -5,10 +5,13 @@ using System.Text;
 using UnityEngine;
 using Verse.AI;
 using RimWorld;
+using AdeptusMechanicus;
+using Verse;
 
-namespace Verse
+namespace AdeptusMechanicus
 {
-    public class JobGiver_OGANXBAttackBuilding : ThinkNode_JobGiver
+    // AdeptusMechanicus.JobGiver_XBAttackBuilding
+    public class JobGiver_XBAttackBuilding : ThinkNode_JobGiver
     {
         protected override Job TryGiveJob(Pawn pawn)
         {
@@ -37,7 +40,7 @@ namespace Verse
             }
             if (building != null && !building.Destroyed && building.def.useHitPoints && pawn.Position.DistanceTo(building.Position) <= pawn.CurrentEffectiveVerb.verbProps.range)
             {
-                return new Job(AMXenoBiologisJobDefOf.OGAMXBAttackBuilding, building);
+                return new Job(XBJobDefOf.OGAMXBAttackBuilding, building);
             }
             return null;
 

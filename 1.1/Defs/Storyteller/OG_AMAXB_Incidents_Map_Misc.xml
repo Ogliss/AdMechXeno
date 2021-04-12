@@ -10,7 +10,7 @@
 	<targetTags>
 		<li>Map_PlayerHome</li>
 	</targetTags>
-		<workerClass>IncidentWorker_Warpstorm</workerClass>
+		<workerClass>AdeptusMechanicus.IncidentWorker_Warpstorm</workerClass>
 		<letterLabel>Warpstorm</letterLabel>
 		<letterText>A freak localized Warpstorm is striking a small area. At best this can cause massive fires, at worst a deamonic incursion.</letterText>
 		<letterDef>ThreatSmall</letterDef>
@@ -31,7 +31,7 @@
 	<targetTags>
 		<li>Map_PlayerHome</li>
 	</targetTags>
-		<workerClass>IncidentWorker_Warpstorm</workerClass>
+		<workerClass>AdeptusMechanicus.IncidentWorker_Warpstorm</workerClass>
 		<letterLabel>Warpstorm</letterLabel>
 		<letterText>A freak localized Warpstorm is striking a small area. At best this can cause massive fires, at worst a deamonic incursion.</letterText>
 		<letterDef>ThreatSmall</letterDef>

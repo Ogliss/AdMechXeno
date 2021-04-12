@@ -1,9 +1,11 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using Verse;
 using Verse.AI;
 
-namespace RimWorld
+namespace AdeptusMechanicus
 {
+    // AdeptusMechanicus.JobGiver_OGChaosDeamon_Ranged
     public class JobGiver_OGChaosDeamon_Ranged : ThinkNode_JobGiver
     {
         private const float WaitChance = 0.0f;

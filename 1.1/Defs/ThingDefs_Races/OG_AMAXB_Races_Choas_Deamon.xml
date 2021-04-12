@@ -76,7 +76,7 @@
 	<!-- Walker (Warrior/Immortal/Lord) base -->
 		<ThingDef ParentName="OG_Chaos_Deamon_Base" Name="OG_Chaos_Deamon_Walker" Abstract="True">
 		<race>
-			<deathActionWorkerClass>DeathActionWorker_OGChaosDeamon</deathActionWorkerClass>
+			<deathActionWorkerClass>AdeptusMechanicus.DeathActionWorker_ChaosDeamon</deathActionWorkerClass>
 			<intelligence>ToolUser</intelligence>
 			<baseBodySize>1.0</baseBodySize>
 			<lifeStageAges>
@@ -110,7 +110,7 @@
 	<!-- Walker (Warrior/Immortal/Lord) base -->
 	<ThingDef ParentName="OG_Chaos_Deamon_Base" Name="OG_Chaos_Deamon_Flyer" Abstract="True">
 		<race>
-			<deathActionWorkerClass>DeathActionWorker_OGChaosDeamon</deathActionWorkerClass>
+			<deathActionWorkerClass>AdeptusMechanicus.DeathActionWorker_ChaosDeamon</deathActionWorkerClass>
 			<intelligence>ToolUser</intelligence>
 			<baseBodySize>1.0</baseBodySize>
 			<lifeStageAges>
@@ -289,7 +289,7 @@
 			<useMeatFrom>Mech_Centipede</useMeatFrom>
 		</race>
 		<comps> 
-			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
 			</li> 
 			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
 				<InvunerableSaveChance>0.16</InvunerableSaveChance>
@@ -381,7 +381,7 @@
 			</hediffGiverSets>
 		</race>
 		<comps> 
-			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
 			</li> 
 			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
 				<InvunerableSaveChance>0.16</InvunerableSaveChance>
@@ -450,7 +450,7 @@
 			</hediffGiverSets>
 		</race>
 		<comps> 
-			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
 			</li> 
 			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
 			<InvunerableSaveChance>0.32</InvunerableSaveChance>
@@ -516,7 +516,7 @@
 			</hediffGiverSets>
 		</race>
 		<comps> 
-			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
 			</li> 
 			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
 				<InvunerableSaveChance>0.48</InvunerableSaveChance>
@@ -589,7 +589,7 @@
 			<useMeatFrom>Mech_Centipede</useMeatFrom>
 		</race>
 		<comps> 
-			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
 			</li> 
 			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
 				<InvunerableSaveChance>0.16</InvunerableSaveChance>
@@ -724,7 +724,7 @@
 			<useMeatFrom>Mech_Centipede</useMeatFrom>
 		</race>
 		<comps> 
-			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
 			</li> 
 			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
 				<InvunerableSaveChance>0.50</InvunerableSaveChance>
@@ -797,7 +797,7 @@
 			<useMeatFrom>Mech_Centipede</useMeatFrom>
 		</race>
 		<comps> 
-			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
 			</li> 
 			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
 				<InvunerableSaveChance>0.32</InvunerableSaveChance>
@@ -926,7 +926,7 @@
 			<useMeatFrom>Mech_Centipede</useMeatFrom>
 		</race>
 		<comps> 
-			<li Class="AdeptusMechanicus.CompProperties_ChaosDeamonOG">
+			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
 			</li> 
 			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
 				<InvunerableSaveChance>0.32</InvunerableSaveChance>

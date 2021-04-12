@@ -4,9 +4,9 @@ using AdeptusMechanicus;
 using Verse;
 using AdeptusMechanicus.settings;
 
-namespace RimWorld
+namespace AdeptusMechanicus
 {
-    // Token: 0x0200065F RID: 1631
+    // AdeptusMechanicus.ScenPart_AMXBRelations
     public class ScenPart_AMXBRelations : ScenPart
     {
 

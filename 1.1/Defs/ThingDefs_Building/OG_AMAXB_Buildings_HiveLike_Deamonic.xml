@@ -115,7 +115,7 @@
 			<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
 			<damagePerTickRare>10</damagePerTickRare>
 		</li-->
-		<li Class="CompProperties_WarpFireOverlay">
+		<li Class="AdeptusMechanicus.CompProperties_WarpFireOverlay">
 			<fireSize>5</fireSize>
 			<offset>0,-4,-1</offset>
 		</li>

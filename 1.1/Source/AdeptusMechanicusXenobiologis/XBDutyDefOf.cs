@@ -1,10 +1,11 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using Verse.AI;
 
-namespace RimWorld
+namespace AdeptusMechanicus
 {
     [DefOf]
-    public static class AMXenoBiologisDutyDefOf
+    public static class XBDutyDefOf
     {
     //    public static DutyDef OGAMXB_DefendAndExpandHiveLike;
     //    public static DutyDef OGAMXB_DefendHiveLikeAggressively;

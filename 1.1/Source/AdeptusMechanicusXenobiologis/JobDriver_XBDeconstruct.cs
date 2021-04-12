@@ -4,11 +4,12 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using Verse.AI;
+using RimWorld;
 
-
-namespace RimWorld
+namespace AdeptusMechanicus
 {
-    public class JobDriver_OGAMXBDeconstruct : JobDriver
+    // AdeptusMechanicus.JobDriver_XBDeconstruct
+    public class JobDriver_XBDeconstruct : JobDriver
     {
 
         private float workLeft;

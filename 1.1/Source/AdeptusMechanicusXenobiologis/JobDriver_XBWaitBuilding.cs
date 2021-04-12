@@ -1,12 +1,14 @@
-﻿using RimWorld;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using RimWorld;
+using Verse;
+using Verse.AI;
 
-namespace Verse.AI
+namespace AdeptusMechanicus
 {
-
-    public class JobDriver_OGAMXBWaitBuilding : JobDriver
+    // AdeptusMechanicus.JobDriver_XBWaitBuilding
+    public class JobDriver_XBWaitBuilding : JobDriver
     {
         private const int TargetSearchInterval = 4;
 
@@ -17,7 +19,7 @@ namespace Verse.AI
 
         public override string GetReport()
         {
-            if (this.job.def != AMXenoBiologisJobDefOf.OGAMXBWaitCombatBuilding)
+            if (this.job.def != XBJobDefOf.OGAMXBWaitCombatBuilding)
             {
                 return base.GetReport();
             }
@@ -98,7 +100,7 @@ namespace Verse.AI
                                 {
                                     //this.pawn.meleeVerbs.TryMeleeAttack(pawn2, null, false);
 
-                                    new Job(AMXenoBiologisJobDefOf.OGAMXBAttackBuilding, pawn2);
+                                    new Job(XBJobDefOf.OGAMXBAttackBuilding, pawn2);
                                     return;
                                 }
                             }
@@ -118,7 +120,7 @@ namespace Verse.AI
                     this.pawn.natives.TryBeatFire(fire);
                     return;
                 }
-                if (flag && this.pawn.Faction != null && this.pawn.jobs.curJob.def == AMXenoBiologisJobDefOf.OGAMXBWaitCombatBuilding)
+                if (flag && this.pawn.Faction != null && this.pawn.jobs.curJob.def == XBJobDefOf.OGAMXBWaitCombatBuilding)
                 {
                     bool allowManualCastWeapons = !this.pawn.IsColonist;
                     Verb verb = this.pawn.TryGetAttackVerb(null, allowManualCastWeapons);

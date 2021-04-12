@@ -1,11 +1,12 @@
 ﻿using AdeptusMechanicus.ExtensionMethods;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Text;
 using UnityEngine;
 using Verse;
 
-namespace RimWorld
+namespace AdeptusMechanicus
 {
     // Token: 0x02000257 RID: 599
     public class CompProperties_TyranidRottable : CompProperties

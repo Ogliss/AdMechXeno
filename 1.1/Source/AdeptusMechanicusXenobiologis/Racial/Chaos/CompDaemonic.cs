@@ -8,20 +8,20 @@ using Verse.Sound;
 
 namespace AdeptusMechanicus
 {
-    public class CompProperties_ChaosDeamonOG : CompProperties
+    public class CompProperties_Daemonic : CompProperties
     {
-        public CompProperties_ChaosDeamonOG()
+        public CompProperties_Daemonic()
         {
-            this.compClass = typeof(CompChaosDeamonOG);
+            this.compClass = typeof(CompDaemonic);
         }
         public bool regenerating = false;
 
     }
 
     // Token: 0x02000002 RID: 2
-    public class CompChaosDeamonOG : ThingComp
+    public class CompDaemonic : ThingComp
     {
-        public CompProperties_ChaosDeamonOG Props => (CompProperties_ChaosDeamonOG)props;
+        public CompProperties_Daemonic Props => (CompProperties_Daemonic)props;
         public Pawn pawn;
         public Lord lord;
 

@@ -1,7 +1,8 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using Verse;
 
-namespace RimWorld
+namespace AdeptusMechanicus
 {
     // Token: 0x02000956 RID: 2390
     [DefOf]

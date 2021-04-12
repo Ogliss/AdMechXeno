@@ -1,12 +1,13 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using Verse;
 using Verse.AI;
 
-namespace RimWorld
+namespace AdeptusMechanicus
 {
 
     [DefOf]
-    public static class AMXenoBiologisJobDefOf
+    public static class XBJobDefOf
     {
         public static JobDef OGAMXBDeconstruct;
         public static JobDef OGAMXBWaitBuilding;

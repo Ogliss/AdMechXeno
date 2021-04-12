@@ -1,8 +1,11 @@
 ﻿using System;
+using Verse.AI;
+using Verse;
 
-namespace Verse.AI
+namespace AdeptusMechanicus
 {
-    public abstract class ThinkNode_OGAMXBChancePerHour : ThinkNode_Priority
+    // AdeptusMechanicus.ThinkNode_ChancePerHour
+    public abstract class ThinkNode_ChancePerHour : ThinkNode_Priority
     {
         public override ThinkResult TryIssueJobPackage(Pawn pawn, JobIssueParams jobParams)
         {

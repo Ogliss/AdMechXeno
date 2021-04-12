@@ -1,10 +1,11 @@
-﻿using System;
+﻿using RimWorld;
+using System;
 using Verse;
 using Verse.AI.Group;
 
-namespace RimWorld
+namespace AdeptusMechanicus
 {
-    // Token: 0x02000175 RID: 373
+    // AdeptusMechanicus.LordJob_NecronsDefendShip
     public class LordJob_NecronsDefendShip : LordJob
     {
         // Token: 0x060007BF RID: 1983 RVA: 0x00043D8B File Offset: 0x0004218B
