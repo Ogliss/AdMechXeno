@@ -103,11 +103,16 @@ Sicarians
 Horrors of Tzeentch (Pink, Blue, Brimstone)
 Flamer of Tzeentch (Normal, Exalted)
 Screamers of Tzeentch
+Lord of Change
 
 Nurgling
 Plaguebearer
+Great Unclean One
 
 Deamonette
+Keeper of Secrets
+
+Bloodletter
 
 Warp Storm Incident
 Deamonic Infestation Incident
@@ -119,37 +124,44 @@ Homogaunt (Leaping Attack)
 Termagant
 Gargoyle
 Genestealer
-Warrior (Not Yet Avaiable)
+Warrior
 Lictor (Infiltrator, Move Through Cover)
 Ravener (Deep Strike)
 Hive Tyrant
-Carnifex (Not Yet Avaiable)
+Carnifex
 Zoanthrope (Shielded)
 
-load order should be
-[url=https://steamcommunity.com/workshop/filedetails/?id=771341092/]Astra Militarum Imperial Guard Core Mod[/url]
-[url=https://steamcommunity.com/workshop/filedetails/?id=1541438614/]Adeptus Mechanicus: Armoury R1.0[/url]
-Adeptus Mechanicus: Magos Xenobiologis R1.0
 
-OR
+Load Order info:
+	Humanoid Alien Races( if used, ideally this should be loaded as close to the top of your list as possible )
+	SRTS( if used )
+	Combat Extended( if used )
+	Astra Militarum Core( if used )
+	Astra offical addons( if used )
+	Corruption Core( if used )
+	Corruption offical addons( if used )
+	Armoury
+	Magos Xenobiologis( This Mod )
+	Playable Orkz,Eldar,Tau,Etc( if used ) order doesnt matter
 
-[url=https://steamcommunity.com/workshop/filedetails/?id=1541438614/]Adeptus Mechanicus: Armoury R1.0[/url]
-Adeptus Mechanicus: Magos Xenobiologis R1.0
+Credits:
+Kajko: Textures for
+	Ogyrn Heads
+	Ogyrn Bodies
 
-Playable Races: These will overwrite the NPC versions of the factions added by Magos Xenobiologis
-These require [url=https://steamcommunity.com/workshop/filedetails/?id=839005762/]Humanoid Alien Races 2.0[/url]
-[url=https://steamcommunity.com/workshop/filedetails/?id=1541518264/]Adeptus Mechanicus: Magos Xenobiologis (Playable Orkoids) R1.0[/url]
+Fennbold: Textures for
+	Kroothound
+	Krootox
+	
+RebelRot: Textures for
+	Kroot Heads
+	Kroot Hair
+	
+SirLaLaPyon: Textures for
+	Bloodletter
 
-[url=https://steamcommunity.com/workshop/filedetails/?id=1541520023/]Adeptus Mechanicus: Magos Xenobiologis (Playable Tau) R1.0[/url]
-
-[url=https://steamcommunity.com/workshop/filedetails/?id=1541515831/]Adeptus Mechanicus: Magos Xenobiologis (Playable Eldar) R1.0[/url]
-
-you have my full permission to rebalance/patch/translate this mod, just please link back to the original :)
-
-Problems? Questions? Comments? Got something youd like to see added to the mod?
-[url=https://discord.gg/fR5cA7b/]Join us on Discord[/url]
-
-	Kajko who contributed the following textures
-		All Ogyrn Heads
+Ogliss: XML, C# and Textures for
+	Everything not listed above!
+		
 		</description>
 </ModMetaData>
