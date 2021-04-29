@@ -40,7 +40,7 @@ namespace AdeptusMechanicus
             }
             if (building != null && !building.Destroyed && building.def.useHitPoints && pawn.Position.DistanceTo(building.Position) <= pawn.CurrentEffectiveVerb.verbProps.range)
             {
-                return new Job(XBJobDefOf.OGAMXBAttackBuilding, building);
+                return new Job(XenobiologisJobDefOf.OGAMXBAttackBuilding, building);
             }
             return null;
 

@@ -8,7 +8,6 @@ namespace AdeptusMechanicus
     // AdeptusMechanicus.JobGiver_ChaosDeamon
     public class JobGiver_ChaosDeamon : ThinkNode_JobGiver
     {
-        // Token: 0x060005B7 RID: 1463 RVA: 0x00037A28 File Offset: 0x00035E28
         protected override Job TryGiveJob(Pawn pawn)
         {
             //pawn.mindState.mentalStateHandler.TryStartMentalState(OGChaosDeamonDefOf.MentalState_OGChaosDeamon, null, false, false, null, false);
@@ -51,7 +50,6 @@ namespace AdeptusMechanicus
             return null;
         }
 
-        // Token: 0x060005B8 RID: 1464 RVA: 0x00037B7C File Offset: 0x00035F7C
         private Job MeleeAttackJob(Pawn pawn, Thing target)
         {
             Rand.PushState();

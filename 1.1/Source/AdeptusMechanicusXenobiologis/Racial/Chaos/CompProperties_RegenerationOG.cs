@@ -25,7 +25,6 @@ namespace AdeptusMechanicus
 
     }
 
-    // Token: 0x02000002 RID: 2
     public class CompRegenerationOG : ThingComp
     {
         public CompProperties_RegenerationOG Props => (CompProperties_RegenerationOG)props;

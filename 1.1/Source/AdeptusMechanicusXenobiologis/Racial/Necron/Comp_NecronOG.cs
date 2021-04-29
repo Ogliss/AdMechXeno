@@ -59,7 +59,7 @@ namespace AdeptusMechanicus
         public List<Hediff> HealableHediffs => PawnHediffs.FindAll(x => !unhealableHediffs.Contains(x) && x.def.hediffClass==typeof(Hediff_Injury));
         public List<Hediff> UnhealableHediffs => unhealableHediffs;
         public bool HasHealableWounds => !HealableHediffs.NullOrEmpty();
-        public bool HasRegeneragtingLimbs => pawn.health.hediffSet.hediffs.Any(x => x.def == XBHediffDefOf.OG_Regenerating);
+        public bool HasRegeneragtingLimbs => pawn.health.hediffSet.hediffs.Any(x => x.def == XenobiologisHediffDefOf.OG_Regenerating);
         public Map map => pawn.Dead ? pawn.Corpse.Map : pawn.Map;
         public IntVec3 pos => pawn.Dead ? pawn.Corpse.Position : pawn.Position;
         bool Necrodermis => (pawn.Dead ? false : this.ticksSinceHeal > this.healIntervalTicks) && Props.Necrodermis && !HealableHediffs.NullOrEmpty();
@@ -301,7 +301,7 @@ namespace AdeptusMechanicus
 
             bool flag2 = HealableHediffs.Any(x => !pawn.health.hediffSet.PartIsMissing(x.Part) && x is Hediff_Injury);
             bool flag3 = HealableHediffs.Any(x => pawn.health.hediffSet.PartIsMissing(x.Part));
-            bool flag4 = HealableHediffs.Any(x => x.def == XBHediffDefOf.OG_Regenerating);
+            bool flag4 = HealableHediffs.Any(x => x.def == XenobiologisHediffDefOf.OG_Regenerating);
             Rand.PushState();
             float num = Rand.RangeInclusive(1, 100);
             Rand.PopState();
@@ -360,7 +360,7 @@ namespace AdeptusMechanicus
 
         public void TryRegrowBodyparts(bool Forced = false)
         {
-            using (IEnumerator<BodyPartRecord> enumerator = this.pawn.GetFirstMatchingBodyparts(this.pawn.RaceProps.body.corePart, HediffDefOf.MissingBodyPart, XBHediffDefOf.OG_Regenerating, (Hediff hediff) => hediff is Hediff_AddedPart).GetEnumerator())
+            using (IEnumerator<BodyPartRecord> enumerator = this.pawn.GetFirstMatchingBodyparts(this.pawn.RaceProps.body.corePart, HediffDefOf.MissingBodyPart, XenobiologisHediffDefOf.OG_Regenerating, (Hediff hediff) => hediff is Hediff_AddedPart).GetEnumerator())
             {
                 while (enumerator.MoveNext())
                 {
@@ -373,7 +373,7 @@ namespace AdeptusMechanicus
                         if (flag)
                         {
                             this.pawn.health.RemoveHediff(hediff2);
-                            this.pawn.health.AddHediff(XBHediffDefOf.OG_Regenerating, part, null, null);
+                            this.pawn.health.AddHediff(XenobiologisHediffDefOf.OG_Regenerating, part, null, null);
                             this.pawn.health.hediffSet.DirtyCache();
                         }
                     }

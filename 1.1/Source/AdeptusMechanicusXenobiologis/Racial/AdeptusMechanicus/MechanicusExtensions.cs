@@ -12,7 +12,7 @@ namespace AdeptusMechanicus.ExtensionMethods
     {
         public static bool IsMechanicus(this Pawn pawn)
         {
-            return pawn.def == OGAdeptusMechanicusDefOf.OG_Human_Mechanicus;
+            return pawn.def == MechanicusDefOf.OG_Human_Mechanicus;
         }
 
     }

@@ -7,16 +7,15 @@ using Verse.AI;
 namespace AdeptusMechanicus
 {
     [StaticConstructorOnStartup]
-    public class OG_AMXB_CorpseModification
+    public class ConstructFleshTypeUtility
     {
-        static OG_AMXB_CorpseModification()
+        static ConstructFleshTypeUtility()
         {
             DefDatabase<ThingDef>.AllDefsListForReading.ForEach(action: td =>
             {
                 if (td.IsCorpse && td.defName.StartsWith("Corpse"))
                 {
-                    ThingDef raceDef = td.ingestible.sourceDef;
-                    if (raceDef != null)
+                    if (td.ingestible.sourceDef is ThingDef raceDef)
                     {
                         if (raceDef.race.FleshType!=null)
                         {
@@ -56,27 +55,5 @@ namespace AdeptusMechanicus
             });
         }
 
-        static void RemoveRottable(ThingDef td)
-        {
-
-            if (td.GetCompProperties<CompProperties_Rottable>() != null)
-            {
-                if (td.GetCompProperties<CompProperties_Rottable>() is CompProperties compprops)
-                {
-                    td.comps.Remove(compprops);
-                }
-            }
-            if (td.GetCompProperties<CompProperties_SpawnerFilth>() != null)
-            {
-                if (td.GetCompProperties<CompProperties_SpawnerFilth>() is CompProperties compprops)
-                {
-                    td.comps.Remove(compprops);
-                }
-            }
-            if (td.ingestible != null)
-            {
-                td.ingestible.preferability = FoodPreferability.NeverForNutrition;
-            }
-        }
     }
 }

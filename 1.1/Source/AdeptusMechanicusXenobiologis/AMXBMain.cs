@@ -13,7 +13,7 @@ namespace AdeptusMechanicus
         static AMXBMain()
         {
             ThingDef thingDef = DefDatabase<ThingDef>.GetNamed("Human");
-            OGAdeptusMechanicusDefOf.OG_Human_Mechanicus.recipes = thingDef.recipes;
+            MechanicusDefOf.OG_Human_Mechanicus.recipes = thingDef.recipes;
         //    Log.Message(string.Format("adding {0} to Mechanicus_Race", OGAdeptusMechanicusDefOf.OG_Human_Mechanicus.recipes.Count));
             /*
             foreach (var item in ModLister.AllInstalledMods)

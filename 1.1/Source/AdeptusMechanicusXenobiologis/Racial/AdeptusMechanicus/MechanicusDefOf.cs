@@ -4,14 +4,12 @@ using Verse;
 
 namespace AdeptusMechanicus
 {
-    // Token: 0x02000956 RID: 2390
     [DefOf]
-    public static class OGAdeptusMechanicusDefOf
+    public static class MechanicusDefOf
     {
-        // Token: 0x06003781 RID: 14209 RVA: 0x001A8393 File Offset: 0x001A6793
-        static OGAdeptusMechanicusDefOf()
+        static MechanicusDefOf()
         {
-            DefOfHelper.EnsureInitializedInCtor(typeof(OGAdeptusMechanicusDefOf));
+            DefOfHelper.EnsureInitializedInCtor(typeof(MechanicusDefOf));
         }
 
         // AdeptusMechanicus ThingDefs

@@ -4,14 +4,12 @@ using Verse;
 
 namespace AdeptusMechanicus
 {
-    // Token: 0x02000956 RID: 2390
     [DefOf]
-    public static class OGChaosDeamonDefOf
+    public static class ChaosDeamonDefOf
     {
-        // Token: 0x06003781 RID: 14209 RVA: 0x001A8393 File Offset: 0x001A6793
-        static OGChaosDeamonDefOf()
+        static ChaosDeamonDefOf()
         {
-            DefOfHelper.EnsureInitializedInCtor(typeof(OGChaosDeamonDefOf));
+            DefOfHelper.EnsureInitializedInCtor(typeof(ChaosDeamonDefOf));
         }
 
         // Deamon ThingDefs
@@ -45,20 +43,21 @@ namespace AdeptusMechanicus
         public static PawnKindDef OG_Chaos_Deamon_Lessar_Horror_Blue;
         public static PawnKindDef OG_Chaos_Deamon_Lessar_Horror_Brimstone;
         public static PawnKindDef OG_Chaos_Deamon_Lessar_Screamer;
+        public static PawnKindDef OG_Chaos_Deamon_Lord_of_Change; 
 
         // Deamons of Nurgle
         public static PawnKindDef OG_Chaos_Deamon_Lessar_Nurgling;
         public static PawnKindDef OG_Chaos_Deamon_Plague_Bearer;
-        //   public static PawnKindDef OG_Chaos_Deamon_Great_Unclean_One;
+        public static PawnKindDef OG_Chaos_Deamon_Great_Unclean_One;
 
         // Deamons of Slaanesh
         public static PawnKindDef OG_Chaos_Deamon_Lessar_Deamonette;
         //   public static PawnKindDef OG_Chaos_Deamon_Mounted_Deamonette;
-        //   public static PawnKindDef OG_Chaos_Deamon_Keeper_Of_Secrets;
+        public static PawnKindDef OG_Chaos_Deamon_Keeper_of_Secrets;
 
         // Deamons of Khrone
         //   public static PawnKindDef OG_Chaos_Deamon_Hound_of_Khorne;
-        //   public static PawnKindDef OG_Chaos_Deamon_Bloodletter;
+        public static PawnKindDef OG_Chaos_Deamon_Lessar_Bloodletter;
         //   public static PawnKindDef OG_Chaos_Deamon_Bloodthirster;
         //   public static PawnKindDef OG_Chaos_Deamon_Juggernaught_of_Khorne;
 

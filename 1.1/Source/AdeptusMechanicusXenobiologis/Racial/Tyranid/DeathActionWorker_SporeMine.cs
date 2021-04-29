@@ -4,7 +4,6 @@ using Verse;
 
 namespace AdeptusMechanicus
 {
-	// Token: 0x0200001C RID: 28
 	public class DeathActionWorker_SporeMine : DeathActionWorker
 	{
 

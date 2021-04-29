@@ -84,21 +84,6 @@ namespace AdeptusMechanicus
                     }
                     else if (lord == null && pawn.MentalStateDef != MentalStateDefOf.PanicFlee)
                     {
-                     //    log.message(string.Format("Not Fleeing but null lord"));
-                        /*
-                     //    log.message(string.Format("{0} At: {1}", pawn.Name, pawn.Position, pawn.Map));
-                     //    log.message(string.Format("{0} MentalState: {1}", pawn.Name, pawn.MentalState, pawn.Map));
-                     //    log.message(string.Format("{0} mindState: {1}", pawn.Name, pawn.mindState, pawn.Map));
-                     //    log.message(string.Format("{0} mindState duty: {1} thinkData: {2}", pawn.Name, pawn.mindState.duty, pawn.mindState.thinkData));
-                     //    log.message(string.Format("{0} mindState lastJobTag: {1} canFleeIndividual: {2}", pawn.Name, pawn.mindState.lastJobTag, pawn.mindState.canFleeIndividual));
-                     //    log.message(string.Format("{0} jobs: {1}", pawn.Name, pawn.jobs, pawn.Map));
-                     //    log.message(string.Format("{0} jobs curDriver: {1} curJob: {2}", pawn.Name, pawn.jobs.curDriver, pawn.jobs.curJob));
-                     //    log.message(string.Format("{0} jobs jobs: {1} jobs: {2}", pawn.Name, pawn.jobs.jobQueue, pawn.jobs.posture));
-                     //    log.message(string.Format("{0} CurJob: {1}", pawn.Name, pawn.CurJob, pawn.Map));
-                     //    log.message(string.Format("{0} CurJob lord: {1} def: {2}", pawn.Name, pawn.CurJob.lord, pawn.CurJob.def));
-                     //    log.message(string.Format("{0} CurJobDef: {1}", pawn.Name, pawn.CurJobDef, pawn.Map));
-                        */
-
                         // pawn.mindState.mentalStateHandler.TryStartMentalState(OGChaosDeamonDefOf.MentalState_OGChaosDeamon, null, false, false, null, false);
                     }
                     else
@@ -107,19 +92,6 @@ namespace AdeptusMechanicus
                         {
                             pawn.health.RemoveHediff(pawn.health.hediffSet.GetFirstHediffOfDef(HediffDefOf.BloodLoss));
                         }
-                        /*
-                        // Log.Message(string.Format("{0} At: {1}", pawn.Name, pawn.Position, pawn.Map));
-                        // Log.Message(string.Format("{0} MentalState: {1}", pawn.Name, pawn.MentalState, pawn.Map));
-                        // Log.Message(string.Format("{0} mindState: {1}", pawn.Name, pawn.mindState, pawn.Map));
-                        // Log.Message(string.Format("{0} mindState duty: {1} thinkData: {2}", pawn.Name, pawn.mindState.duty, pawn.mindState.thinkData));
-                        // Log.Message(string.Format("{0} mindState lastJobTag: {1} canFleeIndividual: {2}", pawn.Name, pawn.mindState.lastJobTag, pawn.mindState.canFleeIndividual));
-                        // Log.Message(string.Format("{0} jobs: {1}", pawn.Name, pawn.jobs, pawn.Map));
-                        // Log.Message(string.Format("{0} jobs curDriver: {1} curJob: {2}", pawn.Name, pawn.jobs.curDriver, pawn.jobs.curJob));
-                        // Log.Message(string.Format("{0} jobs jobs: {1} jobs: {2}", pawn.Name, pawn.jobs.jobQueue, pawn.jobs.posture));
-                        // Log.Message(string.Format("{0} CurJob: {1}", pawn.Name, pawn.CurJob, pawn.Map));
-                        // Log.Message(string.Format("{0} CurJob lord: {1} def: {2}", pawn.Name, pawn.CurJob.lord, pawn.CurJob.def));
-                        // Log.Message(string.Format("{0} CurJobDef: {1}", pawn.Name, pawn.CurJobDef, pawn.Map));
-                        */
                     }
                 }
             }

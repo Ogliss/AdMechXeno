@@ -7,7 +7,7 @@
 		<pawnSingular>cadian</pawnSingular>
 		<pawnsPlural>cadians</pawnsPlural>
 		<categoryTag>Outlander</categoryTag>
-		<basicMemberKind>Colonist_OG_Militarum</basicMemberKind>
+		<basicMemberKind>OG_Militarum_Guardsman_Ranged_Cadian</basicMemberKind>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<settlementGenerationWeight>1</settlementGenerationWeight>
 		<canMakeRandomly>true</canMakeRandomly>
@@ -45,7 +45,6 @@
 			<li>
 				<kindDef>Combat</kindDef>
 				<options>
-					<Colonist_OG_Militarum>5</Colonist_OG_Militarum>
 					<OG_Militarum_LordMarshal_Cadian>1</OG_Militarum_LordMarshal_Cadian>
 					<OG_Militarum_Guardsman_Ranged_Cadian>230</OG_Militarum_Guardsman_Ranged_Cadian>
 					<OG_Militarum_Guardsman_Melee_Cadian>100</OG_Militarum_Guardsman_Melee_Cadian>
@@ -59,7 +58,6 @@
 			<li>
 				<kindDef>Peaceful</kindDef>
 				<options>
-					<Colonist_OG_Militarum>50</Colonist_OG_Militarum>
 					<OG_Militarum_Guardsman_Ranged_Cadian>230</OG_Militarum_Guardsman_Ranged_Cadian>
 					<OG_Militarum_Guardsman_Melee_Cadian>130</OG_Militarum_Guardsman_Melee_Cadian>
 					<OG_Militarum_LordMarshal_Cadian>1</OG_Militarum_LordMarshal_Cadian>
