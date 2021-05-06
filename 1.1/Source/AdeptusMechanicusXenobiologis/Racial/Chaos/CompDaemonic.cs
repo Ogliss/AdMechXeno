@@ -27,7 +27,7 @@ namespace AdeptusMechanicus
 
         public override void PostPreApplyDamage(DamageInfo dinfo, out bool absorbed)
         {
-            if (dinfo.Def == OGDamageDefOf.OG_WarpStormStrike)
+            if (dinfo.Def == AdeptusDamageDefOf.OG_WarpStormStrike)
             {
                 absorbed = true;
                 SoundDefOf.EnergyShield_AbsorbDamage.PlayOneShot(new TargetInfo(base.parent.Position, base.parent.Map, false));
