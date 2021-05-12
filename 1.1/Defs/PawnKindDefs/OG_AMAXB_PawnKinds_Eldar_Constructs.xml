@@ -20,7 +20,7 @@
 		<bodyGraphicData>
 			<texPath>Things/Pawn/ToolUser/Eldar/WraithGuard</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>1.65</drawSize>
+			<drawSize>3.5</drawSize>
 			<color>(255,255,209)</color>
 			<shaderType>CutoutComplex</shaderType>
 			<shadowData>
@@ -34,7 +34,7 @@
 		<max>9999</max>
 	</weaponMoney>
 	<weaponTags>
-		<li>EGhostMelee</li>
+		<li>EldarWraithblade</li>
 	</weaponTags>
 </PawnKindDef>
 
@@ -49,7 +49,7 @@
 		<bodyGraphicData>
 			<texPath>Things/Pawn/ToolUser/Eldar/WraithGuard</texPath>
 			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>1.65</drawSize>
+			<drawSize>3.5</drawSize>
 			<color>(255,255,209)</color>
 			<shaderType>CutoutComplex</shaderType>
 			<shadowData>
@@ -63,7 +63,7 @@
 		<max>9999</max>
 	</weaponMoney>
 	<weaponTags>
-		<li>EWraithcannon</li>
+		<li>EldarWraithguard</li>
 	</weaponTags>
 	<modExtensions>
 		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">

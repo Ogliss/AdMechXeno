@@ -168,8 +168,9 @@
 				<bodyGraphicData>
 					<texPath>Things/Pawn/ToolUser/Eldar/Guardian</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>1.350</drawSize>
-					<color>(255,255,209)</color>
+					<drawSize>3.00</drawSize>
+					<color>238,213,172</color> <!-- BLEACHED BONE -->
+					<colorTwo>74,76,88</colorTwo> <!-- ADEPTUS BATTLEGREY -->
 					<shaderType>CutoutComplex</shaderType>
 					<shadowData>
 						<volume>(0.6, 0.8, 0.6)</volume>
@@ -244,8 +245,9 @@
 				<bodyGraphicData>
 					<texPath>Things/Pawn/ToolUser/Eldar/Ranger</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>1.350</drawSize>
-					<color>(255,255,209)</color>
+					<drawSize>2.7</drawSize>
+					<color>38,55,45</color> <!-- ORKHIDE SHADE -->
+					<colorTwo>238,213,172</colorTwo> <!-- BLEACHED BONE -->
 					<shaderType>CutoutComplex</shaderType>
 					<shadowData>
 						<volume>(0.6, 0.8, 0.6)</volume>
@@ -262,8 +264,7 @@
 			<max>5000</max>
 		</weaponMoney>
 		<weaponTags>
-			<li>EPrismRifle</li>
-			<li>ERangerLongrifle</li>
+			<li>EldarRanger</li>
 		</weaponTags>
 		<modExtensions>
 			<li Class="AdeptusMechanicus.InfiltratorExtension">
@@ -278,25 +279,13 @@
 		<itemQuality>Good</itemQuality>
 		<aiAvoidCover>false</aiAvoidCover>
 		<weaponMoney>
-			<min>5000</min>
-			<max>5000</max>
+			<min>6000</min>
+			<max>10000</max>
 		</weaponMoney>
 	</PawnKindDef>
 	
-	<!-- Aspect Warrior Exarch Base kind -->
-	<PawnKindDef Abstract="True" Name="OG_Eldar_Pawnkind_Exarch_Base" ParentName="OG_Eldar_Pawnkind_Base">
-		<race>Eldar_Aspect_Warrior</race>
-		<defaultFactionType>OG_Eldar_Craftworld_Faction</defaultFactionType>
-		<itemQuality>Masterwork</itemQuality>
-		<aiAvoidCover>false</aiAvoidCover>
-		<weaponMoney>
-			<min>5000</min>
-			<max>5000</max>
-		</weaponMoney>
-	</PawnKindDef>
-
 	<!-- Dire Avenger -->
-	<PawnKindDef ParentName="OG_Eldar_Pawnkind_Aspect_Base">
+	<PawnKindDef Name="OG_Eldar_Pawnkind_DireAvenger_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
 		<defName>OG_Eldar_DireAvenger</defName>
 		<label>dire avenger</label>
 		<combatPower>65</combatPower>
@@ -305,8 +294,8 @@
 				<bodyGraphicData>
 					<texPath>Things/Pawn/ToolUser/Eldar/DireAvenger</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>2.70</drawSize>
-					<color>(49,100,157)</color>
+					<drawSize>3.00</drawSize>
+					<color>49,100,157</color>
 					<shaderType>CutoutComplex</shaderType>
 					<shadowData>
 						<volume>(0.6, 0.8, 0.6)</volume>
@@ -324,37 +313,18 @@
 	</PawnKindDef>
 
 	<!-- Dire Avenger Exarch -->
-	<PawnKindDef ParentName="OG_Eldar_Pawnkind_Exarch_Base">
+	<PawnKindDef ParentName="OG_Eldar_Pawnkind_DireAvenger_Base">
 		<defName>OG_Eldar_DireAvenger_Exarch</defName>
 		<label>dire avenger exarch</label>
 		<combatPower>90</combatPower>
-		<itemQuality>Good</itemQuality>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Eldar/DireAvenger</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>2.70</drawSize>
-					<color>(49,100,157)</color>
-					<shaderType>CutoutComplex</shaderType>
-					<shadowData>
-						<volume>(0.6, 0.8, 0.6)</volume>
-					</shadowData>
-				</bodyGraphicData>
-				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
-					<drawSize>1.350</drawSize>
-				</dessicatedBodyGraphicData>
-			</li>
-		</lifeStages>
+		<itemQuality>Masterwork</itemQuality>
 		<weaponTags>
-			<li>EldarDireAvenger</li>
 			<li>EldarDireAvengerExarch</li>
 		</weaponTags>
 	</PawnKindDef>
 
 	<!-- Dark Reaper -->
-	<PawnKindDef ParentName="OG_Eldar_Pawnkind_Aspect_Base">
+	<PawnKindDef Name="OG_Eldar_Pawnkind_DarkReaper_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
 		<defName>OG_Eldar_DarkReaper</defName>
 		<label>dark reaper</label>
 		<combatPower>125</combatPower>
@@ -363,8 +333,9 @@
 				<bodyGraphicData>
 					<texPath>Things/Pawn/ToolUser/Eldar/DarkReaper</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>2.70</drawSize>
-					<color>(49,100,157)</color>
+					<drawSize>3.00</drawSize>
+					<color>26,33,61</color> <!-- NECRON ABYSS -->
+					<colorTwo>238,213,1720</colorTwo> <!-- BLEACHED BONE -->
 					<shaderType>CutoutComplex</shaderType>
 					<shadowData>
 						<volume>(0.6, 0.8, 0.6)</volume>
@@ -382,47 +353,29 @@
 	</PawnKindDef>
 
 	<!-- Dark Reaper Exarch -->
-	<PawnKindDef ParentName="OG_Eldar_Pawnkind_Exarch_Base">
+	<PawnKindDef ParentName="OG_Eldar_Pawnkind_DarkReaper_Base">
 		<defName>OG_Eldar_DarkReaper_Exarch</defName>
 		<label>dark reaper exarch</label>
 		<combatPower>155</combatPower>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Eldar/DireAvenger</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>2.70</drawSize>
-					<color>(49,100,157)</color>
-					<shaderType>CutoutComplex</shaderType>
-					<shadowData>
-						<volume>(0.6, 0.8, 0.6)</volume>
-					</shadowData>
-				</bodyGraphicData>
-				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
-					<drawSize>1.350</drawSize>
-				</dessicatedBodyGraphicData>
-			</li>
-		</lifeStages>
+		<itemQuality>Masterwork</itemQuality>
 		<weaponTags>
-			<li>EldarDarkReaper</li>
 			<li>EldarDarkReaperExarch</li>
 		</weaponTags>
 	</PawnKindDef>
 
 	<!-- Howling Banshee -->
-	<PawnKindDef ParentName="OG_Eldar_Pawnkind_Aspect_Base">
+	<PawnKindDef Name="OG_Eldar_Pawnkind_HowlingBanshee_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
 		<defName>OG_Eldar_HowlingBanshee</defName>
 		<label>howling banshee</label>
 		<combatPower>75</combatPower>
-		<itemQuality>Good</itemQuality>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
 					<texPath>Things/Pawn/ToolUser/Eldar/HowlingBanshee</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>2.70</drawSize>
-					<color>(255,255,209)</color>
+					<drawSize>3.00</drawSize>
+					<color>238,213,172</color> <!-- BLEACHED BONE -->
+					<colorTwo>25,85,60</colorTwo> <!-- DARK ANGEL GREEN -->
 					<shaderType>CutoutComplex</shaderType>
 					<shadowData>
 						<volume>(0.6, 0.8, 0.6)</volume>
@@ -440,48 +393,29 @@
 	</PawnKindDef>
 
 	<!-- Howling Banshee Exarch -->
-	<PawnKindDef ParentName="OG_Eldar_Pawnkind_Exarch_Base">
+	<PawnKindDef ParentName="OG_Eldar_Pawnkind_HowlingBanshee_Base">
 		<defName>OG_Eldar_HowlingBanshee_Exarch</defName>
 		<label>howling banshee exarch</label>
 		<combatPower>100</combatPower>
-		<itemQuality>Good</itemQuality>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Eldar/HowlingBanshee</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>2.70</drawSize>
-					<color>(255,255,209)</color>
-					<shaderType>CutoutComplex</shaderType>
-					<shadowData>
-						<volume>(0.6, 0.8, 0.6)</volume>
-					</shadowData>
-				</bodyGraphicData>
-				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
-				<drawSize>1.35</drawSize>
-		</dessicatedBodyGraphicData>
-			</li>
-		</lifeStages>
+		<itemQuality>Masterwork</itemQuality>
 		<weaponTags>
-			<li>EldarHowlingBanshee</li>
 			<li>EldarHowlingBansheeExarch</li>
 		</weaponTags>
 	</PawnKindDef>
 
 	<!-- Striking Scorpion -->
-	<PawnKindDef ParentName="OG_Eldar_Pawnkind_Aspect_Base">
+	<PawnKindDef Name="OG_Eldar_Pawnkind_StrikingScorpion_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
 		<defName>OG_Eldar_StrikingScorpion</defName>
 		<label>striking scorpion</label>
 		<combatPower>75</combatPower>
-		<itemQuality>Good</itemQuality>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
 					<texPath>Things/Pawn/ToolUser/Eldar/StrikingScorpion</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>2.70</drawSize>
-					<color>(255,255,209)</color>
+					<drawSize>3.00</drawSize>
+					<color>101,179,69</color> <!-- SCORPION GREEN -->
+					<colorTwo>0,111,69</colorTwo> <!-- SNOT GREEN -->
 					<shaderType>CutoutComplex</shaderType>
 					<shadowData>
 						<volume>(0.6, 0.8, 0.6)</volume>
@@ -496,21 +430,36 @@
 		<weaponTags>
 			<li>EldarStrikingScorpion</li>
 		</weaponTags>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.InfiltratorExtension">
+			</li>
+		</modExtensions>
 	</PawnKindDef>
 
 	<!-- Striking Scorpion Exarch -->
-	<PawnKindDef ParentName="OG_Eldar_Pawnkind_Exarch_Base">
+	<PawnKindDef ParentName="OG_Eldar_Pawnkind_StrikingScorpion_Base">
 		<defName>OG_Eldar_StrikingScorpion_Exarch</defName>
 		<label>striking scorpion exarch</label>
 		<combatPower>100</combatPower>
-		<itemQuality>Good</itemQuality>
+		<itemQuality>Masterwork</itemQuality>
+		<weaponTags>
+			<li>EldarStrikingScorpionExarch</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Swooping Hawk -->
+	<PawnKindDef Name="OG_Eldar_Pawnkind_SwoopingHawk_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
+		<defName>OG_Eldar_SwoopingHawk</defName>
+		<label>swooping hawk</label>
+		<combatPower>75</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Eldar/StrikingScorpion</texPath>
+					<texPath>Things/Pawn/ToolUser/Eldar/SwoopingHawk</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>2.70</drawSize>
-					<color>(255,255,209)</color>
+					<drawSize>3.00</drawSize>
+					<color>0,129,148</color> <!-- HAWK TURQUOISE -->
+					<colorTwo>0,111,69</colorTwo> <!-- SNOT GREEN -->
 					<shaderType>CutoutComplex</shaderType>
 					<shadowData>
 						<volume>(0.6, 0.8, 0.6)</volume>
@@ -518,13 +467,113 @@
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
-				<drawSize>1.350</drawSize>
-		</dessicatedBodyGraphicData>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponTags>
-			<li>EldarStrikingScorpion</li>
-			<li>EldarStrikingScorpionExarch</li>
+			<li>EldarSwoopingHawk</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.DeepStrikeExtension">
+				<pawnsArrivalMode>Fly</pawnsArrivalMode>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!-- Swooping Hawk Exarch -->
+	<PawnKindDef ParentName="OG_Eldar_Pawnkind_SwoopingHawk_Base">
+		<defName>OG_Eldar_SwoopingHawk_Exarch</defName>
+		<label>swooping hawkexarch</label>
+		<combatPower>100</combatPower>
+		<itemQuality>Masterwork</itemQuality>
+		<weaponTags>
+			<li>EldarSwoopingHawkExarch</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Fire Dragon -->
+	<PawnKindDef Name="OG_Eldar_Pawnkind_FireDragon_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
+		<defName>OG_Eldar_FireDragon</defName>
+		<label>fire dragon</label>
+		<combatPower>75</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Eldar/FireDragon</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.00</drawSize>
+					<color>244,121,32</color> <!-- FIERY ORANGE -->
+					<colorTwo>197,160,9</colorTwo>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>EldarFireDragon</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Fire DragonExarch -->
+	<PawnKindDef ParentName="OG_Eldar_Pawnkind_FireDragon_Base">
+		<defName>OG_Eldar_FireDragon_Exarch</defName>
+		<label>fire dragon exarch</label>
+		<combatPower>100</combatPower>
+		<itemQuality>Masterwork</itemQuality>
+		<weaponTags>
+			<li>EldarFireDragonExarch</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Warp Spider -->
+	<PawnKindDef Name="OG_Eldar_Pawnkind_WarpSpider_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
+		<defName>OG_Eldar_WarpSpider</defName>
+		<label>warp spider</label>
+		<combatPower>75</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Eldar/WarpSpider</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.00</drawSize>
+					<color>168,32,20</color> <!-- MECHRITE RED -->
+					<colorTwo>26,33,61</colorTwo> <!-- NECRON ABYSS -->
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>EldarWarpSpider</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.DeepStrikeExtension">
+				<pawnsArrivalMode>Teleport</pawnsArrivalMode>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!-- Warp Spider Exarch -->
+	<PawnKindDef ParentName="OG_Eldar_Pawnkind_WarpSpider_Base">
+		<defName>OG_Eldar_WarpSpider_Exarch</defName>
+		<label>warp spider exarch</label>
+		<combatPower>100</combatPower>
+		<itemQuality>Masterwork</itemQuality>
+		<weaponTags>
+			<li>EldarWarpSpiderExarch</li>
 		</weaponTags>
 	</PawnKindDef>
 

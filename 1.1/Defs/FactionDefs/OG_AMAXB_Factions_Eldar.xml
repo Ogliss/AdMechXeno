@@ -54,16 +54,28 @@
 				<kindDef>Combat</kindDef>
 				<commonality>100</commonality>
 				<options>
-					<OG_Eldar_Guardian>10</OG_Eldar_Guardian>
-					<OG_Eldar_GuardianStorm>10</OG_Eldar_GuardianStorm>
-					<OG_Eldar_DireAvenger>8</OG_Eldar_DireAvenger>
-					<OG_Eldar_Ranger>5</OG_Eldar_Ranger>
-					<OG_Eldar_HowlingBanshee>5</OG_Eldar_HowlingBanshee>
-					<OG_Eldar_Warlock>0.5</OG_Eldar_Warlock>
+					<OG_Eldar_Guardian>100</OG_Eldar_Guardian>
+					<OG_Eldar_GuardianStorm>100</OG_Eldar_GuardianStorm>
+					<OG_Eldar_GuardianSupport>10</OG_Eldar_GuardianSupport>
+					<OG_Eldar_Ranger>25</OG_Eldar_Ranger>
+					<OG_Eldar_DireAvenger>50</OG_Eldar_DireAvenger>
+					<OG_Eldar_DireAvenger_Exarch>1</OG_Eldar_DireAvenger_Exarch>
+					<OG_Eldar_DarkReaper>10</OG_Eldar_DarkReaper>
+					<OG_Eldar_DarkReaper_Exarch>1</OG_Eldar_DarkReaper_Exarch>
+					<OG_Eldar_FireDragon>5</OG_Eldar_FireDragon>
+					<OG_Eldar_FireDragon_Exarch>1</OG_Eldar_FireDragon_Exarch>
+					<OG_Eldar_SwoopingHawk>10</OG_Eldar_SwoopingHawk>
+					<OG_Eldar_SwoopingHawk_Exarch>1</OG_Eldar_SwoopingHawk_Exarch>
+					<OG_Eldar_WarpSpider>10</OG_Eldar_WarpSpider>
+					<OG_Eldar_WarpSpider_Exarch>1</OG_Eldar_WarpSpider_Exarch>
+					<OG_Eldar_HowlingBanshee>25</OG_Eldar_HowlingBanshee>
+					<OG_Eldar_HowlingBanshee_Exarch>1</OG_Eldar_HowlingBanshee_Exarch>
+					<OG_Eldar_StrikingScorpion>15</OG_Eldar_StrikingScorpion>
+					<OG_Eldar_StrikingScorpion_Exarch>1</OG_Eldar_StrikingScorpion_Exarch>
 					<OG_Eldar_Wraithguard>2</OG_Eldar_Wraithguard>
-					<OG_Eldar_GuardianSupport>6</OG_Eldar_GuardianSupport>
 					<OG_Eldar_Wraithblade>3</OG_Eldar_Wraithblade>
-					<OG_Eldar_Farseer>5</OG_Eldar_Farseer>
+					<OG_Eldar_Warlock>0.5</OG_Eldar_Warlock>
+					<OG_Eldar_Farseer>0.25</OG_Eldar_Farseer>
 					<OG_Eldar_Farseer_Faction>0</OG_Eldar_Farseer_Faction>
 				</options>
 			</li>
@@ -75,10 +87,14 @@
 					<li>Siege</li>
 				</disallowedStrategies>
 				<options>
-					<OG_Eldar_GuardianStorm>10</OG_Eldar_GuardianStorm>
-					<OG_Eldar_HowlingBanshee>5</OG_Eldar_HowlingBanshee>
+					<OG_Eldar_GuardianStorm>100</OG_Eldar_GuardianStorm>
+					<OG_Eldar_HowlingBanshee>25</OG_Eldar_HowlingBanshee>
+					<OG_Eldar_HowlingBanshee_Exarch>1</OG_Eldar_HowlingBanshee_Exarch>
+					<OG_Eldar_StrikingScorpion>15</OG_Eldar_StrikingScorpion>
+					<OG_Eldar_StrikingScorpion_Exarch>1</OG_Eldar_StrikingScorpion_Exarch>
 					<OG_Eldar_Wraithblade>10</OG_Eldar_Wraithblade>
-					<OG_Eldar_Farseer>5</OG_Eldar_Farseer>
+					<OG_Eldar_Warlock>0.5</OG_Eldar_Warlock>
+					<OG_Eldar_Farseer>0.25</OG_Eldar_Farseer>
 				</options>
 			</li>
 			<li>
@@ -86,10 +102,19 @@
 				<kindDef>Combat</kindDef>
 				<commonality>20</commonality>
 				<options>
-					<OG_Eldar_Guardian>10</OG_Eldar_Guardian>
-					<OG_Eldar_DireAvenger>8</OG_Eldar_DireAvenger>
+					<OG_Eldar_Guardian>100</OG_Eldar_Guardian>
 					<OG_Eldar_GuardianSupport>10</OG_Eldar_GuardianSupport>
-					<OG_Eldar_Warlock>0.5</OG_Eldar_Warlock>
+					<OG_Eldar_Ranger>25</OG_Eldar_Ranger>
+					<OG_Eldar_DireAvenger>50</OG_Eldar_DireAvenger>
+					<OG_Eldar_DireAvenger_Exarch>1</OG_Eldar_DireAvenger_Exarch>
+					<OG_Eldar_DarkReaper>10</OG_Eldar_DarkReaper>
+					<OG_Eldar_DarkReaper_Exarch>1</OG_Eldar_DarkReaper_Exarch>
+					<OG_Eldar_FireDragon>5</OG_Eldar_FireDragon>
+					<OG_Eldar_FireDragon_Exarch>1</OG_Eldar_FireDragon_Exarch>
+					<OG_Eldar_SwoopingHawk>10</OG_Eldar_SwoopingHawk>
+					<OG_Eldar_SwoopingHawk_Exarch>1</OG_Eldar_SwoopingHawk_Exarch>
+					<OG_Eldar_WarpSpider>10</OG_Eldar_WarpSpider>
+					<OG_Eldar_WarpSpider_Exarch>1</OG_Eldar_WarpSpider_Exarch>
 					<OG_Eldar_Wraithguard>2</OG_Eldar_Wraithguard>
 					<OG_Eldar_Farseer>5</OG_Eldar_Farseer>
 				</options>
@@ -132,12 +157,28 @@
 				<!-- Base defense, mainly ranged with melee mix-ins -->
 				<kindDef>Settlement</kindDef>
 				<options>
-					<OG_Eldar_Guardian>10</OG_Eldar_Guardian>
-					<OG_Eldar_Warlock>3</OG_Eldar_Warlock>
-					<OG_Eldar_Wraithblade>10</OG_Eldar_Wraithblade>
-					<OG_Eldar_Wraithguard>10</OG_Eldar_Wraithguard>
+					<OG_Eldar_Guardian>100</OG_Eldar_Guardian>
+					<OG_Eldar_GuardianStorm>100</OG_Eldar_GuardianStorm>
 					<OG_Eldar_GuardianSupport>10</OG_Eldar_GuardianSupport>
+					<OG_Eldar_Ranger>25</OG_Eldar_Ranger>
+					<OG_Eldar_DireAvenger>50</OG_Eldar_DireAvenger>
+					<OG_Eldar_DireAvenger_Exarch>1</OG_Eldar_DireAvenger_Exarch>
+					<OG_Eldar_DarkReaper>10</OG_Eldar_DarkReaper>
+					<OG_Eldar_DarkReaper_Exarch>1</OG_Eldar_DarkReaper_Exarch>
+					<OG_Eldar_FireDragon>5</OG_Eldar_FireDragon>
+					<OG_Eldar_FireDragon_Exarch>1</OG_Eldar_FireDragon_Exarch>
+					<OG_Eldar_SwoopingHawk>10</OG_Eldar_SwoopingHawk>
+					<OG_Eldar_SwoopingHawk_Exarch>1</OG_Eldar_SwoopingHawk_Exarch>
+					<OG_Eldar_WarpSpider>10</OG_Eldar_WarpSpider>
+					<OG_Eldar_WarpSpider_Exarch>1</OG_Eldar_WarpSpider_Exarch>
+					<OG_Eldar_HowlingBanshee>25</OG_Eldar_HowlingBanshee>
+					<OG_Eldar_HowlingBanshee_Exarch>1</OG_Eldar_HowlingBanshee_Exarch>
+					<OG_Eldar_StrikingScorpion>15</OG_Eldar_StrikingScorpion>
+					<OG_Eldar_StrikingScorpion_Exarch>1</OG_Eldar_StrikingScorpion_Exarch>
+					<OG_Eldar_Warlock>3</OG_Eldar_Warlock>
 					<OG_Eldar_Farseer>10</OG_Eldar_Farseer>
+					<OG_Eldar_Wraithblade>10</OG_Eldar_Wraithblade>
+					<OG_Eldar_Wraithguard>30</OG_Eldar_Wraithguard>
 					<OG_Eldar_Farseer_Faction>0</OG_Eldar_Farseer_Faction>
 				</options>
 			</li>
