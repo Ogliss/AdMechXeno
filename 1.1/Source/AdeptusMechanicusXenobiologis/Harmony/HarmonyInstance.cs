@@ -83,7 +83,7 @@ namespace AdeptusMechanicus.HarmonyInstance
             TheEndTimes.ChaosPortalGreat PortalGreat = __instance as TheEndTimes.ChaosPortalGreat;
             if (PortalGreat != null)
             {
-                foreach (PawnKindDef item in DefDatabase<PawnKindDef>.AllDefsListForReading.Where(x => x.RaceProps.FleshType == ChaosDeamonDefOf.OG_Flesh_Chaos_Deamon))
+                foreach (PawnKindDef item in DefDatabase<PawnKindDef>.AllDefsListForReading.Where(x => x.RaceProps.FleshType == AdeptusFleshTypeDefOf.OG_Flesh_Chaos_Deamon))
                 {
                     TheEndTimes.ChaosPortalGreat.spawnablePawnKinds.Add(item);
                 }
@@ -92,7 +92,7 @@ namespace AdeptusMechanicus.HarmonyInstance
             TheEndTimes.ChaosPortalSmall PortalSmall = __instance as TheEndTimes.ChaosPortalSmall;
             if (PortalSmall != null)
             {
-                foreach (PawnKindDef item in DefDatabase<PawnKindDef>.AllDefsListForReading.Where(x => x.RaceProps.FleshType == ChaosDeamonDefOf.OG_Flesh_Chaos_Deamon))
+                foreach (PawnKindDef item in DefDatabase<PawnKindDef>.AllDefsListForReading.Where(x => x.RaceProps.FleshType == AdeptusFleshTypeDefOf.OG_Flesh_Chaos_Deamon))
                 {
                     TheEndTimes.ChaosPortalSmall.spawnablePawnKinds.Add(item);
                 }
@@ -107,7 +107,7 @@ namespace AdeptusMechanicus.HarmonyInstance
 
         private static bool SOSDaemonSpaceSuitPostfix(Pawn pawn, ref bool __result)
         {
-            if (pawn.RaceProps.FleshType == ChaosDeamonDefOf.OG_Flesh_Chaos_Deamon || pawn.RaceProps.FleshType.defName.Contains("OG_Flesh_Construct"))
+            if (pawn.RaceProps.FleshType == AdeptusFleshTypeDefOf.OG_Flesh_Chaos_Deamon || pawn.RaceProps.FleshType.defName.Contains("OG_Flesh_Construct"))
             {
                 __result = true;
                 return false;

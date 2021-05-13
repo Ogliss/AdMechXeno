@@ -25,11 +25,11 @@ namespace AdeptusMechanicus
         {
             float Searchradius = SearchRadius;
             IntVec3 c = IntVec3.Invalid;
-            if (pawn.kindDef==OGNecronDefOf.OG_Necron_Tomb_Spyder)
+            if (pawn.kindDef== AdeptusPawnKindDefOf.OG_Necron_Tomb_Spyder)
             {
                 if (TombSpyderUtility.TryFindGoodRepairTarget(pawn, Searchradius, out Pawn pt, null) && !GenAI.InDangerousCombat(pawn))
                 {
-                    return new Job(OGNecronDefOf.OG_XB_Job_Necron_TombSpyderRepair)
+                    return new Job(AdeptusJobDefOf.OG_XB_Job_Necron_TombSpyderRepair)
                     {
                         targetA = pt,
                         count = 1
@@ -39,7 +39,7 @@ namespace AdeptusMechanicus
                 {
                     if (TombSpyderUtility.TryFindGoodRessTarget(pawn, Searchradius, out Corpse ct, null) && !GenAI.InDangerousCombat(pawn))
                     {
-                        return new Job(OGNecronDefOf.OG_XB_Job_Necron_TombSpyderRepair)
+                        return new Job(AdeptusJobDefOf.OG_XB_Job_Necron_TombSpyderRepair)
                         {
                             targetA = ct,
                             count = 1

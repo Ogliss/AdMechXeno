@@ -42,7 +42,7 @@ namespace AdeptusMechanicus
             bool flag = this.Severity >= 1f;
             if (flag)
             {
-                BodypartUtility.ReplaceHediffFromBodypart(this.pawn, base.Part, XenobiologisHediffDefOf.MissingBodyPart, XenobiologisHediffDefOf.OG_Regenerated);
+                BodypartUtility.ReplaceHediffFromBodypart(this.pawn, base.Part, AdeptusHediffDefOf.MissingBodyPart, AdeptusHediffDefOf.OG_Regenerated);
             }
             if (this.Part.parts != null && this.Part.parts.Any(x => pawn.health.hediffSet.PartIsMissing(x)) && pawn.TryGetCompFast<Comp_NecronOG>() is Comp_NecronOG _Necron)
             {

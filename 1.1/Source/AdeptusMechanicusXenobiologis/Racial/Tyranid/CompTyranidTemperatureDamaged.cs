@@ -56,7 +56,7 @@ namespace AdeptusMechanicus
                 Pawn holder;
                 CompEquippable equippable = this.parent.TryGetCompFast<CompEquippable>();
                 holder = equippable?.PrimaryVerb?.CasterPawn;
-                return holder?.RaceProps?.FleshType == OGTyranidDefOf.OG_Flesh_Tyranid || holder?.RaceProps?.BloodDef == OGTyranidDefOf.OG_FilthBlood_Tyranid  || holder?.Faction?.def == OGTyranidDefOf.OG_Tyranid_Faction;
+                return holder?.RaceProps?.FleshType == AdeptusFleshTypeDefOf.OG_Flesh_Tyranid || holder?.RaceProps?.BloodDef == AdeptusThingDefOf.OG_FilthBlood_Tyranid  || holder?.Faction?.def == AdeptusFactionDefOf.OG_Tyranid_Faction;
             }
         }
 

@@ -62,8 +62,6 @@
     <Compile Include="Harmony\Patches\ModOptions\AMAMod_XenobiologisSettings_Patch.cs" />
     <Compile Include="Harmony\Patches\Pawn_AnythingToStrip_Necron_Patch.cs" />
     <Compile Include="Harmony\Patches\Pawn_EquipmentTracker_DropAllEquipment_Necron_Patch.cs" />
-    <Compile Include="Racial\AdeptusMechanicus\MechanicusDefOf.cs" />
-    <Compile Include="Racial\AdeptusMilitarum\MilitarumDefOf.cs" />
     <Compile Include="Racial\Chaos\CompProperties_RegenerationOG.cs" />
     <Compile Include="Racial\Chaos\ChaosDeamonUtil.cs" />
     <Compile Include="Racial\Chaos\JobGiver_OGChaosDeamon.cs" />
@@ -74,19 +72,15 @@
     <Compile Include="Racial\Necron\JobDriver_TombSpyderRepair.cs" />
     <Compile Include="Racial\Necron\JobGiver_TombSpyderRepair.cs" />
     <Compile Include="Racial\Necron\TombSpyderUtility.cs" />
-    <Compile Include="Racial\Vespid\OGVespidDefOf.cs" />
     <Compile Include="Racial\Tyranid\CompSporeMine.cs" />
     <Compile Include="Racial\Tyranid\DeathActionWorker_SporeMine.cs" />
     <Compile Include="Racial\Tyranid\SporeMineBullet.cs" />
     <Compile Include="Racial\Tyranid\CompTyranidRottable.cs" />
     <Compile Include="Racial\Tyranid\CompTyranidTemperatureDamaged.cs" />
-    <Compile Include="Racial\Tyranid\OGTyranidDefOf.cs" />
     <None Include="Settings\XenobiologisMenus.cs.bak" />
     <Compile Include="Util\ToilExtentsion.cs" />
-    <Compile Include="XenobiologisDefOfs.cs" />
     <Compile Include="Racial\Chaos\CompDaemonic.cs" />
     <Compile Include="Racial\Chaos\DeathActionWorker_ChaosDeamon.cs" />
-    <Compile Include="Racial\Chaos\ChaosDeamonDefOf.cs" />
     <Compile Include="Racial\Chaos\JobGiver_OGChaosDeamon_Ranged.cs" />
     <Compile Include="Hediffs\Hediff_SelfRemoving.cs" />
     <Compile Include="Harmony\HarmonyInstance.cs" />
@@ -95,11 +89,6 @@
     <Compile Include="JobDrivers\JobDriver_XBAttackBuilding.cs" />
     <Compile Include="JobDrivers\JobDriver_XBWaitBuilding.cs" />
     <Compile Include="Racial\ScenPart_AMXBRelations.cs" />
-    <Compile Include="Racial\Dark Eldar\OGDarkEldarDefOf.cs" />
-    <Compile Include="Racial\Eldar\OGEldarDefOf.cs" />
-    <Compile Include="Racial\Kroot\OGKrootDefOf.cs" />
-    <Compile Include="Racial\Orkz\OGOrkDefOf.cs" />
-    <Compile Include="Racial\Tau\OGTauDefOf.cs" />
     <Compile Include="AMXBMain.cs" />
     <Compile Include="Util\ConstructFleshTypeUtility.cs" />
     <Compile Include="Racial\Necron\NecronHediffUtility.cs" />
@@ -109,13 +98,19 @@
     <Compile Include="Racial\Necron\IncidentWorker_Monolith.cs" />
     <Compile Include="Racial\Necron\JobGiver_OGNecron.cs" />
     <Compile Include="Racial\Necron\LordJob_NecronsDefendShip.cs" />
-    <Compile Include="Racial\Necron\OGNecronDefOf.cs" />
     <Compile Include="Racial\Necron\Comp_NecronOG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Racial\AdeptusAstartes\" />
+    <Folder Include="Racial\AdeptusMilitarum\" />
     <Folder Include="Racial\AdeptusSororitas\" />
+    <Folder Include="Racial\Dark Eldar\" />
+    <Folder Include="Racial\Eldar\" />
+    <Folder Include="Racial\Kroot\" />
+    <Folder Include="Racial\Orkz\" />
+    <Folder Include="Racial\Tau\" />
+    <Folder Include="Racial\Vespid\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">

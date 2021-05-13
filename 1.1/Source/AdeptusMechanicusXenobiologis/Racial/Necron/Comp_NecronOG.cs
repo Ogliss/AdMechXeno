@@ -59,16 +59,16 @@ namespace AdeptusMechanicus
         public List<Hediff> HealableHediffs => PawnHediffs.FindAll(x => !unhealableHediffs.Contains(x) && x.def.hediffClass==typeof(Hediff_Injury));
         public List<Hediff> UnhealableHediffs => unhealableHediffs;
         public bool HasHealableWounds => !HealableHediffs.NullOrEmpty();
-        public bool HasRegeneragtingLimbs => pawn.health.hediffSet.hediffs.Any(x => x.def == XenobiologisHediffDefOf.OG_Regenerating);
+        public bool HasRegeneragtingLimbs => pawn.health.hediffSet.hediffs.Any(x => x.def == AdeptusHediffDefOf.OG_Regenerating);
         public Map map => pawn.Dead ? pawn.Corpse.Map : pawn.Map;
         public IntVec3 pos => pawn.Dead ? pawn.Corpse.Position : pawn.Position;
         bool Necrodermis => (pawn.Dead ? false : this.ticksSinceHeal > this.healIntervalTicks) && Props.Necrodermis && !HealableHediffs.NullOrEmpty();
         bool Reanimation => (pawn.Dead ? this.corpse.Age > this.reviveIntervalTicks : false) && Props.ReanimationProtocol && !reviveTried;
-        bool Phasic => (pawn.Dead ? reviveTried : false) && Props.PhaseOut && !phaseTried && !map.mapPawns.AllPawns.Any(x=> (x.def == OGNecronDefOf.Necron_TombSpyder || (x.def == OGNecronDefOf.Necron_Lord && x.health.hediffSet.HasHediff(OGNecronDefOf.OG_Necron_Upgrade_RessurectionOrb))) && x.Position.InHorDistOf(pos, 20f));
+        bool Phasic => (pawn.Dead ? reviveTried : false) && Props.PhaseOut && !phaseTried && !map.mapPawns.AllPawns.Any(x=> (x.def == AdeptusThingDefOf.Necron_TombSpyder || (x.def == AdeptusThingDefOf.Necron_Lord && x.health.hediffSet.HasHediff(AdeptusHediffDefOf.OG_Necron_Upgrade_RessurectionOrb))) && x.Position.InHorDistOf(pos, 20f));
 
-        BodyPartRecord NecrodermisRegulator => pawn.RaceProps.body.AllParts.Find(x => x.def == OGNecronDefOf.OG_Necron_NecrodermisRegulator);
-        BodyPartRecord ReanimationMatrix => pawn.RaceProps.body.AllParts.Find(x => x.def == OGNecronDefOf.OG_Necron_ReanimationMatrix);
-        BodyPartRecord PhasicCapacitor => pawn.RaceProps.body.AllParts.Find(x => x.def == OGNecronDefOf.OG_Necron_PhasicCapacitor);
+        BodyPartRecord NecrodermisRegulator => pawn.RaceProps.body.AllParts.Find(x => x.def == AdeptusBodyPartDefOf.OG_Necron_NecrodermisRegulator);
+        BodyPartRecord ReanimationMatrix => pawn.RaceProps.body.AllParts.Find(x => x.def == AdeptusBodyPartDefOf.OG_Necron_ReanimationMatrix);
+        BodyPartRecord PhasicCapacitor => pawn.RaceProps.body.AllParts.Find(x => x.def == AdeptusBodyPartDefOf.OG_Necron_PhasicCapacitor);
         
         float reanimateChance => Props.ReanimationProtocolChance * (pawn.health.hediffSet.PartIsMissing(ReanimationMatrix) ? 0f : PawnCapacityUtility.CalculatePartEfficiency(pawn.health.hediffSet, ReanimationMatrix, false, null));
         float phaseChance => Props.PhaseOutChance * (pawn.health.hediffSet.PartIsMissing(PhasicCapacitor) ? 0f : PawnCapacityUtility.CalculatePartEfficiency(pawn.health.hediffSet, PhasicCapacitor, false, null));
@@ -107,7 +107,7 @@ namespace AdeptusMechanicus
             }
             if (base.parent != null && (base.parent.Spawned || pawn.Dead) && reviveFlag && AMAMod.settings.AllowNecronWellBeBack)
             {
-                if (base.parent is Pawn && pawn.kindDef != OGNecronDefOf.OG_Necron_Scarab_Swarm)
+                if (base.parent is Pawn && pawn.kindDef != AdeptusPawnKindDefOf.OG_Necron_Scarab_Swarm)
                 {
                     if (Reanimation)
                     {
@@ -301,7 +301,7 @@ namespace AdeptusMechanicus
 
             bool flag2 = HealableHediffs.Any(x => !pawn.health.hediffSet.PartIsMissing(x.Part) && x is Hediff_Injury);
             bool flag3 = HealableHediffs.Any(x => pawn.health.hediffSet.PartIsMissing(x.Part));
-            bool flag4 = HealableHediffs.Any(x => x.def == XenobiologisHediffDefOf.OG_Regenerating);
+            bool flag4 = HealableHediffs.Any(x => x.def == AdeptusHediffDefOf.OG_Regenerating);
             Rand.PushState();
             float num = Rand.RangeInclusive(1, 100);
             Rand.PopState();
@@ -360,7 +360,7 @@ namespace AdeptusMechanicus
 
         public void TryRegrowBodyparts(bool Forced = false)
         {
-            using (IEnumerator<BodyPartRecord> enumerator = this.pawn.GetFirstMatchingBodyparts(this.pawn.RaceProps.body.corePart, HediffDefOf.MissingBodyPart, XenobiologisHediffDefOf.OG_Regenerating, (Hediff hediff) => hediff is Hediff_AddedPart).GetEnumerator())
+            using (IEnumerator<BodyPartRecord> enumerator = this.pawn.GetFirstMatchingBodyparts(this.pawn.RaceProps.body.corePart, HediffDefOf.MissingBodyPart, AdeptusHediffDefOf.OG_Regenerating, (Hediff hediff) => hediff is Hediff_AddedPart).GetEnumerator())
             {
                 while (enumerator.MoveNext())
                 {
@@ -373,7 +373,7 @@ namespace AdeptusMechanicus
                         if (flag)
                         {
                             this.pawn.health.RemoveHediff(hediff2);
-                            this.pawn.health.AddHediff(XenobiologisHediffDefOf.OG_Regenerating, part, null, null);
+                            this.pawn.health.AddHediff(AdeptusHediffDefOf.OG_Regenerating, part, null, null);
                             this.pawn.health.hediffSet.DirtyCache();
                         }
                     }

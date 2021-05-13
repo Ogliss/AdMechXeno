@@ -19,7 +19,7 @@ namespace AdeptusMechanicus
 
         public override string GetReport()
         {
-            if (this.job.def != XenobiologisJobDefOf.OGAMXBWaitCombatBuilding)
+            if (this.job.def != AdeptusJobDefOf.OGAMXBWaitCombatBuilding)
             {
                 return base.GetReport();
             }
@@ -100,7 +100,7 @@ namespace AdeptusMechanicus
                                 {
                                     //this.pawn.meleeVerbs.TryMeleeAttack(pawn2, null, false);
 
-                                    new Job(XenobiologisJobDefOf.OGAMXBAttackBuilding, pawn2);
+                                    new Job(AdeptusJobDefOf.OGAMXBAttackBuilding, pawn2);
                                     return;
                                 }
                             }
@@ -120,7 +120,7 @@ namespace AdeptusMechanicus
                     this.pawn.natives.TryBeatFire(fire);
                     return;
                 }
-                if (flag && this.pawn.Faction != null && this.pawn.jobs.curJob.def == XenobiologisJobDefOf.OGAMXBWaitCombatBuilding)
+                if (flag && this.pawn.Faction != null && this.pawn.jobs.curJob.def == AdeptusJobDefOf.OGAMXBWaitCombatBuilding)
                 {
                     bool allowManualCastWeapons = !this.pawn.IsColonist;
                     Verb verb = this.pawn.TryGetAttackVerb(null, allowManualCastWeapons);

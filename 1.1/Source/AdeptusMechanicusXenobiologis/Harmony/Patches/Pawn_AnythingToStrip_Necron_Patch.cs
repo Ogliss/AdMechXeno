@@ -11,7 +11,7 @@ namespace AdeptusMechanicus.HarmonyInstance
         [HarmonyPostfix]
         public static void Postfix(Pawn __instance, ref bool __result)
         {
-            __result = __result && __instance.RaceProps.FleshType!=OGNecronDefOf.OG_Flesh_Construct_Necron;
+            __result = __result && __instance.RaceProps.FleshType!=AdeptusFleshTypeDefOf.OG_Flesh_Construct_Necron;
 
         }
     }

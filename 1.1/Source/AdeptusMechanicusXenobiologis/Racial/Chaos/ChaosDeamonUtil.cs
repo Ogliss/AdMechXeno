@@ -11,42 +11,42 @@ namespace AdeptusMechanicus
     {
 
         static List<Pair<PawnKindDef, ChaosPatron>> ChaosDeamons = new List<Pair<PawnKindDef, ChaosPatron>>(){
-        //    new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_ChaosHound, ChaosPatron.Undivided),
-        //    new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Fury, ChaosPatron.Undivided),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Deamonette, ChaosPatron.Slannesh),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Keeper_of_Secrets, ChaosPatron.Slannesh),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Horror_Pink, ChaosPatron.Tzeentch),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue, ChaosPatron.Tzeentch),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Horror_Brimstone, ChaosPatron.Tzeentch),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Screamer, ChaosPatron.Tzeentch),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lord_of_Change, ChaosPatron.Tzeentch),
-        //    new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_KhorneHound, ChaosPatron.Khorne),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Bloodletter, ChaosPatron.Khorne),
-        //    new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Bloodthirster, ChaosPatron.Khorne),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Nurgling, ChaosPatron.Nurgle),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Plague_Bearer, ChaosPatron.Nurgle),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Great_Unclean_One, ChaosPatron.Nurgle),
+        //    new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_ChaosHound, ChaosPatron.Undivided),
+        //    new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Fury, ChaosPatron.Undivided),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Deamonette, ChaosPatron.Slannesh),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Keeper_of_Secrets, ChaosPatron.Slannesh),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Pink, ChaosPatron.Tzeentch),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue, ChaosPatron.Tzeentch),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Brimstone, ChaosPatron.Tzeentch),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Screamer, ChaosPatron.Tzeentch),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lord_of_Change, ChaosPatron.Tzeentch),
+        //    new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_KhorneHound, ChaosPatron.Khorne),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Bloodletter, ChaosPatron.Khorne),
+        //    new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Bloodthirster, ChaosPatron.Khorne),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Nurgling, ChaosPatron.Nurgle),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Plague_Bearer, ChaosPatron.Nurgle),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Great_Unclean_One, ChaosPatron.Nurgle),
         };
         
         static List<Pair<PawnKindDef, ChaosPatron>> GreaterDeamons = new List<Pair<PawnKindDef, ChaosPatron>>(){
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Keeper_of_Secrets, ChaosPatron.Slannesh),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lord_of_Change, ChaosPatron.Tzeentch),
-        //    new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Bloodthirster, ChaosPatron.Khorne),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Great_Unclean_One, ChaosPatron.Nurgle),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Keeper_of_Secrets, ChaosPatron.Slannesh),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lord_of_Change, ChaosPatron.Tzeentch),
+        //    new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Bloodthirster, ChaosPatron.Khorne),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Great_Unclean_One, ChaosPatron.Nurgle),
         };
 
         static List<Pair<PawnKindDef, ChaosPatron>> LesserDeamons = new List<Pair<PawnKindDef, ChaosPatron>>(){
-        //    new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_ChaosHound, ChaosPatron.Undivided),
-        //    new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Fury, ChaosPatron.Undivided),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Deamonette, ChaosPatron.Slannesh),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Horror_Pink, ChaosPatron.Tzeentch),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue, ChaosPatron.Tzeentch),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Horror_Brimstone, ChaosPatron.Tzeentch),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Screamer, ChaosPatron.Tzeentch),
-        //    new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_KhorneHound, ChaosPatron.Khorne),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Bloodletter, ChaosPatron.Khorne),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Nurgling, ChaosPatron.Nurgle),
-            new Pair<PawnKindDef, ChaosPatron>(ChaosDeamonDefOf.OG_Chaos_Deamon_Plague_Bearer, ChaosPatron.Nurgle),
+        //    new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_ChaosHound, ChaosPatron.Undivided),
+        //    new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Fury, ChaosPatron.Undivided),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Deamonette, ChaosPatron.Slannesh),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Pink, ChaosPatron.Tzeentch),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue, ChaosPatron.Tzeentch),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Brimstone, ChaosPatron.Tzeentch),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Screamer, ChaosPatron.Tzeentch),
+        //    new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_KhorneHound, ChaosPatron.Khorne),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Bloodletter, ChaosPatron.Khorne),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Nurgling, ChaosPatron.Nurgle),
+            new Pair<PawnKindDef, ChaosPatron>(AdeptusPawnKindDefOf.OG_Chaos_Deamon_Plague_Bearer, ChaosPatron.Nurgle),
         };
 
         public static PawnKindDef LesserDeamon(out PawnKindDef pawn, ChaosPatron patron = ChaosPatron.Undivided)
@@ -62,7 +62,7 @@ namespace AdeptusMechanicus
 
         public static Faction OfDeamon()
         {
-            return Find.FactionManager.FirstFactionOfDef(ChaosDeamonDefOf.OG_Chaos_Deamon_Faction);
+            return Find.FactionManager.FirstFactionOfDef(AdeptusFactionDefOf.OG_Chaos_Deamon_Faction);
         }
 
         public static Lord lord(Pawn p)

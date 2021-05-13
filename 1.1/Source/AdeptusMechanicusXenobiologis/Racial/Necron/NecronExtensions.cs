@@ -12,7 +12,7 @@ namespace AdeptusMechanicus.ExtensionMethods
     {
         public static bool isNecron(this Pawn pawn)
         {
-            return pawn.RaceProps.FleshType == OGNecronDefOf.OG_Flesh_Construct_Necron;
+            return pawn.RaceProps.FleshType == AdeptusFleshTypeDefOf.OG_Flesh_Construct_Necron;
         }
     }
 }

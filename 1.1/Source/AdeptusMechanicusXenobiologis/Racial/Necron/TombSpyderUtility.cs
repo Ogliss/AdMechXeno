@@ -21,7 +21,7 @@ namespace AdeptusMechanicus
             Predicate<Thing> validator = delegate (Thing t)
             {
                 Pawn pawn = t as Pawn;
-                return pawn.RaceProps.FleshType == OGNecronDefOf.OG_Flesh_Construct_Necron && pawn.TryGetCompFast<Comp_NecronOG>()!=null && (pawn.Downed) && pawn.Faction == Spyder.Faction && Spyder.CanReserve(pawn, 1, -1, null, false) && (disallowed == null || !disallowed.Contains(pawn));
+                return pawn.RaceProps.FleshType == AdeptusFleshTypeDefOf.OG_Flesh_Construct_Necron && pawn.TryGetCompFast<Comp_NecronOG>()!=null && (pawn.Downed) && pawn.Faction == Spyder.Faction && Spyder.CanReserve(pawn, 1, -1, null, false) && (disallowed == null || !disallowed.Contains(pawn));
             };
             Target = (Pawn)GenClosest.ClosestThingReachable(Spyder.Position, Spyder.Map, ThingRequest.ForGroup(ThingRequestGroup.Pawn), PathEndMode.OnCell, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Some, false), maxDist, validator, null, 0, -1, false, RegionType.Set_Passable, false);
             return Target != null;
@@ -38,7 +38,7 @@ namespace AdeptusMechanicus
             Predicate<Thing> validator = delegate (Thing t)
             {
                 Corpse pawn = t as Corpse;
-                return pawn.InnerPawn.RaceProps.FleshType == OGNecronDefOf.OG_Flesh_Construct_Necron && (pawn.TryGetCompFast<Comp_NecronOG>() != null || pawn.InnerPawn.TryGetCompFast<Comp_NecronOG>() != null) && pawn.InnerPawn.Faction == Spyder.Faction && Spyder.CanReserve(pawn, 1, -1, null, false) && (disallowed == null || !disallowed.Contains(pawn));
+                return pawn.InnerPawn.RaceProps.FleshType == AdeptusFleshTypeDefOf.OG_Flesh_Construct_Necron && (pawn.TryGetCompFast<Comp_NecronOG>() != null || pawn.InnerPawn.TryGetCompFast<Comp_NecronOG>() != null) && pawn.InnerPawn.Faction == Spyder.Faction && Spyder.CanReserve(pawn, 1, -1, null, false) && (disallowed == null || !disallowed.Contains(pawn));
             };
             Target = (Corpse)GenClosest.ClosestThingReachable(Spyder.Position, Spyder.Map, ThingRequest.ForGroup(ThingRequestGroup.Corpse), PathEndMode.OnCell, TraverseParms.For(TraverseMode.NoPassClosedDoors, Danger.Some, false), maxDist, validator, null, 0, -1, false, RegionType.Set_Passable, false);
             return Target != null;

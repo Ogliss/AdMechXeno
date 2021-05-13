@@ -13,7 +13,7 @@ namespace AdeptusMechanicus
         static AMXBMain()
         {
             ThingDef thingDef = DefDatabase<ThingDef>.GetNamed("Human");
-            MechanicusDefOf.OG_Human_Mechanicus.recipes = thingDef.recipes;
+            AdeptusThingDefOf.OG_Human_Mechanicus.recipes = thingDef.recipes;
         //    Log.Message(string.Format("adding {0} to Mechanicus_Race", OGAdeptusMechanicusDefOf.OG_Human_Mechanicus.recipes.Count));
             /*
             foreach (var item in ModLister.AllInstalledMods)
@@ -23,27 +23,27 @@ namespace AdeptusMechanicus
             */
             if (!AMAMod.settings.AllowEldarWraithguard)
             {
-                FactionDef fd = OGEldarDefOf.OG_Eldar_Craftworld_Faction;
-                ThingDef td = OGEldarDefOf.OG_Eldar_Wraithguard_Race;
+                FactionDef fd = AdeptusFactionDefOf.OG_Eldar_Craftworld_Faction;
+                ThingDef td = AdeptusThingDefOf.OG_Eldar_Wraithguard_Race;
                 Filter(fd,td);
             }
         //    Log.Message(string.Format("post AllowEldarWraithguard"));
             if (!AMAMod.settings.AllowKrootAuxiliaries)
             {
-                FactionDef fd = OGTauDefOf.OG_Tau_Faction;
-                ThingDef td = OGKrootDefOf.OG_Alien_Kroot;
+                FactionDef fd = AdeptusFactionDefOf.OG_Tau_Faction;
+                ThingDef td = AdeptusThingDefOf.OG_Alien_Kroot;
                 Filter(fd, td);
-                td = OGKrootDefOf.OG_Kroothound_Kindred;
+                td = AdeptusThingDefOf.OG_Kroothound_Kindred;
                 Filter(fd, td);
-                td = OGKrootDefOf.OG_Knarloc_Kindred;
+                td = AdeptusThingDefOf.OG_Knarloc_Kindred;
                 Filter(fd, td);
-                td = OGKrootDefOf.OG_KrootOx_Kindred;
+                td = AdeptusThingDefOf.OG_KrootOx_Kindred;
                 Filter(fd, td);
             }
         //    Log.Message(string.Format("post AllowKrootAuxiliaries"));
             if (!AMAMod.settings.AllowGueVesaAuxiliaries)
             {
-                FactionDef fd = OGTauDefOf.OG_Tau_Faction;
+                FactionDef fd = AdeptusFactionDefOf.OG_Tau_Faction;
                 ThingDef td = ThingDefOf.Human;
                 Filter(fd, td);
             }

@@ -23,7 +23,7 @@ namespace AdeptusMechanicus
         {
             get
             {
-                return Find.FactionManager.FirstFactionOfDef(OGNecronDefOf.OG_Necron_Faction);
+                return Find.FactionManager.FirstFactionOfDef(AdeptusFactionDefOf.OG_Necron_Faction);
             }
         }
         // Token: 0x06000EA7 RID: 3751 RVA: 0x0006C290 File Offset: 0x0006A690

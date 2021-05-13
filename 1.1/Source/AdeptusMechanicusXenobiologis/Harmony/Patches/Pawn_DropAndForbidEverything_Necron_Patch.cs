@@ -10,7 +10,7 @@ namespace AdeptusMechanicus.HarmonyInstance
     {
         public static bool Prefix(Pawn __instance)
         {
-            return __instance.RaceProps.FleshType != OGNecronDefOf.OG_Flesh_Construct_Necron;
+            return __instance.RaceProps.FleshType != AdeptusFleshTypeDefOf.OG_Flesh_Construct_Necron;
         }
     }
     /*

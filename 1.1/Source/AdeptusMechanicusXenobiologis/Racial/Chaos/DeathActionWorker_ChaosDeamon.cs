@@ -54,15 +54,15 @@ namespace AdeptusMechanicus
             lord = pawn.GetLord();
             bool logging = false;
 
-            if (corpse.InnerPawn.kindDef == ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue)
+            if (corpse.InnerPawn.kindDef == AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue)
             {
                 spawn = true;
-                pawnKindDef = ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Horror_Brimstone;
+                pawnKindDef = AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Brimstone;
             }
-            else if (corpse.InnerPawn.kindDef == ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Horror_Pink)
+            else if (corpse.InnerPawn.kindDef == AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Pink)
             {
                 spawn = true;
-                pawnKindDef = ChaosDeamonDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue;
+                pawnKindDef = AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue;
             }
             else
             {
@@ -150,7 +150,7 @@ namespace AdeptusMechanicus
             }
             if (position != null && map != null)
             {
-                GenExplosion.DoExplosion(position, map, 1.9f, ChaosDeamonDefOf.OG_Chaos_Deamon_WarpfireDeath, corpse.InnerPawn, -1, -1f, null, null, null, null, null, 0f, 1, false, null, 0f, 1, 0f, false);
+                GenExplosion.DoExplosion(position, map, 1.9f, AdeptusDamageDefOf.OG_Chaos_Deamon_WarpfireDeath, corpse.InnerPawn, -1, -1f, null, null, null, null, null, 0f, 1, false, null, 0f, 1, 0f, false);
             }
             if (corpse != null)
             {
