@@ -220,37 +220,37 @@
 	</statBases>
 	<tools>
 		<li>
-		<label>left talon</label>
-		<capacities>
-			<li>Cut</li>
-			<li>Stab</li>
-		</capacities>
-		<power>22.0</power>
-		<cooldownTime>1</cooldownTime>
-		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			<label>left talon</label>
+			<capacities>
+				<li>Cut</li>
+				<li>Stab</li>
+			</capacities>
+			<power>22.0</power>
+			<cooldownTime>1</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 		</li>
 		<li>
-		<label>right talon</label>
-		<capacities>
-			<li>Cut</li>
-			<li>Stab</li>
-		</capacities>
-		<power>22.0</power>
-		<cooldownTime>1</cooldownTime>
-		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			<label>right talon</label>
+			<capacities>
+				<li>Cut</li>
+				<li>Stab</li>
+			</capacities>
+			<power>22.0</power>
+			<cooldownTime>1</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 		</li>
 		<li>
-		<label>head</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>8.5</power>
-		<cooldownTime>2</cooldownTime>
-		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-		<chanceFactor>0.2</chanceFactor>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>8.5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
 		</li>
 	</tools>
 	<race>
@@ -262,7 +262,7 @@
 		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
 		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 		<hediffGiverSets>
-		<li>OGTY_Hormagaunt_Options</li>
+			<li>OGTY_Hormagaunt_Options</li>
 		</hediffGiverSets>
 	</race>
 	<comps> 
@@ -272,11 +272,11 @@
 		-->
 		<li Class = "AdeptusMechanicus.CompProperties_Leaper">
 			<leapRangeMax>12</leapRangeMax>
-			<leapRangeMin>6</leapRangeMin>
+			<leapRangeMin>3</leapRangeMin>
 			<bouncingLeaper>true</bouncingLeaper>
 			<explodingLeaperRadius>0</explodingLeaperRadius>
-			<ticksBetweenLeapChance>800</ticksBetweenLeapChance>
-			<leapChance>0.70</leapChance>
+			<ticksBetweenLeapChance>100</ticksBetweenLeapChance>
+			<leapChance>1</leapChance>
 			<textMotes>true</textMotes>
 		</li>	
 	</comps>

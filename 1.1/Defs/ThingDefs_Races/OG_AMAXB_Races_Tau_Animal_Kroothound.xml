@@ -157,7 +157,8 @@
 					<texPath>Things/Pawn/Animals/KrootHound/Hound_Kroot</texPath>
 					<shaderType>CutoutComplex</shaderType>
 					<drawSize>0.75</drawSize>
-					<color>(96,172,70)</color>
+					<color>(17,76,46)</color>
+					<colorTwo>(221,160,99)</colorTwo>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Animal/Warg/Dessicated_Warg</texPath>
@@ -169,7 +170,8 @@
 					<texPath>Things/Pawn/Animals/KrootHound/Hound_Kroot</texPath>
 					<shaderType>CutoutComplex</shaderType>
 					<drawSize>1</drawSize>
-					<color>(96,172,70)</color>
+					<color>(17,76,46)</color>
+					<colorTwo>(221,160,99)</colorTwo>
 					<shadowData>
 						<volume>(0.25, 0.3, 0.25)</volume>
 						<offset>(0,0,-0.15)</offset>
@@ -184,16 +186,17 @@
 				<bodyGraphicData>
 					<texPath>Things/Pawn/Animals/KrootHound/Hound_Kroot</texPath>
 					<shaderType>CutoutComplex</shaderType>
-					<drawSize>2</drawSize>
-					<color>(96,172,70)</color>
+					<drawSize>1.75</drawSize>
+					<color>(17,76,46)</color>
+					<colorTwo>(221,160,99)</colorTwo>
 					<shadowData>
 						<volume>(0.3, 0.4, 0.3)</volume>
 						<offset>(0,0,-0.15)</offset>
 					</shadowData>
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
-						<texPath>Things/Pawn/Animal/Warg/Dessicated_Warg</texPath>
-						<drawSize>2</drawSize>
+					<texPath>Things/Pawn/Animal/Warg/Dessicated_Warg</texPath>
+					<drawSize>2</drawSize>
 				</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>

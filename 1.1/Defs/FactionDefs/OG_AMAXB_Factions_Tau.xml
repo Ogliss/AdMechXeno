@@ -22,8 +22,8 @@
 			<li>(0.4, 0.2, 0)</li>
 		</colorSpectrum>
 		<permanentEnemy>true</permanentEnemy>
-		<factionNameMaker>NamerOGTauFaction</factionNameMaker>
-		<settlementNameMaker>NamerOGTauBases</settlementNameMaker>
+		<factionNameMaker>OG_Tau_NamerFaction</factionNameMaker>
+		<settlementNameMaker>OG_Tau_NamerBases</settlementNameMaker>
 		<techLevel>Spacer</techLevel>
 		<geneticVariance>0.8</geneticVariance>
 		<backstoryFilters>

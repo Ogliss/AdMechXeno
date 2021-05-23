@@ -32,6 +32,8 @@
 			<flyOverhead>true</flyOverhead>
 			<damageDef>Stun</damageDef>
 			<damageAmountBase>6</damageAmountBase>
+			<arcHeightFactor>6</arcHeightFactor>
+			<shadowSize>1</shadowSize>
 			<speed>250</speed>
 		 </projectile>
 	</ThingDef>

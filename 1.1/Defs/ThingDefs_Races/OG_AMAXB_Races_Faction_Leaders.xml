@@ -181,7 +181,7 @@
 			<MoveSpeed>5.4</MoveSpeed>
 		</statBases>
 		<race>
-			<nameGenerator>OG_NamerPerson_Ork</nameGenerator>
+			<nameGenerator>OG_Ork_NamerPerson</nameGenerator>
 			<leatherDef>Leather_Ork</leatherDef>
 			<lifeExpectancy>9999</lifeExpectancy>
 			<baseHealthScale>2.75</baseHealthScale>

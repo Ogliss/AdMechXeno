@@ -14,8 +14,8 @@
 		<canStageAttacks>true</canStageAttacks>
 		<leaderTitle>Warboss</leaderTitle>
 		<earliestRaidDays>45</earliestRaidDays>
-		<factionNameMaker>OG_NamerFaction_Ork</factionNameMaker>
-		<settlementNameMaker>OG_NamerBases_Ork</settlementNameMaker>
+		<factionNameMaker>OG_Ork_NamerFaction</factionNameMaker>
+		<settlementNameMaker>OG_Ork_NamerBases</settlementNameMaker>
 		<techLevel>Spacer</techLevel>
 		<backstoryFilters>
 			<li>
@@ -179,8 +179,8 @@
 		<canStageAttacks>true</canStageAttacks>
 		<leaderTitle>Feral Warboss</leaderTitle>
 		<permanentEnemy>true</permanentEnemy>
-		<factionNameMaker>OG_NamerFaction_Ork</factionNameMaker>
-		<settlementNameMaker>OG_NamerBases_Ork</settlementNameMaker>
+		<factionNameMaker>OG_Ork_NamerFaction</factionNameMaker>
+		<settlementNameMaker>OG_Ork_NamerBases</settlementNameMaker>
 		<techLevel>Neolithic</techLevel>
 		<backstoryFilters>
 			<li>

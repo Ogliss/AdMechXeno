@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  
+<!-- Dark Eldar Construct Base Abstract -->
+  <PawnKindDef Name="OG_DarkEldar_Construct_PawnKind_Base" Abstract="True">
+    <defaultFactionType>OG_DarkEldar_Kabal_Faction</defaultFactionType>
+    <aiAvoidCover>false</aiAvoidCover>
+    <destroyGearOnDrop>false</destroyGearOnDrop>
+  </PawnKindDef>  
+
+<!-- Dark Eldar Talos Pain Engine -->
+  <!--PawnKindDef ParentName="OG_DarkEldar_Construct_PawnKind_Base">
+    <defName>OG_DarkEldar_TalosPainEngine</defName>
+    <label>talos pain engine</label>
+    <race>OG_DarkEldar_TalosPainEngine_Race</race>
+    <combatPower>115</combatPower>
+    <lifeStages>
+      <li>
+        <bodyGraphicData>
+          <texPath>Things/Pawn/ToolUser/DarkEldar/TalosPainEngine/TalosPainEngine</texPath>
+          <graphicClass>Graphic_Multi</graphicClass>
+          <drawSize>4.65</drawSize>
+          <color>(255,255,255)</color>
+          <shaderType>CutoutComplex</shaderType>
+          <shadowData>
+            <volume>(0.4, 0.8, 0.4)</volume>
+          </shadowData>
+        </bodyGraphicData>
+      </li>
+    </lifeStages>
+  </PawnKindDef-->  
+  
+</Defs>

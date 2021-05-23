@@ -36,101 +36,120 @@
 		<li>Ogliss.FeralOrkz</li>
 		<li>Mlie.O21Rimhammer40K</li>
 	</incompatibleWith>	
-	<description>V1.6.1.1
+	<description>V1.6.5.0
 Adds factions using xenos weapons from my Armoury mod.
-Requires new start or one of those faction managers
+
+Imperial:
+	Militarum:
+		Pawns:
+		
+	Mechanicus:
+		Pawns:
+			Tech Priests(Humanlike)
+			Skitarii(Humanlike)
+			Sicarians
+
+Eldar:
+	Pawns:
+		Farseer
+		Warlock
+		Guardian Defender/Storm/Support
+		Ranger (Infiltrator)
+		Dark Reaper
+		Dark Reaper Exarch
+		Dire Avenger
+		Dire Avenger Exarch
+		Fire Dragon
+		Fire Dragon Exarch
+		Howling Banshee
+		Howling Banshee Exarch
+		Swooping Hawk (Deep Strike)
+		Swooping Hawk Exarch (Deep Strike)
+		Striking Scorpion (Infiltrator)
+		Striking Scorpion Exarch (Infiltrator)
+		Warp Spider (Deep Strike)
+		Warp Spider Exarch (Deep Strike)
+
+		Wraithguard
+		Wraithblade
+		Wraithlord
+		
+		Avatar
+Tau:
+	Pawns:
+		Ethereal
+		Pathfinder Shas'la/Shas'ui
+		Firewarrior Shas'la/Shas'ui
+		Kroot Warrior
+		Kroot Hunter
+
+		Kroothound
+		Krootox
+		Knarloc
+
+Necron:
+	Pawns:
+		Scarab Swarm
+		Flayed Ones (Infiltrators)
+		Warrior
+		Immortal
+		Tomb Spyder (Can repair dead/damaged necrons)
+		Wraith (Move Through Cover, Phase Shifter)
+		Destroyer
+		Heavy Destroyer
+		Destroyer Lord
+		Lord
 	
-Small addon for my weapons mod, Adds NPC factions using xenos weapons.
+	Incidents:
+		Monolith
 
-Playable addons for various races are linked in the description below
+Ork:
+	Pawns:
+		Boy (Shoota, Slugga, Choppa)
+		Eavy boy
+		Nob (Shoota, Choppa)
+		Eavy Nob
+		Squig
 
-Requires new start or Orion's faction discovery mod to add them to an exsisting map (Thanks to BadNeighbour for testing)
 
-Current
+Chaos:
+	Pawns:
+		Deamons:
+			Horrors of Tzeentch (Pink, Blue, Brimstone)
+			Flamer of Tzeentch (Normal, Exalted)
+			Screamers of Tzeentch
+			Lord of Change
 
-==Tau== - armour based on Cpt.Ohu's Tau armour
+			Nurgling
+			Plaguebearer
+			Great Unclean One
 
-Ethereal
-Firewarrior Shas'la
-Firewarrior Shas'ui
-Kroot Warrior
+			Deamonette
+			Keeper of Secrets
 
-Kroothound
-Krootox
-Knarloc
+			Bloodletter
 
-==Eldar== - armour based on Baron's Eldar armour
+	Incidents:
+		Warp Storm
+		Deamonic Infestation
+		Deamonic Incursion
 
-Farseer
-Warlock
-Guardian
-Fire Support
-Dire Avenger
-Howling Banshee
-Ranger (Infiltrators)
+Tyranids:
+	Pawns:
+		Ripper Swarm
+		Homogaunt (Leaping Attack)
+		Termagant
+		Gargoyle
+		Genestealer
+		Warrior
+		Lictor (Infiltrator, Move Through Cover)
+		Ravener (Deep Strike)
+		Hive Tyrant
+		Carnifex
+		Zoanthrope (Shielded)
+		
+	Incidents:
 
-==Necron==
-
-Scarab Swarm
-Flayed Ones (Infiltrators)
-Warrior
-Immortal
-Tomb Spyder (Can repair dead/damaged necrons)
-Wraith (Move Through Cover, Phase Shifter)
-Destroyer
-Heavy Destroyer
-Destroyer Lord
-Lord
-
-Monolith Spawn Incident
-
-==Ork==
-
-Boy (Shoota, Slugga, Choppa)
-Eavy boy
-Nob (Shoota, Choppa)
-Eavy Nob
-
-Squig
-
-==Mechanicus==
-
-Tech Priests(Humanlike)
-Skitarii(Humanlike)
-Sicarians
-
-==Chaos Deamons==
-
-Horrors of Tzeentch (Pink, Blue, Brimstone)
-Flamer of Tzeentch (Normal, Exalted)
-Screamers of Tzeentch
-Lord of Change
-
-Nurgling
-Plaguebearer
-Great Unclean One
-
-Deamonette
-Keeper of Secrets
-
-Bloodletter
-
-Warp Storm Incident
-Deamonic Infestation Incident
-
-==Tyranids==
-
-Ripper Swarm
-Homogaunt (Leaping Attack)
-Termagant
-Gargoyle
-Genestealer
-Warrior
-Lictor (Infiltrator, Move Through Cover)
-Ravener (Deep Strike)
-Hive Tyrant
-Carnifex
-Zoanthrope (Shielded)
 
 
 Load Order info:
@@ -160,6 +179,20 @@ RebelRot: Textures for
 	
 SirLaLaPyon: Textures for
 	Bloodletter
+	
+Pagoda: Textures for
+	Guardian
+	Ranger
+	Dark Reaper
+	Dire Avenger
+	Fire Dragon
+	Howling Banshee
+	Swooping Hawk
+	Striking Scorpion
+	Warp Spider
+	Wraithguard
+	Wraithblade
+	Avatar
 
 Ogliss: XML, C# and Textures for
 	Everything not listed above!

@@ -97,7 +97,7 @@
 				<bodyGraphicData>
 					<texPath>Things/Pawn/ToolUser/Eldar/Farseer</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>1.350</drawSize>
+					<drawSize>3.000</drawSize>
 					<color>(255,255,209)</color>
 					<shaderType>CutoutComplex</shaderType>
 					<shadowData>
@@ -134,7 +134,7 @@
 				<bodyGraphicData>
 					<texPath>Things/Pawn/ToolUser/Eldar/Warlock</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>1.350</drawSize>
+					<drawSize>3.0</drawSize>
 					<color>(255,255,209)</color>
 					<shaderType>CutoutComplex</shaderType>
 					<shadowData>

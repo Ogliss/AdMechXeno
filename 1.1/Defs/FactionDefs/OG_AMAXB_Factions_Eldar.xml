@@ -21,7 +21,7 @@
 			<li>(0.4, 0.2, 0)</li>
 		</colorSpectrum>
 		<permanentEnemy>true</permanentEnemy>
-		<factionNameMaker>NamerOGEldarFaction</factionNameMaker>
+		<factionNameMaker>OG_Eldar_Craftworld_NamerFaction</factionNameMaker>
 		<techLevel>Spacer</techLevel>
 		<backstoryFilters>
 			<li>
