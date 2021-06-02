@@ -21,8 +21,10 @@
 			<min>10</min>
 			<max>40</max>
 		</startingGoodwill>
-		<settlementNameMaker>OG_NamerBases_Militarum</settlementNameMaker>
-		<factionNameMaker>OG_NamerFaction_Militarum</factionNameMaker>
+		<pawnNameMaker>OG_Militarum_NamerPerson</pawnNameMaker>
+		<pawnNameMakerFemale>OG_Militarum_NamerPersonFemale</pawnNameMakerFemale>
+		<settlementNameMaker>OG_Militarum_NamerBases</settlementNameMaker>
+		<factionNameMaker>OG_Militarum_NamerFaction</factionNameMaker>
 		<techLevel>Ultra</techLevel>
 		<backstoryFilters>
 			<li>

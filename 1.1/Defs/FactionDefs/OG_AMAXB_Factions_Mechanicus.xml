@@ -19,7 +19,7 @@
 		</colorSpectrum>
 		<earliestRaidDays>90</earliestRaidDays>
 		<permanentEnemy>true</permanentEnemy>
-		<factionNameMaker>NamerOGOG_Mechanicus_Faction</factionNameMaker>
+		<factionNameMaker>OG_Mechanicus_NamerFaction</factionNameMaker>
 		<techLevel>Spacer</techLevel>
 		<backstoryFilters>
 			<li>

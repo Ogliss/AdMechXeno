@@ -35,7 +35,7 @@ namespace AdeptusMechanicus.HarmonyInstance
             }
             if (showRaces)
             {
-                string label = "AMXB_ShowTyranid".Translate() + " Settings";
+                string label = "AdeptusMechanicus.Xenobiologis.ShowTyranid".Translate() + " Settings";
                 string tooltip = string.Empty;
                 if (Dev)
                 {
@@ -46,13 +46,13 @@ namespace AdeptusMechanicus.HarmonyInstance
                 {
                     Listing_StandardExpanding listing_General = listing_Race.BeginSection(MenuLength, true);
                     listing_General.ColumnWidth *= 0.488f;
-                    listing_General.CheckboxLabeled("AMXB_AllowTyranid".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Tyranid")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_HiddenFaction".Translate()),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowTyranid".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Tyranid")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.HiddenFaction".Translate()),
                         ref settings.AllowTyranid,
                         null,
                         !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Tyranid")) || !settings.AllowTyranidWeapons,
                         DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Tyranid")) && settings.AllowTyranidWeapons);
                     listing_General.NewColumn();
-                    listing_General.CheckboxLabeled("AMXB_AllowTyranidInfestation".Translate(),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowTyranidInfestation".Translate(),
                         ref settings.AllowTyranidInfestation,
                         null,
                         !DefDatabase<IncidentDef>.AllDefs.Any(x => x.defName.Contains("OG_Tyranid_Infestation")) || !settings.AllowTyranid || !settings.AllowTyranidWeapons,

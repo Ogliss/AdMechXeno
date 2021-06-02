@@ -35,8 +35,8 @@ namespace AdeptusMechanicus.HarmonyInstance
             }
             if (showRaces)
             {
-                string label = "AMXB_ShowChaos".Translate() + " Settings";
-                string tooltip = "AMA_ShowSpecialRulesDesc".Translate();
+                string label = "AdeptusMechanicus.Xenobiologis.ShowChaos".Translate() + " Settings";
+                string tooltip = "AdeptusMechanicus.ShowSpecialRulesDesc".Translate();
                 if (Dev)
                 {
                     label += " Main Length: " + MainMenuLength + " SubLength: " + MenuLength + " Passed: " + num2 + " Inc: " + inc;
@@ -47,19 +47,19 @@ namespace AdeptusMechanicus.HarmonyInstance
                     Listing_StandardExpanding listing_General = listing_Race.BeginSection(MenuLength, true);
                     listing_General.ColumnWidth *= AdeptusIntergrationUtility.enabled_EndTimesWithGuns ? 0.32f : 0.488f;
 
-                    listing_General.CheckboxLabeled("AMXB_AllowChaosMarine".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Marine")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_HiddenFaction".Translate()),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowChaosMarine".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Marine")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.HiddenFaction".Translate()),
                         ref settings.AllowChaosMarine,
                         null,
                         !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Marine")) || !settings.AllowChaosWeapons,
                         DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Marine")) && settings.AllowChaosWeapons);
 
-                    listing_General.CheckboxLabeled("AMXB_AllowChaosGuard".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Guard")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_Faction".Translate()),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowChaosGuard".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Guard")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.Faction".Translate()),
                         ref settings.AllowChaosGuard,
                         null,
                         !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Guard")) || !settings.AllowChaosWeapons,
                         DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Guard")) && settings.AllowChaosWeapons);
 
-                    listing_General.CheckboxLabeled("AMXB_AllowChaosMechanicus".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Mechanicus")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_HiddenFaction".Translate()),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowChaosMechanicus".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Mechanicus")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.HiddenFaction".Translate()),
                         ref settings.AllowChaosMechanicus,
                         null,
                         !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Mechanicus")) && settings.AllowChaosWeapons,
@@ -67,19 +67,19 @@ namespace AdeptusMechanicus.HarmonyInstance
 
                     listing_General.NewColumn();
 
-                    listing_General.CheckboxLabeled("AMXB_AllowChaosDeamons".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_HiddenFaction".Translate()),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowChaosDeamons".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.HiddenFaction".Translate()),
                         ref settings.AllowChaosDeamons,
                         null,
                         !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")),
                         DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")));
 
-                    listing_General.CheckboxLabeled("AMXB_AllowChaosDeamonicIncursion".Translate(),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowChaosDeamonicIncursion".Translate(),
                         ref settings.AllowChaosDeamonicIncursion,
                         null,
                         !DefDatabase<IncidentDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon_Deamonic_Incursion")) || !settings.AllowChaosDeamons,
                         DefDatabase<IncidentDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon_Deamonic_Incursion")) && settings.AllowChaosDeamons);
 
-                    listing_General.CheckboxLabeled("AMXB_AllowChaosDeamonicInfestation".Translate(),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowChaosDeamonicInfestation".Translate(),
                         ref settings.AllowChaosDeamonicInfestation,
                         null,
                         !DefDatabase<IncidentDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon_Daemonic_Infestation")) || !settings.AllowChaosDeamons,
@@ -90,19 +90,19 @@ namespace AdeptusMechanicus.HarmonyInstance
                     {
                         listing_General.NewColumn();
 
-                        listing_General.CheckboxLabeled("AMXB_EndTimesChaosDeamonIntergration".Translate(),
+                        listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.EndTimesChaosDeamonIntergration".Translate(),
                             ref settings.EndTimesIntergrateDeamons,
-                            "AMXB_EndTimesChaosDeamonIntergrationDesc".Translate(),
+                            "AdeptusMechanicus.Xenobiologis.EndTimesChaosDeamonIntergrationDesc".Translate(),
                             !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")),
                             DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")));
-                        listing_General.CheckboxLabeled("AMXB_EndTimesChaosDeamonIntergration_GreatPortal".Translate(),
+                        listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.EndTimesChaosDeamonIntergration_GreatPortal".Translate(),
                             ref settings.EndTimesIntergrateDeamonsGreat,
-                            "AMXB_EndTimesChaosDeamonIntergration_GreatPortalDesc".Translate(),
+                            "AdeptusMechanicus.Xenobiologis.EndTimesChaosDeamonIntergration_GreatPortalDesc".Translate(),
                             !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")) || !settings.EndTimesIntergrateDeamons,
                             DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")) && settings.EndTimesIntergrateDeamons);
-                        listing_General.CheckboxLabeled("AMXB_EndTimesChaosDeamonIntergration_SmallPortal".Translate(),
+                        listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.EndTimesChaosDeamonIntergration_SmallPortal".Translate(),
                             ref settings.EndTimesIntergrateDeamonsSmall,
-                            "AMXB_EndTimesChaosDeamonIntergration_SmallPortalDesc".Translate(),
+                            "AdeptusMechanicus.Xenobiologis.EndTimesChaosDeamonIntergration_SmallPortalDesc".Translate(),
                             !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")) || !settings.EndTimesIntergrateDeamons,
                             DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Chaos_Deamon")) && settings.EndTimesIntergrateDeamons);
 

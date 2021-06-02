@@ -34,8 +34,8 @@ namespace AdeptusMechanicus.HarmonyInstance
             }
             if (showRaces)
             {
-                string label = "AMXB_ShowOrk".Translate() + " Settings";
-                string tooltip = "AMA_ShowSpecialRulesDesc".Translate();
+                string label = "AdeptusMechanicus.Xenobiologis.ShowOrk".Translate() + " Settings";
+                string tooltip = "AdeptusMechanicus.ShowSpecialRulesDesc".Translate();
                 if (Dev)
                 {
                     label += " Main Length: " + MainMenuLength + " SubLength: " + MenuLength + " Passed: " + num2 + " Inc: " + inc;
@@ -45,19 +45,19 @@ namespace AdeptusMechanicus.HarmonyInstance
                 {
                     Listing_StandardExpanding listing_General = listing_Race.BeginSection(MenuLength, true);
                     listing_General.ColumnWidth *= 0.32f;
-                    listing_General.CheckboxLabeled("AMXB_AllowOrkTek".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Ork_Tek")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_Faction".Translate()),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowOrkTek".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Ork_Tek")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.Faction".Translate()),
                         ref settings.AllowOrkTek,
                         null,
                         !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Ork_Tek")) || !settings.AllowOrkWeapons,
                         DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Ork_Tek")) && settings.AllowOrkWeapons);
                     listing_General.NewColumn();
-                    listing_General.CheckboxLabeled("AMXB_AllowOrkFeral".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Ork_Feral")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_Faction".Translate()),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowOrkFeral".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Ork_Feral")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.Faction".Translate()),
                         ref settings.AllowOrkFeral,
                         null,
                         !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Ork_Feral")) || !settings.AllowOrkWeapons,
                         DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Ork_Feral")) && settings.AllowOrkWeapons);
                     listing_General.NewColumn();
-                    listing_General.CheckboxLabeled("AMXB_AllowOrkRok".Translate(),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowOrkRok".Translate(),
                         ref settings.AllowOrkRok,
                         null,
                         !settings.AllowOrkTek || !settings.AllowOrkWeapons,

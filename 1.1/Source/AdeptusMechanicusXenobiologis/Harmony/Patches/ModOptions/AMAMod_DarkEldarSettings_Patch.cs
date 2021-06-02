@@ -34,7 +34,7 @@ namespace AdeptusMechanicus.HarmonyInstance
             }
             if (showRaces)
             {
-                string label = "AMXB_ShowDarkEldar".Translate() + " Settings";
+                string label = "AdeptusMechanicus.Xenobiologis.ShowDarkEldar".Translate() + " Settings";
                 string tooltip = string.Empty;
                 if (Dev)
                 {
@@ -46,7 +46,7 @@ namespace AdeptusMechanicus.HarmonyInstance
                 {
                     Listing_StandardExpanding listing_General = listing_Race.BeginSection(MenuLength, true);
                     listing_General.ColumnWidth *= 0.488f;
-                    listing_General.CheckboxLabeled("AMXB_AllowDarkEldar".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Dark_Eldar")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_HiddenFaction".Translate()),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowDarkEldar".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Dark_Eldar")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.HiddenFaction".Translate()),
                         ref settings.AllowDarkEldar,
                         null,
                         !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Dark_Eldar")) || !settings.AllowDarkEldarWeapons,

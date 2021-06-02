@@ -32,7 +32,7 @@ namespace AdeptusMechanicus.HarmonyInstance
         [HarmonyPrefix]
         public static bool ImperialSettings_Prefix(ref AMAMod __instance ,ref Listing_StandardExpanding listing_Main, Rect rect, ref Rect inRect, float num, ref float num2)
         {
-            string label = "AMXB_ShowImperium".Translate() + " Settings";
+            string label = "AdeptusMechanicus.Xenobiologis.ShowImperium".Translate() + " Settings";
             string tooltip = string.Empty;
             if (Dev)
             {
@@ -47,23 +47,23 @@ namespace AdeptusMechanicus.HarmonyInstance
                     // left side
                     Listing_StandardExpanding listing_General = listing_Race.BeginSection(MenuLength, true, parent: listing_Main);
                     listing_General.ColumnWidth *= 0.488f;
-                    listing_General.CheckboxLabeled("AMXB_AllowAdeptusAstartes".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Astartes")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_HiddenFaction".Translate()),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowAdeptusAstartes".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Astartes")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.HiddenFaction".Translate()),
                         ref settings.AllowAdeptusAstartes,
                         null,
                         !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Astartes")) || !AMSettings.Instance.AllowImperialWeapons,
                         AMSettings.Instance.AllowImperialWeapons);
-                    listing_General.CheckboxLabeled("AMXB_AllowAdeptusMechanicus".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Mechanicus")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_HiddenFaction".Translate()),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowAdeptusMechanicus".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Mechanicus")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.HiddenFaction".Translate()),
                         ref settings.AllowAdeptusMechanicus,
                         null,
                         !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Mechanicus")) || !AMSettings.Instance.AllowMechanicusWeapons);
 
                     listing_General.NewColumn();
                     // right side
-                    listing_General.CheckboxLabeled("AMXB_AllowAdeptusMilitarum".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Militarum")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_Faction".Translate()),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowAdeptusMilitarum".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Militarum")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.Faction".Translate()),
                         ref settings.AllowAdeptusMilitarum,
                         null,
                         !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Militarum")) || !AMSettings.Instance.AllowImperialWeapons);
-                    listing_General.CheckboxLabeled("AMXB_AllowAdeptusSororitas".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Sororitas")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_Faction".Translate()),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowAdeptusSororitas".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Sororitas")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.Faction".Translate()),
                         ref settings.AllowAdeptusSororitas,
                         null,
                         !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Sororitas")) || !AMSettings.Instance.AllowImperialWeapons);

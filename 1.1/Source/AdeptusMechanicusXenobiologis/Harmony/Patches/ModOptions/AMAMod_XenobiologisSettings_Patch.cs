@@ -14,7 +14,7 @@ namespace AdeptusMechanicus.HarmonyInstance
         [HarmonyPostfix]
         public static void ModsLoaded(ref AMAMod __instance, ref string __result)
         {
-            __result += ", " + "AMXB_ModName".Translate() ;
+            __result += ", " + "AdeptusMechanicus.Xenobiologis.ModName".Translate() ;
         }
     }
 
@@ -68,16 +68,16 @@ namespace AdeptusMechanicus.HarmonyInstance
                 {
                     listing_General = listing_Menu.BeginSection(listing_BaseOptionsLength, true, 3, 4, 4);
                     listing_General.ColumnWidth *= 0.488f;
-                    listing_General.CheckboxLabeled("AMXB_ForceRelations".Translate(), ref settings.ForceRelations, "AMXB_ForceRelationsDesc".Translate());
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.ForceRelations".Translate(), ref settings.ForceRelations, "AdeptusMechanicus.Xenobiologis.ForceRelationsDesc".Translate());
                     listing_General.NewColumn();
-                    listing_General.CheckboxLabeled("AMXB_AllowWarpstorm".Translate(), ref settings.AllowWarpstorm, "AMXB_AllowWarpstormDesc".Translate());
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowWarpstorm".Translate(), ref settings.AllowWarpstorm, "AdeptusMechanicus.Xenobiologis.AllowWarpstormDesc".Translate());
                     listing_Menu.EndSection(listing_General);
                 }
 
                 listing_Races = listing_Menu.BeginSection(listing_RacesLength + raceMenuInc, out Rect frane, out Rect contents, false, 3, 4, 4);
                 //   Log.Message(listing_Menu.listingRect.height + " " + listing_Menu.CurHeight + " " + listing_Menu.MaxColumnHeightSeen);
-                string labelR = "AMXB_AllowedRaces".Translate() + " Settings";
-                string tooltipR = "AMA_ShowSpecialRulesDesc".Translate();
+                string labelR = "AdeptusMechanicus.Xenobiologis.AllowedRaces".Translate() + " Settings";
+                string tooltipR = "AdeptusMechanicus.ShowSpecialRulesDesc".Translate();
                 if (Dev)
                 {
                     labelR +=" Length: "+ raceMenu;

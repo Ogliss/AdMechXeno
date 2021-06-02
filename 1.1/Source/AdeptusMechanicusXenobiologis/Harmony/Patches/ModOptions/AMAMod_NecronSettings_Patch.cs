@@ -34,8 +34,8 @@ namespace AdeptusMechanicus.HarmonyInstance
             }
             if (showRaces)
             {
-                string label = "AMXB_ShowNecron".Translate() + " Settings";
-                string tooltip = "AMA_ShowSpecialRulesDesc".Translate();
+                string label = "AdeptusMechanicus.Xenobiologis.ShowNecron".Translate() + " Settings";
+                string tooltip = "AdeptusMechanicus.ShowSpecialRulesDesc".Translate();
                 if (Dev)
                 {
                     label += " Main Length: " + MainMenuLength + " SubLength: " + MenuLength + " Passed: " + num2 + " Inc: " + inc;
@@ -46,20 +46,20 @@ namespace AdeptusMechanicus.HarmonyInstance
                     Listing_StandardExpanding listing_General = listing_Race.BeginSection(MenuLength, true);
                     listing_General.ColumnWidth *= 0.32f;
 
-                    listing_General.CheckboxLabeled("AMXB_AllowNecron".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Necron")) ? "AMXB_NotYetAvailable".Translate() : "AMXB_HiddenFaction".Translate()),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowNecron".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Necron")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.HiddenFaction".Translate()),
                         ref settings.AllowNecron,
                         null,
                         !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Necron")) || !settings.AllowNecronWeapons,
                         DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Necron")) && settings.AllowNecronWeapons);
 
                     listing_General.NewColumn();
-                    listing_General.CheckboxLabeled("AMXB_AllowNecronWellBeBack".Translate(),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowNecronWellBeBack".Translate(),
                         ref settings.AllowNecronWellBeBack,
                         null,
                         !settings.AllowNecron || !settings.AllowNecronWeapons,
                         settings.AllowNecron && settings.AllowNecronWeapons);
                     listing_General.NewColumn();
-                    listing_General.CheckboxLabeled("AMXB_AllowNecronMonolith".Translate(),
+                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowNecronMonolith".Translate(),
                         ref settings.AllowNecronMonolith,
                         null,
                         !settings.AllowNecron || !settings.AllowNecronWeapons,

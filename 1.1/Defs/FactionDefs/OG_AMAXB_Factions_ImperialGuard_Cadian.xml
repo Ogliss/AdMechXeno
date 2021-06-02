@@ -18,7 +18,7 @@
 			<min>10</min>
 			<max>40</max>
 		</startingGoodwill>
-		<factionNameMaker>OG_NamerFaction_Militarum_Cadian</factionNameMaker>
+		<factionNameMaker>OG_Militarum_NamerFaction_Cadian</factionNameMaker>
 		<backstoryFilters>
 			<!--
 			<li>
