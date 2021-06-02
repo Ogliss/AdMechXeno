@@ -1,15 +1,10 @@
 obj/
 bin/
-.vs/
-.zip/
+*.vs
 *.zip
-.7z/
 *.7z
-.rar/
 *.rar
-.pdb/
 *.pdb
-.psd/
 *.psd
 Textures/Things/Pawn/ToolUser/TombSpyder_south.png
 Textures/Things/Pawn/ToolUser/TombSpyder_east.png
