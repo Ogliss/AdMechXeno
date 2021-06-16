@@ -1,8 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- ========================== Kroot Ox ================================= -->
-	<ThingDef Name="OG_KrootOx_Base" ParentName="AnimalThingBase" ADogSaidBody="Legs">
-		<defName>OG_KrootOx</defName>
+	<ThingDef Abstract="True" Name="OG_KrootOx_Base" ParentName="AnimalThingBase" ADogSaidBody="Legs">
 		<label>Kroot Ox</label>
 		<description>A large herding herbivore descended from the Kroot and locked into an evolutionary Dead end. While enraged Kroot Ox are deadly, tamed Kroot Ox are quite docile and can be used as pack animals.</description>
 		<statBases>
