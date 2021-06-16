@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Archon -->
+	<PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
+		<defName>OG_DarkEldar_Archon_Faction</defName>
+		<label>archon</label>
+		<race>Human</race>
+		<combatPower>15000</combatPower>
+		<itemQuality>Superior</itemQuality>
+		<factionLeader>true</factionLeader>
+		<aiAvoidCover>false</aiAvoidCover>
+		<initialWillRange>3~5</initialWillRange>
+		<initialResistanceRange>17~27</initialResistanceRange>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/Archon</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.350</drawSize>
+					<color>(255,255,209)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+				<drawSize>1.350</drawSize>
+		</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>7500</min>
+			<max>15000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>DESplinterPistol</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+</Defs>

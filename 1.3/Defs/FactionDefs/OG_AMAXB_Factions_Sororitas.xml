@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<FactionDef ParentName="OG_Sororitas_Faction_Base">
+	<!--FactionDef ParentName="OG_Sororitas_Faction_Base">
 		<defName>OG_Sororitas_Faction</defName>
-	</FactionDef>
+	</FactionDef-->
 	
 </Defs>

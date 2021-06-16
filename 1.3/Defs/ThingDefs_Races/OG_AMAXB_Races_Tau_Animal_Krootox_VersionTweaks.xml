@@ -5,7 +5,7 @@
 	<ThingDef ParentName="OG_KrootOx_Base" ADogSaidBody="Legs">
 		<defName>OG_KrootOx</defName>
 		<race>
-			<trainability>none</trainability>
+			<trainability>None</trainability>
 		</race>
 	</ThingDef>
 </Defs>
