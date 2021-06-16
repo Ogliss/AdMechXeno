@@ -31,7 +31,7 @@ namespace AdeptusMechanicus
         }
 
         [DebuggerHidden]
-        protected override IEnumerable<Toil> MakeNewToils()
+        public override IEnumerable<Toil> MakeNewToils()
         {
             Toil wait = new Toil();
             wait.initAction = delegate

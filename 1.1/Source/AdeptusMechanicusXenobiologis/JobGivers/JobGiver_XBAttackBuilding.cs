@@ -13,7 +13,7 @@ namespace AdeptusMechanicus
     // AdeptusMechanicus.JobGiver_XBAttackBuilding
     public class JobGiver_XBAttackBuilding : ThinkNode_JobGiver
     {
-        protected override Job TryGiveJob(Pawn pawn)
+        public override Job TryGiveJob(Pawn pawn)
         {
             Region region = pawn.GetRegion();
             if (region == null)

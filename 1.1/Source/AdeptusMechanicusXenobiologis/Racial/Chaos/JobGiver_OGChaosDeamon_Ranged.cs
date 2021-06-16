@@ -18,7 +18,7 @@ namespace AdeptusMechanicus
 
         private const int WanderOutsideDoorRegions = 9;
 
-        protected override Job TryGiveJob(Pawn pawn)
+        public override Job TryGiveJob(Pawn pawn)
         {
             //  pawn.mindState.mentalStateHandler.TryStartMentalState(OGChaosDeamonDefOf.MentalState_OGChaosDeamon, null, false, false, null, false);
             //  pawn.mindState.duty.def = DutyDefOf.AssaultColony;

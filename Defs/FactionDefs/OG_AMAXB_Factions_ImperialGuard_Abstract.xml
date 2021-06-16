@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<FactionDef Name="OG_Militarum_Faction_Base" Abstract="true">
+
+	<FactionDef Abstract="true" Name="OG_Militarum_Faction_Base">
 		<defName>OG_Militarum_Faction</defName>
 		<label>Imperial Guard Regiment</label>
 		<description>The Astra Militarum, also known as the Imperial Guard in colloquial Low Gothic, is the largest coherent fighting force in the galaxy. They serve as the Imperium of Man's primary combat force and first line of defence from the myriad threats which threaten the existence of the Human race in the late 41st Millennium. It is comprised of countless billions of men and women -- hundreds of thousands of different regiments, supported by a vast array of light and heavy armoured vehicles that provide the Guard's primary offensive punch.</description>
@@ -17,12 +18,10 @@
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
 		<leaderTitle>Lord Marshal</leaderTitle>
-		<startingGoodwill>
+		<!--startingGoodwill>
 			<min>10</min>
 			<max>40</max>
-		</startingGoodwill>
-		<pawnNameMaker>OG_Militarum_NamerPerson</pawnNameMaker>
-		<pawnNameMakerFemale>OG_Militarum_NamerPersonFemale</pawnNameMakerFemale>
+		</startingGoodwill-->
 		<settlementNameMaker>OG_Militarum_NamerBases</settlementNameMaker>
 		<factionNameMaker>OG_Militarum_NamerFaction</factionNameMaker>
 		<techLevel>Ultra</techLevel>
@@ -47,14 +46,6 @@
 				<commonality>0.05</commonality>
 			</li>
 		</backstoryFilters>
-		<hairTags>
-			<li>Urban</li>
-			<li>Rural</li>
-		</hairTags>
-		<naturalColonyGoodwill>
-			<min>-60</min>
-			<max>0</max>
-		</naturalColonyGoodwill>
 		<visitorTraderKinds>
 			<li>OG_Miliatrum_Trader_Visitor_Standard</li>
 		</visitorTraderKinds>
@@ -136,5 +127,85 @@
 		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 		<factionIconPath>Icons/Imperial/Militarum/Icon_Adeptus_Militarum</factionIconPath>
 	</FactionDef>
+
+	<FactionDef Abstract="true" Name="OG_Militarum_Cadian_Faction_Base" ParentName="OG_Militarum_Faction_Base">
+		<label>Cadian Regiment</label>
+		<description>The Cadian Shock Troops, also sometimes called Cadian Shock Troopers, are the highly disciplined Astra Militarum Militarum Regimentum soldiers conscripted in large numbers from the Fortress World of Cadia, which once stood sentinel as the preeminent bastion of the Imperium of Man in the fight against the Emperor's ancient Archenemy, Chaos.\n\nCadia was one world amongst many tens of thousands in the Imperium of Man, and has an honoured and violent place in its history, for Cadia stood upon the edge of the Eye of Terror within the Segmentum Obscurus, in a narrow corridor of navigable space known as the Cadian Gate.</description>
+		<pawnSingular>cadian</pawnSingular>
+		<pawnsPlural>cadians</pawnsPlural>
+		<categoryTag>Outlander</categoryTag>
+		<basicMemberKind>OG_Militarum_Guardsman_Ranged_Cadian</basicMemberKind>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>Lord Marshal</leaderTitle>
+		<factionNameMaker>OG_Militarum_NamerFaction_Cadian</factionNameMaker>
+		<backstoryFilters>
+			<!--
+			<li>
+				<categories>
+					<li>Imperium_Cadian</li>
+				</categories>
+				<commonality>0.95</commonality>
+			</li>
+			-->
+		</backstoryFilters>
+		<allowedArrivalTemperatureRange>
+			<min>-50</min>
+			<max>45</max>
+		</allowedArrivalTemperatureRange>
+		<pawnGroupMakers>
+			<li>
+				<kindDef>Combat</kindDef>
+				<options>
+					<OG_Militarum_LordMarshal_Cadian>1</OG_Militarum_LordMarshal_Cadian>
+					<OG_Militarum_Guardsman_Ranged_Cadian>230</OG_Militarum_Guardsman_Ranged_Cadian>
+					<OG_Militarum_Guardsman_Melee_Cadian>100</OG_Militarum_Guardsman_Melee_Cadian>
+					<OG_Militarum_Guardsman_Ranged_Special_Cadian>65</OG_Militarum_Guardsman_Ranged_Special_Cadian>
+					<OG_Militarum_Guardsman_Melee_Special_Cadian>50</OG_Militarum_Guardsman_Melee_Special_Cadian>
+					<OG_Militarum_Guardsman_Heavy_Weapons_Cadian>30</OG_Militarum_Guardsman_Heavy_Weapons_Cadian>
+					<OG_Militarum_Guardsman_Marksman_Cadian>30</OG_Militarum_Guardsman_Marksman_Cadian>
+					<OG_Militarum_Sergeant_Cadian>10</OG_Militarum_Sergeant_Cadian>
+				</options>
+			</li>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<OG_Militarum_Guardsman_Ranged_Cadian>230</OG_Militarum_Guardsman_Ranged_Cadian>
+					<OG_Militarum_Guardsman_Melee_Cadian>130</OG_Militarum_Guardsman_Melee_Cadian>
+					<OG_Militarum_LordMarshal_Cadian>1</OG_Militarum_LordMarshal_Cadian>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<OG_Militarum_Trader>1</OG_Militarum_Trader>
+				</traders>
+				<carriers>
+					<Muffalo>2</Muffalo>
+					<Dromedary>2</Dromedary>
+				</carriers>
+				<guards>
+					<OG_Militarum_Guardsman_Ranged_Cadian>130</OG_Militarum_Guardsman_Ranged_Cadian>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<OG_Militarum_LordMarshal_Cadian>1</OG_Militarum_LordMarshal_Cadian>
+					<OG_Militarum_Guardsman_Ranged_Cadian>230</OG_Militarum_Guardsman_Ranged_Cadian>
+					<OG_Militarum_Guardsman_Melee_Cadian>100</OG_Militarum_Guardsman_Melee_Cadian>
+					<OG_Militarum_Guardsman_Ranged_Special_Cadian>65</OG_Militarum_Guardsman_Ranged_Special_Cadian>
+					<OG_Militarum_Guardsman_Melee_Special_Cadian>50</OG_Militarum_Guardsman_Melee_Special_Cadian>
+					<OG_Militarum_Guardsman_Heavy_Weapons_Cadian>30</OG_Militarum_Guardsman_Heavy_Weapons_Cadian>
+					<OG_Militarum_Guardsman_Marksman_Cadian>30</OG_Militarum_Guardsman_Marksman_Cadian>
+					<OG_Militarum_Sergeant_Cadian>10</OG_Militarum_Sergeant_Cadian>
+				</options>
+			</li>
+		</pawnGroupMakers>
+	</FactionDef>
+
 
 </Defs>

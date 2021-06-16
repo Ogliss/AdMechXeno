@@ -11,8 +11,6 @@ namespace AdeptusMechanicus
     // AdeptusMechanicus.JobDriver_TombSpyderRepair
     public class JobDriver_TombSpyderRepair : JobDriver
     {
-        // Token: 0x170000B6 RID: 182
-        // (get) Token: 0x06000371 RID: 881 RVA: 0x0001EEFC File Offset: 0x0001D2FC
         protected Pawn DamagedNecron
         {
             get
@@ -33,13 +31,11 @@ namespace AdeptusMechanicus
             }
         }
 
-        // Token: 0x06000391 RID: 913 RVA: 0x00024554 File Offset: 0x00022954
         public override void Notify_Starting()
         {
             base.Notify_Starting();
         }
 
-        // Token: 0x06000372 RID: 882 RVA: 0x0001EF20 File Offset: 0x0001D320
         public override bool TryMakePreToilReservations(bool errorOnFailed)
         {
             Pawn pawn = this.pawn;
@@ -48,8 +44,7 @@ namespace AdeptusMechanicus
             return pawn.Reserve(target, job, 1, -1, null, errorOnFailed);
         }
 
-        // Token: 0x06000373 RID: 883 RVA: 0x0001EF58 File Offset: 0x0001D358
-        protected override IEnumerable<Toil> MakeNewToils()
+        public override IEnumerable<Toil> MakeNewToils()
         {
             this.FailOnIncapable(PawnCapacityDefOf.Manipulation);
             yield return Toils_Goto.GotoThing(TargetIndex.A, PathEndMode.InteractionCell);

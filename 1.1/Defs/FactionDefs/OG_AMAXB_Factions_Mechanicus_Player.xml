@@ -1,63 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<FactionDef Abstract="True" Name="OG_Mechanicus_PlayerFaction_Base">
-		<colorSpectrum>
-			<li>(0, 0.737, 0.847)</li>
-		</colorSpectrum>
-	</FactionDef>
-		
-	<FactionDef Parent="OG_Mechanicus_PlayerFaction_Base">
+
+	<FactionDef ParentName="OG_Mechanicus_PlayerFaction_Base">
 		<defName>OG_Mechanicus_PlayerColony</defName>
-		<label>Mechanicus Colony</label>
-		<description>Your own Mechanicus Colony.</description>
-		<isPlayer>true</isPlayer>
-		<pawnSingular>mechanicus</pawnSingular>
-		<pawnsPlural>mechanicus</pawnsPlural>
-		<basicMemberKind>Colonist_OG_Mechanicus</basicMemberKind>
-		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
-		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
-		<factionNameMaker>NamerFactionOutlander</factionNameMaker>
-		<techLevel>Ultra</techLevel>
-		<backstoryFilters>
-			<li>
-				<categories>
-					<li>Imperium_Standard</li>
-				</categories>
-			</li>
-			<li>
-				<categories>
-					<li>Offworld</li>
-					<li>Pirate</li>
-				</categories>
-			</li>
-		</backstoryFilters>
-		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
-		<factionIconPath>Icons/Imperial/Mechanicus/Icon_Adeptus_MechanicusB</factionIconPath>
-		<startingResearchTags>
-			<li>ClassicStart</li>
-		</startingResearchTags>
 		<hairTags>
 			<li>Urban</li>
 		</hairTags>
-		<apparelStuffFilter>
-			<thingDefs>
-				<li>Synthread</li>
-			</thingDefs>
-		</apparelStuffFilter>
-		<modExtensions>
-			<li Class="AdeptusMechanicus.FactionDefExtension">
-				<ForcedTraits>
-					<li>
-						<def>Transhumanist</def>
-						<degree>0</degree>
-						<Chance>1</Chance>
-						<replaceiffull>True</replaceiffull>
-					</li>
-				</ForcedTraits>
-				<hediffGivers>
-					<li>OG_Mechanicus_HediffSet</li>
-				</hediffGivers>
-			</li>
-		</modExtensions>
 	</FactionDef>
+	
 </Defs>

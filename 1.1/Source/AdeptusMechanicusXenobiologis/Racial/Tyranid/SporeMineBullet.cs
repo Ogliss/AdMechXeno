@@ -17,7 +17,7 @@ namespace AdeptusMechanicus
         }
 
         // Token: 0x06000006 RID: 6 RVA: 0x0000208C File Offset: 0x0000028C
-        protected override void Impact(Thing hitThing)
+        public override void Impact(Thing hitThing)
 		{
 			Faction faction = this.launcher.Faction;
 			ThingDef raceDef = this.def.projectile.postExplosionSpawnThingDef;

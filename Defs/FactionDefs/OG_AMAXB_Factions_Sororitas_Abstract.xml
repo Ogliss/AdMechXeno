@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<FactionDef Name="OG_Sororitas_Faction_Base" Abstract="true">
-		<defName>OG_Sororitas_Faction</defName>
+	<FactionDef Abstract="true" Name="OG_Sororitas_Faction_Base">
 		<label>Adetpus Sororitas Order</label>
 		<description>The Adepta Sororitas, colloquially called the "Sisterhood," whose military arm is also known as the Sisters of Battle and formerly as the Daughters of the Emperor, are an all-female division of the Imperium of Man's state church known as the Ecclesiarchy or, more formally, as the Adeptus Ministorum.</description>
 		<pawnSingular>Sister</pawnSingular>
@@ -18,10 +17,6 @@
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
 		<leaderTitle>Canoness Superior</leaderTitle>
-		<startingGoodwill>
-			<min>10</min>
-			<max>40</max>
-		</startingGoodwill>
 		<settlementNameMaker>OG_NamerBases_Sororitas</settlementNameMaker>
 		<factionNameMaker>OG_NamerFaction_Sororitas</factionNameMaker>
 		<techLevel>Ultra</techLevel>
@@ -58,14 +53,6 @@
 				<commonality>0.05</commonality>
 			</li>
 		</backstoryFilters>
-		<hairTags>
-			<li>Urban</li>
-			<li>Rural</li>
-		</hairTags>
-		<naturalColonyGoodwill>
-			<min>-60</min>
-			<max>0</max>
-		</naturalColonyGoodwill>
 		<visitorTraderKinds>
 			<li>OG_Sororitas_Trader_Visitor_Standard</li>
 		</visitorTraderKinds>

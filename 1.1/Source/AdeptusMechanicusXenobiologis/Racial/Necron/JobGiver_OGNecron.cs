@@ -8,8 +8,7 @@ namespace AdeptusMechanicus
     // AdeptusMechanicus.JobGiver_OGNecron
     public class JobGiver_Necron : ThinkNode_JobGiver
     {
-        // Token: 0x060005B7 RID: 1463 RVA: 0x00037A28 File Offset: 0x00035E28
-        protected override Job TryGiveJob(Pawn pawn)
+        public override Job TryGiveJob(Pawn pawn)
         {
         //    pawn.mindState.mentalStateHandler.TryStartMentalState(OGChaosDeamonDefOf.MentalState_OGChaosDeamon, null, false, false, null, false);
             if (pawn.TryGetAttackVerb(null, false) == null)
@@ -51,7 +50,6 @@ namespace AdeptusMechanicus
             return null;
         }
 
-        // Token: 0x060005B8 RID: 1464 RVA: 0x00037B7C File Offset: 0x00035F7C
         private Job MeleeAttackJob(Pawn pawn, Thing target)
         {
             Rand.PushState();
@@ -65,32 +63,21 @@ namespace AdeptusMechanicus
             };
         }
 
-        // Token: 0x060005B9 RID: 1465 RVA: 0x00037BC0 File Offset: 0x00035FC0
         private Pawn FindPawnTarget(Pawn pawn)
         {
             //return (Pawn)AttackTargetFinder.BestAttackTarget(pawn, TargetScanFlags.NeedThreat, (Thing x) => x is Pawn && x.Faction.HostileTo(Faction.OfInsects), 0f, 9999f, default(IntVec3), float.MaxValue, true, true);
             return (Pawn)AttackTargetFinder.BestAttackTarget(pawn, TargetScanFlags.NeedThreat, (Thing x) => x is Pawn && x.Faction != Faction.OfInsects && x.def.race.canBePredatorPrey, 0f, 9999f, default(IntVec3), float.MaxValue, true, true);
         }
 
-        // Token: 0x060005BA RID: 1466 RVA: 0x00037C14 File Offset: 0x00036014
         private Building FindTurretTarget(Pawn pawn)
         {
             return (Building)AttackTargetFinder.BestAttackTarget(pawn, TargetScanFlags.NeedLOSToPawns | TargetScanFlags.NeedLOSToNonPawns | TargetScanFlags.NeedReachable | TargetScanFlags.NeedThreat, (Thing t) => t is Building, 0f, 70f, default(IntVec3), float.MaxValue, false, true);
         }
 
-        // Token: 0x040002FD RID: 765
         private const float WaitChance = 0.75f;
-
-        // Token: 0x040002FE RID: 766
         private const int WaitTicks = 90;
-
-        // Token: 0x040002FF RID: 767
         private const int MinMeleeChaseTicks = 420;
-
-        // Token: 0x04000300 RID: 768
         private const int MaxMeleeChaseTicks = 900;
-
-        // Token: 0x04000301 RID: 769
         private const int WanderOutsideDoorRegions = 9;
     }
 }
