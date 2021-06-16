@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- ============================ Gue'vesa Civilians ========================== -->
+<PawnKindDef ParentName="OG_Guevesa_Civillian_Base">
+	<defName>Colonist_OG_Guevesa</defName>
+    <label>colonist (Gue'vesa)</label>
+	<backstoryFiltersOverride>
+		<li>
+		<categories>
+			<li>Offworld</li>
+			<li>Outlander</li>
+		</categories>
+		</li>
+	</backstoryFiltersOverride>
+</PawnKindDef>
+
+<PawnKindDef ParentName="OG_Guevesa_Civillian_Base">
+	<defName>Slave_OG_Guevesa</defName>
+	<label>Gue'vesa slave</label>
+	<backstoryFiltersOverride>
+		<li>
+		<categories>
+			<li>Offworld</li>
+			<li>Outlander</li>
+		</categories>
+		</li>
+	</backstoryFiltersOverride>
+</PawnKindDef>
+ 
+<!-- ============================ Gue'vesa Security ========================== -->
+<PawnKindDef ParentName="OG_Guevesa_Cadet">
+	<defName>OG_Guevesa_Cadet</defName>
+</PawnKindDef>
+	
+<!-- ============================ Gue'vesa Soldier ========================== -->
+<PawnKindDef ParentName="OG_Guevesa_Soldier">
+	<defName>OG_Guevesa_Soldier</defName>
+</PawnKindDef>
+	
+<!-- ============================ Gue'vesa Heavy Weapons Trooper ========================== -->
+<PawnKindDef ParentName="OG_Guevesa_Soldier_HW">
+	<defName>OG_Guevesa_Soldier_HW</defName>
+</PawnKindDef>
+
+<!-- ============================ Gue'vesa Special weapons Trooper ========================== -->
+<PawnKindDef ParentName="OG_Guevesa_Soldier_SW">
+	<defName>OG_Guevesa_Soldier_SW</defName>
+</PawnKindDef>
+
+<!-- ============================ Gue'vesa Sargent ========================== -->
+<PawnKindDef ParentName="OG_Guevesa_Sgt">
+	<defName>OG_Guevesa_Sgt</defName>
+</PawnKindDef>
+
+</Defs>

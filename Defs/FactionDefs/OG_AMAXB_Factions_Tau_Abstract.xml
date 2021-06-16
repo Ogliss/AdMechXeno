@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<FactionDef Abstract="True" Name="OG_Tau_Faction_Base">
+	<FactionDef Abstract="True" Name="OG_Tau_Faction_Base" ParentName="FactionBase">
 		<label>hunter cadre</label>
 		<description>The Tau, known in their own language as the T'au, are a young, humanoid and technologically-advanced intelligent race native to the Eastern Fringes of the Milky Way Galaxy who are fighting to expand their interstellar empire and extend a philosophical concept they call the "Greater Good" (Tau'va in the Tau Lexicon) to all the intelligent species of the galaxy.\n\nThe Tau claim to be a peaceful race when possible, asking if others will join their cause voluntarily instead of fighting against them. However, if their peaceful overtures are refused, the Tau may well decide to conquer a planet and add it to their growing interstellar empire for the Greater Good, searing the flesh from the bones of anyone who stands against their benign intentions.</description>
 		<pawnSingular>tau</pawnSingular>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<PawnKindDef>
-	<defName>StrangerInBlackMechanicus</defName>
+
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_StrangerInBlack_Base">
 	<label>stranger in black</label>
 	<labelMale>man in black</labelMale>
 	<labelFemale>woman in black</labelFemale>

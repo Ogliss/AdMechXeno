@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- ================= Chaos Deamon Faction Base ================= -->
-	<FactionDef Name="OG_Chaos_Deamon_Faction_Base" Abstract="true">
+	<FactionDef Abstract="true" Name="OG_Chaos_Deamon_Faction_Base" ParentName="FactionBase">
 		<label>Deamons of Chaos</label>
 		<pawnSingular>Deamon</pawnSingular>
 		<pawnsPlural>Deamons</pawnsPlural>

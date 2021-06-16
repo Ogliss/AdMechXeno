@@ -2,7 +2,7 @@
 <Defs>
 <!-- Tech-priests -->
 <!-- Base -->
-<PawnKindDef Name="Mechanicus_TechPriestBase" Abstract="True">
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_TechPriestBase">
 	<defName>OG_Mechanicus_Tech_Priest</defName>
 	<label>Tech-Priest</label>
 	<race>OG_Human_Mechanicus</race>
@@ -59,8 +59,7 @@
 </PawnKindDef>
 
 <!-- Faction Leader -->
-<PawnKindDef ParentName="Mechanicus_TechPriestBase">
-	<defName>OG_Mechanicus_Faction_Tech_Priest</defName>
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_Faction_Tech_Priest" ParentName="OG_Mechanicus_TechPriestBase">
 	<label>tech-priest lord</label>
 	<combatPower>600</combatPower>
 	<weaponMoney>
@@ -81,8 +80,7 @@
 </PawnKindDef>
 
 <!-- Dominus -->
-<PawnKindDef ParentName="Mechanicus_TechPriestBase">
-	<defName>OG_Mechanicus_Tech_Priest_Dominus</defName>
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_Tech_Priest_Dominus" ParentName="OG_Mechanicus_TechPriestBase">
 	<label>tech-priest dominus</label>
 	<combatPower>500</combatPower>
 	<weaponMoney>
@@ -103,8 +101,7 @@
 </PawnKindDef>
 
 <!-- Enginseer -->
-<PawnKindDef ParentName="Mechanicus_TechPriestBase">
-	<defName>OG_Mechanicus_Tech_Priest_Engineer</defName>
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_Tech_Priest_Engineer" ParentName="OG_Mechanicus_TechPriestBase">
 	<label>tech-priest</label>
 	<combatPower>400</combatPower>
 	<weaponMoney>
@@ -126,7 +123,7 @@
 
 <!-- Mechanicus Skitarii -->
 <!-- Base -->
-<PawnKindDef Name="Mechanicus_SkitariiBase" Abstract="True">
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_SkitariiBase">
 	<defName>OG_Mechanicus_Skitarii</defName>
 	<label>skitarii warrior</label>
 	<race>OG_Human_Mechanicus</race>
@@ -185,8 +182,7 @@
 </PawnKindDef>
 
 <!-- Ranger --> 
-<PawnKindDef ParentName="Mechanicus_SkitariiBase">
-	<defName>OG_Mechanicus_Skitarii_Ranger</defName>
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_Skitarii_Ranger" ParentName="OG_Mechanicus_SkitariiBase">
 	<label>skitarii ranger</label>
 	<combatPower>20</combatPower>
 	<weaponMoney>
@@ -200,8 +196,7 @@
 </PawnKindDef>
 
 <!-- Ranger Prime -->
-<PawnKindDef ParentName="Mechanicus_SkitariiBase">
-	<defName>OG_Mechanicus_Skitarii_Ranger_Primus</defName>
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_Skitarii_Ranger_Primus" ParentName="OG_Mechanicus_SkitariiBase">
 	<label>skitarii ranger primus</label>
 	<combatPower>240</combatPower>
 	<weaponMoney>
@@ -216,8 +211,7 @@
 </PawnKindDef>
 
 <!-- Vanguard --> 
-<PawnKindDef ParentName="Mechanicus_SkitariiBase">
-	<defName>OG_Mechanicus_Skitarii_Vanguard</defName>
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_Skitarii_Vanguard" ParentName="OG_Mechanicus_SkitariiBase">
 	<label>skitarii vanguard</label>
 	<combatPower>160</combatPower>
 	<weaponMoney>
@@ -231,8 +225,7 @@
 </PawnKindDef>
 
 <!-- Vanguard Prime --> 
-<PawnKindDef ParentName="Mechanicus_SkitariiBase">
-	<defName>OG_Mechanicus_Skitarii_Vanguard_Primus</defName>
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_Skitarii_Vanguard_Primus" ParentName="OG_Mechanicus_SkitariiBase">
 	<label>skitarii vanguard primus</label>
 	<combatPower>180</combatPower>
 	<weaponMoney>
@@ -247,7 +240,7 @@
 </PawnKindDef>
 
 <!-- Base Construct -->
-<PawnKindDef Name="OG_Mechanicus_Construct_BaseKind" Abstract="True">
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_Construct_BaseKind">
 	<defaultFactionType>OG_Mechanicus_Faction</defaultFactionType>
 	<aiAvoidCover>true</aiAvoidCover>
 	<destroyGearOnDrop>false</destroyGearOnDrop>
@@ -263,12 +256,10 @@
 
 <!-- Mechanicus Sicarians -->
 <!-- Rust Stalker --> 
-<PawnKindDef ParentName="OG_Mechanicus_Construct_BaseKind">
-	<defName>OG_Mechanicus_Sicarian_Rust_Stalker</defName>
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_Sicarian_Rust_Stalker" ParentName="OG_Mechanicus_Construct_BaseKind">
 	<label>sicarian rust stalker</label>
 	<race>Mechanicus_Sicarian</race>
 	<combatPower>160</combatPower>
-
 	<lifeStages>
 		<li>
 		<bodyGraphicData>
@@ -292,8 +283,7 @@
 </PawnKindDef>
 
 <!-- Infiltrator --> 
-<PawnKindDef ParentName="OG_Mechanicus_Construct_BaseKind">
-	<defName>OG_Mechanicus_Sicarian_Rust_Infiltrator</defName>
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_Sicarian_Rust_Infiltrator" ParentName="OG_Mechanicus_Construct_BaseKind">
 	<label>sicarian infiltrator</label>
 	<race>Mechanicus_Sicarian</race>
 	<combatPower>160</combatPower>
