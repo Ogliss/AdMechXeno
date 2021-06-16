@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<DamageDef>
+	<defName>OGTY_ToxicStab</defName>
+	<label>toxic stab</label>
+	<workerClass>DamageWorker_Stab</workerClass>
+	<externalViolence>true</externalViolence>
+	<deathMessage>{0} has been stabbed to death.</deathMessage>
+	<hediff>Stab</hediff>
+	<hediffSolid>Crack</hediffSolid>
+	<impactSoundType>Slice</impactSoundType>
+	<armorCategory>Sharp</armorCategory>
+	<stabChanceOfForcedInternal>0.6</stabChanceOfForcedInternal>
+	<overkillPctToDestroyPart>0.4~1.0</overkillPctToDestroyPart>
+	<additionalHediffs>
+		<li>
+			<hediff>ToxicBuildup</hediff>
+			<severityPerDamageDealt>0.001</severityPerDamageDealt>
+			<victimSeverityScaling>ToxicSensitivity</victimSeverityScaling>
+		</li>
+	</additionalHediffs>
+</DamageDef>
+
+<DamageDef ParentName="Bite">
+	<defName>OGTY_AcidBite</defName>
+	<label>acid maw</label>
+	<additionalHediffs>
+		<li>
+			<hediff>ToxicBuildup</hediff>
+			<severityPerDamageDealt>0.001</severityPerDamageDealt>
+			<victimSeverityScaling>ToxicSensitivity</victimSeverityScaling>
+		</li>
+	</additionalHediffs>
+</DamageDef>
+
+</Defs>

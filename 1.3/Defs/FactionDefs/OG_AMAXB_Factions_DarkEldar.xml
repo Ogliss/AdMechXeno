@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef ParentName="OG_DarkEldar_Kabal_Faction_Base">
+		<defName>OG_DarkEldar_Kabal_Faction</defName>
+	</FactionDef>
+
+</Defs>

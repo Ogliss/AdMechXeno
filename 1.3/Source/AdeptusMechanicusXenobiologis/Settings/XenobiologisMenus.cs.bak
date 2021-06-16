@@ -1,0 +1,65 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using AdeptusMechanicus.settings;
+using UnityEngine;
+using Verse;
+
+namespace AdeptusMechanicus
+{
+    public class XenobiologisMenus
+    {
+        private static AMSettings settings = AMAMod.settings;
+        private static AMAMod mod = AMAMod.Instance;
+        private static bool Dev => AMAMod.Dev;
+
+        private static Listing_StandardExpanding listing_Menu = new Listing_StandardExpanding();
+        private static Listing_StandardExpanding listing_Races = new Listing_StandardExpanding();
+        private static Listing_StandardExpanding listing_General = new Listing_StandardExpanding();
+
+        public static float listing_BaseLength => mod.Length(settings.ShowXenobiologisSettings, 2, AMAMod.lineheight, 0, 0);
+        public static float listing_BaseOptionsLength => mod.Length(settings.ShowXenobiologisSettings, 1, AMAMod.lineheight, 0, 0);
+        public static float listing_RacesLength => mod.Length(settings.ShowAllowedRaceSettings && settings.ShowXenobiologisSettings, 1, AMAMod.lineheight, 64, settings.ShowXenobiologisSettings ? 1 : 0);
+        private static float listing_MenuLength => AMAMod.Instance.Length(settings.ShowAllowedRaceSettings && settings.ShowXenobiologisSettings, 1, AMAMod.lineheight, 64, settings.ShowXenobiologisSettings ? 1 : 0);
+        public static void XenobiologisModOptionsMenu(ref AMAMod __instance, ref Listing_StandardExpanding listing_Main, Rect rect, ref Rect inRect, float num, float num2)
+        {
+            listing_Menu.maxOneColumn = true;
+            // Armoury Mod Options
+            //    listing_Menu = listing_Main.BeginSection(listing_ArmouryLength, false, 3, 4, 0); 
+            listing_Menu = listing_Main.BeginSection(listing_BaseLength + __instance.XenobiologisMenuInc, false, 72, 4, 0);
+            // Xenobiologis Mod Options
+
+            {
+                listing_General = listing_Menu.BeginSection(listing_BaseOptionsLength, true, 3, 4, 0);
+                listing_General.ColumnWidth /= 2;
+                listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.ForceRelations".Translate(), ref settings.ForceRelations, "AdeptusMechanicus.Xenobiologis.ForceRelationsDesc".Translate());
+                listing_General.NewColumn();
+                listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowWarpstorm".Translate(), ref settings.AllowWarpstorm, "AdeptusMechanicus.Xenobiologis.AllowWarpstormDesc".Translate());
+                listing_Menu.EndSection(listing_General);
+            }
+
+            listing_Races = listing_Menu.BeginSection(listing_RacesLength, false, 3, 4, 4);
+            Log.Message(listing_Menu.listingRect.height+" "+listing_Menu.CurHeight+" "+listing_Menu.MaxColumnHeightSeen);
+            string labelR = "AdeptusMechanicus.Xenobiologis.AllowedRaces".Translate() + " Settings";
+            string tooltipR = "AdeptusMechanicus.ShowSpecialRulesDesc".Translate();
+            listing_Races.CheckboxLabeled(labelR, ref settings.ShowAllowedRaceSettings, tooltipR, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex);
+            if (settings.ShowXenobiologisSettings && settings.ShowAllowedRaceSettings)
+            {
+                
+                mod.ImperialSettings(ref listing_Races, rect, inRect, listing_Main.listingRect.width, 30);
+                mod.ChaosSettings(ref listing_Races, rect, inRect, listing_Main.listingRect.width, 30);
+                mod.EldarSettings(ref listing_Races, rect, inRect, listing_Main.listingRect.width, 30);
+                mod.DarkEldarSettings(ref listing_Races, rect, inRect, listing_Main.listingRect.width, 30);
+                mod.OrkSettings(ref listing_Races, rect, inRect, listing_Main.listingRect.width, 30);
+                mod.TauSettings(ref listing_Races, rect, inRect, listing_Main.listingRect.width, 30);
+                mod.NecronSettings(ref listing_Races, rect, inRect, listing_Main.listingRect.width, 30);
+                mod.TyranidSettings(ref listing_Races, rect, inRect, listing_Main.listingRect.width, 30);
+                
+            }
+            listing_Menu.EndSection(listing_Races);
+            listing_Main.EndSection(listing_Menu);
+        }
+    }
+}

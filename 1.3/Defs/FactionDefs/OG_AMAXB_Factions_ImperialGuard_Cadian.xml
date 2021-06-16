@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef ParentName="OG_Militarum_Cadian_Faction_Base">
+		<defName>OG_Militarum_Cadian_Faction</defName>
+	</FactionDef>
+
+</Defs>
