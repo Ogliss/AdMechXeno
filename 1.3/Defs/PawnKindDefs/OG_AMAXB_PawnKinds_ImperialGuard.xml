@@ -5,6 +5,9 @@
 	<!-- ============================ Faction Leader ========================== -->
 	<PawnKindDef ParentName="OG_Militarum_LordMarshal">
 		<defName>OG_Militarum_LordMarshal</defName>
+		<baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+		<initialWillRange>3~5</initialWillRange>
+		<initialResistanceRange>17~27</initialResistanceRange>
 	</PawnKindDef>
  
 	<!-- ============================ Civilians ========================== -->
@@ -111,7 +114,8 @@
 	<!-- ============================ Commissar ========================== -->
 	<PawnKindDef ParentName="OG_Militarum_Commissar">
 		<defName>OG_Militarum_Commissar</defName>
-		<initialWillRange>4~8</initialWillRange>
+		<baseRecruitDifficulty>0.90</baseRecruitDifficulty>
+		<initialWillRange>6~8</initialWillRange>
 		<initialResistanceRange>37~66</initialResistanceRange>
 	</PawnKindDef>
 

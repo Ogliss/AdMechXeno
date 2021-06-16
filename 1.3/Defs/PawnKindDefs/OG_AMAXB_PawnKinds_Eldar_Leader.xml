@@ -49,6 +49,8 @@
 		<itemQuality>Superior</itemQuality>
 		<factionLeader>true</factionLeader>
 		<aiAvoidCover>false</aiAvoidCover>
+		<initialWillRange>3~5</initialWillRange>
+		<initialResistanceRange>17~27</initialResistanceRange>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
