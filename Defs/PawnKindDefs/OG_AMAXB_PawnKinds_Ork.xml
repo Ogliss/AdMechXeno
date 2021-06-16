@@ -47,7 +47,6 @@
 		</li>
 	</modExtensions>
 </PawnKindDef>
-<!-- Ork Pawn Base -->
 
 <!-- Tek Orkz -->
 <!-- Tek Ork Base -->
@@ -115,7 +114,6 @@
 		</subOptionsChooseOne>
 	</inventoryOptions>
 </PawnKindDef>
-<!-- Tek Ork Base -->
 
 <!-- Tek Ork Stabba Grot --> 
 <PawnKindDef ParentName="TekOrkBase">
@@ -146,7 +144,6 @@
 			<li>OCrudeChoppa</li>
 		</weaponTags>
 	</PawnKindDef>
-<!-- Tek Ork Stabba Grot --> 
 
 <!-- Tek Ork Blasta Grot -->	
 <PawnKindDef ParentName="TekOrkBase">
@@ -177,7 +174,6 @@
 			<li>GrotBlasta</li>
 		</weaponTags>
 	</PawnKindDef>
-<!-- Tek Ork Blasta Grot -->	
 
 <!-- Tek Ork Shoota Grot -->	
 <PawnKindDef ParentName="TekOrkBase">
@@ -213,7 +209,6 @@
 			<max>1000</max>
 		</weaponMoney>
 	</PawnKindDef>
-<!-- Tek Ork Shoota Grot -->	
 
 <!-- Tek Ork Slugga Boy -->	
 <PawnKindDef ParentName="TekOrkBase">
@@ -248,7 +243,6 @@
 			<max>1000</max>
 		</weaponMoney>
 	</PawnKindDef>
-<!-- Tek Ork Slugga Boy -->	
 
 <!-- Tek Ork Choppa Boy --> 
 <PawnKindDef ParentName="TekOrkBase">
@@ -279,7 +273,6 @@
 			<li>OChoppa</li>
 		</weaponTags>
 	</PawnKindDef>
-<!-- Tek Ork Choppa Boy --> 
 
 <!-- Tek Ork Shoota Boy -->	
 <PawnKindDef ParentName="TekOrkBase">
@@ -314,7 +307,6 @@
 			<max>3000</max>
 		</weaponMoney>
 	</PawnKindDef>
-<!-- Tek Ork Shoota Boy -->	
 
 <!-- Tek Ork Eavy Shoota Boy -->
 <PawnKindDef ParentName="TekOrkBase">
@@ -351,7 +343,6 @@
 			<max>6000</max>
 		</weaponMoney>
 	</PawnKindDef>
-<!-- Tek Ork Eavy Shoota Boy -->
 
 <!-- Tek Ork Shoota Nob -->
 <PawnKindDef ParentName="TekOrkBase">
@@ -388,7 +379,6 @@
 			<max>9000</max>
 		</weaponMoney>
 	</PawnKindDef>
-<!-- Tek Ork Shoota Nob -->
 
 <!-- Tek Ork Choppa Nob -->
 <PawnKindDef ParentName="TekOrkBase">
@@ -424,7 +414,6 @@
 			<max>9000</max>
 		</weaponMoney>
 	</PawnKindDef>
-<!-- Tek Ork Choppa Nob -->
 
 <!-- Tek Ork Eavy Shoota Nob -->
 <PawnKindDef ParentName="TekOrkBase">
@@ -461,7 +450,6 @@
 			<max>9000</max>
 		</weaponMoney>
 	</PawnKindDef>
-<!-- Tek Ork Eavy Shoota Nob -->
 
 <!-- Tek Ork Warboss -->	
 <PawnKindDef ParentName="TekOrkBase">
@@ -499,27 +487,5 @@
 			<max>9000</max>
 		</weaponMoney>
 	</PawnKindDef>
-<!-- Tek Ork Faction Leader -->	
-
-<!-- Tek Ork Faction Leader -->	
-<PawnKindDef ParentName="TekOrkBase">
-		<defName>OG_Ork_Faction_Warboss</defName>
-		<label>big warboss</label>
-		<race>Human</race>
-		<combatPower>12500</combatPower>
-		<itemQuality>Superior</itemQuality>
-		<factionLeader>true</factionLeader>
-
-		<weaponTags>
-			<li>OBigShoota</li>
-			<li>OZappKannon</li>
-			<li>OPlasmaDeffgun</li>
-		</weaponTags>
-		<weaponMoney>
-			<min>4000</min>
-			<max>9000</max>
-		</weaponMoney>
-	</PawnKindDef>
-<!-- Tek Ork Faction Leader -->	
 
 </Defs>

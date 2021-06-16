@@ -235,7 +235,6 @@
 				<!-- Base defense, mainly ranged with melee mix-ins -->
 				<kindDef>Settlement</kindDef>
 				<options>
-					<Slave_OG_Ork_Feral_Human>10</Slave_OG_Ork_Feral_Human>
 					<OG_Squig_Ork>10</OG_Squig_Ork>
 					<OG_Ork_Feral_Boy_Choppa>10</OG_Ork_Feral_Boy_Choppa>
 					<OG_Ork_Feral_Boy_Shoota>10</OG_Ork_Feral_Boy_Shoota>
