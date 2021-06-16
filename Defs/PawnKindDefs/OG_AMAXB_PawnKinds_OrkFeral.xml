@@ -61,7 +61,6 @@
 		</li>
 	</modExtensions>
 </PawnKindDef>
-<!-- Feral Ork Base --> 
 
 <!-- Feral Ork Stabba Grot --> 
 <PawnKindDef ParentName="FeralOrkBase">
@@ -92,7 +91,6 @@
 			<li>OCrudeChoppa</li>
 		</weaponTags>
 	</PawnKindDef>
-<!-- Feral Ork Stabba Grot --> 
 
 <!-- Feral Ork Blasta Grot -->	
 <PawnKindDef ParentName="FeralOrkBase">
@@ -122,8 +120,7 @@
 		<weaponTags>
 			<li>NeolithicRangedBasic</li>
 		</weaponTags>
-	</PawnKindDef>
-<!-- Feral Ork Blasta Grot -->	
+	</PawnKindDef>	
 
 <!-- Feral Ork Choppa Boy --> 
 <PawnKindDef ParentName="FeralOrkBase">
@@ -154,7 +151,6 @@
 			<li>MedievalMeleeBasic</li>
 		</weaponTags>
 	</PawnKindDef>
-<!-- Feral Ork Choppa Boy --> 
 
 <!-- Feral Ork Shoota Boy -->	
 <PawnKindDef ParentName="FeralOrkBase">
@@ -185,7 +181,6 @@
 			<li>NeolithicRangedBasic</li>
 		</weaponTags>
 	</PawnKindDef>
-<!-- Feral Ork Shoota Boy -->	
 
 <!-- Feral Ork Eavy Shoota Boy -->	
 <PawnKindDef ParentName="FeralOrkBase">
@@ -216,7 +211,6 @@
 			<li>NeolithicRangedBasic</li>
 		</weaponTags>
 	</PawnKindDef>
-<!-- Feral Ork Eavy Shoota Boy -->	
 	
 <!-- Feral Ork Shoota Nob -->
 <PawnKindDef ParentName="FeralOrkBase">
@@ -249,7 +243,6 @@
 			<li>NeolithicRangedHeavy</li>
 		</weaponTags>
 	</PawnKindDef>
-<!-- Feral Ork Shoota Nob -->
  
 <!-- Feral Ork Choppa Nob -->
 <PawnKindDef ParentName="FeralOrkBase">
@@ -285,7 +278,6 @@
 			<li>OBigChoppa</li>
 		</weaponTags>
 	</PawnKindDef>
-<!-- Feral Ork Choppa Nob -->
 
 <!-- Feral Ork Eavy Shoota Nob -->
 <PawnKindDef ParentName="FeralOrkBase">
@@ -318,7 +310,6 @@
 			<li>NeolithicRangedHeavy</li>
 		</weaponTags>
 	</PawnKindDef>
-<!-- Feral Ork Eavy Shoota Nob -->
  
 <!-- Feral Ork Warboss -->	
 <PawnKindDef ParentName="FeralOrkBase">
@@ -364,86 +355,5 @@
 			<max>9000</max>
 		</weaponMoney>
 	</PawnKindDef>
-<!-- Feral Ork Faction Leader -->	
 
-<!-- Feral Ork Faction Leader -->	
-<PawnKindDef ParentName="FeralOrkBase">
-		<defName>OG_Ork_Feral_Faction_Warboss</defName>
-		<label>Feral Big Boss</label>
-		<race>Human</race>
-		<combatPower>12500</combatPower>
-		<itemQuality>Superior</itemQuality>
-		<factionLeader>true</factionLeader>
-		
-		<weaponTags>
-			<li>NeolithicRangedChief</li>
-			<li>OBigChoppa</li>
-		</weaponTags>
-	<apparelTags>
-		<li>OrkFactionBoss</li>
-	</apparelTags>
-	<apparelMoney>
-		<min>0</min>
-		<max>350</max>
-	</apparelMoney>
-	<fixedInventory>
-<!--<li>OG_Ork_BossBody</li>-->
-<!--<li>OG_Ork_BossHead</li>-->
-</fixedInventory>
-	</PawnKindDef>
-<!-- Feral Ork Faction Leader -->
-
-<!-- Feral Ork Faction 'Umie Slavez -->
-	 <PawnKindDef>
-	<defName>Slave_OG_Ork_Feral_Human</defName>
-	<label>'umie slave</label>
-	<combatPower>30</combatPower>
-	<race>Human</race>
-	<baseRecruitDifficulty>0.30</baseRecruitDifficulty>
-	<backstoryFiltersOverride>
-		<li>
-		<categories>
-			<li>Outlander</li>
-			<li>Tribal</li>
-			<li>Pirate-</li>
-		</categories>
-		<commonality>0.95</commonality>
-		</li>
-		<li>
-		<categories>
-			<li>Offworld</li>
-		</categories>
-		<commonality>0.05</commonality>
-		</li>
-	</backstoryFiltersOverride>
-	<defaultFactionType>OG_Ork_Feral_Faction</defaultFactionType>
-	<itemQuality>Poor</itemQuality>
-	<backstoryCryptosleepCommonality>0.10</backstoryCryptosleepCommonality>
-	<isFighter>false</isFighter>
-	<chemicalAddictionChance>0.05</chemicalAddictionChance>
-	<gearHealthRange>
-		<min>0.2</min>
-		<max>0.8</max>
-	</gearHealthRange>
-	<apparelTags>
-		<li>IndustrialBasic</li>
-	</apparelTags>
-	<apparelMoney>
-		<min>0</min>
-		<max>350</max>
-	</apparelMoney>
-	<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
-	<techHediffsChance>0.03</techHediffsChance>
-	<techHediffsMoney>
-		<min>50</min>
-		<max>800</max>
-	</techHediffsMoney>
-	<techHediffsTags>
-		<li>Poor</li>
-	</techHediffsTags>
-	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
-	<invNutrition>1</invNutrition>
-	<invFoodDef>Pemmican</invFoodDef>
-</PawnKindDef>
-<!-- Feral Ork Faction 'Umie Slavez-->
 </Defs>

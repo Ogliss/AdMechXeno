@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!-- ============================ ImperialGuard Base ========================== -->
-
-<PawnKindDef Name="OG_Militarum_Base_Kind" Abstract="True">
+<!-- ============================ Astra Militarum Base Pawnkinds ========================== -->
+<!-- ============================ Base ========================== -->
+<PawnKindDef Abstract="True" Name="OG_Militarum_Base_Kind">
 	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
 	<race>Human</race>
 	<backstoryFiltersOverride>
@@ -34,9 +34,8 @@
 	</weaponTags>
 </PawnKindDef>
 
-<!-- ============================ ImperialGuard Civilian Base ========================== -->
-
-<PawnKindDef Name="OG_Militarum_Civilian_Base" ParentName="OG_Militarum_Base_Kind" Abstract="True">
+<!-- ============================ Civilian Base ========================== -->
+<PawnKindDef Abstract="True" Name="OG_Militarum_Civilian_Base" ParentName="OG_Militarum_Base_Kind">
 	<combatPower>25</combatPower>
 	<race>Human</race>
 	<itemQuality>Poor</itemQuality>
@@ -97,54 +96,8 @@
 	</modExtensions>
 </PawnKindDef>
 
-<!-- ============================ ImperialGuard Faction Leader ========================== -->
- 
-<PawnKindDef ParentName="OG_Militarum_Civilian_Base" Name="OG_Militarum_LordMarshal">
-	<defName>OG_Militarum_LordMarshal</defName>
-	<race>Human</race>
-	<label>lord marshal</label>
-	<labelPlural>lord marshals</labelPlural>
-	<factionLeader>true</factionLeader>
-	<backstoryFiltersOverride>
-		<li>
-		<categories>
-			<li>Imperium_Imperial_WarMaster</li>
-		</categories>
-		</li>
-	</backstoryFiltersOverride>
-	<minGenerationAge>50</minGenerationAge>
-	<maxGenerationAge>300</maxGenerationAge>
-	<apparelTags>
-		<li>OGIGClothing</li>
-		<li>OGIWargear</li>
-		<li>IndustrialBasic</li>
-		<li>IndustrialBasic</li>
-	</apparelTags>
-	 <weaponTags>
-		<li>ImperialWeapon</li>
-	</weaponTags>
-</PawnKindDef>
- 
-<!-- ============================ ImperialGuard Civilians ========================== -->
-<PawnKindDef ParentName="OG_Militarum_Civilian_Base">
-	<defName>OG_Militarum_Trader</defName>
-	<label>Imperial trader</label>
-	<trader>true</trader>
-</PawnKindDef>
-
-<PawnKindDef ParentName="OG_Militarum_Civilian_Base">
-	<defName>Slave_OG_Militarum</defName>
-	<label>slave</label>
-</PawnKindDef>
-
-<PawnKindDef ParentName="OG_Militarum_Civilian_Base">
-	<defName>OG_Militarum_Refugee</defName>
-	<label>refugee</label>
-</PawnKindDef>
-
- 
 <!-- ============================ ImperialGuard Military Base ========================== -->
-<PawnKindDef Name="OG_Militarum_Military_Base" ParentName="OG_Militarum_Base_Kind" Abstract="True">
+<PawnKindDef Abstract="True" Name="OG_Militarum_Military_Base" ParentName="OG_Militarum_Base_Kind">
 	<chemicalAddictionChance>0</chemicalAddictionChance>
 	<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
 	<isFighter>true</isFighter>
@@ -206,11 +159,36 @@
 	</modExtensions>
 </PawnKindDef>
 
-<!-- ============================ ImperialGuard Military ========================== -->
+<!-- ============================ Faction Leader Base ========================== -->
+<PawnKindDef Abstract="True" Name="OG_Militarum_LordMarshal" ParentName="OG_Militarum_Civilian_Base">
+	<race>Human</race>
+	<label>lord marshal</label>
+	<labelPlural>lord marshals</labelPlural>
+	<factionLeader>true</factionLeader>
+	<backstoryFiltersOverride>
+		<li>
+		<categories>
+			<li>Imperium_Imperial_WarMaster</li>
+		</categories>
+		</li>
+	</backstoryFiltersOverride>
+	<minGenerationAge>50</minGenerationAge>
+	<maxGenerationAge>300</maxGenerationAge>
+	<apparelTags>
+		<li>OGIGClothing</li>
+		<li>OGIWargear</li>
+		<li>IndustrialBasic</li>
+		<li>IndustrialBasic</li>
+	</apparelTags>
+	 <weaponTags>
+		<li>ImperialWeapon</li>
+	</weaponTags>
+</PawnKindDef>
+ 
+<!-- ============================ Military ========================== -->
 <!-- ============================ Human ========================== -->
 <!-- ============================ Guardsman Ranged ========================== -->
-<PawnKindDef ParentName="OG_Militarum_Military_Base">
-	<defName>OG_Militarum_Guardsman_Ranged</defName>
+<PawnKindDef Abstract="True" Name="OG_Militarum_Guardsman_Ranged" ParentName="OG_Militarum_Military_Base">
 	<label>guardsman</label>
 	<combatPower>60</combatPower>
 	<minGenerationAge>19</minGenerationAge>
@@ -275,8 +253,7 @@
 </PawnKindDef>
 
 <!-- ============================ Guardsman Ranged Special Weapons ========================== -->
-<PawnKindDef ParentName="OG_Militarum_Military_Base">
-	<defName>OG_Militarum_Guardsman_Ranged_Special</defName>
+<PawnKindDef Abstract="True" Name="OG_Militarum_Guardsman_Ranged_Special" ParentName="OG_Militarum_Military_Base">
 	<label>guardsman</label>
 	<combatPower>110</combatPower>
 	<minGenerationAge>19</minGenerationAge>
@@ -340,8 +317,7 @@
 </PawnKindDef>
 
 <!-- ============================ Guardsman Melee ========================== -->
-<PawnKindDef ParentName="OG_Militarum_Military_Base">
-	<defName>OG_Militarum_Guardsman_Melee</defName>
+<PawnKindDef Abstract="True" Name="OG_Militarum_Guardsman_Melee" ParentName="OG_Militarum_Military_Base">
 	<label>guardsman</label>
 	<combatPower>45</combatPower>
 	<minGenerationAge>19</minGenerationAge>
@@ -404,8 +380,7 @@
 </PawnKindDef>
 
 <!-- ============================ Guardsman Melee Special Weapons ========================== -->
-<PawnKindDef ParentName="OG_Militarum_Military_Base">
-	<defName>OG_Militarum_Guardsman_Melee_Special</defName>
+<PawnKindDef Abstract="True" Name="OG_Militarum_Guardsman_Melee_Special" ParentName="OG_Militarum_Military_Base">
 	<label>guardsman</label>
 	<combatPower>120</combatPower>
 	<minGenerationAge>19</minGenerationAge>
@@ -472,8 +447,7 @@
 </PawnKindDef>
 
 <!-- ============================ Guardsman Heavy Weapons ========================== -->
-<PawnKindDef ParentName="OG_Militarum_Military_Base">
-	<defName>OG_Militarum_Guardsman_Heavy_Weapons</defName>
+<PawnKindDef Abstract="True" Name="OG_Militarum_Guardsman_Heavy_Weapons" ParentName="OG_Militarum_Military_Base">
 	<label>guardsman</label>
 	<combatPower>200</combatPower>
 	<minGenerationAge>19</minGenerationAge>
@@ -540,8 +514,7 @@
 </PawnKindDef>
 
 <!-- ============================ Sergeant ========================== -->
-<PawnKindDef ParentName="OG_Militarum_Military_Base">
-	<defName>OG_Militarum_Sergeant</defName>
+<PawnKindDef Abstract="True" Name="OG_Militarum_Sergeant" ParentName="OG_Militarum_Military_Base">
 	<label>sergeant</label>
 	<combatPower>95</combatPower>
 	<minGenerationAge>23</minGenerationAge>
@@ -607,8 +580,7 @@
 </PawnKindDef>
 
 <!-- ============================ Commissar ========================== -->
-<PawnKindDef ParentName="OG_Militarum_Military_Base">
-	<defName>OG_Militarum_Commissar</defName>
+<PawnKindDef Abstract="True" Name="OG_Militarum_Commissar" ParentName="OG_Militarum_Military_Base">
 	<label>commissar</label>
 	<combatPower>125</combatPower>
 	<minGenerationAge>23</minGenerationAge>
@@ -696,8 +668,7 @@
 </PawnKindDef>
 
 <!-- ============================ Marksman ========================== -->
-<PawnKindDef ParentName="OG_Militarum_Military_Base">
-	<defName>OG_Militarum_Guardsman_Marksman</defName>
+<PawnKindDef Abstract="True" Name="OG_Militarum_Guardsman_Marksman" ParentName="OG_Militarum_Military_Base">
 	<label>marksman</label>
 	<combatPower>120</combatPower>
 	<minGenerationAge>25</minGenerationAge>
@@ -762,8 +733,7 @@
 <!-- ============================ Abhuman ========================== -->
 <!-- ============================ Ratling ========================== -->
 <!-- ============================ Ratling Marksman ========================== -->
-<PawnKindDef ParentName="OG_Militarum_Military_Base">
-	<defName>OG_Militarum_Ratling_Marksman</defName>
+<PawnKindDef Abstract="True" Name="OG_Militarum_Ratling_Marksman" ParentName="OG_Militarum_Military_Base">
 	<race>OG_Abhuman_Ratlin</race>
 	<label>ratling marksman</label>
 	<combatPower>120</combatPower>
@@ -828,8 +798,7 @@
 
 <!-- ============================ Ogryn ========================== -->
 <!-- ============================ Ogryn Warrior ========================== -->
-<PawnKindDef ParentName="OG_Militarum_Military_Base">
-	<defName>OG_Militarum_Ogryn_Warrior</defName>
+<PawnKindDef Abstract="True" Name="OG_Militarum_Ogryn_Warrior" ParentName="OG_Militarum_Military_Base">
 	<race>OG_Abhuman_Ogryn</race>
 	<label>ogryn warrior</label>
 	<combatPower>120</combatPower>

@@ -83,7 +83,6 @@
 			<leatherDef>Leather_Kroot</leatherDef>
 			<gestationPeriodDays>28</gestationPeriodDays>
 			<wildness>0.6</wildness>
-			<trainability>Simple</trainability>
 			<packAnimal>true</packAnimal>
 			<lifeExpectancy>36</lifeExpectancy>
 			<lifeStageAges>

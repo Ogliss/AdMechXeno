@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<!-- Eldar Base kind -->
+	<!-- Dark Eldar Base kind -->
 	<PawnKindDef Name="OG_DarkEldar_BaseKind" Abstract="True">
 		<defaultFactionType>OG_DarkEldar_Kabal_Faction</defaultFactionType>
 		<backstoryFiltersOverride>
@@ -47,42 +47,6 @@
 		</modExtensions>
 	</PawnKindDef>
 		
-	<!-- Archon -->
-	<PawnKindDef ParentName="OG_Eldar_Pawnkind_Base">
-		<defName>OG_DarkEldar_Archon_Faction</defName>
-		<label>archon</label>
-		<race>Human</race>
-		<combatPower>15000</combatPower>
-		<itemQuality>Superior</itemQuality>
-		<factionLeader>true</factionLeader>
-		<aiAvoidCover>false</aiAvoidCover>
-		<lifeStages>
-			<li>
-				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/DarkEldar/Archon</texPath>
-					<graphicClass>Graphic_Multi</graphicClass>
-					<drawSize>1.350</drawSize>
-					<color>(255,255,209)</color>
-					<shaderType>CutoutComplex</shaderType>
-					<shadowData>
-						<volume>(0.6, 0.8, 0.6)</volume>
-					</shadowData>
-				</bodyGraphicData>
-				<dessicatedBodyGraphicData>
-					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
-				<drawSize>1.350</drawSize>
-		</dessicatedBodyGraphicData>
-			</li>
-		</lifeStages>
-		<weaponMoney>
-			<min>7500</min>
-			<max>15000</max>
-		</weaponMoney>
-		<weaponTags>
-			<li>DESplinterPistol</li>
-		</weaponTags>
-	</PawnKindDef>
-	
 	<!-- ============================ Dark Eldar Military Base ========================== -->
 	<PawnKindDef Name="OG_DarkEldar_Mil_BaseKind" ParentName="OG_DarkEldar_BaseKind" Abstract="True">
 		<chemicalAddictionChance>0.5</chemicalAddictionChance>
