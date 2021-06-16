@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<FactionDef Abstract="true" Name="OG_Militarum_Faction_Base">
+	<FactionDef Abstract="true" Name="OG_Militarum_Faction_Base" ParentName="FactionBase">
 		<defName>OG_Militarum_Faction</defName>
 		<label>Imperial Guard Regiment</label>
 		<description>The Astra Militarum, also known as the Imperial Guard in colloquial Low Gothic, is the largest coherent fighting force in the galaxy. They serve as the Imperium of Man's primary combat force and first line of defence from the myriad threats which threaten the existence of the Human race in the late 41st Millennium. It is comprised of countless billions of men and women -- hundreds of thousands of different regiments, supported by a vast array of light and heavy armoured vehicles that provide the Guard's primary offensive punch.</description>

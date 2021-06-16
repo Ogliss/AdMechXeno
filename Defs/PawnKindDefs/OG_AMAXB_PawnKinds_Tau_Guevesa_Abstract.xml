@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- ============================ Gue'vesa Civilian Base ========================== -->
-<PawnKindDef Name="GuevesaCivBase" ParentName="TauBase" Abstract="True">
+<PawnKindDef Abstract="True" Name="OG_Guevesa_Civillian_Base" ParentName="TauBase">
 	<combatPower>25</combatPower>
 	<race>Human</race>
 	<baseRecruitDifficulty>0.45</baseRecruitDifficulty>
@@ -66,38 +66,8 @@
 	</modExtensions>
 </PawnKindDef>
 
-<!-- ============================ Gue'vesa Civilians ========================== -->
-<PawnKindDef ParentName="GuevesaCivBase">
-	<defName>Colonist_OG_Guevesa</defName>
-    <label>colonist (Gue'vesa)</label>
-	<backstoryFiltersOverride>
-		<li>
-		<categories>
-			<li>Offworld</li>
-			<li>Outlander</li>
-			
-		</categories>
-		</li>
-	</backstoryFiltersOverride>
-</PawnKindDef>
-
-<PawnKindDef ParentName="GuevesaCivBase">
-	<defName>Slave_OG_Guevesa</defName>
-	<label>Gue'vesa slave</label>
-	<backstoryFiltersOverride>
-		<li>
-		<categories>
-			<li>Offworld</li>
-			<li>Outlander</li>
-			
-		</categories>
-		</li>
-	</backstoryFiltersOverride>
-</PawnKindDef>
- 
 <!-- ============================ Gue'vesa Security ========================== -->
-<PawnKindDef ParentName="GuevesaCivBase">
-	<defName>OG_Guevesa_Cadet</defName>
+<PawnKindDef Abstract="True" Name="OG_Guevesa_Cadet" ParentName="OG_Guevesa_Civillian_Base">
 	<label>Gue'vesa Cadet</label>
 	<combatPower>50</combatPower>
 	<maxGenerationAge>10</maxGenerationAge>
@@ -106,7 +76,6 @@
 		<categories>
 			<li>Offworld</li>
 			<li>Outlander</li>
-			
 		</categories>
 		</li>
 	</backstoryFiltersOverride>
@@ -156,8 +125,7 @@
 </PawnKindDef>
 
 <!-- ============================ Gue'vesa Military Base ========================== -->
-
-<PawnKindDef Name="GuevesaMilBase" ParentName="TauBase" Abstract="True">
+<PawnKindDef Abstract="True" Name="OG_Guevesa_Military_Base" ParentName="TauBase">
 	<chemicalAddictionChance>0</chemicalAddictionChance>
 	<isFighter>true</isFighter>
 	<race>Human</race>
@@ -215,7 +183,7 @@
 
 <!-- ============================ Gue'vesa Military ========================== -->
 <!-- ============================ Gue'vesa Warriors ========================== -->
-<PawnKindDef Name="TauGuevesaWarrior" ParentName="GuevesaMilBase" Abstract="True">
+<PawnKindDef Abstract="True" Name="OG_Guevesa_Soldier_Base" ParentName="OG_Guevesa_Military_Base">
 	<label>Gue'vesa Warrior</label>
 	<combatPower>70</combatPower>
 	<backstoryFiltersOverride>
@@ -233,8 +201,7 @@
 </PawnKindDef>
 
 <!-- ============================ Gue'vesa Soldier ========================== -->
-<PawnKindDef ParentName="TauGuevesaWarrior">
-	<defName>OG_Guevesa_Soldier</defName>
+<PawnKindDef Abstract="True" Name="OG_Guevesa_Soldier" ParentName="OG_Guevesa_Soldier_Base">
 	<label>Gue'vesa Soldier</label>
 	<weaponTags>
 		<li>TBasicGun</li>
@@ -242,10 +209,9 @@
 		<li>GuevesaGun</li>
 	</weaponTags>
 </PawnKindDef>
-	
+
 <!-- ============================ Gue'vesa Heavy Weapons Trooper ========================== -->
-<PawnKindDef ParentName="TauGuevesaWarrior">
-	<defName>OG_Guevesa_Soldier_HW</defName>
+<PawnKindDef Abstract="True" Name="OG_Guevesa_Soldier_HW" ParentName="OG_Guevesa_Soldier_Base">
 	<label>Gue'vesa Soldier</label>
 	<weaponTags>
 		<li>TBasicGun</li>
@@ -256,8 +222,7 @@
 </PawnKindDef>
 
 <!-- ============================ Gue'vesa Special weapons Trooper ========================== -->
-<PawnKindDef ParentName="TauGuevesaWarrior">
-	<defName>OG_Guevesa_Soldier_SW</defName>
+<PawnKindDef Abstract="True" Name="OG_Guevesa_Soldier_SW" ParentName="OG_Guevesa_Soldier_Base">
 	<label>Gue'vesa Soldier</label>
 	<weaponTags>
 		<li>TBasicGun</li>
@@ -268,8 +233,7 @@
 </PawnKindDef>
 
 <!-- ============================ Gue'vesa Sargent ========================== -->
-<PawnKindDef ParentName="TauGuevesaWarrior">
-	<defName>OG_Guevesa_Sgt</defName>
+<PawnKindDef Abstract="True" Name="OG_Guevesa_Sgt" ParentName="OG_Guevesa_Soldier_Base">
 	<label>Gue'vesa Sargent</label>
 	<weaponTags>
 		<li>TBasicGun</li>
@@ -279,4 +243,5 @@
 		<li>GuevesaAdvGun</li>
 	</weaponTags>
 </PawnKindDef>
+
 </Defs>

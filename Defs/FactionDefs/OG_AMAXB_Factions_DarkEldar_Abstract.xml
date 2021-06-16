@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<FactionDef Abstract="True" Name="OG_DarkEldar_Faction_Base">
+	<FactionDef Abstract="True" Name="OG_DarkEldar_Faction_Base" ParentName="FactionBase">
 		<label>drukhari raiders</label>
 		<description>The Drukhari (pronounced Druh-KAR-ee) or "Dark Ones" in the Aeldari Lexicon, also known to outsiders as the Dark Eldar, are a forsaken and corrupt Aeldari kindred, the sadistic, malicious counterparts of the Asuryani. Like their cousins of the craftworlds, the Drukhari are an ancient and highly advanced alien race of fey humanoids.</description>
 		<pawnSingular>drukhar</pawnSingular>

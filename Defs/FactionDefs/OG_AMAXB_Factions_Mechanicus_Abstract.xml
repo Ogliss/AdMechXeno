@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<FactionDef Abstract="True" Name="OG_Mechanicus_Faction_Base">
+	<FactionDef Abstract="True" Name="OG_Mechanicus_Faction_Base" ParentName="FactionBase">
 		<label>mechanicus exploritors</label>
 		<description>The Adeptus Mechanicus is the official Imperial name within the Adeptus Terra for the Cult Mechanicus or Cult of the Machine based on Mars which provides the Imperium with its scientists, engineers and technicians. The Adepts of the Mechanicus are the primary keepers of what is viewed as sacred wisdom, a privileged caste of Tech-priests who jealously guard the knowledge required to maintain and construct much of the Imperium's advanced technology. In ancient times, before the current Age of the Imperium officially began following the end of the Horus Heresy, the Adeptus Mechanicus was often called the Mechanicum. The Mechanicus acknowledge the Emperor of Mankind as the ruler of the Imperium of Man, but not the religious truth of the Imperial Cult or the Ecclesiarchy, and are granted an unusual amount of political and religious autonomy within the Imperium's structure, a role protected by the ancient Treaty of Mars. Instead of the Imperial Creed, the servants of the Mechanicus follow their own dark and mysterious scriptures and worship the deity they call the Machine God or the "Omnissiah."</description>
 		<pawnSingular>mechanicus</pawnSingular>

@@ -3,6 +3,7 @@
 
 <PawnKindDef Abstract="True" Name="OG_Mechanicus_Base_KindDef">
 	<race>OG_Human_Mechanicus</race>
+	<defaultFactionType>OG_Mechanicus_PlayerColony</defaultFactionType>
 	<combatPower>50</combatPower>
 	<baseRecruitDifficulty>0.50</baseRecruitDifficulty>
 	<isFighter>false</isFighter>
@@ -10,10 +11,8 @@
 	<forceNormalGearQuality>true</forceNormalGearQuality>
 </PawnKindDef>
 
-<PawnKindDef ParentName="OG_Mechanicus_Base_KindDef">
-	<defName>Colonist_OG_Mechanicus</defName>
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_Colonist_Base" ParentName="OG_Mechanicus_Base_KindDef">
     <label>colonist (Mechanicus)</label>
-	<defaultFactionType>OG_Mechanicus_PlayerColony</defaultFactionType>
 	<backstoryFiltersOverride>
 		<li>
 			<categories>
@@ -50,10 +49,8 @@
 	<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
 </PawnKindDef>
 
-<PawnKindDef ParentName="OG_Mechanicus_Base_KindDef" Name="OG_Enginseer_Base_PawnKind">
-	<defName>Colonist_OG_Mechanicus_Tech_Priest_Enginseer</defName>
+<PawnKindDef Abstract="True" Name="OG_Mechanicus_Colonist_Enginseer_Base" ParentName="OG_Mechanicus_Colonist_Base">
 	<label>enginseer</label>
-	<defaultFactionType>OG_Mechanicus_PlayerColony</defaultFactionType>
 	<apparelTags>
 		<li>OGDeathKorps</li>
 	</apparelTags>

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<FactionDef Abstract="True" Name="OG_Necron_Faction_Base">
+	<FactionDef Abstract="True" Name="OG_Necron_Faction_Base" ParentName="FactionBase">
 		<label>necron dynasty</label>
 		<pawnSingular>necron</pawnSingular>
 		<pawnsPlural>necrons</pawnsPlural>

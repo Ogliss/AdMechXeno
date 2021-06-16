@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<PawnKindDef ParentName="OG_Mechanicus_Colonist_Enginseer_Base">
+	<defName>Colonist_OG_Mechanicus_Tech_Priest_Enginseer</defName>
+</PawnKindDef>
+
+<PawnKindDef ParentName="OG_Mechanicus_Colonist_Base">
+	<defName>Colonist_OG_Mechanicus</defName>
+</PawnKindDef>
+
+</Defs>

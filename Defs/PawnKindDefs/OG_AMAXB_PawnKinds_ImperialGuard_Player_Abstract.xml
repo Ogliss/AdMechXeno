@@ -33,8 +33,7 @@
 	</apparelTags>
 </PawnKindDef>
 
-<PawnKindDef ParentName="OG_Miliatrum_Base_PawnKind">
-	<defName>Colonist_OG_Militarum</defName>
+<PawnKindDef Abstract="True" Name="Colonist_OG_Militarum_Base" ParentName="OG_Miliatrum_Base_PawnKind">
     <label>colonist (Militarum)</label>
 	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
 	<apparelTags>
@@ -47,8 +46,7 @@
 	<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
 </PawnKindDef>
 
-<PawnKindDef ParentName="OG_Miliatrum_Base_PawnKind" Name="OG_Kreig_Base_PawnKind">
-	<defName>Colonist_OG_Militarum_Kreig_Guardsmen</defName>
+<PawnKindDef Abstract="True" Name="Colonist_OG_Militarum_KreigBase" ParentName="OG_Miliatrum_Base_PawnKind">
 	<label>guardsman</label>
 	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
 	<backstoryFiltersOverride Inherit="false">

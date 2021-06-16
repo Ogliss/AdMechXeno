@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<PawnKindDef ParentName="Colonist_OG_Militarum_Base">
+		<defName>Colonist_OG_Militarum</defName>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="Colonist_OG_Militarum_KreigBase">
+		<defName>Colonist_OG_Militarum_Kreig_Guardsmen</defName>
+	</PawnKindDef>
+
+</Defs>
