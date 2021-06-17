@@ -7,10 +7,14 @@
 			<li>(0.35, 0.35, 0)</li>
 			<li>(0.4, 0.2, 0)</li>
 		</colorSpectrum>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>70</configurationListOrderPriority>
 	</FactionDef>
 
 	<FactionDef ParentName="OG_Ork_Feral_Faction_Base">
 		<defName>OG_Ork_Feral_Faction</defName>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>75</configurationListOrderPriority>
 		<modExtensions>
 			<li Class="AdeptusMechanicus.FactionDefRaidSoundExtension">
 				<raidSound>LetterArrive_OG_Ork_Raid_Alert_A</raidSound>

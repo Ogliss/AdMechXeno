@@ -3,6 +3,8 @@
 
 	<FactionDef ParentName="OG_Militarum_Cadian_Faction_Base">
 		<defName>OG_Militarum_Cadian_Faction</defName>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>20</configurationListOrderPriority>
 	</FactionDef>
 
 </Defs>

@@ -3,10 +3,14 @@
 
 	<FactionDef ParentName="OG_Ork_Hidden_Faction_Base">
 		<defName>OG_Ork_Hulk</defName>
+		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>85</configurationListOrderPriority>
 	</FactionDef>
 
 	<FactionDef ParentName="OG_Ork_Hidden_Faction_Base">
 		<defName>OG_Ork_Rok</defName>
+		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>85</configurationListOrderPriority>
 	</FactionDef>
 	
 </Defs>

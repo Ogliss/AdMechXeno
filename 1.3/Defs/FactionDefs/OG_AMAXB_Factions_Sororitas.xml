@@ -3,6 +3,8 @@
 
 	<!--FactionDef ParentName="OG_Sororitas_Faction_Base">
 		<defName>OG_Sororitas_Faction</defName>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>90</configurationListOrderPriority>
 	</FactionDef-->
 	
 </Defs>

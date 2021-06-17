@@ -14,6 +14,14 @@ namespace AdeptusMechanicus.ExtensionMethods
         {
             return pawn.def == AdeptusThingDefOf.OG_Human_Mechanicus;
         }
+        public static bool isOgyrn(this Pawn pawn)
+        {
+            return pawn.def == AdeptusThingDefOf.OG_Abhuman_Ogryn;
+        }
+        public static bool isRatlin(this Pawn pawn)
+        {
+            return pawn.def == AdeptusThingDefOf.OG_Abhuman_Ratlin;
+        }
 
     }
 

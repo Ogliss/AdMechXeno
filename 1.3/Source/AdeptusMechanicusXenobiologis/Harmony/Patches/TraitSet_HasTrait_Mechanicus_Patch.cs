@@ -13,7 +13,8 @@ using AdeptusMechanicus.ExtensionMethods;
 
 namespace AdeptusMechanicus.HarmonyInstance
 {
-    [HarmonyPatch(typeof(TraitSet), "HasTrait")]
+    [HarmonyPatch(typeof(TraitSet), "HasTrait", new Type[] { typeof(TraitDef) })]
+    [HarmonyPatch(typeof(TraitSet), "HasTrait", new Type[] { typeof(TraitDef), typeof(int) })]
     public static class TraitSet_HasTrait_Mechanicus_Patch
     {
         [HarmonyPostfix]
@@ -24,6 +25,17 @@ namespace AdeptusMechanicus.HarmonyInstance
                 if (tDef == TraitDefOf.Transhumanist)
                 {
                     if (___pawn.IsMechanicus())
+                    {
+                        __result = true;
+                    }
+                }
+                if (___pawn.isOgyrn())
+                {
+                    if (tDef == TraitDefOf.Tough)
+                    {
+                        __result = true;
+                    }
+                    if (tDef == AdeptusTraitDefOf.SlowLearner)
                     {
                         __result = true;
                     }

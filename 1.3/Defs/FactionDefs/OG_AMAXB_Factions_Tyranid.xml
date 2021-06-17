@@ -3,6 +3,8 @@
 
 	<FactionDef ParentName="OG_Tyranid_Faction_Base">
 		<defName>OG_Tyranid_Faction</defName>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>89</configurationListOrderPriority>
 	</FactionDef>
 	
 </Defs>

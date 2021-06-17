@@ -4,6 +4,8 @@
 	<FactionDef ParentName="OG_Eldar_Faction_Base">
 		<defName>OG_Eldar_Craftworld_Faction</defName>
 		<label>craftworld eldar strike force</label>
+		<maxConfigurableAtWorldCreation>5</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>76</configurationListOrderPriority>
 		<!--
 		<startingGoodwill>
 			<min>0</min>

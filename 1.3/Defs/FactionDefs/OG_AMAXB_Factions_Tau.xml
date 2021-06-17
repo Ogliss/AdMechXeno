@@ -3,6 +3,9 @@
 
 	<FactionDef ParentName="OG_Tau_Faction_Base">
 		<defName>OG_Tau_Faction</defName>
+		<classicIdeo>true</classicIdeo>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>90</configurationListOrderPriority>
 	</FactionDef>
 	
 </Defs>

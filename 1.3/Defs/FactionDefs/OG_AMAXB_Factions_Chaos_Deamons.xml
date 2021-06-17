@@ -3,7 +3,8 @@
 
 	<FactionDef ParentName="OG_Chaos_Deamon_Faction_Base">
 		<defName>OG_Chaos_Deamon_Faction</defName>
-		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>85</configurationListOrderPriority>
 	</FactionDef>
 
 </Defs>
