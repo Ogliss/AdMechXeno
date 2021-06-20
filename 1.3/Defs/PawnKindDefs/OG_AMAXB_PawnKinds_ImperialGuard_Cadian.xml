@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!-- ============================ Cadian Pawnkinds ========================== -->
-<!-- ============================ Faction Leader ========================== -->
-<PawnKindDef ParentName="OG_Militarum_LordMarshal">
-	<defName>OG_Militarum_LordMarshal_Cadian</defName>
-	<defaultFactionType>OG_Militarum_Cadian_Faction</defaultFactionType>
-	<initialWillRange>3~5</initialWillRange>
-	<initialResistanceRange>17~27</initialResistanceRange>
-</PawnKindDef>
+	<!-- ============================ Cadian Pawnkinds ========================== -->
+	<!-- ============================ Faction Leader ========================== -->
+	<PawnKindDef ParentName="OG_Militarum_LordMarshal">
+		<defName>OG_Militarum_LordMarshal_Cadian</defName>
+		<defaultFactionType>OG_Militarum_Cadian_Faction</defaultFactionType>
+		<initialWillRange>3~5</initialWillRange>
+		<initialResistanceRange>17~27</initialResistanceRange>
+	</PawnKindDef>
 
-<!-- ============================ Cadian Civilians ========================== -->
+	<!-- ============================ Cadian Civilians ========================== -->
 
-<!-- ============================ Cadian Military ========================== -->
-<!-- ============================ Guardsman Ranged ========================== -->
+	<!-- ============================ Cadian Military ========================== -->
+	<!-- ============================ Guardsman Ranged ========================== -->
 	<PawnKindDef ParentName="OG_Militarum_Guardsman_Ranged">
 		<defName>OG_Militarum_Guardsman_Ranged_Cadian</defName>
 		<defaultFactionType>OG_Militarum_Cadian_Faction</defaultFactionType>
@@ -21,7 +21,7 @@
 		<initialResistanceRange>17~26</initialResistanceRange>
 	</PawnKindDef>
 
-<!-- ============================ Guardsman Ranged Special Weapons ========================== -->
+	<!-- ============================ Guardsman Ranged Special Weapons ========================== -->
 	<PawnKindDef ParentName="OG_Militarum_Guardsman_Ranged_Special">
 		<defName>OG_Militarum_Guardsman_Ranged_Special_Cadian</defName>
 		<defaultFactionType>OG_Militarum_Cadian_Faction</defaultFactionType>
@@ -29,7 +29,7 @@
 		<initialResistanceRange>17~26</initialResistanceRange>
 	</PawnKindDef>
 	
-<!-- ============================ Guardsman Melee ========================== -->
+	<!-- ============================ Guardsman Melee ========================== -->
 	<PawnKindDef ParentName="OG_Militarum_Guardsman_Melee">
 		<defName>OG_Militarum_Guardsman_Melee_Cadian</defName>
 		<defaultFactionType>OG_Militarum_Cadian_Faction</defaultFactionType>
@@ -37,7 +37,7 @@
 		<initialResistanceRange>17~26</initialResistanceRange>
 	</PawnKindDef>
 
-<!-- ============================ Guardsman Melee Special Weapons ========================== -->
+	<!-- ============================ Guardsman Melee Special Weapons ========================== -->
 	<PawnKindDef ParentName="OG_Militarum_Guardsman_Melee_Special">
 		<defName>OG_Militarum_Guardsman_Melee_Special_Cadian</defName>
 		<defaultFactionType>OG_Militarum_Cadian_Faction</defaultFactionType>
@@ -45,7 +45,7 @@
 		<initialResistanceRange>17~26</initialResistanceRange>
 	</PawnKindDef>
 	
-<!-- ============================ Guardsman Heavy Weapons ========================== -->
+	<!-- ============================ Guardsman Heavy Weapons ========================== -->
 	<PawnKindDef ParentName="OG_Militarum_Guardsman_Heavy_Weapons">
 		<defName>OG_Militarum_Guardsman_Heavy_Weapons_Cadian</defName>
 		<defaultFactionType>OG_Militarum_Cadian_Faction</defaultFactionType>
@@ -53,7 +53,7 @@
 		<initialResistanceRange>17~26</initialResistanceRange>
 	</PawnKindDef>
 
-<!-- ============================ Sergeant ========================== -->
+	<!-- ============================ Sergeant ========================== -->
 	<PawnKindDef ParentName="OG_Militarum_Sergeant">
 		<defName>OG_Militarum_Sergeant_Cadian</defName>
 		<defaultFactionType>OG_Militarum_Cadian_Faction</defaultFactionType>
@@ -69,7 +69,7 @@
 		<initialResistanceRange>37~66</initialResistanceRange>
 	</PawnKindDef>
 
-<!-- ============================ Marksman ========================== -->
+	<!-- ============================ Marksman ========================== -->
 	<PawnKindDef ParentName="OG_Militarum_Guardsman_Marksman">
 		<defName>OG_Militarum_Guardsman_Marksman_Cadian</defName>
 		<defaultFactionType>OG_Militarum_Cadian_Faction</defaultFactionType>
@@ -95,4 +95,5 @@
 		<initialWillRange>2~3</initialWillRange>
 		<initialResistanceRange>17~26</initialResistanceRange>
 	</PawnKindDef>
+	
 </Defs>

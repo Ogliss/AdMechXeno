@@ -7,7 +7,7 @@
 	</colorSpectrum>
 </FactionDef>
 
-<FactionDef Parent="OG_Militarum_PlayerFaction_Base">
+<FactionDef ParentName="OG_Militarum_PlayerFaction_Base">
 	<defName>OG_Militarum_PlayerColony</defName>
 	<label>Imperial Guard</label>
 	<description>Your Imperial Outpost.</description>

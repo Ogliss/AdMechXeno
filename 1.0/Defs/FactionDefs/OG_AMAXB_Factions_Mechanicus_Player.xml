@@ -7,7 +7,7 @@
 	</colorSpectrum>
 </FactionDef>
 
-<FactionDef Parent="OG_Mechanicus_PlayerFaction_Base">
+<FactionDef ParentName="OG_Mechanicus_PlayerFaction_Base">
 	<defName>OG_Mechanicus_PlayerColony</defName>
 	<label>Mechanicus Colony</label>
 	<description>Your own Mechanicus Colony.</description>
