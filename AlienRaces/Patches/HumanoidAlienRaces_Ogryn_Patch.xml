@@ -149,9 +149,6 @@
 									<head>Things/Pawn/Humanlike/Ogryn/Heads/</head>
 								</li>
 							</graphicPaths>
-							<hairSettings>
-								<hasHair>false</hasHair>
-							</hairSettings>
 							<thoughtSettings>
 								<cannotReceiveThoughts>
 								</cannotReceiveThoughts>

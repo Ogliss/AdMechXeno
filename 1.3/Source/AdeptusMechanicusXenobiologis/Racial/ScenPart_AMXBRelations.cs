@@ -14,7 +14,6 @@ namespace AdeptusMechanicus
         {
             if (AMAMod.settings.ForceRelations)
             {
-                int i = 0;
                 Faction faction = null;
                 FactionDef factionDef = null;
                 ThingDef factionRace = null;

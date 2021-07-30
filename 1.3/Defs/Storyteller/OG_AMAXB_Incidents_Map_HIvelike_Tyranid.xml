@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ============================== Big threats ============================== -->
+	<ExtraHives.HivelikeIncidentDef>
+		<defName>OG_Tyranid_Infestation</defName>
+		<label>tyranid infestation</label>
+		<workerClass>ExtraHives.IncidentWorker_Infestation</workerClass>
+		<Faction>OG_Tyranid_Faction</Faction>
+		<TunnelDef>OG_Tyranid_Tunnel</TunnelDef>
+		<mustBeNearColony>true</mustBeNearColony>
+		<requiresRoofed>false</requiresRoofed>
+		<mustBeThickRoof>false</mustBeThickRoof>
+		<maxTemp>200</maxTemp>
+		<minTemp>-200</minTemp>
+		<minMountainouseness>0</minMountainouseness>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<letterLabel>Tyranid Infestation</letterLabel>
+		<letterText>Daemonic Forces are clawing their way out of the Warp! They will break through in a few seconds and open Warp Rifts.\n\nThe warp rifts will spawn more Daemons and more rifts.\n\nIf you don't want the daemons to infest the whole area, destroy the rifts. But beware - the daemons will defend their home.</letterText>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>2.7</baseChance>
+		<minRefireDays>20</minRefireDays>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<minThreatPoints>4000</minThreatPoints>
+		<tale>Infestation</tale>
+		<mechClusterBuilding>OG_Tyranid_TunnelEntrance</mechClusterBuilding>
+		<tags><li>TunnelLike</li></tags>
+		<!--
+		<Faction>OG_Chaos_Deamon_Faction</Faction>
+		<hiveDef>HiveLike</hiveDef>
+		<tunnlerDef>TunnelHiveLikeSpawner</tunnlerDef>
+		<PawnKinds>
+		<li>Infestation</li>
+		</PawnKinds>
+		-->
+	</ExtraHives.HivelikeIncidentDef>
+
+</Defs>

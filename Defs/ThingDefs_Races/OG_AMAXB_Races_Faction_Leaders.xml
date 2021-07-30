@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-	<ThingDef ParentName="BasePawn" Name="Faction_Leader_Race" Abstract="True">
+	<!--ThingDef ParentName="BasePawn" Name="Faction_Leader_Race" Abstract="True">
 		<defName>Faction_Leader_Race</defName>
 		<label>Leader</label>
 		<description>This is the leader of their faction</description>
@@ -170,10 +170,10 @@
 			<li>Euthanize</li>
 			<li>Anesthetize</li>
 		</recipes>
-	</ThingDef>
+	</ThingDef-->
 
 	<!-- Ork Faction Leader Pawn -->
-	<ThingDef ParentName="Faction_Leader_Race">
+	<!--ThingDef ParentName="Faction_Leader_Race">
 		<defName>Ork_FactionWarboss</defName>
 		<label>Ork Warboss</label>
 		<description>The Ork Boyz are the different types of troops deployed by the Orks, a savage, warlike, green-skinned race of humanoids of the Milky Way Galaxy. They are in some ways equivalent to Warhammer Fantasy Orcs, particularly in terms of their physical appearance, but they vary from the Warhammer World's Greenskins in some minor biological and cultural details. They are seen by their enemies (pretty much everyone else in the galaxy) as savage, warlike and crude, but they are the most successful species in the Milky Way, outnumbering possibly every other intelligent race, including Mankind. However, the power of the Ork race as a whole is limited due to the fact that they are split into hundreds of tiny empires, which are more often warring between themselves than not. Were the Orks ever to unite as a species, they would undoubtedly crush all opposition in a massive migration-invasion known as a WAAAGH!</description>
@@ -188,5 +188,5 @@
 			<body>OrkBody</body>
 			<useMeatFrom>OG_Alien_Ork</useMeatFrom>
 		</race>
-	</ThingDef>
+	</ThingDef-->
 </Defs>

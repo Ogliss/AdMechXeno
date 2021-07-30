@@ -134,30 +134,6 @@
 	</race>
 </ThingDef>
 
-<!-- Tau Faction Leader Pawn -->
-
-<ThingDef ParentName="OG_Tau_Pawn_Base">
-	<defName>Tau_FactionEthereal</defName>
-	<label>Faction Leader</label>
-	<description>An Ethereal is a member of the fifth caste of the Tau species, forming a ruling elite above the Fire, Earth, Air, and Water Castes that make up the bulk of the T'au population. Known as the Aun in the Tau Lexicon, their name translates variously as the "Celestial" or "Ethereal Caste." Though their numbers are small compared to the other castes, the Ethereals are the rulers of the T'au Empire, and command near total authority and loyalty from every other Tau. Born to counsel, advise and steer their comrades towards the chosen path, the Ethereals embody the roles of royalty and the priesthood, and the deference paid to them is the closest thing to mysticism in T'au society.</description>
-	<statBases>
-		<MoveSpeed>6</MoveSpeed>
-		<MeleeDodgeChance>1.25</MeleeDodgeChance>
-		<MeleeHitChance>1.85</MeleeHitChance>
-		<MeleeCritChance MayRequire="CETeam.CombatExtended">1.125</MeleeCritChance>
-		<MeleeParryChance MayRequire="CETeam.CombatExtended">1.125</MeleeParryChance>
-	</statBases>
-	<race>
-		<thinkTreeMain>Humanlike</thinkTreeMain>
-		<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-		<intelligence>Humanlike</intelligence>
-		<nameCategory>HumanStandard</nameCategory>
-		<lifeExpectancy>150</lifeExpectancy>
-		<body>OG_Tau_Body</body>
-		<useMeatFrom>OG_Alien_Tau</useMeatFrom>
-		<baseHealthScale>2.5</baseHealthScale>
-	</race>
-</ThingDef>
 
 <!-- Tau Ethereal -->
 

@@ -16,24 +16,24 @@ namespace AdeptusMechanicus.HarmonyInstance
 
         private static bool Dev => AMAMod.Dev;
 
-        private static bool showXB => settings.ShowXenobiologisSettings;
-        private static bool showRaces => settings.ShowAllowedRaceSettings && showXB;
-        private static bool setting => settings.ShowAllowedRaceSettings && settings.ShowChaos;
+        private static bool ShowXB => settings.ShowXenobiologisSettings;
+        private static bool ShowRaces => settings.ShowAllowedRaceSettings && ShowXB;
+        private static bool Setting => settings.ShowAllowedRaceSettings && settings.ShowChaos;
 
         private static int Options = 4;
-        private static float RaceSettings => mod.Length(setting, Options, lineheight, 8, showRaces ? 1 : 0, 0);
+        private static float RaceSettings => mod.Length(Setting, Options, lineheight, 8, ShowRaces ? 1 : 0, 0);
 
         public static float MainMenuLength = 0;
         public static float MenuLength = 0;
         private static float inc = 0;
         [HarmonyPrefix]
-        public static void ChaosSettings_Prefix(ref AMAMod __instance, ref Listing_StandardExpanding listing_Main, Rect rect, Rect inRect, float num,ref float num2)
+        public static void ChaosSettings_Prefix(ref Listing_StandardExpanding listing_Main, ref float num2)
         {
             if (AdeptusIntergrationUtility.enabled_XenobiologisChaos)
             {
                 return;
             }
-            if (showRaces)
+            if (ShowRaces)
             {
                 string label = "AdeptusMechanicus.Xenobiologis.ShowChaos".Translate() + " Settings";
                 string tooltip = "AdeptusMechanicus.ShowSpecialRulesDesc".Translate();

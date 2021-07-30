@@ -113,28 +113,6 @@
 		<defName>OG_Alien_DarkEldar</defName>
 	</ThingDef>
 
-	<!-- Eldar Faction Leader -->
-	<ThingDef ParentName="OG_DarkEldarPawn_Base">
-		<defName>OG_DarkEldar_FactionLeader</defName>
-		<label>Faction Leader</label>
-		<description>The overlord of a Kabal is always a potent foe on the battlefield, but he has attained his position not merely through martial prowess in the arts of war and violence but through consistently emerging as the victor in the most difficult game of all -- the byzantine intrigues that govern all things in the heart of the Dark City, sometimes known as the thyllian ai-kelethril, or "path of shards." Only the most ingenious survive long enough to kill their way to the top.</description>
-		<statBases>
-			<MoveSpeed>6.8</MoveSpeed>
-		</statBases>
-		<race>
-			<thinkTreeMain>Humanlike</thinkTreeMain>
-			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
-			<intelligence>Humanlike</intelligence>
-			<nameCategory>HumanStandard</nameCategory>
-			<lifeExpectancy>25000</lifeExpectancy>
-			<baseHealthScale>2.5</baseHealthScale>
-			<useMeatFrom>OG_Alien_DarkEldar</useMeatFrom>
-			<hediffGiverSets>
-				<!--li>OGE_Farseer_Options</li-->
-			</hediffGiverSets>
-		</race>
-	</ThingDef>
-
 	<!-- Dark Eldar Archon -->
 	<ThingDef ParentName="OG_DarkEldarPawn_Base">
 		<defName>OG_DarkEldar_Archon</defName>

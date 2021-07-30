@@ -26,7 +26,6 @@ namespace AdeptusMechanicus
             Pawn newPawn2 = null;
             bool spawn = false;
             Lord  lord = pawn.GetLord();
-            bool logging = false;
             List<Thing> spawned = new List<Thing>();
             if (map != null)
             {
@@ -54,7 +53,7 @@ namespace AdeptusMechanicus
                     {
                         if (map.mapPawns.SpawnedPawnsInFaction(pawn.Faction).Any((Pawn p) => p != newPawn1 && p != newPawn2 && p.GetLord() != null))
                         {
-                            Predicate<Thing> validator = (Thing p) => p != newPawn1 && p != newPawn2 && ((Pawn)p).GetLord() != null;
+                            bool validator(Thing p) => p != newPawn1 && p != newPawn2 && ((Pawn)p).GetLord() != null;
                             Pawn p2 = (Pawn)GenClosest.ClosestThing_Global(position, map.mapPawns.SpawnedPawnsInFaction(newPawn1.Faction), 99999f, validator, null);
                             lord = p2.GetLord();
                         }

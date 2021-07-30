@@ -26,7 +26,7 @@ namespace AdeptusMechanicus.HarmonyInstance
             {
                 EndTimesPortalPatch();
             }
-            if (Prefs.DevMode) Log.Message(string.Format("Magos Xenobiologis: successfully completed {0} harmony patches.", harmony.GetPatchedMethods().Select(new Func<MethodBase, Patches>(Harmony.GetPatchInfo)).SelectMany((Patches p) => p.Prefixes.Concat(p.Postfixes).Concat(p.Transpilers)).Count((Patch p) => p.owner.Contains(harmony.Id))), false);
+            if (Prefs.DevMode) Log.Message(string.Format("Magos Xenobiologis: successfully completed {0} harmony patches.", harmony.GetPatchedMethods().Select(new Func<MethodBase, Patches>(Harmony.GetPatchInfo)).SelectMany((Patches p) => p.Prefixes.Concat(p.Postfixes).Concat(p.Transpilers)).Count((Patch p) => p.owner.Contains(harmony.Id))));
         }
 
         public static void EndTimesPortalPatch()
@@ -36,7 +36,7 @@ namespace AdeptusMechanicus.HarmonyInstance
             MethodInfo method5 = AccessTools.TypeByName("TheEndTimes.ChaosPortalSmall").GetMethod("ResetStaticData");
             if (method3 != null || method5 != null)
             {
-                Log.Message("Rimhammer: End Times WITH GUNS detected");
+            //    Log.Message("Rimhammer: End Times WITH GUNS detected");
                 if (settings.AMSettings.Instance.EndTimesIntergrateDeamons)
                 {
                     if (method3 == null)
@@ -49,7 +49,7 @@ namespace AdeptusMechanicus.HarmonyInstance
                         {
                             if (harmony.Patch(method3, postfix: new HarmonyMethod(method4)) != null)
                             {
-                                Log.Message("Magos Xenobiologis: successfully added chaos deamons to End Times Great Portal spawns");
+                            //    Log.Message("Magos Xenobiologis: successfully added chaos deamons to End Times Great Portal spawns");
                             }
                             else
                             {
@@ -67,7 +67,7 @@ namespace AdeptusMechanicus.HarmonyInstance
                         {
                             if (harmony.Patch(method5, postfix: new HarmonyMethod(method4)) != null)
                             {
-                                Log.Message("Magos Xenobiologis: successfully added chaos deamons to End Times Small Portal spawns");
+                            //    Log.Message("Magos Xenobiologis: successfully added chaos deamons to End Times Small Portal spawns");
                             }
                             else
                             {
@@ -80,8 +80,7 @@ namespace AdeptusMechanicus.HarmonyInstance
         }
         public static void EndTimesWithGunsDeamonPatch(Building __instance)
         {
-            TheEndTimes.ChaosPortalGreat PortalGreat = __instance as TheEndTimes.ChaosPortalGreat;
-            if (PortalGreat != null)
+            if (__instance is TheEndTimes.ChaosPortalGreat PortalGreat)
             {
                 foreach (PawnKindDef item in DefDatabase<PawnKindDef>.AllDefsListForReading.Where(x => x.RaceProps.FleshType == AdeptusFleshTypeDefOf.OG_Flesh_Chaos_Deamon))
                 {
@@ -89,8 +88,7 @@ namespace AdeptusMechanicus.HarmonyInstance
                 }
                 return;
             }
-            TheEndTimes.ChaosPortalSmall PortalSmall = __instance as TheEndTimes.ChaosPortalSmall;
-            if (PortalSmall != null)
+            if (__instance is TheEndTimes.ChaosPortalSmall PortalSmall)
             {
                 foreach (PawnKindDef item in DefDatabase<PawnKindDef>.AllDefsListForReading.Where(x => x.RaceProps.FleshType == AdeptusFleshTypeDefOf.OG_Flesh_Chaos_Deamon))
                 {

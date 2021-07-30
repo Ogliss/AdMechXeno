@@ -3,7 +3,7 @@
 
 <ThingDef ParentName="HumanRace" Name="OG_Mechanicus_Base">
 	<defName>OG_Human_Mechanicus</defName>
-	<label>human</label>
+	<label>human (Mechanicus)</label>
 	<description>A baseline human, mostly unmodified by gene engineering and mostly unchanged by evolutionary pressures on non-Earth planets.</description>
 	<statBases>
 		<MarketValue>1750</MarketValue>
@@ -41,30 +41,9 @@
 		<manhunterOnDamageChance>0.20</manhunterOnDamageChance>
 		<manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
 		-->
-		<!--
 		<lifeStageAges>
-		<li>
-			<def>HumanlikeBaby</def>
-			<minAge>0</minAge>
-		</li>
-		<li>
-			<def>HumanlikeToddler</def>
-			<minAge>1.2</minAge>
-		</li>
-		<li>
-			<def>HumanlikeChild</def>
-			<minAge>4</minAge>
-		</li>
-		<li>
-			<def>HumanlikeTeenager</def>
-			<minAge>13</minAge>
-		</li>
-		<li>
-			<def>HumanlikeAdult</def>
-			<minAge>18</minAge>
-		</li>
+		
 		</lifeStageAges>
-		-->
 		<specialShadowData>
 		<!--
 		<volume>(0.3, 0.8, 0.4)</volume>

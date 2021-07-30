@@ -52,38 +52,38 @@ namespace AdeptusMechanicus
             }
         }
 
-        public bool reviveFlag => (pawn.Dead ? reviveIntervalTicks - corpse.Age <= 0 : false) && !reviveTried;
-        public Pawn pawn => (Pawn) this.parent;
-        public Corpse corpse => pawn.Corpse;
-        public List<Hediff> PawnHediffs => pawn.health.hediffSet.hediffs.FindAll(x=> x.def.hediffClass == typeof(Hediff_Injury) || (x.def.hediffClass == typeof(Hediff_MissingPart) && !pawn.health.hediffSet.PartOrAnyAncestorHasDirectlyAddedParts(x.Part)) || x.def.isBad && x.def.hediffClass != typeof(Hediff_AddedPart) && x.def.hediffClass != typeof(Hediff_Implant));
+        public bool ReviveFlag => (Pawn.Dead && reviveIntervalTicks - Corpse.Age <= 0) && !reviveTried;
+        public Pawn Pawn => (Pawn) this.parent;
+        public Corpse Corpse => Pawn.Corpse;
+        public List<Hediff> PawnHediffs => Pawn.health.hediffSet.hediffs.FindAll(x=> x.def.hediffClass == typeof(Hediff_Injury) || (x.def.hediffClass == typeof(Hediff_MissingPart) && !Pawn.health.hediffSet.PartOrAnyAncestorHasDirectlyAddedParts(x.Part)) || x.def.isBad && x.def.hediffClass != typeof(Hediff_AddedPart) && x.def.hediffClass != typeof(Hediff_Implant));
         public List<Hediff> HealableHediffs => PawnHediffs.FindAll(x => !unhealableHediffs.Contains(x) && x.def.hediffClass==typeof(Hediff_Injury));
         public List<Hediff> UnhealableHediffs => unhealableHediffs;
         public bool HasHealableWounds => !HealableHediffs.NullOrEmpty();
-        public bool HasRegeneragtingLimbs => pawn.health.hediffSet.hediffs.Any(x => x.def == AdeptusHediffDefOf.OG_Regenerating);
-        public Map map => pawn.Dead ? pawn.Corpse.Map : pawn.Map;
-        public IntVec3 pos => pawn.Dead ? pawn.Corpse.Position : pawn.Position;
-        bool Necrodermis => (pawn.Dead ? false : this.ticksSinceHeal > this.healIntervalTicks) && Props.Necrodermis && !HealableHediffs.NullOrEmpty();
-        bool Reanimation => (pawn.Dead ? this.corpse.Age > this.reviveIntervalTicks : false) && Props.ReanimationProtocol && !reviveTried;
-        bool Phasic => (pawn.Dead ? reviveTried : false) && Props.PhaseOut && !phaseTried && !map.mapPawns.AllPawns.Any(x=> (x.def == AdeptusThingDefOf.Necron_TombSpyder || (x.def == AdeptusThingDefOf.Necron_Lord && x.health.hediffSet.HasHediff(AdeptusHediffDefOf.OG_Necron_Upgrade_RessurectionOrb))) && x.Position.InHorDistOf(pos, 20f));
+        public bool HasRegeneragtingLimbs => Pawn.health.hediffSet.hediffs.Any(x => x.def == AdeptusHediffDefOf.OG_Regenerating);
+        public Map Map => Pawn.Dead ? Pawn.Corpse.Map : Pawn.Map;
+        public IntVec3 Pos => Pawn.Dead ? Pawn.Corpse.Position : Pawn.Position;
+        public bool Necrodermis => (!Pawn.Dead && this.ticksSinceHeal > this.HealIntervalTicks) && Props.Necrodermis && !HealableHediffs.NullOrEmpty();
+        public bool Reanimation => (Pawn.Dead && this.Corpse.Age > this.reviveIntervalTicks) && Props.ReanimationProtocol && !reviveTried;
+        public bool Phasic => (Pawn.Dead && reviveTried) && Props.PhaseOut && !phaseTried && !Map.mapPawns.AllPawns.Any(x=> (x.def == AdeptusThingDefOf.Necron_TombSpyder || (x.def == AdeptusThingDefOf.Necron_Lord && x.health.hediffSet.HasHediff(AdeptusHediffDefOf.OG_Necron_Upgrade_RessurectionOrb))) && x.Position.InHorDistOf(Pos, 20f));
 
-        BodyPartRecord NecrodermisRegulator => pawn.RaceProps.body.AllParts.Find(x => x.def == AdeptusBodyPartDefOf.OG_Necron_NecrodermisRegulator);
-        BodyPartRecord ReanimationMatrix => pawn.RaceProps.body.AllParts.Find(x => x.def == AdeptusBodyPartDefOf.OG_Necron_ReanimationMatrix);
-        BodyPartRecord PhasicCapacitor => pawn.RaceProps.body.AllParts.Find(x => x.def == AdeptusBodyPartDefOf.OG_Necron_PhasicCapacitor);
-        
-        float reanimateChance => Props.ReanimationProtocolChance * (pawn.health.hediffSet.PartIsMissing(ReanimationMatrix) ? 0f : PawnCapacityUtility.CalculatePartEfficiency(pawn.health.hediffSet, ReanimationMatrix, false, null));
-        float phaseChance => Props.PhaseOutChance * (pawn.health.hediffSet.PartIsMissing(PhasicCapacitor) ? 0f : PawnCapacityUtility.CalculatePartEfficiency(pawn.health.hediffSet, PhasicCapacitor, false, null));
-        float regenChance => Props.NecrodermisChance * (pawn.health.hediffSet.PartIsMissing(NecrodermisRegulator) ? 0f : PawnCapacityUtility.CalculatePartEfficiency(pawn.health.hediffSet, NecrodermisRegulator, false, null));
+        public BodyPartRecord NecrodermisRegulator => Pawn.RaceProps.body.AllParts.Find(x => x.def == AdeptusBodyPartDefOf.OG_Necron_NecrodermisRegulator);
+        public BodyPartRecord ReanimationMatrix => Pawn.RaceProps.body.AllParts.Find(x => x.def == AdeptusBodyPartDefOf.OG_Necron_ReanimationMatrix);
+        public BodyPartRecord PhasicCapacitor => Pawn.RaceProps.body.AllParts.Find(x => x.def == AdeptusBodyPartDefOf.OG_Necron_PhasicCapacitor);
+
+        public float ReanimateChance => Props.ReanimationProtocolChance * (Pawn.health.hediffSet.PartIsMissing(ReanimationMatrix) ? 0f : PawnCapacityUtility.CalculatePartEfficiency(Pawn.health.hediffSet, ReanimationMatrix, false, null));
+        public float PhaseChance => Props.PhaseOutChance * (Pawn.health.hediffSet.PartIsMissing(PhasicCapacitor) ? 0f : PawnCapacityUtility.CalculatePartEfficiency(Pawn.health.hediffSet, PhasicCapacitor, false, null));
+        public float RegenChance => Props.NecrodermisChance * (Pawn.health.hediffSet.PartIsMissing(NecrodermisRegulator) ? 0f : PawnCapacityUtility.CalculatePartEfficiency(Pawn.health.hediffSet, NecrodermisRegulator, false, null));
 
         public override void PostSpawnSetup(bool respawningAfterLoad)
         {
             base.PostSpawnSetup(respawningAfterLoad);
             if (!respawningAfterLoad)
             {
-                if (pawn.equipment!=null)
+                if (Pawn.equipment!=null)
                 {
-                    if (pawn.equipment.Primary!=null)
+                    if (Pawn.equipment.Primary!=null)
                     {
-                        originalWeapon = pawn.equipment.Primary;
+                        originalWeapon = Pawn.equipment.Primary;
                         //    Log.Message(string.Format("{0} spawned with {1}", pawn.Label, originalWeapon.Label));
                         /*
                         if (AdeptusIntergrationUtil.enabled_rooloDualWield)
@@ -105,20 +105,20 @@ namespace AdeptusMechanicus
             {
                 return;
             }
-            if (base.parent != null && (base.parent.Spawned || pawn.Dead) && reviveFlag && AMAMod.settings.AllowNecronWellBeBack)
+            if (base.parent != null && (base.parent.Spawned || Pawn.Dead) && ReviveFlag && AMAMod.settings.AllowNecronWellBeBack)
             {
-                if (base.parent is Pawn && pawn.kindDef != AdeptusPawnKindDefOf.OG_Necron_Scarab_Swarm)
+                if (base.parent is Pawn && Pawn.kindDef != AdeptusPawnKindDefOf.OG_Necron_Scarab_Swarm)
                 {
                     if (Reanimation)
                     {
-                        Dead(pawn);
+                        Dead(Pawn);
                     }
                     if (Necrodermis)
                     {
                         Rand.PushState();
-                        if (Rand.Chance(regenChance))
+                        if (Rand.Chance(RegenChance))
                         {
-                            if (pawn.Downed)
+                            if (Pawn.Downed)
                             {
                                 Downed();
                             }
@@ -182,14 +182,14 @@ namespace AdeptusMechanicus
         public void TryPhase()
         {
             Rand.PushState();
-            if (Rand.Chance(phaseChance))
+            if (Rand.Chance(PhaseChance))
             {
-                if (pawn.Corpse.Spawned)
+                if (Pawn.Corpse.Spawned)
                 {
-                    ThrowNecronGlow(pos.ToVector3(), map, 0.5f);
-                    pawn.Corpse.DeSpawn();
+                    ThrowNecronGlow(Pos.ToVector3(), Map, 0.5f);
+                    Pawn.Corpse.DeSpawn();
                 }
-                FleckMaker.Static(pos, map, FleckDefOf.PsycastSkipInnerExit, 0.5f);
+                FleckMaker.Static(Pos, Map, FleckDefOf.PsycastSkipInnerExit, 0.5f);
             }
             else
             {
@@ -202,9 +202,9 @@ namespace AdeptusMechanicus
         {
             if (pawn!=null && pawn.health is Pawn_HealthTracker healthTracker)
             {
-                bool healable = HasHealableWounds || HasRegeneragtingLimbs;
-                if (logging == true) Log.Message(string.Format("Dead {0}, healable: {1}, HasRegeneragtingLimbs: {2}, SummaryHealthPercent: {3}, LethalDamageThreshold: {4}, InPainShock: {5}, State: {6}, reviveTried {7}, reviveFlag {8}, HealableHediffs {9}, UnhealableHediffs {10}", pawn.Label, HasHealableWounds, HasRegeneragtingLimbs, healthTracker.summaryHealth.SummaryHealthPercent, healthTracker.LethalDamageThreshold, healthTracker.InPainShock, healthTracker.State, reviveTried, reviveFlag, HealableHediffs.Count, UnhealableHediffs.Count));
-                if (reviveFlag)
+            //    bool healable = HasHealableWounds || HasRegeneragtingLimbs;
+                if (logging == true) Log.Message(string.Format("Dead {0}, healable: {1}, HasRegeneragtingLimbs: {2}, SummaryHealthPercent: {3}, LethalDamageThreshold: {4}, InPainShock: {5}, State: {6}, reviveTried {7}, reviveFlag {8}, HealableHediffs {9}, UnhealableHediffs {10}", pawn.Label, HasHealableWounds, HasRegeneragtingLimbs, healthTracker.summaryHealth.SummaryHealthPercent, healthTracker.LethalDamageThreshold, healthTracker.InPainShock, healthTracker.State, reviveTried, ReviveFlag, HealableHediffs.Count, UnhealableHediffs.Count));
+                if (ReviveFlag)
                 {
                     /*
                     if (healable)
@@ -222,18 +222,17 @@ namespace AdeptusMechanicus
 
         public void TryRevive(bool ForcedRevive = false)
         {
-            string str = "sucessful";
             reviveIntervalTicks = -1;
             reviveTried = true;
             Rand.PushState();
-            if (Rand.Chance(reanimateChance) || ForcedRevive)
+            if (Rand.Chance(ReanimateChance) || ForcedRevive)
             {
                 List<Hediff> hediffs = unhealableHediffs;
-                ResurrectionUtility.Resurrect(pawn);
-                if (originalWeapon==null && pawn.kindDef.weaponTags.Count>0)
+                ResurrectionUtility.Resurrect(Pawn);
+                if (originalWeapon==null && Pawn.kindDef.weaponTags.Count>0)
                 {
-                    ThingDef thingDef = ThingDef.Named(pawn.kindDef.weaponTags[0]);
-                    Thing thing2 = GenClosest.ClosestThingReachable(pawn.Position, pawn.Map, ThingRequest.ForDef(thingDef), PathEndMode.InteractionCell, TraverseParms.For(pawn, Danger.Deadly, TraverseMode.ByPawn, false));
+                    ThingDef thingDef = ThingDef.Named(Pawn.kindDef.weaponTags[0]);
+                    Thing thing2 = GenClosest.ClosestThingReachable(Pawn.Position, Pawn.Map, ThingRequest.ForDef(thingDef), PathEndMode.InteractionCell, TraverseParms.For(Pawn, Danger.Deadly, TraverseMode.ByPawn, false));
                     this.originalWeapon = (ThingWithComps)thing2;
                 }
                 if (originalWeapon != null)
@@ -243,11 +242,11 @@ namespace AdeptusMechanicus
                     {
                         thing.DeSpawn();
                     }
-                    if (pawn.inventory.innerContainer.Contains(thing))
+                    if (Pawn.inventory.innerContainer.Contains(thing))
                     {
-                        pawn.inventory.innerContainer.Remove(thing);
+                        Pawn.inventory.innerContainer.Remove(thing);
                     }
-                    pawn.equipment.AddEquipment(thing);
+                    Pawn.equipment.AddEquipment(thing);
                 }
                 if (secondryWeapon != null)
                 {
@@ -256,41 +255,38 @@ namespace AdeptusMechanicus
                     {
                         thing.DeSpawn();
                     }
-                    if (pawn.inventory.innerContainer.Contains(thing))
+                    if (Pawn.inventory.innerContainer.Contains(thing))
                     {
-                        pawn.inventory.innerContainer.Remove(thing);
+                        Pawn.inventory.innerContainer.Remove(thing);
                     }
                 //    pawn.equipment.AdMechAddOffHandEquipment(thing);
                 }
                 if (!ForcedRevive)
                 {
-                    bool revives = true;
+                //    bool revives = true;
                     foreach (Hediff item in hediffs)
                     {
-                        if (!pawn.health.hediffSet.PartIsMissing(item.Part))
+                        if (!Pawn.health.hediffSet.PartIsMissing(item.Part))
                         {
-                            if (pawn.health.WouldDieAfterAddingHediff(item))
+                            if (Pawn.health.WouldDieAfterAddingHediff(item))
                             {
-                                revives = false;
-                                str = "failiure";
+                            //    revives = false;
                             }
-                            if (pawn.health.WouldBeDownedAfterAddingHediff(item))
+                            if (Pawn.health.WouldBeDownedAfterAddingHediff(item))
                             {
-                                revives = false;
-                                str = "failiure: still downed";
+                            //    revives = false;
                             }
-                            pawn.health.AddHediff(item);
+                            Pawn.health.AddHediff(item);
                         }
                     }
                 }
-                ThrowNecronGlow(pos.ToVector3(), map, 5f);
-                FleckMaker.Static(pos, map, FleckDefOf.ExplosionFlash, 3f);
+                ThrowNecronGlow(Pos.ToVector3(), Map, 5f);
+                FleckMaker.Static(Pos, Map, FleckDefOf.ExplosionFlash, 3f);
                 //    log.message(string.Format("{0} revive {1}",pawn, str));
             }
             else
             {
 
-                str = "failiure: roll";
                 //    log.message(string.Format("{0} revive {1}", pawn, str));
             }
             Rand.PopState();
@@ -299,8 +295,8 @@ namespace AdeptusMechanicus
         public void TryHeal(bool Forced = false)
         {
 
-            bool flag2 = HealableHediffs.Any(x => !pawn.health.hediffSet.PartIsMissing(x.Part) && x is Hediff_Injury);
-            bool flag3 = HealableHediffs.Any(x => pawn.health.hediffSet.PartIsMissing(x.Part));
+            bool flag2 = HealableHediffs.Any(x => !Pawn.health.hediffSet.PartIsMissing(x.Part) && x is Hediff_Injury);
+            bool flag3 = HealableHediffs.Any(x => Pawn.health.hediffSet.PartIsMissing(x.Part));
             bool flag4 = HealableHediffs.Any(x => x.def == AdeptusHediffDefOf.OG_Regenerating);
             Rand.PushState();
             float num = Rand.RangeInclusive(1, 100);
@@ -309,16 +305,16 @@ namespace AdeptusMechanicus
             if (flag2)
             {
                 if (logging == true) Log.Message(string.Format("flag2"));
-                hediff = GenCollection.RandomElement<Hediff_Injury>(from x in pawn.health.hediffSet.GetHediffs<Hediff_Injury>()
+                hediff = GenCollection.RandomElement<Hediff_Injury>(from x in Pawn.health.hediffSet.GetHediffs<Hediff_Injury>()
                                                                     where HediffUtility.CanHealNaturally(x) && (HealableHediffs.Contains(x) || Forced)
                                                                     select x);
-                num = num * pawn.HealthScale * 0.1f;
+                num = num * Pawn.HealthScale * 0.1f;
                 hediff.Heal(num);
-                string text = string.Format("flag2 the {1} on {0}'s {2} healed by {3}.", pawn.LabelCap, hediff.Label, hediff.Part.customLabel, num);
+                string text = string.Format("flag2 the {1} on {0}'s {2} healed by {3}.", Pawn.LabelCap, hediff.Label, hediff.Part.customLabel, num);
                 if (hediff.Severity == 0f)
                 {
-                    text = text + " and was removed";
-                    pawn.health.RemoveHediff(hediff);
+                    text += " and was removed";
+                    Pawn.health.RemoveHediff(hediff);
                 }
                 if (logging == true) Log.Message(string.Format(text));
             }
@@ -326,22 +322,22 @@ namespace AdeptusMechanicus
             {
                 if (logging == true) Log.Message(string.Format("flag4"));
 #pragma warning disable CS0436 // Type conflicts with imported type
-                hediff = pawn.health.hediffSet.GetHediffs<Hediff_RegeneratingPart>().RandomElement();
+                hediff = Pawn.health.hediffSet.GetHediffs<Hediff_RegeneratingPart>().RandomElement();
 #pragma warning restore CS0436 // Type conflicts with imported type
-                num = num * pawn.HealthScale * 0.001f;
+                num = num * Pawn.HealthScale * 0.001f;
                 hediff.Heal(num);
-                string text = string.Format("flag5 the {1} on {0}'s {2} regenerated by {3}.", pawn.LabelCap, hediff.Label, hediff.Part.customLabel, num);
+                string text = string.Format("flag5 the {1} on {0}'s {2} regenerated by {3}.", Pawn.LabelCap, hediff.Label, hediff.Part.customLabel, num);
                 if (hediff.Severity == 0f)
                 {
-                    text = text + " and was removed";
-                    pawn.health.RemoveHediff(hediff);
+                    text += " and was removed";
+                    Pawn.health.RemoveHediff(hediff);
                 }
                 if (logging == true) Log.Message(string.Format(text));
             }
             else if (flag3)
             {
                 if (logging == true) Log.Message(string.Format("flag3"));
-                bool flag3B = pawn.health.hediffSet.hediffs.Any(x => pawn.health.hediffSet.PartIsMissing(x.Part) && HealableHediffs.Contains(x));
+                bool flag3B = Pawn.health.hediffSet.hediffs.Any(x => Pawn.health.hediffSet.PartIsMissing(x.Part) && HealableHediffs.Contains(x));
                 if (flag3B)
                 {
                     if (logging == true) Log.Message(string.Format("flag3B"));
@@ -349,7 +345,7 @@ namespace AdeptusMechanicus
                 }
                 else
                 {
-                    if (logging == true) Log.Message(string.Format("flag3 {0}'s hediff_Injury flag3B: {1}", pawn.Label, flag3B));
+                    if (logging == true) Log.Message(string.Format("flag3 {0}'s hediff_Injury flag3B: {1}", Pawn.Label, flag3B));
                 }
             }
             else
@@ -360,39 +356,37 @@ namespace AdeptusMechanicus
 
         public void TryRegrowBodyparts(bool Forced = false)
         {
-            using (IEnumerator<BodyPartRecord> enumerator = this.pawn.GetFirstMatchingBodyparts(this.pawn.RaceProps.body.corePart, HediffDefOf.MissingBodyPart, AdeptusHediffDefOf.OG_Regenerating, (Hediff hediff) => hediff is Hediff_AddedPart).GetEnumerator())
+            using IEnumerator<BodyPartRecord> enumerator = this.Pawn.GetFirstMatchingBodyparts(this.Pawn.RaceProps.body.corePart, HediffDefOf.MissingBodyPart, AdeptusHediffDefOf.OG_Regenerating, (Hediff hediff) => hediff is Hediff_AddedPart).GetEnumerator();
+            while (enumerator.MoveNext())
             {
-                while (enumerator.MoveNext())
+                BodyPartRecord part = enumerator.Current;
+                bool any = this.Pawn.health.hediffSet.hediffs.Any((Hediff hediff) => hediff.Part == part && hediff.def == HediffDefOf.MissingBodyPart && (HealableHediffs.Contains(hediff) || Forced));
+                if (any)
                 {
-                    BodyPartRecord part = enumerator.Current;
-                    bool any = this.pawn.health.hediffSet.hediffs.Any((Hediff hediff) => hediff.Part == part && hediff.def == HediffDefOf.MissingBodyPart && (HealableHediffs.Contains(hediff) || Forced));
-                    if (any)
+                    Hediff hediff2 = this.Pawn.health.hediffSet.hediffs.First((Hediff hediff) => hediff.Part == part && hediff.def == HediffDefOf.MissingBodyPart && (HealableHediffs.Contains(hediff) || Forced));
+                    bool flag = hediff2 != null;
+                    if (flag)
                     {
-                        Hediff hediff2 = this.pawn.health.hediffSet.hediffs.First((Hediff hediff) => hediff.Part == part && hediff.def == HediffDefOf.MissingBodyPart && (HealableHediffs.Contains(hediff) || Forced));
-                        bool flag = hediff2 != null;
-                        if (flag)
-                        {
-                            this.pawn.health.RemoveHediff(hediff2);
-                            this.pawn.health.AddHediff(AdeptusHediffDefOf.OG_Regenerating, part, null, null);
-                            this.pawn.health.hediffSet.DirtyCache();
-                        }
+                        this.Pawn.health.RemoveHediff(hediff2);
+                        this.Pawn.health.AddHediff(AdeptusHediffDefOf.OG_Regenerating, part, null, null);
+                        this.Pawn.health.hediffSet.DirtyCache();
                     }
-
                 }
+
             }
         }
 
         public void TryRemoveHediff(bool Forced = false)
         {
-            bool any = this.pawn.health.hediffSet.hediffs.Any((Hediff hediff) => hediff.def != HediffDefOf.MissingBodyPart && (Forced || HealableHediffs.Contains(hediff)));
+            bool any = this.Pawn.health.hediffSet.hediffs.Any((Hediff hediff) => hediff.def != HediffDefOf.MissingBodyPart && (Forced || HealableHediffs.Contains(hediff)));
             if (any)
             {
-                Hediff hediff2 = this.pawn.health.hediffSet.hediffs.First((Hediff hediff) => hediff.def != HediffDefOf.MissingBodyPart && (Forced || HealableHediffs.Contains(hediff)));
+                Hediff hediff2 = this.Pawn.health.hediffSet.hediffs.First((Hediff hediff) => hediff.def != HediffDefOf.MissingBodyPart && (Forced || HealableHediffs.Contains(hediff)));
                 bool flag = hediff2 != null;
                 if (flag)
                 {
-                    this.pawn.health.RemoveHediff(hediff2);
-                    this.pawn.health.hediffSet.DirtyCache();
+                    this.Pawn.health.RemoveHediff(hediff2);
+                    this.Pawn.health.hediffSet.DirtyCache();
                 }
             }
         }
@@ -424,39 +418,45 @@ namespace AdeptusMechanicus
                 yield return item;
             }
             */
-            bool selected = (Find.Selector.SingleSelectedThing == pawn || Find.Selector.SingleSelectedThing == pawn.Corpse) && Prefs.DevMode && DebugSettings.godMode;
-            bool missing =  pawn.health.hediffSet.hediffs.Any(x => x.def.hediffClass == typeof(Hediff_MissingPart) && x.def.isBad);
+            bool selected = (Find.Selector.SingleSelectedThing == Pawn || Find.Selector.SingleSelectedThing == Pawn.Corpse) && Prefs.DevMode && DebugSettings.godMode;
+            bool missing =  Pawn.health.hediffSet.hediffs.Any(x => x.def.hediffClass == typeof(Hediff_MissingPart) && x.def.isBad);
             if (selected)
             {
-                if (pawn.Dead)
+                if (Pawn.Dead)
                 {
-                    Command_Action command_Action = new Command_Action();
-                    command_Action.defaultLabel = "Activate Reanimation Protocols";
-                    command_Action.defaultDesc = parent.def.label;
-                    //    command_Action.hotKey = KeyBindingDefOf.Misc2;
-                    command_Action.icon = ContentFinder<Texture2D>.Get("Icons/Icon_Necron", true);
-                    command_Action.action = doTryRevive;
+                    Command_Action command_Action = new Command_Action
+                    {
+                        defaultLabel = "Activate Reanimation Protocols",
+                        defaultDesc = parent.def.label,
+                        //    command_Action.hotKey = KeyBindingDefOf.Misc2;
+                        icon = ContentFinder<Texture2D>.Get("Icons/Icon_Necron", true),
+                        action = DoTryRevive
+                    };
                     yield return command_Action;
                 }
                 else
                 if (!HealableHediffs.NullOrEmpty())
                 {
-                    Command_Action command_Action = new Command_Action();
-                    command_Action.defaultLabel = "Activate Necrodermis repair";
-                    command_Action.defaultDesc = parent.def.label;
-                    //    command_Action.hotKey = KeyBindingDefOf.Misc2;
-                    command_Action.icon = ContentFinder<Texture2D>.Get("Icons/Icon_Necron", true);
-                    command_Action.action = doTryHeal;
+                    Command_Action command_Action = new Command_Action
+                    {
+                        defaultLabel = "Activate Necrodermis repair",
+                        defaultDesc = parent.def.label,
+                        //    command_Action.hotKey = KeyBindingDefOf.Misc2;
+                        icon = ContentFinder<Texture2D>.Get("Icons/Icon_Necron", true),
+                        action = DoTryHeal
+                    };
                     yield return command_Action;
                 }
                 if (missing)
                 {
-                    Command_Action command_Action = new Command_Action();
-                    command_Action.defaultLabel = "Activate Necrodermis regeneration";
-                    command_Action.defaultDesc = parent.def.label;
-                    //    command_Action.hotKey = KeyBindingDefOf.Misc2;
-                    command_Action.icon = ContentFinder<Texture2D>.Get("Icons/Icon_Necron", true);
-                    command_Action.action = doTryRegrowBodyparts;
+                    Command_Action command_Action = new Command_Action
+                    {
+                        defaultLabel = "Activate Necrodermis regeneration",
+                        defaultDesc = parent.def.label,
+                        //    command_Action.hotKey = KeyBindingDefOf.Misc2;
+                        icon = ContentFinder<Texture2D>.Get("Icons/Icon_Necron", true),
+                        action = DoTryRegrowBodyparts
+                    };
                     yield return command_Action;
                 }
             }
@@ -494,23 +494,23 @@ namespace AdeptusMechanicus
             this.ticksSinceHeal++;
         }
 
-        public void doTryRevive()
+        public void DoTryRevive()
         {
-            if (pawn.Dead)
+            if (Pawn.Dead)
             {
                 TryRevive(true);
             }
         }
-        public void doTryHeal()
+        public void DoTryHeal()
         {
-            if (pawn.Dead)
+            if (Pawn.Dead)
             {
                 TryHeal(true);
             }
         }
-        public void doTryRegrowBodyparts()
+        public void DoTryRegrowBodyparts()
         {
-            if (pawn.Dead)
+            if (Pawn.Dead)
             {
                 TryRegrowBodyparts(true);
             }
@@ -538,7 +538,7 @@ namespace AdeptusMechanicus
         bool downed;
         bool logging = false;
         public int reviveIntervalTicks;
-        public int healIntervalTicks => Props.NecrodermisInterval.SecondsToTicks();
+        public int HealIntervalTicks => Props.NecrodermisInterval.SecondsToTicks();
         public int ticksSinceHeal;
 
     }

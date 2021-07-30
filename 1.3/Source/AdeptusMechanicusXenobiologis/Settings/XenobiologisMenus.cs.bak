@@ -41,7 +41,7 @@ namespace AdeptusMechanicus
             }
 
             listing_Races = listing_Menu.BeginSection(listing_RacesLength, false, 3, 4, 4);
-            Log.Message(listing_Menu.listingRect.height+" "+listing_Menu.CurHeight+" "+listing_Menu.MaxColumnHeightSeen);
+        //    Log.Message(listing_Menu.listingRect.height+" "+listing_Menu.CurHeight+" "+listing_Menu.MaxColumnHeightSeen);
             string labelR = "AdeptusMechanicus.Xenobiologis.AllowedRaces".Translate() + " Settings";
             string tooltipR = "AdeptusMechanicus.ShowSpecialRulesDesc".Translate();
             listing_Races.CheckboxLabeled(labelR, ref settings.ShowAllowedRaceSettings, tooltipR, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex);

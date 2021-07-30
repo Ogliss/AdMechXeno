@@ -48,7 +48,7 @@ namespace AdeptusMechanicus
             StateGraph stateGraph = new StateGraph();
             if (!this.defSpot.IsValid)
             {
-                Log.Warning("LordJob_NecronsDefendShip defSpot is invalid. Returning graph for LordJob_AssaultColony.", false);
+                Log.Warning("LordJob_NecronsDefendShip defSpot is invalid. Returning graph for LordJob_AssaultColony.");
                 stateGraph.AttachSubgraph(new LordJob_AssaultColony(this.faction, true, true, false, false, true).CreateGraph());
                 return stateGraph;
             }
@@ -89,7 +89,7 @@ namespace AdeptusMechanicus
             Scribe_References.Look<Thing>(ref this.shipPart, "shipPart", false);
             Scribe_References.Look<Faction>(ref this.faction, "faction", false);
             Scribe_Values.Look<float>(ref this.defendRadius, "defendRadius", 0f, false);
-            Scribe_Values.Look<IntVec3>(ref this.defSpot, "defSpot", default(IntVec3), false);
+            Scribe_Values.Look<IntVec3>(ref this.defSpot, "defSpot", default, false);
         }
 
         // Token: 0x0400035F RID: 863

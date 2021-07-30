@@ -3,7 +3,16 @@
 
 	<FactionDef ParentName="OG_Tau_Faction_Base">
 		<defName>OG_Tau_Faction</defName>
-		<classicIdeo>true</classicIdeo>
+		<allowedCultures><li>OG_Tau_GreaterGood</li></allowedCultures>
+		<disallowedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<structureMemeWeights>
+			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+			<Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+		</structureMemeWeights>
 		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
 		<configurationListOrderPriority>90</configurationListOrderPriority>
 	</FactionDef>

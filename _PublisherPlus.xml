@@ -1,57 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Configuration>
-<Excluded>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\.git</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\1.0\Assemblies\AdeptusMechanicusXenobiologis.pdb</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\1.0\Defs\Misc\FleshTypeDefs\FleshTypeDefs.zip</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\1.0\Source</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\1.1\Assemblies\AdeptusMechanicusXenobiologis.pdb</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\1.1\Assemblies\CrashedShipsExtension.pdb</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\1.1\Assemblies\ExtraHives.pdb</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\1.1\Defs\DutyDefs\OG_AMAXB_Duties.xml.bak</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\1.1\Source</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Sounds\Weapons\Ranged\Tyranid\Tyranid.7z</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Building\Necron\Monolith_Source.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Building\Tyranid\TyranidDigestionPoolBase.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Pawn\Tyranid\Tyranid_Zoanthrope_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Mote\LightningGlow_Source.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\Animals\Ambull\Ambull_south_Source.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\Humanlike\Ogryn\Heads\Average_Normal_south_Source.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Ork.7z</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Biovore_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Carnifex_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Carnifex_east-Recovered.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Carnifex_north.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Carnifex_south.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Gargoyle_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Gargoyle_north.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Gargoyle_south.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Gaunt_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Gaunt_north.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Gaunt_south.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Genestealer_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Genestealer_north.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Genestealer_south.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\HiveTyrant_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\HiveTyrant_north.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\HiveTyrant_south.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Hormagaunt_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Lictor_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Lictor_north.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Lictor_south.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Malanthrope_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Ravener_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Ravener_north.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Ravener_south.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Ravener_south-Recovered.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Ripper_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Ripper_north.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Ripper_south.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\SporeMine_south.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Warrior.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Warrior_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Zoanthrope_east.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Zoanthrope_north.psd</exclude>
-	<exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\Textures\Things\Pawn\ToolUser\Tyranid\Zoanthrope_south.psd</exclude>
-</Excluded>
+  <Excluded>
+    <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\1.2\Source</exclude>
+    <exclude>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\1.3\Source</exclude>
+  </Excluded>
 </Configuration>

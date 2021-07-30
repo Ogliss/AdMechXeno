@@ -46,11 +46,18 @@ namespace AdeptusMechanicus.HarmonyInstance
                 {
                     Listing_StandardExpanding listing_General = listing_Race.BeginSection(MenuLength, true);
                     listing_General.ColumnWidth *= 0.488f;
+                    if (
                     listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowTyranid".Translate() + (!DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Tyranid")) ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : "AdeptusMechanicus.Xenobiologis.HiddenFaction".Translate()),
                         ref settings.AllowTyranid,
                         null,
-                        !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Tyranid")) || !settings.AllowTyranidWeapons,
-                        DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Tyranid")) && settings.AllowTyranidWeapons);
+                        !DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Tyranid")),
+                        DefDatabase<FactionDef>.AllDefs.Any(x => x.defName.Contains("OG_Tyranid")) && settings.AllowTyranidWeapons))
+                    {
+                        if (settings.AllowTyranid)
+                        {
+                            settings.AllowTyranidWeapons = true;
+                        }
+                    }
                     listing_General.NewColumn();
                     listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowTyranidInfestation".Translate(),
                         ref settings.AllowTyranidInfestation,

@@ -12,7 +12,7 @@ namespace AdeptusMechanicus.HarmonyInstance
     public static class AMAMod_SettingsCategory_Patch
     {
         [HarmonyPostfix]
-        public static void ModsLoaded(ref AMAMod __instance, ref string __result)
+        public static void ModsLoaded(ref string __result)
         {
             __result += ", " + "AdeptusMechanicus.Xenobiologis.ModName".Translate() ;
         }
@@ -30,19 +30,19 @@ namespace AdeptusMechanicus.HarmonyInstance
         private static Listing_StandardExpanding listing_General = new Listing_StandardExpanding();
 
         private static bool Dev => AMAMod.Dev;
-        private static bool showXB => settings.ShowXenobiologisSettings;
-        private static bool showRaces => settings.ShowAllowedRaceSettings && showXB;
-        private static bool showImperial => settings.ShowImperium;
-        private static bool allowAstartes => settings.AllowAdeptusAstartes;
-        private static bool showAstartes => settings.ShowAstartes;
-        public static float listing_BaseLength => mod.Length(showXB, 1, lineheight, 0, 0);
-        public static float listing_BaseOptionsLength => mod.Length(showXB, 1, lineheight, 0, 0);
-        public static float listing_RacesLength => raceMenu != 0 ? raceMenu : mod.Length(settings.ShowAllowedRaceSettings && showXB, 8, lineheight, 8, showXB ? 1 : 0, 12);
-        private static float listing_XenobiologisLength => listing_BaseLength + listing_BaseOptionsLength + listing_RacesLength;
-        public static float listing_XenobiologisLengthImperial => mod.Length(showXB && showRaces && showImperial, 1, lineheight, 8, showRaces ? 1 : 0) + listing_XenobiologisLengthImperialOptions + (AdeptusIntergrationUtility.enabled_AdeptusAstartes && showXB && showRaces && showImperial && settings.AllowAdeptusAstartes ? listing_XenobiologisLengthIAstartes : 0);
-        public static float listing_XenobiologisLengthImperialOptions => mod.Length(showXB && showRaces && showImperial, 2, lineheight, 0, 0);
-        public static float listing_XenobiologisLengthIAstartes => AdeptusIntergrationUtility.enabled_AdeptusAstartes ? mod.Length((showXB && showRaces && showImperial) || !AdeptusIntergrationUtility.enabled_MagosXenobiologis && allowAstartes && showAstartes, 1, lineheight, 8, (showXB && showRaces && showImperial) || !AdeptusIntergrationUtility.enabled_MagosXenobiologis && allowAstartes ? 1 : 0) + listing_XenobiologisLengthIAstartesOptions : 0f;
-        public static float listing_XenobiologisLengthIAstartesOptions => AdeptusIntergrationUtility.enabled_AdeptusAstartes ? mod.Length(((showXB && showRaces && showImperial) || !AdeptusIntergrationUtility.enabled_MagosXenobiologis) && allowAstartes && showAstartes, 2, lineheight, 42, 0) : 0;
+        private static bool ShowXB => settings.ShowXenobiologisSettings;
+        private static bool ShowRaces => settings.ShowAllowedRaceSettings && ShowXB;
+        private static bool ShowImperial => settings.ShowImperium;
+        private static bool AllowAstartes => settings.AllowAdeptusAstartes;
+        private static bool ShowAstartes => settings.ShowAstartes;
+        public static float Listing_BaseLength => mod.Length(ShowXB, 1, lineheight, 0, 0);
+        public static float Listing_BaseOptionsLength => mod.Length(ShowXB, 1, lineheight, 0, 0);
+        public static float Listing_RacesLength => raceMenu != 0 ? raceMenu : mod.Length(settings.ShowAllowedRaceSettings && ShowXB, 8, lineheight, 8, ShowXB ? 1 : 0, 12);
+        private static float Listing_XenobiologisLength => Listing_BaseLength + Listing_BaseOptionsLength + Listing_RacesLength;
+        public static float Listing_XenobiologisLengthImperial => mod.Length(ShowXB && ShowRaces && ShowImperial, 1, lineheight, 8, ShowRaces ? 1 : 0) + Listing_XenobiologisLengthImperialOptions + (AdeptusIntergrationUtility.enabled_AdeptusAstartes && ShowXB && ShowRaces && ShowImperial && settings.AllowAdeptusAstartes ? Listing_XenobiologisLengthIAstartes : 0);
+        public static float Listing_XenobiologisLengthImperialOptions => mod.Length(ShowXB && ShowRaces && ShowImperial, 2, lineheight, 0, 0);
+        public static float Listing_XenobiologisLengthIAstartes => AdeptusIntergrationUtility.enabled_AdeptusAstartes ? mod.Length((ShowXB && ShowRaces && ShowImperial) || !AdeptusIntergrationUtility.enabled_MagosXenobiologis && AllowAstartes && ShowAstartes, 1, lineheight, 8, (ShowXB && ShowRaces && ShowImperial) || !AdeptusIntergrationUtility.enabled_MagosXenobiologis && AllowAstartes ? 1 : 0) + Listing_XenobiologisLengthIAstartesOptions : 0f;
+        public static float Listing_XenobiologisLengthIAstartesOptions => AdeptusIntergrationUtility.enabled_AdeptusAstartes ? mod.Length(((ShowXB && ShowRaces && ShowImperial) || !AdeptusIntergrationUtility.enabled_MagosXenobiologis) && AllowAstartes && ShowAstartes, 2, lineheight, 42, 0) : 0;
 
         private static float raceMenuInc = 0;
         private static float raceMenu = 0;
@@ -55,18 +55,18 @@ namespace AdeptusMechanicus.HarmonyInstance
         private static float raceMenuNecron = 0;
         private static float raceMenuTyranid = 0;
         [HarmonyPrefix]
-        public static void XenobiologisSettings_Prefix(ref AMAMod __instance, ref Listing_StandardExpanding listing_Main, Rect rect, ref Rect inRect, float num, float xenobiologisMenuLenght)
+        public static void XenobiologisSettings_Prefix(ref Listing_StandardExpanding listing_Main,ref Rect inRect)
         {
             // Armoury Mod Options
             //    listing_Menu = listing_Main.BeginSection(listing_ArmouryLength, false, 3, 4, 0); 
-            if (showXB)
+            if (ShowXB)
             {
                 listing_Menu.maxOneColumn = true;
-                listing_Menu = listing_Main.BeginSection(listing_XenobiologisLength + mod.XenobiologisMenuInc + raceMenuInc, false, 0, 4, 0);
+                listing_Menu = listing_Main.BeginSection(Listing_XenobiologisLength + mod.XenobiologisMenuInc + raceMenuInc, false, 0, 4, 0);
                 // Xenobiologis Mod Options
 
                 {
-                    listing_General = listing_Menu.BeginSection(listing_BaseOptionsLength, true, 3, 4, 4);
+                    listing_General = listing_Menu.BeginSection(Listing_BaseOptionsLength, true, 3, 4, 4);
                     listing_General.ColumnWidth *= 0.488f;
                     listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.ForceRelations".Translate(), ref settings.ForceRelations, "AdeptusMechanicus.Xenobiologis.ForceRelationsDesc".Translate());
                     listing_General.NewColumn();
@@ -74,7 +74,7 @@ namespace AdeptusMechanicus.HarmonyInstance
                     listing_Menu.EndSection(listing_General);
                 }
 
-                listing_Races = listing_Menu.BeginSection(listing_RacesLength + raceMenuInc, out Rect frane, out Rect contents, false, 3, 4, 4);
+                listing_Races = listing_Menu.BeginSection(Listing_RacesLength + raceMenuInc, out Rect _frame, out Rect _contents, false, 3, 4, 4);
                 //   Log.Message(listing_Menu.listingRect.height + " " + listing_Menu.CurHeight + " " + listing_Menu.MaxColumnHeightSeen);
                 string labelR = "AdeptusMechanicus.Xenobiologis.AllowedRaces".Translate() + " Settings";
                 string tooltipR = "AdeptusMechanicus.ShowSpecialRulesDesc".Translate();

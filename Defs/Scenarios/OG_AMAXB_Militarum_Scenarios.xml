@@ -4,8 +4,8 @@
 <ScenarioDef>
 	<defName>OGAM_Scenario_Militarum_Crashlanded</defName>
 	<label>Imperial Guard</label>	
-		<description>basic start for testing a race</description>
-		<scenario>
+	<description>basic start for testing a race</description>
+	<scenario>
 		<summary>Establish an outpost</summary>
 		<playerFaction>
 			<def>PlayerFaction</def>
@@ -147,6 +147,11 @@
 				<method>DropPods</method>
 				<DropshipDef>OGI_Dropship_Valkyrie</DropshipDef>
 			</li>
+			<!--li Class="ScenPart_StartingThing_Defined">
+				<def>StartingThing_Defined</def>
+				<thingDef>OGI_Dropship_Valkyrie</thingDef>
+				<count>1</count>
+			</li-->
 			<li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
 				<thingDef>Silver</thingDef>

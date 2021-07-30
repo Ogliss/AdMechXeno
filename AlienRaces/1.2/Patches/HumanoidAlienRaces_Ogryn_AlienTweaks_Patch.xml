@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Humanoid Alien Races 2.0 -->
+		<Operation Class="PatchOperationSequence">
+			<operations>
+			<!-- Human Subraces -->
+			<!-- Ogryn. -->
+			<li Class="PatchOperationAdd">
+				<xpath>Defs/AlienRace.ThingDef_AlienRace[defName="OG_Abhuman_Ogryn"]/alienRace</xpath>
+				<value>
+					<hairSettings>
+						<hasHair>false</hasHair>
+					</hairSettings>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

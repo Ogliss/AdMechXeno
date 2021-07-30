@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ============================== Big threats ============================== -->
+	<IncidentDef>
+		<defName>OG_Tyranid_Infestation</defName>
+		<label>tyranid infestation</label>
+		<targetTags>
+			<li>Map_PlayerHome</li>
+		</targetTags>
+		<workerClass>ExtraHives.IncidentWorker_Infestation</workerClass>
+		<letterLabel>Tyranid Infestation</letterLabel>
+		<letterText>Tyranid forces can be heard tunnelling their way through the stonework and dirt. In search of more bio-mass from this planet, they have found your colony and are now tunnelling towards it to acquire more biomass. They shall be upon you in seconds.\n\nThe Tyranids shall not halt their assault until the nests are all destroyed.\n\nIf you do not wish to be overrun by the Tyranid invasion. Destroy the nests, But be warned they shall defend their nests along with their accumulated biomass.</letterText>
+		<letterDef>ThreatBig</letterDef>
+		<baseChance>2.7</baseChance>
+		<minRefireDays>20</minRefireDays>
+		<category>ThreatBig</category>
+		<pointsScaleable>true</pointsScaleable>
+		<minThreatPoints>4000</minThreatPoints>
+		<tale>Infestation</tale>
+		<mechClusterBuilding>OG_Tyranid_TunnelEntrance</mechClusterBuilding>
+		<tags><li>TunnelLike</li></tags>
+		<!--
+		<Faction>OG_Chaos_Deamon_Faction</Faction>
+		<hiveDef>HiveLike</hiveDef>
+		<tunnlerDef>TunnelHiveLikeSpawner</tunnlerDef>
+		<PawnKinds>
+		<li>Infestation</li>
+		</PawnKinds>
+		-->
+	</IncidentDef>
+
+</Defs>

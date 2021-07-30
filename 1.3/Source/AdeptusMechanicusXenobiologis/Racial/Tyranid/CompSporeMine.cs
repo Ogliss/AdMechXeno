@@ -33,7 +33,6 @@ namespace AdeptusMechanicus
 			{
 				yield return text;
 			}
-			IEnumerator<string> enumerator = null;
 			if (parentDef.tickerType != TickerType.Normal)
 			{
 				yield return "CompExplosive requires Normal ticker type";
@@ -224,19 +223,18 @@ namespace AdeptusMechanicus
 			}
 			else
 			{
-				Pawn wearer = parent as Pawn;
-				if (wearer!=null)
-				{
-					Thing thing = wearer.mindState.enemyTarget;
-					if (thing != null)
-					{
-						if (thing.Position.DistanceTo(wearer.Position) < (float)(Props.explosiveRadius * 0.75f))
-						{
-							this.Detonate(this.parent.MapHeld, false);
-						}
-					}
-				}
-			}
+                if (parent is Pawn wearer)
+                {
+                    Thing thing = wearer.mindState.enemyTarget;
+                    if (thing != null)
+                    {
+                        if (thing.Position.DistanceTo(wearer.Position) < (float)(Props.explosiveRadius * 0.75f))
+                        {
+                            this.Detonate(this.parent.MapHeld, false);
+                        }
+                    }
+                }
+            }
 		}
 
 		// Token: 0x06005110 RID: 20752 RVA: 0x001B3370 File Offset: 0x001B1570
@@ -388,7 +386,7 @@ namespace AdeptusMechanicus
 			this.wickStarted = false;
 			if (map == null)
 			{
-				Log.Warning("Tried to detonate CompExplosive in a null map.", false);
+				Log.Warning("Tried to detonate CompExplosive in a null map.");
 				return;
 			}
 			/*

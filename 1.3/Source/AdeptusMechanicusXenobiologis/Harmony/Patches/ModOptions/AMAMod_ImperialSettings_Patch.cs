@@ -11,15 +11,12 @@ namespace AdeptusMechanicus.HarmonyInstance
     public static class AMAMod_ImperialSettings_Patch
     {
         private static AMSettings settings = AMAMod.settings;
-        private static AMAMod mod = AMAMod.Instance;
-        private static float lineheight = AMAMod.lineheight;
 
         private static bool Dev => AMAMod.Dev;
-        private static bool showXB => settings.ShowXenobiologisSettings;
-        private static bool showRaces => settings.ShowAllowedRaceSettings && showXB;
-        private static bool setting => showRaces && settings.ShowImperium;
+        private static bool ShowXB => settings.ShowXenobiologisSettings;
+        private static bool ShowRaces => settings.ShowAllowedRaceSettings && ShowXB;
+        private static bool Setting => ShowRaces && settings.ShowImperium;
 
-        private static float options => mod.Length(setting, 2, lineheight, 0, 0);
 
         public static float MainMenuLength = 0;
         public static float MenuLength = 0;
@@ -30,7 +27,7 @@ namespace AdeptusMechanicus.HarmonyInstance
         public static float MenuLengthInquisition = 0;
         private static float inc = 0;
         [HarmonyPrefix]
-        public static bool ImperialSettings_Prefix(ref AMAMod __instance ,ref Listing_StandardExpanding listing_Main, Rect rect, ref Rect inRect, float num, ref float num2)
+        public static bool ImperialSettings_Prefix(ref AMAMod __instance ,ref Listing_StandardExpanding listing_Main, Rect rect, ref Rect inRect, ref float num2)
         {
             string label = "AdeptusMechanicus.Xenobiologis.ShowImperium".Translate() + " Settings";
             string tooltip = string.Empty;
@@ -39,7 +36,7 @@ namespace AdeptusMechanicus.HarmonyInstance
                 label += " Main Length: " + MainMenuLength + " SubLength: " + MenuLength + " Passed: " + num2 + " Inc: " + inc;
             }
             float w = rect.width * 0.480f;
-            if (showRaces)
+            if (ShowRaces)
             {
                 Listing_StandardExpanding listing_Race = listing_Main.BeginSection(num2 + inc, false, 3, 4, 0);
                 if (listing_Race.CheckboxLabeled(label, ref settings.ShowImperium, Dev, ref inc, tooltip, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex))

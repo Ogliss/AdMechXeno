@@ -17,7 +17,7 @@
     <DebugSymbols>false</DebugSymbols>
     <DebugType>none</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>C:\Program Files (x86)\Steam\steamapps\common\RimWorld\Mods\AdMechXeno\1.1\Assemblies\</OutputPath>
+    <OutputPath>..\..\Assemblies\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -28,7 +28,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>none</DebugType>
     <Optimize>true</Optimize>
-    <OutputPath>bin\Release\</OutputPath>
+    <OutputPath>..\..\Assemblies\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -44,6 +44,7 @@
     <PackageReference Include="Lib.Harmony">
       <Version>2.0.4</Version>
     </PackageReference>
+    <PackageReference Include="RimWorld.MultiplayerAPI" Version="0.3.0" />
     <PackageReference Include="TaskPubliciser">
       <Version>1.0.3</Version>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
@@ -127,22 +128,19 @@
     <Folder Include="Racial\Vespid\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\..\AdMechArmoury\1.1\Source\AdeptusMechanicusMain\AdeptusMechanicusArmoury.csproj">
-      <Project>{2ac73323-b4f2-4592-b3ea-53ac4f8d73a7}</Project>
-      <Name>AdeptusMechanicusArmoury</Name>
-      <Private>False</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
+    <Reference Include="AdeptusMechanicusArmoury">
+      <HintPath>..\..\..\..\AdMechArmoury\1.2\Assemblies\AdeptusMechanicusArmoury.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
     <Reference Include="AlienRace">
       <HintPath>..\..\..\..\..\..\..\workshop\content\294100\839005762\1.2\Assemblies\AlienRace.dll</HintPath>
       <Private>False</Private>
     </Reference>
     <Reference Include="CrashedShipsExtension">
-      <HintPath>..\..\..\..\..\..\..\..\..\..\Users\User\Desktop\OgsTools\ExpandedCrashedShips\bin\Debug\CrashedShipsExtension.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Users\User\Desktop\OgsTools\ExpandedCrashedShips\1.1\bin\Debug\CrashedShipsExtension.dll</HintPath>
     </Reference>
     <Reference Include="ExtraHives">
-      <HintPath>..\..\..\..\..\..\..\..\..\..\Users\User\Desktop\OgsTools\FactionHives\bin\Debug\ExtraHives.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\..\..\Users\User\Desktop\OgsTools\FactionHives\1.1\bin\Debug\ExtraHives.dll</HintPath>
     </Reference>
     <Reference Include="ShipsHaveInsides">
       <HintPath>..\..\..\..\..\..\..\workshop\content\294100\1909914131\1.2\Assemblies\ShipsHaveInsides.dll</HintPath>
@@ -176,6 +174,9 @@
     <ItemGroup>
       <Reference Remove="$(PkgKrafs_Rimworld_Ref)\ref\net472\Assembly-CSharp.dll" />
     </ItemGroup>
+  </Target>
+  <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+    <Exec Command="call &quot;$(ProjectDir)..\Scripts\ModCopy 1.2.bat&quot;&#xD;&#xA;call :REPORT_ERRORLEVEL&#xD;&#xA;goto :EOF&#xD;&#xA;&#xD;&#xA;:REPORT_ERRORLEVEL&#xD;&#xA;echo.&#xD;&#xA;if ERRORLEVEL 16 echo ***FATAL ERROR*** &amp; goto :EOF&#xD;&#xA;if ERRORLEVEL 8 echo **FAILED COPIES** &amp; goto :EOF&#xD;&#xA;if ERRORLEVEL 4 echo *MISMATCHES* &amp; goto :EOF&#xD;&#xA;if ERRORLEVEL 2 echo EXTRA FILES &amp; goto :EOF&#xD;&#xA;if ERRORLEVEL 1 echo Copy successful &amp; goto :EOF&#xD;&#xA;if ERRORLEVEL 0 echo –no change– &amp; goto :EOF" />
   </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

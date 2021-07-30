@@ -9,6 +9,14 @@
 		
 	<FactionDef ParentName="OG_Mechanicus_PlayerColony_Base">
 		<defName>OG_Mechanicus_PlayerColony</defName>
+		<disallowedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<structureMemeWeights Inherit="False">
+			<OG_Imperial_Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</OG_Imperial_Structure_TheistEmbodied>
+		</structureMemeWeights>
 	</FactionDef>
 	
 </Defs>
