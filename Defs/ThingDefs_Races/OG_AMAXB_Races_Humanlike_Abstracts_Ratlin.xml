@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Abstract="True" Name="OG_Ratlin_RaceBase" ParentName="HumanRace">
+		<label>ratling</label>
+		<description>Ratlings (Homo sapiens minimus) are small, loud, hungry and lecherous Abhumans who often serve as snipers in the Astra Militarum, a role at which they excel. Ratlings also serve as cooks for Imperial Guard regiments, a skill they no doubt learned in order to feed their own seemingly bottomless stomachs; and they also have kleptomaniac tendencies, as Commissars report petty theft and illegal gambling rings increase substantially when Ratlings are attached to a platoon, company or regiment.</description>
+		<statBases>
+			<MarketValue>1750</MarketValue>
+			<!--
+			<MoveSpeed>4.6</MoveSpeed>
+			<Flammability>1.0</Flammability>
+			<ComfyTemperatureMin>16</ComfyTemperatureMin>
+			<ComfyTemperatureMax>26</ComfyTemperatureMax>
+			<LeatherAmount>50</LeatherAmount>
+			-->
+		</statBases>
+		<tools>
+		
+		</tools>
+		<race>
+			<useMeatFrom>Human</useMeatFrom>
+			<!--
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>Humanlike</intelligence>
+			<makesFootprints>true</makesFootprints>
+			-->
+			<leatherDef>Leather_Human</leatherDef>
+			<nameCategory>HumanStandard</nameCategory>
+			<lifeExpectancy>80</lifeExpectancy>
+			<body>Human</body>
+			<baseBodySize>0.5</baseBodySize>
+			<baseHealthScale>0.65</baseHealthScale>
+			<foodType>OmnivoreHuman</foodType>
+			<!--
+			<gestationPeriodDays>45</gestationPeriodDays>
+			<meatMarketValue>0.8</meatMarketValue>
+			<manhunterOnDamageChance>0.20</manhunterOnDamageChance>
+			<manhunterOnTameFailChance>0.02</manhunterOnTameFailChance>
+			-->
+			<!--
+			<lifeStageAges>
+				<li>
+					<def>HumanlikeBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>HumanlikeToddler</def>
+					<minAge>1.2</minAge>
+				</li>
+				<li>
+					<def>HumanlikeChild</def>
+					<minAge>4</minAge>
+				</li>
+				<li>
+					<def>HumanlikeTeenager</def>
+					<minAge>13</minAge>
+				</li>
+				<li>
+					<def>HumanlikeAdult</def>
+					<minAge>18</minAge>
+				</li>
+			</lifeStageAges>
+			-->
+			<specialShadowData>
+				<!--
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+				-->
+			</specialShadowData>
+			<ageGenerationCurve>
+			<points>
+				<li>(14,0)</li>
+				<li>(16,100)</li>
+				<li>(50,100)</li>
+				<li>(60,30)</li>
+				<li>(70,18)</li>
+				<li>(80,10)</li>
+				<li>(90,3)</li>
+				<li>(100,0)</li>
+			</points>
+			</ageGenerationCurve>
+			<hediffGiverSets Inherit="false">
+				<li>Human</li>
+				<!--
+				<li>OrganicStandard</li>
+				-->
+			</hediffGiverSets>
+		</race>
+		<recipes>
+		
+		</recipes>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+</Defs>

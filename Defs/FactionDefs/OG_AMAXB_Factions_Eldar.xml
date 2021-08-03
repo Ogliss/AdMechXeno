@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef ParentName="OG_Eldar_Faction_Base">
+		<defName>OG_Eldar_Craftworld_Faction</defName>
+		<label>craftworld eldar strike force</label>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">5</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">76</configurationListOrderPriority>
+		<hairTags IgnoreIfNoMatchingField="True">
+			<li>Punk</li>
+		</hairTags>
+		<!--
+		<startingGoodwill IgnoreIfNoMatchingField="True">
+			<min>0</min>
+			<max>0</max>
+		</startingGoodwill>
+		<naturalColonyGoodwill IgnoreIfNoMatchingField="True">
+			<min>-50</min>
+			<max>50</max>
+		</naturalColonyGoodwill>
+		-->
+	</FactionDef>
+
+</Defs>

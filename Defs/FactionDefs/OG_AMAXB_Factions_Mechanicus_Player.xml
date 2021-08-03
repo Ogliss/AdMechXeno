@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef Abstract="True" Name="OG_Mechanicus_PlayerFaction_Base" ParentName="FactionBase">
+		<colorSpectrum>
+			<li>(0, 0.737, 0.847)</li>
+		</colorSpectrum>
+	</FactionDef>
+		
+	<FactionDef ParentName="OG_Mechanicus_PlayerColony_Base">
+		<defName>OG_Mechanicus_PlayerColony</defName>
+		<allowedCultures IgnoreIfNoMatchingField="True">
+			<li>OG_Imperial_Mechanicus_Spacer</li>
+		</allowedCultures>
+		<disallowedMemes IgnoreIfNoMatchingField="True">
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
+			<OG_Mechanicus_Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</OG_Mechanicus_Structure_Archist>
+		</structureMemeWeights>
+		<hairTags IgnoreIfNoMatchingField="True">
+			<li>Urban</li>
+		</hairTags>
+	</FactionDef>
+	
+</Defs>

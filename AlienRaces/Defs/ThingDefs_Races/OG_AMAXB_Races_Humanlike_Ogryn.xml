@@ -1,0 +1,204 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace Name="OG_Ogryn_Base" ParentName="OG_Ogryn_RaceBase">
+		<defName>OG_Abhuman_Ogryn</defName>
+		<alienRace>
+			<generalSettings>
+				<alienPartGenerator>
+					<useGenderedHeads>false</useGenderedHeads>
+					<aliencrowntypes Inherit="false">
+						<li>Average_Normal</li>
+						<li>Average_Normal1</li>
+						<li>Average_Normal2</li>
+						<li>Average_Normal3</li>
+						<li>Average_Normal4</li>
+					</aliencrowntypes>
+					<headOffset>(0.0, 0.15)</headOffset>
+					<customHeadDrawSize>(1.25, 1.25)</customHeadDrawSize>
+					<!-- <customPortraitHeadDrawSize>(0.7, 0.7)</customPortraitHeadDrawSize> -->
+					<useGenderedBodies>false</useGenderedBodies>
+					<alienbodytypes Inherit="false">
+						<li>Hulk</li>
+					</alienbodytypes>
+					<customDrawSize>(1.75, 1.75)</customDrawSize>
+					<!-- <customPortraitDrawSize>(0.8, 0.8)</customPortraitDrawSize> -->
+					<headOffsetDirectional>
+						<north>(0.0, 0.10)</north>
+						<south>(0.0, -0.10)</south>
+						<east>(0.40, -0.10)</east>
+						<west>(-0.40, -0.10)</west>
+					</headOffsetDirectional>
+					<bodyAddons>
+					</bodyAddons>
+				</alienPartGenerator>
+				<notXenophobistTowards>
+				
+				</notXenophobistTowards>
+				<factionRelations>
+					<li>
+						<factions>
+							 <li>PlayerColony</li>
+							 <li>PlayerTribe</li>
+							 <li>OutlanderCivil</li>
+							 <li>OutlanderRough</li>
+							 <li>TribeCivil</li>
+							 <li>TribeRough</li>
+						</factions>
+						<goodwill>
+							 <min>-100</min>
+							 <max>50</max>
+						</goodwill>
+					</li>
+					<li>
+						<factions>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Tau_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Tau_PlayerColony</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Kroot_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Kroot_PlayerColony</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Kroot_PlayerTribe</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Vespid_Faction</li>
+							 <!--li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Vespid_PlayerColony</li-->
+							 <!--li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Vespid_PlayerTribe</li-->
+						</factions>
+						<goodwill>
+							 <min>-100</min>
+							 <max>10</max>
+						</goodwill>
+					</li>
+					<li>
+						<factions>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">OG_Eldar_Craftworld_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">OG_Eldar_Craftworld_PlayerColony</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.EldarExodite">OG_Eldar_Exodite_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.EldarExodite">OG_Eldar_Player_Exodite</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.EldarHarlequin">OG_Eldar_Harlequin_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.EldarHarlequin">OG_Eldar_Player_Harlequin</li>
+						</factions>
+						<goodwill>
+							 <min>-100</min>
+							 <max>25</max>
+						</goodwill>
+					</li>
+					<li>
+						<factions>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_PlayerColony</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_Cadian_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_Cadian_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_PlayerColony</li>
+							 <li MayRequire="Ogliss.AdMech.Astartes">OG_Astartes_PlayerColony</li>
+							 <li MayRequire="Ogliss.AdMech.Astartes">OG_AstartesNeophyte_PlayerColony</li>
+							 <li MayRequire="CptOhu.CorruptionCore">PlayerColony_IoM</li>
+						</factions>
+						<goodwill>
+							 <min>-10</min>
+							 <max>100</max>
+						</goodwill>
+					</li>
+					<li>
+						<factions>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Tek_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Feral_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_PlayerColony</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_PlayerTribe</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Hulk</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Rok</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.DarkEldar">OG_DarkEldar_Kabal_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.DarkEldar">OG_DarkEldar_Kabal_PlayerColony</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Necrons">OG_Necron_PlayerColony</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Necrons">OG_Necron_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tyranids">OG_Tyranid_PlayerColony</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Tyranids">OG_Tyranid_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Necron_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Tyranid_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Chaos_Deamon_Faction</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Ork_Hulk</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Ork_Rok</li>
+							 <li MayRequire="CptOhu.CorruptionCore">PlayerColony_Chaos</li>
+							 <li MayRequire="QX.AstraMilitarum.Factions">IG_ChaosMarineFaction</li>
+							 <li MayRequire="QX.AstraMilitarum.Factions">TraitorGuardFaction</li>
+							 <li MayRequire="QX.AstraMilitarum.Factions">TyranidFaction</li>
+						</factions>
+						<goodwill>
+							 <min>-100</min>
+							 <max>-100</max>
+						</goodwill>
+					</li>
+				</factionRelations>
+			</generalSettings>
+			<hairSettings IgnoreIfNoMatchingField="True">
+				<hasHair>false</hasHair>
+			</hairSettings>
+			<styleSettings IgnoreIfNoMatchingField="True">
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+						<!--getsGreyAt>200</getsGreyAt--> 
+						<styleTags>
+							<!--li>OgrynHair</li-->
+						</styleTags>
+					</value>
+				</li>
+			</styleSettings>
+			<graphicPaths Inherit="false">
+				<li>
+					<body>Things/Pawn/Humanlike/Ogryn/Bodies/</body>
+					<head>Things/Pawn/Humanlike/Ogryn/Heads/</head>
+				</li>
+			</graphicPaths>
+			<thoughtSettings>
+				<cannotReceiveThoughts>
+				</cannotReceiveThoughts>
+				<canStillReceiveThoughts>
+				</canStillReceiveThoughts>
+			</thoughtSettings>
+			<relationSettings>
+				<renamer>
+				</renamer>
+			</relationSettings>
+			<raceRestriction>
+				<researchList>
+					<li>
+						<projects>
+						</projects>
+						<apparelList>
+						</apparelList>
+					</li>
+				</researchList>
+				<apparelList>
+				</apparelList>
+				<whiteApparelList>
+				</whiteApparelList>
+				<weaponList>
+				</weaponList>
+				<whiteWeaponList>
+				</whiteWeaponList>
+				<buildingList>
+				</buildingList>
+				<whiteBuildingList>
+				</whiteBuildingList>
+				<recipeList>
+				</recipeList>
+				<plantList>
+				</plantList>
+				<whitePlantList>
+				</whitePlantList>
+				<traitList>
+				</traitList>
+				<whiteTraitList>
+				</whiteTraitList>
+				<foodList>
+				</foodList>
+				<petList>
+				</petList>
+				<conceptList>
+				</conceptList>
+				<workGiverList>
+				</workGiverList>
+			</raceRestriction>
+		</alienRace>
+	</AlienRace.ThingDef_AlienRace>
+
+</Defs>

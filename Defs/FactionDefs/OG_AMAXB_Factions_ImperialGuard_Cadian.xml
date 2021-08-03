@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef ParentName="OG_Militarum_Cadian_Faction_Base">
+		<defName>OG_Militarum_Cadian_Faction</defName>
+		<allowedCultures IgnoreIfNoMatchingField="True">
+			<li>OG_Imperial_Militarum_Spacer</li>
+		</allowedCultures>
+		<disallowedMemes IgnoreIfNoMatchingField="True">
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+		</requiredMemes>
+		<structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
+			<OG_Imperial_Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</OG_Imperial_Structure_TheistEmbodied>
+		</structureMemeWeights>
+		<pawnNameMaker IgnoreIfNoMatchingField="True">OG_Militarum_NamerPerson</pawnNameMaker>
+		<pawnNameMakerFemale IgnoreIfNoMatchingField="True">OG_Militarum_NamerPersonFemale</pawnNameMakerFemale>
+		<naturalColonyGoodwill IgnoreIfNoMatchingField="True">
+			<min>-60</min>
+			<max>0</max>
+		</naturalColonyGoodwill>
+		<startingGoodwill IgnoreIfNoMatchingField="True">
+			<min>10</min>
+			<max>40</max>
+		</startingGoodwill>
+		<hairTags IgnoreIfNoMatchingField="True">
+			<li>Urban</li>
+			<li>Rural</li>
+		</hairTags>
+	</FactionDef>
+
+</Defs>

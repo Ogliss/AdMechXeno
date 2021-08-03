@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Orkz -->
+	<!-- Ork Faction Leader -->	
+	<PawnKindDef ParentName="TekOrkBase">
+		<defName>OG_Ork_Faction_Warboss</defName>
+		<label>big warboss</label>
+		<race>Human</race>
+		<combatPower>12500</combatPower>
+		<itemQuality>Superior</itemQuality>
+		<factionLeader>true</factionLeader>
+		<initialWillRange IgnoreIfNoMatchingField="True">3~5</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">17~27</initialResistanceRange>
+		<weaponTags>
+			<li>OBigShoota</li>
+			<li>OZappKannon</li>
+			<li>OPlasmaDeffgun</li>
+		</weaponTags>
+		<weaponMoney>
+			<min>4000</min>
+			<max>9000</max>
+		</weaponMoney>
+	</PawnKindDef>
+
+</Defs>

@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!--FactionDef ParentName="OG_Sororitas_Faction_Base">
+		<defName>OG_Sororitas_Faction</defName>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">90</configurationListOrderPriority>
+		<allowedCultures IgnoreIfNoMatchingField="True">
+			<li>OG_Imperial_Sororitas_Spacer</li>
+		</allowedCultures>
+		<disallowedMemes IgnoreIfNoMatchingField="True">
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
+			<OG_Mechanicus_Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</OG_Mechanicus_Structure_Archist>
+		</structureMemeWeights>
+		<naturalColonyGoodwill IgnoreIfNoMatchingField="True">
+			<min>-60</min>
+			<max>0</max>
+		</naturalColonyGoodwill>
+		<startingGoodwill IgnoreIfNoMatchingField="True">
+			<min>10</min>
+			<max>40</max>
+		</startingGoodwill>
+		<hairTags IgnoreIfNoMatchingField="True">
+			<li>Urban</li>
+			<li>Rural</li>
+		</hairTags>
+	</FactionDef-->
+	
+</Defs>

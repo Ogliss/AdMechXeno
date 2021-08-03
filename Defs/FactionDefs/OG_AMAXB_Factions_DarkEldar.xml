@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef ParentName="OG_DarkEldar_Kabal_Faction_Base">
+		<defName>OG_DarkEldar_Kabal_Faction</defName>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">5</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">76</configurationListOrderPriority>
+		<hairTags IgnoreIfNoMatchingField="True">
+			<li>Punk</li>
+		</hairTags>
+	</FactionDef>
+
+</Defs>

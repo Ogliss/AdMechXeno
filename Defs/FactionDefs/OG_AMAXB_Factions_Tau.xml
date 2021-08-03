@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef ParentName="OG_Tau_Faction_Base">
+		<defName>OG_Tau_Faction</defName>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">90</configurationListOrderPriority>
+		<allowedCultures IgnoreIfNoMatchingField="True"><li>OG_Tau_GreaterGood</li></allowedCultures>
+		<disallowedMemes IgnoreIfNoMatchingField="True">
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<structureMemeWeights IgnoreIfNoMatchingField="True">
+			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+			<Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+		</structureMemeWeights>
+		<hairTags IgnoreIfNoMatchingField="True">
+			<li>Punk</li>
+		</hairTags>
+	</FactionDef>
+	
+</Defs>

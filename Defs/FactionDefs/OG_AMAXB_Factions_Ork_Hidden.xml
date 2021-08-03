@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef ParentName="OG_Ork_Hidden_Faction_Base">
+		<defName>OG_Ork_Hulk</defName>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">85</configurationListOrderPriority>
+		<hairTags IgnoreIfNoMatchingField="True">
+			<li>Punk</li>
+		</hairTags>
+	</FactionDef>
+
+	<FactionDef ParentName="OG_Ork_Hidden_Faction_Base">
+		<defName>OG_Ork_Rok</defName>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">85</configurationListOrderPriority>
+		<hairTags IgnoreIfNoMatchingField="True">
+			<li>Punk</li>
+		</hairTags>
+	</FactionDef>
+	
+</Defs>

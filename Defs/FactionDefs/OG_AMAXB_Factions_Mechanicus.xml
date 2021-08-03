@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef ParentName="OG_Mechanicus_Faction_Base">
+		<defName>OG_Mechanicus_Faction</defName>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">20</configurationListOrderPriority>
+	</FactionDef>
+	
+</Defs>
