@@ -11,7 +11,7 @@
 			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
 		</disallowedMemes>
-		<requiredMemes>
+		<requiredMemes IgnoreIfNoMatchingField="True">
 			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
 		</requiredMemes>
