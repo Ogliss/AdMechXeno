@@ -21,14 +21,14 @@
 			</alienrefugeekinds>
 			<startingColonists>
 				<li>
-				<pawnKindEntries>
-					<li>
-						<kindDefs>
-							<li>Colonist_OG_Mechanicus</li>
-						</kindDefs>
-						<chance>10.0</chance>
-					</li>
-				</pawnKindEntries>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>Colonist_OG_Mechanicus</li>
+							</kindDefs>
+							<chance>10.0</chance>
+						</li>
+					</pawnKindEntries>
 					<factionDefs>
 						<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_Faction</li>
 						<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_PlayerColony</li>
@@ -39,21 +39,41 @@
 						<li MayRequire="CptOhu.CorruptionCore">PlayerColony_IoM</li> 
 					</factionDefs>
 				</li>
-			</startingColonists>
-			<alienwandererkinds>
-				<!--li>
+				<li>
 					<pawnKindEntries>
 						<li>
 							<kindDefs>
-								<li>Colonist_OG_Eldar_Craftworld</li>
+								<li>Colonist_OG_Mechanicus</li>
 							</kindDefs>
-							<chance>50.0</chance>
+							<chance>100.0</chance>
 						</li>
 					</pawnKindEntries>
 					<factionDefs>
-						<li>OG_Eldar_Craftworld_PlayerColony</li> 
+						<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_Faction</li>
+						<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_PlayerColony</li>
 					</factionDefs>
-				</li-->
+				</li>
+			</startingColonists>
+			<alienwandererkinds>
+				<li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>Colonist_OG_Mechanicus</li>
+							</kindDefs>
+							<chance>10.0</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_Faction</li>
+						<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_PlayerColony</li>
+						<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_PlayerColony</li>
+						<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_Cadian_Faction</li>
+						<li MayRequire="Ogliss.AdMech.Astartes">OG_Astartes_PlayerColony</li>
+						<li MayRequire="Ogliss.AdMech.Astartes">OG_AstartesNeophyte_PlayerColony</li>
+						<li MayRequire="CptOhu.CorruptionCore">PlayerColony_IoM</li> 
+					</factionDefs>
+				</li>
 			</alienwandererkinds>
 		</pawnKindSettings>
 	</AlienRace.RaceSettings>

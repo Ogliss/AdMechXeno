@@ -30,7 +30,7 @@ namespace AdeptusMechanicus
                     faction = f;
                     factionDef = faction.def;
                     factionRace = factionDef.basicMemberKind?.race;
-                    if (factionDef.basicMemberKind == null)
+                    if (factionDef.basicMemberKind == null && !f.HasGoodwill)
                     {
                     //    Log.Message(string.Format("basicMemberKind: Missing, checking PGM for {0} def: {1}", f, factionDef));
                         if (!factionDef.pawnGroupMakers.NullOrEmpty())
