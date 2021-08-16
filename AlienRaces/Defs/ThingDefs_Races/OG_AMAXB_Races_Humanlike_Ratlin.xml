@@ -98,8 +98,7 @@
 							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Feral_Faction</li>
 							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_PlayerColony</li>
 							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_PlayerTribe</li>
-							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Hulk</li>
-							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Rok</li>
+							 <li MayRequire="Ogliss.AdMech.Xenobiologis,Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Waaagh</li>
 							 <li MayRequire="Ogliss.AdMech.Xenobiologis.DarkEldar">OG_DarkEldar_Kabal_Faction</li>
 							 <li MayRequire="Ogliss.AdMech.Xenobiologis.DarkEldar">OG_DarkEldar_Kabal_PlayerColony</li>
 							 <li MayRequire="Ogliss.AdMech.Xenobiologis.Necrons">OG_Necron_PlayerColony</li>
@@ -109,8 +108,6 @@
 							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Necron_Faction</li>
 							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Tyranid_Faction</li>
 							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Chaos_Deamon_Faction</li>
-							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Ork_Hulk</li>
-							 <li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Ork_Rok</li>
 							 <li MayRequire="CptOhu.CorruptionCore">PlayerColony_Chaos</li>
 							 <li MayRequire="QX.AstraMilitarum.Factions">IG_ChaosMarineFaction</li>
 							 <li MayRequire="QX.AstraMilitarum.Factions">TraitorGuardFaction</li>

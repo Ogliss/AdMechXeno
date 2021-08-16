@@ -147,7 +147,7 @@
       <Private>False</Private>
     </Reference>
     <Reference Include="TheEndTimes">
-      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2008718043\Assemblies\TheEndTimes.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\workshop\content\294100\2008718043\1.2\Assemblies\TheEndTimes.dll</HintPath>
       <Private>False</Private>
     </Reference>
   </ItemGroup>

@@ -18,7 +18,7 @@
 	<comps>
 		<li Class="CrashedShipsExtension.CompProperties_SpawnerOnDamaged">
 		<Factions>
-			<li>OG_Ork_Hulk</li>
+			<li>OG_Ork_Waaagh</li>
 			<li>OG_Tyranid_Faction</li>
 			<li>OG_Chaos_Deamon_Faction</li>
 			<li>Pirate</li>
