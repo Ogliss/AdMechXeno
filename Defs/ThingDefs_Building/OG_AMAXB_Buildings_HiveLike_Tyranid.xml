@@ -1,128 +1,128 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-<ThingDef ParentName="BuildingNaturalBase">
-	<defName>OG_Tyranid_TunnelEntrance</defName>
-	<label>tunnel entrance</label>
-	<description>The entrance to a tunnel that appears to be of Xenos origin. If activate, it will spawn additional Xenos and tunnels over time.</description>
-	<thingClass>ExtraHives.Hive</thingClass>
-	<graphicData>
-		<texPath>Things/Special/TunnelExit</texPath>
-		<graphicClass>Graphic_Single</graphicClass>
-		<shaderType>TransparentPostLight</shaderType>
-		<drawSize>2.6</drawSize>
-		<damageData>
-		<rect>(0.1,0.1,1.8,1.8)</rect>
-		</damageData>
-	</graphicData>
-	<size>(1,1)</size>
-	<uiIconScale>0.65</uiIconScale>
-	<altitudeLayer>Building</altitudeLayer>
-	<rotatable>false</rotatable>
-	<fillPercent>0.5</fillPercent>
-	<statBases>
-		<MaxHitPoints>130</MaxHitPoints>
-		<Flammability>1.0</Flammability>
-	</statBases>
-	<pathCost>50</pathCost>
-	<receivesSignals>true</receivesSignals>
-	<blockWind>true</blockWind>
-	<tickerType>Normal</tickerType>
-	<passability>PassThroughOnly</passability>
-	<killedLeavings>
-		<!--InsectJelly>30</InsectJelly-->
-	</killedLeavings>
-	<modExtensions>
-		<li Class="ExtraHives.HiveDefExtension">
-			<Faction>OG_Tyranid_Faction</Faction>
-			<TunnelDef>OG_Tyranid_Tunnel</TunnelDef>
-			<mustBeNearColony>true</mustBeNearColony>
-			<requiresRoofed>false</requiresRoofed>
-			<mustBeThickRoof>false</mustBeThickRoof>
-			<maxTemp>200</maxTemp>
-			<minTemp>-200</minTemp>
-			<minMountainouseness>0</minMountainouseness>
-		</li>
-	</modExtensions>
-	<comps>
-		<li Class="CompProperties_CanBeDormant">
-		<startsDormant>true</startsDormant>
-		<canWakeUpFogged>false</canWakeUpFogged>
-		</li>
-		<li Class="CompProperties_WakeUpDormant" />
-		<li Class="ExtraHives.CompProperties_SpawnerPawn">
-		<spawnablePawnKinds>
-			<!--BETA_SoldierClass>1000</BETA_SoldierClass>
-			<BETA_WarriorClass>1000</BETA_WarriorClass>
-			<BETA_TankClass>800</BETA_TankClass>
-			<BETA_LaserClass>100</BETA_LaserClass>
-			<BETA_GrapplerClass>500</BETA_GrapplerClass>
-			<BETA_DestroyerClass>20</BETA_DestroyerClass>
-			<BETA_FortClass>1</BETA_FortClass>
-			<BETA_HeavyLaserClass>25</BETA_HeavyLaserClass-->
-		</spawnablePawnKinds>
-		<!--AlwaysSpawnWith>
-			<li>BETA_GrapplerClass</li>
-			<li>BETA_LaserClass</li>
-		</AlwaysSpawnWith-->
-		<!--
-		<lordJob>LordJob_DefendAndExpandHive</lordJob>
-		-->
-		<lordJob>ExtraHives.LordJob_DefendAndExpandHive</lordJob>
-		<spawnSound>Hive_Spawn</spawnSound>
-		<showNextSpawnInInspect>false</showNextSpawnInInspect>
-		<initialPawnsPoints>250</initialPawnsPoints>
-		<maxSpawnedPawnsPoints>5500</maxSpawnedPawnsPoints>
-		</li>
-		<li Class="CompProperties_SelfhealHitpoints">
-		<ticksPerHeal>6000</ticksPerHeal> <!-- 60k ticks = 1 day, 10 hp per day -->
-		</li>
-		<li Class="ExtraHives.CompProperties_SpawnerHives" />
-		<!--li Class="CompProperties_Spawner">
-		<thingToSpawn>InsectJelly</thingToSpawn>
-		<spawnCount>20</spawnCount>
-		<spawnIntervalRange>26000~30000</spawnIntervalRange>
-		<spawnMaxAdjacent>40</spawnMaxAdjacent>
-		<spawnForbidden>true</spawnForbidden>
-		<saveKeysPrefix>jelly</saveKeysPrefix>
-		</li-->
-		<!--li Class="CompProperties_Spawner">
-		<thingToSpawn>GlowPod</thingToSpawn>
-		<spawnCount>1</spawnCount>
-		<spawnIntervalRange>30000~60000</spawnIntervalRange>
-		<spawnMaxAdjacent>1</spawnMaxAdjacent>
-		<saveKeysPrefix>pod</saveKeysPrefix>
-		<inheritFaction>true</inheritFaction>
-		</li-->
-		<li Class="CompProperties_HeatPusher">
-		<heatPerSecond>6</heatPerSecond>
-		<heatPushMaxTemperature>38</heatPushMaxTemperature>
-		</li>
-		<li Class="CompProperties_SpawnerFilth">
-		<filthDef>Filth_Slime</filthDef>
-		<spawnCountOnSpawn>10</spawnCountOnSpawn>
-		<spawnMtbHours>4</spawnMtbHours>
-		<spawnRadius>5</spawnRadius>
-		</li>
-		<!--li Class="CompProperties_Maintainable">
-		<ticksHealthy>60000</ticksHealthy>
-		<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
-		<damagePerTickRare>10</damagePerTickRare>
-		</li-->
-	</comps>
-</ThingDef>
+	<ThingDef ParentName="BuildingNaturalBase">
+		<defName>OG_Tyranid_TunnelEntrance</defName>
+		<label>tunnel entrance</label>
+		<description>The entrance to a tunnel that appears to be of Xenos origin. If activate, it will spawn additional Xenos and tunnels over time.</description>
+		<thingClass>ExtraHives.Hive</thingClass>
+		<graphicData>
+			<texPath>Things/Special/TunnelExit</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>TransparentPostLight</shaderType>
+			<drawSize>2.6</drawSize>
+			<damageData>
+				<rect>(0.1,0.1,1.8,1.8)</rect>
+			</damageData>
+		</graphicData>
+		<size>(1,1)</size>
+		<uiIconScale>0.65</uiIconScale>
+		<altitudeLayer>Building</altitudeLayer>
+		<rotatable>false</rotatable>
+		<fillPercent>0.5</fillPercent>
+		<statBases>
+			<MaxHitPoints>130</MaxHitPoints>
+			<Flammability>1.0</Flammability>
+		</statBases>
+		<pathCost>50</pathCost>
+		<receivesSignals>true</receivesSignals>
+		<blockWind>true</blockWind>
+		<tickerType>Normal</tickerType>
+		<passability>PassThroughOnly</passability>
+		<killedLeavings>
+			<!--InsectJelly>30</InsectJelly-->
+		</killedLeavings>
+		<modExtensions>
+			<li Class="ExtraHives.HiveDefExtension">
+				<Faction>OG_Tyranid_Faction</Faction>
+				<TunnelDef>OG_Tyranid_Tunnel</TunnelDef>
+				<mustBeNearColony>true</mustBeNearColony>
+				<requiresRoofed>false</requiresRoofed>
+				<mustBeThickRoof>false</mustBeThickRoof>
+				<maxTemp>200</maxTemp>
+				<minTemp>-200</minTemp>
+				<minMountainouseness>0</minMountainouseness>
+			</li>
+		</modExtensions>
+		<comps>
+			<li Class="CompProperties_CanBeDormant">
+				<startsDormant>true</startsDormant>
+				<canWakeUpFogged>false</canWakeUpFogged>
+			</li>
+			<li Class="CompProperties_WakeUpDormant" />
+			<li Class="ExtraHives.CompProperties_SpawnerPawn">
+				<spawnablePawnKinds>
+					<!--BETA_SoldierClass>1000</BETA_SoldierClass>
+					<BETA_WarriorClass>1000</BETA_WarriorClass>
+					<BETA_TankClass>800</BETA_TankClass>
+					<BETA_LaserClass>100</BETA_LaserClass>
+					<BETA_GrapplerClass>500</BETA_GrapplerClass>
+					<BETA_DestroyerClass>20</BETA_DestroyerClass>
+					<BETA_FortClass>1</BETA_FortClass>
+					<BETA_HeavyLaserClass>25</BETA_HeavyLaserClass-->
+				</spawnablePawnKinds>
+				<!--AlwaysSpawnWith>
+					<li>BETA_GrapplerClass</li>
+					<li>BETA_LaserClass</li>
+				</AlwaysSpawnWith-->
+				<!--
+				<lordJob>LordJob_DefendAndExpandHive</lordJob>
+				-->
+				<lordJob>ExtraHives.LordJob_DefendAndExpandHive</lordJob>
+				<spawnSound>Hive_Spawn</spawnSound>
+				<showNextSpawnInInspect>false</showNextSpawnInInspect>
+				<initialPawnsPoints>250</initialPawnsPoints>
+				<maxSpawnedPawnsPoints>5500</maxSpawnedPawnsPoints>
+			</li>
+			<li Class="CompProperties_SelfhealHitpoints">
+				<ticksPerHeal>6000</ticksPerHeal> <!-- 60k ticks = 1 day, 10 hp per day -->
+			</li>
+			<li Class="ExtraHives.CompProperties_SpawnerHives" />
+			<!--li Class="CompProperties_Spawner">
+				<thingToSpawn>InsectJelly</thingToSpawn>
+				<spawnCount>20</spawnCount>
+				<spawnIntervalRange>26000~30000</spawnIntervalRange>
+				<spawnMaxAdjacent>40</spawnMaxAdjacent>
+				<spawnForbidden>true</spawnForbidden>
+				<saveKeysPrefix>jelly</saveKeysPrefix>
+				</li-->
+				<!--li Class="CompProperties_Spawner">
+				<thingToSpawn>GlowPod</thingToSpawn>
+				<spawnCount>1</spawnCount>
+				<spawnIntervalRange>30000~60000</spawnIntervalRange>
+				<spawnMaxAdjacent>1</spawnMaxAdjacent>
+				<saveKeysPrefix>pod</saveKeysPrefix>
+				<inheritFaction>true</inheritFaction>
+			</li-->
+			<li Class="CompProperties_HeatPusher">
+				<heatPerSecond>6</heatPerSecond>
+				<heatPushMaxTemperature>38</heatPushMaxTemperature>
+			</li>
+			<li Class="CompProperties_SpawnerFilth">
+				<filthDef>Filth_Slime</filthDef>
+				<spawnCountOnSpawn>10</spawnCountOnSpawn>
+				<spawnMtbHours>4</spawnMtbHours>
+				<spawnRadius>5</spawnRadius>
+			</li>
+			<!--li Class="CompProperties_Maintainable">
+				<ticksHealthy>60000</ticksHealthy>
+				<ticksNeedsMaintenance>60000</ticksNeedsMaintenance>
+				<damagePerTickRare>10</damagePerTickRare>
+			</li-->
+		</comps>
+	</ThingDef>
 
-<ThingDef ParentName="EtherealThingBase">
-	<defName>OG_Tyranid_Tunnel</defName>
-	<label>tyranid tunnel</label>
-	<thingClass>ExtraHives.TunnelHiveSpawner</thingClass>
-	<modExtensions>
-		<li Class="ExtraHives.TunnelExtension">
-			<Faction>OG_Tyranid_Faction</Faction>
-			<HiveDef>OG_Tyranid_TunnelEntrance</HiveDef>
-		</li>
-	</modExtensions>
-	<tickerType>Normal</tickerType>
-	<drawerType>RealtimeOnly</drawerType>
-	<alwaysFlee>true</alwaysFlee>
-</ThingDef>
+	<ThingDef ParentName="EtherealThingBase">
+		<defName>OG_Tyranid_Tunnel</defName>
+		<label>tyranid tunnel</label>
+		<thingClass>ExtraHives.TunnelHiveSpawner</thingClass>
+		<modExtensions>
+			<li Class="ExtraHives.TunnelExtension">
+				<Faction>OG_Tyranid_Faction</Faction>
+				<HiveDef>OG_Tyranid_TunnelEntrance</HiveDef>
+			</li>
+		</modExtensions>
+		<tickerType>Normal</tickerType>
+		<drawerType>RealtimeOnly</drawerType>
+		<alwaysFlee>true</alwaysFlee>
+	</ThingDef>
 </Defs>

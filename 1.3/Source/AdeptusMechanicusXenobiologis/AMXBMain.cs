@@ -14,13 +14,31 @@ namespace AdeptusMechanicus
         {
             ThingDef thingDef = DefDatabase<ThingDef>.GetNamed("Human");
             AdeptusThingDefOf.OG_Human_Mechanicus.recipes = thingDef.recipes;
-        //    Log.Message(string.Format("adding {0} to Mechanicus_Race", OGAdeptusMechanicusDefOf.OG_Human_Mechanicus.recipes.Count));
+            //    Log.Message(string.Format("adding {0} to Mechanicus_Race", OGAdeptusMechanicusDefOf.OG_Human_Mechanicus.recipes.Count));
             /*
             foreach (var item in ModLister.AllInstalledMods)
             {
             //    log.message(string.Format("{0}", item));
             }
             */
+            if (!AMAMod.settings.AllowTyranid || !AMAMod.settings.AllowTyranidWeapons || !AMAMod.settings.AllowTyranidInfestation)
+            {
+                AdeptusIncidentDefOf.OG_Tyranid_Infestation.baseChance = 0f;
+                AdeptusIncidentDefOf.OG_Tyranid_Infestation.baseChanceWithRoyalty = 0f;
+            }
+            if (!AMAMod.settings.AllowChaosDeamons || !AMAMod.settings.AllowChaosDeamonicInfestation || !AMAMod.settings.AllowChaosDeamonicIncursion)
+            {
+                if (!AMAMod.settings.AllowChaosDeamons || !AMAMod.settings.AllowChaosDeamonicInfestation)
+                {
+                    AdeptusIncidentDefOf.OG_Chaos_Deamon_Daemonic_Infestation.baseChance = 0f;
+                    AdeptusIncidentDefOf.OG_Chaos_Deamon_Daemonic_Infestation.baseChanceWithRoyalty = 0f;
+                }
+                if (!AMAMod.settings.AllowChaosDeamons || !AMAMod.settings.AllowChaosDeamonicIncursion)
+                {
+                    AdeptusIncidentDefOf.OG_Chaos_Deamon_Deamonic_Incursion.baseChance = 0f;
+                    AdeptusIncidentDefOf.OG_Chaos_Deamon_Deamonic_Incursion.baseChanceWithRoyalty = 0f;
+                }
+            }
             if (!AMAMod.settings.AllowEldarWraithguard)
             {
                 FactionDef fd = AdeptusFactionDefOf.OG_Eldar_Craftworld_Faction;
