@@ -594,12 +594,12 @@
 			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
 				<InvunerableSaveChance>0.16</InvunerableSaveChance>
 			</li> 
-			<li Class="AdeptusMechanicus.CompProperties_Floating">
+			<!--li Class="AdeptusMechanicus.CompProperties_Floating">
 				<isFloater>true</isFloater>
 				<canCrossWater>true</canCrossWater>
 				<useZOffset>true</useZOffset>
 				<useShadow>true</useShadow>
-			</li>
+			</li-->
 		</comps>
 	</ThingDef>
 		

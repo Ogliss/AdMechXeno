@@ -14,6 +14,8 @@
 		<basicMemberKind>Colonist_OG_Militarum</basicMemberKind>
 		<requiredCountAtGameStart>0</requiredCountAtGameStart>
 		<settlementGenerationWeight>0</settlementGenerationWeight>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">20</configurationListOrderPriority>
 		<canMakeRandomly>true</canMakeRandomly>
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>

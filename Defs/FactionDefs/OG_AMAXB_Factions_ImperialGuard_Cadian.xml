@@ -11,6 +11,8 @@
 		<basicMemberKind>OG_Militarum_Guardsman_Ranged_Cadian</basicMemberKind>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">20</configurationListOrderPriority>
 		<canMakeRandomly>true</canMakeRandomly>
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
