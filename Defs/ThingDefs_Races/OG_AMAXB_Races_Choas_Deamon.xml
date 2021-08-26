@@ -58,7 +58,7 @@
 			<PainShockThreshold>5</PainShockThreshold>
 		</statBases>
 		<race>
-			<body>Human</body>
+			<body>ChaosDeamon_BipedWithArms</body>
 			<fleshType>OG_Flesh_Chaos_Deamon</fleshType>
 			<bloodDef>OG_FilthBlood_ChaosDeamon</bloodDef>	
 			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
@@ -76,7 +76,7 @@
 	<!-- Walker (Warrior/Immortal/Lord) base -->
 		<ThingDef ParentName="OG_Chaos_Deamon_Base" Name="OG_Chaos_Deamon_Walker" Abstract="True">
 		<race>
-			<deathActionWorkerClass>AdeptusMechanicus.DeathActionWorker_ChaosDeamon</deathActionWorkerClass>
+			<deathActionWorkerClass MayRequire="Ogliss.AdMech.Xenobiologis">AdeptusMechanicus.DeathActionWorker_ChaosDeamon</deathActionWorkerClass>
 			<intelligence>ToolUser</intelligence>
 			<baseBodySize>1.0</baseBodySize>
 			<lifeStageAges>
