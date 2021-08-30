@@ -19,7 +19,7 @@
 			<li Class="AdeptusMechanicus.ScenPart_PlayerPawnsArriveMethod_DropShip">
 				<def>PlayerPawnsArriveMethod</def>
 				<method>DropPods</method>
-				<DropshipDef IfModNotActive="smashphil.neceros.srtsexpanded">OGI_Dropship_Valkyrie</DropshipDef>
+				<DropshipDef>OGI_Dropship_Valkyrie</DropshipDef>
 			</li>
 			<!--li Class="ScenPart_StartingThing_Defined">
 				<def>StartingThing_Defined</def>
