@@ -28,38 +28,37 @@ namespace AdeptusMechanicus.HarmonyInstance
         public static float MenuLength = 0;
         private static float inc = 0;
         [HarmonyPrefix]
-        public static void EldarSettings_Prefix(ref Listing_StandardExpanding listing_Main, ref float num2)
+        public static void DarkEldarSettings_Prefix(ref Listing_StandardExpanding listing_Main, ref float num2)
         {
-            if (AdeptusIntergrationUtility.enabled_XenobiologisEldar)
+            if (!AdeptusIntergrationUtility.enabled_XenobiologisEldar)
             {
-                return;
-            }
-            if (ShowRaces)
-            {
-                string label = "AdeptusMechanicus.Xenobiologis.ShowDarkEldar".Translate() + " Settings";
-                string tooltip = string.Empty;
-                if (Dev)
+                if (ShowRaces)
                 {
-                    label += " Main Length: " + MainMenuLength + " SubLength: " + MenuLength + " Passed: " + num2 + " Inc: " + inc;
-                }
+                    string label = "AdeptusMechanicus.Xenobiologis.ShowDarkEldar".Translate() + " Settings";
+                    string tooltip = string.Empty;
+                    if (Dev)
+                    {
+                        label += " Main Length: " + MainMenuLength + " SubLength: " + MenuLength + " Passed: " + num2 + " Inc: " + inc;
+                    }
 
-                Listing_StandardExpanding listing_Race = listing_Main.BeginSection((num2 != 0 ? num2 : RaceSettings) + inc, false, 3, 4, 0);
-                if (listing_Race.CheckboxLabeled(label, ref Settings.ShowDarkEldar, Dev, ref inc, tooltip, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex))
-                {
-                    Listing_StandardExpanding listing_General = listing_Race.BeginSection(MenuLength, true);
-                    listing_General.ColumnWidth *= 0.488f;
-                    listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowDarkEldar".Translate() + (!factionExists ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : !hidden ? "AdeptusMechanicus.Xenobiologis.Faction".Translate() : "AdeptusMechanicus.Xenobiologis.HiddenFaction".Translate()),
-                        ref Settings.AllowDarkEldar,
-                        null,
-                        !factionExists || !Settings.AllowDarkEldarWeapons,
-                        factionExists && Settings.AllowDarkEldarWeapons);
-                    listing_General.NewColumn();
-                    listing_Race.EndSection(listing_General);
-                    MenuLength = listing_General.CurHeight != 0 ? listing_General.CurHeight : listing_General.MaxColumnHeightSeen;
+                    Listing_StandardExpanding listing_Race = listing_Main.BeginSection((num2 != 0 ? num2 : RaceSettings) + inc, false, 3, 4, 0);
+                    if (listing_Race.CheckboxLabeled(label, ref Settings.ShowDarkEldar, Dev, ref inc, tooltip, false, true, ArmouryMain.collapseTex, ArmouryMain.expandTex))
+                    {
+                        Listing_StandardExpanding listing_General = listing_Race.BeginSection(MenuLength, true);
+                        listing_General.ColumnWidth *= 0.488f;
+                        listing_General.CheckboxLabeled("AdeptusMechanicus.Xenobiologis.AllowDarkEldar".Translate() + (!factionExists ? "AdeptusMechanicus.Xenobiologis.NotYetAvailable".Translate() : !hidden ? "AdeptusMechanicus.Xenobiologis.Faction".Translate() : "AdeptusMechanicus.Xenobiologis.HiddenFaction".Translate()),
+                            ref Settings.AllowDarkEldar,
+                            null,
+                            !factionExists || !Settings.AllowDarkEldarWeapons,
+                            factionExists && Settings.AllowDarkEldarWeapons);
+                        listing_General.NewColumn();
+                        listing_Race.EndSection(listing_General);
+                        MenuLength = listing_General.CurHeight != 0 ? listing_General.CurHeight : listing_General.MaxColumnHeightSeen;
+                    }
+                    listing_Main.EndSection(listing_Race);
+                    MainMenuLength = listing_Race.CurHeight;
+                    num2 = MainMenuLength - inc;
                 }
-                listing_Main.EndSection(listing_Race);
-                MainMenuLength = listing_Race.CurHeight;
-                num2 = MainMenuLength - inc;
             }
         }
     }

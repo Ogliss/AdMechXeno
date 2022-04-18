@@ -1,16 +1,113 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
+	<!-- Base Kind -->
+	<PawnKindDef Abstract="True" Name="OG_Mechanicus_Base_KindDef">
+		<race>OG_Human_Mechanicus</race>
+		<defaultFactionType>OG_Mechanicus_PlayerColony</defaultFactionType>
+		<combatPower>50</combatPower>
+		<baseRecruitDifficulty>0.50</baseRecruitDifficulty>
+		<isFighter>false</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+	</PawnKindDef>
+
+	<!-- Basic Colonist -->
+	<PawnKindDef Abstract="True" Name="OG_Mechanicus_Colonist_Base" ParentName="OG_Mechanicus_Base_KindDef">
+		<label>colonist (Mechanicus)</label>
+		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>AdMech_TechPriest</li>
+					<li>Outlander</li>
+					<li>Imperium_Standard</li>
+				</categories>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Offworld</li>
+				</categories>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags>
+			<li>OGAMClothing</li>
+			<li>OGIGClothing</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>1000</min>
+			<max>2400</max>
+		</apparelMoney>
+		<techHediffsMoney>
+			<min>6000</min>
+			<max>12200</max>
+		</techHediffsMoney>
+		<techHediffsRequired>
+		
+		</techHediffsRequired>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<techHediffsDisallowTags>
+			<li>PainCauser</li>
+		</techHediffsDisallowTags>
+		<techHediffsMaxAmount>5</techHediffsMaxAmount>
+		<techHediffsChance>1</techHediffsChance>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+	</PawnKindDef>
 
 	<PawnKindDef ParentName="OG_Mechanicus_Colonist_Enginseer_Base">
 		<defName>Colonist_OG_Mechanicus_Tech_Priest_Enginseer</defName>
+	</PawnKindDef>
+	
+	<!-- Adv Colonist -->
+	<PawnKindDef Abstract="True" Name="OG_Mechanicus_Colonist_Enginseer_Base" ParentName="OG_Mechanicus_Colonist_Base">
+		<label>enginseer</label>
 		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
 		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+		<apparelTags>
+			<li>OGAMClothing</li>
+			<li>OGIGClothing</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>1000</min>
+			<max>2400</max>
+		</apparelMoney>
+		<apparelRequired>
+			<li>OGAM_Apparel_EnginseerHood</li>
+			<li>OGAM_Apparel_EnginseerRobe</li>
+			<li>OGIG_Apparel_Krieg_Gasmask</li>
+		</apparelRequired>
+		<weaponMoney>
+			<min>10000</min>
+			<max>28000</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>MacroStubber</li>
+		</weaponTags>
+		<techHediffsMoney>
+			<min>16000</min>
+			<max>22200</max>
+		</techHediffsMoney>
+		<techHediffsRequired>
+		
+		</techHediffsRequired>
+		<techHediffsTags>
+			<li>Advanced</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<techHediffsDisallowTags>
+			<li>PainCauser</li>
+		</techHediffsDisallowTags>
+		<techHediffsChance>10</techHediffsChance>
+		<techHediffsMaxAmount>10</techHediffsMaxAmount>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
 	</PawnKindDef>
 
 	<PawnKindDef ParentName="OG_Mechanicus_Colonist_Base">
 		<defName>Colonist_OG_Mechanicus</defName>
-		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
 	</PawnKindDef>
-
+	
 </Defs>

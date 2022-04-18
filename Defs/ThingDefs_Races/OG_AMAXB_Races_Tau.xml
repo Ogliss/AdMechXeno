@@ -22,38 +22,38 @@
 	</statBases>
 	<tools>
 		<li>
-		<label>left fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>7</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>22</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>22</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>right fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>7</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>22</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>22</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 	</tools>
 	<race>
@@ -85,19 +85,19 @@
 		<offset>(0,0,-0.3)</offset>
 		</specialShadowData>
 		<ageGenerationCurve>
-		<points>
-			<li>(14,0)</li>
-			<li>(16,100)</li>
-			<li>(50,100)</li>
-			<li>(60,30)</li>
-			<li>(70,18)</li>
-			<li>(80,10)</li>
-			<li>(90,3)</li>
-			<li>(100,0)</li>
-		</points>
+			<points>
+				<li>(14,0)</li>
+				<li>(16,100)</li>
+				<li>(50,100)</li>
+				<li>(60,30)</li>
+				<li>(70,18)</li>
+				<li>(80,10)</li>
+				<li>(90,3)</li>
+				<li>(100,0)</li>
+			</points>
 		</ageGenerationCurve>
 		<hediffGiverSets>
-		<li>OrganicStandard</li>
+			<li>OrganicStandard</li>
 		</hediffGiverSets>
 		<leatherDef>Leather_Tau</leatherDef>
 		<meatLabel>tau meat</meatLabel>
@@ -191,50 +191,50 @@
 		<leatherDef>Leather_Kroot</leatherDef>
 		<meatLabel>kroot meat</meatLabel>
 	</race>
-<tools>
+	<tools>
 		<li>
-		<label>left fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>8</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>11</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>8</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>11</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>right fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>8</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>11</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>8</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>11</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>beak</label>
-		<capacities>
-			<li>Cut</li>
-		</capacities>
-		<power>9</power>
-		<cooldownTime>1.8</cooldownTime>
-		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-		<chanceFactor>0.2</chanceFactor>
+			<label>beak</label>
+			<capacities>
+				<li>Cut</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>1.8</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<chanceFactor>0.2</chanceFactor>
 		</li>
 	</tools>
 </ThingDef>
@@ -262,50 +262,50 @@
 		<leatherDef>Leather_Kroot</leatherDef>
 		<meatLabel>kroot meat</meatLabel>
 	</race>
-<tools>
+	<tools>
 		<li>
-		<label>left fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>8</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>11</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>8</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>11</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>right fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>8</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>11</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>8</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>11</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>bite</label>
-		<capacities>
-			<li>Bite</li>
-		</capacities>
-		<power>9</power>
-		<cooldownTime>1.8</cooldownTime>
-		<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
-		<chanceFactor>0.2</chanceFactor>
+			<label>bite</label>
+			<capacities>
+				<li>Bite</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>1.8</cooldownTime>
+			<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+			<chanceFactor>0.2</chanceFactor>
 		</li>
 	</tools>
 </ThingDef>

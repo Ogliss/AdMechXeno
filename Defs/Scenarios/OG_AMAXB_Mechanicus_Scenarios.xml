@@ -12,11 +12,19 @@
 				<factionDef>OG_Mechanicus_PlayerColony</factionDef>
 			</playerFaction>
 			<parts>
-				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns">
-					<def>ConfigPage_ConfigureStartingPawns</def>
-					<pawnCount>4</pawnCount>
-					<pawnChoiceCount>8</pawnChoiceCount>
-				</li>
+			<li Class="AdeptusMechanicus.ScenPart_ConfigPage_ConfigureStartingPawnsSpecific">
+				<def>ConfigPage_ConfigureStartingPawns</def>
+				<Pawns>
+					<li>
+						<kindDef>Colonist_OG_Mechanicus_Tech_Priest_Enginseer</kindDef>
+						<count>4</count>
+					</li>
+					<li>
+						<kindDef>Colonist_OG_Mechanicus</kindDef>
+						<count>2</count>
+					</li>
+				</Pawns>
+			</li>
 				<li Class="ScenPart_PlayerPawnsArriveMethod">
 					<def>PlayerPawnsArriveMethod</def>
 					<method>DropPods</method>

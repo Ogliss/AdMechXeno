@@ -6,17 +6,18 @@
 		<pawnSingular>mechanicus</pawnSingular>
 		<pawnsPlural>mechanicus</pawnsPlural>
 		<basicMemberKind>OG_Mechanicus_Tech_Priest_Engineer</basicMemberKind>
+		<categoryTag>OG_Outlander_Mechanicus</categoryTag>
 		<listOrderPriority>10</listOrderPriority>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<settlementGenerationWeight>0</settlementGenerationWeight>
 		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
 		<configurationListOrderPriority IgnoreIfNoMatchingField="True">20</configurationListOrderPriority>
-		<hidden>true</hidden>
 		<canMakeRandomly>true</canMakeRandomly>
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
 		<leaderTitle>Tech-priest Overlord</leaderTitle>
 		<colorSpectrum>
-			<li>(0.35, 0.35, 0)</li>
+			<li>(164,66,62)</li>
 			<li>(0.4, 0.2, 0)</li>
 		</colorSpectrum>
 		<earliestRaidDays>90</earliestRaidDays>
@@ -40,6 +41,7 @@
 		</allowedCultures>
 		<requiredMemes IgnoreIfNoMatchingField="True">
 			<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">OG_Mechanicus_Structure_Archist</li>
 		</requiredMemes>
 		<disallowedMemes IgnoreIfNoMatchingField="True">
 			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
@@ -59,6 +61,9 @@
 			<min>-40</min>
 			<max>45</max>
 		</allowedArrivalTemperatureRange>
+		<fixedLeaderKinds>
+			<li>OG_Mechanicus_Faction_Tech_Priest</li>
+		</fixedLeaderKinds>
 		<visitorTraderKinds>
 			<li>OG_Mechanicus_Trader_Visitor_Standard</li>
 		</visitorTraderKinds>
@@ -157,7 +162,7 @@
 					<Colonist_OG_Militarum>50</Colonist_OG_Militarum>
 					<OG_Militarum_Guardsman_Ranged_Cadian>230</OG_Militarum_Guardsman_Ranged_Cadian>
 					<OG_Militarum_Guardsman_Melee_Cadian>130</OG_Militarum_Guardsman_Melee_Cadian>
-					<OG_Militarum_LordMarshal_Cadian>1</OG_Militarum_LordMarshal_Cadian>
+					<OG_Mechanicus_Faction_Tech_Priest>1</OG_Mechanicus_Faction_Tech_Priest>
 				</options>
 			</li>
 			<li>
@@ -203,7 +208,7 @@
 					</li>
 				</ForcedTraits>
 				<hediffGivers>
-					<li>OG_Mechanicus_HediffSet</li>
+					<!--li>OG_Mechanicus_HediffSet</li-->
 				</hediffGivers>
 			</li>
 		</modExtensions>

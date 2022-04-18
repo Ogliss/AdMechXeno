@@ -10,7 +10,7 @@
 			<li>(0.25, 0.65, 0.05)</li>
 			<li>(0.25, 0.75, 0.05)</li>
 		</colorSpectrum>
-		<categoryTag>Outlander</categoryTag>
+		<categoryTag>OG_Outlander_Militarum</categoryTag>
 		<basicMemberKind>Colonist_OG_Militarum</basicMemberKind>
 		<requiredCountAtGameStart>0</requiredCountAtGameStart>
 		<settlementGenerationWeight>0</settlementGenerationWeight>
@@ -27,6 +27,9 @@
 		<settlementNameMaker>OG_Militarum_NamerBases</settlementNameMaker>
 		<factionNameMaker>OG_Militarum_NamerFaction</factionNameMaker>
 		<techLevel>Ultra</techLevel>
+		<requiredMemes IgnoreIfNoMatchingField="True">
+			<li MayRequire="Ludeon.RimWorld.Ideology">OG_Imperial_Structure_TheistEmbodied</li>
+		</requiredMemes>
 		<backstoryFilters>
 			<li>
 				<categories>

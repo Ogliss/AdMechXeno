@@ -578,7 +578,7 @@
 
 <HediffDef ParentName="Tyranidbiomorph">
 	<defName>OG_Tyranid_Biomorph_SerratedBlades</defName>
-	<label>serrated blades </label>
+	<label>serrated blades</label>
 	<labelNoun>a Serrated blades biomorph</labelNoun>
 	<stages>
 		<li>
@@ -912,7 +912,6 @@
 	</projectile>
 </ThingDef>
 
-
 <HediffDef ParentName="Tyranidbiomorph">
 	<defName>OG_Tyranid_Biomorph_ZoanthropePower</defName>
 	<label>Zoanthrope</label>
@@ -969,6 +968,7 @@
 	</comps>
 </HediffDef>
 
+<!-- ====================== Biovore Spore mines ===================== -->
 <ThingDef ParentName="BaseBullet">
 	<defName>OGTY_Bullet_SporeMine_Incendiary</defName>
 	<label>incendiary spore mine</label>

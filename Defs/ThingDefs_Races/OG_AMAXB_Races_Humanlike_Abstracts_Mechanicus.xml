@@ -24,8 +24,8 @@
 			<intelligence>Humanlike</intelligence>
 			<makesFootprints>true</makesFootprints>
 			-->
-			<nameGenerator>OG_Mechanicus_NamerPerson</nameGenerator>
-			<nameGeneratorFemale>OG_Mechanicus_NamerPersonFemale</nameGeneratorFemale>
+			<nameGenerator>OG_NamerPerson_Mechanicus</nameGenerator>
+			<nameGeneratorFemale>OG_NamerPersonFemale_Mechanicus</nameGeneratorFemale>
 			<leatherDef>Leather_Human</leatherDef>
 			<useMeatFrom>Human</useMeatFrom>
 			<nameCategory>HumanStandard</nameCategory>

@@ -13,7 +13,7 @@
 		<isPlayer>true</isPlayer>
 		<pawnSingular>mechanicus</pawnSingular>
 		<pawnsPlural>mechanicus</pawnsPlural>
-		<categoryTag>Outlander</categoryTag>
+		<categoryTag>OG_Outlander_Mechanicus</categoryTag>
 		<basicMemberKind>Colonist_OG_Mechanicus</basicMemberKind>
 		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
 		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
@@ -74,7 +74,7 @@
 					</li>
 				</ForcedTraits>
 				<hediffGivers>
-					<li>OG_Mechanicus_HediffSet</li>
+					<!--li>OG_Mechanicus_HediffSet</li-->
 				</hediffGivers>
 			</li>
 		</modExtensions>

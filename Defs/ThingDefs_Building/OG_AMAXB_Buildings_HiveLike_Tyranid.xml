@@ -8,11 +8,7 @@
 		<graphicData>
 			<texPath>Things/Special/TunnelExit</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
-			<shaderType>TransparentPostLight</shaderType>
 			<drawSize>2.6</drawSize>
-			<damageData>
-				<rect>(0.1,0.1,1.8,1.8)</rect>
-			</damageData>
 		</graphicData>
 		<size>(1,1)</size>
 		<uiIconScale>0.65</uiIconScale>
@@ -25,24 +21,12 @@
 		</statBases>
 		<pathCost>50</pathCost>
 		<receivesSignals>true</receivesSignals>
-		<blockWind>true</blockWind>
+		<blockWind>false</blockWind>
 		<tickerType>Normal</tickerType>
 		<passability>PassThroughOnly</passability>
 		<killedLeavings>
 			<!--InsectJelly>30</InsectJelly-->
 		</killedLeavings>
-		<modExtensions>
-			<li Class="ExtraHives.HiveDefExtension">
-				<Faction>OG_Tyranid_Faction</Faction>
-				<TunnelDef>OG_Tyranid_Tunnel</TunnelDef>
-				<mustBeNearColony>true</mustBeNearColony>
-				<requiresRoofed>false</requiresRoofed>
-				<mustBeThickRoof>false</mustBeThickRoof>
-				<maxTemp>200</maxTemp>
-				<minTemp>-200</minTemp>
-				<minMountainouseness>0</minMountainouseness>
-			</li>
-		</modExtensions>
 		<comps>
 			<li Class="CompProperties_CanBeDormant">
 				<startsDormant>true</startsDormant>
@@ -51,18 +35,10 @@
 			<li Class="CompProperties_WakeUpDormant" />
 			<li Class="ExtraHives.CompProperties_SpawnerPawn">
 				<spawnablePawnKinds>
-					<!--BETA_SoldierClass>1000</BETA_SoldierClass>
-					<BETA_WarriorClass>1000</BETA_WarriorClass>
-					<BETA_TankClass>800</BETA_TankClass>
-					<BETA_LaserClass>100</BETA_LaserClass>
-					<BETA_GrapplerClass>500</BETA_GrapplerClass>
-					<BETA_DestroyerClass>20</BETA_DestroyerClass>
-					<BETA_FortClass>1</BETA_FortClass>
-					<BETA_HeavyLaserClass>25</BETA_HeavyLaserClass-->
+				
 				</spawnablePawnKinds>
 				<!--AlwaysSpawnWith>
-					<li>BETA_GrapplerClass</li>
-					<li>BETA_LaserClass</li>
+				
 				</AlwaysSpawnWith-->
 				<!--
 				<lordJob>LordJob_DefendAndExpandHive</lordJob>
@@ -71,7 +47,7 @@
 				<spawnSound>Hive_Spawn</spawnSound>
 				<showNextSpawnInInspect>false</showNextSpawnInInspect>
 				<initialPawnsPoints>250</initialPawnsPoints>
-				<maxSpawnedPawnsPoints>5500</maxSpawnedPawnsPoints>
+				<maxSpawnedPawnsPoints>1500</maxSpawnedPawnsPoints>
 			</li>
 			<li Class="CompProperties_SelfhealHitpoints">
 				<ticksPerHeal>6000</ticksPerHeal> <!-- 60k ticks = 1 day, 10 hp per day -->
@@ -109,6 +85,18 @@
 				<damagePerTickRare>10</damagePerTickRare>
 			</li-->
 		</comps>
+		<modExtensions>
+			<li Class="ExtraHives.HiveDefExtension">
+				<Faction>OG_Tyranid_Faction</Faction>
+				<TunnelDef>OG_Tyranid_Tunnel</TunnelDef>
+				<mustBeNearColony>true</mustBeNearColony>
+				<requiresRoofed>false</requiresRoofed>
+				<mustBeThickRoof>false</mustBeThickRoof>
+				<maxTemp>200</maxTemp>
+				<minTemp>-200</minTemp>
+				<minMountainouseness>0</minMountainouseness>
+			</li>
+		</modExtensions>
 	</ThingDef>
 
 	<ThingDef ParentName="EtherealThingBase">

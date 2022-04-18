@@ -8,6 +8,7 @@
 		<pawnSingular>tau</pawnSingular>
 		<pawnsPlural>tau</pawnsPlural>
 		<basicMemberKind>OG_Tau_Firewarrior</basicMemberKind>
+		<categoryTag>OG_Outlander_Tau</categoryTag>
 		<listOrderPriority>10</listOrderPriority>
 		<settlementGenerationWeight>1</settlementGenerationWeight>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
@@ -45,6 +46,11 @@
 			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
 		</disallowedMemes>
+		<requiredMemes IgnoreIfNoMatchingField="True">
+			<li MayRequire="Ludeon.RimWorld.Ideology">Collectivist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Proselytizer</li>
+		</requiredMemes>
 		<structureMemeWeights IgnoreIfNoMatchingField="True">
 			<Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
 			<Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>

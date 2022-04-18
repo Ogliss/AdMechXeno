@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<!-- ChaosDeamon Base Abstract -->
-	<ThingDef ParentName="BasePawn" Name="OG_Chaos_Deamon_Pawn_Base" Abstract="True">
+	<ThingDef Abstract="True" Name="OG_Chaos_Deamon_Pawn_Base" ParentName="BasePawn">
 		<!--
 		<thingClass>Pawn</thingClass>
 		<category>Pawn</category>
@@ -39,7 +39,7 @@
 		</comps>
 	</ThingDef>
 
-	<ThingDef ParentName="OG_Chaos_Deamon_Pawn_Base" Name="OG_Chaos_Deamon_Base" Abstract="True">
+	<ThingDef Abstract="True" Name="OG_Chaos_Deamon_Base" ParentName="OG_Chaos_Deamon_Pawn_Base">
 		<defName>ChaosDeamon_Race</defName>
 		<label>Chaos Deamon Race</label>
 		<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
@@ -58,7 +58,7 @@
 			<PainShockThreshold>5</PainShockThreshold>
 		</statBases>
 		<race>
-			<body>ChaosDeamon_BipedWithArms</body>
+			<!--body>ChaosDeamon_BipedWithArms</body-->
 			<fleshType>OG_Flesh_Chaos_Deamon</fleshType>
 			<bloodDef>OG_FilthBlood_ChaosDeamon</bloodDef>	
 			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
@@ -73,10 +73,11 @@
 		</race>
 	</ThingDef>
 
-	<!-- Walker (Warrior/Immortal/Lord) base -->
-		<ThingDef ParentName="OG_Chaos_Deamon_Base" Name="OG_Chaos_Deamon_Walker" Abstract="True">
+	<!-- Walker base -->
+	<ThingDef Abstract="True" Name="OG_Chaos_Deamon_Walker" ParentName="OG_Chaos_Deamon_Base">
 		<race>
 			<deathActionWorkerClass MayRequire="Ogliss.AdMech.Xenobiologis">AdeptusMechanicus.DeathActionWorker_ChaosDeamon</deathActionWorkerClass>
+			<body>ChaosDeamon_BipedWithArms</body>
 			<intelligence>ToolUser</intelligence>
 			<baseBodySize>1.0</baseBodySize>
 			<lifeStageAges>
@@ -107,8 +108,8 @@
 		</modExtensions>
 	</ThingDef>
 		
-	<!-- Walker (Warrior/Immortal/Lord) base -->
-	<ThingDef ParentName="OG_Chaos_Deamon_Base" Name="OG_Chaos_Deamon_Flyer" Abstract="True">
+	<!-- Flyer base -->
+	<ThingDef Abstract="True" Name="OG_Chaos_Deamon_Flyer" ParentName="OG_Chaos_Deamon_Base">
 		<race>
 			<deathActionWorkerClass>AdeptusMechanicus.DeathActionWorker_ChaosDeamon</deathActionWorkerClass>
 			<intelligence>ToolUser</intelligence>
@@ -223,8 +224,8 @@
 	</PawnKindDef>	
 		-->
 
-	<!-- Deamons of Khorne -->
-	<!-- ChaosDeamon Bloodletter -->
+	<!-- Khorne -->
+	<!-- Bloodletter -->
 	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
 		<defName>OG_Chaos_Deamon_Bloodletter</defName>
 		<label>Bloodletter</label>
@@ -297,14 +298,106 @@
 		</comps>
 	</ThingDef>
 		
-	
-	<!-- Deamons of Tzeentch --> 
-	<!-- ChaosDeamon Horrors of Tzeentch -->
-	<!-- --> 
-	<ThingDef ParentName="OG_Chaos_Deamon_Walker" Name="ChaosDeamonHorrorBase">
+	<!-- Bloodthirster -->
+	<!--ThingDef ParentName="OG_Chaos_Deamon_Walker">
+		<defName>OG_Chaos_Deamon_Bloodthirster</defName>
+		<label>Bloodthirster</label>
+		<description>A Bloodthirster, also known as a "Chosen of Khorne," a "Warmonger of Khorne," "Slaughter-kin" and the "Crimson Death," is a Lesser Daemon (Khak'akamshy'y in the Dark Tongue) that serves as one of the eager daemonic foot soldiers of the Chaos God Khorne's Blood Legions. As a host, they march as one, in formations with supernatural precision, but in battle, they try to outdo each other in ruthless acts of cruelty and savagery.</description>
+		<statBases>
+			<MoveSpeed>9.5</MoveSpeed>
+			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.16</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>8.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>8.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>gaping maw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>12.5</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>10.5</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>Human</body>
+			<baseBodySize>0.5</baseBodySize>
+			<baseHealthScale>0.75</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+		</race>
+		<comps> 
+			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
+				<InvunerableSaveChance>0.16</InvunerableSaveChance>
+			</li> 
+		</comps>
+	</ThingDef-->
+		
+	<!-- Tzeentch --> 
+	<!-- Horrors of Tzeentch -->
+	<ThingDef Abstract="True" Name="OG_Chaos_Deamon_Horror_Base" ParentName="OG_Chaos_Deamon_Walker">
 		<defName>OG_Chaos_Deamon_Horror</defName>
 		<label>Horror of Tzeentch</label>
 		<description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
+		<race>
+			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+			<hediffGiverSets>
+				<li>OGCD_Horror_Options</li>
+			</hediffGiverSets>
+		</race>
+		<comps> 
+			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
+				<InvunerableSaveChance>0.16</InvunerableSaveChance>
+			</li> 
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="OG_Chaos_Deamon_Horror_Base">
+		<defName>OG_Chaos_Deamon_Horror_Pink</defName>
 		<statBases>
 			<MoveSpeed>4.5</MoveSpeed>
 			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
@@ -314,6 +407,16 @@
 			<AimingDelayFactor>-0.25</AimingDelayFactor>
 		</statBases>
 		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
 			<li>
 				<label>left claws</label>
 				<capacities>
@@ -325,21 +428,21 @@
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 			</li>
 			<li>
-				<label>right claws</label>
-				<capacities>
-					<li>Cut</li>
-				</capacities>
-				<power>12.0</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
-			<li>
 				<label>right fist</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
 				<power>8.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>12.0</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
@@ -368,29 +471,172 @@
 			</li>
 		</tools>
 		<race>
-			<body>Human</body>
-			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>1.0</baseHealthScale>
-			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-			<useMeatFrom>Mech_Centipede</useMeatFrom>
-			<hediffGiverSets>
-				<li>OGCD_Horror_Options</li>
-			</hediffGiverSets>
 		</race>
-		<comps> 
-			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
-			</li> 
-			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
-				<InvunerableSaveChance>0.16</InvunerableSaveChance>
-			</li> 
-		</comps>
 	</ThingDef>
 
-	<!-- ChaosDeamon Flamer of Tzeentch	-->
-	<!-- Standard --> 
+	<ThingDef ParentName="OG_Chaos_Deamon_Horror_Base">
+		<defName>OG_Chaos_Deamon_Horror_Blue</defName>
+		<statBases>
+			<MoveSpeed>4.5</MoveSpeed>
+			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+			<ShootingAccuracyPawn>0.32</ShootingAccuracyPawn>
+			<AimingDelayFactor>-0.25</AimingDelayFactor>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>left claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>6.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>6.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>gaping maw</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>4.25</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4.25</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<baseBodySize>0.5</baseBodySize>
+			<baseHealthScale>0.5</baseHealthScale>
+		</race>
+	</ThingDef>
+
+	<ThingDef ParentName="OG_Chaos_Deamon_Horror_Base">
+		<defName>OG_Chaos_Deamon_Horror_Brimstone</defName>
+		<statBases>
+			<MoveSpeed>4.5</MoveSpeed>
+			<ArmorRating_Blunt>0.1250</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.1250</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.1250</ArmorRating_Heat>
+			<ShootingAccuracyPawn>0.22</ShootingAccuracyPawn>
+			<AimingDelayFactor>-0.1</AimingDelayFactor>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>2.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>left claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>4.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>2.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>4.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>gaping maw</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>2.125</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>1.75</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<baseBodySize>0.25</baseBodySize>
+			<baseHealthScale>0.25</baseHealthScale>
+		</race>
+	</ThingDef>
+
+	<!-- Flamer of Tzeentch	-->
 	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
 		<defName>OG_Chaos_Deamon_Flamer</defName>
 		<label>Flamer of Tzeentch</label>
@@ -458,7 +704,7 @@
 		</comps>
 	</ThingDef>
 
-	<!-- Exalted --> 
+	<!-- Exalted Flamer of Tzeentch --> 
 	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
 		<defName>OG_Chaos_Deamon_Flamer_Exalted</defName>
 		<label>Exalted Flamer of Tzeentch</label>
@@ -524,7 +770,7 @@
 		</comps>
 	</ThingDef>
 
-	<!-- ChaosDeamon Screamer -->
+	<!-- Screamer -->
 	<ThingDef ParentName="OG_Chaos_Deamon_Flyer">
 		<defName>OG_Chaos_Deamon_Screamer</defName>
 		<label>Screamer of Tzeentch</label>
@@ -658,8 +904,8 @@
 		</race>
 	</ThingDef>
 
-	<!-- Deamons of Nurgle --> 
-	<!-- ChaosDeamon Nurgling -->
+	<!-- Nurgle --> 
+	<!-- Nurgling -->
 	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
 		<defName>OG_Chaos_Deamon_Nurgling</defName>
 		<label>Nurgling</label>
@@ -732,7 +978,7 @@
 		</comps>
 	</ThingDef>
 
-	<!-- ChaosDeamon Plague Bearer --> 
+	<!-- Plague Bearer --> 
 	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
 		<defName>OG_Chaos_Deamon_PlagueBearer</defName>
 		<label>Plague Bearer</label>
@@ -860,8 +1106,8 @@
 		</race>
 	</ThingDef>
 
-	<!-- Deamons of Slannesh --> 
-	<!-- ChaosDeamon Deamonette --> 
+	<!-- Slannesh --> 
+	<!-- Deamonette --> 
 	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
 		<defName>OG_Chaos_Deamon_Deamonette</defName>
 		<label>Deamonette</label>

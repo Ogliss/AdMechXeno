@@ -13,7 +13,7 @@
 		<isPlayer>true</isPlayer>
 		<pawnSingular>guardsman</pawnSingular>
 		<pawnsPlural>guardsmen</pawnsPlural>
-		<categoryTag>Outlander</categoryTag>
+		<categoryTag>OG_Outlander_Militarum</categoryTag>
 		<basicMemberKind>Colonist_OG_Militarum</basicMemberKind>
 		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
 		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
@@ -41,12 +41,10 @@
 			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
 		</disallowedMemes>
 		<requiredMemes IgnoreIfNoMatchingField="True">
+			<li MayRequire="Ludeon.RimWorld.Ideology">OG_Imperial_Structure_TheistEmbodied</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
 		</requiredMemes>
-		<structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
-			<OG_Imperial_Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</OG_Imperial_Structure_TheistEmbodied>
-		</structureMemeWeights>
 		<pawnNameMaker IgnoreIfNoMatchingField="True">OG_Militarum_NamerPerson</pawnNameMaker>
 		<pawnNameMakerFemale IgnoreIfNoMatchingField="True">OG_Militarum_NamerPersonFemale</pawnNameMakerFemale>
 		<hairTags IgnoreIfNoMatchingField="True">

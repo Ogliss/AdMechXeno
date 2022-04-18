@@ -28,6 +28,8 @@
 				</alienPartGenerator>
 				<notXenophobistTowards>
 				  <li>Human</li>
+				  <li>OG_Abhuman_Ratlin</li>
+				  <li>OG_Abhuman_Ogryn</li>
 				  <li MayRequire="Ogliss.AdMech.Astartes">OG_Human_Astartes</li>
 				</notXenophobistTowards>
 				<factionRelations>

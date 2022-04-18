@@ -9,7 +9,7 @@
 		<pawnSingular>aeldar</pawnSingular>
 		<pawnsPlural>aeldari</pawnsPlural>
 		<basicMemberKind>OG_Eldar_Guardian</basicMemberKind>
-		<categoryTag>Outlander</categoryTag>
+		<categoryTag>OG_Outlander_Craftworld</categoryTag>
 		<listOrderPriority>15</listOrderPriority>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<hidden>true</hidden>

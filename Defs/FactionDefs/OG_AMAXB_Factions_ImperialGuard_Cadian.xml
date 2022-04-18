@@ -7,7 +7,7 @@
 		<description>The Cadian Shock Troops, also sometimes called Cadian Shock Troopers, are the highly disciplined Astra Militarum Militarum Regimentum soldiers conscripted in large numbers from the Fortress World of Cadia, which once stood sentinel as the preeminent bastion of the Imperium of Man in the fight against the Emperor's ancient Archenemy, Chaos.\n\nCadia was one world amongst many tens of thousands in the Imperium of Man, and has an honoured and violent place in its history, for Cadia stood upon the edge of the Eye of Terror within the Segmentum Obscurus, in a narrow corridor of navigable space known as the Cadian Gate.</description>
 		<pawnSingular>cadian</pawnSingular>
 		<pawnsPlural>cadians</pawnsPlural>
-		<categoryTag>Outlander</categoryTag>
+		<categoryTag>OG_Outlander_Militarum_Cadian</categoryTag>
 		<basicMemberKind>OG_Militarum_Guardsman_Ranged_Cadian</basicMemberKind>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<settlementGenerationWeight>1</settlementGenerationWeight>
@@ -45,7 +45,7 @@
 			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
 		</requiredMemes>
 		<structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
-			<OG_Imperial_Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</OG_Imperial_Structure_TheistEmbodied>
+			<OG_Imperial_Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">100</OG_Imperial_Structure_TheistEmbodied>
 		</structureMemeWeights>
 		<pawnNameMaker IgnoreIfNoMatchingField="True">OG_Militarum_NamerPerson</pawnNameMaker>
 		<pawnNameMakerFemale IgnoreIfNoMatchingField="True">OG_Militarum_NamerPersonFemale</pawnNameMakerFemale>

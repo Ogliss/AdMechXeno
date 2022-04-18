@@ -6,7 +6,7 @@
 		<pawnSingular>drukhar</pawnSingular>
 		<pawnsPlural>drukhari</pawnsPlural>
 		<basicMemberKind>OG_DarkEldar_Kabalite_Warrior</basicMemberKind>
-		<categoryTag>Outlander</categoryTag>
+		<categoryTag>OG_Outlander_DarkEldar</categoryTag>
 		<listOrderPriority>15</listOrderPriority>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<hidden>true</hidden>
@@ -61,6 +61,7 @@
 
 	<FactionDef Name="OG_DarkEldar_Kabal_Faction_Base" ParentName="OG_DarkEldar_Faction_Base">
 		<defName>OG_DarkEldar_Kabal_Faction</defName>
+		<label>drukhari kabal</label>
 		<!--
 		<startingGoodwill>
 			<min>0</min>

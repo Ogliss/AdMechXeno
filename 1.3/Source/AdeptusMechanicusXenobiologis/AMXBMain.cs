@@ -14,6 +14,7 @@ namespace AdeptusMechanicus
         {
             ThingDef thingDef = DefDatabase<ThingDef>.GetNamed("Human");
             AdeptusThingDefOf.OG_Human_Mechanicus.recipes = thingDef.recipes;
+            Update();
             //    Log.Message(string.Format("adding {0} to Mechanicus_Race", OGAdeptusMechanicusDefOf.OG_Human_Mechanicus.recipes.Count));
             /*
             foreach (var item in ModLister.AllInstalledMods)
@@ -21,6 +22,11 @@ namespace AdeptusMechanicus
             //    log.message(string.Format("{0}", item));
             }
             */
+            //    Log.Message(string.Format("post AllowGueVesaAuxiliaries"));
+        }
+
+        public static void Update()
+        {
             if (!AMAMod.settings.AllowTyranid || !AMAMod.settings.AllowTyranidWeapons || !AMAMod.settings.AllowTyranidInfestation)
             {
                 AdeptusIncidentDefOf.OG_Tyranid_Infestation.baseChance = 0f;
@@ -43,9 +49,9 @@ namespace AdeptusMechanicus
             {
                 FactionDef fd = AdeptusFactionDefOf.OG_Eldar_Craftworld_Faction;
                 ThingDef td = AdeptusThingDefOf.OG_Eldar_Wraithguard_Race;
-                Filter(fd,td);
+                Filter(fd, td);
             }
-        //    Log.Message(string.Format("post AllowEldarWraithguard"));
+            //    Log.Message(string.Format("post AllowEldarWraithguard"));
             if (!AMAMod.settings.AllowKrootAuxiliaries)
             {
                 FactionDef fd = AdeptusFactionDefOf.OG_Tau_Faction;
@@ -58,14 +64,13 @@ namespace AdeptusMechanicus
                 td = AdeptusThingDefOf.OG_KrootOx_Kindred;
                 Filter(fd, td);
             }
-        //    Log.Message(string.Format("post AllowKrootAuxiliaries"));
+            //    Log.Message(string.Format("post AllowKrootAuxiliaries"));
             if (!AMAMod.settings.AllowGueVesaAuxiliaries)
             {
                 FactionDef fd = AdeptusFactionDefOf.OG_Tau_Faction;
                 ThingDef td = ThingDefOf.Human;
                 Filter(fd, td);
             }
-        //    Log.Message(string.Format("post AllowGueVesaAuxiliaries"));
         }
 
         public static void Filter(FactionDef fd, ThingDef rd)
