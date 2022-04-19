@@ -342,7 +342,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Astartes/Astartes_Terminator</texPath>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>3.00</drawSize>
 					<color>49,100,157</color>
@@ -381,7 +381,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Astartes/Astartes_Terminator_Cyclone</texPath>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator_Cyclone</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>3.00</drawSize>
 					<color>49,100,157</color>
@@ -409,7 +409,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Astartes/Astartes_Terminator_Apothecary</texPath>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator_Apothecary</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>3.00</drawSize>
 					<color>49,100,157</color>
@@ -437,7 +437,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Astartes/Astartes_Terminator_Chaplin</texPath>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator_Chaplin</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>3.00</drawSize>
 					<color>49,100,157</color>
@@ -465,7 +465,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Astartes/Astartes_Terminator_Commnder</texPath>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator_Commnder</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>3.00</drawSize>
 					<color>49,100,157</color>
@@ -493,7 +493,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Astartes/Astartes_Terminator_Librarian</texPath>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator_Librarian</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>3.00</drawSize>
 					<color>49,100,157</color>
