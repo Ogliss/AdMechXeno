@@ -29,6 +29,7 @@
 		<makesFootprints>true</makesFootprints>
 		<needsRest>false</needsRest>
 		<hasGenders>false</hasGenders>
+		<gestationPeriodDays>90</gestationPeriodDays>
 		<foodType>None</foodType>
 		<lifeExpectancy>99999</lifeExpectancy>
 		<baseBodySize>1.5</baseBodySize>
@@ -77,7 +78,6 @@
 		</statBases>
 		<race>
 			<baseHealthScale>1.35</baseHealthScale>
-			<useMeatFrom>OG_Alien_Astartes</useMeatFrom>
 		</race>
 	</ThingDef>
 
@@ -93,7 +93,6 @@
 		</statBases>
 		<race>
 			<baseHealthScale>1.5</baseHealthScale>
-			<useMeatFrom>OG_Alien_Astartes</useMeatFrom>
 		</race>
 	</ThingDef>
 
@@ -109,7 +108,6 @@
 		</statBases>
 		<race>
 			<baseHealthScale>1.85</baseHealthScale>
-			<useMeatFrom>OG_Alien_Astartes</useMeatFrom>
 		</race>
 	</ThingDef>
 
@@ -126,7 +124,6 @@
 		</statBases>
 		<race>
 			<baseHealthScale>1.85</baseHealthScale>
-			<useMeatFrom>OG_Alien_Astartes</useMeatFrom>
 		</race>
 	</ThingDef>
 
