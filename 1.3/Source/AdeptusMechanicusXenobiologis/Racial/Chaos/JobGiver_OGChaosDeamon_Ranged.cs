@@ -78,13 +78,16 @@ namespace AdeptusMechanicus
             Building building = this.FindTurretTarget(pawn);
             if (building != null)
             {
-                return new Job(JobDefOf.AttackMelee, pawn2)
+                Rand.PopState();
+                Job j = new Job(JobDefOf.AttackMelee, pawn2)
                 {
                     maxNumMeleeAttacks = 1,
                     expiryInterval = Rand.Range(420, 900),
                     canBashDoors = true,
                     canBashFences = true
                 };
+                Rand.PushState();
+                return j;
             }
             if (pawn2 != null)
             {

@@ -3,7 +3,7 @@
 
 	<!-- Orkz -->
 	<!-- Ork Faction Leader -->	
-	<PawnKindDef ParentName="TekOrkBase">
+	<PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer">
 		<defName>OG_Ork_Faction_Warboss</defName>
 		<label>big warboss</label>
 		<race>Human</race>

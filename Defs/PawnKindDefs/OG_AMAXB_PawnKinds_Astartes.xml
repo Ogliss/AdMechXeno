@@ -49,7 +49,7 @@
 		
 	<!-- Commander -->
 	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Base">
-		<defName>OG_Astartes_Astartes_Commander</defName>
+		<defName>OG_Astartes_ForceCommander</defName>
 		<label>astartes commander</label>
 		<race>Astartes_Commander</race>
 		<combatPower>250</combatPower>
@@ -67,8 +67,8 @@
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
-				<drawSize>1.350</drawSize>
-		</dessicatedBodyGraphicData>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -145,7 +145,7 @@
 
 	<!-- Scout Marine -->
 	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Scout_Base">
-		<defName>OG_Astartes_Scout</defName>
+		<defName>OG_Astartes_ScoutMarine</defName>
 		<label>scout marine</label>
 		<combatPower>150</combatPower>
 		<weaponMoney>
@@ -159,8 +159,8 @@
 
 	<!-- Scout Marine(Sniper) -->
 	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Scout_Base">
-		<defName>OG_Astartes_Scout_Sniper</defName>
-		<label>storm guardian</label>
+		<defName>OG_Astartes_ScoutMarine_Marksman</defName>
+		<label>scout marine marksman</label>
 		<combatPower>50</combatPower>
 		<weaponMoney>
 			<min>5000</min>
@@ -197,7 +197,7 @@
 
 	<!-- Tactical Marine -->
 	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Tactical_Base">
-		<defName>OG_Astartes_Tactical</defName>
+		<defName>OG_Astartes_TacticalMarine</defName>
 		<label>tactical marine</label>
 		<combatPower>150</combatPower>
 		<weaponMoney>
@@ -235,7 +235,7 @@
 
 	<!-- Devastator Marine -->
 	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Devastator_Base">
-		<defName>OG_Astartes_Tactical_Devastator</defName>
+		<defName>OG_Astartes_DevastatorMarine</defName>
 		<label>devastator</label>
 		<combatPower>100</combatPower>
 		<weaponMoney>
@@ -273,7 +273,7 @@
 
 	<!-- Assault Marine-->
 	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Assault_Base">
-		<defName>OG_Astartes_Tactical_Assault</defName>
+		<defName>OG_Astartes_AssaultMarineJP</defName>
 		<label>assault</label>
 		<combatPower>100</combatPower>
 		<weaponMoney>
@@ -311,7 +311,7 @@
 
 	<!-- Assault Marine(Foot) -->
 	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Assault_Foot_Base">
-		<defName>OG_Astartes_Assault_Foot</defName>
+		<defName>OG_Astartes_AssaultMarine</defName>
 		<label>assault</label>
 		<combatPower>100</combatPower>
 		<weaponMoney>

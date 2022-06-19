@@ -92,7 +92,7 @@
 	</statBases>
 	<race>
 		<lifeExpectancy>9999</lifeExpectancy>
-		<body>OrkBody</body>
+		<body>OG_Ork_Body</body>
 		<baseHealthScale>2.0</baseHealthScale>
 	</race>
 </ThingDef>
@@ -106,7 +106,7 @@
 	</statBases>
 	<race>
 		<lifeExpectancy>9999</lifeExpectancy>
-		<body>OrkBody</body>
+		<body>OG_Ork_Body</body>
 		<baseHealthScale>2.0</baseHealthScale>
 	</race>
 </ThingDef-->
@@ -124,7 +124,7 @@
 	</statBases>
 	<race>
 		<lifeExpectancy>9999</lifeExpectancy>
-		<body>OrkBody</body>
+		<body>OG_Ork_Body</body>
 		<baseHealthScale>1.2</baseHealthScale>
 	</race>
 </ThingDef>
@@ -138,7 +138,7 @@
 	</statBases>
 	<race>
 		<lifeExpectancy>9999</lifeExpectancy>
-		<body>OrkBody</body>
+		<body>OG_Ork_Body</body>
 		<baseHealthScale>0.8</baseHealthScale>
 		<baseBodySize>0.7</baseBodySize>
 	</race>
@@ -203,7 +203,7 @@
 	</tools>
 	<race>
 		<lifeExpectancy>9999</lifeExpectancy>
-		<body>OrkBody</body>
+		<body>OG_Ork_Body</body>
 		<baseHealthScale>4</baseHealthScale>
 		<baseBodySize>4</baseBodySize>
 		<useMeatFrom>OG_Alien_Ork</useMeatFrom>
@@ -269,7 +269,7 @@
 	</tools>
 	<race>
 		<lifeExpectancy>9999</lifeExpectancy>
-		<body>OrkBody</body>
+		<body>OG_Ork_Body</body>
 		<baseHealthScale>2.5</baseHealthScale>
 		<baseBodySize>2.5</baseBodySize>
 		<useMeatFrom>OG_Alien_Ork</useMeatFrom>
@@ -289,7 +289,7 @@
 	</statBases>
 	<race>
 		<lifeExpectancy>9999</lifeExpectancy>
-		<body>OrkBody</body>
+		<body>OG_Ork_Body</body>
 		<baseHealthScale>3.0</baseHealthScale>
 		<baseBodySize>3.0</baseBodySize>
 		<useMeatFrom>OG_Alien_Ork</useMeatFrom>
@@ -351,7 +351,7 @@
 	</tools>
 	<race>
 		<lifeExpectancy>9999</lifeExpectancy>
-		<body>OrkBody</body>
+		<body>OG_Ork_Body</body>
 		<useMeatFrom>OG_Alien_Ork</useMeatFrom>
 		<baseHealthScale>2.0</baseHealthScale>
 		<baseBodySize>2.0</baseBodySize>
@@ -371,7 +371,7 @@
 	</statBases>
 	<race>
 		<lifeExpectancy>9999</lifeExpectancy>
-		<body>OrkBody</body>
+		<body>OG_Ork_Body</body>
 		<baseHealthScale>2.5</baseHealthScale>
 		<baseBodySize>2.5</baseBodySize>
 		<useMeatFrom>OG_Alien_Ork</useMeatFrom>
@@ -437,7 +437,7 @@
 	</tools>
 	<race>
 		<lifeExpectancy>9999</lifeExpectancy>
-		<body>OrkBody</body>
+		<body>OG_Ork_Body</body>
 		<useMeatFrom>OG_Alien_Ork</useMeatFrom>
 		<baseHealthScale>0.8</baseHealthScale>
 		<baseBodySize>0.8</baseBodySize>

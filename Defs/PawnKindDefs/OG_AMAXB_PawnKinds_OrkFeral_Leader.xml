@@ -3,7 +3,7 @@
 
 	<!-- Feral Orkz -->
 	<!-- Feral Ork Faction Leader -->	
-	<PawnKindDef ParentName="FeralOrkBase">
+	<PawnKindDef ParentName="OG_Orkoid_KindBase_Tribal">
 		<defName>OG_Ork_Feral_Faction_Warboss</defName>
 		<label>Feral Big Boss</label>
 		<race>Human</race>

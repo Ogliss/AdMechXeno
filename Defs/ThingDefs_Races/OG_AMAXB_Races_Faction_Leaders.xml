@@ -185,7 +185,7 @@
 			<leatherDef>Leather_Ork</leatherDef>
 			<lifeExpectancy>9999</lifeExpectancy>
 			<baseHealthScale>2.75</baseHealthScale>
-			<body>OrkBody</body>
+			<body>OG_Ork_Body</body>
 			<useMeatFrom>OG_Alien_Ork</useMeatFrom>
 		</race>
 	</ThingDef-->

@@ -16,6 +16,8 @@
 		<autoFlee>false</autoFlee>
 		<geneticVariance>1</geneticVariance>
 		<earliestRaidDays>45</earliestRaidDays>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">85</configurationListOrderPriority>
 		<backstoryFilters>
 			<li>
 				<categories>
@@ -24,8 +26,6 @@
 				</categories>
 			</li>
 		</backstoryFilters>
-		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">1</maxConfigurableAtWorldCreation>
-		<configurationListOrderPriority IgnoreIfNoMatchingField="True">85</configurationListOrderPriority>
 		<hairTags IgnoreIfNoMatchingField="True">
 			<li>Punk</li>
 		</hairTags>

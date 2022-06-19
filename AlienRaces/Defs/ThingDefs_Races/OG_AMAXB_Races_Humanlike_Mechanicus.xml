@@ -7,7 +7,6 @@
 			<generalSettings>
 				<humanRecipeImport>true</humanRecipeImport>
 				<alienPartGenerator>
-					<!--
 					<aliencrowntypes>
 						<li>Average_Normal</li>
 						<li>Average_Wide</li>
@@ -15,12 +14,19 @@
 						<li>Narrow_Normal</li>
 						<li>Narrow_Pointy</li>
 						<li>Narrow_Wide</li>
+						<li>MechHeadA</li>
+						<li>MechHeadB</li>
+						<li>MechHeadC</li>
+						<li>MechHeadD</li>
+						<li>MechHeadE</li>
 					</aliencrowntypes>
+					<!--
 					<alienbodytypes>
+						<li>Male</li>
+						<li>Female</li>
 						<li>Thin</li>
 						<li>Hulk</li>
-						<li>Female</li>
-						<li>Male</li>
+						<li>Fat</li>
 					</alienbodytypes>
 					-->
 					<bodyAddons>
@@ -121,7 +127,15 @@
 					</li>
 				</factionRelations>
 			</generalSettings>
-			<graphicPaths>
+			<graphicPaths Inherit="false">
+				<li>
+					<body>Things/Pawn/Humanlike/Mechanicus/Bodies/</body>
+				</li>
+				<!--
+				<li>
+					<head>Things/Pawn/Humanlike/Mechanicus/Head/</head>
+				</li>
+				-->
 			</graphicPaths>
 			<hairSettings IgnoreIfNoMatchingField="True">
 			</hairSettings>
