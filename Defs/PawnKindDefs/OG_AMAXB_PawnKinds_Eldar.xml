@@ -230,7 +230,8 @@
 			<li>EldarRanger</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="AdeptusMechanicus.InfiltratorExtension">
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
 			</li>
 		</modExtensions>
 	</PawnKindDef>
@@ -394,7 +395,8 @@
 			<li>EldarStrikingScorpion</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="AdeptusMechanicus.InfiltratorExtension">
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
 			</li>
 		</modExtensions>
 	</PawnKindDef>
@@ -438,7 +440,7 @@
 			<li>EldarSwoopingHawk</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="AdeptusMechanicus.DeepStrikeExtension">
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
 				<pawnsArrivalMode>Fly</pawnsArrivalMode>
 			</li>
 		</modExtensions>
@@ -523,7 +525,7 @@
 			<li>EldarWarpSpider</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="AdeptusMechanicus.DeepStrikeExtension">
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
 				<pawnsArrivalMode>Teleport</pawnsArrivalMode>
 			</li>
 		</modExtensions>

@@ -84,7 +84,7 @@
 		<li>OGTY_Hormagaunt</li>
 	</weaponTags>
 	<modExtensions>
-		<li Class="AdeptusMechanicus.DeepStrikeExtension">
+		<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
 			<pawnsArrivalMode>DropPod</pawnsArrivalMode>
 		</li>
 	</modExtensions>
@@ -208,7 +208,7 @@
 		<li>OGTY_Fleshborer</li>
 	</weaponTags>
 	<modExtensions>
-		<li Class="AdeptusMechanicus.DeepStrikeExtension">
+		<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
 			<pawnsArrivalMode>Fly</pawnsArrivalMode>
 		</li>
 	</modExtensions>
@@ -242,7 +242,8 @@
 		<li>OGTY_Lictor</li>
 	</weaponTags>
 	<modExtensions>
-		<li Class="AdeptusMechanicus.InfiltratorExtension">
+		<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+			<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
 		</li>
 	</modExtensions>
 </PawnKindDef>
@@ -279,7 +280,7 @@
 		<li>OGTY_Deathspitter</li-->
 	</weaponTags>
 	<modExtensions>
-		<li Class="AdeptusMechanicus.DeepStrikeExtension">
+		<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
 		<pawnsArrivalMode>Tunnel</pawnsArrivalMode>
 		</li>
 	</modExtensions>

@@ -160,7 +160,8 @@
 			<li>TPulseCarbine</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="AdeptusMechanicus.InfiltratorExtension">
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
 			</li>
 		</modExtensions>
 	</PawnKindDef>
@@ -201,7 +202,8 @@
 			<li>TRailRifle</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="AdeptusMechanicus.InfiltratorExtension">
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
 			</li>
 		</modExtensions>
 	</PawnKindDef>
@@ -243,7 +245,8 @@
 			<li>TIonRifle</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="AdeptusMechanicus.InfiltratorExtension">
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
 			</li>
 		</modExtensions>
 	</PawnKindDef>
@@ -322,7 +325,8 @@
 			<li>TBurstCannon</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="AdeptusMechanicus.InfiltratorExtension">
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
 			</li>
 		</modExtensions>
 	</PawnKindDef>
@@ -363,7 +367,8 @@
 			<li>TBurstCannon</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="AdeptusMechanicus.InfiltratorExtension">
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
 			</li>
 		</modExtensions>
 	</PawnKindDef>

@@ -59,7 +59,8 @@
 		<li>AlwaysDualWield</li>
 	</weaponTags>
 	<modExtensions>
-		<li Class="AdeptusMechanicus.InfiltratorExtension">
+		<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
 		</li>
 	</modExtensions>
 </PawnKindDef>
@@ -113,7 +114,7 @@
 		<li>OGN_Gun_TeslaCarbine</li>
 	</weaponTags>
 	<modExtensions>
-		<li Class="AdeptusMechanicus.DeepStrikeExtension">
+		<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
 		<pawnsArrivalMode>Teleport</pawnsArrivalMode>
 		</li>
 	</modExtensions>

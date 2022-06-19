@@ -362,7 +362,8 @@
 			<li>StubCarbine</li>
 		</weaponTags>
 		<modExtensions>
-			<li Class="AdeptusMechanicus.InfiltratorExtension">
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
 			</li>
 		</modExtensions>
 	</PawnKindDef>
