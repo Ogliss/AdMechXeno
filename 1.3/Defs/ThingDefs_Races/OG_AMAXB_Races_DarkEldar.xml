@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Dark Eldar Base Abstract -->
+	<ThingDef ParentName="BasePawn" Name="OG_DarkEldarPawn_Base" Abstract="True">
+		<label>Dark Eldar Race</label>
+		<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+		<statBases>
+		<MarketValue>1750</MarketValue>
+		<MoveSpeed>5.61</MoveSpeed>
+		<PsychicSensitivity>+0.5</PsychicSensitivity>
+		<Flammability>1</Flammability>
+		<ComfyTemperatureMin>-60</ComfyTemperatureMin>
+		<ComfyTemperatureMax>65</ComfyTemperatureMax>
+		<LeatherAmount>25</LeatherAmount>
+		</statBases>
+		<tools>
+		<li>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			<extraMeleeDamages>
+				<li>
+					<def>Stun</def>
+					<amount>22</amount>
+				</li>
+			</extraMeleeDamages>
+			</surpriseAttack>
+		</li>
+		<li>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+			<extraMeleeDamages>
+				<li>
+					<def>Stun</def>
+					<amount>22</amount>
+				</li>
+			</extraMeleeDamages>
+			</surpriseAttack>
+		</li>
+		</tools>
+		<race>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<intelligence>ToolUser</intelligence>
+			<leatherDef>Leather_Eldar</leatherDef>
+			<body>OG_Eldar_Body</body>
+			<fleshType>OG_Flesh_Eldar</fleshType>
+			<meatLabel>eldar meat</meatLabel>
+			<makesFootprints>true</makesFootprints>
+			<lifeExpectancy>1500</lifeExpectancy>
+			<meatColor>(200,135,100)</meatColor>
+			<hasGenders>false</hasGenders>
+			<foodType>OmnivoreHuman</foodType>
+			<baseHungerRate>0.15</baseHungerRate>
+			<baseBodySize>1.25</baseBodySize>
+			<baseHealthScale>1</baseHealthScale>
+			<predator>true</predator>
+			<lifeStageAges>
+				<li>
+					<def>HumanlikeAdult</def>
+					<minAge>18</minAge>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<specialShadowData>
+				<volume>(0.3, 0.8, 0.4)</volume>
+				<offset>(0,0,-0.3)</offset>
+			</specialShadowData>
+			<ageGenerationCurve>
+				<points>
+					<li>(14,0)</li>
+					<li>(16,100)</li>
+					<li>(50,100)</li>
+					<li>(60,30)</li>
+					<li>(70,18)</li>
+					<li>(80,10)</li>
+					<li>(90,3)</li>
+					<li>(100,0)</li>
+				</points>
+			</ageGenerationCurve>
+			<hediffGiverSets>
+				<li>OrganicStandard</li>
+			</hediffGiverSets>
+		</race>
+		<comps>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+			<li MayRequire="CETeam.CombatExtended">
+				<compClass>CombatExtended.CompPawnGizmo</compClass>
+			</li>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
+		</comps>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<ThingDef ParentName="OG_DarkEldarPawn_Base">
+		<defName>OG_Alien_DarkEldar</defName>
+	</ThingDef>
+
+	<!-- Dark Eldar Archon -->
+	<ThingDef ParentName="OG_DarkEldarPawn_Base">
+		<defName>OG_DarkEldar_Archon</defName>
+		<label>archon</label>
+		<description>The overlord of a Kabal is always a potent foe on the battlefield, but he has attained his position not merely through martial prowess in the arts of war and violence but through consistently emerging as the victor in the most difficult game of all -- the byzantine intrigues that govern all things in the heart of the Dark City, sometimes known as the thyllian ai-kelethril, or "path of shards." Only the most ingenious survive long enough to kill their way to the top.</description>
+		<statBases>
+			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+			<OG_ArmorRating_InvunerableSave>1.25</OG_ArmorRating_InvunerableSave>
+			<ShootingAccuracyPawn>1.16</ShootingAccuracyPawn>
+			<MoveSpeed>6.8</MoveSpeed>
+		</statBases>
+		<race>
+			<lifeExpectancy>25000</lifeExpectancy>
+			<baseHealthScale>1.50</baseHealthScale>
+			<useMeatFrom>OG_Alien_DarkEldar</useMeatFrom>
+			<hediffGiverSets>
+				<!--li>OGE_Farseer_Options</li-->
+			</hediffGiverSets>
+		</race>
+	</ThingDef>
+
+	<!-- Dark Elder Haemonculi -->
+	<ThingDef ParentName="OG_DarkEldarPawn_Base">
+		<defName>OG_DarkEldar_Haemonculi</defName>
+		<label>warlock</label>
+		<description>The Haemonculi, the Lords of Pain, are horrific and insane Drukhari flesh-sculptors who have lived within the depths of Commorragh for many Terran centuries, if not millennia. They are master torturers, the Drukhari's greatest connoisseurs of pain and terror.</description>
+		<statBases>
+			<MoveSpeed>6.5</MoveSpeed>
+			<ShootingAccuracyPawn>1.16</ShootingAccuracyPawn>
+			<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			<OG_ArmorRating_InvunerableSave>0.75</OG_ArmorRating_InvunerableSave>
+		</statBases>
+		<race>
+			<lifeExpectancy>15000</lifeExpectancy>
+			<baseHealthScale>1.25</baseHealthScale>
+			<useMeatFrom>OG_Alien_DarkEldar</useMeatFrom>
+			<hediffGiverSets>
+				<!--li>OGE_Warlock_Options</li-->
+			</hediffGiverSets>
+		</race>
+	</ThingDef>
+
+	<!-- Dark Eldar Kabalite -->
+	<ThingDef ParentName="OG_DarkEldarPawn_Base">
+		<defName>OG_DarkEldar_Kabalite</defName>
+		<label>kabalite</label>
+		<description>A Kabalite Warrior is the basic infantry unit of the Drukhari Kabals, and form the primary component of Kabal strike forces during raids into realspace. Utilising a wide array of exotic and fiendish weapons, these martially-gifted Drukhari are fierce warriors, tall and athletically built, more powerful in stature than the average city-bound citizen of Commorragh.</description>
+		<statBases>
+			<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.75</ArmorRating_Heat>
+		</statBases>
+		<race>
+			<baseHealthScale>1</baseHealthScale>
+			<useMeatFrom>OG_Alien_DarkEldar</useMeatFrom>
+		</race>
+	</ThingDef>
+
+	<!-- Dark Eldar Trueborn Kabalite -->
+	<ThingDef ParentName="OG_DarkEldarPawn_Base">
+		<defName>OG_DarkEldar_Kabalite_Trueborn</defName>
+		<label>kabalite</label>
+		<description>The Trueborn are an elite group that excludes any "Halfborn" Drukhari birthed in an amniotic tube from their company. Led by an officer called a Dracon, these hardened killers carry a wide assortment of expensive and deadly weapons wherever they go, supposedly to better protect the life of their Archon but in truth only to better inflict more pain and death.</description>
+		<statBases>
+			<ArmorRating_Blunt>0.8</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.8</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.8</ArmorRating_Heat>
+		</statBases>
+		<race>
+			<baseHealthScale>1</baseHealthScale>
+			<useMeatFrom>OG_Alien_DarkEldar</useMeatFrom>
+		</race>
+	</ThingDef>
+
+	<!-- Dark Eldar Wych -->
+	<ThingDef ParentName="OG_DarkEldarPawn_Base">
+		<defName>OG_DarkEldar_Wych</defName>
+		<label>wych</label>
+		<description>Wyches, also known as Hekatarii are gladiatorial warriors of the Dark Eldar, they each belong to one of the various Wych Cults of Commoragh. Wyches fight in arenas in duels with one another and with various captured aliens and beasts; few survive their first duel but those who live learn quickly. Ruled over by their Succubi, the Wyches are highly proficient at close-quarters combat, practising their skills for their entire lives. Wyches often use a cocktail of combat-enhancing drugs to improve their performance on the battlefield.</description>
+		<statBases>
+			<ArmorRating_Blunt>0.55</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.55</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.55</ArmorRating_Heat>
+			<OG_ArmorRating_InvunerableSave>0.55</OG_ArmorRating_InvunerableSave>
+			<ShootingAccuracyPawn>1.16</ShootingAccuracyPawn>
+			<MoveSpeed>6.4</MoveSpeed>
+		</statBases>
+		<race>
+			<baseHealthScale>1</baseHealthScale>
+			<useMeatFrom>OG_Alien_DarkEldar</useMeatFrom>
+		</race>
+	</ThingDef>
+	
+	<!-- Dark Eldar Wych Hekatrix -->
+	<ThingDef ParentName="OG_DarkEldarPawn_Base">
+		<defName>OG_DarkEldar_Wych_Hekatrix</defName>
+		<label>hekatrix wych</label>
+		<description>Wyches, also known as Hekatarii are gladiatorial warriors of the Dark Eldar, they each belong to one of the various Wych Cults of Commoragh. Wyches fight in arenas in duels with one another and with various captured aliens and beasts; few survive their first duel but those who live learn quickly. Ruled over by their Succubi, the Wyches are highly proficient at close-quarters combat, practising their skills for their entire lives. Wyches often use a cocktail of combat-enhancing drugs to improve their performance on the battlefield.</description>
+		<statBases>
+			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.6</ArmorRating_Heat>
+			<OG_ArmorRating_InvunerableSave>0.6</OG_ArmorRating_InvunerableSave>
+			<ShootingAccuracyPawn>1.16</ShootingAccuracyPawn>
+			<MoveSpeed>6.4</MoveSpeed>
+		</statBases>
+		<race>
+			<baseHealthScale>1</baseHealthScale>
+			<useMeatFrom>OG_Alien_DarkEldar</useMeatFrom>
+		</race>
+	</ThingDef>
+	
+	<!-- Dark Eldar Hellion -->
+	<ThingDef ParentName="OG_DarkEldarPawn_Base">
+		<defName>OG_DarkEldar_Hellion</defName>
+		<label>hellion</label>
+		<description>Hellions are Drukhari miscreants. Their numbers include aspirants not yet old enough to be chosen as Kabalite Warriors, those who have been exiled by their Archons and those who have rejected life in a Kabal in favour of one of continued autonomy, beholden to none. Packs of Hellions haunt the desolate regions of the Dark City, surviving through the use of their wits and taking pride in the scars they earn in the course of their savage lives.</description>
+		<statBases>
+			<ArmorRating_Blunt>0.92</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.92</ArmorRating_Heat>
+			<ShootingAccuracyPawn>1.16</ShootingAccuracyPawn>
+			<OG_ArmorRating_InvunerableSave>0.55</OG_ArmorRating_InvunerableSave>
+			<MoveSpeed>6.4</MoveSpeed>
+		</statBases>
+		<race>
+			<baseHealthScale>1</baseHealthScale>
+			<useMeatFrom>OG_Alien_DarkEldar</useMeatFrom>
+		</race>
+	</ThingDef>
+	
+	<!-- Dark Eldar Hellion Heliarch -->
+	<ThingDef ParentName="OG_DarkEldarPawn_Base">
+		<defName>OG_DarkEldar_Hellion_Heliarch</defName>
+		<label>heliarch hellion</label>
+		<description>Hellions are Drukhari miscreants. Their numbers include aspirants not yet old enough to be chosen as Kabalite Warriors, those who have been exiled by their Archons and those who have rejected life in a Kabal in favour of one of continued autonomy, beholden to none. Packs of Hellions haunt the desolate regions of the Dark City, surviving through the use of their wits and taking pride in the scars they earn in the course of their savage lives.</description>
+		<statBases>
+			<ArmorRating_Blunt>0.92</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.92</ArmorRating_Heat>
+			<ShootingAccuracyPawn>1.16</ShootingAccuracyPawn>
+			<OG_ArmorRating_InvunerableSave>0.55</OG_ArmorRating_InvunerableSave>
+			<MoveSpeed>6.4</MoveSpeed>
+		</statBases>
+		<race>
+			<baseHealthScale>1</baseHealthScale>
+			<useMeatFrom>OG_Alien_DarkEldar</useMeatFrom>
+		</race>
+	</ThingDef>
+	
+	<!-- Dark Eldar Incubi -->
+	<ThingDef ParentName="OG_DarkEldarPawn_Base">
+		<defName>OG_DarkEldar_Incubi</defName>
+		<label>incubi</label>
+		<description>A</description>
+		<statBases>
+			<ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.06</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.06</ArmorRating_Heat>
+			<ToxicSensitivity>-1</ToxicSensitivity>
+			<PsychicSensitivity>-0.95</PsychicSensitivity>
+			<ShootingAccuracyPawn>1.16</ShootingAccuracyPawn>
+			<MoveSpeed>6.4</MoveSpeed>
+		</statBases>
+		<race>
+			<baseHealthScale>1</baseHealthScale>
+			<useMeatFrom>OG_Alien_DarkEldar</useMeatFrom>
+		</race>
+	</ThingDef>
+	
+	<!-- Dark Eldar Incubi Lord -->
+	<ThingDef ParentName="OG_DarkEldarPawn_Base">
+		<defName>OG_DarkEldar_Incubi_Lord</defName>
+		<label>incubi lord</label>
+		<description>A</description>
+		<statBases>
+			<ArmorRating_Sharp>1.09</ArmorRating_Sharp>
+			<ArmorRating_Blunt>1.09</ArmorRating_Blunt>
+			<ArmorRating_Heat>1.09</ArmorRating_Heat>
+			<ToxicSensitivity>-1</ToxicSensitivity>
+			<PsychicSensitivity>-0.95</PsychicSensitivity>
+			<ShootingAccuracyPawn>1.16</ShootingAccuracyPawn>
+			<MoveSpeed>6.4</MoveSpeed>
+		</statBases>
+		<race>
+			<baseHealthScale>1</baseHealthScale>
+			<useMeatFrom>OG_Alien_DarkEldar</useMeatFrom>
+		</race>
+	</ThingDef>
+	
+</Defs>

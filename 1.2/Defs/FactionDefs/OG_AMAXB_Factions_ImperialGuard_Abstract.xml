@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef Abstract="true" Name="OG_Militarum_Faction_Base" ParentName="FactionBase">
+		<defName>OG_Militarum_Faction</defName>
+		<label>Imperial Guard Regiment</label>
+		<description>The Astra Militarum, also known as the Imperial Guard in colloquial Low Gothic, is the largest coherent fighting force in the galaxy. They serve as the Imperium of Man's primary combat force and first line of defence from the myriad threats which threaten the existence of the Human race in the late 41st Millennium. It is comprised of countless billions of men and women -- hundreds of thousands of different regiments, supported by a vast array of light and heavy armoured vehicles that provide the Guard's primary offensive punch.</description>
+		<pawnsPlural>Guardsmen</pawnsPlural>
+		<colorSpectrum>
+			<li>(0.25, 0.65, 0.05)</li>
+			<li>(0.25, 0.75, 0.05)</li>
+		</colorSpectrum>
+		<categoryTag>Outlander</categoryTag>
+		<basicMemberKind>Colonist_OG_Militarum</basicMemberKind>
+		<requiredCountAtGameStart>0</requiredCountAtGameStart>
+		<settlementGenerationWeight>0</settlementGenerationWeight>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">20</configurationListOrderPriority>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>Lord Marshal</leaderTitle>
+		<!--startingGoodwill>
+			<min>10</min>
+			<max>40</max>
+		</startingGoodwill-->
+		<settlementNameMaker>OG_Militarum_NamerBases</settlementNameMaker>
+		<factionNameMaker>OG_Militarum_NamerFaction</factionNameMaker>
+		<techLevel>Ultra</techLevel>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Imperium_Standard</li>
+				</categories>
+				<commonality>0.75</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Imperium_Soldier</li>
+				</categories>
+				<commonality>10</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categories>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFilters>
+		<visitorTraderKinds>
+			<li>OG_Miliatrum_Trader_Visitor_Standard</li>
+		</visitorTraderKinds>
+		 <caravanTraderKinds>
+			<li>OG_Miliatrum_Trader_Caravan_BulkGoods</li>
+			<li>OG_Miliatrum_Trader_Caravan_CombatSupplier</li>
+			<li>OG_Miliatrum_Trader_Caravan_Exotic</li>
+		</caravanTraderKinds>
+		<baseTraderKinds>
+			<li>OG_Miliatrum_Trader_Base_Standard</li>
+		</baseTraderKinds>
+		<allowedArrivalTemperatureRange>
+			<min>-50</min>
+			<max>45</max>
+		</allowedArrivalTemperatureRange>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(70, 50)</li>
+				<li>(700, 100)</li>
+				<li>(1300, 150)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<pawnGroupMakers>
+			<li>
+				<kindDef>Combat</kindDef>
+				<options>
+					<OG_Militarum_Guardsman_Ranged>230</OG_Militarum_Guardsman_Ranged>
+					<OG_Militarum_Guardsman_Melee>100</OG_Militarum_Guardsman_Melee>
+					<OG_Militarum_Guardsman_Ranged_Special>65</OG_Militarum_Guardsman_Ranged_Special>
+					<OG_Militarum_Guardsman_Melee_Special>50</OG_Militarum_Guardsman_Melee_Special>
+					<OG_Militarum_Guardsman_Heavy_Weapons>30</OG_Militarum_Guardsman_Heavy_Weapons>
+					<OG_Militarum_Guardsman_Marksman>30</OG_Militarum_Guardsman_Marksman>
+					<OG_Militarum_Sergeant>10</OG_Militarum_Sergeant>
+					<OG_Mechanicus_Tech_Priest_Engineer>1</OG_Mechanicus_Tech_Priest_Engineer>
+					<OG_Militarum_LordMarshal>1</OG_Militarum_LordMarshal>
+				</options>
+			</li>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<Colonist_OG_Militarum>50</Colonist_OG_Militarum>
+					<OG_Militarum_Guardsman_Ranged>230</OG_Militarum_Guardsman_Ranged>
+					<OG_Militarum_Guardsman_Melee>130</OG_Militarum_Guardsman_Melee>
+					<OG_Mechanicus_Tech_Priest_Engineer>1</OG_Mechanicus_Tech_Priest_Engineer>
+					<OG_Militarum_LordMarshal>1</OG_Militarum_LordMarshal>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<OG_Militarum_Trader>1</OG_Militarum_Trader>
+				</traders>
+				<carriers>
+					<Muffalo>2</Muffalo>
+					<Dromedary>2</Dromedary>
+				</carriers>
+				<guards>
+					<OG_Militarum_Guardsman_Ranged>130</OG_Militarum_Guardsman_Ranged>
+					<OG_Mechanicus_Tech_Priest_Engineer>1</OG_Mechanicus_Tech_Priest_Engineer>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<OG_Militarum_LordMarshal>1</OG_Militarum_LordMarshal>
+					<OG_Militarum_Guardsman_Ranged>230</OG_Militarum_Guardsman_Ranged>
+					<OG_Militarum_Guardsman_Melee>100</OG_Militarum_Guardsman_Melee>
+					<OG_Militarum_Guardsman_Ranged_Special>65</OG_Militarum_Guardsman_Ranged_Special>
+					<OG_Militarum_Guardsman_Melee_Special>50</OG_Militarum_Guardsman_Melee_Special>
+					<OG_Militarum_Guardsman_Heavy_Weapons>30</OG_Militarum_Guardsman_Heavy_Weapons>
+					<OG_Militarum_Guardsman_Marksman>30</OG_Militarum_Guardsman_Marksman>
+					<OG_Militarum_Sergeant>10</OG_Militarum_Sergeant>
+					<OG_Mechanicus_Tech_Priest_Engineer>10</OG_Mechanicus_Tech_Priest_Engineer>
+				</options>
+			</li>
+		</pawnGroupMakers>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<factionIconPath>Icons/Imperial/Militarum/Icon_Adeptus_Militarum</factionIconPath>
+	</FactionDef>
+
+</Defs>

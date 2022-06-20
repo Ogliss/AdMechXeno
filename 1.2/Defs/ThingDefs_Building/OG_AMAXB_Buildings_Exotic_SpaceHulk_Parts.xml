@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- ========================= Space Hulk ========================= -->
+<ThingDef ParentName="ShipPartBaseOG">
+	<defName>OG_SpaceHulk_Part</defName>
+	<label>Space Hulk Part</label>
+	<description>A mysterious crashed piece of a spaceship. It may contain any manner of deadly defenders and exotic materials.</description>
+	<placeWorkers>
+		<li>PlaceWorker_ShowPlantHarmRadius</li>
+	</placeWorkers>
+	<graphicData>
+		<texPath>Things/Building/Exotic/CrashedPoisonShipPart</texPath>
+		<graphicClass>Graphic_Single</graphicClass>
+		<drawSize>(6,3)</drawSize>
+		<shadowData><volume>(0.9, 1.0, 0.9)</volume></shadowData>
+		<damageData><rect>(0.5, 0.1, 5, 2.8)</rect></damageData>
+	</graphicData>
+	<comps>
+		<li Class="CrashedShipsExtension.CompProperties_SpawnerOnDamaged">
+		<Factions>
+			<li>OG_Ork_Waaagh</li>
+			<li>OG_Tyranid_Faction</li>
+			<li>OG_Chaos_Deamon_Faction</li>
+			<li>Pirate</li>
+		</Factions>
+		</li>
+		<!--li Class="CompProperties_PlantHarmRadius">
+		<radiusPerDayCurve>
+			<points>
+			<li>0, 5</li>
+			<li>1.5, 18</li>
+			<li>6, 40</li>
+			<li>20 , 100</li>
+			</points>
+		</radiusPerDayCurve>
+		</li-->
+	</comps>
+</ThingDef>
+
+</Defs>

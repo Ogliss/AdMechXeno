@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Defs>
+
+	<!--==================== Tyranid - Barbed Strangler =========================-->
+	<SoundDef>
+		<defName>OG_BarbedStrangler_Sound</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+					<clipFolderPath>Weapons/Ranged/Tyranid/BarbedStrangler_Shot</clipFolderPath>
+					</li>
+				</grains>		
+				<volumeRange>
+					<min>25.0</min>		
+					<max>35.0</max>
+				</volumeRange>		
+				<pitchRange>
+					<min>0.9</min>		
+					<max>1.0</max>
+				</pitchRange>		
+				<sustainLoop>false</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	
+	<!--==================== Tyranid - Barbed Strangler Blast =========================-->
+	<SoundDef>
+		<defName>OG_BarbedStranglerBlast_Sound</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+					<clipFolderPath>Weapons/Ranged/Tyranid/BarbedStrangler_Blast</clipFolderPath>
+					</li>
+				</grains>		
+				<volumeRange>
+					<min>25.0</min>		
+					<max>35.0</max>
+				</volumeRange>		
+				<pitchRange>
+					<min>0.9</min>		
+					<max>1.0</max>
+				</pitchRange>		
+				<sustainLoop>false</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	
+	<!--==================== Tyranid - Devourer =========================-->
+	<SoundDef>
+		<defName>OG_Devourer_Sound</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+					<clipFolderPath>Weapons/Ranged/Tyranid/Devourer_Shot</clipFolderPath>
+					</li>
+				</grains>		
+				<volumeRange>
+					<min>25.0</min>		
+					<max>35.0</max>
+				</volumeRange>		
+				<pitchRange>
+					<min>0.9</min>		
+					<max>1.0</max>
+				</pitchRange>		
+				<sustainLoop>false</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<!--==================== Tyranid - Flesh Hooks =========================-->
+	<SoundDef>
+		<defName>OG_Fleshhook_Sound</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+					<clipFolderPath>Weapons/Ranged/Tyranid/Fleshhook_Shot</clipFolderPath>
+					</li>
+				</grains>		
+				<volumeRange>
+					<min>35.0</min>		
+					<max>45.0</max>
+				</volumeRange>		
+				<pitchRange>
+					<min>0.9</min>		
+					<max>1.0</max>
+				</pitchRange>		
+				<sustainLoop>false</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<!--==================== Tyranid - Venomcannon =========================-->
+	<SoundDef>
+		<defName>OG_Venomcannon_Sound</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+					<clipFolderPath>Weapons/Ranged/Tyranid/Venomcannon_Shot</clipFolderPath>
+					</li>
+				</grains>		
+				<volumeRange>
+					<min>35.0</min>		
+					<max>45.0</max>
+				</volumeRange>		
+				<pitchRange>
+					<min>0.9</min>		
+					<max>1.0</max>
+				</pitchRange>		
+				<sustainLoop>false</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<!--==================== Tyranid - Zoanthrope Aiming =========================-->
+<SoundDef>
+	<defName>OG_ZoanthropeAiming_Sound</defName>
+	<sustain>true</sustain>
+	<context>MapOnly</context>
+	<eventNames />
+	<maxSimultaneous>2</maxSimultaneous>
+	<priorityMode>PrioritizeNearest</priorityMode>
+	<subSounds>
+		<li>
+		<tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
+		<grains>
+			<li Class="AudioGrain_Folder">
+			<clipFolderPath>Weapons/Ranged/Tyranid/Zoanthrope_Aiming</clipFolderPath>
+			</li>
+		</grains>		
+		<pitchRange>
+			<min>0.99</min>		
+			<max>1.01</max>
+		</pitchRange>
+		<volumeRange>
+			<min>10</min>		
+			<max>10</max>
+		</volumeRange>
+		</li>
+	</subSounds>
+</SoundDef>
+
+	<!--==================== Tyranid - Zoanthrope Shot =========================-->
+	<SoundDef>
+		<defName>OG_Zoanthrope_Sound</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+					<clipFolderPath>Weapons/Ranged/Tyranid/Zoanthrope_Shot</clipFolderPath>
+					</li>
+				</grains>		
+				<volumeRange>
+					<min>35.0</min>		
+					<max>45.0</max>
+				</volumeRange>		
+				<pitchRange>
+					<min>0.9</min>		
+					<max>1.0</max>
+				</pitchRange>		
+				<sustainLoop>false</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+	<!--==================== Tyranid - Zoanthrope Blast =========================-->
+	<SoundDef>
+		<defName>OG_ZoanthropeBlast_Sound</defName>
+		<context>MapOnly</context>
+		<eventNames />
+		<maxSimultaneous>1</maxSimultaneous>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Folder">
+					<clipFolderPath>Weapons/Ranged/Tyranid/Zoanthrope_Blast</clipFolderPath>
+					</li>
+				</grains>		
+				<volumeRange>
+					<min>35.0</min>		
+					<max>45.0</max>
+				</volumeRange>		
+				<pitchRange>
+					<min>0.9</min>		
+					<max>1.0</max>
+				</pitchRange>		
+				<sustainLoop>false</sustainLoop>
+			</li>
+		</subSounds>
+	</SoundDef>
+	
+</Defs>

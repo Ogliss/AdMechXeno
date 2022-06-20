@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<HediffDef ParentName="ImplantHediffBase" Name="ChaosDeamonPower" Abstract="true">
+	<description>a deamonic mutation</description>
+</HediffDef>
+
+<!-- ====================== Deamonic Powers ===================== -->
+<!-- ====================== Warpfire Bolt ===================== -->
+ <ThingDef ParentName="BaseBullet">
+	<defName>OGCD_Bullet_Warpfire_Bolt</defName>
+	<label>warpfire bolt</label>
+	<tickerType>Normal</tickerType>
+	<graphicData>
+		<texPath>Things/Projectile/Warpfire</texPath>
+		<graphicClass>AdeptusMechanicus.Graphic_Cycle</graphicClass>
+		<shaderType>TransparentPostLight</shaderType>
+	</graphicData>
+	<thingClass>AdeptusMechanicus.Projectile_Fire</thingClass>
+	<modExtensions>
+		<li Class="AnimatedProjectile.AnimatedProjectileExtension">
+		<ticksPerFrame>15</ticksPerFrame>
+		</li>
+	</modExtensions>
+	<projectile>
+		<flyOverhead>false</flyOverhead>
+		<damageDef>OG_Chaos_Deamon_Warpfire</damageDef>
+		<damageAmountBase>3</damageAmountBase>
+		<armorPenetrationBase>0.16</armorPenetrationBase>
+		<explosionRadius>0.5</explosionRadius>
+		<explosionChanceToStartFire>1.0</explosionChanceToStartFire>
+		<postExplosionSpawnThingDef>OG_Warpfire</postExplosionSpawnThingDef>
+		<preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+		<stoppingPower>0.5</stoppingPower>
+		<speed>20</speed>
+		<soundExplode>OGIFL_Explosion</soundExplode>
+	</projectile>
+</ThingDef>
+ 
+<HediffDef ParentName="ChaosDeamonPower">
+	<defName>OG_ChaosDeamon_Power_Warpfire_Bolt</defName>
+	<label>Warpfire maw</label>
+	<labelNoun>a Warpfire maw</labelNoun>
+	<stages>
+		<li>
+		<label>warpfire ranged attack</label>
+		</li>
+	</stages>
+	<comps>
+		<li Class="AdeptusMechanicus.HediffCompProperties_VerbGiverExtra">
+		<verbEntrys>
+			<li>
+				<Multishot>true</Multishot>
+				<ScattershotCount>2</ScattershotCount>
+				<VerbProps>
+				<label>warpfire</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<accuracyTouch>0.15</accuracyTouch>
+				<accuracyShort>0.45</accuracyShort>
+				<accuracyMedium>0.15</accuracyMedium>
+				<accuracyLong>0.1</accuracyLong>
+				<warmupTime>1.5</warmupTime>
+				<defaultCooldownTime>1.5</defaultCooldownTime>
+				<range>20</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<commonality>0.5</commonality>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>OGCD_Bullet_Warpfire_Bolt</defaultProjectile>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>OG_Flamer_Sound</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>10</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				</VerbProps>
+			</li>
+		</verbEntrys>
+		</li>
+	</comps>
+</HediffDef>
+
+<!-- ====================== Lesser Warpfire Bolt ===================== -->
+<HediffDef ParentName="ChaosDeamonPower">
+	<defName>OG_ChaosDeamon_Power_Warpfire_Bolt_Lesser</defName>
+	<label>Warpfire maw</label>
+	<labelNoun>a Warpfire maw</labelNoun>
+	<stages>
+		<li>
+		<label>warpfire ranged attack</label>
+		</li>
+	</stages>
+	<comps>
+		<li Class="AdeptusMechanicus.HediffCompProperties_VerbGiverExtra">
+		<verbEntrys>
+			<li>
+				<Multishot>true</Multishot>
+				<ScattershotCount>2</ScattershotCount>
+				<VerbProps>
+				<label>warpfire</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<accuracyTouch>0.15</accuracyTouch>
+				<accuracyShort>0.45</accuracyShort>
+				<accuracyMedium>0.15</accuracyMedium>
+				<accuracyLong>0.1</accuracyLong>
+				<warmupTime>1.5</warmupTime>
+				<defaultCooldownTime>1.5</defaultCooldownTime>
+				<range>15</range>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<commonality>0.5</commonality>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>OGCD_Bullet_Warpfire_Bolt</defaultProjectile>
+				<burstShotCount>1</burstShotCount>
+				<soundCast>OG_Flamer_Sound</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>10</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				</VerbProps>
+			</li>
+		</verbEntrys>
+		</li>
+	</comps>
+</HediffDef>
+
+<!-- ====================== Warpfire Flamer ===================== -->
+ <ThingDef ParentName="BaseBullet">
+	<defName>OGCD_Bullet_Warpfire_Flamer</defName>
+	<label>warpflames</label>
+	<tickerType>Normal</tickerType>
+	<graphicData>
+		<texPath>Things/Projectile/Warpfire</texPath>
+		<graphicClass>AdeptusMechanicus.Graphic_Cycle</graphicClass>
+		<shaderType>TransparentPostLight</shaderType>
+	</graphicData>
+	<thingClass>AdeptusMechanicus.Projectile_Fire</thingClass>
+	<modExtensions>
+		<li Class="AnimatedProjectile.AnimatedProjectileExtension">
+		<ticksPerFrame>15</ticksPerFrame>
+		</li>
+	</modExtensions>
+	<projectile>
+		<flyOverhead>false</flyOverhead>
+		<damageDef>OG_Chaos_Deamon_Warpfire</damageDef>
+		<damageAmountBase>1</damageAmountBase>
+		<armorPenetrationBase>0.16</armorPenetrationBase>
+		<explosionRadius>0.75</explosionRadius>
+		<explosionChanceToStartFire>1.0</explosionChanceToStartFire>
+		<postExplosionSpawnThingDef>OG_Warpfire</postExplosionSpawnThingDef>
+		<preExplosionSpawnChance>0.5</preExplosionSpawnChance>
+		<stoppingPower>0.5</stoppingPower>
+		<speed>20</speed>
+		<soundExplode>OGIFL_Explosion</soundExplode>
+	</projectile>
+</ThingDef>
+
+<HediffDef ParentName="ChaosDeamonPower">
+	<defName>OG_ChaosDeamon_Power_Warpfire_Flamer</defName>
+	<label>Warpfire maw</label>
+	<labelNoun>a Warpfire maw</labelNoun>
+	<stages>
+		<li>
+		<label>warpfire ranged attack</label>
+		</li>
+	</stages>
+	<comps>
+		<li Class="AdeptusMechanicus.HediffCompProperties_VerbGiverExtra">
+		<verbEntrys>
+			<li>
+				<Multishot>true</Multishot>
+				<ScattershotCount>2</ScattershotCount>
+				<VerbProps>
+				<label>warpfire</label>
+				<verbClass>Verb_Shoot</verbClass>
+				<accuracyTouch>0.15</accuracyTouch>
+				<accuracyShort>0.45</accuracyShort>
+				<accuracyMedium>0.15</accuracyMedium>
+				<accuracyLong>0.1</accuracyLong>
+				<warmupTime>0.5</warmupTime>
+				<defaultCooldownTime>2</defaultCooldownTime>
+				<range>12</range>
+				<forcedMissRadius>2</forcedMissRadius>
+				<burstShotCount>6</burstShotCount>
+				<ticksBetweenBurstShots>10</ticksBetweenBurstShots>
+				<ai_AvoidFriendlyFireRadius>5</ai_AvoidFriendlyFireRadius>
+				<commonality>1</commonality>
+				<hasStandardCommand>true</hasStandardCommand>
+				<defaultProjectile>OGCD_Bullet_Warpfire_Flamer</defaultProjectile>
+				<soundCast>OG_Flamer_Sound</soundCast>
+				<soundCastTail>GunTail_Heavy</soundCastTail>
+				<muzzleFlashScale>28</muzzleFlashScale>
+				<targetParams>
+					<canTargetLocations>true</canTargetLocations>
+				</targetParams>
+				</VerbProps>
+			</li>
+		</verbEntrys>
+		</li>
+	</comps>
+</HediffDef>
+
+</Defs>

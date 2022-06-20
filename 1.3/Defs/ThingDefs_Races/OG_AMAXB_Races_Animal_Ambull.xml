@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ========================== Snotling ================================= -->
+	<ThingDef ParentName="AnimalThingBase" ADogSaidBody="LegsArmsTail">
+		<defName>OG_Xenos_Ambull</defName>
+		<label>ambull</label>
+		<description>An Ambull is a massively built, roughly humanoid xenos creature with an insect-like armoured carapace and oversized arms tipped with iron-hard claws. Their pronounced hunched stance lowers their true height greatly, but when fully upright with claws stretched overhead they can easily reach four metres in height./n/nAmbulls are extremely hardy and long-lived social creatures, usually forming close-knit family units with several adults tending to broods of four to seven offspring. They are also natural tunnelers, with eyes sensitive to the faintest light even into the infrared spectrum, and claws that can excavate through soft rock and earth at alarming speeds.</description>
+		<statBases>
+			<MoveSpeed>5.0</MoveSpeed>
+			<MarketValue>850</MarketValue>
+			<MinimumHandlingSkill>15</MinimumHandlingSkill>
+			<MeleeDodgeChance>0.25</MeleeDodgeChance>
+			<MeleeCritChance MayRequire="CETeam.CombatExtended">0.30</MeleeCritChance>
+			<MeleeParryChance MayRequire="CETeam.CombatExtended">0.2</MeleeParryChance>
+			<ArmorRating_Blunt>0.6</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.6</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.6</ArmorRating_Heat>
+			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
+			<ComfyTemperatureMax>50</ComfyTemperatureMax>
+		</statBases>
+		<tools>
+			<li>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>3</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+				<li>
+					<def>Stun</def>
+					<amount>11</amount>
+				</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
+			</li>
+			<li>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>3</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+				<li>
+					<def>Stun</def>
+					<amount>11</amount>
+				</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
+			</li>
+			<li>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>2</power>
+			<cooldownTime>1.8</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<hasGenders>true</hasGenders>
+			<body>Human</body>
+			<intelligence>Animal</intelligence>
+			<predator>true</predator>
+			<maxPreyBodySize>5.50</maxPreyBodySize>
+			<petness>0.0</petness>
+			<baseBodySize>3.750</baseBodySize>
+			<baseHungerRate>1</baseHungerRate>
+			<baseHealthScale>3.0</baseHealthScale>
+			<foodType>OmnivoreAnimal, OvivoreAnimal</foodType>
+			<leatherDef>Leather_Ambull</leatherDef>
+			<bloodDef>OG_FilthBlood_Ambull</bloodDef>	
+			<gestationPeriodDays>14</gestationPeriodDays>
+			<nameOnTameChance>0</nameOnTameChance>
+			<!-- <thinkTreeMain>Snotling</thinkTreeMain> -->
+			<wildness>1</wildness>
+			<manhunterOnTameFailChance>0.55</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0.95</manhunterOnDamageChance>
+			<litterSizeCurve>
+			<points>
+				<li>(0.5, 0)</li>
+				<li>(1, 1)</li>
+				<li>(2, 1.7)</li>
+				<li>(2.5, 0.7)</li>
+				<li>(3, 0)</li>
+			</points>
+			</litterSizeCurve>
+			<lifeExpectancy>10</lifeExpectancy>
+			<lifeStageAges>
+			<li>
+				<def>AnimalBaby</def>
+				<minAge>0</minAge>
+			</li>
+			<li>
+				<def>AnimalJuvenile</def>
+				<minAge>1</minAge>
+			</li>
+			<li>
+				<def>AnimalAdult</def>
+				<minAge>3</minAge>
+				<soundWounded>Pawn_Warg_Wounded</soundWounded>
+				<soundDeath>Pawn_Warg_Death</soundDeath>
+				<soundCall>Pawn_Warg_Call</soundCall>
+				<soundAngry>Pawn_Warg_Angry</soundAngry>
+			</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>AnimalAmbull</li>
+		</tradeTags>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>OG_Xenos_Ambull</defName>
+		<label>ambull</label>
+		<race>OG_Xenos_Ambull</race>
+		<combatPower>150</combatPower>
+		<ecoSystemWeight>0.5</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animals/Ambull/Ambull</texPath>
+					<drawSize>1.1</drawSize>
+					<color>(28,121,62)</color>
+					<shaderType>CutoutComplex</shaderType>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animals/Ambull/Ambull</texPath>
+					<drawSize>2.0</drawSize>
+					<color>(28,121,62)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+					<volume>(0.25, 0.3, 0.25)</volume>
+					<offset>(0,0,-0.15)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>3</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animals/Ambull/Ambull</texPath>
+					<drawSize>3.0</drawSize>
+					<color>(28,121,62)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+					<volume>(0.3, 0.4, 0.3)</volume>
+					<offset>(0,0,-0.15)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>

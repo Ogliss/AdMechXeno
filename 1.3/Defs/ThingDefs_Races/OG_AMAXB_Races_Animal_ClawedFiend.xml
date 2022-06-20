@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ========================== Snotling ================================= -->
+	<ThingDef ParentName="AnimalThingBase" ADogSaidBody="LegsArmsTail">
+		<defName>OG_Xenos_ClawedFiend</defName>
+		<label>clawed fiend</label>
+		<description>The Clawed Fiend is an alien beast whose body is an amalgamation of the most predatory aspects of nature. Its size is tremendous and it can move that bulk of muscle and claw at almost preternatural speeds.\n\nThe arms are long and muscular, giving it a tremendous reach. It also sports a long corded tail of bone and sinew, ending with a deadly spike of bone.\n\nThe Fiend gets its name from the ferocious tips on each of its fingers and toes. Each claw is larger than an Ork's finger and is cruelly shaped. The curved mass of chitin that forms each talon comes to a dangerous point and the edge is almost as sharp as a mono blade.</description>
+		<statBases>
+			<MoveSpeed>6.5</MoveSpeed>
+			<MarketValue>850</MarketValue>
+			<MinimumHandlingSkill>15</MinimumHandlingSkill>
+			<MeleeDodgeChance>0.25</MeleeDodgeChance>
+			<MeleeCritChance MayRequire="CETeam.CombatExtended">0.30</MeleeCritChance>
+			<MeleeParryChance MayRequire="CETeam.CombatExtended">0.2</MeleeParryChance>
+			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.3</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.3</ArmorRating_Heat>
+			<ComfyTemperatureMin>-50</ComfyTemperatureMin>
+			<ComfyTemperatureMax>50</ComfyTemperatureMax>
+		</statBases>
+		<tools>
+			<li>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>3</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+				<li>
+					<def>Stun</def>
+					<amount>11</amount>
+				</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
+			</li>
+			<li>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>3</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+				<li>
+					<def>Stun</def>
+					<amount>11</amount>
+				</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
+			</li>
+			<li>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>2</power>
+			<cooldownTime>1.8</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<hasGenders>true</hasGenders>
+			<body>Human</body>
+			<intelligence>Animal</intelligence>
+			<predator>true</predator>
+			<maxPreyBodySize>5.50</maxPreyBodySize>
+			<petness>0.0</petness>
+			<baseBodySize>3.750</baseBodySize>
+			<baseHungerRate>1</baseHungerRate>
+			<baseHealthScale>3.0</baseHealthScale>
+			<foodType>OmnivoreAnimal, OvivoreAnimal</foodType>
+			<leatherDef>Leather_ClawedFiend</leatherDef>
+			<bloodDef>OG_FilthBlood_ClawedFiend</bloodDef>	
+			<gestationPeriodDays>14</gestationPeriodDays>
+			<nameOnTameChance>0</nameOnTameChance>
+			<!-- <thinkTreeMain>Snotling</thinkTreeMain> -->
+			<wildness>1</wildness>
+			<manhunterOnTameFailChance>0.55</manhunterOnTameFailChance>
+			<manhunterOnDamageChance>0.95</manhunterOnDamageChance>
+			<litterSizeCurve>
+			<points>
+				<li>(0.5, 0)</li>
+				<li>(1, 1)</li>
+				<li>(2, 1.7)</li>
+				<li>(2.5, 0.7)</li>
+				<li>(3, 0)</li>
+			</points>
+			</litterSizeCurve>
+			<lifeExpectancy>10</lifeExpectancy>
+			<lifeStageAges>
+			<li>
+				<def>AnimalBaby</def>
+				<minAge>0</minAge>
+			</li>
+			<li>
+				<def>AnimalJuvenile</def>
+				<minAge>1</minAge>
+			</li>
+			<li>
+				<def>AnimalAdult</def>
+				<minAge>3</minAge>
+				<soundWounded>Pawn_Warg_Wounded</soundWounded>
+				<soundDeath>Pawn_Warg_Death</soundDeath>
+				<soundCall>Pawn_Warg_Call</soundCall>
+				<soundAngry>Pawn_Warg_Angry</soundAngry>
+			</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<li>AnimalAmbull</li>
+		</tradeTags>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Humanoid</bodyShape>
+			</li>
+		</modExtensions>
+	</ThingDef>
+
+	<PawnKindDef ParentName="AnimalKindBase">
+		<defName>OG_Xenos_ClawedFiend</defName>
+		<label>clawed fiend</label>
+		<race>OG_Xenos_ClawedFiend</race>
+		<combatPower>150</combatPower>
+		<ecoSystemWeight>0.5</ecoSystemWeight>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animals/ClawedFiend/ClawedFiend</texPath>
+					<drawSize>1.1</drawSize>
+					<color>(28,121,62)</color>
+					<shaderType>CutoutComplex</shaderType>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animals/ClawedFiend/ClawedFiend</texPath>
+					<drawSize>2.0</drawSize>
+					<color>(28,121,62)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+					<volume>(0.25, 0.3, 0.25)</volume>
+					<offset>(0,0,-0.15)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>3</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animals/ClawedFiend/ClawedFiend</texPath>
+					<drawSize>3.0</drawSize>
+					<color>(28,121,62)</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+					<volume>(0.3, 0.4, 0.3)</volume>
+					<offset>(0,0,-0.15)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>4</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+</Defs>
