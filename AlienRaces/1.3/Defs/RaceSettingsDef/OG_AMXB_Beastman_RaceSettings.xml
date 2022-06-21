@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<AlienRace.RaceSettings>
+		<defName>Beastman_Settings</defName>
+		<pawnKindSettings>
+			<alienslavekinds>
+				<li>
+					<kindDefs>
+						<li>Colonist_OG_Mechanicus</li>
+					</kindDefs>
+					<chance>1.0</chance>
+				</li>
+			</alienslavekinds>
+			<alienrefugeekinds>
+				<li>
+					<kindDefs>
+						<li>Colonist_OG_Mechanicus</li>
+					</kindDefs>
+					<chance>1.0</chance>
+				</li>
+			</alienrefugeekinds>
+			<startingColonists>
+				<li>
+				<pawnKindEntries>
+					<li>
+						<kindDefs>
+							<li>Colonist_OG_Mechanicus</li>
+						</kindDefs>
+						<chance>1.0</chance>
+					</li>
+				</pawnKindEntries>
+					<factionDefs>
+						<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_Faction</li>
+						<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_PlayerColony</li>
+						<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_PlayerColony</li>
+						<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_Cadian_Faction</li>
+						<li MayRequire="Ogliss.AdMech.Astartes">OG_Astartes_PlayerColony</li>
+						<li MayRequire="Ogliss.AdMech.Astartes">OG_AstartesNeophyte_PlayerColony</li>
+						<li MayRequire="CptOhu.CorruptionCore">PlayerColony_IoM</li> 
+					</factionDefs>
+				</li>
+			</startingColonists>
+			<alienwandererkinds>
+				<!--li>
+					<pawnKindEntries>
+						<li>
+							<kindDefs>
+								<li>Colonist_OG_Eldar_Craftworld</li>
+							</kindDefs>
+							<chance>50.0</chance>
+						</li>
+					</pawnKindEntries>
+					<factionDefs>
+						<li>OG_Eldar_Craftworld_PlayerColony</li> 
+					</factionDefs>
+				</li-->
+			</alienwandererkinds>
+		</pawnKindSettings>
+	</AlienRace.RaceSettings>
+</Defs>

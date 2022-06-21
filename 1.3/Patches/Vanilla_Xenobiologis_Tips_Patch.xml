@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationSequence">
+	<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/TipSetDef[defName = "GameplayTips"]</xpath>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/TipSetDef[defName = "GameplayTips"]/tips</xpath>
+				<value>		
+					<!--li>Neceron</li-->				
+					<li>Necrons are resilient foes and can regenerate when damaged/destroyed unless their Regeneration Matrix is destroyed Or the damage was caused by an attack that ignored their armour</li>
+					<li>Necron Wraith's make use of Phase Shifting technology that gives them a chance to avoid taking damage from ranged weapons.</li>
+					<!--li>Tyranid</li-->
+					<li>Tyranid Biovore's are mobile living artillery that fire Spore mines, which will drift towards the closest enemy and explode</li>
+					<!--li>Ork</li-->
+					<!--li>Tau</li-->
+					<!--li>Eldar</li-->
+					<!--li>IG</li-->
+					<!--li>AM</li-->
+					<!--li>Chaos</li-->
+					<li>Deamons are the warp made flesh, the stuff of nightmares and are often capable of shrugging off wounds that would slay a mere mortal.</li>
+				</value>
+			</li>
+		</operations>	
+	</Operation>
+	
+</Patch>

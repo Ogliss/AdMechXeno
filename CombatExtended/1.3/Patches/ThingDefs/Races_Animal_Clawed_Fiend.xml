@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- ========== Clawed Fiend ========== -->
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[@Name="OG_Xenos_ClawedFiend"]/tools</xpath>
+				<value>
+					<tools>
+						<li Class="CombatExtended.ToolCE">
+							<label>left fist</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.2</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<chanceFactor>0.2</chanceFactor>
+							<surpriseAttack>
+								<extraMeleeDamages>
+									<li>
+										<def>Stun</def>
+										<amount>11</amount>
+									</li>
+								</extraMeleeDamages>
+							</surpriseAttack>
+							<armorPenetrationBlunt>3.15</armorPenetrationBlunt>
+							<armorPenetrationSharp>0.05</armorPenetrationSharp>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>left claw</label>
+							<capacities>
+								<li>Sharp</li>
+							</capacities>
+							<power>45</power>
+							<cooldownTime>1.2</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<chanceFactor>0.4</chanceFactor>
+							<armorPenetrationBlunt>0.15</armorPenetrationBlunt>
+							<armorPenetrationSharp>4.5</armorPenetrationSharp>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>right fist</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>10</power>
+							<cooldownTime>1.6</cooldownTime>
+							<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+							<chanceFactor>0.2</chanceFactor>
+							<surpriseAttack>
+								<extraMeleeDamages>
+									<li>
+										<def>Stun</def>
+										<amount>11</amount>
+									</li>
+								</extraMeleeDamages>
+							</surpriseAttack>
+							<armorPenetrationBlunt>3.15</armorPenetrationBlunt>
+							<armorPenetrationSharp>0.02</armorPenetrationSharp>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>right claw</label>
+							<capacities>
+								<li>Sharp</li>
+							</capacities>
+							<power>45</power>
+							<cooldownTime>1.2</cooldownTime>
+							<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+							<chanceFactor>0.4</chanceFactor>
+							<armorPenetrationBlunt>0.15</armorPenetrationBlunt>
+							<armorPenetrationSharp>4.5</armorPenetrationSharp>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>head</label>
+							<capacities>
+								<li>Blunt</li>
+							</capacities>
+							<power>8</power>
+							<cooldownTime>1.8</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<chanceFactor>0.2</chanceFactor>
+							<armorPenetrationBlunt>0.15</armorPenetrationBlunt>
+						</li>
+						<li Class="CombatExtended.ToolCE">
+							<label>tail</label>
+							<capacities>
+								<li>Stab</li>
+							</capacities>
+							<power>7</power>
+							<cooldownTime>1.2</cooldownTime>
+							<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+							<chanceFactor>0.2</chanceFactor>
+							<armorPenetrationSharp>4.15</armorPenetrationSharp>
+						</li>
+					</tools>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="OG_Xenos_ClawedFiend"]/statBases</xpath>
+				<value>
+					<statBases>
+						<MoveSpeed>9.5</MoveSpeed>
+						<ArmorRating_Blunt>4.46</ArmorRating_Blunt>
+						<ArmorRating_Sharp>3.0</ArmorRating_Sharp>
+						<ArmorRating_Heat>2.16</ArmorRating_Heat>
+					</statBases>
+				 </value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>
+

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<!--success>Always</success-->
+			<!--=============== Base turrets ===============-->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[@Name="OG_Necron_TurretBase"]/thingClass</xpath>
+				<value>
+					<thingClass>CombatExtended.Building_TurretGunCE</thingClass>
+				</value>
+			</li>
+			<!--li Class="PatchOperationReplace">
+				<xpath>/Defs/ThingDef/recipeMaker/researchPrerequisites/li[text()="HeavyTurrets"]</xpath>
+				<value>
+					<li>CE_TurretHeavyWeapons</li>
+				</value>
+			</li-->
+			<!--li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[@Name="OGN_LaserTurretBase"]/thingClass</xpath>
+				<value>
+					<thingClass>AdeptusMechanicus.Lasers.Building_LaserGunCE</thingClass>
+				</value>
+			</li-->
+			<!--=============== Auto turrets ===============-->
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="OGN_TurretGun_MonolithGuassFluxArc"]/verbs/li[verbClass="CompTurret.Verb_ShootCompMounted"]/verbClass</xpath>
+				<value>
+					<verbClass>Verb_Shoot</verbClass>
+				</value>
+			</li>
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="OGN_TurretGun_MonolithGuassFluxArc"]/graphicData/texPath</xpath>
+				<value>
+					<texPath>DummyTexture</texPath>
+				</value>
+			</li>
+			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+				<defName>OGN_TurretGun_MonolithGuassFluxArc</defName>
+				<statBases>
+					<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>
+					<SightsEfficiency>1</SightsEfficiency>
+					<ShotSpread>0.07</ShotSpread>
+					<SwayFactor>0.82</SwayFactor>
+					<Bulk>10.00</Bulk>
+				</statBases>
+				<Properties>
+					<recoilAmount>0.76</recoilAmount>
+					<verbClass>CompTurretCE.Verb_ShootCompMountedCE</verbClass>
+					<hasStandardCommand>true</hasStandardCommand>
+					<defaultProjectile>OGN_Bullet_MonolithGuassFluxArc</defaultProjectile>
+					<warmupTime>0.3</warmupTime>
+					<range>36</range>
+					<ticksBetweenBurstShots>20</ticksBetweenBurstShots>
+					<burstShotCount>3</burstShotCount>
+					<soundCast>OG_Gauss_Flayer_Sound</soundCast>
+					<soundCastTail>GunTail_Light</soundCastTail>
+					<muzzleFlashScale>9</muzzleFlashScale>
+					<recoilPattern>Mounted</recoilPattern>
+				</Properties>
+				<FireModes>
+					<aiAimMode>AimedShot</aiAimMode>
+					<noSnapshot>true</noSnapshot>
+					<noSingleShot>true</noSingleShot>
+				</FireModes>
+			</li>
+			
+			<li Class="PatchOperationReplace">
+				<xpath>Defs/ThingDef[defName="OGN_Bullet_MonolithGuassFluxArc"]</xpath>
+				<value>
+					<ThingDef Class="AdeptusMechanicus.Lasers.LaserBeamDefCE" ParentName="OG_Bullet_LaserGeneric">
+						<defName>OGN_Bullet_MonolithGuassFluxArc</defName>
+							<label>guass blast</label>
+							<!--description>A high power laser beam which is effective against the more durable alien bodies and stronger types of personal armour.</description-->
+						<textures>
+							<li>Things/Projectile/GaussBoltSml</li>
+						</textures>
+						<seam>0</seam>
+						<projectile Class="CombatExtended.ProjectilePropertiesCE">
+							<damageDef>OG_N_Gauss_Damage</damageDef>
+							<damageAmountBase>8</damageAmountBase>
+							<armorPenetrationBase>8.0</armorPenetrationBase>
+							<spreadMult>4.8</spreadMult>
+							<pelletCount>2</pelletCount>
+						</projectile>
+						<!--modExtensions>
+							<li Class="AdeptusMechanicus.ProjectileVFX"><explosionMote>true</explosionMote>
+								<explosionMoteSize>0.75</explosionMoteSize>
+								<impactMoteDef>Mote_JumpFlame</impactMoteDef>
+								<impactMoteSize>2</impactMoteSize>
+								<impactGlowMoteDef>Mote_ExplosionFlash</impactGlowMoteDef>
+								<impactGlowMoteSize>2.5</impactGlowMoteSize>
+							</li>
+						</modExtensions-->
+					</ThingDef>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	 
+</Patch>
