@@ -9,8 +9,6 @@
 			<MoveSpeed>4.0</MoveSpeed>
 			<MarketValue>300</MarketValue>
 			<MeleeDodgeChance>0.09</MeleeDodgeChance>
-			<MeleeCritChance MayRequire="CETeam.CombatExtended">1.76</MeleeCritChance>
-			<MeleeParryChance MayRequire="CETeam.CombatExtended">1.0</MeleeParryChance>
 			<ArmorRating_Blunt>0.3</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
 			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
@@ -98,7 +96,7 @@
 		<gestationPeriodDays>28</gestationPeriodDays>
 		<wildness>0.6</wildness>
 		<trainability>Advanced</trainability>
-		<packAnimal>false</packAnimal>
+		<packAnimal>true</packAnimal>
 		<lifeExpectancy>30</lifeExpectancy>
 		<manhunterOnTameFailChance>0.20</manhunterOnTameFailChance>
 		<manhunterOnDamageChance>0.20</manhunterOnDamageChance>
@@ -196,18 +194,18 @@
 </PawnKindDef>
 
 <!-- ========================== Trained Kroot Knarloc ================================= -->
-<ThingDef ParentName="OG_Knarloc_Base">
+<!--ThingDef ParentName="OG_Knarloc_Base">
 	<defName>OG_Knarloc_Kindred</defName>
 	<race>
 		<useMeatFrom>OG_Knarloc</useMeatFrom>
 		<intelligence>ToolUser</intelligence>
 	</race>
 	<tradeTags Inherit="false"> </tradeTags>
-</ThingDef>
+</ThingDef-->
 
 <PawnKindDef ParentName="OG_Knarloc">
 	<defName>OG_Knarloc_Kindred</defName>
-	<race>OG_Knarloc_Kindred</race>
+	<race>OG_Knarloc</race>
 	<defaultFactionType>OG_Tau_Faction</defaultFactionType>
 </PawnKindDef>
 </Defs>

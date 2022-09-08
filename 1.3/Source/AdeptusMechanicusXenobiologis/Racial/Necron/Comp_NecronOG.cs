@@ -64,7 +64,7 @@ namespace AdeptusMechanicus
         public IntVec3 Pos => Pawn.Dead ? Pawn.Corpse.Position : Pawn.Position;
         public bool Necrodermis => (!Pawn.Dead && this.ticksSinceHeal > this.HealIntervalTicks) && Props.Necrodermis && !HealableHediffs.NullOrEmpty();
         public bool Reanimation => (Pawn.Dead && this.Corpse.Age > this.reviveIntervalTicks) && Props.ReanimationProtocol && !reviveTried;
-        public bool Phasic => (Pawn.Dead && reviveTried) && Props.PhaseOut && !phaseTried && !Map.mapPawns.AllPawns.Any(x=> (x.def == AdeptusThingDefOf.Necron_TombSpyder || (x.def == AdeptusThingDefOf.Necron_Lord && x.health.hediffSet.HasHediff(AdeptusHediffDefOf.OG_Necron_Upgrade_RessurectionOrb))) && x.Position.InHorDistOf(Pos, 20f));
+        public bool Phasic => (Pawn.Dead && reviveTried) && Props.PhaseOut && !phaseTried && !Map.mapPawns.AllPawns.Any(x=> (x.def == AdeptusThingDefOf.OG_Necron_TombSpyder || (x.def == AdeptusThingDefOf.OG_Necron_Lord && x.health.hediffSet.HasHediff(AdeptusHediffDefOf.OG_Necron_Upgrade_RessurectionOrb))) && x.Position.InHorDistOf(Pos, 20f));
 
         public BodyPartRecord NecrodermisRegulator => Pawn.RaceProps.body.AllParts.Find(x => x.def == AdeptusBodyPartDefOf.OG_Necron_NecrodermisRegulator);
         public BodyPartRecord ReanimationMatrix => Pawn.RaceProps.body.AllParts.Find(x => x.def == AdeptusBodyPartDefOf.OG_Necron_ReanimationMatrix);

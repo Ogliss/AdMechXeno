@@ -30,6 +30,7 @@
 		</comps>
 		<drawGUIOverlay>true</drawGUIOverlay>
 		-->
+		<thingClass>AdeptusMechanicus.WarpBeing</thingClass>
 		<comps>
 			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
 			<li MayRequire="CETeam.CombatExtended">
@@ -49,16 +50,19 @@
 			<Flammability>0</Flammability>
 			<MeleeDodgeChance>1</MeleeDodgeChance>
 			<MeleeHitChance>1</MeleeHitChance>
-			<MeleeCritChance MayRequire="CETeam.CombatExtended">1</MeleeCritChance>
-			<MeleeParryChance MayRequire="CETeam.CombatExtended">1</MeleeParryChance>
 			<ComfyTemperatureMin>-9999</ComfyTemperatureMin>
 			<ComfyTemperatureMax>9999</ComfyTemperatureMax>
 			<MeatAmount>0</MeatAmount>
 			<ImmunityGainSpeed>5</ImmunityGainSpeed>
 			<PainShockThreshold>5</PainShockThreshold>
+			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.10</ArmorRating_Heat>
+			<OG_ArmorRating_InvunerableSave>0.16</OG_ArmorRating_InvunerableSave>
 		</statBases>
 		<race>
 			<!--body>ChaosDeamon_BipedWithArms</body-->
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
 			<fleshType>OG_Flesh_Chaos_Deamon</fleshType>
 			<bloodDef>OG_FilthBlood_ChaosDeamon</bloodDef>	
 			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
@@ -76,7 +80,7 @@
 	<!-- Walker base -->
 	<ThingDef Abstract="True" Name="OG_Chaos_Deamon_Walker" ParentName="OG_Chaos_Deamon_Base">
 		<race>
-			<deathActionWorkerClass MayRequire="Ogliss.AdMech.Xenobiologis">AdeptusMechanicus.DeathActionWorker_ChaosDeamon</deathActionWorkerClass>
+			<deathActionWorkerClass>AdeptusMechanicus.DeathActionWorker_ChaosDeamon</deathActionWorkerClass>
 			<body>ChaosDeamon_BipedWithArms</body>
 			<intelligence>ToolUser</intelligence>
 			<baseBodySize>1.0</baseBodySize>
@@ -231,10 +235,11 @@
 		<label>Bloodletter</label>
 		<description>A Bloodletter, also known as a "Chosen of Khorne," a "Warmonger of Khorne," "Slaughter-kin" and the "Crimson Death," is a Lesser Daemon (Khak'akamshy'y in the Dark Tongue) that serves as one of the eager daemonic foot soldiers of the Chaos God Khorne's Blood Legions. As a host, they march as one, in formations with supernatural precision, but in battle, they try to outdo each other in ruthless acts of cruelty and savagery.</description>
 		<statBases>
-			<MoveSpeed>9.5</MoveSpeed>
-			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.16</ArmorRating_Heat>
+			<MeleeHitChance>1.33</MeleeHitChance>
+			<MoveSpeed>5.5</MoveSpeed>
+			<ArmorRating_Blunt>1.06</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.06</ArmorRating_Heat>
 		</statBases>
 		<tools>
 			<li>
@@ -281,13 +286,12 @@
 			</li>
 		</tools>
 		<race>
-			<body>Human</body>
-			<baseBodySize>0.5</baseBodySize>
-			<baseHealthScale>0.75</baseHealthScale>
+			<body>OG_ChaosDeamon_Humanoid</body>
+			<baseBodySize>1.25</baseBodySize>
+			<baseHealthScale>1</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
 			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-			<useMeatFrom>Mech_Centipede</useMeatFrom>
 		</race>
 		<comps> 
 			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
@@ -305,9 +309,9 @@
 		<description>A Bloodthirster, also known as a "Chosen of Khorne," a "Warmonger of Khorne," "Slaughter-kin" and the "Crimson Death," is a Lesser Daemon (Khak'akamshy'y in the Dark Tongue) that serves as one of the eager daemonic foot soldiers of the Chaos God Khorne's Blood Legions. As a host, they march as one, in formations with supernatural precision, but in battle, they try to outdo each other in ruthless acts of cruelty and savagery.</description>
 		<statBases>
 			<MoveSpeed>9.5</MoveSpeed>
-			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.16</ArmorRating_Heat>
+			<ArmorRating_Blunt>1.06</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.06</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.06</ArmorRating_Heat>
 		</statBases>
 		<tools>
 			<li>
@@ -354,7 +358,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>Human</body>
+			<body>OG_ChaosDeamon_Humanoid</body>
 			<baseBodySize>0.5</baseBodySize>
 			<baseHealthScale>0.75</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -377,6 +381,9 @@
 		<defName>OG_Chaos_Deamon_Horror</defName>
 		<label>Horror of Tzeentch</label>
 		<description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
+		<statBases>
+			<MeleeHitChance>0.66</MeleeHitChance>
+		</statBases>
 		<race>
 			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -391,7 +398,7 @@
 			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
 			</li> 
 			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
-				<InvunerableSaveChance>0.16</InvunerableSaveChance>
+				<InvunerableSaveChance>0.32</InvunerableSaveChance>
 			</li> 
 		</comps>
 	</ThingDef>
@@ -400,23 +407,12 @@
 		<defName>OG_Chaos_Deamon_Horror_Pink</defName>
 		<statBases>
 			<MoveSpeed>4.5</MoveSpeed>
-			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.50</ArmorRating_Heat>
-			<ShootingAccuracyPawn>0.32</ShootingAccuracyPawn>
-			<AimingDelayFactor>-0.25</AimingDelayFactor>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.25</ArmorRating_Heat>
+			<ShootingAccuracyPawn>1</ShootingAccuracyPawn>
 		</statBases>
 		<tools>
-			<li>
-				<label>left fist</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>8.0</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
 			<li>
 				<label>left claws</label>
 				<capacities>
@@ -428,13 +424,13 @@
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 			</li>
 			<li>
-				<label>right fist</label>
+				<label>left fist</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
 				<power>8.0</power>
 				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 			</li>
 			<li>
@@ -448,9 +444,19 @@
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 			</li>
 			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
 				<label>gaping maw</label>
 				<capacities>
-					<li>Cut</li>
+					<li>Bite</li>
 				</capacities>
 				<power>8.5</power>
 				<cooldownTime>2</cooldownTime>
@@ -480,23 +486,13 @@
 		<defName>OG_Chaos_Deamon_Horror_Blue</defName>
 		<statBases>
 			<MoveSpeed>4.5</MoveSpeed>
-			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.50</ArmorRating_Heat>
-			<ShootingAccuracyPawn>0.32</ShootingAccuracyPawn>
+			<ArmorRating_Blunt>0.15</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.15</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.15</ArmorRating_Heat>
+			<ShootingAccuracyPawn>0.66</ShootingAccuracyPawn>
 			<AimingDelayFactor>-0.25</AimingDelayFactor>
 		</statBases>
 		<tools>
-			<li>
-				<label>left fist</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>4.0</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
 			<li>
 				<label>left claws</label>
 				<capacities>
@@ -508,13 +504,13 @@
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 			</li>
 			<li>
-				<label>right fist</label>
+				<label>left fist</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
 				<power>4.0</power>
 				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 			</li>
 			<li>
@@ -523,6 +519,16 @@
 					<li>Cut</li>
 				</capacities>
 				<power>6.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4.0</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
@@ -560,23 +566,13 @@
 		<defName>OG_Chaos_Deamon_Horror_Brimstone</defName>
 		<statBases>
 			<MoveSpeed>4.5</MoveSpeed>
-			<ArmorRating_Blunt>0.1250</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.1250</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.1250</ArmorRating_Heat>
-			<ShootingAccuracyPawn>0.22</ShootingAccuracyPawn>
+			<ArmorRating_Blunt>0.075</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.075</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.075</ArmorRating_Heat>
+			<ShootingAccuracyPawn>0.33</ShootingAccuracyPawn>
 			<AimingDelayFactor>-0.1</AimingDelayFactor>
 		</statBases>
 		<tools>
-			<li>
-				<label>left fist</label>
-				<capacities>
-					<li>Blunt</li>
-				</capacities>
-				<power>2.0</power>
-				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
 			<li>
 				<label>left claws</label>
 				<capacities>
@@ -588,13 +584,13 @@
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 			</li>
 			<li>
-				<label>right fist</label>
+				<label>left fist</label>
 				<capacities>
 					<li>Blunt</li>
 				</capacities>
 				<power>2.0</power>
 				<cooldownTime>2</cooldownTime>
-				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 			</li>
 			<li>
@@ -603,6 +599,16 @@
 					<li>Cut</li>
 				</capacities>
 				<power>4.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>2.0</power>
 				<cooldownTime>2</cooldownTime>
 				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
@@ -643,77 +649,11 @@
 		<description>A Flamer, also called the Pyrodaemons of Tzeentch, Keepers of the True Flame of Change, Bearers of the True Flame of Change, or Candelabra Mutationi are Lesser Daemons of Tzeentch. Flamers are amongst the most strange and disturbing of all Tzeentch's daemons, and their absurd physiologies are more than most mortals can stand. The body of a Flamer is a headless conical torso. It has two long arms, both terminating in fingerless stumps, which are adorned with razor-sharp teeth and flickering tongues, and continuously belching acrid and sulphuric smoke.</description>
 		<statBases>
 			<MoveSpeed>3.5</MoveSpeed>
-			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.10</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.10</ArmorRating_Heat>
 			<ShootingAccuracyPawn>0.32</ShootingAccuracyPawn>
 			<AimingDelayFactor>-0.25</AimingDelayFactor>
-		</statBases>
-		<tools>
-			<li>
-			<label>left fist</label>
-			<capacities>
-				<li>Blunt</li>
-			</capacities>
-			<power>12.0</power>
-			<cooldownTime>2</cooldownTime>
-			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
-			<li>
-			<label>right fist</label>
-			<capacities>
-				<li>Blunt</li>
-			</capacities>
-			<power>12.0</power>
-			<cooldownTime>2</cooldownTime>
-			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
-			</li>
-			<li>
-			<label>head</label>
-			<capacities>
-				<li>Blunt</li>
-			</capacities>
-			<power>8.5</power>
-			<cooldownTime>2</cooldownTime>
-			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-			<chanceFactor>0.2</chanceFactor>
-			</li>
-		</tools>
-		<race>
-			<body>Human</body>
-			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
-			<baseBodySize>1</baseBodySize>
-			<baseHealthScale>2</baseHealthScale>
-			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
-			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
-			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
-			<useMeatFrom>Mech_Centipede</useMeatFrom>
-			<hediffGiverSets>
-			<li>OGCD_Flamer_Options</li>
-			</hediffGiverSets>
-		</race>
-		<comps> 
-			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
-			</li> 
-			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
-			<InvunerableSaveChance>0.32</InvunerableSaveChance>
-			</li> 
-		</comps>
-	</ThingDef>
-
-	<!-- Exalted Flamer of Tzeentch --> 
-	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
-		<defName>OG_Chaos_Deamon_Flamer_Exalted</defName>
-		<label>Exalted Flamer of Tzeentch</label>
-		<description>An Exalted Flamer, also called the Pyrodaemons of Tzeentch, Keepers of the True Flame of Change, Bearers of the True Flame of Change, or Candelabra Mutationi are Lesser Daemons of Tzeentch. Flamers are amongst the most strange and disturbing of all Tzeentch's daemons, and their absurd physiologies are more than most mortals can stand. The body of a Flamer is a headless conical torso. It has two long arms, both terminating in fingerless stumps, which are adorned with razor-sharp teeth and flickering tongues, and continuously belching acrid and sulphuric smoke.</description>
-		<statBases>
-			<MoveSpeed>3.25</MoveSpeed>
-			<ArmorRating_Blunt>0.75</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.75</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.75</ArmorRating_Heat>
 		</statBases>
 		<tools>
 			<li>
@@ -749,7 +689,73 @@
 			</li>
 		</tools>
 		<race>
-			<body>Human</body>
+			<body>OG_ChaosDeamon_Humanoid</body>
+			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
+			<baseBodySize>1</baseBodySize>
+			<baseHealthScale>2</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+			<hediffGiverSets>
+				<li>OGCD_Flamer_Options</li>
+			</hediffGiverSets>
+		</race>
+		<comps> 
+			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
+				<InvunerableSaveChance>0.32</InvunerableSaveChance>
+			</li> 
+		</comps>
+	</ThingDef>
+
+	<!-- Exalted Flamer of Tzeentch --> 
+	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
+		<defName>OG_Chaos_Deamon_Flamer_Exalted</defName>
+		<label>Exalted Flamer of Tzeentch</label>
+		<description>An Exalted Flamer, also called the Pyrodaemons of Tzeentch, Keepers of the True Flame of Change, Bearers of the True Flame of Change, or Candelabra Mutationi are Lesser Daemons of Tzeentch. Flamers are amongst the most strange and disturbing of all Tzeentch's daemons, and their absurd physiologies are more than most mortals can stand. The body of a Flamer is a headless conical torso. It has two long arms, both terminating in fingerless stumps, which are adorned with razor-sharp teeth and flickering tongues, and continuously belching acrid and sulphuric smoke.</description>
+		<statBases>
+			<MoveSpeed>3.25</MoveSpeed>
+			<ArmorRating_Blunt>0.25</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.25</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.25</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>12.0</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>OG_ChaosDeamon_Humanoid</body>
 			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>2.5</baseHealthScale>
@@ -771,10 +777,11 @@
 	</ThingDef>
 
 	<!-- Screamer -->
+	<!-- implement charge ability, hit and run tactics? -->
 	<ThingDef ParentName="OG_Chaos_Deamon_Flyer">
 		<defName>OG_Chaos_Deamon_Screamer</defName>
 		<label>Screamer of Tzeentch</label>
-		<description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
+		<description>A Screamer, often referred to as a Screamer of Tzeentch or Sky-shark, is a daemonic beast of Tzeentch who resembles the mythical rays and skates that once inhabited the oceans of ancient Terra.\n\nHow these Daemons remain aloft is something of a mystery, and they can navigate planetary atmospheres, the void of space, and the Immaterium with equal ease and speed. Some have theorised that they fly upon or swim through ambient Warp energy rather than upon actual air or water.\n\nAs they fly, Screamers leave behind contrails of multi-coloured sparks, and they emit the piercing, high-frequency whine that gives these creatures their name. The few who have fought these creatures and survived explain that the scream of the Sky-sharks has a profoundly disconcerting psychological effect. They soar through the skies of the Warp in predatory groups in a constant search for souls to devour and deliver to their master.</description>
 		<statBases>
 			<MoveSpeed>9.5</MoveSpeed>
 			<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
@@ -826,7 +833,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>Human</body>
+			<body>OG_ChaosDeamon_Humanoid</body>
 			<baseBodySize>0.5</baseBodySize>
 			<baseHealthScale>0.75</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -838,7 +845,7 @@
 			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
 			</li> 
 			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
-				<InvunerableSaveChance>0.16</InvunerableSaveChance>
+				<InvunerableSaveChance>0.32</InvunerableSaveChance>
 			</li> 
 			<!--li Class="AdeptusMechanicus.CompProperties_Floating">
 				<isFloater>true</isFloater>
@@ -894,7 +901,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>Human</body>
+			<body>OG_ChaosDeamon_Humanoid</body>
 			<baseBodySize>10</baseBodySize>
 			<baseHealthScale>10</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -909,12 +916,13 @@
 	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
 		<defName>OG_Chaos_Deamon_Nurgling</defName>
 		<label>Nurgling</label>
-		<description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
+		<description>Nurglings, also known as "Mites of Nurgle," "Gleeful Castoffs", "Tiny Plagues" or by their daemonic name Khan'gurani'i in the Dark Tongue, are tiny, mischievous Lesser Daemons of Nurgle.\n\nThey are surely some of the most numerous and among the most favoured children of Grandfather Nurgle. Even their appearance is pleasing to the Plague God, for each Nurgling is like a minute copy of the dread master himself.\n\nThese pernicious and capricious Daemons erupt from the boils and pustules that pock the fleshy hide of Great Unclean Ones. They caper and dance about the Greater Daemons, causing mischief whenever possible, constantly giggling as they play.</description>
 		<statBases>
 			<MoveSpeed>2.5</MoveSpeed>
-			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.50</ArmorRating_Heat>
+			<ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.32</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.32</ArmorRating_Heat>
+			<OG_ArmorRating_InvunerableSave>0.16</OG_ArmorRating_InvunerableSave>
 		</statBases>
 		<tools>
 			<li>
@@ -961,8 +969,81 @@
 			</li>
 		</tools>
 		<race>
-			<body>Human</body>
+			<body>OG_ChaosDeamon_Humanoid</body>
 			<baseBodySize>0.25</baseBodySize>
+			<baseHealthScale>0.25</baseHealthScale>
+			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+			<useMeatFrom>Mech_Centipede</useMeatFrom>
+		</race>
+		<comps> 
+			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
+			</li> 
+			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
+				<InvunerableSaveChance>0.16</InvunerableSaveChance>
+			</li> 
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
+		<defName>OG_Chaos_Deamon_NurglingSwarm</defName>
+		<label>Nurgling</label>
+		<description>Nurglings, also known as "Mites of Nurgle," "Gleeful Castoffs", "Tiny Plagues" or by their daemonic name Khan'gurani'i in the Dark Tongue, are tiny, mischievous Lesser Daemons of Nurgle.\n\nThey are surely some of the most numerous and among the most favoured children of Grandfather Nurgle. Even their appearance is pleasing to the Plague God, for each Nurgling is like a minute copy of the dread master himself.\n\nThese pernicious and capricious Daemons erupt from the boils and pustules that pock the fleshy hide of Great Unclean Ones. They caper and dance about the Greater Daemons, causing mischief whenever possible, constantly giggling as they play.</description>
+		<thingClass>AdeptusMechanicus.SwarmPawn</thingClass>
+		<statBases>
+			<MoveSpeed>2.5</MoveSpeed>
+			<ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.32</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.32</ArmorRating_Heat>
+		</statBases>
+		<tools>
+			<li>
+				<label>left claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>4.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>right claws</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>4.0</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			</li>
+			<li>
+				<label>gaping maw</label>
+				<capacities>
+					<li>Cut</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>1</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>8.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<chanceFactor>0.2</chanceFactor>
+			</li>
+		</tools>
+		<race>
+			<body>OG_haosDeamon_Nurgling_Swarm</body>
+			<baseBodySize>2.5</baseBodySize>
 			<baseHealthScale>2.5</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
@@ -973,16 +1054,16 @@
 			<li Class="AdeptusMechanicus.CompProperties_Daemonic">
 			</li> 
 			<li Class="AdeptusMechanicus.CompProperties_InvunerableSaveOG">
-				<InvunerableSaveChance>0.50</InvunerableSaveChance>
+				<InvunerableSaveChance>0.16</InvunerableSaveChance>
 			</li> 
 		</comps>
 	</ThingDef>
 
 	<!-- Plague Bearer --> 
 	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
-		<defName>OG_Chaos_Deamon_PlagueBearer</defName>
-		<label>Plague Bearer</label>
-		<description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
+		<defName>OG_Chaos_Deamon_Plaguebearer</defName>
+		<label>Plaguebearer</label>
+		<description>Plaguebearers are the footsoldiers of Nurgle's daemonic legions. These loathsome creatures are crafted from the blighted souls of mortals who have been slain by the virulent plague known as Nurgle's Rot.\n\nThese Lesser Daemons of the Lord of Decay are shambling, pustulent creatures. Plaguebearers have gangling, bony limbs, their bodies swollen with decay, so much so that glistening innards are exposed through rents in their skin.\n\nThey possess a single, cyclopean eye and a single horn rising above their haggard, drawn faces, their bodies covered in filth and parasites. Despite the Plaguebearer's unusual appearance, they are supernaturally resilient to harm, the gifts of their master having inured them to all pain.</description>
 		<statBases>
 			<MoveSpeed>3.75</MoveSpeed>
 			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
@@ -1034,7 +1115,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>Human</body>
+			<body>OG_ChaosDeamon_Humanoid</body>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>2.5</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -1096,7 +1177,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>Human</body>
+			<body>OG_ChaosDeamon_Humanoid</body>
 			<baseBodySize>10</baseBodySize>
 			<baseHealthScale>10</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -1111,12 +1192,9 @@
 	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
 		<defName>OG_Chaos_Deamon_Deamonette</defName>
 		<label>Deamonette</label>
-		<description>To describe a daemonic Horror is all but impossible, for they are pure Chaos unbound, given capering and energetic form by the will of Tzeentch. The Lesser Daemons called Horrors are often used as daemonic slaves by the Greater Daemons called Lords of Change. They do not have static material bodies, sometimes taking on a discernible form, at others blurring into a frantic mass of colour as they dash and scramble across the battlefield. Horrors can nonetheless be said to have two distinct states defined by the colour they present to the naked eye -- the Pink Horror and the Blue Horror.</description>
+		<description>A Daemonette, also known as a "Maiden of Ecstasy," is a Lesser Daemon of Slaanesh, the Prince of Pleasure. Known as "Bringers of Joyous Degradation," "Harbingers of Endless Delights," and "Seekers of Decadence," Daemonettes are all these things and more.\n\nTheir physical appearance is confounding. At once impossibly twisted and shamefully intriguing, the hermaphroditic form of a Daemonette is both repulsive and nearly impossible for a mortal to turn away from.\n\nIn battle, Daemonettes are lithe, dexterous killers, whose claws can tear their opponents to shreds, or allure their mortal victims into their clutches.</description>
 		<statBases>
 			<MoveSpeed>5.5</MoveSpeed>
-			<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
-			<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
-			<ArmorRating_Heat>0.50</ArmorRating_Heat>
 		</statBases>
 		<tools>
 			<li>
@@ -1124,8 +1202,8 @@
 				<capacities>
 					<li>Cut</li>
 				</capacities>
-				<power>4.0</power>
-				<cooldownTime>1</cooldownTime>
+				<power>8.0</power>
+				<cooldownTime>1.75</cooldownTime>
 				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 			</li>
@@ -1134,8 +1212,8 @@
 				<capacities>
 					<li>Cut</li>
 				</capacities>
-				<power>4.0</power>
-				<cooldownTime>1</cooldownTime>
+				<power>8.0</power>
+				<cooldownTime>1.75</cooldownTime>
 				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
 				<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 			</li>
@@ -1145,7 +1223,7 @@
 					<li>Cut</li>
 				</capacities>
 				<power>8.5</power>
-				<cooldownTime>1</cooldownTime>
+				<cooldownTime>1.75</cooldownTime>
 				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
 				<chanceFactor>0.2</chanceFactor>
@@ -1163,7 +1241,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>Human</body>
+			<body>OG_ChaosDeamon_Humanoid</body>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>1.5</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -1184,7 +1262,7 @@
 	<ThingDef ParentName="OG_Chaos_Deamon_Walker">
 		<defName>OG_Chaos_Deamon_KeeperofSecrets</defName>
 		<label>Keeper of Secrets</label>
-		<description>A Lord of Change, also called a "Supreme Mutator," and one of the "Eyes of Tzeentch," is an insidious Greater Daemon of Tzeentch, the Chaos God of change and sorcery. Lords of Change are creatures born from some impossible nightmare, immense bird-like Daemons with shimmering skin, wicked curved beaks and multi-coloured, spectrum-shattering wings.</description>
+		<description>The loathsome yet beguiling entity of the Warp known as a Keeper of Secrets, also sometimes referred to as a "Bringer of Temptation," or a "Feaster of Pain," is a hermaphroditic Greater Daemon of Slaanesh, the Chaos God of amoral pleasure.\n\nThe appearance of a Keeper of Secrets, more than any of the other Greater Daemons, can vary wildly. Each of these huge and powerful creatures are created by the capricious whims of its master -- a unique statement of the Prince of Chaos' particular mood and muse at the time of the Daemon's creation.\n\nSome have androgynous faces pierced with rings, whilst others appear more bestial with bovine faces that have fanged maws and flickering forked tongues.</description>
 		<statBases>
 			<MoveSpeed>6.0</MoveSpeed>
 			<ArmorRating_Blunt>1.25</ArmorRating_Blunt>
@@ -1225,7 +1303,7 @@
 			</li>
 		</tools>
 		<race>
-			<body>Human</body>
+			<body>OG_ChaosDeamon_Humanoid</body>
 			<baseBodySize>7.5</baseBodySize>
 			<baseHealthScale>7.5</baseHealthScale>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>

@@ -8,17 +8,24 @@
 	<race>Human</race>
 	<backstoryFiltersOverride>
 		<li>
-		<categories>
-			<li>Outlander</li>
-			<li>Imperium_Standard</li>
-		</categories>
-		<commonality>0.95</commonality>
+			<categories>
+				<li>Imperium_Standard</li>
+			</categories>
+			<categoriesChildhood>
+				<li>Outlander</li>
+				<li>Imperium_Standard</li>
+			</categoriesChildhood>
+			<commonality>0.95</commonality>
 		</li>
 		<li>
-		<categories>
-			<li>Offworld</li>
-		</categories>
-		<commonality>0.05</commonality>
+			<categories>
+				<li>Imperium_Standard</li>
+			</categories>
+			<categoriesChildhood>
+				<li>Offworld</li>
+				<li>Pirate</li>
+			</categoriesChildhood>
+			<commonality>0.05</commonality>
 		</li>
 	</backstoryFiltersOverride>
 	<chemicalAddictionChance>0.005</chemicalAddictionChance>
@@ -167,9 +174,24 @@
 	<factionLeader>true</factionLeader>
 	<backstoryFiltersOverride>
 		<li>
-		<categories>
-			<li>Imperium_Imperial_WarMaster</li>
-		</categories>
+			<categories>
+				<li>Imperium_Imperial_WarMaster</li>
+			</categories>
+			<categoriesChildhood>
+				<li>Outlander</li>
+				<li>Imperium_Standard</li>
+			</categoriesChildhood>
+			<commonality>0.95</commonality>
+		</li>
+		<li>
+			<categories>
+				<li>Imperium_Imperial_WarMaster</li>
+			</categories>
+			<categoriesChildhood>
+				<li>Offworld</li>
+				<li>Pirate</li>
+			</categoriesChildhood>
+			<commonality>0.05</commonality>
 		</li>
 	</backstoryFiltersOverride>
 	<minGenerationAge>50</minGenerationAge>
@@ -589,13 +611,23 @@
 			<categories>
 				<li>Imperium_Schola_Cadet</li>
 			</categories>
+			<categoriesChildhood>
+				<li>Outlander</li>
+				<li>Imperium_Standard</li>
+			</categoriesChildhood>
 			<commonality>0.95</commonality>
 		</li>
 		<li>
 			<categories>
 				<li>Imperium_Commissariat_Lord</li>
 			</categories>
-			<commonality>0.5</commonality>
+			<categoriesChildhood>
+				<li>Outlander</li>
+				<li>Offworld</li>
+				<li>Imperium_Standard</li>
+				<li>Pirate</li>
+			</categoriesChildhood>
+			<commonality>0.05</commonality>
 		</li>
 	</backstoryFiltersOverride>
 	<gearHealthRange>

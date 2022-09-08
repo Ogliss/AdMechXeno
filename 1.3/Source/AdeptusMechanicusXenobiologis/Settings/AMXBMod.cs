@@ -1,23 +1,19 @@
-﻿using RimWorld;
-using System.Linq;
-using UnityEngine;
+﻿using AdeptusMechanicus.settings;
 using Verse;
 
-namespace AdeptusMechanicus.settings
+namespace AdeptusMechanicus
 {
-
-    class AMXBMod : AMMod
+    public class AM_Xenbiologis : Mod
     {
-
-        public AMXBMod(ModContentPack content) : base(content)
+        public static ModContentPack pack;
+        public AM_Xenbiologis(ModContentPack content) : base(content)
         {
-
+            pack = content;
+            LongEventHandler.ExecuteWhenFinished(GetFactionSettings);
         }
-
-        public override void WriteSettings()
+        public void GetFactionSettings()
         {
-
+            AMAMod.settings.GenerateFactionSettings(pack);
         }
     }
-    
 }

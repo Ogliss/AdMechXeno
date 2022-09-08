@@ -11,8 +11,6 @@
 			<Flammability>0</Flammability>
 			<MeleeDodgeChance>1</MeleeDodgeChance>
 			<MeleeHitChance>1</MeleeHitChance>
-			<MeleeCritChance MayRequire="CETeam.CombatExtended">1</MeleeCritChance>
-			<MeleeParryChance MayRequire="CETeam.CombatExtended">1</MeleeParryChance>
 			<ComfyTemperatureMin>-100</ComfyTemperatureMin>
 			<ComfyTemperatureMax>250</ComfyTemperatureMax>
 			<MeatAmount>0</MeatAmount>

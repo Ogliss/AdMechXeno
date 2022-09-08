@@ -7,9 +7,21 @@
 		<backstoryFiltersOverride>
 			<li>
 				<categories>
-					<li>Offworld</li>
-					<li>Outlander</li>
+					<li>OG_Astartes_Standard</li>
 				</categories>
+				<categoriesChildhood>
+					<li>OG_Astartes_Standard</li>
+					<li>Imperium_Standard</li>
+				</categoriesChildhood>
+			</li>
+			<li>
+				<categories>
+					<li>OG_Astartes_Standard</li>
+				</categories>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
 			</li>
 		</backstoryFiltersOverride>
 		<invNutrition>2.55</invNutrition>
@@ -101,8 +113,8 @@
 				</bodyGraphicData>
 				<dessicatedBodyGraphicData>
 					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
-				<drawSize>1.350</drawSize>
-		</dessicatedBodyGraphicData>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -460,13 +472,13 @@
 
 	<!-- Terminator Commnder -->
 	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Terminator_Base">
-		<defName>OG_Astartes_Terminator_Commnder</defName>
+		<defName>OG_Astartes_Terminator_Commander</defName>
 		<label>terminator commnder</label>
 		<combatPower>65</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator_Commnder</texPath>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator_Commander</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>3.00</drawSize>
 					<color>49,100,157</color>

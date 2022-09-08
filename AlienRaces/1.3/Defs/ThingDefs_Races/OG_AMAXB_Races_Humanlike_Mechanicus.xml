@@ -7,6 +7,8 @@
 			<generalSettings>
 				<humanRecipeImport>true</humanRecipeImport>
 				<alienPartGenerator>
+				<borderScale>1</borderScale>
+				<atlasScale>2</atlasScale>
 					<aliencrowntypes>
 						<li>Average_Normal</li>
 						<li>Average_Wide</li>
@@ -20,15 +22,13 @@
 						<li>MechHeadD</li>
 						<li>MechHeadE</li>
 					</aliencrowntypes>
-					<!--
-					<alienbodytypes>
+					<alienbodytypes Inherit="false">
 						<li>Male</li>
 						<li>Female</li>
 						<li>Thin</li>
 						<li>Hulk</li>
 						<li>Fat</li>
 					</alienbodytypes>
-					-->
 					<bodyAddons>
 					</bodyAddons>
 				</alienPartGenerator>
@@ -116,9 +116,9 @@
 							<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Tyranid_Faction</li>
 							<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Chaos_Deamon_Faction</li>
 							<li MayRequire="CptOhu.CorruptionCore">PlayerColony_Chaos</li>
-							<li MayRequire="QX.AstraMilitarum.Factions">IG_ChaosMarineFaction</li>
-							<li MayRequire="QX.AstraMilitarum.Factions">TraitorGuardFaction</li>
-							<li MayRequire="QX.AstraMilitarum.Factions">TyranidFaction</li>
+							<li MayRequire="QX.AstraMilitarum.Factions">QX_ChaosMarineFaction</li>
+							<li MayRequire="QX.AstraMilitarum.Factions">QX_TraitorGuardFaction</li>
+							<li MayRequire="QX.AstraMilitarum.Factions">QX_TyranidFaction</li>
 						</factions>
 						<goodwill>
 							<min>-100</min>

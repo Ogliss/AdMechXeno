@@ -2,8 +2,8 @@
 <Defs>
 
 <ThingDef ParentName="SkyfallerBase">
-	<defName>MonolithIncoming</defName>
-	<label>crashed ship part (incoming)</label>
+	<defName>OG_Necron_MonolithIncoming</defName>
+	<label>necron monolith (incoming)</label>
 	<size>(6, 6)</size>
 	<skyfaller>
 		<shadow>Things/Skyfaller/SkyfallerShadowRectangle</shadow>
@@ -17,7 +17,7 @@
 </ThingDef>
 
 <ThingDef ParentName="SkyfallerBase">
-	<defName>RokIncoming</defName>
+	<defName>OG_Orkoid_RokIncoming</defName>
 	<label>meteorite (incoming)</label>
 	<size>(4, 4)</size>
 	<graphicData>

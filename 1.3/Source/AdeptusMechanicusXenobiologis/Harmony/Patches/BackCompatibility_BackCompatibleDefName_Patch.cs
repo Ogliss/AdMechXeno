@@ -25,7 +25,10 @@ namespace AdeptusMechanicus.HarmonyInstance
             //    Log.Message(string.Format("Checking for replacement for {0} Type: {1}", defName, defType));
                 if (defType == typeof(ThingDef))
                 {
-
+                    if (defName.StartsWith("Necron_"))
+                    {
+                        newName = "OG_" + defName;
+                    }
                 }
                 if (defType == typeof(FactionDef))
                 {
@@ -36,7 +39,10 @@ namespace AdeptusMechanicus.HarmonyInstance
                 }
                 if (defType == typeof(PawnKindDef))
                 {
-
+                    if (defName.StartsWith("Necron_"))
+                    {
+                        newName = "OG_" + defName;
+                    }
                 }
                 if (defType == typeof(ResearchProjectDef))
                 {
@@ -48,7 +54,10 @@ namespace AdeptusMechanicus.HarmonyInstance
                 }
                 if (defType == typeof(BodyDef))
                 {
-
+                    if (defName.StartsWith("Necron_"))
+                    {
+                        newName = "OG_" + defName;
+                    }
                 }
                 if (defType == typeof(ScenarioDef))
                 {

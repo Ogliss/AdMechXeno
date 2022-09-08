@@ -19,10 +19,10 @@ namespace AdeptusMechanicus
         private static Listing_StandardExpanding listing_Races = new Listing_StandardExpanding();
         private static Listing_StandardExpanding listing_General = new Listing_StandardExpanding();
 
-        public static float listing_BaseLength => mod.Length(settings.ShowXenobiologisSettings, 2, AMAMod.lineheight, 0, 0);
-        public static float listing_BaseOptionsLength => mod.Length(settings.ShowXenobiologisSettings, 1, AMAMod.lineheight, 0, 0);
-        public static float listing_RacesLength => mod.Length(settings.ShowAllowedRaceSettings && settings.ShowXenobiologisSettings, 1, AMAMod.lineheight, 64, settings.ShowXenobiologisSettings ? 1 : 0);
-        private static float listing_MenuLength => AMAMod.Instance.Length(settings.ShowAllowedRaceSettings && settings.ShowXenobiologisSettings, 1, AMAMod.lineheight, 64, settings.ShowXenobiologisSettings ? 1 : 0);
+        public static float listing_BaseLength => AMAMod.Length(settings.ShowXenobiologisSettings, 2, AMAMod.lineheight, 0, 0);
+        public static float listing_BaseOptionsLength => AMAMod.Length(settings.ShowXenobiologisSettings, 1, AMAMod.lineheight, 0, 0);
+        public static float listing_RacesLength => AMAMod.Length(settings.ShowAllowedRaceSettings && settings.ShowXenobiologisSettings, 1, AMAMod.lineheight, 64, settings.ShowXenobiologisSettings ? 1 : 0);
+        private static float listing_MenuLength => AMAMod.Length(settings.ShowAllowedRaceSettings && settings.ShowXenobiologisSettings, 1, AMAMod.lineheight, 64, settings.ShowXenobiologisSettings ? 1 : 0);
         public static void XenobiologisModOptionsMenu(ref AMAMod __instance, ref Listing_StandardExpanding listing_Main, Rect rect, ref Rect inRect, float num, float num2)
         {
             listing_Menu.maxOneColumn = true;

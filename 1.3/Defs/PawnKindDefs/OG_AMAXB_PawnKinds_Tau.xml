@@ -311,10 +311,10 @@
 						<volume>(0.6, 0.8, 0.6)</volume>
 					</shadowData>
 				</bodyGraphicData>
-				<dessicatedBodyGraphicData>
-					<!--texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath-->
+				<!--dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 					<drawSize>1.350</drawSize>
-				</dessicatedBodyGraphicData>
+				</dessicatedBodyGraphicData-->
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -343,7 +343,7 @@
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
-					<texPath>Things/Pawn/ToolUser/Tau/XV88Battlesuit/XV88</texPath>
+					<texPath>Things/Pawn/ToolUser/Tau/XV8Battlesuit/XV8</texPath>
 					<graphicClass>Graphic_Multi</graphicClass>
 					<drawSize>1.350</drawSize>
 					<color>(221,160,99)</color>
@@ -353,10 +353,10 @@
 						<volume>(0.6, 0.8, 0.6)</volume>
 					</shadowData>
 				</bodyGraphicData>
-				<dessicatedBodyGraphicData>
-					<!--texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath-->
+				<!--dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
 					<drawSize>1.350</drawSize>
-				</dessicatedBodyGraphicData>
+				</dessicatedBodyGraphicData-->
 			</li>
 		</lifeStages>
 		<weaponMoney>

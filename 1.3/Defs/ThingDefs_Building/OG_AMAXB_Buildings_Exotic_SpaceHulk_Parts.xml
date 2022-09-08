@@ -22,9 +22,9 @@
 				<li>OG_Tyranid_Faction</li>
 				<li>OG_Chaos_Deamon_Faction</li>
 				<li>Pirate</li>
-				<li MayRequire="QX.AstraMilitarum.Factions">TraitorGuardFaction</li>
-				<li MayRequire="QX.AstraMilitarum.Factions">ChaosMarineFaction</li>
-				<li MayRequire="QX.AstraMilitarum.Factions">TyranidFaction</li>
+				<li MayRequire="QX.AstraMilitarum.Factions">QX_TraitorGuardFaction</li>
+				<li MayRequire="QX.AstraMilitarum.Factions">QX_ChaosMarineFaction</li>
+				<li MayRequire="QX.AstraMilitarum.Factions">QX_TyranidFaction</li>
 			</Factions>
 		</li>
 		<!--li Class="CompProperties_PlantHarmRadius">

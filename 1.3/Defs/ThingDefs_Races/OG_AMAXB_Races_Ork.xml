@@ -15,8 +15,6 @@
 		<ShootingAccuracyPawn>-10</ShootingAccuracyPawn>
 		<MeleeDodgeChance>1.125</MeleeDodgeChance>
 		<MeleeHitChance>1.25</MeleeHitChance>
-		<MeleeCritChance MayRequire="CETeam.CombatExtended">1.15</MeleeCritChance>
-		<MeleeParryChance MayRequire="CETeam.CombatExtended">1.15</MeleeParryChance>
 		<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
 		<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
 		<ArmorRating_Heat>0.16</ArmorRating_Heat>
@@ -83,7 +81,7 @@
 </ThingDef>
 
 <!-- Alien Ork -->
-<ThingDef ParentName="OG_Ork_Pawn_Base">
+<ThingDef ParentName="OG_Ork_Pawn_Base" Name="OG_Ork">
 	<defName>OG_Alien_Ork</defName>
 	<label>ork</label>
 	<description>The Ork Boyz are the different types of troops deployed by the Orks, a savage, warlike, green-skinned race of humanoids of the Milky Way Galaxy. They are in some ways equivalent to Warhammer Fantasy Orcs, particularly in terms of their physical appearance, but they vary from the Warhammer World's Greenskins in some minor biological and cultural details. They are seen by their enemies (pretty much everyone else in the galaxy) as savage, warlike and crude, but they are the most successful species in the Milky Way, outnumbering possibly every other intelligent race, including Mankind. However, the power of the Ork race as a whole is limited due to the fact that they are split into hundreds of tiny empires, which are more often warring between themselves than not. Were the Orks ever to unite as a species, they would undoubtedly crush all opposition in a massive migration-invasion known as a WAAAGH!</description>
@@ -108,39 +106,6 @@
 		<lifeExpectancy>9999</lifeExpectancy>
 		<body>OG_Ork_Body</body>
 		<baseHealthScale>2.0</baseHealthScale>
-	</race>
-</ThingDef-->
-
-<!-- Alien_Grot -->
-<ThingDef ParentName="OG_Ork_Pawn_Base">
-	<defName>OG_Alien_Grot</defName>
-	<label>grot</label>
-	<description>Gretchin or Grotz are basically a smaller subspecies of Orks, who are more cowardly than normal Orks and are usually used as living shields, to clear mine fields, are stepped on to get through difficult terrain, and sometimes even as emergency rations. Gretchins are quite low in the strict hierarchy of Ork society because of their small size (the lowest Orkoids being the Snotlings) and are often used for the dirtiest jobs like scavenging and being used as the football when the bigger Orks get bored. While they are not as aggressive as standard Orks, they enjoy fighting weaker opponents and are less likely to flee if they comfortably outnumber their opponents. If a Gretchin is particularly wealthy, he may purchase a second-hand, worn-down, low-tech gun. These guns are mainly to reassure the Gretchin that they have a chance of killing something, provided they remember which way to hold the gun.</description>
-	<statBases>
-		<MeleeDodgeChance>1.35</MeleeDodgeChance>
-		<MeleeHitChance>0.85</MeleeHitChance>
-		<MeleeCritChance MayRequire="CETeam.CombatExtended">0.75</MeleeCritChance>
-		<MeleeParryChance MayRequire="CETeam.CombatExtended">0.75</MeleeParryChance>
-	</statBases>
-	<race>
-		<lifeExpectancy>9999</lifeExpectancy>
-		<body>OG_Ork_Body</body>
-		<baseHealthScale>1.2</baseHealthScale>
-	</race>
-</ThingDef>
-
-<!--ThingDef ParentName="OG_Ork_Pawn_Base">
-	<defName>Alien_Grot</defName>
-	<label>grot</label>
-	<description>Gretchin or Grotz are basically a smaller subspecies of Orks, who are more cowardly than normal Orks and are usually used as living shields, to clear mine fields, are stepped on to get through difficult terrain, and sometimes even as emergency rations. Gretchins are quite low in the strict hierarchy of Ork society because of their small size (the lowest Orkoids being the Snotlings) and are often used for the dirtiest jobs like scavenging and being used as the football when the bigger Orks get bored. While they are not as aggressive as standard Orks, they enjoy fighting weaker opponents and are less likely to flee if they comfortably outnumber their opponents. If a Gretchin is particularly wealthy, he may purchase a second-hand, worn-down, low-tech gun. These guns are mainly to reassure the Gretchin that they have a chance of killing something, provided they remember which way to hold the gun.</description>
-	<statBases>
-	
-	</statBases>
-	<race>
-		<lifeExpectancy>9999</lifeExpectancy>
-		<body>OG_Ork_Body</body>
-		<baseHealthScale>0.8</baseHealthScale>
-		<baseBodySize>0.7</baseBodySize>
 	</race>
 </ThingDef-->
 
@@ -158,47 +123,47 @@
 	</statBases>
 	<tools>
 		<li>
-		<label>left fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>14</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>22</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>14</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+				<li>
+					<def>Stun</def>
+					<amount>22</amount>
+				</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>right fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>14</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>22</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>14</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+				<li>
+					<def>Stun</def>
+					<amount>22</amount>
+				</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>head</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>16</power>
-		<cooldownTime>1.8</cooldownTime>
-		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>16</power>
+			<cooldownTime>1.8</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 		</li>
 	</tools>
 	<race>
@@ -224,47 +189,47 @@
 	</statBases>
 	<tools>
 		<li>
-		<label>left fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>10</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>22</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>10</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+				<li>
+					<def>Stun</def>
+					<amount>22</amount>
+				</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>right fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>10</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>22</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>10</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+				<li>
+					<def>Stun</def>
+					<amount>22</amount>
+				</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>head</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>12</power>
-		<cooldownTime>1.8</cooldownTime>
-		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>12</power>
+			<cooldownTime>1.8</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 		</li>
 	</tools>
 	<race>
@@ -306,47 +271,47 @@
 	</statBases>
 	<tools>
 		<li>
-		<label>left fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>9</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>22</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+				<li>
+					<def>Stun</def>
+					<amount>22</amount>
+				</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>right fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>9</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>22</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+				<li>
+					<def>Stun</def>
+					<amount>22</amount>
+				</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>head</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>10</power>
-		<cooldownTime>1.8</cooldownTime>
-		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>10</power>
+			<cooldownTime>1.8</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 		</li>
 	</tools>
 	<race>
@@ -378,9 +343,105 @@
 	</race>
 </ThingDef>
 
+<!-- Grot Race -->
+<!-- Grot Base Abstract -->
+<ThingDef ParentName="BasePawn" Name="OG_Grot_Pawn_Base" Abstract="True">
+	<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+	<statBases>
+		<MarketValue>1750</MarketValue>
+		<PsychicSensitivity>0.5</PsychicSensitivity>
+		<Flammability>1</Flammability>
+		<ComfyTemperatureMin>-60</ComfyTemperatureMin>
+		<ComfyTemperatureMax>65</ComfyTemperatureMax>
+		<LeatherAmount>35</LeatherAmount>
+		<MoveSpeed>5.4</MoveSpeed>
+		<ShootingAccuracyPawn>-15</ShootingAccuracyPawn>
+		<MeleeDodgeChance>1.125</MeleeDodgeChance>
+		<MeleeHitChance>1.25</MeleeHitChance>
+		<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.16</ArmorRating_Heat>
+	</statBases>
+	<race>
+		<thinkTreeMain>Humanlike</thinkTreeMain>
+		<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+		<fleshType>OG_Flesh_Ork</fleshType>
+		<bloodDef>OG_FilthBlood_Orkoid</bloodDef>	
+		<intelligence>ToolUser</intelligence>
+		<makesFootprints>true</makesFootprints>
+		<lifeExpectancy>9999</lifeExpectancy>
+		<meatColor>(200,135,100)</meatColor>
+		<nameGenerator>OG_Ork_NamerPerson</nameGenerator>
+		<hasGenders>false</hasGenders>
+		<foodType>OmnivoreHuman</foodType>
+		<baseHungerRate>0.15</baseHungerRate>
+		<baseBodySize>1.5</baseBodySize>
+		<baseHealthScale>1.0</baseHealthScale>
+		<predator>true</predator>
+		<lifeStageAges>
+		<li>
+			<def>HumanlikeAdult</def>
+			<minAge>16</minAge>
+		</li>
+		</lifeStageAges>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<specialShadowData>
+		<volume>(0.3, 0.8, 0.4)</volume>
+		<offset>(0,0,-0.3)</offset>
+		</specialShadowData>
+		<ageGenerationCurve>
+		<points>
+			<li>(14,0)</li>
+			<li>(16,100)</li>
+			<li>(50,100)</li>
+			<li>(60,30)</li>
+			<li>(70,18)</li>
+			<li>(80,10)</li>
+			<li>(90,3)</li>
+			<li>(100,0)</li>
+		</points>
+		</ageGenerationCurve>
+		<hediffGiverSets>
+		<li>OrganicStandard</li>
+		</hediffGiverSets>
+		<leatherDef>Leather_Ork</leatherDef>
+		<meatLabel>ork meat</meatLabel>
+	</race>
+	<comps>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+		<li MayRequire="CETeam.CombatExtended">
+			<compClass>CombatExtended.CompPawnGizmo</compClass>
+		</li>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
+	</comps>
+	<modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+	</modExtensions>
+</ThingDef>
+
+<!-- Alien_Grot -->
+<ThingDef ParentName="OG_Grot_Pawn_Base">
+	<defName>OG_Alien_Grot</defName>
+	<label>grot</label>
+	<description>Gretchin or Grotz are basically a smaller subspecies of Orks, who are more cowardly than normal Orks and are usually used as living shields, to clear mine fields, are stepped on to get through difficult terrain, and sometimes even as emergency rations. Gretchins are quite low in the strict hierarchy of Ork society because of their small size (the lowest Orkoids being the Snotlings) and are often used for the dirtiest jobs like scavenging and being used as the football when the bigger Orks get bored. While they are not as aggressive as standard Orks, they enjoy fighting weaker opponents and are less likely to flee if they comfortably outnumber their opponents. If a Gretchin is particularly wealthy, he may purchase a second-hand, worn-down, low-tech gun. These guns are mainly to reassure the Gretchin that they have a chance of killing something, provided they remember which way to hold the gun.</description>
+	<statBases>
+		<MeleeDodgeChance>1.35</MeleeDodgeChance>
+		<MeleeHitChance>0.85</MeleeHitChance>
+	</statBases>
+	<race>
+		<lifeExpectancy>9999</lifeExpectancy>
+		<body>OG_Ork_Body</body>
+		<baseHealthScale>1.2</baseHealthScale>
+	</race>
+</ThingDef>
+
 <!-- Ork Grot -->
 <ThingDef ParentName="OG_Ork_Pawn_Base" Name="BaseOrkGrot">
-	<defName>Ork_Grot</defName>
+	<defName>OG_Grot</defName>
 	<label>grot</label>
 	<description>Gretchin or Grotz are basically a smaller subspecies of Orks, who are more cowardly than normal Orks and are usually used as living shields, to clear mine fields, are stepped on to get through difficult terrain, and sometimes even as emergency rations. Gretchins are quite low in the strict hierarchy of Ork society because of their small size (the lowest Orkoids being the Snotlings) and are often used for the dirtiest jobs like scavenging and being used as the football when the bigger Orks get bored. While they are not as aggressive as standard Orks, they enjoy fighting weaker opponents and are less likely to flee if they comfortably outnumber their opponents. If a Gretchin is particularly wealthy, he may purchase a second-hand, worn-down, low-tech gun. These guns are mainly to reassure the Gretchin that they have a chance of killing something, provided they remember which way to hold the gun.</description>
 	<statBases>

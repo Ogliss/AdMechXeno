@@ -2,7 +2,7 @@
 
 <!-- Tomb Spyder Repairs Dead/Damaged Necrons -->
 <JobDef>
-	<defName>OG_XB_Job_Necron_TombSpyderRepair</defName>
+	<defName>OG_Necron_TombSpyder_Repair</defName>
 	<driverClass>AdeptusMechanicus.JobDriver_TombSpyderRepair</driverClass>
 	<reportString>repairing TargetA.</reportString>
 </JobDef>

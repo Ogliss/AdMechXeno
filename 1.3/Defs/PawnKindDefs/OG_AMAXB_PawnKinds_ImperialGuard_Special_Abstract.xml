@@ -15,17 +15,24 @@
 	<backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
 	<backstoryFiltersOverride>
 		<li>
-		<categories>
-			<li>Outlander</li>
-			<li>Imperium_Standard</li>
-		</categories>
-		<commonality>0.95</commonality>
+			<categories>
+				<li>Imperium_Standard</li>
+			</categories>
+			<categoriesChildhood>
+				<li>Outlander</li>
+				<li>Imperium_Standard</li>
+			</categoriesChildhood>
+			<commonality>0.95</commonality>
 		</li>
 		<li>
-		<categories>
-			<li>Offworld</li>
-		</categories>
-		<commonality>0.05</commonality>
+			<categories>
+				<li>Imperium_Standard</li>
+			</categories>
+			<categoriesChildhood>
+				<li>Offworld</li>
+				<li>Pirate</li>
+			</categoriesChildhood>
+			<commonality>0.05</commonality>
 		</li>
 	</backstoryFiltersOverride>
 	<invNutrition>10.0</invNutrition>

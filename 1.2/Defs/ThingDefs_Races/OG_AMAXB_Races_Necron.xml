@@ -14,8 +14,6 @@
 		<Mass>70</Mass>
 		<MeleeDodgeChance>1</MeleeDodgeChance>
 		<MeleeHitChance>1</MeleeHitChance>
-		<MeleeCritChance MayRequire="CETeam.CombatExtended">1</MeleeCritChance>
-		<MeleeParryChance MayRequire="CETeam.CombatExtended">1</MeleeParryChance>
 	</statBases>
 	<inspectorTabs>
 		<li>ITab_Pawn_Health</li>

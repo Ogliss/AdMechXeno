@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 <!-- Necron Base Abstracts -->
-<ThingDef Name="NecronPawn" Abstract="True">
+<ThingDef Name="OG_Necron_Pawn_Base" Abstract="True">
 	<thingClass>Pawn</thingClass>
 	<category>Pawn</category>
 	<selectable>true</selectable>
@@ -14,8 +14,6 @@
 		<Mass>70</Mass>
 		<MeleeDodgeChance>1</MeleeDodgeChance>
 		<MeleeHitChance>1</MeleeHitChance>
-		<MeleeCritChance MayRequire="CETeam.CombatExtended">1</MeleeCritChance>
-		<MeleeParryChance MayRequire="CETeam.CombatExtended">1</MeleeParryChance>
 	</statBases>
 	<inspectorTabs>
 		<li>ITab_Pawn_Health</li>
@@ -54,7 +52,7 @@
 	<drawGUIOverlay>true</drawGUIOverlay>
 </ThingDef>
 
-<ThingDef ParentName="NecronPawn" Name="BaseNecron" Abstract="True">
+<ThingDef ParentName="OG_Necron_Pawn_Base" Name="OG_Necron_Base" Abstract="True">
 <defName>Necron_Race</defName>
 	<label>Necron Construct Race</label>
 	<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
@@ -85,7 +83,7 @@
 </ThingDef>
 
 <!-- Walker base -->
-<ThingDef ParentName="BaseNecron" Name="BaseNecronWalker" Abstract="True">
+<ThingDef ParentName="OG_Necron_Base" Name="OG_Necron_Base_Walker" Abstract="True">
 	<race>
 		<intelligence>ToolUser</intelligence>
 		<thinkTreeMain>OG_Necron_ThinkTree</thinkTreeMain>
@@ -115,8 +113,8 @@
 </ThingDef>
  
 <!-- Necron Scarab Swarm-->
-<ThingDef ParentName="BaseNecronWalker">
-	<defName>Necron_ScarabSwarm</defName>
+<ThingDef ParentName="OG_Necron_Base_Walker">
+	<defName>OG_Necron_ScarabSwarm</defName>
 	<label>Necron scarab swarm</label>
 	<description>A Canoptek Scarab is a small, silver, beetle-like Necron construct. These robotic Scarabs are the most numerous and diverse of the Necrons' Canoptek machine servants. They are designed to break down organic and non-organic matter into raw energy, which can then be woven into fresh construct forms at the direction of the Scarabs’ controller. Essentially mindless feeding and replication machines of various sizes and functions, their swift, darting movements and their high-pitched chittering mimic in form and behaviour organic invertebrates but, directed by the will of a Cryptek or slaved to the more complex artificial intelligence of a Canoptek Spyder, they are capable of staggering feats of construction and destruction. It is for this latter function they are used by the Necron Lords as weapons of war -- an all-devouring tide of skittering metal launched ahead of a Necron phalanx that can break down tanks and fortifications and force an enemy to expend its firepower in frantic efforts to halt the onslaughts. However, Canoptek Scarabs lack a true hive mind. A swarm of Scarabs has no more true intelligence than one Scarab alone -- which is to say none at all. All they are driven by are simple instructions and even simpler instincts. Nevertheless, their highly sophisticated auto-routines and construct-patterns allow them to build Necron weapons and vehicles of immense power in a surprisingly brief time. Canoptek Scarabs are fearsome enemies in swarms due to their horrifying nature as mindless feeding machines.</description>
 	<statBases>
@@ -165,8 +163,8 @@
 </ThingDef>
 
 <!-- Tomb Spyder -->
-<ThingDef ParentName="BaseNecronWalker">
-	<defName>Necron_TombSpyder</defName>
+<ThingDef ParentName="OG_Necron_Base_Walker">
+	<defName>OG_Necron_TombSpyder</defName>
 	<label>Necron tomb spyder</label>
 	<description>Tomb Spyders are used to watch over and maintain Necron Tomb Worlds. Unlike their Necron masters, Tomb Spyders never sleep, rather they spend the aeons servicing the structures of their tomb worlds. Though it is essentially just an automated drone, a Tomb Spyder is still a formidable foe and is armed with hives of Scarabs in addition to self-repair backup systems. Tomb Spyders are also capable of directing Wraiths against any who intrude into a Necron Tomb. However the most dreaded aspect of Tomb Spyders is their ability to quickly repair other Necron Warriors on the field of battle.</description>
 	<statBases>
@@ -225,8 +223,8 @@
 </ThingDef>
 
 <!-- Necron Warrior -->
-<ThingDef ParentName="BaseNecronWalker">
-	<defName>Necron_Warrior</defName>
+<ThingDef ParentName="OG_Necron_Base_Walker">
+	<defName>OG_Necron_Warrior</defName>
 	<label>Necron warrior</label>
 	<description>Necron Warriors are the primary infantry troops of the soulless, undying mechanical monstrosities known as the Necrons. They were created from the majority of the ancient humanoid Necrontyr species who agreed to be bound to the will of their Star Gods, the terrible entities known as the C'tan. The Necrontyr's consciousnesses were transferred into robotic bodies made of the living metal called necrodermis. Over a long period of time, the new unliving bodies dulled the Necrontyr's minds and their abilities to feel emotion or pleasure. Over many millennia, the ultimate outcome of this process of gradual desensitization was that the Necron Warriors became little more than soulless automatons, the warrior-slaves of the still-sentient Necron royalty and military elite who seek to rebuild their star-spanning empires across the portions of the galaxy now controlled by the "lesser races."</description>
 	<statBases>
@@ -289,8 +287,8 @@
 </ThingDef>
 
 <!-- Necron Flayed One -->
-<ThingDef ParentName="BaseNecronWalker">
-	<defName>Necron_FlayedOne</defName>
+<ThingDef ParentName="OG_Necron_Base_Walker">
+	<defName>OG_Necron_FlayedOne</defName>
 	<label>Necron flayed one</label>
 	<description>These loathsome creatures were once Necrontyr who managed to retain some of their original consciousness when they were transferred into their living metallic bodies of necrodermis, but were cursed with a terrible disease, manifesting a hunger for flesh that cannot be satisfied and that eventually drove them to madness.</description>
 	<statBases>
@@ -358,8 +356,8 @@
 </ThingDef>
 
 <!-- Necron Wraith -->
-<ThingDef ParentName="BaseNecronWalker">
-	<defName>Necron_Wraith</defName>
+<ThingDef ParentName="OG_Necron_Base_Walker">
+	<defName>OG_Necron_Wraith</defName>
 	<label>Necron wraith</label>
 	<description>A Wraith is one of the more sophisticated units employed by the forces of the Necrons. These grotesque floating killers lack legs or body except for a serpentine spinal column, and float over the battlefield using anti-gravity technology like ghosts. Their wide, hunched shoulders support a leering, skull face and long, whip-like arms that wield Necrodermis scalpel blades for fingers and a nightmare array of surgical implements.</description>
 	<statBases>
@@ -431,8 +429,8 @@
 </ThingDef>
 
 <!-- Necron Immortal -->
-<ThingDef ParentName="BaseNecronWalker">
-	<defName>Necron_Immortal</defName>
+<ThingDef ParentName="OG_Necron_Base_Walker">
+	<defName>OG_Necron_Immortal</defName>
 	<label>Necron immortal</label>
 	<description>The Immortals were the favoured servants of the Necron dynasties in ancient days and now form the vanguard of their undying legions. When the Necrons first conquered the galaxy, they did so through the unfaltering and implacable onslaught of legion upon legion of Immortals. These were the very elite of the Necrontyr armies and are the true fighting strength of the Necron dynasties; hardened veterans of ancient wars born anew in tireless, undying necrodermis bodies.
 	Still able to think and respond with a chill echo of intelligence, their martial power remains undimmed, as does their unflagging loyalty. Within the engrammic circuitry of each Immortal, there lingers a spark of the mortal soldier he once was. Though heavily suppressed by the obedience protocols of his master, an Immortal can remember the triumph of the kill and the pleasure of humbling its foes. The transition from mortal flesh to undying alien metal has only deepened the Immortals' hatred of their enemies. Stripped of weaknesses such as remorse and pity, and bereft of any fear of death, an Immortal kills without hesitation.</description>
@@ -496,8 +494,8 @@
 </ThingDef>
  
 <!-- Necron Lord -->
-<ThingDef ParentName="BaseNecronWalker">
-	<defName>Necron_Lord</defName>
+<ThingDef ParentName="OG_Necron_Base_Walker">
+	<defName>OG_Necron_Lord</defName>
 	<label>Necron lord</label>
 	<description>A Necron Lord is the most sophisticated of the ancient race of soulless xenos known as the Necrons. A Necron Lord serves as the commander and energy supply for the much larger Necron armies composed of the standard Necron Warriors. When the Necrontyr gave up their organic bodies to serve the C'tan, they transferred their consciousnesses into bodies made of the living metal "Necrodermis". However, they soon discovered that over an extended period of time, their new robotic bodies dulled their minds and their ability to feel any type of emotion or pleasure. Over many millennia, the ultimate outcome of this process of gradual desensitisation was that the Necrons became the soulless warrior-slaves of the C'tan, harvesting intelligent life from across the galaxy to feed these souls to their insatiable masters.</description>
 	<statBases>
@@ -559,8 +557,8 @@
 </ThingDef>
 
 <!-- Necron Destroyer -->
-<ThingDef ParentName="BaseNecron" Name="BaseNecronDestroyer">
-	<defName>Necron_Destroyer</defName>
+<ThingDef ParentName="OG_Necron_Base" Name="OG_Necron_Base_Destroyer">
+	<defName>OG_Necron_Destroyer</defName>
 	<label>Necron destroyer</label>
 	<description>A Necron Destroyer is a deranged agent of annihilation whose sole reason for existence is centred around an unshakeable yearning to quench the flames of life. A Destroyer cares not for borders or dynasty allegiance, nor does he make any distinction between the innocent and the damned -- all life is his enemy, and all living creatures are his prey. To this end, Destroyers regularly engage in modifications to their bodies that other Necrons would consider self-mutilation. This most commonly takes the form of replacing arms with weapons, legs with grav-platforms, and modifying heads and neural circuitry with advanced targeting systems. The result is a single-minded killing machine able to track its quarry across any terrain and under any conditions, that quarry being any biological creature unfortunate enough to draw the Destroyer’s attention. The insane Destroyers are shunned and feared even by their fellow Necrons. These outcasts gather on the fringes of Tomb Worlds to form Destroyer Cults of the Red Harvest, said to be led by Necron Lords afflicted with the same madness. These so-called Destroyer Lords combine the intellect, cunning, and nigh-invulnerability of a Necron noble with the deadly purpose and enhanced systems of a Destroyer.</description>
 	<statBases>
@@ -636,8 +634,8 @@
 </ThingDef>
 
 <!-- Necron Heavy Destroyer -->
-<ThingDef ParentName="BaseNecronDestroyer">
-	<defName>Necron_HeavyDestroyer</defName>
+<ThingDef ParentName="OG_Necron_Base_Destroyer">
+	<defName>OG_Necron_HeavyDestroyer</defName>
 	<label>Necron heavy destroyer</label>
 	<description>A Necron Heavy Destroyer is a deranged agent of annihilation whose sole reason for existence is centred around an unshakeable yearning to quench the flames of life. A Destroyer cares not for borders or dynasty allegiance, nor does he make any distinction between the innocent and the damned -- all life is his enemy, and all living creatures are his prey. To this end, Destroyers regularly engage in modifications to their bodies that other Necrons would consider self-mutilation. This most commonly takes the form of replacing arms with weapons, legs with grav-platforms, and modifying heads and neural circuitry with advanced targeting systems. The result is a single-minded killing machine able to track its quarry across any terrain and under any conditions, that quarry being any biological creature unfortunate enough to draw the Destroyer’s attention. The insane Destroyers are shunned and feared even by their fellow Necrons. These outcasts gather on the fringes of Tomb Worlds to form Destroyer Cults of the Red Harvest, said to be led by Necron Lords afflicted with the same madness. These so-called Destroyer Lords combine the intellect, cunning, and nigh-invulnerability of a Necron noble with the deadly purpose and enhanced systems of a Destroyer.</description>
 	<statBases>

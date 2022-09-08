@@ -12,9 +12,9 @@
 		<repairEffect>Repair</repairEffect>
 		<leaveResourcesWhenKilled>false</leaveResourcesWhenKilled>
 		<filthLeaving>Filth_RubbleBuilding</filthLeaving>
-			<statBases>
-				<SellPriceFactor>0.00</SellPriceFactor>
-			</statBases>
+		<statBases>
+			<SellPriceFactor>0.00</SellPriceFactor>
+		</statBases>
 	</ThingDef>
 
 	<ThingDef ParentName="OG_Necron_TurretBase">

@@ -15,7 +15,7 @@
 <PawnKindDef ParentName="OG_Necron_BaseKind">
 	<defName>OG_Necron_Warrior</defName>
 	<label>necron warrior</label>
-	<race>Necron_Warrior</race>
+	<race>OG_Necron_Warrior</race>
 	<combatPower>100</combatPower>
 	<lifeStages>
 		<li>
@@ -39,7 +39,7 @@
 <PawnKindDef ParentName="OG_Necron_BaseKind">
 	<defName>OG_Necron_Flayed_One</defName>
 	<label>necron Flayed One</label>
-	<race>Necron_FlayedOne</race>
+	<race>OG_Necron_FlayedOne</race>
 	<combatPower>100</combatPower>
 	<lifeStages>
 		<li>
@@ -69,7 +69,7 @@
 <PawnKindDef ParentName="OG_Necron_BaseKind">
 	<defName>OG_Necron_Wraith</defName>
 	<label>necron wraith</label>
-	<race>Necron_Wraith</race>
+	<race>OG_Necron_Wraith</race>
 	<combatPower>150</combatPower>
 	<lifeStages>
 		<li>
@@ -94,7 +94,7 @@
 <PawnKindDef ParentName="OG_Necron_BaseKind">
 	<defName>OG_Necron_Immortal</defName>
 	<label>necron immortal</label>
-	<race>Necron_Immortal</race>
+	<race>OG_Necron_Immortal</race>
 	<combatPower>200</combatPower>
 	<lifeStages>
 		<li>
@@ -124,7 +124,7 @@
 <PawnKindDef ParentName="OG_Necron_BaseKind">
 	<defName>OG_Necron_Lord</defName>
 	<label>necron lord</label>
-	<race>Necron_Lord</race>
+	<race>OG_Necron_Lord</race>
 	<combatPower>500</combatPower>
 	<lifeStages>
 		<li>
@@ -148,7 +148,7 @@
 <PawnKindDef ParentName="OG_Necron_BaseKind">
 	<defName>OG_Necron_Destroyer</defName>
 	<label>necron destroyer</label>
-	<race>Necron_Destroyer</race>
+	<race>OG_Necron_Destroyer</race>
 	<combatPower>275</combatPower>
 	<lifeStages>
 		<li>
@@ -174,7 +174,7 @@
 <PawnKindDef ParentName="OG_Necron_BaseKind">
 	<defName>OG_Necron_Destroyer_Heavy</defName>
 	<label>necron heavy destroyer</label>
-	<race>Necron_HeavyDestroyer</race>
+	<race>OG_Necron_HeavyDestroyer</race>
 	<combatPower>350</combatPower>
 	<lifeStages>
 		<li>
@@ -198,7 +198,7 @@
 <PawnKindDef ParentName="OG_Necron_BaseKind">
 	<defName>OG_Necron_Scarab_Swarm</defName>
 	<label>necron scarab swarm</label>
-	<race>Necron_ScarabSwarm</race>
+	<race>OG_Necron_ScarabSwarm</race>
 	<combatPower>50</combatPower>
 	<lifeStages>
 		<li>
@@ -225,7 +225,7 @@
 <PawnKindDef ParentName="OG_Necron_BaseKind">
 	<defName>OG_Necron_Tomb_Spyder</defName>
 	<label>tomb spyder</label>
-	<race>Necron_TombSpyder</race>
+	<race>OG_Necron_TombSpyder</race>
 	<combatPower>400</combatPower>
 	<lifeStages>
 		<li>

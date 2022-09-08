@@ -15,8 +15,6 @@
 		<ShootingAccuracyPawn>-10</ShootingAccuracyPawn>
 		<MeleeDodgeChance>1.125</MeleeDodgeChance>
 		<MeleeHitChance>1.25</MeleeHitChance>
-		<MeleeCritChance MayRequire="CETeam.CombatExtended">1.15</MeleeCritChance>
-		<MeleeParryChance MayRequire="CETeam.CombatExtended">1.15</MeleeParryChance>
 		<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
 		<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
 		<ArmorRating_Heat>0.16</ArmorRating_Heat>
@@ -119,8 +117,6 @@
 	<statBases>
 		<MeleeDodgeChance>1.35</MeleeDodgeChance>
 		<MeleeHitChance>0.85</MeleeHitChance>
-		<MeleeCritChance MayRequire="CETeam.CombatExtended">0.75</MeleeCritChance>
-		<MeleeParryChance MayRequire="CETeam.CombatExtended">0.75</MeleeParryChance>
 	</statBases>
 	<race>
 		<lifeExpectancy>9999</lifeExpectancy>
@@ -224,47 +220,47 @@
 	</statBases>
 	<tools>
 		<li>
-		<label>left fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>10</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>22</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>10</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>22</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>right fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>10</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>22</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>10</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>22</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>head</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>12</power>
-		<cooldownTime>1.8</cooldownTime>
-		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>12</power>
+			<cooldownTime>1.8</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 		</li>
 	</tools>
 	<race>
@@ -306,47 +302,47 @@
 	</statBases>
 	<tools>
 		<li>
-		<label>left fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>9</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>22</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>22</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>right fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>9</power>
-		<cooldownTime>1.6</cooldownTime>
-		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>22</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>22</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>head</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>10</power>
-		<cooldownTime>1.8</cooldownTime>
-		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>10</power>
+			<cooldownTime>1.8</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
 		</li>
 	</tools>
 	<race>
@@ -392,48 +388,48 @@
 	</statBases>
 	<tools>
 		<li>
-		<label>left fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>4</power>
-		<cooldownTime>1.2</cooldownTime>
-		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>8</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>4</power>
+			<cooldownTime>1.2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>8</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>right fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>4</power>
-		<cooldownTime>1.2</cooldownTime>
-		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-		<surpriseAttack>
-			<extraMeleeDamages>
-			<li>
-				<def>Stun</def>
-				<amount>8</amount>
-			</li>
-			</extraMeleeDamages>
-		</surpriseAttack>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>4</power>
+			<cooldownTime>1.2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>8</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
 		</li>
 		<li>
-		<label>head</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>6</power>
-		<cooldownTime>1.8</cooldownTime>
-		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-		</li>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>6</power>
+			<cooldownTime>1.8</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			</li>
 	</tools>
 	<race>
 		<lifeExpectancy>9999</lifeExpectancy>

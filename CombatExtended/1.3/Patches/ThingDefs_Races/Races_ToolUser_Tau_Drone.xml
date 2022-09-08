@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<Operation Class="PatchOperationSequence">
+<operations>
+	<!-- ========== Tau Drone ========== -->
+	<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<Name>OG_Tau_Drone</Name>
+		<statBases>
+			<ArmorRating_Blunt>50</ArmorRating_Blunt>
+			<ArmorRating_Sharp>16</ArmorRating_Sharp>
+			<ArmorRating_Heat>20.40</ArmorRating_Heat>
+			<MeleeCritChance>0.06</MeleeCritChance>
+			<MeleeDodgeChance>2</MeleeDodgeChance>
+			<MeleeParryChance>0.0</MeleeParryChance>
+		</statBases>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>ram</label>
+				<capacities>
+				  <li>Blunt</li>
+				</capacities>
+				<power>4.5</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+				<armorPenetration>0.125</armorPenetration>
+			</li>
+		</tools>
+	</li>
+	
+</operations>
+</Operation>
+</Patch>

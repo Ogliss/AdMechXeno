@@ -7,7 +7,7 @@
 		<destroyGearOnDrop>true</destroyGearOnDrop>
 	</PawnKindDef>
  
-	<!-- Bloodletterr -->
+	<!-- Bloodletter -->
 	<PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
 		<defName>OG_Chaos_Deamon_Lessar_Bloodletter</defName>
 		<label>Bloodletter</label>
@@ -201,19 +201,155 @@
 		<label>Nurgling</label>
 		<race>OG_Chaos_Deamon_Nurgling</race>
 		<combatPower>50</combatPower>
-
 		<lifeStages>
 			<li>
-			<bodyGraphicData>
-				<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/Nurgling</texPath>
-				<graphicClass>Graphic_Multi</graphicClass>
-				<shaderType>CutoutComplex</shaderType>
-				<drawSize>1.0</drawSize>
-				<color>(255,255,255)</color>
-				<shadowData>
-				<volume>(0.4, 0.8, 0.4)</volume>
-				</shadowData>
-			</bodyGraphicData>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/Nurgling</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>1.0</drawSize>
+					<color>(255,255,255)</color>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+		
+		</weaponMoney>
+		<weaponTags>
+		
+		</weaponTags>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+		<defName>OG_Chaos_Deamon_Lessar_NurglingSwarm</defName>
+		<label>Nurgling swarm</label>
+		<race>OG_Chaos_Deamon_Nurgling</race>
+		<combatPower>250</combatPower>
+		<lifeStages>
+			<li Class="AdeptusMechanicus.SwarmKindLifeStage">
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/NurglingSwarm_01</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>1.0</drawSize>
+					<color>(255,255,255)</color>
+					<shadowData>
+						<volume>(0.4, 0.8, 0.4)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<subStagesHealth>
+					<li>
+						<bodyGraphicData>
+							<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/NurglingSwarm_02</texPath>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<shaderType>CutoutComplex</shaderType>
+							<drawSize>1.0</drawSize>
+							<color>(255,255,255)</color>
+							<shadowData>
+								<volume>(0.4, 0.8, 0.4)</volume>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+					<li>
+						<bodyGraphicData>
+							<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/NurglingSwarm_03</texPath>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<shaderType>CutoutComplex</shaderType>
+							<drawSize>1.0</drawSize>
+							<color>(255,255,255)</color>
+							<shadowData>
+								<volume>(0.4, 0.8, 0.4)</volume>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+					<li>
+						<bodyGraphicData>
+							<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/NurglingSwarm_04</texPath>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<shaderType>CutoutComplex</shaderType>
+							<drawSize>1.0</drawSize>
+							<color>(255,255,255)</color>
+							<shadowData>
+								<volume>(0.4, 0.8, 0.4)</volume>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+					<li>
+						<bodyGraphicData>
+							<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/NurglingSwarm_05</texPath>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<shaderType>CutoutComplex</shaderType>
+							<drawSize>1.0</drawSize>
+							<color>(255,255,255)</color>
+							<shadowData>
+								<volume>(0.4, 0.8, 0.4)</volume>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+					<li>
+						<bodyGraphicData>
+							<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/NurglingSwarm_06</texPath>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<shaderType>CutoutComplex</shaderType>
+							<drawSize>1.0</drawSize>
+							<color>(255,255,255)</color>
+							<shadowData>
+								<volume>(0.4, 0.8, 0.4)</volume>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+					<li>
+						<bodyGraphicData>
+							<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/NurglingSwarm_07</texPath>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<shaderType>CutoutComplex</shaderType>
+							<drawSize>1.0</drawSize>
+							<color>(255,255,255)</color>
+							<shadowData>
+								<volume>(0.4, 0.8, 0.4)</volume>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+					<li>
+						<bodyGraphicData>
+							<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/NurglingSwarm_08</texPath>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<shaderType>CutoutComplex</shaderType>
+							<drawSize>1.0</drawSize>
+							<color>(255,255,255)</color>
+							<shadowData>
+								<volume>(0.4, 0.8, 0.4)</volume>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+					<li>
+						<bodyGraphicData>
+							<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/NurglingSwarm_09</texPath>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<shaderType>CutoutComplex</shaderType>
+							<drawSize>1.0</drawSize>
+							<color>(255,255,255)</color>
+							<shadowData>
+								<volume>(0.4, 0.8, 0.4)</volume>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+					<li>
+						<bodyGraphicData>
+							<texPath>Things/Pawn/ToolUser/Chaos/Deamons/Nurgle/NurglingSwarm_10</texPath>
+							<graphicClass>Graphic_Multi</graphicClass>
+							<shaderType>CutoutComplex</shaderType>
+							<drawSize>1.0</drawSize>
+							<color>(255,255,255)</color>
+							<shadowData>
+								<volume>(0.4, 0.8, 0.4)</volume>
+							</shadowData>
+						</bodyGraphicData>
+					</li>
+				</subStagesHealth>
 			</li>
 		</lifeStages>
 		<weaponMoney>
@@ -228,7 +364,7 @@
 	<PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
 		<defName>OG_Chaos_Deamon_Plague_Bearer</defName>
 		<label>Plague Bearer</label>
-		<race>OG_Chaos_Deamon_PlagueBearer</race>
+		<race>OG_Chaos_Deamon_Plaguebearer</race>
 		<combatPower>50</combatPower>
 
 		<lifeStages>
@@ -287,7 +423,7 @@
 		<defName>OG_Chaos_Deamon_Lessar_Deamonette</defName>
 		<label>Deamonette</label>
 		<race>OG_Chaos_Deamon_Deamonette</race>
-		<combatPower>50</combatPower>
+		<combatPower>150</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -307,8 +443,9 @@
 			<max>9999</max>
 		</weaponMoney>
 		<weaponTags>
+		 <li>Deamon_Melee_Deamonette</li>
 		 <li>Deamon_Melee_DeamonetteSword</li>
-		 <li>CPowerSword</li>
+		 <li>OGCD_DeamonetteClaw</li>
 		</weaponTags>
 	</PawnKindDef>
 

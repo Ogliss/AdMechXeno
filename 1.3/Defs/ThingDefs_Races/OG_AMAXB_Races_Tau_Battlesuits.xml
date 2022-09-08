@@ -48,8 +48,6 @@
 	<statBases>
 		<MoveSpeed>3.5</MoveSpeed>
 		<MeleeDodgeChance>1.5</MeleeDodgeChance>
-		<MeleeCritChance MayRequire="CETeam.CombatExtended">0.06</MeleeCritChance>
-		<MeleeParryChance MayRequire="CETeam.CombatExtended">0.0</MeleeParryChance>
 		<ArmorRating_Blunt>1.1</ArmorRating_Blunt>
 		<ArmorRating_Sharp>1.1</ArmorRating_Sharp>
 		<ArmorRating_Heat>1.1</ArmorRating_Heat>

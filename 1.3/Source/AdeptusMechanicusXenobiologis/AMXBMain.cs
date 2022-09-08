@@ -7,6 +7,7 @@ using Verse.AI;
 
 namespace AdeptusMechanicus
 {
+
     [StaticConstructorOnStartup]
     public class AMXBMain
     {
@@ -57,11 +58,11 @@ namespace AdeptusMechanicus
                 FactionDef fd = AdeptusFactionDefOf.OG_Tau_Faction;
                 ThingDef td = AdeptusThingDefOf.OG_Alien_Kroot;
                 Filter(fd, td);
-                td = AdeptusThingDefOf.OG_Kroothound_Kindred;
+                td = AdeptusThingDefOf.OG_Kroothound;
                 Filter(fd, td);
-                td = AdeptusThingDefOf.OG_Knarloc_Kindred;
+                td = AdeptusThingDefOf.OG_Knarloc;
                 Filter(fd, td);
-                td = AdeptusThingDefOf.OG_KrootOx_Kindred;
+                td = AdeptusThingDefOf.OG_KrootOx;
                 Filter(fd, td);
             }
             //    Log.Message(string.Format("post AllowKrootAuxiliaries"));

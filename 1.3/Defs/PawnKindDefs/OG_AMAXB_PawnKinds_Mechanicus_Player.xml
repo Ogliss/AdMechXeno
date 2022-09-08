@@ -19,16 +19,23 @@
 		<backstoryFiltersOverride>
 			<li>
 				<categories>
-					<li>AdMech_TechPriest</li>
+					<li>Mechanicus_TechPriest</li>
+				</categories>
+				<categoriesChildhood>
 					<li>Outlander</li>
 					<li>Imperium_Standard</li>
-				</categories>
+					<li>Mechanicus_Standard</li>
+				</categoriesChildhood>
 				<commonality>0.95</commonality>
 			</li>
 			<li>
 				<categories>
-					<li>Offworld</li>
+					<li>Mechanicus_TechPriest</li>
 				</categories>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
 				<commonality>0.05</commonality>
 			</li>
 		</backstoryFiltersOverride>

@@ -8,8 +8,6 @@
 		<statBases>
 			<MoveSpeed>6.0</MoveSpeed>
 			<MeleeDodgeChance>0.21</MeleeDodgeChance>
-			<MeleeCritChance MayRequire="CETeam.CombatExtended">0.20</MeleeCritChance>
-			<MeleeParryChance MayRequire="CETeam.CombatExtended">0.09</MeleeParryChance>
 			<ArmorRating_Blunt>0.075</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.125</ArmorRating_Sharp>
 			<MarketValue>450</MarketValue>
@@ -203,18 +201,18 @@
 	</PawnKindDef>
 
 	<!-- ========================== Trained Kroot hound ================================= -->
-	<ThingDef ParentName="OG_KrootHound_Base">
+	<!--ThingDef ParentName="OG_KrootHound_Base">
 		<defName>OG_Kroothound_Kindred</defName>
 		<race>
 			<useMeatFrom>OG_Kroothound</useMeatFrom>
 			<intelligence>ToolUser</intelligence>
 		</race>
 		<tradeTags Inherit="false"> </tradeTags>
-	</ThingDef>
+	</ThingDef-->
 		
 	<PawnKindDef Name="OG_Kroothound_Kindred" ParentName="KrootHound">
 		<defName>OG_Kroothound_Kindred</defName>
-		<race>OG_Kroothound_Kindred</race>
+		<race>OG_Kroothound</race>
 		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
 	</PawnKindDef>
 </Defs>

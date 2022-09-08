@@ -13,18 +13,20 @@
 			<categories>
 				<li>Imperium_Standard</li>
 			</categories>
+			<categoriesChildhood>
+				<li>Outlander</li>
+				<li>Imperium_Standard</li>
+			</categoriesChildhood>
 			<commonality>0.95</commonality>
 		</li>
 		<li>
 			<categories>
-				<li>Outlander</li>
+				<li>Imperium_Standard</li>
 			</categories>
-			<commonality>0.5</commonality>
-		</li>
-		<li>
-			<categories>
+			<categoriesChildhood>
 				<li>Offworld</li>
-			</categories>
+				<li>Pirate</li>
+			</categoriesChildhood>
 			<commonality>0.05</commonality>
 		</li>
 	</backstoryFiltersOverride>
@@ -75,6 +77,16 @@
 	<weaponTags Inherit="false">
 		<li>KriegGun</li>
 	</weaponTags>
+	<skills>
+		<li>
+			<skill>Shooting</skill>
+			<range>4~8</range>
+		</li>
+		<li>
+			<skill>Melee</skill>
+			<range>3~6</range>
+		</li>
+	</skills>
 	<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
 </PawnKindDef>
 

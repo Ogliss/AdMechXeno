@@ -11,6 +11,9 @@
     <TargetFramework>net472</TargetFramework>
     <FileAlignment>512</FileAlignment>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
+    <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -41,7 +44,7 @@
     <AppendRuntimeIdentifierToOutputPath>false</AppendRuntimeIdentifierToOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.3.3326" GeneratePathProperty="true" />
+    <PackageReference Include="Krafs.Rimworld.Ref" Version="1.3.3389" GeneratePathProperty="true" />
     <PackageReference Include="Lib.Harmony">
       <Version>2.2.1</Version>
     </PackageReference>
@@ -53,18 +56,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlobalSuppressions.cs" />
-    <Compile Include="Harmony\Patches\ModOptions\AMAMod_ChaosSettings_Patch.cs" />
-    <Compile Include="Harmony\Patches\ModOptions\AMAMod_DarkEldarSettings_Patch.cs" />
-    <Compile Include="Harmony\Patches\ModOptions\AMAMod_EldarSettings_Patch.cs" />
-    <Compile Include="Harmony\Patches\ModOptions\AMAMod_ImperialSettings_Patch.cs" />
-    <Compile Include="Harmony\Patches\ModOptions\AMAMod_NecronSettings_Patch.cs" />
-    <Compile Include="Harmony\Patches\ModOptions\AMAMod_OrkSettings_Patch.cs" />
-    <Compile Include="Harmony\Patches\ModOptions\AMAMod_TauSettings_Patch.cs" />
-    <Compile Include="Harmony\Patches\ModOptions\AMAMod_TyranidSettings_Patch.cs" />
     <Compile Include="Harmony\Patches\BackCompatibility_BackCompatibleDefName_Patch.cs" />
     <Compile Include="Harmony\Patches\DamageWorker_AddInjury_FinalizeAndAddInjury_NecronWellBeBack_Patch.cs" />
     <Compile Include="Harmony\Patches\Pawn_DropAndForbidEverything_Necron_Patch.cs" />
     <Compile Include="Harmony\Patches\Corpse_get_ShouldVanish_NecronComps_Patch.cs" />
+    <Compile Include="Racial\Tyranid\IncidentWorker_RipperSwarms.cs" />
+    <Compile Include="Settings\AMXBMod.cs" />
+    <Compile Include="Settings\Integration_Adeptus_Xenobiologis.cs" />
     <None Include="Harmony\Patches\ThingWithComps_GetGizmos_NecronCorpseComps_Patch.cs.bak" />
     <Compile Include="Harmony\Patches\SettlementDefeatUtility_IsDefeated_Patch.cs" />
     <Compile Include="Harmony\Patches\Page_ScenarioLister_ScenariosInCategory_Patch.cs" />
@@ -76,7 +74,6 @@
     <Compile Include="Racial\AdeptusMechanicus\MechanicusExtensions.cs" />
     <Compile Include="Racial\Chaos\DeathActionWorker_WarpSpawn.cs" />
     <Compile Include="Racial\Necron\NecronExtensions.cs" />
-    <Compile Include="Harmony\Patches\ModOptions\AMAMod_XenobiologisSettings_Patch.cs" />
     <Compile Include="Harmony\Patches\Pawn_AnythingToStrip_Necron_Patch.cs" />
     <Compile Include="Harmony\Patches\Pawn_EquipmentTracker_DropAllEquipment_Necron_Patch.cs" />
     <Compile Include="Racial\Chaos\CompProperties_RegenerationOG.cs" />
@@ -130,7 +127,11 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="AdeptusMechanicusArmoury">
-      <HintPath>..\..\..\..\AdMechArmoury\1.3\Assemblies\AdeptusMechanicusArmoury.dll</HintPath>
+      <HintPath>..\..\..\..\AdMech-Armoury\1.3\Assemblies\AdeptusMechanicusArmoury.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="AdeptusMechanicusArmouryAlienTweaks">
+      <HintPath>..\..\..\..\AdMech-Armoury\1.3\AlienRaces\Assemblies\AdeptusMechanicusArmouryAlienTweaks.dll</HintPath>
       <Private>false</Private>
     </Reference>
     <Reference Include="AlienRace">

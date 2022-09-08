@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<Operation Class="PatchOperationSequence">
+<operations>	
+	<!-- ========== Tau Battlesuit ========== -->
+	<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<Name>OG_Tau_Battlesuit</Name>
+		<statBases>
+			<ArmorRating_Blunt>72</ArmorRating_Blunt>
+			<ArmorRating_Sharp>24</ArmorRating_Sharp>
+			<ArmorRating_Heat>20.40</ArmorRating_Heat>
+			<MeleeCritChance>1.25</MeleeCritChance>
+			<MeleeDodgeChance>0.25</MeleeDodgeChance>
+			<MeleeParryChance>0.5</MeleeParryChance>
+		</statBases>
+		<tools>
+			<li Class="CombatExtended.ToolCE">
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>1.65</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<armorPenetration>0.095</armorPenetration>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>4</power>
+				<cooldownTime>1.65</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<armorPenetration>0.095</armorPenetration>
+			</li>
+			<li Class="CombatExtended.ToolCE">
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>5</power>
+				<cooldownTime>1.85</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<chanceFactor>0.2</chanceFactor>
+				<armorPenetration>0.179</armorPenetration>
+			</li>
+		</tools>
+	</li>
+	
+</operations>
+</Operation>
+</Patch>

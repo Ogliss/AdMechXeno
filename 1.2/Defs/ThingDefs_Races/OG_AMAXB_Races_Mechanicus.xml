@@ -10,8 +10,6 @@
 		<Flammability>0</Flammability>
 		<MeleeDodgeChance>1</MeleeDodgeChance>
 		<MeleeHitChance>1</MeleeHitChance>
-		<MeleeCritChance MayRequire="CETeam.CombatExtended">1</MeleeCritChance>
-		<MeleeParryChance MayRequire="CETeam.CombatExtended">1</MeleeParryChance>
 		<ComfyTemperatureMin>-100</ComfyTemperatureMin>
 		<ComfyTemperatureMax>250</ComfyTemperatureMax>
 		<MeatAmount>0</MeatAmount>
@@ -50,13 +48,13 @@
 		<thinkTreeMain>Mechanoid</thinkTreeMain>
 		<baseBodySize>1.0</baseBodySize>
 		<lifeStageAges>
-		<li>
-			<def>MechanoidFullyFormed</def>
-			<minAge>0</minAge>
-			<soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
-			<soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
-			<soundCall>Pawn_Mech_Scyther_Call</soundCall>
-		</li>
+			<li>
+				<def>MechanoidFullyFormed</def>
+				<minAge>0</minAge>
+				<soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+				<soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+				<soundCall>Pawn_Mech_Scyther_Call</soundCall>
+			</li>
 		</lifeStageAges>
 		<soundCallIntervalRange>
 		<min>1000</min>
@@ -73,7 +71,7 @@
 <!-- Mechanicus Sicarians -->
 <!--B19--> 
 <ThingDef ParentName="OG_Mechanicus_Construct_BaseWalker">
-	<defName>Mechanicus_Sicarian</defName>
+	<defName>OG_Mechanicus_Sicarian</defName>
 	<label>sicarian warriors</label>
 	<description>The Ruststalkers of the Skitarii Legions fall upon their foes in a slashing, stabbing frenzy. Their transonic blades blur as they dart and cut like the weapons of gladiatorial knife-fighters, the deadly resonances they transmit bypassing armour as if it offered no more resistance than a hologram. The Ruststalkers were originally devised as cybernetic assassins, sent into the Red Planet’s wastes to hunt down feral servitors and other undesirables excommunicated from the Cult Mechanicus.
 	They proved so effective at their task they were repurposed and militarised into groups known as killclades. Since that day Ruststalker manufacturing has spread to every forge world and the troops have fought on the front line of the Cult Mechanicus’ many wars.</description>
@@ -85,35 +83,35 @@
 	</statBases>
 	<tools>
 		<li>
-		<label>left fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>12.0</power>
-		<cooldownTime>2</cooldownTime>
-		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>12.0</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 		</li>
 		<li>
-		<label>right fist</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>12.0</power>
-		<cooldownTime>2</cooldownTime>
-		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>12.0</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 		</li>
 		<li>
-		<label>head</label>
-		<capacities>
-			<li>Blunt</li>
-		</capacities>
-		<power>8.5</power>
-		<cooldownTime>2</cooldownTime>
-		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
-		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
-		<chanceFactor>0.2</chanceFactor>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>8.5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
 		</li>
 	</tools>
 	<race>

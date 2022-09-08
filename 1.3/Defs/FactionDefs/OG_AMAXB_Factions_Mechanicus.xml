@@ -159,24 +159,28 @@
 			<li>
 				<kindDef>Peaceful</kindDef>
 				<options>
-					<Colonist_OG_Militarum>50</Colonist_OG_Militarum>
-					<OG_Militarum_Guardsman_Ranged_Cadian>230</OG_Militarum_Guardsman_Ranged_Cadian>
-					<OG_Militarum_Guardsman_Melee_Cadian>130</OG_Militarum_Guardsman_Melee_Cadian>
+					<Colonist_OG_Mechanicus>50</Colonist_OG_Mechanicus>
+					<OG_Mechanicus_Skitarii_Ranger>230</OG_Mechanicus_Skitarii_Ranger>
+					<OG_Mechanicus_Sicarian_Rust_Stalker>130</OG_Mechanicus_Sicarian_Rust_Stalker>
 					<OG_Mechanicus_Faction_Tech_Priest>1</OG_Mechanicus_Faction_Tech_Priest>
 				</options>
 			</li>
 			<li>
 				<kindDef>Trader</kindDef>
 				<traders>
-					<OG_Militarum_Trader>1</OG_Militarum_Trader>
+					<OG_Mechanicus_Trader>1</OG_Mechanicus_Trader>
 				</traders>
 				<carriers>
 					<Muffalo>2</Muffalo>
 					<Dromedary>2</Dromedary>
 				</carriers>
 				<guards>
-					<OG_Mechanicus_Skitarii_Ranger>130</OG_Mechanicus_Skitarii_Ranger>
-					<OG_Mechanicus_Skitarii_Vanguard>130</OG_Mechanicus_Skitarii_Vanguard>
+					<OG_Mechanicus_Sicarian_Rust_Stalker>10</OG_Mechanicus_Sicarian_Rust_Stalker>
+					<OG_Mechanicus_Sicarian_Rust_Infiltrator>10</OG_Mechanicus_Sicarian_Rust_Infiltrator>
+					<OG_Mechanicus_Skitarii_Ranger>10</OG_Mechanicus_Skitarii_Ranger>
+					<OG_Mechanicus_Skitarii_Ranger_Primus>3</OG_Mechanicus_Skitarii_Ranger_Primus>
+					<OG_Mechanicus_Skitarii_Vanguard>10</OG_Mechanicus_Skitarii_Vanguard>
+					<OG_Mechanicus_Skitarii_Vanguard_Primus>3</OG_Mechanicus_Skitarii_Vanguard_Primus>
 				</guards>
 			</li>
 			<li>

@@ -54,11 +54,11 @@
 	<defaultFactionType>OG_Ork_Tek_Faction</defaultFactionType>
 	<backstoryFiltersOverride>
 		<li>
-		<categories>
-			<li>Offworld</li>
-			<li>Outlander</li>
-			<li>Pirate</li>
-		</categories>
+			<categories>
+				<li>Offworld</li>
+				<li>Outlander</li>
+				<li>Pirate</li>
+			</categories>
 		</li>
 	</backstoryFiltersOverride>
 	<aiAvoidCover>false</aiAvoidCover>
@@ -81,7 +81,7 @@
 
 <!-- Grotz Base -->
 <PawnKindDef Abstract="True" Name="OG_Orkoid_KindBase_Spacer_Grot" ParentName="OG_Orkoid_KindBase_Spacer">
-	<race>Ork_Grot</race>
+	<race>OG_Grot</race>
     <alternateGraphicChance>0.50</alternateGraphicChance>
     <alternateGraphics>
       <li><texPath>Things/Pawn/ToolUser/Ork/Grot_B</texPath></li>

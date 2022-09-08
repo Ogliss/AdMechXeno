@@ -5,7 +5,7 @@
 			<!-- Traitor Guard Faction Expansion -->
 			<!-- Adds Deamons -->
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/FactionDef[contains(defName,'TraitorGuardFaction')]/pawnGroupMakers/li/options</xpath>
+				<xpath>/Defs/FactionDef[contains(defName,'QX_TraitorGuardFaction')]/pawnGroupMakers/li/options</xpath>
 				<value>
 					<OG_Chaos_Deamon_Lessar_Horror_Blue>15</OG_Chaos_Deamon_Lessar_Horror_Blue>
 					<OG_Chaos_Deamon_Lessar_Horror_Pink>12</OG_Chaos_Deamon_Lessar_Horror_Pink>
@@ -20,7 +20,7 @@
 			<!-- Chaos Marines Faction Expansion -->
 			<!-- Adds Deamons -->
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/FactionDef[contains(defName,'ChaosMarineFaction')]/pawnGroupMakers/li/options</xpath>
+				<xpath>/Defs/FactionDef[contains(defName,'QX_ChaosMarineFaction')]/pawnGroupMakers/li/options</xpath>
 				<value>
 					<OG_Chaos_Deamon_Lessar_Horror_Blue>3</OG_Chaos_Deamon_Lessar_Horror_Blue>
 					<OG_Chaos_Deamon_Lessar_Horror_Pink>2</OG_Chaos_Deamon_Lessar_Horror_Pink>
@@ -58,7 +58,7 @@
 			</li>
 			<!-- Tyranid Faction Expansion: Adds More Nids -->
 			<li Class="PatchOperationAdd">
-				<xpath>/Defs/FactionDef[contains(defName,'TyranidFaction')]/pawnGroupMakers/li/options</xpath>
+				<xpath>/Defs/FactionDef[contains(defName,'QX_TyranidFaction')]/pawnGroupMakers/li/options</xpath>
 				<value>
 					<OG_Tyranid_Ripper_Swarm>20</OG_Tyranid_Ripper_Swarm>
 					<OG_Tyranid_Hormagaunt>90</OG_Tyranid_Hormagaunt>

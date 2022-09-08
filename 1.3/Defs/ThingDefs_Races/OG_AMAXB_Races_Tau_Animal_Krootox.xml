@@ -8,8 +8,6 @@
 			<MoveSpeed>4.5</MoveSpeed>
 			<MarketValue>300</MarketValue>
 			<MeleeDodgeChance>0.06</MeleeDodgeChance>
-			<MeleeCritChance MayRequire="CETeam.CombatExtended">0.41</MeleeCritChance>
-			<MeleeParryChance MayRequire="CETeam.CombatExtended">0.48</MeleeParryChance>
 			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
 			<ArmorRating_Sharp>0.125</ArmorRating_Sharp>
 			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
@@ -188,7 +186,7 @@
 	</PawnKindDef>
 
 	<!-- ========================== Kindred Kroot Ox ================================= -->
-	<ThingDef ParentName="OG_KrootOx_Base">
+	<!--ThingDef ParentName="OG_KrootOx_Base">
 		<defName>OG_KrootOx_Kindred</defName>
 		<race>
 			<useMeatFrom>OG_KrootOx</useMeatFrom>
@@ -196,11 +194,11 @@
 			<packAnimal>false</packAnimal>
 		</race>
 		<tradeTags Inherit="false"> </tradeTags>
-	</ThingDef>
+	</ThingDef-->
 		
 	<PawnKindDef ParentName="OG_KrootOx_BaseKind">
 		<defName>OG_KrootOx_Kindred</defName>
-		<race>OG_KrootOx_Kindred</race>
+		<race>OG_KrootOx</race>
 		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
 	</PawnKindDef>
 
