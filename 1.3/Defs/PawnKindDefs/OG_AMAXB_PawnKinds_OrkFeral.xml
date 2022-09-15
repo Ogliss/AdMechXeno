@@ -120,14 +120,14 @@
 			<bodyGraphicData>
 				<texPath>Things/Pawn/ToolUser/Ork/Boy_Light_A</texPath>
 				<graphicClass>Graphic_Multi</graphicClass>
-				<drawSize>2</drawSize>
+				<drawSize>3</drawSize>
 				<shadowData>
 					<volume>(0.6, 0.8, 0.6)</volume>
 				</shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 				<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
-				<drawSize>2</drawSize>
+				<drawSize>3</drawSize>
 			</dessicatedBodyGraphicData>
 		</li>
 	</lifeStages>
@@ -197,14 +197,14 @@
 			<bodyGraphicData>
 				<texPath>Things/Pawn/ToolUser/Ork/Boy_Med_A</texPath>
 				<graphicClass>Graphic_Multi</graphicClass>
-				<drawSize>2</drawSize>
+				<drawSize>3</drawSize>
 				<shadowData>
 					<volume>(0.6, 0.8, 0.6)</volume>
 				</shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 				<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
-				<drawSize>2</drawSize>
+				<drawSize>3</drawSize>
 			</dessicatedBodyGraphicData>
 		</li>
 	</lifeStages>
@@ -234,14 +234,14 @@
 			<bodyGraphicData>
 				<texPath>Things/Pawn/ToolUser/Ork/Nob</texPath>
 				<graphicClass>Graphic_Multi</graphicClass>
-				<drawSize>2</drawSize>
+				<drawSize>3</drawSize>
 				<shadowData>
 					<volume>(0.6, 0.8, 0.6)</volume>
 				</shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 				<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
-				<drawSize>2</drawSize>
+				<drawSize>3</drawSize>
 			</dessicatedBodyGraphicData>
 		</li>
 	</lifeStages>
@@ -288,14 +288,14 @@
 			<bodyGraphicData>
 				<texPath>Things/Pawn/ToolUser/Ork/Nob_Eavy</texPath>
 				<graphicClass>Graphic_Multi</graphicClass>
-				<drawSize>2</drawSize>
+				<drawSize>3</drawSize>
 				<shadowData>
 					<volume>(0.6, 0.8, 0.6)</volume>
 				</shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 				<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
-				<drawSize>2</drawSize>
+				<drawSize>3</drawSize>
 			</dessicatedBodyGraphicData>
 		</li>
 	</lifeStages>
@@ -327,14 +327,14 @@
 			<bodyGraphicData>
 				<texPath>Things/Pawn/ToolUser/Ork/Boss_Prophet</texPath>
 				<graphicClass>Graphic_Multi</graphicClass>
-				<drawSize>2</drawSize>
+				<drawSize>3</drawSize>
 				<shadowData>
 					<volume>(0.6, 0.8, 0.6)</volume>
 				</shadowData>
 			</bodyGraphicData>
 			<dessicatedBodyGraphicData>
 				<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
-				<drawSize>2</drawSize>
+				<drawSize>3</drawSize>
 			</dessicatedBodyGraphicData>
 		</li>
 	</lifeStages>
