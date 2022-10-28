@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Feral Orkz -->
+	<!-- Feral Ork Faction Leader -->	
+	<PawnKindDef ParentName="OG_Orkoid_KindBase_Tribal">
+		<defName>OG_Ork_Feral_Faction_Warboss</defName>
+		<label>Feral Big Boss</label>
+		<race>Human</race>
+		<combatPower>12500</combatPower>
+		<itemQuality>Superior</itemQuality>
+		<factionLeader>true</factionLeader>
+		<initialWillRange IgnoreIfNoMatchingField="True">3~5</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">17~27</initialResistanceRange>
+		<weaponTags>
+			<li>NeolithicRangedChief</li>
+			<li>OBigChoppa</li>
+		</weaponTags>
+		<apparelTags>
+			<li>OrkFactionBoss</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>0</min>
+			<max>350</max>
+		</apparelMoney>
+	</PawnKindDef>
+	
+</Defs>

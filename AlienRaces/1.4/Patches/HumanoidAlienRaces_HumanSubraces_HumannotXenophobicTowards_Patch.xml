@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<!-- Humanoid Alien Races 2.0 -->
+	<Operation Class="PatchOperationSequence">
+		<operations>
+		<!-- Adds human subraces to vanilla human notXenophobistTowards list-->
+			<li Class="PatchOperationConditional">
+			<xpath>/Defs/ThingDef[defName="Human"]/alienRace/generalSettings/notXenophobistTowards</xpath>
+				<nomatch Class="PatchOperationAdd">
+					<xpath>/Defs/AlienRace.ThingDef_AlienRace[defName="Human"]/alienRace/generalSettings</xpath>
+						<value>	
+							<notXenophobistTowards></notXenophobistTowards>
+						</value>
+				</nomatch>	
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName="Human"]/alienRace/generalSettings/notXenophobistTowards</xpath>
+				<value>
+					<li>OG_Human_Mechanicus</li>
+					<li>OG_Abhuman_Ogryn</li>
+					<li>OG_Abhuman_Ratlin</li>
+					<li>OG_Abhuman_Beastman</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+	 
+</Patch>

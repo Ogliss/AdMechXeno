@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ============================ Tau Base Kind ========================== -->
+	<PawnKindDef Name="TauBase" Abstract="True">
+		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>Offworld</li>
+					<li>Outlander</li>
+					
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<invNutrition>2.55</invNutrition>
+		<!--aiAvoidCover>true</aiAvoidCover-->
+		<weaponMoney>
+			<min>7500</min>
+			<max>10000</max>
+		</weaponMoney>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>50</min>
+						<max>200</max>
+					</countRange>
+				</li>
+				<li>
+					<thingDef>MedicineIndustrial</thingDef>
+					<countRange>
+						<min>1</min>
+						<max>3</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>5</min>
+					<max>8</max>
+				</primaryMagazineCount>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!-- ============================ Firewarrior La ========================== -->
+	<PawnKindDef ParentName="TauBase">
+		<defName>OG_Tau_Firewarrior</defName>
+		<label>Fire Warrior Shas'La</label>
+		<race>Tau_Firewarrior</race>
+		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
+		<combatPower>70</combatPower>
+		<itemQuality>Normal</itemQuality>
+		<!--aiAvoidCover>true</aiAvoidCover-->
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Tau/Firewarrior</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.350</drawSize>
+					<color>(221,160,99)</color>
+					<colorTwo>(139,139,176)</colorTwo>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>7000</min>
+			<max>7000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>TPulseRifle</li>
+			<li>TPulseCarbine</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- ============================ Firewarrior Ui ========================== -->
+	<PawnKindDef ParentName="TauBase">
+		<defName>OG_Tau_Firewarrior_Sgt</defName>
+		<label>Fire Warrior Shas'Ui</label>
+		<race>Tau_Firewarrior</race>
+		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
+		<combatPower>85</combatPower>
+		<itemQuality>Good</itemQuality>
+		<!--aiAvoidCover>true</aiAvoidCover-->
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Tau/FirewarriorSgt</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.350</drawSize>
+					<color>(221,160,99)</color>
+					<colorTwo>(139,139,176)</colorTwo>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>7000</min>
+			<max>15000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>TPulseRifle</li>
+			<li>TPulseCarbine</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- ============================ Pathfinder La ========================== -->
+	<PawnKindDef ParentName="TauBase">
+		<defName>OG_Tau_Pathfinder</defName>
+		<label>pathfinder shas'la</label>
+		<race>Tau_Firewarrior</race>
+		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
+		<combatPower>65</combatPower>
+		<itemQuality>Normal</itemQuality>
+		<!--aiAvoidCover>true</aiAvoidCover-->
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Tau/Pathfinder</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.350</drawSize>
+					<color>(221,160,99)</color>
+					<colorTwo>(139,139,176)</colorTwo>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>7000</min>
+			<max>7000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>TPulseCarbine</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	
+	<!-- ============================ Pathfinder La Sniper ========================== -->
+	<PawnKindDef ParentName="TauBase">
+		<defName>OG_Tau_PathfinderSniper</defName>
+		<label>pathfinder shas'la</label>
+		<race>Tau_Firewarrior</race>
+		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
+		<combatPower>125</combatPower>
+		<itemQuality>Normal</itemQuality>
+		<!--aiAvoidCover>true</aiAvoidCover-->
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Tau/Pathfinder</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.350</drawSize>
+					<color>(221,160,99)</color>
+					<colorTwo>(139,139,176)</colorTwo>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>7000</min>
+			<max>7000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>TRailRifle</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!-- ============================ Pathfinder Ui ========================== -->
+	<PawnKindDef ParentName="TauBase">
+		<defName>OG_Tau_Pathfinder_Sgt</defName>
+		<label>pathfinder shas'ui</label>
+		<race>Tau_Firewarrior</race>
+		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
+		<combatPower>85</combatPower>
+		<itemQuality>Normal</itemQuality>
+		<!--aiAvoidCover>true</aiAvoidCover-->
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Tau/PathfinderSgt</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.350</drawSize>
+					<color>(221,160,99)</color>
+					<colorTwo>(139,139,176)</colorTwo>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>7000</min>
+			<max>15000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>TRailRifle</li>
+			<li>TIonRifle</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!-- ============================ Ethereal ========================== -->
+	<PawnKindDef ParentName="TauBase">
+		<defName>OG_Tau_Ethereal</defName>
+		<label>Aun</label>
+		<race>Tau_Ethereal</race>
+		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
+		<combatPower>150</combatPower>
+		<itemQuality>Superior</itemQuality>
+		<!--aiAvoidCover>true</aiAvoidCover-->
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Tau/Ethereal</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.350</drawSize>
+					<color>(221,160,99)</color>
+					<colorTwo>(139,139,176)</colorTwo>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>7000</min>
+			<max>7000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>THonourBlade</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- ============================ Battlesuits ========================== -->
+	<!-- ============================ Stealth Battlesuit La ========================== -->
+	<PawnKindDef ParentName="TauBase">
+		<defName>OG_Tau_StealthBattlesuit</defName>
+		<label>XV-25</label>
+		<race>Tau_Ethereal</race>
+		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
+		<combatPower>150</combatPower>
+		<itemQuality>Superior</itemQuality>
+		<!--aiAvoidCover>true</aiAvoidCover-->
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Tau/XV25Stealthsuit/XV25</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.350</drawSize>
+					<color>(221,160,99)</color>
+					<colorTwo>(139,139,176)</colorTwo>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<!--dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData-->
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>7000</min>
+			<max>7000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>TBurstCannon</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	
+	<!-- ============================ Crisis Battlesuit La ========================== -->
+	<PawnKindDef ParentName="TauBase">
+		<defName>OG_Tau_CrisisBattlesuit</defName>
+		<label>XV-88</label>
+		<race>Tau_Ethereal</race>
+		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
+		<combatPower>150</combatPower>
+		<itemQuality>Superior</itemQuality>
+		<!--aiAvoidCover>true</aiAvoidCover-->
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Tau/XV8Battlesuit/XV8</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>1.350</drawSize>
+					<color>(221,160,99)</color>
+					<colorTwo>(139,139,176)</colorTwo>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<!--dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData-->
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>7000</min>
+			<max>7000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>TBurstCannon</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	<!--
+	<PawnKindDef ParentName="OG_Tau_CrisisBattlesuitBase">
+		<defName>OG_Tau_CrisisBattlesuit</defName>
+		<initialWillRange IgnoreIfNoMatchingField="True">3~5</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">17~27</initialResistanceRange>
+	</PawnKindDef>
+	
+	-->
+	<!-- ============================ Broadside Battlesuit La ========================== -->
+	<!--
+	<PawnKindDef ParentName="OG_Tau_BroadsideBattlesuitBase">
+		<defName>OG_Tau_BroadsideBattlesuit</defName>
+		<initialWillRange IgnoreIfNoMatchingField="True">3~5</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">17~27</initialResistanceRange>
+	</PawnKindDef>
+	-->
+	<!-- ============================ Tau Battlesuits Ui ========================== -->
+	<!-- ============================ Stealth Battlesuit Ui ========================== -->
+	<!--
+	<PawnKindDef ParentName="OG_Tau_StealthBattlesuitBase">
+		<defName>OG_Tau_StealthBattlesuit</defName>
+		<initialWillRange IgnoreIfNoMatchingField="True">3~5</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">17~27</initialResistanceRange>
+	</PawnKindDef>
+	
+	-->
+	<!-- ============================ Crisis Battlesuit Ui	========================== -->
+	<!--
+	<PawnKindDef ParentName="OG_Tau_CrisisBattlesuitSgtBase">
+		<defName>OG_Tau_CrisisBattlesuitSgt</defName>
+		<initialWillRange IgnoreIfNoMatchingField="True">3~5</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">17~27</initialResistanceRange>
+	</PawnKindDef>
+	-->
+	<!-- ============================ Broadside Battlesuit Ui	========================== -->
+	<!--
+	<PawnKindDef ParentName="OG_Tau_BroadsideBattlesuitSgtBase">
+		<defName>OG_Tau_BroadsideBattlesuitSgt</defName>
+		<initialWillRange IgnoreIfNoMatchingField="True">3~5</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">17~27</initialResistanceRange>
+	</PawnKindDef>
+	-->
+	<!-- ============================ Commander Battlesuit Ui ========================== -->
+	<!--
+	<PawnKindDef ParentName="OG_Tau_CommanderBattlesuitBase">
+		<defName>OG_Tau_CommanderBattlesuit</defName>
+		<initialWillRange IgnoreIfNoMatchingField="True">3~5</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">17~27</initialResistanceRange>
+	</PawnKindDef>
+	-->
+</Defs>

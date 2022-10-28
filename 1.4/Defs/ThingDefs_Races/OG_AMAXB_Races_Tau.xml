@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Tau Base Abstract -->
+
+<ThingDef ParentName="BasePawn" Name="OG_Tau_Pawn_Base" Abstract="True">
+	<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+	<statBases>
+		<MarketValue>1750</MarketValue>
+		<MoveSpeed>4.61</MoveSpeed>
+		<PsychicSensitivity>-1</PsychicSensitivity>
+		<Flammability>1</Flammability>
+		<ComfyTemperatureMin>-60</ComfyTemperatureMin>
+		<ComfyTemperatureMax>65</ComfyTemperatureMax>
+		<LeatherAmount>25</LeatherAmount>
+		<MeleeDodgeChance>0.85</MeleeDodgeChance>
+		<MeleeHitChance>0.85</MeleeHitChance>
+		<ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.32</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.32</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>22</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
+		</li>
+		<li>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>7</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>22</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
+		</li>
+	</tools>
+	<race>
+		<thinkTreeMain>Humanlike</thinkTreeMain>
+		<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+		<fleshType>OG_Flesh_Tau</fleshType>
+		<bloodDef>OG_FilthBlood_Tau</bloodDef>	
+		<intelligence>ToolUser</intelligence>
+		<makesFootprints>true</makesFootprints>
+		<lifeExpectancy>70</lifeExpectancy>
+		<meatColor>(200,135,100)</meatColor>
+		<hasGenders>false</hasGenders>
+		<foodType>OmnivoreHuman</foodType>
+		<baseHungerRate>0.15</baseHungerRate>
+		<baseBodySize>1.25</baseBodySize>
+		<baseHealthScale>1</baseHealthScale>
+		<predator>true</predator>
+		<lifeStageAges>
+		<li>
+			<def>HumanlikeAdult</def>
+			<minAge>18</minAge>
+		</li>
+		</lifeStageAges>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<specialShadowData>
+		<volume>(0.3, 0.8, 0.4)</volume>
+		<offset>(0,0,-0.3)</offset>
+		</specialShadowData>
+		<ageGenerationCurve>
+			<points>
+				<li>(14,0)</li>
+				<li>(16,100)</li>
+				<li>(50,100)</li>
+				<li>(60,30)</li>
+				<li>(70,18)</li>
+				<li>(80,10)</li>
+				<li>(90,3)</li>
+				<li>(100,0)</li>
+			</points>
+		</ageGenerationCurve>
+		<hediffGiverSets>
+			<li>OrganicStandard</li>
+		</hediffGiverSets>
+		<leatherDef>Leather_Tau</leatherDef>
+		<meatLabel>tau meat</meatLabel>
+	</race>
+	<comps>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+		<li MayRequire="CETeam.CombatExtended">
+			<compClass>CombatExtended.CompPawnGizmo</compClass>
+		</li>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
+	</comps>
+	<modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+	</modExtensions>
+</ThingDef>
+
+<ThingDef ParentName="OG_Tau_Pawn_Base">
+	<defName>OG_Alien_Tau</defName>
+	<label>Tau</label>
+	<description>An Ethereal is a member of the fifth caste of the Tau species, forming a ruling elite above the Fire, Earth, Air, and Water Castes that make up the bulk of the T'au population. Known as the Aun in the Tau Lexicon, their name translates variously as the "Celestial" or "Ethereal Caste." Though their numbers are small compared to the other castes, the Ethereals are the rulers of the T'au Empire, and command near total authority and loyalty from every other Tau. Born to counsel, advise and steer their comrades towards the chosen path, the Ethereals embody the roles of royalty and the priesthood, and the deference paid to them is the closest thing to mysticism in T'au society.</description>
+	<statBases>
+		<MoveSpeed>5.8</MoveSpeed>
+	</statBases>
+	<race>
+		<thinkTreeMain>Humanlike</thinkTreeMain>
+		<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+		<intelligence>Humanlike</intelligence>
+		<nameCategory>HumanStandard</nameCategory>
+		<lifeExpectancy>150</lifeExpectancy>
+		<body>OG_Tau_Body</body>
+		<baseHealthScale>1</baseHealthScale>
+	</race>
+</ThingDef>
+
+
+<!-- Tau Ethereal -->
+
+<ThingDef ParentName="OG_Tau_Pawn_Base">
+	<defName>Tau_Ethereal</defName>
+	<label>Ethereal</label>
+	<description>An Ethereal is a member of the fifth caste of the Tau species, forming a ruling elite above the Fire, Earth, Air, and Water Castes that make up the bulk of the T'au population. Known as the Aun in the Tau Lexicon, their name translates variously as the "Celestial" or "Ethereal Caste." Though their numbers are small compared to the other castes, the Ethereals are the rulers of the T'au Empire, and command near total authority and loyalty from every other Tau. Born to counsel, advise and steer their comrades towards the chosen path, the Ethereals embody the roles of royalty and the priesthood, and the deference paid to them is the closest thing to mysticism in T'au society.</description>
+	<statBases>
+		<MoveSpeed>5.8</MoveSpeed>
+	</statBases>
+	<race>
+		<lifeExpectancy>150</lifeExpectancy>
+		<body>OG_Tau_Body</body>
+		<baseHealthScale>2.5</baseHealthScale>
+		<useMeatFrom>OG_Alien_Tau</useMeatFrom>
+	</race>
+</ThingDef>
+
+<!-- Tau Fire Warrior -->
+
+<ThingDef ParentName="OG_Tau_Pawn_Base">
+	<defName>Tau_Firewarrior</defName>
+	<label>Fire Warrior</label>
+	<description>A Fire Warrior is a member of the Tau Fire Caste and thus serves as the primary soldier and the core combatant of the Tau Empire's multispecies armed forces. Fire Warriors are efficient, professional soldiers. They are well-equipped,and their absolute belief in the Greater Good and their fanatical trust in the Ethereal Caste makes them deeply determined soldiers, grim in defence and aggressive on the attack.</description>
+	<statBases>
+	</statBases>
+	<race>
+		<lifeExpectancy>50</lifeExpectancy>
+		<body>OG_Tau_Body</body>
+		<baseHealthScale>1.5</baseHealthScale>
+		<useMeatFrom>OG_Alien_Tau</useMeatFrom>
+	</race>
+</ThingDef>
+
+<!-- Kroot Warrior -->
+<ThingDef ParentName="OG_Tau_Pawn_Base">
+	<defName>OG_Alien_Kroot</defName>
+	<label>Kroot Warrior</label>
+	<description>The Kroot are a species of savage humanoids who are a member species of the Tau Empire who evolved from avian creatures. Kroot are tall aliens (a good half-meter taller than most humans), their avian ancestry giving them a bird-like beak and long quills protruding from their heads like hair. Smaller quills, possibly the evolutionary remnants of feathers, can be found scattered over their bodies.</description>
+	<statBases>
+		<MoveSpeed>5.2</MoveSpeed>
+		<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.16</ArmorRating_Heat>
+		<MeleeDodgeChance>1.25</MeleeDodgeChance>
+		<MeleeHitChance>1.25</MeleeHitChance>
+	</statBases>
+	<race>
+		<lifeExpectancy>120</lifeExpectancy>
+		<body>OG_Kroot_Body</body>
+		<baseHungerRate>0.25</baseHungerRate>
+		<baseHealthScale>1.8</baseHealthScale>
+		<leatherDef>Leather_Kroot</leatherDef>
+		<meatLabel>kroot meat</meatLabel>
+	</race>
+	<tools>
+		<li>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>8</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>11</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
+		</li>
+		<li>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>8</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>11</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
+		</li>
+		<li>
+			<label>beak</label>
+			<capacities>
+				<li>Cut</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>1.8</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+</ThingDef>
+
+<!-- Vespid Warrior -->
+<ThingDef ParentName="OG_Tau_Pawn_Base">
+	<defName>OG_Alien_Vespid</defName>
+	<label>Vespid Stingwing</label>
+	<description>The Vespid are a unique race of insect-like aliens who are members of the T'au Empire. In the T'au Lexicon, they are called "Mal'kor." This derives from the T'au words for insect, "Mal," and air, "Kor." The soldiers of the Imperium of Man often refer to them as "Stingwings." The Vespids' homeworld is a gas giant also called Vespid, three light years to the galactic south of the T'au's D'yanoi Sept.</description>
+	<statBases>
+		<MoveSpeed>6.2</MoveSpeed>
+		<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.16</ArmorRating_Heat>
+		<MeleeDodgeChance>1.25</MeleeDodgeChance>
+		<MeleeHitChance>1.25</MeleeHitChance>
+	</statBases>
+	<race>
+		<lifeExpectancy>120</lifeExpectancy>
+		<body>OG_Vespid_Body</body>
+		<baseHungerRate>0.25</baseHungerRate>
+		<baseHealthScale>1.8</baseHealthScale>
+		<leatherDef>Leather_Kroot</leatherDef>
+		<meatLabel>kroot meat</meatLabel>
+	</race>
+	<tools>
+		<li>
+			<label>left fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>8</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>11</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
+		</li>
+		<li>
+			<label>right fist</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>8</power>
+			<cooldownTime>1.6</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<surpriseAttack>
+				<extraMeleeDamages>
+					<li>
+						<def>Stun</def>
+						<amount>11</amount>
+					</li>
+				</extraMeleeDamages>
+			</surpriseAttack>
+		</li>
+		<li>
+			<label>bite</label>
+			<capacities>
+				<li>Bite</li>
+			</capacities>
+			<power>9</power>
+			<cooldownTime>1.8</cooldownTime>
+			<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+			<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+</ThingDef>
+
+</Defs>

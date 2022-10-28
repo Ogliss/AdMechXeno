@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Dark Eldar Base kind -->
+	<PawnKindDef Name="OG_DarkEldar_BaseKind" Abstract="True">
+		<defaultFactionType>OG_DarkEldar_Kabal_Faction</defaultFactionType>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>Offworld</li>
+					<li>Outlander</li>
+				</categories>
+			</li>
+		</backstoryFiltersOverride>
+		<invNutrition>2.55</invNutrition>
+		<aiAvoidCover>false</aiAvoidCover>
+		<weaponMoney>
+			<min>7500</min>
+			<max>10000</max>
+		</weaponMoney>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>50</min>
+						<max>200</max>
+					</countRange>
+				</li>
+				<li>
+					<thingDef>MedicineIndustrial</thingDef>
+					<countRange>
+						<min>1</min>
+						<max>3</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>5</min>
+					<max>8</max>
+				</primaryMagazineCount>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+		
+	<!-- ============================ Dark Eldar Military Base ========================== -->
+	<PawnKindDef Name="OG_DarkEldar_Mil_BaseKind" ParentName="OG_DarkEldar_BaseKind" Abstract="True">
+		<chemicalAddictionChance>0.5</chemicalAddictionChance>
+		<isFighter>true</isFighter>
+		<invNutrition>2.55</invNutrition>
+		<itemQuality>Normal</itemQuality>
+		<minGenerationAge>30</minGenerationAge>
+		<maxGenerationAge>10000</maxGenerationAge>
+		<weaponMoney>
+			<min>2750</min>
+			<max>7500</max>
+		</weaponMoney>
+		<techHediffsMoney>
+			<min>1000</min>
+			<max>1500</max>
+		</techHediffsMoney>
+		<inventoryOptions>
+			<skipChance>0.8</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>50</min>
+						<max>200</max>
+					</countRange>
+				</li>
+				<li>
+					<thingDef>MedicineIndustrial</thingDef>
+					<countRange>
+						<min>1</min>
+						<max>1</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>5</min>
+					<max>8</max>
+				</primaryMagazineCount>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!-- ============================ Dark Eldar Kabalite Base ========================== -->
+	<PawnKindDef Name="OG_DarkEldar_Kabalite_BaseKind" ParentName="OG_DarkEldar_Mil_BaseKind" Abstract="True">
+		<label>Kabalite Warrior</label>
+		<combatPower>50</combatPower>
+		<race>OG_DarkEldar_Kabalite</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/Kabalite</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.70</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>	
+
+	<!-- ============================ Dark Eldar Kabalite Ranged ========================== -->
+	<PawnKindDef ParentName="OG_DarkEldar_Kabalite_BaseKind">
+		<defName>OG_DarkEldar_Kabalite_Warrior</defName>
+		<combatPower>50</combatPower>
+		<weaponTags>
+			<li>DESplinterRifle</li>
+			<li>DEShardCarbine</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<!-- ============================ Dark Eldar Kabalite Melee ========================== -->
+	<PawnKindDef ParentName="OG_DarkEldar_Kabalite_BaseKind">
+		<defName>OG_DarkEldar_Kabalite_Storm</defName>
+		<combatPower>50</combatPower>
+		<weaponTags>
+			<li>DESplinterPistol</li>
+			<li>DarkEldarMeleeBasic</li>
+			<li>DEPowerSword</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- ============================ Dark Eldar Kabalite Support ========================== -->
+	<PawnKindDef ParentName="OG_DarkEldar_Kabalite_BaseKind">
+		<defName>OG_DarkEldar_Kabalite_Support</defName>
+		<combatPower>100</combatPower>
+		<weaponTags>
+			<li>DESplinterCannon</li>
+			<li>DEDisintegratorCannon</li>
+			<li>DEDarklance</li>
+			<li>DEHaywireBlaster</li>
+			<li>DEHeatlance</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<!-- ============================ Dark Eldar Elite Warrior Base ========================== -->
+	<PawnKindDef Name="OG_DarkEldar_Veteran_Base" ParentName="OG_DarkEldar_Mil_BaseKind" Abstract="True">
+		<label>Elite Warrior</label>
+		<combatPower>75</combatPower>
+		<minGenerationAge>2000</minGenerationAge>
+		<weaponMoney>
+			<min>8550</min>
+			<max>15800</max>
+		</weaponMoney>
+		<techHediffsMoney>
+			<min>1000</min>
+			<max>1500</max>
+		</techHediffsMoney>
+		<combatEnhancingDrugsCount>
+			<min>0</min>
+			<max>2</max>
+		</combatEnhancingDrugsCount>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<techHediffsChance>0.73</techHediffsChance>
+		<inventoryOptions>
+			<skipChance>0.8</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>50</min>
+						<max>200</max>
+					</countRange>
+				</li>
+				<li>
+					<thingDef>MedicineIndustrial</thingDef>
+					<countRange>
+						<min>1</min>
+						<max>1</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<!-- ============================ Dark Eldar Aspect Warrior Exarch Base ========================== -->
+	<PawnKindDef Name="OG_DarkEldar_Elite_Base" ParentName="OG_DarkEldar_Veteran_Base" Abstract="True">
+		<weaponMoney>
+			<min>15800</min>
+			<max>15800</max>
+		</weaponMoney>
+		<techHediffsMoney>
+			<min>1000</min>
+			<max>1500</max>
+		</techHediffsMoney>
+		<combatEnhancingDrugsCount>
+			<min>0</min>
+			<max>2</max>
+		</combatEnhancingDrugsCount>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<techHediffsChance>0.73</techHediffsChance>
+		<inventoryOptions>
+			<skipChance>0.8</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>50</min>
+						<max>200</max>
+					</countRange>
+				</li>
+				<li>
+					<thingDef>MedicineIndustrial</thingDef>
+					<countRange>
+						<min>1</min>
+						<max>1</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+	
+	<!-- ============================ Dark Eldar Sybarite ========================== -->
+	<PawnKindDef ParentName="OG_DarkEldar_Elite_Base">
+		<defName>OG_DarkEldar_Kabalite_Sybarite</defName>
+		<label>sybalite</label>
+		<combatPower>90</combatPower>
+		<race>OG_DarkEldar_Kabalite_Trueborn</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/Sybarite</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.70</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>DESplinterRifle</li>
+			<li>DEShardCarbine</li>
+			<li>DEBlaster</li>
+			<li>DEShredder</li>
+			<li>DESplinterPistol</li>
+			<li>DEStingerPistol</li>
+			<li>DEBlastPistol</li>
+			<li>DEFusionPistol</li>
+			<li>DarkEldarMeleeBasic</li>
+			<li>DEPowerSword</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<!-- ============================ Dark Eldar Wych ========================== -->
+	<PawnKindDef ParentName="OG_DarkEldar_Veteran_Base">
+		<defName>OG_DarkEldar_Wych</defName>
+		<label>wych</label>
+		<combatPower>75</combatPower>
+		<race>OG_DarkEldar_Wych</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/Wych</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.70</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>DEWychMelee</li>
+			<li>DESplinterPistol</li>
+			<li>DEBlastPistol</li>
+			<li>DEFusionPistol</li>
+			<li>DEPowerSword</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<!-- ============================ Dark Eldar Wych Hekatrix ========================== -->
+	<PawnKindDef ParentName="OG_DarkEldar_Elite_Base">
+		<defName>OG_DarkEldar_Wych_Hekatrix</defName>
+		<label>hekatrix wych</label>
+		<combatPower>100</combatPower>
+		<race>OG_DarkEldar_Wych_Hekatrix</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/Wych</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.70</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>DEStingerPistol</li>
+			<li>DEBlastPistol</li>
+			<li>DEFusionPistol</li>
+			<li>EExecutioner</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<!-- ============================ Dark Eldar Hellion ========================== -->
+	<PawnKindDef ParentName="OG_DarkEldar_Veteran_Base">
+		<defName>OG_DarkEldar_Hellion</defName>
+		<label>Hellion</label>
+		<combatPower>75</combatPower>
+		<race>OG_DarkEldar_Hellion</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/Hellion</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.70</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>DEHellglaive</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<!-- ============================ Dark Eldar Hellion Heliarch ========================== -->
+	<PawnKindDef ParentName="OG_DarkEldar_Elite_Base">
+		<defName>OG_DarkEldar_Hellion_Heliarch</defName>
+		<label>heliarch hellion</label>
+		<combatPower>100</combatPower>
+		<race>OG_DarkEldar_Hellion_Heliarch</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/Hellion</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.70</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>DEHellglaive</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<!-- ============================ Dark Eldar Scourge ========================== -->
+	<!--PawnKindDef ParentName="OG_DarkEldar_Veteran_Base">
+		<defName>OG_DarkEldar_Scourge</defName>
+		<label>scourge</label>
+		<combatPower>75</combatPower>
+		<race>OG_DarkEldar_Scourge</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/Scourge</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.70</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>ELasblaster</li>
+		</weaponTags>
+	</PawnKindDef-->
+	
+	<!-- ============================ Dark Eldar Haemonculus ========================== -->
+	<!--PawnKindDef ParentName="OG_DarkEldar_Veteran_Base">
+		<defName>OG_DarkEldar_Haemonculus</defName>
+		<label>haemonculus</label>
+		<combatPower>75</combatPower>
+		<race>OG_DarkEldar_Haemonculus</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/Haemonculus</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.70</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>EShurikenCannon</li>
+		</weaponTags>
+	</PawnKindDef-->
+	
+	<!-- ============================ Dark Eldar Haemonculus Ancient ========================== -->
+	<!--PawnKindDef ParentName="OG_DarkEldar_Elite_Base">
+		<defName>OG_DarkEldar_Haemonculus_Ancient</defName>
+		<label>haemonculus Exarch</label>
+		<combatPower>100</combatPower>
+		<race>OG_DarkEldar_Haemonculus_Ancient</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/Haemonculus</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.70</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>EShurikenCannon</li>
+			<li>EStarcannon</li>
+			<li>EBrightlance</li>
+		</weaponTags>
+	</PawnKindDef-->
+	
+	<!-- ============================ Dark Eldar Incubi ========================== -->
+	<PawnKindDef ParentName="OG_DarkEldar_Veteran_Base">
+		<defName>OG_DarkEldar_Incubi</defName>
+		<label>incubi</label>
+		<combatPower>75</combatPower>
+		<race>OG_DarkEldar_Incubi</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/Incubi</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.70</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>DEIncubiMelee</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<!-- ============================ Dark Eldar Incubi Lord ========================== -->
+	<PawnKindDef ParentName="OG_DarkEldar_Elite_Base">
+		<defName>OG_DarkEldar_Incubi_Lord</defName>
+		<label>Incubi Lord</label>
+		<combatPower>100</combatPower>
+		<race>OG_DarkEldar_Incubi_Lord</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/IncubiLord</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.70</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>DEIncubiMelee</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+	<!-- ============================ Dark Eldar Medusae ========================== -->
+	<!--PawnKindDef ParentName="OG_DarkEldar_Mil_BaseKind">
+		<defName>OG_DarkEldar_Medusae</defName>
+		<label>medusae</label>
+		<combatPower>125</combatPower>
+		<race>OG_DarkEldar_Incubi_Lord</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/IncubiLord</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.70</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>EShurikenPistol</li>
+			<li>EPsykerMelee</li>
+		</weaponTags>
+	</PawnKindDef-->
+	
+	<!-- ============================ Dark Eldar Archon ========================== -->
+	<PawnKindDef ParentName="OG_DarkEldar_Mil_BaseKind">
+		 <defName>OG_DarkEldar_Archon</defName>
+		<label>archon</label>
+		<combatPower>150</combatPower>
+		<race>OG_DarkEldar_Archon</race>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/DarkEldar/Archon</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>2.70</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>15500</min>
+			<max>15500</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>DEIncubiMelee</li>
+			<li>DEVenomblade</li>
+			<li>DEHuskBlade</li>
+			<li>DEDjinnBlade</li>
+			<li>DEEliteGun</li>
+			<li>DEHeavyGun</li>
+			<li>OGDEMelee</li>
+		</weaponTags>
+		<techHediffsMoney>
+			<min>2000</min>
+			<max>3000</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<techHediffsChance>0.80</techHediffsChance>
+		<combatEnhancingDrugsCount>
+			<min>1</min>
+			<max>2</max>
+		</combatEnhancingDrugsCount>
+		<combatEnhancingDrugsChance>0.1</combatEnhancingDrugsChance>
+		<inventoryOptions>
+			<skipChance>0.8</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>120</min>
+						<max>480</max>
+					</countRange>
+				</li>
+				<li>
+					<thingDef>MedicineIndustrial</thingDef>
+					<countRange>
+						<min>1</min>
+						<max>2</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+</Defs>

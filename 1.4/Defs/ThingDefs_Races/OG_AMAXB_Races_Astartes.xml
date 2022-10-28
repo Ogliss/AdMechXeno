@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Astartes Base Abstract -->
+<ThingDef ParentName="BasePawn" Name="OG_Astartes_Pawn_Base" Abstract="True" >
+	<label>Astartes Race</label>
+	<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+	<statBases>
+		<MarketValue>1750</MarketValue>
+		<MoveSpeed>5.61</MoveSpeed>
+		<PsychicSensitivity>-0.33</PsychicSensitivity>
+		<ToxicResistance>0</ToxicResistance>
+		<Flammability>0.33</Flammability>
+		<MeleeDodgeChance>1</MeleeDodgeChance>
+		<MeleeHitChance>1</MeleeHitChance>
+		<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+		<ComfyTemperatureMax>250</ComfyTemperatureMax>
+		<LeatherAmount>55</LeatherAmount>
+		<MeatAmount>0</MeatAmount>
+	</statBases>
+	<race>
+		<thinkTreeMain>Humanlike</thinkTreeMain>
+		<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+		<intelligence>ToolUser</intelligence>
+		<body>Human</body>
+		<fleshType>Normal</fleshType>
+		<useMeatFrom>Human</useMeatFrom>
+		<makesFootprints>true</makesFootprints>
+		<needsRest>false</needsRest>
+		<hasGenders>false</hasGenders>
+		<gestationPeriodDays>90</gestationPeriodDays>
+		<foodType>None</foodType>
+		<lifeExpectancy>99999</lifeExpectancy>
+		<baseBodySize>1.5</baseBodySize>
+		<baseHealthScale>1.5</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<trainability>Advanced</trainability>
+			<lifeStageAges>
+				<li>
+					<def>HumanlikeAdult</def>
+					<minAge>18</minAge>
+				</li>
+			</lifeStageAges>
+			<hediffGiverSets>
+				<li>OrganicStandard</li>
+			</hediffGiverSets>
+	</race>
+	<comps>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+		<li MayRequire="CETeam.CombatExtended">
+			<compClass>CombatExtended.CompPawnGizmo</compClass>
+		</li>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
+	</comps>
+	<modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+	</modExtensions>
+</ThingDef>
+
+	<ThingDef ParentName="OG_Astartes_Pawn_Base">
+		<defName>OG_Alien_Astartes</defName>
+	</ThingDef>
+
+	<!-- Astartes Scout -->
+	<ThingDef ParentName="OG_Astartes_Pawn_Base">
+		<defName>Astartes_Scout</defName>
+		<label>scout</label>
+		<description>.</description>
+		<statBases>
+			<ArmorRating_Blunt>0.92</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.92</ArmorRating_Sharp>
+			<ArmorRating_Heat>0.92</ArmorRating_Heat>
+		</statBases>
+		<race>
+			<baseHealthScale>1.35</baseHealthScale>
+		</race>
+	</ThingDef>
+
+	<!-- Astartes Battle-Brother -->
+	<ThingDef ParentName="OG_Astartes_Pawn_Base">
+		<defName>Astartes_Battle_Brother</defName>
+		<label>battle-brother</label>
+		<description>.</description>
+		<statBases>
+			<ArmorRating_Blunt>1.2</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.2</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.2</ArmorRating_Heat>
+		</statBases>
+		<race>
+			<baseHealthScale>1.5</baseHealthScale>
+		</race>
+	</ThingDef>
+
+	<!-- Astartes Commander -->
+	<ThingDef ParentName="OG_Astartes_Pawn_Base">
+		<defName>Astartes_Commander</defName>
+		<label>commander</label>
+		<description>.</description>
+		<statBases>
+			<ArmorRating_Blunt>1.8</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.8</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.8</ArmorRating_Heat>
+		</statBases>
+		<race>
+			<baseHealthScale>1.85</baseHealthScale>
+		</race>
+	</ThingDef>
+
+
+	<!-- Astartes Terminator -->
+	<ThingDef ParentName="OG_Astartes_Pawn_Base">
+		<defName>Astartes_Terminator</defName>
+		<label>terminator</label>
+		<description>.</description>
+		<statBases>
+			<ArmorRating_Blunt>1.8</ArmorRating_Blunt>
+			<ArmorRating_Sharp>1.8</ArmorRating_Sharp>
+			<ArmorRating_Heat>1.8</ArmorRating_Heat>
+		</statBases>
+		<race>
+			<baseHealthScale>1.85</baseHealthScale>
+		</race>
+	</ThingDef>
+
+
+
+<!-- Astartes Construct Base Abstract -->
+<ThingDef ParentName="BasePawn" Name="OG_Astartes_Construct_Base" Abstract="True" >
+	<label>Astartes Construct Race</label>
+	<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+	<statBases>
+		<PsychicSensitivity>-1</PsychicSensitivity>
+		<ToxicResistance>0</ToxicResistance>
+		<Flammability>0</Flammability>
+		<MeleeDodgeChance>1</MeleeDodgeChance>
+		<MeleeHitChance>1</MeleeHitChance>
+		<ComfyTemperatureMin>-100</ComfyTemperatureMin>
+		<ComfyTemperatureMax>250</ComfyTemperatureMax>
+		<MeatAmount>0</MeatAmount>
+	</statBases>
+	<race>
+		<body>Human</body>
+		<fleshType>OG_Flesh_Construct_Astartes</fleshType>
+		<useMeatFrom>Mech_CentipedeBlaster</useMeatFrom>
+		<needsRest>false</needsRest>
+		<hasGenders>false</hasGenders>
+		<foodType>None</foodType>
+		<lifeExpectancy>99999</lifeExpectancy>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<trainability>Advanced</trainability>
+	</race>
+	<comps>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+		<li MayRequire="CETeam.CombatExtended">
+			<compClass>CombatExtended.CompPawnGizmo</compClass>
+		</li>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
+	</comps>
+	<modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+	</modExtensions>
+</ThingDef>
+
+<!-- Walker base -->
+<ThingDef ParentName="OG_Astartes_Construct_Base" Name="OG_Astartes_Construct_BaseWalker" Abstract="True">
+	<race>
+		<intelligence>ToolUser</intelligence>
+		<thinkTreeMain>Mechanoid</thinkTreeMain>
+		<baseBodySize>1.0</baseBodySize>
+		<lifeStageAges>
+		<li>
+			<def>MechanoidFullyFormed</def>
+			<minAge>0</minAge>
+			<soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+			<soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+			<soundCall>Pawn_Mech_Scyther_Call</soundCall>
+		</li>
+		</lifeStageAges>
+		<soundCallIntervalRange>
+		<min>1000</min>
+		<max>2000</max>
+		</soundCallIntervalRange>
+	</race>
+	<butcherProducts>
+		<Steel>20</Steel>
+		<Plasteel>5</Plasteel>
+		<ComponentIndustrial>1</ComponentIndustrial>
+	</butcherProducts>
+</ThingDef>
+
+<!-- Astartes Servitor -->
+<ThingDef ParentName="OG_Astartes_Construct_BaseWalker" Name="OG_Astartes_Servitor_Base" Abstract="True">
+	<label>servitor</label>
+	<description>.</description>
+	<statBases>
+		<MoveSpeed>6.2</MoveSpeed>
+		<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.30</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>left fist</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>12.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>right fist</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>12.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>head</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>8.5</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<body>OG_MechanicusConstruct</body>
+		<baseBodySize>1</baseBodySize>
+		<baseHealthScale>1.4</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+	</race>
+</ThingDef>
+
+<!-- Astartes Dreadnaught -->
+<ThingDef ParentName="OG_Astartes_Construct_BaseWalker" Name="OG_Astartes_Dreadnaught_Base" Abstract="True">
+	<label>dreadnaught</label>
+	<description>.</description>
+	<statBases>
+		<MoveSpeed>6.2</MoveSpeed>
+		<ArmorRating_Blunt>0.30</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.30</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.30</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>left fist</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>12.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>right fist</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>12.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>head</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>8.5</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<body>OG_MechanicusConstruct</body>
+		<baseBodySize>1</baseBodySize>
+		<baseHealthScale>1.4</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+	</race>
+</ThingDef>
+
+</Defs>

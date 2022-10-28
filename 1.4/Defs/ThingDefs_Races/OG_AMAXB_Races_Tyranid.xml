@@ -1,0 +1,1041 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Tyranid Base Abstracts -->
+<ThingDef Name="TyranidPawn" Abstract="True">
+	<thingClass>Pawn</thingClass>
+	<category>Pawn</category>
+	<selectable>true</selectable>
+	<tickerType>Normal</tickerType>
+	<altitudeLayer>Pawn</altitudeLayer>
+	<useHitPoints>false</useHitPoints>
+	<hasTooltip>true</hasTooltip>
+	<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+	<statBases>
+		<Mass>70</Mass>
+	</statBases>
+	<inspectorTabs>
+		<li>ITab_Pawn_Health</li>
+		<!--
+		<li>ITab_Pawn_Needs</li>
+		<li>ITab_Pawn_Character</li>
+		<li>ITab_Pawn_Training</li>
+		<li>ITab_Pawn_Social</li>
+		<li>ITab_Pawn_Guest</li>
+		<li>ITab_Pawn_Prisoner</li>
+		<li>ITab_Pawn_FormingCaravan</li>
+		-->
+		<li>ITab_Pawn_Gear</li>
+		<li>ITab_Pawn_Log</li>
+	</inspectorTabs>
+	<comps>
+		<li>
+		<compClass>CompAttachBase</compClass>
+		</li>
+		<!--
+		<li Class="CompProperties_GlowerPawn">
+		<overlightRadius>7.0</overlightRadius>
+		<glowRadius>10</glowRadius>
+		<glowColor>(252,187,113,0)</glowColor>
+		</li>
+		-->
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
+		<li MayRequire="CETeam.CombatExtended">
+			<compClass>CombatExtended.CompPawnGizmo</compClass>
+		</li>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Suppressable" />
+	</comps>
+	<drawGUIOverlay>true</drawGUIOverlay>
+</ThingDef>
+
+<ThingDef ParentName="TyranidPawn" Name="BaseTyranid" Abstract="True">
+<defName>Tyranid_Race</defName>
+	<label>Tyranid Race</label>
+	<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
+	<statBases>
+		<PainShockThreshold>1</PainShockThreshold>
+		<PsychicSensitivity>0</PsychicSensitivity>
+		<ToxicResistance>1</ToxicResistance>
+		<Flammability>0</Flammability>
+		<ComfyTemperatureMin>-50</ComfyTemperatureMin>
+		<ComfyTemperatureMax>50</ComfyTemperatureMax>
+		<MeatAmount>0</MeatAmount>
+	</statBases>
+	<race>
+		<lifeStageAges>
+		<li>
+			<def>MechanoidFullyFormed</def>
+			<minAge>0</minAge>
+			<soundWounded>Pawn_Cobra_Wounded</soundWounded>
+			<soundDeath>Pawn_Cobra_Death</soundDeath>
+			<soundCall>Pawn_Cobra_Call</soundCall>
+			<soundAngry>Pawn_Cobra_Angry</soundAngry>
+		</li>
+		</lifeStageAges>
+		<intelligence>ToolUser</intelligence>
+		<thinkTreeMain>OG_Tyranid_ThinkTree</thinkTreeMain>
+		<!-- <body>OG_Tyranid_Warrior</body> -->
+		<fleshType>OG_Flesh_Tyranid</fleshType>
+		<meatLabel>tyranidflesh</meatLabel>
+		<useMeatFrom>Mech_CentipedeBlaster</useMeatFrom>
+		<needsRest>false</needsRest>
+		<hasGenders>false</hasGenders>
+		<foodType>None</foodType>
+		<bloodDef>OG_FilthBlood_Tyranid</bloodDef>	
+		<lifeExpectancy>99999</lifeExpectancy>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<trainability>Advanced</trainability>
+	</race>
+</ThingDef>
+
+<!-- Walker base -->
+<ThingDef ParentName="BaseTyranid" Name="BaseTyranidWalker" Abstract="True">
+	<race>
+		<baseBodySize>1.0</baseBodySize>
+		<soundCallIntervalRange>
+		<min>1000</min>
+		<max>2000</max>
+		</soundCallIntervalRange>
+		<hediffGiverSets>
+		<li>OGTY_Mutation_LowChance</li>
+		</hediffGiverSets>
+	</race>
+	<butcherProducts>
+	
+	</butcherProducts>
+	<modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+	</modExtensions>
+</ThingDef>
+ 
+<!-- Tyranid Ripper Swarm-->
+<ThingDef ParentName="BaseTyranid">
+	<defName>Tyranid_RipperSwarm</defName>
+	<label>ripper swarm</label>
+	<description>Rippers (Minoris omniphagea) are a small, maggot-like species of Tyranids that serve as the primary means of devouring bio-mass from a planet for a Tyranid Hive Fleet. Indeed, Ripper swarms facilitate the speed and scale that Tyranids are infamous for in the stripping of a planet of all of its natural resources. Rippers are the most numerous of the Tyranid creatures, and in great swarms they can pull down and consume creatures many times their own size. However, they are completely mindless and will perish if they lose a synaptic link with the Hive Mind, although while under its guidance they are utterly relentless and pose a truly horrifying threat.</description>
+	<statBases>
+		<MoveSpeed>3.5</MoveSpeed>
+		<MarketValue>150</MarketValue>
+		<ComfyTemperatureMin>0</ComfyTemperatureMin>
+		<ComfyTemperatureMax>60</ComfyTemperatureMax>
+		<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.16</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>left claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>1</cooldownTime>
+		<linkedBodyPartsGroup>LeftBlade</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>right claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>1</cooldownTime>
+		<linkedBodyPartsGroup>RightBlade</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>fangs</label>
+		<capacities>
+			<li>Bite</li>
+		</capacities>
+		<power>12</power>
+		<cooldownTime>1</cooldownTime>
+		<linkedBodyPartsGroup>Mouth</linkedBodyPartsGroup>
+		<surpriseAttack>
+			<extraMeleeDamages>
+			<li>
+				<def>Stun</def>
+				<amount>14</amount>
+			</li>
+			</extraMeleeDamages>
+		</surpriseAttack>
+		</li>
+	</tools>
+	<comps>
+	<!--
+		<li Class="CompProperties_EggLayer">
+		<eggFertilizedDef>EggCobraFertilized</eggFertilizedDef>
+		<eggFertilizationCountMax>1</eggFertilizationCountMax>
+		<eggLayIntervalDays>20.0</eggLayIntervalDays>
+		<eggProgressUnfertilizedMax>0.5</eggProgressUnfertilizedMax>
+		<eggCountRange>
+			<min>1</min>
+			<max>2</max>
+		</eggCountRange>
+		</li>
+	-->
+	</comps>
+	<race>
+		<body>OG_Tyranid_Ripper_Swarm</body>
+		<predator>true</predator>
+		<maxPreyBodySize>0.35</maxPreyBodySize>
+		<baseBodySize>0.25</baseBodySize>
+		<baseHungerRate>0.07</baseHungerRate>
+		<baseHealthScale>0.5</baseHealthScale>
+		<foodType>CarnivoreAnimal, OvivoreAnimal</foodType>
+		<leatherDef>Leather_TyranidSmall</leatherDef>
+		<lifeExpectancy>1</lifeExpectancy>
+		<soundMeleeHitPawn>Pawn_Melee_SmallScratch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_SmallScratch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_SmallScratch_Miss</soundMeleeMiss>
+	</race>
+	<tradeTags>
+		<!--
+		<li>AnimalUncommon</li>
+		<li>AnimalFighter</li>
+		-->
+	</tradeTags>
+	<modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Quadruped</bodyShape>
+		</li>
+	</modExtensions>
+</ThingDef>
+
+<!-- Tyranid Hormagaunt -->
+<ThingDef ParentName="BaseTyranidWalker">
+	<defName>Tyranid_Hormagaunt</defName>
+	<label>hormagaunt</label>
+	<description>A Hormagaunt is one of the most dangerous Tyranid creatures in a Hive Fleet. Not because of their size or particular viciousness, but because they multiply out of control. When attacking a planet, Hormagaunts are seeded onto the target world by Mycetic Spores. They quickly reproduce and then rampage across the planet killing anything they find. The Tyranid Hive Mind does not need to direct the Hormagaunts to attack targets since they will instinctively feed on anything they can find. This is due to the ravenous appetite that defines them from the moment they are spawned. Unlike other Tyranid creatures, have the ability to lay hundreds of eggs in the ground and so reproduce independently of a Hive Fleet. Each Hormagaunt has a short lifespan but once one generation has died a fresh wave will have hatched and grown to maturity, ready to carry on ravaging a world where the previous generation left off.</description>
+	<statBases>
+		<MoveSpeed>6.5</MoveSpeed>
+		<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.16</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+			<label>left talon</label>
+			<capacities>
+				<li>Cut</li>
+				<li>Stab</li>
+			</capacities>
+			<power>22.0</power>
+			<cooldownTime>1</cooldownTime>
+			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+			<label>right talon</label>
+			<capacities>
+				<li>Cut</li>
+				<li>Stab</li>
+			</capacities>
+			<power>22.0</power>
+			<cooldownTime>1</cooldownTime>
+			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+			<label>head</label>
+			<capacities>
+				<li>Blunt</li>
+			</capacities>
+			<power>8.5</power>
+			<cooldownTime>2</cooldownTime>
+			<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+			<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<body>OG_Tyranid_Gaunt</body>
+		<bloodDef>OG_FilthBlood_Tyranid</bloodDef>	
+		<baseBodySize>1</baseBodySize>
+		<baseHealthScale>1.25</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<hediffGiverSets>
+			<li>OGTY_Hormagaunt_Options</li>
+		</hediffGiverSets>
+	</race>
+	<comps> 
+		<!--
+		<li Class="AdeptusMechanicus.CompProperties_TyranidOG">
+		</li> 
+		-->
+		<li Class = "AdeptusMechanicus.CompProperties_Leaper">
+			<leapRangeMax>12</leapRangeMax>
+			<leapRangeMin>3</leapRangeMin>
+			<bouncingLeaper>true</bouncingLeaper>
+			<explodingLeaperRadius>0</explodingLeaperRadius>
+			<ticksBetweenLeapChance>100</ticksBetweenLeapChance>
+			<leapChance>1</leapChance>
+			<textMotes>true</textMotes>
+		</li>	
+	</comps>
+</ThingDef>
+
+<!-- Tyranid Termagant -->
+<ThingDef ParentName="BaseTyranidWalker">
+	<defName>Tyranid_Termagant</defName>
+	<label>termagant</label>
+	<description>A Termagant serves as the standard infantry unit of any Tyranid swarm. Speed, agility and survival are the main characteristics of the Termagant bioform (Gauntii virago). While not very effective in combat as a small group, they are most powerful when swarming in large broods across a target planet once the Great Devourer's invasion reaches its high tide. The desperate need to survive makes them a menace even if their synaptic control with the Tyranid Hive Mind is broken, as they run to cover and will lurk waiting to kill whatever threatens their hiding spot.</description>
+	<statBases>
+		<MoveSpeed>4.0</MoveSpeed>
+		<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.16</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>left claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>right claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>head</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>6.5</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<body>OG_Tyranid_Gaunt</body>
+		<bloodDef>OG_FilthBlood_Tyranid</bloodDef>	
+		<baseBodySize>1</baseBodySize>
+		<baseHealthScale>1.25</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<hediffGiverSets>
+		<!-- <li>OGTY_Termagant_Options</li> -->
+		</hediffGiverSets>
+	</race>
+	<comps> 
+		<!--
+		<li Class="AdeptusMechanicus.CompProperties_TyranidOG">
+		</li> 
+		-->
+	</comps>
+</ThingDef>
+	
+<!-- Tyranid Genestealer -->
+<ThingDef ParentName="BaseTyranidWalker">
+	<defName>Tyranid_Genestealer</defName>
+	<label>genestealer</label>
+	<description>A Genestealer (Corporaptor hominis) is a bioform of the multispecies Tyranid race that was genetically designed by the Hive Mind for the infiltration of other intelligent species' settled worlds. Genestealers serve as the vanguard organisms of the Hive Fleets they are also used as a primary shock assault unit for Tyranid swarms during surface and void battles. The first Tyranids to be discovered by the Imperium, their true nature is obscured by a confusing multitude of legends. They are known as "Snatcher-devils" on some Imperial worlds, "Cave Nightmares" on others and "Clawed Changelings" on yet more.</description>
+	<statBases>
+		<MoveSpeed>5.25</MoveSpeed>
+		<ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.32</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.32</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>left rending claws</label>
+		<capacities>
+			<li>OG_RendingWeapon_Cut</li>
+			<li>OG_RendingWeapon_Stab</li>
+		</capacities>
+		<power>18.0</power>
+		<cooldownTime>1</cooldownTime>
+		<linkedBodyPartsGroup>FrontLeftClaws</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		<chanceFactor>0.9</chanceFactor>
+		</li>
+		<li>
+		<label>right rending claws</label>
+		<capacities>
+			<li>OG_RendingWeapon_Cut</li>
+			<li>OG_RendingWeapon_Stab</li>
+		</capacities>
+		<power>18.0</power>
+		<cooldownTime>1</cooldownTime>
+		<linkedBodyPartsGroup>FrontRightClaws</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		<chanceFactor>0.9</chanceFactor>
+		</li>
+		<li>
+		<label>left claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>12.0</power>
+		<cooldownTime>1</cooldownTime>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>right claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>12.0</power>
+		<cooldownTime>1</cooldownTime>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>head</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>6.5</power>
+		<cooldownTime>1</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		<chanceFactor>0.2</chanceFactor>
+		</li>
+		<li>
+		<label>fangs</label>
+		<capacities>
+			<li>Bite</li>
+		</capacities>
+		<power>12</power>
+		<cooldownTime>1</cooldownTime>
+		<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+		<chanceFactor>0.2</chanceFactor>
+		<surpriseAttack>
+			<extraMeleeDamages>
+			<li>
+				<def>Stun</def>
+				<amount>14</amount>
+			</li>
+			</extraMeleeDamages>
+		</surpriseAttack>
+		</li>
+	</tools>
+	<race>
+		<body>OG_Tyranid_Genestealer</body>
+		<bloodDef>OG_FilthBlood_Tyranid</bloodDef>	
+		<baseBodySize>1.25</baseBodySize>
+		<baseHealthScale>1.25</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<hediffGiverSets>
+		<li>OGTY_Genestealer_Options</li>
+		</hediffGiverSets>
+	</race>
+	<comps> 
+		<!--
+		<li Class="AdeptusMechanicus.CompProperties_TyranidOG">
+		</li> 
+		-->
+	</comps>
+	
+</ThingDef>
+
+<!-- Tyranid Warrior -->
+<ThingDef ParentName="BaseTyranidWalker">
+	<defName>Tyranid_Warrior</defName>
+	<label>warrior</label>
+	<description>The Tyranid Warrior, or Tyranicus gladius, is one of the most common type of troops used by a Tyranid swarm. As Tyranids are constantly biologically adapting their forces to match their enemies' shifting strategies, Tyranid Warriors are often seen in combat in many different sub-species intended for different battlefield functions. Tyranid Warriors are among the most important Tyranid species deployed by a Hive Fleet in battle, as not only are they powerful and deadly creatures in their own right, but they also serve as Tyranid synapse creatures, the important species intended to direct lesser Tyranid species and forming the focal points of the Tyranid Hive Mind's system of telepathic command.</description>
+	<statBases>
+		<MoveSpeed>4.5</MoveSpeed>
+		<ArmorRating_Blunt>0.48</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.48</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.48</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>left claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>right claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>head</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>6.5</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<body>OG_Tyranid_Biped_Body</body>
+		<bloodDef>OG_FilthBlood_Tyranid</bloodDef>	
+		<baseBodySize>2</baseBodySize>
+		<baseHealthScale>1.5</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+	</race>
+	<comps> 
+	<!--
+		<li Class="AdeptusMechanicus.CompProperties_TyranidOG">
+		</li> 
+	-->
+	</comps>
+</ThingDef>
+
+<!-- Tyranid Gargoyle -->
+<ThingDef ParentName="BaseTyranidWalker">
+	<defName>Tyranid_Gargoyle</defName>
+	<label>gargoyle</label>
+	<description>A Gargoyle is a vicious winged Tyranid bioform that is often the first species of Tyranid seen in battle. Their prime purpose seems to be seeking out the enemy and sowing terror and confusion amongst them. Thus, fire and the flap of the Gargoyles' membranous wings precede the Tyranid hordes, driving the enemy out into the open to be absorbed by the swarm, spitting death from their Fleshborers.</description>
+	<statBases>
+		<MoveSpeed>8.5</MoveSpeed>
+		<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.16</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>left claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>right claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>head</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>6.5</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<body>OG_Tyranid_Gargoyle</body>
+		<bloodDef>OG_FilthBlood_Tyranid</bloodDef>	
+		<baseBodySize>1</baseBodySize>
+		<baseHealthScale>1.25</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+	</race>
+	<comps> 
+		<!--
+		<li Class="AdeptusMechanicus.CompProperties_TyranidOG">
+		</li> 
+		-->
+		<li Class="AdeptusMechanicus.CompProperties_Floating">
+		<isFloater>true</isFloater>
+		<canCrossWater>true</canCrossWater>
+		<useZOffset>true</useZOffset>
+		<useShadow>true</useShadow>
+		</li>
+	</comps>
+</ThingDef>
+
+<!-- Tyranid Lictor -->
+<ThingDef ParentName="BaseTyranidWalker">
+	<defName>Tyranid_Lictor</defName>
+	<label>lictor</label>
+	<description>The Tyranid bioform known as the Lictor (Tyranicus chameleo) is a specialised evolutionary development of the Tyranid Warrior, highly adapted to a role as a scout in the vanguard of any Tyranid swarm's advance. Lictors move ahead of the swarm, seeking out pockets of resistance to be eradicated and native life forms to be absorbed. Able to move swiftly and without sound through even the densest terrain, and concealed by a chameleonic carapace that renders it all but invisible to the naked eye, a Lictor can remain hidden until it chooses to strike. It can wait motionless for days, unnoticed by its victims, an unseen herald of approaching disaster.</description>
+	<statBases>
+		<MoveSpeed>4.5</MoveSpeed>
+		<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.50</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>left claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>right claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>head</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>6.5</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<body>OG_Tyranid_Biped_Body</body>
+		<bloodDef>OG_FilthBlood_Tyranid</bloodDef>	
+		<baseBodySize>2.15</baseBodySize>
+		<baseHealthScale>2.25</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<hediffGiverSets>
+		<li>OGTY_Lictor_Options</li>
+		<li>OGTY_Biomorphs_LowChance</li>
+		</hediffGiverSets>
+	</race>
+	<comps> 
+		<!-- 
+		<li Class="AdeptusMechanicus.CompProperties_TyranidOG">
+		</li> 
+		-->
+	</comps>
+</ThingDef>
+
+<!-- Tyranid Ravener -->
+<ThingDef ParentName="BaseTyranidWalker">
+	<defName>Tyranid_Ravener</defName>
+	<label>ravener</label>
+	<description>The Ravener (Tyranicus Ophidius Subterra) is a Tyranid bioform that Imperial Magi Biologis researchers believe is a variant of the standard Tyranid Warrior specialised for assault. It is capable of digging underground to launch surprise ambushes upon unsuspecting foes from beneath their own feet. The same savants hold that other Tyranid creatures, such as the Trygon or Haruspex, may in turn descend from the Ravener genus.</description>
+	<statBases>
+		<MoveSpeed>4.5</MoveSpeed>
+		<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.50</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>left claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>right claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>head</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>6.5</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<body>OG_Tyranid_Serpentine_Body</body>
+		<bloodDef>OG_FilthBlood_Tyranid</bloodDef>	
+		<baseBodySize>4</baseBodySize>
+		<baseHealthScale>4.25</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<hediffGiverSets>
+		<li>OGTY_Ravener_Options</li>
+		<li>OGTY_TailBiomorph_Options</li>
+		<li>OGTY_Biomorphs_LowChance</li>
+		</hediffGiverSets>
+	</race>
+	<comps> 
+		<!--
+		<li Class="AdeptusMechanicus.CompProperties_TyranidOG">
+		</li> 
+		-->
+	</comps>
+</ThingDef>
+
+<!-- Tyranid Hive Tyrant -->
+<ThingDef ParentName="BaseTyranidWalker">
+	<defName>Tyranid_Hive_Tyrant</defName>
+	<label>hive tyrant</label>
+	<description>A Hive Tyrant (Tyranicus praefactor) is the massive Tyranid bioform that serves as the main battlefield commander of a Tyranid swarm, a synapse creature that stands above the rank and file Tyranids. Hive Tyrants serve as the commanders of all the Tyranid forces deployed on a given battlefield, for they share a special synaptic link to the Hive Mind. This link makes a Hive Tyrant one of the most important of the Tyranid synapse creatures.</description>
+	<statBases>
+		<MoveSpeed>4.5</MoveSpeed>
+		<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.50</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>left claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>right claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>head</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>6.5</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<body>OG_Tyranid_Biped_Body</body>
+		<bloodDef>OG_FilthBlood_Tyranid</bloodDef>	
+		<baseBodySize>6</baseBodySize>
+		<baseHealthScale>6</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<hediffGiverSets>
+			<li>OGTY_HiveTyrant_Options</li>
+			<li>OGTY_TailBiomorph_Options</li>
+			<li>OGTY_Biomorphs_LowChance</li>
+		</hediffGiverSets>
+	</race>
+	<comps> 
+		<!--
+		<li Class="AdeptusMechanicus.CompProperties_TyranidOG">
+		</li> 
+		-->
+	</comps>
+</ThingDef>
+
+<!-- Tyranid Carnifex -->
+<ThingDef ParentName="BaseTyranidWalker">
+	<defName>Tyranid_Carnifex</defName>
+	<label>carnifex</label>
+	<description>The Carnifex or Carnifex Primus (Carnifex voracio, Carnifex vorantii, Carnifex ululare, Carnifex arbylis, and the Carnifex bilius) is a monstrous creature that essentially acts as an organic main battle tank for the Tyranid Hive Fleets. It is armed with the most advanced Tyranid Bio-Weapons and is used primarily as a shock trooper to carry out starship boarding actions, frontal shock assaults on entrenched positions and for besieging fortified locations or enemy armour formations.</description>
+	<statBases>
+		<MoveSpeed>3.5</MoveSpeed>
+		<ArmorRating_Blunt>1.3</ArmorRating_Blunt>
+		<ArmorRating_Sharp>1.3</ArmorRating_Sharp>
+		<ArmorRating_Heat>1.3</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>left claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>15.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>right claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>15.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>head</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>20.5</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<body>OG_Tyranid_Biped_Body</body>
+		<bloodDef>OG_FilthBlood_Tyranid</bloodDef>	
+		<baseBodySize>6</baseBodySize>
+		<baseHealthScale>8.25</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+	</race>
+	<comps> 
+		<!--
+		<li Class="AdeptusMechanicus.CompProperties_TyranidOG">
+		</li> 
+		-->
+	</comps>
+</ThingDef>
+
+<!-- Tyranid Biovore -->
+<ThingDef ParentName="BaseTyranidWalker">
+	<defName>Tyranid_Biovore</defName>
+	<label>biovore</label>
+	<description>The Tyranid bioform called the Biovore (Tyranicus patris-boletus) is a powerful "living artillery" weapon for the Tyranid swarms. Deep within its squat, lumpen form, the Biovore nurtures a clutch of Spore Mines -- living bombs that cloud the battlefield and cover enemies in acids, poisons and pieces of chitin.\n\nBiovores thump forward in battle, bony protrusions on their forelimbs anchoring themselves into the ground as they release their vile payload from a dorsal aperture by means of a powerful, shuderring muscle spasm. As the Spore Mine is flung through the air, its internal gas bladder inflates and it floats down towards ground level.</description>
+	<statBases>
+		<MoveSpeed>3.5</MoveSpeed>
+		<ArmorRating_Blunt>0.50</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.50</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.50</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>left claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>right claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>head</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>6.5</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<body>OG_Tyranid_QuadrupedWithHumpGun</body>
+		<bloodDef>OG_FilthBlood_Tyranid</bloodDef>	
+		<baseBodySize>3</baseBodySize>
+		<baseHealthScale>4.25</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<hediffGiverSets>
+		<li>OGTY_Biovore_Options</li>
+		</hediffGiverSets>
+	</race>
+	<comps> 
+		<!--
+		<li Class="AdeptusMechanicus.CompProperties_TyranidOG">
+		</li> 
+		-->
+	</comps>
+</ThingDef>
+
+<!-- Tyranid Spore Mines -->
+<!-- Tyranid Spore Mine HE -->
+<ThingDef ParentName="BaseTyranidWalker">
+	<defName>Tyranid_SporeMine_HE</defName>
+	<label>Spore mine</label>
+	<description>.</description>
+	<statBases>
+		<MoveSpeed>1.0</MoveSpeed>
+		<ArmorRating_Blunt>0.16</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.16</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>detonate</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>1</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<deathActionWorkerClass>AdeptusMechanicus.DeathActionWorker_SporeMine</deathActionWorkerClass>
+		<body>OG_Tyranid_SporeMine</body>
+		<bloodDef>OG_FilthBlood_Tyranid</bloodDef>	
+		<baseBodySize>0.5</baseBodySize>
+		<baseHealthScale>0.5</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<hediffGiverSets>
+		
+		</hediffGiverSets>
+	</race>
+	<comps> 
+		<!--
+		<li Class="AdeptusMechanicus.CompProperties_TyranidOG">
+		</li> 
+		-->
+		<li Class="AdeptusMechanicus.CompProperties_SporeMine">
+		<explosiveRadius>4</explosiveRadius>
+		<explosiveDamageType>OGTY_SporeMine</explosiveDamageType>
+		<startWickHitPointsPercent>0.999</startWickHitPointsPercent>
+		</li>
+	</comps>
+</ThingDef>
+
+<!-- Tyranid Zoanthrope -->
+<ThingDef ParentName="BaseTyranidWalker">
+	<defName>Tyranid_Zoanthrope</defName>
+	<label>zoanthrope</label>
+	<description>Zoanthropes (Tyranicus animus-aborrens) are perhaps the strangest and most bizarre of the Tyranid's myriad breeds. They are powerful psykers, apparently engineered from harvested Aeldari DNA to form living conduits for the focused power of the Tyranid Hive Mind. So extreme is their development that their atrophied bodies and bulbous heads are entirely energised by psychic force.</description>
+	<statBases>
+		<MoveSpeed>3.0</MoveSpeed>
+		<ArmorRating_Blunt>0.32</ArmorRating_Blunt>
+		<ArmorRating_Sharp>0.32</ArmorRating_Sharp>
+		<ArmorRating_Heat>0.32</ArmorRating_Heat>
+	</statBases>
+	<tools>
+		<li>
+		<label>left claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>right claws</label>
+		<capacities>
+			<li>Cut</li>
+			<li>Stab</li>
+		</capacities>
+		<power>8.0</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+		<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+		</li>
+		<li>
+		<label>head</label>
+		<capacities>
+			<li>Blunt</li>
+		</capacities>
+		<power>6.5</power>
+		<cooldownTime>2</cooldownTime>
+		<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+		<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+		<chanceFactor>0.2</chanceFactor>
+		</li>
+	</tools>
+	<race>
+		<body>OG_Tyranid_Serpentine_Body</body>
+		<bloodDef>OG_FilthBlood_Tyranid</bloodDef>	
+		<baseBodySize>3</baseBodySize>
+		<baseHealthScale>3</baseHealthScale>
+		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+		<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+		<hediffGiverSets>
+		<li>OGTY_Zoanthrope_Options</li>
+		</hediffGiverSets>
+	</race>
+	<comps> 
+		<!--
+		<li Class="AdeptusMechanicus.CompProperties_TyranidOG">
+		</li> 
+		-->
+	</comps>
+</ThingDef>
+
+</Defs>

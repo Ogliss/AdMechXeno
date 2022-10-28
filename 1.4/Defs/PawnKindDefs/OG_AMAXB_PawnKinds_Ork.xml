@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- Ork Pawn Base -->
+<PawnKindDef Abstract="True" Name="OG_Orkoid_KindBase">
+	<invNutrition>2.55</invNutrition>
+	<aiAvoidCover>false</aiAvoidCover>
+	<inventoryOptions>
+		<skipChance>0.9</skipChance>
+		<subOptionsChooseOne>
+			<li>
+				<thingDef>Silver</thingDef>
+				<countRange>
+					<min>30</min>
+					<max>70</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>MedicineHerbal</thingDef>
+				<countRange>
+					<min>1</min>
+					<max>3</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>SmokeleafLeaves</thingDef>
+				<countRange>
+					<min>0</min>
+					<max>3</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>PsychoidLeaves</thingDef>
+				<countRange>
+					<min>0</min>
+					<max>3</max>
+				</countRange>
+			</li>
+		</subOptionsChooseOne>
+	</inventoryOptions>
+	<modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+			<primaryMagazineCount>
+				<min>5</min>
+				<max>8</max>
+			</primaryMagazineCount>
+		</li>
+	</modExtensions>
+</PawnKindDef>
+
+<!-- Tek Orkz -->
+<!-- Base -->
+<PawnKindDef Abstract="True" Name="OG_Orkoid_KindBase_Spacer" ParentName="OG_Orkoid_KindBase">
+	<defaultFactionType>OG_Ork_Tek_Faction</defaultFactionType>
+	<backstoryFiltersOverride>
+		<li>
+			<categories>
+				<li>Offworld</li>
+				<li>Outlander</li>
+				<li>Pirate</li>
+			</categories>
+		</li>
+	</backstoryFiltersOverride>
+	<aiAvoidCover>false</aiAvoidCover>
+	<weaponMoney>
+		<min>500</min>
+		<max>10000</max>
+	</weaponMoney>
+	<techHediffsMoney>
+		<min>1000</min>
+		<max>1500</max>
+	</techHediffsMoney>
+	<combatEnhancingDrugsCount>
+		<min>0</min>
+		<max>2</max>
+	</combatEnhancingDrugsCount>
+	<techHediffsTags>
+		<li>Advanced</li>
+	</techHediffsTags>
+</PawnKindDef>
+
+<!-- Grotz Base -->
+<PawnKindDef Abstract="True" Name="OG_Orkoid_KindBase_Spacer_Grot" ParentName="OG_Orkoid_KindBase_Spacer">
+	<race>OG_Grot</race>
+    <alternateGraphicChance>0.50</alternateGraphicChance>
+    <alternateGraphics>
+      <li><texPath>Things/Pawn/ToolUser/Ork/Grot_B</texPath></li>
+      <li><texPath>Things/Pawn/ToolUser/Ork/Grot_C</texPath></li>
+    </alternateGraphics>
+	<lifeStages>
+		<li>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Ork/Grot_A</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>1</drawSize>
+				<shadowData>
+					<volume>(0.6, 0.8, 0.6)</volume>
+				</shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+				<drawSize>3</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+	</lifeStages>
+	<backstoryFiltersOverride>
+		<!--li>
+			<categories>
+				<li>Offworld</li>
+				<li>Outlander</li>
+				<li>Pirate</li>
+			</categories>
+		</li-->
+	</backstoryFiltersOverride>
+	<itemQuality>Poor</itemQuality>
+	<weaponMoney>
+		<min>500</min>
+		<max>10000</max>
+	</weaponMoney>
+	<techHediffsMoney>
+		<min>0</min>
+		<max>500</max>
+	</techHediffsMoney>
+	<combatEnhancingDrugsCount>
+		<min>0</min>
+		<max>0</max>
+	</combatEnhancingDrugsCount>
+	<techHediffsTags Inherit="false">
+		<li>Basic</li>
+	</techHediffsTags>
+</PawnKindDef>
+
+<!-- Stabba Grot --> 
+<PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Grot">
+	<defName>OG_Ork_Grot_Stabba</defName>
+	<label>stabba grot</label>
+	<combatPower>25</combatPower>
+	<aiAvoidCover>false</aiAvoidCover>
+	<weaponTags>
+		<li>OCrudeChoppa</li>
+	</weaponTags>
+</PawnKindDef>
+
+<!-- Blasta Grot -->	
+<PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Grot">
+	<defName>OG_Ork_Grot_Blasta</defName>
+	<label>blasta grot</label>
+	<combatPower>35</combatPower>
+	<weaponTags>
+		<li>GrotBlasta</li>
+	</weaponTags>
+</PawnKindDef>
+
+<!-- Shoota Grot -->	
+<PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Grot">
+	<defName>OG_Ork_Grot_Shoota</defName>
+	<label>shoota grot</label>
+	<combatPower>40</combatPower>
+	<weaponTags>
+		<li>OShoota</li>
+	</weaponTags>
+	<weaponMoney>
+		<min>750</min>
+		<max>1500</max>
+	</weaponMoney>
+</PawnKindDef>
+
+<!-- Boy Base -->	
+<PawnKindDef Abstract="True" Name="OG_Orkoid_KindBase_Spacer_Ork_Boy" ParentName="OG_Orkoid_KindBase_Spacer">
+	<label>boy</label>
+	<race>Ork_Boy</race>
+	<itemQuality>Poor</itemQuality>
+    <alternateGraphicChance>0.50</alternateGraphicChance>
+    <alternateGraphics>
+      <li><texPath>Things/Pawn/ToolUser/Ork/Boy_Med_B</texPath></li>
+    </alternateGraphics>
+	<lifeStages>
+		<li>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Ork/Boy_Med_A</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>3.25</drawSize>
+				<shadowData>
+					<volume>(0.6, 0.8, 0.6)</volume>
+				</shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+				<drawSize>4</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+	</lifeStages>
+	<backstoryFiltersOverride>
+		<!--li>
+			<categories>
+				<li>Offworld</li>
+				<li>Outlander</li>
+				<li>Pirate</li>
+			</categories>
+		</li-->
+	</backstoryFiltersOverride>
+</PawnKindDef>
+
+<!-- Slugga Boy -->	
+<PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Ork_Boy">
+	<defName>OG_Ork_Boy_Slugga</defName>
+	<label>slugga boy</label>
+	<combatPower>60</combatPower>
+	<weaponTags>
+		<li>OSlugga</li>
+	</weaponTags>
+	<weaponMoney>
+		<min>750</min>
+		<max>1000</max>
+	</weaponMoney>
+</PawnKindDef>
+
+<!-- Choppa Boy --> 
+<PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Ork_Boy">
+	<defName>OG_Ork_Boy_Choppa</defName>
+	<label>choppa boy</label>
+	<combatPower>50</combatPower>
+	<weaponTags>
+		<li>OChoppa</li>
+	</weaponTags>
+</PawnKindDef>
+
+<!-- Shoota Boy -->	
+<PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Ork_Boy">
+	<defName>OG_Ork_Boy_Shoota</defName>
+	<label>shoota boy</label>
+	<combatPower>75</combatPower>
+	<weaponTags>
+		<li>OShoota</li>
+	</weaponTags>
+	<weaponMoney>
+		<min>1500</min>
+		<max>3000</max>
+	</weaponMoney>
+</PawnKindDef>
+
+<!-- Eavy Boy Base -->
+<PawnKindDef Abstract="True" Name="OG_Orkoid_KindBase_Spacer_Ork_Boy_Eavy" ParentName="OG_Orkoid_KindBase_Spacer">
+	<label>eavy boy</label>
+	<race>Ork_Eavy_Boy</race>
+	<itemQuality>Normal</itemQuality>
+    <alternateGraphicChance>0.50</alternateGraphicChance>
+    <alternateGraphics>
+      <li><texPath>Things/Pawn/ToolUser/Ork/Boy_Eavy_B</texPath></li>
+    </alternateGraphics>
+	<lifeStages>
+		<li>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Ork/Boy_Eavy_A</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>3.25</drawSize>
+				<shadowData>
+					<volume>(0.6, 0.8, 0.6)</volume>
+				</shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+				<drawSize>4</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+	</lifeStages>
+</PawnKindDef>
+
+<!-- Eavy Shoota Boy -->
+<PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Ork_Boy_Eavy">
+	<defName>OG_Ork_Eavy_Boy_Shoota</defName>
+	<label>eavy shoota boy</label>
+	<combatPower>100</combatPower>
+	<weaponTags>
+		<li>OTwinLinkedShoota</li>
+		<li>OShoota</li>
+		<li>OBigShoota</li>
+	</weaponTags>
+	<weaponMoney>
+		<min>1500</min>
+		<max>6000</max>
+	</weaponMoney>
+</PawnKindDef>
+
+<!-- Nob Base -->
+<PawnKindDef Abstract="True" Name="OG_Orkoid_KindBase_Spacer_Ork_Nob" ParentName="OG_Orkoid_KindBase_Spacer">
+	<label>nob</label>
+	<race>Ork_Nob</race>
+	<itemQuality>Normal</itemQuality>
+	<lifeStages>
+		<li>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Ork/Nob_Eavy</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>3</drawSize>
+				<shadowData>
+					<volume>(0.6, 0.8, 0.6)</volume>
+				</shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+				<drawSize>6</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+	</lifeStages>
+</PawnKindDef>
+
+<!-- Shoota Nob -->
+<PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Ork_Nob">
+	<defName>OG_Ork_Nob_Shoota</defName>
+	<label>shoota nob</label>
+	<combatPower>200</combatPower>
+	<itemQuality>Normal</itemQuality>
+	<weaponTags>
+		<li>OBigShoota</li>
+		<li>OSnazzgun</li>
+	</weaponTags>
+	<weaponMoney>
+		<min>4000</min>
+		<max>9000</max>
+	</weaponMoney>
+</PawnKindDef>
+
+<!-- Choppa Nob -->
+<PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Ork_Nob">
+	<defName>OG_Ork_Nob_Choppa</defName>
+	<label>choppa nob</label>
+	<combatPower>150</combatPower>
+	<aiAvoidCover>true</aiAvoidCover>
+	<weaponTags>
+		<li>OBigChoppa</li>
+	</weaponTags>
+	<weaponMoney>
+		<min>4000</min>
+		<max>9000</max>
+	</weaponMoney>
+</PawnKindDef>
+
+<!-- Eavy Nob Base -->
+<PawnKindDef Abstract="True" Name="OG_Orkoid_KindBase_Spacer_Ork_Nob_Eavy" ParentName="OG_Orkoid_KindBase_Spacer">
+	<label>eavy nob</label>
+	<race>Ork_Eavy_Nob</race>
+	<itemQuality>Superior</itemQuality>
+    <alternateGraphicChance>0.50</alternateGraphicChance>
+    <alternateGraphics>
+    </alternateGraphics>
+	<lifeStages>
+		<li>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Ork/Nob_Mega</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>3</drawSize>
+				<shadowData>
+					<volume>(0.6, 0.8, 0.6)</volume>
+				</shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+				<drawSize>4</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+	</lifeStages>
+</PawnKindDef>
+
+<!-- Eavy Shoota Nob -->
+<PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Ork_Nob_Eavy">
+	<defName>OG_Ork_Eavy_Nob_Shoota</defName>
+	<label>eavy shoota nob</label>
+	<combatPower>250</combatPower>
+	<weaponTags>
+		<li>OBigShoota</li>
+		<li>OZappKannon</li>
+		<li>OPlasmaDeffgun</li>
+	</weaponTags>
+	<weaponMoney>
+		<min>4000</min>
+		<max>9000</max>
+	</weaponMoney>
+</PawnKindDef>
+
+<!-- Warboss Base -->	
+<PawnKindDef Abstract="True" Name="OG_Orkoid_KindBase_Spacer_Ork_Warboss" ParentName="OG_Orkoid_KindBase_Spacer">
+	<label>warboss</label>
+	<race>Ork_Warboss</race>
+	<itemQuality>Excellent</itemQuality>
+	<lifeStages>
+		<li>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Ork/Boss_Mega</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>3</drawSize>
+				<shadowData>
+					<volume>(0.6, 0.8, 0.6)</volume>
+				</shadowData>
+			</bodyGraphicData>
+			<dessicatedBodyGraphicData>
+				<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+				<drawSize>6.1</drawSize>
+			</dessicatedBodyGraphicData>
+		</li>
+	</lifeStages>
+</PawnKindDef>
+
+<!-- Warboss -->	
+<PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Ork_Warboss">
+	<defName>OG_Ork_Warboss</defName>
+	<label>warboss</label>
+	<combatPower>300</combatPower>
+	<weaponTags>
+		<li>OBigShoota</li>
+		<li>OZappKannon</li>
+		<li>OPlasmaDeffgun</li>
+	</weaponTags>
+	<weaponMoney>
+		<min>4000</min>
+		<max>9000</max>
+	</weaponMoney>
+</PawnKindDef>
+
+</Defs>

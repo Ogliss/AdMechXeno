@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<ThingDef Name="OG_Ogryn_Base" ParentName="OG_Ogryn_RaceBase">
+		<defName>OG_Abhuman_Ogryn</defName>
+	</ThingDef>
+
+</Defs>

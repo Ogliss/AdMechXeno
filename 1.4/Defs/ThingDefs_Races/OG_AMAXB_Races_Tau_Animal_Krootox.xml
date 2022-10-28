@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ========================== Kroot Ox ================================= -->
+	<ThingDef Abstract="True" Name="OG_KrootOx_Base" ParentName="AnimalThingBase" ADogSaidBody="Legs">
+		<label>Kroot Ox</label>
+		<description>A large herding herbivore descended from the Kroot and locked into an evolutionary Dead end. While enraged Kroot Ox are deadly, tamed Kroot Ox are quite docile and can be used as pack animals.</description>
+		<statBases>
+			<MoveSpeed>4.5</MoveSpeed>
+			<MarketValue>300</MarketValue>
+			<MeleeDodgeChance>0.06</MeleeDodgeChance>
+			<ArmorRating_Blunt>0.10</ArmorRating_Blunt>
+			<ArmorRating_Sharp>0.125</ArmorRating_Sharp>
+			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
+			<ComfyTemperatureMax>45</ComfyTemperatureMax>
+		</statBases>
+		<tools>
+			<li>
+				<label>head</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>13</power>
+				<cooldownTime>1.6</cooldownTime>
+				<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+				<ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+			</li>
+			<li>
+				<label>left hand</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+					<li>Scratch</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontLeftPaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>right hand</label>
+				<capacities>
+					<li>Blunt</li>
+					<li>Poke</li>
+					<li>Scratch</li>
+				</capacities>
+				<power>20</power>
+				<cooldownTime>2</cooldownTime>
+				<linkedBodyPartsGroup>FrontRightPaw</linkedBodyPartsGroup>
+			</li>
+			<li>
+				<label>beak</label>
+				<capacities>
+					<li>Bite</li>
+				</capacities>
+				<power>30</power>
+				<cooldownTime>2.3</cooldownTime>
+				<linkedBodyPartsGroup>Teeth</linkedBodyPartsGroup>
+				<chanceFactor>0.1</chanceFactor>
+			</li>
+		</tools>
+		<!--
+		<comps>
+			<li Class="CompProperties_Milkable">
+				<milkDef>Milk</milkDef>
+				<milkIntervalDays>2</milkIntervalDays>
+				<milkAmount>12</milkAmount>
+			</li>
+			<li Class="CompProperties_Shearable">
+				<woolDef>WoolMuffalo</woolDef>
+				<shearIntervalDays>25</shearIntervalDays>
+				<woolAmount>100</woolAmount>
+			</li>
+		</comps>
+		-->
+		<race>
+			<herdAnimal>true</herdAnimal>
+			<body>OG_KrootOx_Body</body>
+			<baseBodySize>2.1</baseBodySize>
+			<baseHealthScale>2.5</baseHealthScale>
+			<baseHungerRate>0.85</baseHungerRate>
+			<foodType>VegetarianRoughAnimal</foodType>
+			<leatherDef>Leather_Kroot</leatherDef>
+			<gestationPeriodDays>28</gestationPeriodDays>
+			<wildness>0.6</wildness>
+			<packAnimal>true</packAnimal>
+			<lifeExpectancy>36</lifeExpectancy>
+			<lifeStageAges>
+				<li>
+					<def>AnimalBaby</def>
+					<minAge>0</minAge>
+				</li>
+				<li>
+					<def>AnimalJuvenile</def>
+					<minAge>0.25</minAge>
+				</li>
+				<li>
+					<def>AnimalAdult</def>
+					<minAge>0.5</minAge>
+					<soundWounded>Pawn_Muffalo_Wounded</soundWounded>
+					<soundDeath>Pawn_Muffalo_Death</soundDeath>
+					<soundCall>Pawn_Muffalo_Call</soundCall>
+					<soundAngry>Pawn_Muffalo_Angry</soundAngry>
+				</li>
+			</lifeStageAges>
+			<soundMeleeHitPawn>Pawn_Melee_BigBash_HitPawn</soundMeleeHitPawn>
+			<soundMeleeHitBuilding>Pawn_Melee_BigBash_HitBuilding</soundMeleeHitBuilding>
+			<soundMeleeMiss>Pawn_Melee_BigBash_Miss</soundMeleeMiss>
+		</race>
+		<tradeTags>
+			<!--li>AnimalCommon</li>
+			<li>AnimalFarm</li-->
+			<li>AnimalKroot</li>
+			<li>AnimalFarmKroot</li>
+		</tradeTags>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+				<bodyShape>Quadruped</bodyShape>
+			</li>
+		</modExtensions>
+	</ThingDef>
+		
+	<PawnKindDef Name="OG_KrootOx_BaseKind" ParentName="AnimalKindBase">
+		<defName>OG_KrootOx</defName>
+		<label>Kroot Ox</label>
+		<race>OG_KrootOx</race>
+		<combatPower>100</combatPower>
+		<ecoSystemWeight>1.1</ecoSystemWeight>
+		<wildGroupSize>
+			<min>3</min>
+			<max>9</max>
+		</wildGroupSize>
+		<lifeStages>
+			<li>
+				<label>Kroot Ox calf</label>
+				<labelPlural>Kroot Ox calves</labelPlural>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animals/KrootOx/KrootOx</texPath>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>1.5</drawSize>
+					<color>(17,76,46)</color>
+					<colorTwo>(221,160,99)</colorTwo>
+					<shadowData>
+						<volume>(0.4, 0.3, 0.3)</volume>
+						<offset>(0,0,-0.2)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Muffalo/Dessicated_Muffalo</texPath>
+					<drawSize>1.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animals/KrootOx/KrootOx</texPath>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>2.0</drawSize>
+					<color>(17,76,46)</color>
+					<colorTwo>(221,160,99)</colorTwo>
+					<shadowData>
+						<volume>(0.6, 0.45, 0.45)</volume>
+						<offset>(0,0,-0.25)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Muffalo/Dessicated_Muffalo</texPath>
+					<drawSize>2.0</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/Animals/KrootOx/KrootOx</texPath>
+					<shaderType>CutoutComplex</shaderType>
+					<drawSize>2.5</drawSize>
+					<color>(17,76,46)</color>
+					<colorTwo>(221,160,99)</colorTwo>
+					<shadowData>
+						<volume>(0.8, 0.6, 0.6)</volume>
+						<offset>(0,0,-0.3)</offset>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Animal/Muffalo/Dessicated_Muffalo</texPath>
+					<drawSize>2.5</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<!-- ========================== Kindred Kroot Ox ================================= -->
+	<!--ThingDef ParentName="OG_KrootOx_Base">
+		<defName>OG_KrootOx_Kindred</defName>
+		<race>
+			<useMeatFrom>OG_KrootOx</useMeatFrom>
+			<intelligence>ToolUser</intelligence>
+			<packAnimal>false</packAnimal>
+		</race>
+		<tradeTags Inherit="false"> </tradeTags>
+	</ThingDef-->
+		
+	<PawnKindDef ParentName="OG_KrootOx_BaseKind">
+		<defName>OG_KrootOx_Kindred</defName>
+		<race>OG_KrootOx</race>
+		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
+	</PawnKindDef>
+
+</Defs>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<!-- Add factions to Royalty Empire permanentEnemyToEveryoneExcept.-->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/FactionDef[defName="Empire"]/permanentEnemyToEveryoneExcept</xpath>
+				<value>
+					<li>OG_Militarum_Cadian_Faction</li>
+					<li>OG_Militarum_PlayerColony</li>
+					<li>OG_Mechanicus_Faction</li>
+					<li>OG_Mechanicus_PlayerColony</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

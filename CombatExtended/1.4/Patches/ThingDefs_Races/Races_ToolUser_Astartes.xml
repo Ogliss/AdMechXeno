@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+<Operation Class="PatchOperationSequence">
+<operations>
+	<!--li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="OG_Astartes_Pawn_Base"]/tools</xpath>
+		<value>
+			<tools>
+				<li Class="CombatExtended.ToolCE">
+					<label>left fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>right fist</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>8</power>
+					<cooldownTime>1.65</cooldownTime>
+					<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+					<armorPenetration>0.095</armorPenetration>
+				</li>
+				<li Class="CombatExtended.ToolCE">
+					<label>head</label>
+					<capacities>
+						<li>Blunt</li>
+					</capacities>
+					<power>9</power>
+					<cooldownTime>1.85</cooldownTime>
+					<linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+					<chanceFactor>0.2</chanceFactor>
+					<armorPenetration>0.179</armorPenetration>
+				</li>
+			</tools>
+		</value>
+	</li-->
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="OG_Astartes_Pawn_Base"]/statBases</xpath>
+		<value>
+			<MeleeCritChance>1</MeleeCritChance>
+			<MeleeParryChance>1</MeleeParryChance>
+		 </value>
+	</li>
+	
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Astartes_Scout"]/statBases/ArmorRating_Blunt</xpath>
+		<value>
+			<ArmorRating_Blunt>31.73</ArmorRating_Blunt>
+		 </value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Astartes_Scout"]/statBases/ArmorRating_Sharp</xpath>
+		<value>
+				<ArmorRating_Sharp>21.0</ArmorRating_Sharp>
+		 </value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Astartes_Scout"]/statBases/ArmorRating_Heat</xpath>
+		<value>
+			<ArmorRating_Heat>20.16</ArmorRating_Heat>
+		 </value>
+	</li>
+	
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Astartes_Battle_Brother"]/statBases/ArmorRating_Blunt</xpath>
+		<value>
+			<ArmorRating_Blunt>63.46</ArmorRating_Blunt>
+		 </value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Astartes_Battle_Brother"]/statBases/ArmorRating_Sharp</xpath>
+		<value>
+				<ArmorRating_Sharp>42.0</ArmorRating_Sharp>
+		 </value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Astartes_Battle_Brother"]/statBases/ArmorRating_Heat</xpath>
+		<value>
+			<ArmorRating_Heat>40.16</ArmorRating_Heat>
+		 </value>
+	</li>
+	
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Astartes_Commander"]/statBases/ArmorRating_Blunt</xpath>
+		<value>
+			<ArmorRating_Blunt>83.46</ArmorRating_Blunt>
+		 </value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Astartes_Commander"]/statBases/ArmorRating_Sharp</xpath>
+		<value>
+				<ArmorRating_Sharp>62.0</ArmorRating_Sharp>
+		 </value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Astartes_Commander"]/statBases/ArmorRating_Heat</xpath>
+		<value>
+			<ArmorRating_Heat>40.16</ArmorRating_Heat>
+		 </value>
+	</li>
+	
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Astartes_Terminator"]/statBases/ArmorRating_Blunt</xpath>
+		<value>
+			<ArmorRating_Blunt>83.46</ArmorRating_Blunt>
+		 </value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Astartes_Terminator"]/statBases/ArmorRating_Sharp</xpath>
+		<value>
+				<ArmorRating_Sharp>62.0</ArmorRating_Sharp>
+		 </value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Astartes_Terminator"]/statBases/ArmorRating_Heat</xpath>
+		<value>
+			<ArmorRating_Heat>40.16</ArmorRating_Heat>
+		 </value>
+	</li>
+	
+	
+	<li Class="PatchOperationAdd">
+		<xpath>Defs/ThingDef[@Name="OG_Astartes_Construct_Base"]/statBases</xpath>
+		<value>
+			<MeleeCritChance>1</MeleeCritChance>
+			<MeleeParryChance>1</MeleeParryChance>
+		 </value>
+	</li>
+	
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="OG_Astartes_Dreadnaught_Base"]/statBases/ArmorRating_Blunt</xpath>
+		<value>
+			<ArmorRating_Blunt>103.46</ArmorRating_Blunt>
+		 </value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="OG_Astartes_Dreadnaught_Base"]/statBases/ArmorRating_Sharp</xpath>
+		<value>
+				<ArmorRating_Sharp>82.0</ArmorRating_Sharp>
+		 </value>
+	</li>
+	<li Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="OG_Astartes_Dreadnaught_Base"]/statBases/ArmorRating_Heat</xpath>
+		<value>
+			<ArmorRating_Heat>200.16</ArmorRating_Heat>
+		 </value>
+	</li>
+</operations>
+</Operation>
+
+</Patch>

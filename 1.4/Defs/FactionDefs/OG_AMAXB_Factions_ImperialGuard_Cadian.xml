@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef Name="OG_Militarum_Cadian_Faction_Base" ParentName="OG_Militarum_Faction_Base">
+		<defName>OG_Militarum_Cadian_Faction</defName>
+		<label>Cadian Regiment</label>
+		<description>The Cadian Shock Troops, also sometimes called Cadian Shock Troopers, are the highly disciplined Astra Militarum Militarum Regimentum soldiers conscripted in large numbers from the Fortress World of Cadia, which once stood sentinel as the preeminent bastion of the Imperium of Man in the fight against the Emperor's ancient Archenemy, Chaos.\n\nCadia was one world amongst many tens of thousands in the Imperium of Man, and has an honoured and violent place in its history, for Cadia stood upon the edge of the Eye of Terror within the Segmentum Obscurus, in a narrow corridor of navigable space known as the Cadian Gate.</description>
+		<pawnSingular>cadian</pawnSingular>
+		<pawnsPlural>cadians</pawnsPlural>
+		<categoryTag>OG_Outlander_Militarum_Cadian</categoryTag>
+		<basicMemberKind>OG_Militarum_Guardsman_Ranged_Cadian</basicMemberKind>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<settlementGenerationWeight>1</settlementGenerationWeight>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">20</configurationListOrderPriority>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>Lord Marshal</leaderTitle>
+		<factionNameMaker>OG_Militarum_NamerFaction_Cadian</factionNameMaker>
+		<backstoryFilters>
+			<!--
+			<li>
+				<categories>
+					<li>Imperium_Cadian</li>
+				</categories>
+				<commonality>0.95</commonality>
+			</li>
+			-->
+		</backstoryFilters>
+		<allowedArrivalTemperatureRange>
+			<min>-50</min>
+			<max>45</max>
+		</allowedArrivalTemperatureRange>
+		<allowedCultures IgnoreIfNoMatchingField="True">
+			<li>OG_Imperial_Militarum_Spacer</li>
+		</allowedCultures>
+		<disallowedMemes IgnoreIfNoMatchingField="True">
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<requiredMemes IgnoreIfNoMatchingField="True">
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+		</requiredMemes>
+		<structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
+			<OG_Imperial_Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">100</OG_Imperial_Structure_TheistEmbodied>
+		</structureMemeWeights>
+		<pawnNameMaker IgnoreIfNoMatchingField="True">OG_Militarum_NamerPerson</pawnNameMaker>
+		<pawnNameMakerFemale IgnoreIfNoMatchingField="True">OG_Militarum_NamerPersonFemale</pawnNameMakerFemale>
+		<naturalColonyGoodwill IgnoreIfNoMatchingField="True">
+			<min>-60</min>
+			<max>0</max>
+		</naturalColonyGoodwill>
+		<startingGoodwill IgnoreIfNoMatchingField="True">
+			<min>10</min>
+			<max>40</max>
+		</startingGoodwill>
+		<hairTags IgnoreIfNoMatchingField="True">
+			<li>Urban</li>
+			<li>Rural</li>
+		</hairTags>
+		<pawnGroupMakers Inherit="False">
+			<li>
+				<kindDef>Combat</kindDef>
+				<options>
+					<OG_Militarum_LordMarshal_Cadian>1</OG_Militarum_LordMarshal_Cadian>
+					<OG_Militarum_Guardsman_Ranged_Cadian>230</OG_Militarum_Guardsman_Ranged_Cadian>
+					<OG_Militarum_Guardsman_Melee_Cadian>100</OG_Militarum_Guardsman_Melee_Cadian>
+					<OG_Militarum_Guardsman_Ranged_Special_Cadian>65</OG_Militarum_Guardsman_Ranged_Special_Cadian>
+					<OG_Militarum_Guardsman_Melee_Special_Cadian>50</OG_Militarum_Guardsman_Melee_Special_Cadian>
+					<OG_Militarum_Guardsman_Heavy_Weapons_Cadian>30</OG_Militarum_Guardsman_Heavy_Weapons_Cadian>
+					<OG_Militarum_Guardsman_Marksman_Cadian>30</OG_Militarum_Guardsman_Marksman_Cadian>
+					<OG_Militarum_Sergeant_Cadian>10</OG_Militarum_Sergeant_Cadian>
+				</options>
+			</li>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<OG_Militarum_Guardsman_Ranged_Cadian>230</OG_Militarum_Guardsman_Ranged_Cadian>
+					<OG_Militarum_Guardsman_Melee_Cadian>130</OG_Militarum_Guardsman_Melee_Cadian>
+					<OG_Militarum_LordMarshal_Cadian>1</OG_Militarum_LordMarshal_Cadian>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<OG_Militarum_Trader>1</OG_Militarum_Trader>
+				</traders>
+				<carriers>
+					<Muffalo>2</Muffalo>
+					<Dromedary>2</Dromedary>
+				</carriers>
+				<guards>
+					<OG_Militarum_Guardsman_Ranged_Cadian>130</OG_Militarum_Guardsman_Ranged_Cadian>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<OG_Militarum_LordMarshal_Cadian>1</OG_Militarum_LordMarshal_Cadian>
+					<OG_Militarum_Guardsman_Ranged_Cadian>230</OG_Militarum_Guardsman_Ranged_Cadian>
+					<OG_Militarum_Guardsman_Melee_Cadian>100</OG_Militarum_Guardsman_Melee_Cadian>
+					<OG_Militarum_Guardsman_Ranged_Special_Cadian>65</OG_Militarum_Guardsman_Ranged_Special_Cadian>
+					<OG_Militarum_Guardsman_Melee_Special_Cadian>50</OG_Militarum_Guardsman_Melee_Special_Cadian>
+					<OG_Militarum_Guardsman_Heavy_Weapons_Cadian>30</OG_Militarum_Guardsman_Heavy_Weapons_Cadian>
+					<OG_Militarum_Guardsman_Marksman_Cadian>30</OG_Militarum_Guardsman_Marksman_Cadian>
+					<OG_Militarum_Sergeant_Cadian>10</OG_Militarum_Sergeant_Cadian>
+				</options>
+			</li>
+		</pawnGroupMakers>
+	</FactionDef>
+
+
+</Defs>

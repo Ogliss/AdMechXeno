@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Astartes Base kind -->
+	<PawnKindDef Name="OG_Astartes_Pawnkind_Base" Abstract="True">
+		<defaultFactionType>Pirate</defaultFactionType>
+		<backstoryFiltersOverride>
+			<li>
+				<categories>
+					<li>OG_Astartes_Standard</li>
+				</categories>
+				<categoriesChildhood>
+					<li>OG_Astartes_Standard</li>
+					<li>Imperium_Standard</li>
+				</categoriesChildhood>
+			</li>
+			<li>
+				<categories>
+					<li>OG_Astartes_Standard</li>
+				</categories>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+			</li>
+		</backstoryFiltersOverride>
+		<invNutrition>2.55</invNutrition>
+		<aiAvoidCover>false</aiAvoidCover>
+		<weaponMoney>
+			<min>7500</min>
+			<max>10000</max>
+		</weaponMoney>
+		<inventoryOptions>
+			<skipChance>0.9</skipChance>
+			<subOptionsChooseOne>
+				<li>
+					<thingDef>Silver</thingDef>
+					<countRange>
+						<min>50</min>
+						<max>200</max>
+					</countRange>
+				</li>
+				<li>
+					<thingDef>MedicineIndustrial</thingDef>
+					<countRange>
+						<min>1</min>
+						<max>3</max>
+					</countRange>
+				</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>5</min>
+					<max>8</max>
+				</primaryMagazineCount>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+		
+	<!-- Commander -->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Base">
+		<defName>OG_Astartes_ForceCommander</defName>
+		<label>astartes commander</label>
+		<race>Astartes_Commander</race>
+		<combatPower>250</combatPower>
+		<itemQuality>Superior</itemQuality>
+		<aiAvoidCover>false</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Commander</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.000</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>7500</min>
+			<max>15000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>EShurikenPistol</li>
+			<li>EPsykerMelee</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Librarian -->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Base">
+		<defName>OG_Astartes_Librarian</defName>
+		<label>librarian</label>
+		<race>Astartes_Battle_Brother</race>
+		<combatPower>200</combatPower>
+		<itemQuality>Good</itemQuality>
+		<aiAvoidCover>false</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Librarian</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.0</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>5000</min>
+			<max>5000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>EShurikenPistol</li>
+			<li>EPsykerMelee</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Scout Marine Base kind -->
+	<PawnKindDef Abstract="True" Name="OG_Astartes_Pawnkind_Scout_Base" ParentName="OG_Astartes_Pawnkind_Base">
+		<race>Astartes_Battle_Brother</race>
+		<itemQuality>Normal</itemQuality>
+		<aiAvoidCover>false</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Tactical</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.00</drawSize>
+					<shaderType>Cutout</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!-- Scout Marine -->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Scout_Base">
+		<defName>OG_Astartes_ScoutMarine</defName>
+		<label>scout marine</label>
+		<combatPower>150</combatPower>
+		<weaponMoney>
+			<min>5000</min>
+			<max>5000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>AstartesScout</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Scout Marine(Sniper) -->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Scout_Base">
+		<defName>OG_Astartes_ScoutMarine_Marksman</defName>
+		<label>scout marine marksman</label>
+		<combatPower>50</combatPower>
+		<weaponMoney>
+			<min>5000</min>
+			<max>5000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>AstartesScoutSniper</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Tactical Marine Base kind -->
+	<PawnKindDef Abstract="True" Name="OG_Astartes_Pawnkind_Tactical_Base" ParentName="OG_Astartes_Pawnkind_Base">
+		<race>Astartes_Battle_Brother</race>
+		<itemQuality>Normal</itemQuality>
+		<aiAvoidCover>false</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Tactical</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.00</drawSize>
+					<shaderType>Cutout</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<!-- Tactical Marine -->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Tactical_Base">
+		<defName>OG_Astartes_TacticalMarine</defName>
+		<label>tactical marine</label>
+		<combatPower>150</combatPower>
+		<weaponMoney>
+			<min>5000</min>
+			<max>5000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>AstartesTactical</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Devastator Marine Base kind -->
+	<PawnKindDef Abstract="True" Name="OG_Astartes_Pawnkind_Devastator_Base" ParentName="OG_Astartes_Pawnkind_Base">
+		<race>Astartes_Battle_Brother</race>
+		<itemQuality>Normal</itemQuality>
+		<aiAvoidCover>false</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Devastator</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.00</drawSize>
+					<shaderType>Cutout</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<!-- Devastator Marine -->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Devastator_Base">
+		<defName>OG_Astartes_DevastatorMarine</defName>
+		<label>devastator</label>
+		<combatPower>100</combatPower>
+		<weaponMoney>
+			<min>5000</min>
+			<max>5000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>AstartesDevastator</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Assault Marine Base kind -->
+	<PawnKindDef Abstract="True" Name="OG_Astartes_Pawnkind_Assault_Base" ParentName="OG_Astartes_Pawnkind_Base">
+		<race>Astartes_Battle_Brother</race>
+		<itemQuality>Normal</itemQuality>
+		<aiAvoidCover>false</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Assault</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.00</drawSize>
+					<shaderType>Cutout</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<!-- Assault Marine-->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Assault_Base">
+		<defName>OG_Astartes_AssaultMarineJP</defName>
+		<label>assault</label>
+		<combatPower>100</combatPower>
+		<weaponMoney>
+			<min>5000</min>
+			<max>5000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>AstartesAssault</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Assault Marine (Foot)Base kind -->
+	<PawnKindDef Abstract="True" Name="OG_Astartes_Pawnkind_Assault_Foot_Base" ParentName="OG_Astartes_Pawnkind_Base">
+		<race>Astartes_Battle_Brother</race>
+		<itemQuality>Normal</itemQuality>
+		<aiAvoidCover>false</aiAvoidCover>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Assault_Foot</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.00</drawSize>
+					<shaderType>Cutout</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+	</PawnKindDef>
+
+	<!-- Assault Marine(Foot) -->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Assault_Foot_Base">
+		<defName>OG_Astartes_AssaultMarine</defName>
+		<label>assault</label>
+		<combatPower>100</combatPower>
+		<weaponMoney>
+			<min>5000</min>
+			<max>5000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>AstartesAssault</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Terminator Base kind -->
+	<PawnKindDef Abstract="True" Name="OG_Astartes_Pawnkind_Terminator_Base" ParentName="OG_Astartes_Pawnkind_Base">
+		<race>Astartes_Terminator</race>
+		<itemQuality>Good</itemQuality>
+		<aiAvoidCover>true</aiAvoidCover>
+		<weaponMoney>
+			<min>6000</min>
+			<max>10000</max>
+		</weaponMoney>
+	</PawnKindDef>
+	
+	<!-- Terminator -->
+	<PawnKindDef Name="OG_Astartes_Pawnkind_Terminator" ParentName="OG_Astartes_Pawnkind_Terminator_Base">
+		<defName>OG_Astartes_Terminator</defName>
+		<label>terminator</label>
+		<combatPower>65</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.00</drawSize>
+					<color>49,100,157</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>AstartesTerminator</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Terminator Sgt -->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Terminator">
+		<defName>OG_Astartes_Terminator_Sgt</defName>
+		<label>terminator sargent</label>
+		<combatPower>90</combatPower>
+		<itemQuality>Masterwork</itemQuality>
+		<weaponTags>
+			<li>AstartesTerminatorSgt</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Terminator Cyclone -->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Terminator_Base">
+		<defName>OG_Astartes_Terminator_Cyclone</defName>
+		<label>terminator cyclone</label>
+		<combatPower>65</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator_Cyclone</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.00</drawSize>
+					<color>49,100,157</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>AstartesTerminator</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Terminator Apothecary -->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Terminator_Base">
+		<defName>OG_Astartes_Terminator_Apothecary</defName>
+		<label>terminator apothecary</label>
+		<combatPower>65</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator_Apothecary</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.00</drawSize>
+					<color>49,100,157</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>AstartesTerminator</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Terminator Chaplin -->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Terminator_Base">
+		<defName>OG_Astartes_Terminator_Chaplin</defName>
+		<label>terminator chaplin</label>
+		<combatPower>65</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator_Chaplin</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.00</drawSize>
+					<color>49,100,157</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>AstartesTerminator</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Terminator Commnder -->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Terminator_Base">
+		<defName>OG_Astartes_Terminator_Commander</defName>
+		<label>terminator commnder</label>
+		<combatPower>65</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator_Commander</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.00</drawSize>
+					<color>49,100,157</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>AstartesTerminator</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- Terminator Librarian -->
+	<PawnKindDef Name="OG_Astartes_Pawnkind_Terminator_Librarian" ParentName="OG_Astartes_Pawnkind_Terminator_Base">
+		<defName>OG_Astartes_Terminator_Librarian</defName>
+		<label>terminator librarian</label>
+		<combatPower>65</combatPower>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Terminator_Librarian</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.00</drawSize>
+					<color>49,100,157</color>
+					<shaderType>CutoutComplex</shaderType>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.35</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponTags>
+			<li>AstartesTerminator</li>
+		</weaponTags>
+	</PawnKindDef>
+
+</Defs>

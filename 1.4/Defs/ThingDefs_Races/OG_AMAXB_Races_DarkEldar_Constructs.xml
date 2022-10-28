@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Dark Eldar Base Abstract -->
+  <ThingDef ParentName="BasePawn" Name="OG_DarkEldar_Construct_Pawn_Base" Abstract="True">
+  <defName>OG_DarkEldar_Construct</defName>
+    <label>Dark Eldar Construct Race</label>
+    <soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
+    <statBases>
+      <PsychicSensitivity>+0.5</PsychicSensitivity>
+      <ToxicResistance>0</ToxicResistance>
+      <Flammability>0</Flammability>
+      <ComfyTemperatureMin>-100</ComfyTemperatureMin>
+      <ComfyTemperatureMax>250</ComfyTemperatureMax>
+      <MeatAmount>0</MeatAmount>
+    </statBases>
+    <race>
+      <body>Human</body>
+      <fleshType>OG_Flesh_Construct_DarkEldar</fleshType>
+	  <useMeatFrom>Mech_CentipedeBlaster</useMeatFrom>
+      <needsRest>false</needsRest>
+      <hasGenders>false</hasGenders>
+      <foodType>None</foodType>
+      <lifeExpectancy>99999</lifeExpectancy>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+      <trainability>Advanced</trainability>
+    </race>
+    <comps>
+	
+    </comps>
+    <modExtensions>
+		<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.RacePropertiesExtensionCE">
+			<bodyShape>Humanoid</bodyShape>
+		</li>
+    </modExtensions>
+  </ThingDef>
+
+  <!-- Dark Eldar Walker base -->
+  <ThingDef ParentName="OG_DarkEldar_Construct_Pawn_Base" Name="OG_DarkEldar_Construct_Walker" Abstract="True">
+    <race>
+      <intelligence>ToolUser</intelligence>
+      <thinkTreeMain>Mechanoid</thinkTreeMain>
+      <baseBodySize>1.0</baseBodySize>
+      <lifeStageAges>
+        <li>
+          <def>MechanoidFullyFormed</def>
+          <minAge>0</minAge>
+          <soundWounded>Pawn_Mech_Scyther_Wounded</soundWounded>
+          <soundDeath>Pawn_Mech_Scyther_Death</soundDeath>
+          <soundCall>Pawn_Mech_Scyther_Call</soundCall>
+        </li>
+      </lifeStageAges>
+      <soundCallIntervalRange>
+        <min>1000</min>
+        <max>2000</max>
+      </soundCallIntervalRange>
+    </race>
+    <butcherProducts>
+      <Steel>20</Steel>
+      <Plasteel>5</Plasteel>
+      <ComponentIndustrial>1</ComponentIndustrial>
+    </butcherProducts>
+  </ThingDef>
+ 
+<!-- Dark Eldar Talos Pain Engine -->
+<!-- Base -->
+  <ThingDef ParentName="OG_DarkEldar_Construct_Walker">
+    <defName>OG_DarkEldar_TalosPainEngine_Race</defName>
+    <label>talos pain engine</label>
+    <description>The Talos Pain Engine is a Drukhari construct and the most widespread of their many so-called Engines of Pain. Festooned with multiple surgical apparatus and grotesque weapons of war, the Talos is a part organic and part mechanical device conceived by the creations of a mad genius.\n\nCreated by the insane Dark Eldar masters of pain known as the Haemonculi, the Talos was first constructed as a torture device, but is now employed across the galaxy's innumerable battlefields. Sweeping forward upon anti-gravitic motors, the Talos catches its victims with its razor-sharp claws and then incinerates them from the inside out.</description>
+    <statBases>
+      <MoveSpeed>3.0</MoveSpeed>
+      <ArmorRating_Blunt>1.5</ArmorRating_Blunt>
+      <ArmorRating_Sharp>1.5</ArmorRating_Sharp>
+    </statBases>
+    <tools>
+      <li>
+        <label>left fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>right fist</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>12.0</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+        <alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
+      </li>
+      <li>
+        <label>head</label>
+        <capacities>
+          <li>Blunt</li>
+        </capacities>
+        <power>8.5</power>
+        <cooldownTime>2</cooldownTime>
+        <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup>
+        <ensureLinkedBodyPartsGroupAlwaysUsable>true</ensureLinkedBodyPartsGroupAlwaysUsable>
+        <chanceFactor>0.2</chanceFactor>
+      </li>
+    </tools>
+    <race>
+      <body>OG_DarkEldar_Talos_Body</body>
+      <baseBodySize>1.5</baseBodySize>
+      <baseHealthScale>3</baseHealthScale>
+      <soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
+      <soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>
+      <soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
+    </race>
+	<!-- <tickerType>Normal</tickerType> -->
+	<!--comps>
+	  <li Class="OgsCompSlotLoadable.CompProperties_SlotLoadable">
+		<slots>
+			<li>OG_SlotLoadable_SoulStone</li>
+		</slots>
+	  </li>
+	</comps-->
+  </ThingDef>
+
+</Defs>
