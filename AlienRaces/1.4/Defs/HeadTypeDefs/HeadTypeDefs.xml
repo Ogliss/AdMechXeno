@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Bases -->
+
+  <!--HeadTypeDef Name="AverageBase" Abstract="True">
+    <hairMeshSize>(1.5, 1.5)</hairMeshSize>
+    <beardMeshSize>(1.5, 1.5)</beardMeshSize>
+  </HeadTypeDef>
+
+  <HeadTypeDef Name="NarrowBase" Abstract="True">
+    <hairMeshSize>(1.3, 1.5)</hairMeshSize>
+    <beardMeshSize>(1.5, 1.5)</beardMeshSize>
+    <beardOffset>(0, 0, -0.05)</beardOffset>
+    <beardOffsetXEast>-0.05</beardOffsetXEast>
+    <eyeOffsetEastWest>(0.1, 0, 0.18)</eyeOffsetEastWest>
+    <narrow>true</narrow>
+  </HeadTypeDef-->
+
+  <!-- Unisex -->
+
+  <!--HeadTypeDef ParentName="AverageBase">
+    <defName>Skull</defName>
+    <graphicPath>Things/Pawn/Humanlike/Mechanicus/Heads/None_Average_Skull</graphicPath>
+    <selectionWeight>0</selectionWeight>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Stump</defName>
+    <graphicPath>Things/Pawn/Humanlike/Mechanicus/Heads/None_Average_Stump</graphicPath>
+    <selectionWeight>0</selectionWeight>
+    <randomChosen>false</randomChosen>
+    <gender>None</gender>
+  </HeadTypeDef-->
+
+  <!-- Male -->
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_MechHeadA</defName>
+    <graphicPath>Things/Pawn/Humanlike/Mechanicus/Heads/Male/Male_MechHeadA</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_MechHeadB</defName>
+    <graphicPath>Things/Pawn/Humanlike/Mechanicus/Heads/Male/Male_MechHeadB</graphicPath>
+    <eyeOffsetEastWest>(0.175, 0, 0.18)</eyeOffsetEastWest>
+    <gender>Male</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Male_MechHeadC</defName>
+    <graphicPath>Things/Pawn/Humanlike/Mechanicus/Heads/Male/Male_MechHeadC</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="NarrowBase">
+    <defName>Male_MechHeadD</defName>
+    <graphicPath>Things/Pawn/Humanlike/Mechanicus/Heads/Male/Male_MechHeadD</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="NarrowBase">
+    <defName>Male_MechHeadE</defName>
+    <graphicPath>Things/Pawn/Humanlike/Mechanicus/Heads/Male/Male_MechHeadE</graphicPath>
+    <gender>Male</gender>
+  </HeadTypeDef>
+
+  <!-- Female -->
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_MechHeadA</defName>
+    <graphicPath>Things/Pawn/Humanlike/Mechanicus/Heads/Female/Female_MechHeadA</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_MechHeadB</defName>
+    <graphicPath>Things/Pawn/Humanlike/Mechanicus/Heads/Female/Female_MechHeadB</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Female_MechHeadC</defName>
+    <graphicPath>Things/Pawn/Humanlike/Mechanicus/Heads/Female/Female_MechHeadC</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="NarrowBase">
+    <defName>Female_MechHeadD</defName>
+    <graphicPath>Things/Pawn/Humanlike/Mechanicus/Heads/Female/Female_MechHeadD</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="NarrowBase">
+    <defName>Female_MechHeadE</defName>
+    <graphicPath>Things/Pawn/Humanlike/Mechanicus/Heads/Female/Female_MechHeadE</graphicPath>
+    <gender>Female</gender>
+  </HeadTypeDef>
+
+</Defs>

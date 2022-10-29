@@ -6,18 +6,18 @@
 		<defaultFactionType>Pirate</defaultFactionType>
 		<backstoryFiltersOverride>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>OG_Astartes_Standard</li>
-				</categories>
+				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>OG_Astartes_Standard</li>
 					<li>Imperium_Standard</li>
 				</categoriesChildhood>
 			</li>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>OG_Astartes_Standard</li>
-				</categories>
+				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Offworld</li>
 					<li>Pirate</li>

@@ -6,9 +6,9 @@
 	<defaultFactionType>OG_Ork_Feral_Faction</defaultFactionType>
 	<backstoryFiltersOverride>
 		<li>
-			<categories>
+			<categoriesAdulthood>
 				<li>Tribal</li>
-			</categories>
+			</categoriesAdulthood>
 		</li>
 	</backstoryFiltersOverride>
 	<aiAvoidCover>false</aiAvoidCover>
@@ -47,11 +47,11 @@
 	</lifeStages>
 	<backstoryFiltersOverride>
 		<!--li>
-			<categories>
+			<categoriesAdulthood>
 				<li>Offworld</li>
 				<li>Outlander</li>
 				<li>Pirate</li>
-			</categories>
+			</categoriesAdulthood>
 		</li-->
 	</backstoryFiltersOverride>
 	<itemQuality>Poor</itemQuality>
@@ -133,11 +133,11 @@
 	</lifeStages>
 	<backstoryFiltersOverride>
 		<!--li>
-			<categories>
+			<categoriesAdulthood>
 				<li>Offworld</li>
 				<li>Outlander</li>
 				<li>Pirate</li>
-			</categories>
+			</categoriesAdulthood>
 		</li-->
 	</backstoryFiltersOverride>
 </PawnKindDef>

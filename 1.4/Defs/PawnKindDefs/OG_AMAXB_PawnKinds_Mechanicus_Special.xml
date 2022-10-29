@@ -17,9 +17,9 @@
 		<backstoryCryptosleepCommonality>0.05</backstoryCryptosleepCommonality>
 		<backstoryFiltersOverride>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>Mechanicus_TechPriest</li>
-				</categories>
+				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Outlander</li>
 					<li>Imperium_Standard</li>
@@ -27,9 +27,9 @@
 				<commonality>0.95</commonality>
 			</li>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>Mechanicus_TechPriest</li>
-				</categories>
+				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Offworld</li>
 					<li>Pirate</li>

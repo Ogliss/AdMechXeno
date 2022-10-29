@@ -8,9 +8,9 @@
 		<race>OG_Human_Mechanicus</race>
 		<backstoryFiltersOverride>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>Imperium_Standard</li>
-				</categories>
+				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Outlander</li>
 					<li>Imperium_Standard</li>
@@ -18,9 +18,9 @@
 				<commonality>0.95</commonality>
 			</li>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>Imperium_Standard</li>
-				</categories>
+				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Offworld</li>
 					<li>Pirate</li>
@@ -167,9 +167,9 @@
 		<factionLeader>true</factionLeader>
 		<backstoryFiltersOverride>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>Mechanicus_TechPriest</li>
-				</categories>
+				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Outlander</li>
 					<li>Imperium_Standard</li>
@@ -177,9 +177,9 @@
 				<commonality>0.95</commonality>
 			</li>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>Mechanicus_TechPriest</li>
-				</categories>
+				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Offworld</li>
 					<li>Pirate</li>
@@ -237,9 +237,9 @@
 		<!--baseRecruitDifficulty>0.30</baseRecruitDifficulty-->
 		<backstoryFiltersOverride>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>AdMech_Skitari</li>
-				</categories>
+				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Outlander</li>
 					<li>Imperium_Standard</li>
@@ -247,9 +247,9 @@
 				<commonality>0.95</commonality>
 			</li>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>AdMech_Skitari</li>
-				</categories>
+				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Offworld</li>
 					<li>Pirate</li>
@@ -736,9 +736,9 @@
 		<!--baseRecruitDifficulty>0.50</baseRecruitDifficulty-->
 		<backstoryFiltersOverride>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>Mechanicus_Tech_Priest</li>
-				</categories>
+				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Outlander</li>
 					<li>Imperium_Standard</li>
@@ -746,9 +746,9 @@
 				<commonality>0.95</commonality>
 			</li>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>Mechanicus_Tech_Priest</li>
-				</categories>
+				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Offworld</li>
 					<li>Pirate</li>

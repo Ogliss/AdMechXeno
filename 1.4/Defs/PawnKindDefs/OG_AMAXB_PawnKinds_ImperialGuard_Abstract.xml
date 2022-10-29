@@ -8,9 +8,9 @@
 	<race>Human</race>
 	<backstoryFiltersOverride>
 		<li>
-			<categories>
+			<categoriesAdulthood>
 				<li>Imperium_Standard</li>
-			</categories>
+			</categoriesAdulthood>
 			<categoriesChildhood>
 				<li>Outlander</li>
 				<li>Imperium_Standard</li>
@@ -18,9 +18,9 @@
 			<commonality>0.95</commonality>
 		</li>
 		<li>
-			<categories>
+			<categoriesAdulthood>
 				<li>Imperium_Standard</li>
-			</categories>
+			</categoriesAdulthood>
 			<categoriesChildhood>
 				<li>Offworld</li>
 				<li>Pirate</li>
@@ -174,9 +174,9 @@
 	<factionLeader>true</factionLeader>
 	<backstoryFiltersOverride>
 		<li>
-			<categories>
+			<categoriesAdulthood>
 				<li>Imperium_Imperial_WarMaster</li>
-			</categories>
+			</categoriesAdulthood>
 			<categoriesChildhood>
 				<li>Outlander</li>
 				<li>Imperium_Standard</li>
@@ -184,9 +184,9 @@
 			<commonality>0.95</commonality>
 		</li>
 		<li>
-			<categories>
+			<categoriesAdulthood>
 				<li>Imperium_Imperial_WarMaster</li>
-			</categories>
+			</categoriesAdulthood>
 			<categoriesChildhood>
 				<li>Offworld</li>
 				<li>Pirate</li>
@@ -608,9 +608,9 @@
 	<minGenerationAge>23</minGenerationAge>
 	<backstoryFiltersOverride>
 		<li>
-			<categories>
+			<categoriesAdulthood>
 				<li>Imperium_Schola_Cadet</li>
-			</categories>
+			</categoriesAdulthood>
 			<categoriesChildhood>
 				<li>Outlander</li>
 				<li>Imperium_Standard</li>
@@ -618,9 +618,9 @@
 			<commonality>0.95</commonality>
 		</li>
 		<li>
-			<categories>
+			<categoriesAdulthood>
 				<li>Imperium_Commissariat_Lord</li>
-			</categories>
+			</categoriesAdulthood>
 			<categoriesChildhood>
 				<li>Outlander</li>
 				<li>Offworld</li>

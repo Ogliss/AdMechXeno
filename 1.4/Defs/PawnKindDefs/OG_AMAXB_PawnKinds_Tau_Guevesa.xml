@@ -7,10 +7,10 @@
 		<label>colonist (Gue'vesa)</label>
 		<backstoryFiltersOverride>
 			<li>
-			<categories>
+			<categoriesAdulthood>
 				<li>Offworld</li>
 				<li>Outlander</li>
-			</categories>
+			</categoriesAdulthood>
 			</li>
 		</backstoryFiltersOverride>
 		<initialWillRange IgnoreIfNoMatchingField="True">0~1</initialWillRange>
@@ -22,10 +22,10 @@
 		<label>Gue'vesa slave</label>
 		<backstoryFiltersOverride>
 			<li>
-			<categories>
+			<categoriesAdulthood>
 				<li>Offworld</li>
 				<li>Outlander</li>
-			</categories>
+			</categoriesAdulthood>
 			</li>
 		</backstoryFiltersOverride>
 		<initialWillRange IgnoreIfNoMatchingField="True">0~1</initialWillRange>

@@ -6,11 +6,11 @@
 		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
 		<backstoryFiltersOverride>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>Offworld</li>
 					<li>Outlander</li>
 					
-				</categories>
+				</categoriesAdulthood>
 			</li>
 		</backstoryFiltersOverride>
 		<invNutrition>2.55</invNutrition>

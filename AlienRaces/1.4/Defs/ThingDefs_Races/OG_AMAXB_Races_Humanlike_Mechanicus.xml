@@ -9,26 +9,42 @@
 				<alienPartGenerator>
 				<borderScale>1</borderScale>
 				<atlasScale>2</atlasScale>
-					<aliencrowntypes>
-						<li>Average_Normal</li>
-						<li>Average_Wide</li>
-						<li>Average_Pointy</li>
-						<li>Narrow_Normal</li>
-						<li>Narrow_Pointy</li>
-						<li>Narrow_Wide</li>
-						<li>MechHeadA</li>
+					<headTypes>
+						<li>Male_AverageNormal</li>
+						<li>Male_AveragePointy</li>
+						<li>Male_AverageWide</li>
+						<li>Male_NarrowNormal</li>
+						<li>Male_NarrowPointy</li>
+						<li>Male_NarrowWide</li>
+						<!--li>Male_MechHeadA</li>
+						<li>Male_MechHeadB</li>
+						<li>Male_MechHeadC</li>
+						<li>Male_MechHeadD</li>
+						<li>Male_MechHeadE</li-->
+						<li>Female_AverageNormal</li>
+						<li>Female_AveragePointy</li>
+						<li>Female_AverageWide</li>
+						<li>Female_NarrowNormal</li>
+						<li>Female_NarrowPointy</li>
+						<li>Female_NarrowWide</li>
+						<!--li>Female_MechHeadA</li>
+						<li>Female_MechHeadB</li>
+						<li>Female_MechHeadC</li>
+						<li>Female_MechHeadD</li>
+						<li>Female_MechHeadE</li-->
+						<!--li>MechHeadA</li>
 						<li>MechHeadB</li>
 						<li>MechHeadC</li>
 						<li>MechHeadD</li>
-						<li>MechHeadE</li>
-					</aliencrowntypes>
-					<alienbodytypes Inherit="false">
+						<li>MechHeadE</li-->
+					</headTypes>
+					<bodyTypes Inherit="false">
 						<li>Male</li>
 						<li>Female</li>
 						<li>Thin</li>
 						<li>Hulk</li>
 						<li>Fat</li>
-					</alienbodytypes>
+					</bodyTypes>
 					<bodyAddons>
 					</bodyAddons>
 				</alienPartGenerator>
@@ -128,14 +144,28 @@
 				</factionRelations>
 			</generalSettings>
 			<graphicPaths Inherit="false">
-				<li>
-					<body>Things/Pawn/Humanlike/Mechanicus/Bodies/</body>
-				</li>
-				<!--
-				<li>
-					<head>Things/Pawn/Humanlike/Mechanicus/Head/</head>
-				</li>
-				-->
+					<body>
+						<bodytypeGraphics>
+						  <Male>
+							<path>Things/Pawn/Humanlike/Mechanicus/Bodies/Naked_Male</path>
+						  </Male>
+						  <Female>
+							<path>Things/Pawn/Humanlike/Mechanicus/Bodies/Naked_Female</path>
+						  </Female>
+						  <Fat>
+							<path>Things/Pawn/Humanlike/Mechanicus/Bodies/Naked_Fat</path>
+						  </Fat>
+						  <Thin>
+							<path>Things/Pawn/Humanlike/Mechanicus/Bodies/Naked_Thin</path>
+						  </Thin>
+						  <Hulk>
+							<path>Things/Pawn/Humanlike/Mechanicus/Bodies/Naked_Hulk</path>
+						  </Hulk>
+						</bodytypeGraphics>
+					</body>
+					<!--head>Things/Pawn/Humanlike/Mechanicus/Heads</head-->
+					<skeleton>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Thin</skeleton>
+					<skinShader>Cutout</skinShader>
 			</graphicPaths>
 			<hairSettings IgnoreIfNoMatchingField="True">
 			</hairSettings>

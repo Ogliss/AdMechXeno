@@ -6,21 +6,17 @@
 		<alienRace>
 			<generalSettings>
 				<alienPartGenerator>
-					<useGenderedHeads>false</useGenderedHeads>
-					<aliencrowntypes Inherit="false">
-						<li>Average_Normal</li>
-						<li>Average_Normal1</li>
-						<li>Average_Normal2</li>
-						<li>Average_Normal3</li>
-						<li>Average_Normal4</li>
-					</aliencrowntypes>
+					<!--useGenderedHeads>false</useGenderedHeads-->
+					<headTypes Inherit="false">
+						<li>Male_AverageNormal</li>
+					</headTypes>
 					<headOffset>(0.0, 0.15)</headOffset>
 					<customHeadDrawSize>(1.25, 1.25)</customHeadDrawSize>
 					<!-- <customPortraitHeadDrawSize>(0.7, 0.7)</customPortraitHeadDrawSize> -->
-					<useGenderedBodies>false</useGenderedBodies>
-					<alienbodytypes Inherit="false">
+					<!--useGenderedBodies>false</useGenderedBodies-->
+					<bodyTypes Inherit="false">
 						<li>Hulk</li>
-					</alienbodytypes>
+					</bodyTypes>
 					<customDrawSize>(1.75, 1.75)</customDrawSize>
 					<!-- <customPortraitDrawSize>(0.8, 0.8)</customPortraitDrawSize> -->
 					<headOffsetDirectional>
@@ -140,10 +136,8 @@
 				</li>
 			</styleSettings>
 			<graphicPaths Inherit="false">
-				<li>
-					<body>Things/Pawn/Humanlike/Ogryn/Bodies/</body>
-					<head>Things/Pawn/Humanlike/Ogryn/Heads/</head>
-				</li>
+				<body>Things/Pawn/Humanlike/Ogryn/Bodies/</body>
+				<head>Things/Pawn/Humanlike/Ogryn/Heads/</head>
 			</graphicPaths>
 			<thoughtSettings>
 				<cannotReceiveThoughts>

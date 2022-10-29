@@ -73,10 +73,10 @@
 	<maxGenerationAge>10</maxGenerationAge>
 	<backstoryFiltersOverride>
 		<li>
-		<categories>
+		<categoriesAdulthood>
 			<li>Offworld</li>
 			<li>Outlander</li>
-		</categories>
+		</categoriesAdulthood>
 		</li>
 	</backstoryFiltersOverride>
 	<gearHealthRange>
@@ -188,11 +188,11 @@
 	<combatPower>70</combatPower>
 	<backstoryFiltersOverride>
 		<li>
-		<categories>
+		<categoriesAdulthood>
 			<li>Offworld</li>
 			<li>Outlander</li>
 			
-		</categories>
+		</categoriesAdulthood>
 		</li>
 	</backstoryFiltersOverride>
 	<apparelTags>
