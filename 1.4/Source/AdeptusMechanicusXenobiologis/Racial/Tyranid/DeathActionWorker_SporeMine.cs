@@ -96,7 +96,7 @@ namespace AdeptusMechanicus
 			Log.Message("defaultDamage " + damageAmount.ToString());
 			Log.Message("defaultArmorPenetration " + ap.ToString());
 			*/
-			GenExplosion.DoExplosion(position, this.map, radius, damage, corpse.InnerPawn, damageAmount, ap, null, null, null, null, null, 0f, 1, false, null, 0f, 1, 0f, false, null, null);
+			GenExplosion.DoExplosion(position, this.map, radius, damage, corpse.InnerPawn, damageAmount, ap, null, null, null, null, null, 0f, 1, GasType.RotStink, false, null, 0f, 1, 0f, false, null, null);
 
 		}
 	}

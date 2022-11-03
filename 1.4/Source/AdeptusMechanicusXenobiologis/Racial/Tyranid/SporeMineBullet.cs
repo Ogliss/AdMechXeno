@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using RimWorld;
 using Verse;
 
@@ -16,8 +17,7 @@ namespace AdeptusMechanicus
             }
         }
 
-        // Token: 0x06000006 RID: 6 RVA: 0x0000208C File Offset: 0x0000028C
-        public override void Impact(Thing hitThing)
+		public override void Impact(Thing hitThing, bool blockedByShield = false)
 		{
 			Faction faction = this.launcher.Faction;
 			ThingDef raceDef = this.def.projectile.postExplosionSpawnThingDef;

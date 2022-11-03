@@ -41,7 +41,7 @@ namespace AdeptusMechanicus
                 }
                 if (spawn)
                 {
-                    pawnGenerationRequest = new PawnGenerationRequest(pawnKindDef, corpse.InnerPawn.Faction, PawnGenerationContext.NonPlayer, -1, true, false, true, false, true, true, 20f, fixedBiologicalAge: bioyears, fixedChronologicalAge: chronoyears);
+                    pawnGenerationRequest = new PawnGenerationRequest(pawnKindDef, corpse.InnerPawn.Faction, PawnGenerationContext.NonPlayer, -1, true, false, true, true, true, 20f, fixedBiologicalAge: bioyears, fixedChronologicalAge: chronoyears);
                     newPawn1 = PawnGenerator.GeneratePawn(pawnGenerationRequest);
                     newPawn2 = PawnGenerator.GeneratePawn(pawnGenerationRequest);
                     spawned = new List<Thing>()
@@ -118,7 +118,7 @@ namespace AdeptusMechanicus
             }
             if (position != null && map != null)
             {
-                GenExplosion.DoExplosion(position, map, 1.9f, AdeptusDamageDefOf.OG_Chaos_Deamon_WarpfireDeath, corpse.InnerPawn, -1, -1f, null, null, null, null, null, 0f, 1, false, null, 0f, 1, 0f, false, null, spawned);
+                GenExplosion.DoExplosion(position, map, 1.9f, AdeptusDamageDefOf.OG_Chaos_Deamon_WarpfireDeath, corpse.InnerPawn, -1, -1f, null, null, null, null, null, 0f, 1, GasType.Unused, false, null, 0f, 1, 0f, false, null, spawned);
             }
             base.PawnDied(corpse);
         }

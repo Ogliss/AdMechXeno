@@ -305,9 +305,9 @@ namespace AdeptusMechanicus
             if (flag2)
             {
                 if (logging == true) Log.Message(string.Format("flag2"));
-                hediff = GenCollection.RandomElement<Hediff_Injury>(from x in Pawn.health.hediffSet.GetHediffs<Hediff_Injury>()
-                                                                    where HediffUtility.CanHealNaturally(x) && (HealableHediffs.Contains(x) || Forced)
-                                                                    select x);
+                List<Hediff_Injury> list = new List<Hediff_Injury>();
+                Pawn.health.hediffSet.GetHediffs<Hediff_Injury>(ref list, x => HediffUtility.CanHealNaturally(x) && (HealableHediffs.Contains(x) || Forced));
+                hediff = GenCollection.RandomElement<Hediff_Injury>(list);
                 num = num * Pawn.HealthScale * 0.1f;
                 hediff.Heal(num);
                 string text = string.Format("flag2 the {1} on {0}'s {2} healed by {3}.", Pawn.LabelCap, hediff.Label, hediff.Part.customLabel, num);
@@ -322,7 +322,9 @@ namespace AdeptusMechanicus
             {
                 if (logging == true) Log.Message(string.Format("flag4"));
 #pragma warning disable CS0436 // Type conflicts with imported type
-                hediff = Pawn.health.hediffSet.GetHediffs<Hediff_RegeneratingPart>().RandomElement();
+                List<Hediff_RegeneratingPart> list = new List<Hediff_RegeneratingPart>();
+                Pawn.health.hediffSet.GetHediffs<Hediff_RegeneratingPart>(ref list);
+                hediff = GenCollection.RandomElement<Hediff_RegeneratingPart>(list);
 #pragma warning restore CS0436 // Type conflicts with imported type
                 num = num * Pawn.HealthScale * 0.001f;
                 hediff.Heal(num);
