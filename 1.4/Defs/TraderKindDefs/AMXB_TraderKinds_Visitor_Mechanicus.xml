@@ -49,7 +49,7 @@
       
       <!-- Weapons -->
       <li Class="StockGenerator_MarketValue">
-        <tradeTag>WeaponRanged</tradeTag>
+        <tradeTag>OGAMRanged</tradeTag>
         <countRange>0~1</countRange>
       </li>
 

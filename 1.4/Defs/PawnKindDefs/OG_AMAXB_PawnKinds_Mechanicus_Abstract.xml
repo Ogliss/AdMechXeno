@@ -319,7 +319,7 @@
 			<max>25000</max>
 		</apparelMoney>
 		<weaponMoney>
-			<min>1400</min>
+			<min>2400</min>
 			<max>28000</max>
 		</weaponMoney>
 		<weaponTags Inherit="false">
@@ -376,7 +376,7 @@
 			<max>2500</max>
 		</apparelMoney>
 		<weaponMoney>
-			<min>1400</min>
+			<min>3400</min>
 			<max>28000</max>
 		</weaponMoney>
 		<weaponTags Inherit="false">
@@ -436,7 +436,7 @@
 			<max>2500</max>
 		</apparelMoney>
 		<weaponMoney>
-			<min>1400</min>
+			<min>3400</min>
 			<max>28000</max>
 		</weaponMoney>
 		<weaponTags Inherit="false">
@@ -494,7 +494,7 @@
 			<max>25000</max>
 		</apparelMoney>
 		<weaponMoney>
-			<min>1400</min>
+			<min>3400</min>
 			<max>28000</max>
 		</weaponMoney>
 		<weaponTags Inherit="false">
@@ -551,7 +551,7 @@
 			<max>25000</max>
 		</apparelMoney>
 		<weaponMoney>
-			<min>1400</min>
+			<min>3400</min>
 			<max>28000</max>
 		</weaponMoney>
 		<weaponTags Inherit="false">

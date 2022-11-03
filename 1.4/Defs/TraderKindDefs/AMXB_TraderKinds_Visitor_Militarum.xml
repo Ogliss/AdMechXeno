@@ -53,12 +53,6 @@
         <countRange>0~1</countRange>
       </li>
 
-      <!-- Weapons -->
-      <li Class="StockGenerator_MarketValue">
-        <tradeTag>WeaponRanged</tradeTag>
-        <countRange>0~1</countRange>
-      </li>
-
       <!-- Apparel -->
       <li Class="StockGenerator_MarketValue">
         <tradeTag>Clothing</tradeTag>
