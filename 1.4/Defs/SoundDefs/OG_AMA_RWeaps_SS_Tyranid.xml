@@ -11,8 +11,8 @@
 		<subSounds>
 			<li>
 				<grains>
-					<li Class="AudioGrain_Folder">
-					<clipFolderPath>Weapons/Ranged/Tyranid/BarbedStrangler_Shot</clipFolderPath>
+					<li Class="AudioGrain_Clip">
+					<clipPath>Weapons/Ranged/Tyranid/BarbedStrangler_Shot</clipPath>
 					</li>
 				</grains>		
 				<volumeRange>
@@ -38,8 +38,8 @@
 		<subSounds>
 			<li>
 				<grains>
-					<li Class="AudioGrain_Folder">
-					<clipFolderPath>Weapons/Ranged/Tyranid/BarbedStrangler_Blast</clipFolderPath>
+					<li Class="AudioGrain_Clip">
+					<clipPath>Weapons/Ranged/Tyranid/BarbedStrangler_Blast</clipPath>
 					</li>
 				</grains>		
 				<volumeRange>
@@ -65,8 +65,8 @@
 		<subSounds>
 			<li>
 				<grains>
-					<li Class="AudioGrain_Folder">
-					<clipFolderPath>Weapons/Ranged/Tyranid/Devourer_Shot</clipFolderPath>
+					<li Class="AudioGrain_Clip">
+					<clipPath>Weapons/Ranged/Tyranid/Devourer_Shot</clipPath>
 					</li>
 				</grains>		
 				<volumeRange>
@@ -91,8 +91,8 @@
 		<subSounds>
 			<li>
 				<grains>
-					<li Class="AudioGrain_Folder">
-					<clipFolderPath>Weapons/Ranged/Tyranid/Fleshhook_Shot</clipFolderPath>
+					<li Class="AudioGrain_Clip">
+					<clipPath>Weapons/Ranged/Tyranid/Fleshhook_Shot</clipPath>
 					</li>
 				</grains>		
 				<volumeRange>
@@ -117,8 +117,8 @@
 		<subSounds>
 			<li>
 				<grains>
-					<li Class="AudioGrain_Folder">
-					<clipFolderPath>Weapons/Ranged/Tyranid/Venomcannon_Shot</clipFolderPath>
+					<li Class="AudioGrain_Clip">
+					<clipPath>Weapons/Ranged/Tyranid/Venomcannon_Shot</clipPath>
 					</li>
 				</grains>		
 				<volumeRange>
@@ -146,8 +146,8 @@
 		<li>
 		<tempoAffectedByGameSpeed>true</tempoAffectedByGameSpeed>
 		<grains>
-			<li Class="AudioGrain_Folder">
-			<clipFolderPath>Weapons/Ranged/Tyranid/Zoanthrope_Aiming</clipFolderPath>
+			<li Class="AudioGrain_Clip">
+			<clipPath>Weapons/Ranged/Tyranid/Zoanthrope_Aiming</clipPath>
 			</li>
 		</grains>		
 		<pitchRange>
@@ -171,8 +171,8 @@
 		<subSounds>
 			<li>
 				<grains>
-					<li Class="AudioGrain_Folder">
-					<clipFolderPath>Weapons/Ranged/Tyranid/Zoanthrope_Shot</clipFolderPath>
+					<li Class="AudioGrain_Clip">
+					<clipPath>Weapons/Ranged/Tyranid/Zoanthrope_Shot</clipPath>
 					</li>
 				</grains>		
 				<volumeRange>
@@ -197,8 +197,8 @@
 		<subSounds>
 			<li>
 				<grains>
-					<li Class="AudioGrain_Folder">
-					<clipFolderPath>Weapons/Ranged/Tyranid/Zoanthrope_Blast</clipFolderPath>
+					<li Class="AudioGrain_Clip">
+					<clipPath>Weapons/Ranged/Tyranid/Zoanthrope_Blast</clipPath>
 					</li>
 				</grains>		
 				<volumeRange>

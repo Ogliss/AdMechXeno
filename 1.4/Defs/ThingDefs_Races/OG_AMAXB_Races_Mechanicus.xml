@@ -6,7 +6,7 @@
 	<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 	<statBases>
 		<PsychicSensitivity>-1</PsychicSensitivity>
-		<ToxicResistance>0</ToxicResistance>
+		<ToxicResistance>1</ToxicResistance>
 		<Flammability>0</Flammability>
 		<MeleeDodgeChance>1</MeleeDodgeChance>
 		<MeleeHitChance>1</MeleeHitChance>

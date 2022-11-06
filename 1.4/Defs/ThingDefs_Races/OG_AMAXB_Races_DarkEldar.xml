@@ -296,7 +296,7 @@
 			<ArmorRating_Sharp>1.09</ArmorRating_Sharp>
 			<ArmorRating_Blunt>1.09</ArmorRating_Blunt>
 			<ArmorRating_Heat>1.09</ArmorRating_Heat>
-			<ToxicResistance>-1</ToxicResistance>
+			<ToxicResistance>0.7</ToxicResistance>
 			<PsychicSensitivity>-0.95</PsychicSensitivity>
 			<ShootingAccuracyPawn>1.16</ShootingAccuracyPawn>
 			<MoveSpeed>6.4</MoveSpeed>

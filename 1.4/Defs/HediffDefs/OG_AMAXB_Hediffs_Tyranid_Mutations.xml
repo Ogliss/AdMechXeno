@@ -278,7 +278,7 @@
 	<stages>
 		<li>
 		<statOffsets>
-			<ToxicResistance>-0.75</ToxicResistance>
+			<ToxicResistance>0.75</ToxicResistance>
 		</statOffsets>
 		</li>
 	</stages>

@@ -9,7 +9,7 @@
 		<backstoryFiltersOverride>
 			<li>
 				<categoriesAdulthood>
-					<li>Imperium_Standard</li>
+					<li>Mechanicus_Standard</li>
 				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Outlander</li>
@@ -19,7 +19,7 @@
 			</li>
 			<li>
 				<categoriesAdulthood>
-					<li>Imperium_Standard</li>
+					<li>Mechanicus_Standard</li>
 				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Offworld</li>
@@ -238,7 +238,7 @@
 		<backstoryFiltersOverride>
 			<li>
 				<categoriesAdulthood>
-					<li>AdMech_Skitari</li>
+					<li>Mechanicus_Skitarius</li>
 				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Outlander</li>
@@ -248,7 +248,7 @@
 			</li>
 			<li>
 				<categoriesAdulthood>
-					<li>AdMech_Skitari</li>
+					<li>Mechanicus_Skitarius</li>
 				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Offworld</li>
@@ -742,6 +742,8 @@
 				<categoriesChildhood>
 					<li>Outlander</li>
 					<li>Imperium_Standard</li>
+					<li>Mechanicus_Standard</li>
+					<li>Mechanicus_Menial</li>	
 				</categoriesChildhood>
 				<commonality>0.95</commonality>
 			</li>

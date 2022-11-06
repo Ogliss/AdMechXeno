@@ -8,7 +8,7 @@
 		<MarketValue>1750</MarketValue>
 		<MoveSpeed>5.61</MoveSpeed>
 		<PsychicSensitivity>-0.33</PsychicSensitivity>
-		<ToxicResistance>0</ToxicResistance>
+		<ToxicResistance>1</ToxicResistance>
 		<Flammability>0.33</Flammability>
 		<MeleeDodgeChance>1</MeleeDodgeChance>
 		<MeleeHitChance>1</MeleeHitChance>
@@ -133,7 +133,7 @@
 	<soundImpactDefault>BulletImpact_Metal</soundImpactDefault>
 	<statBases>
 		<PsychicSensitivity>-1</PsychicSensitivity>
-		<ToxicResistance>0</ToxicResistance>
+		<ToxicResistance>1</ToxicResistance>
 		<Flammability>0</Flammability>
 		<MeleeDodgeChance>1</MeleeDodgeChance>
 		<MeleeHitChance>1</MeleeHitChance>

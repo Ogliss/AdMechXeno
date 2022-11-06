@@ -59,7 +59,7 @@
 	<statBases>
 		<PainShockThreshold>1</PainShockThreshold>
 		<PsychicSensitivity>0</PsychicSensitivity>
-		<ToxicResistance>0</ToxicResistance>
+		<ToxicResistance>1</ToxicResistance>
 		<Flammability>0</Flammability>
 		<ComfyTemperatureMin>-100</ComfyTemperatureMin>
 		<ComfyTemperatureMax>250</ComfyTemperatureMax>

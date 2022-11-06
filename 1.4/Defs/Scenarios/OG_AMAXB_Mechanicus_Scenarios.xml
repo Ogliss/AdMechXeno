@@ -13,21 +13,26 @@
 			</playerFaction>
 			<parts>
 				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs">
-				  <def>ConfigurePawnsKindDefs</def>
-				  <pawnChoiceCount>8</pawnChoiceCount>
-				  <leftBehindPawnKind>Colonist_OG_Mechanicus</leftBehindPawnKind>
-				  <kindCounts>
+					<def>ConfigurePawnsKindDefs</def>
+					<pawnChoiceCount>8</pawnChoiceCount>
+					<leftBehindPawnKind>Colonist_OG_Mechanicus</leftBehindPawnKind>
+					<kindCounts>
 					<li>
-					  <kindDef>Colonist_OG_Mechanicus</kindDef>
-					  <count>2</count>
-					  <requiredAtStart>true</requiredAtStart>
+						<kindDef>Colonist_OG_Mechanicus</kindDef>
+						<count>2</count>
+						<requiredAtStart>true</requiredAtStart>
 					</li>
 					<li>
-					  <kindDef>Colonist_OG_Mechanicus_Tech_Priest_Enginseer</kindDef>
-					  <count>4</count>
-					  <requiredAtStart>true</requiredAtStart>
+						<kindDef>Colonist_OG_Mechanicus_Tech_Priest</kindDef>
+						<count>1</count>
+						<requiredAtStart>true</requiredAtStart>
 					</li>
-				  </kindCounts>
+					<li>
+						<kindDef>Colonist_OG_Mechanicus_Tech_Priest_Enginseer</kindDef>
+						<count>3</count>
+						<requiredAtStart>true</requiredAtStart>
+					</li>
+					</kindCounts>
 				</li>
 
 				<li Class="ScenPart_PlayerPawnsArriveMethod">

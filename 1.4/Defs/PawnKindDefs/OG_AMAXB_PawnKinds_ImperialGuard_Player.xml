@@ -1,16 +1,113 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-	<PawnKindDef ParentName="Colonist_OG_Militarum_Base">
-		<defName>Colonist_OG_Militarum</defName>
-		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
-	</PawnKindDef>
+<PawnKindDef Abstract="True" Name="OG_Miliatrum_Base_PawnKind">
+	<race>Human</race>
+	<combatPower>40</combatPower>
+	<!--baseRecruitDifficulty>0.50</baseRecruitDifficulty-->
+	<isFighter>true</isFighter>
+	<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+	<forceNormalGearQuality>true</forceNormalGearQuality>
+	<backstoryFiltersOverride>
+		<li>
+			<categoriesAdulthood>
+				<li>Imperium_Standard</li>
+			</categoriesAdulthood>
+			<categoriesChildhood>
+				<li>Outlander</li>
+				<li>Imperium_Standard</li>
+			</categoriesChildhood>
+			<commonality>0.95</commonality>
+		</li>
+		<li>
+			<categoriesAdulthood>
+				<li>Imperium_Standard</li>
+			</categoriesAdulthood>
+			<categoriesChildhood>
+				<li>Offworld</li>
+				<li>Pirate</li>
+			</categoriesChildhood>
+			<commonality>0.05</commonality>
+		</li>
+	</backstoryFiltersOverride>
+	<apparelTags>
+		<li>OGIGClothing</li>
+	</apparelTags>
+</PawnKindDef>
 
-	<PawnKindDef ParentName="Colonist_OG_Militarum_KreigBase">
-		<defName>Colonist_OG_Militarum_Kreig_Guardsmen</defName>
-		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
-	</PawnKindDef>
+<PawnKindDef Name="Colonist_OG_Militarum_Base" ParentName="OG_Miliatrum_Base_PawnKind">
+	<defName>Colonist_OG_Militarum</defName>
+    <label>colonist (Militarum)</label>
+	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
+	<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
+	<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+	<apparelTags>
+		<li>OGIGClothing</li>
+	</apparelTags>
+	<apparelMoney>
+		<min>1000</min>
+		<max>2400</max>
+	</apparelMoney>
+	<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+</PawnKindDef>
+
+<PawnKindDef Name="Colonist_OG_Militarum_KreigBase" ParentName="OG_Miliatrum_Base_PawnKind">
+	<defName>Colonist_OG_Militarum_Kreig_Guardsmen</defName>
+	<label>guardsman</label>
+	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
+	<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
+	<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+	<backstoryFiltersOverride Inherit="false">
+		<li>
+			<categoriesAdulthood>
+				<li>Imperium_Kreig</li>
+			</categoriesAdulthood>
+			<categoriesChildhood>
+				<li>Outlander</li>
+				<li>Imperium_Standard</li>
+			</categoriesChildhood>
+		</li>
+		<li>
+			<categoriesAdulthood>
+				<li>Imperium_Kreig</li>
+			</categoriesAdulthood>
+			<categoriesChildhood>
+				<li>Offworld</li>
+				<li>Pirate</li>
+			</categoriesChildhood>
+			<commonality>0.05</commonality>
+		</li>
+	</backstoryFiltersOverride>
+	<apparelTags>
+		<li>OGDeathKorps</li>
+	</apparelTags>
+	<apparelMoney>
+		<min>1000</min>
+		<max>2400</max>
+	</apparelMoney>
+	<apparelRequired>
+		<li>OGIG_Apparel_Krieg_FlakHelmet_TOGGLEDEF_A</li>
+		<li>OGIG_Apparel_Krieg_Uniform_Trenchcoat</li>
+		<li>OGIG_Apparel_Krieg_Gasmask</li>
+	</apparelRequired>
+	<weaponMoney>
+		<min>1400</min>
+		<max>28000</max>
+	</weaponMoney>
+	<weaponTags Inherit="false">
+		<li>KriegGun</li>
+	</weaponTags>
+	<skills>
+		<li>
+			<skill>Shooting</skill>
+			<range>4~8</range>
+		</li>
+		<li>
+			<skill>Melee</skill>
+			<range>3~6</range>
+		</li>
+	</skills>
+	<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+</PawnKindDef>
 
 </Defs>

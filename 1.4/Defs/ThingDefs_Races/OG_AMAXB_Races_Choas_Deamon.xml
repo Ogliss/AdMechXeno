@@ -46,7 +46,7 @@
 		<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
 		<statBases>
 			<PsychicSensitivity>5</PsychicSensitivity>
-			<ToxicResistance>0</ToxicResistance>
+			<ToxicResistance>1</ToxicResistance>
 			<Flammability>0</Flammability>
 			<MeleeDodgeChance>1</MeleeDodgeChance>
 			<MeleeHitChance>1</MeleeHitChance>
