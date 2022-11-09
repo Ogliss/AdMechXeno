@@ -75,7 +75,7 @@
 		<label>colonist (Mechanicus)</label>
 		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
 		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
-		<backstoryFiltersOverride>
+		<backstoryFiltersOverride Inherit="false">
 			<li>
 				<categories>
 					<li>Mechanicus_Servitor</li>
@@ -142,13 +142,13 @@
 	<!-- Adv Colonist -->
 	<PawnKindDef Name="OG_Mechanicus_Colonist_TechPriest_Base" ParentName="OG_Mechanicus_Colonist_Base">
 		<defName>Colonist_OG_Mechanicus_Tech_Priest</defName>
-		<label>enginseer</label>
+		<label>tech-priest</label>
 		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
 		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
-		<backstoryFiltersOverride>
+		<backstoryFiltersOverride Inherit="false">
 			<li>
 				<categoriesAdulthood>
-					<li>Mechanicus_Tech_Priest</li>
+					<li>Mechanicus_TechPriest</li>
 				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Outlander</li>
@@ -160,7 +160,7 @@
 			</li>
 			<li>
 				<categoriesAdulthood>
-					<li>Mechanicus_Tech_Priest</li>
+					<li>Mechanicus_TechPriest</li>
 				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Offworld</li>
@@ -209,11 +209,11 @@
 	
 	<PawnKindDef Name="OG_Mechanicus_Colonist_Enginseer_Base" ParentName="OG_Mechanicus_Colonist_TechPriest_Base">
 		<defName>Colonist_OG_Mechanicus_Tech_Priest_Enginseer</defName>
-		<label>enginseer</label>
-		<backstoryFiltersOverride>
+		<label>tech-priest</label>
+		<backstoryFiltersOverride Inherit="false">
 			<li>
 				<categoriesAdulthood>
-					<li>Mechanicus_Tech_Priest_Enginseer</li>
+					<li>Mechanicus_TechPriest_Enginseer</li>
 				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Outlander</li>
@@ -225,7 +225,7 @@
 			</li>
 			<li>
 				<categoriesAdulthood>
-					<li>Mechanicus_Tech_Priest_Enginseer</li>
+					<li>Mechanicus_TechPriest_Enginseer</li>
 				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Offworld</li>

@@ -126,7 +126,7 @@
 		</playerFaction>
 		<parts>
 				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs">
-					<def>ConfigurePawnsKindDefs</def>
+					<def>OG_ConfigurePawnsKindDefs</def>
 					<pawnChoiceCount>10</pawnChoiceCount>
 					<leftBehindPawnKind>Colonist_OG_Militarum_Kreig_Guardsmen</leftBehindPawnKind>
 					<kindCounts>

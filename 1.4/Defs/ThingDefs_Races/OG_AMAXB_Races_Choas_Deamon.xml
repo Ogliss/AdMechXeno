@@ -385,6 +385,7 @@
 			<MeleeHitChance>0.66</MeleeHitChance>
 		</statBases>
 		<race>
+			<deathActionWorkerClass>AdeptusMechanicus.DeathActionWorker_ChaosHorror</deathActionWorkerClass>
 			<thinkTreeMain>OG_ChaosDeamon_ThinkTree</thinkTreeMain>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
 			<soundMeleeHitBuilding>Pawn_Melee_Punch_HitBuilding</soundMeleeHitBuilding>

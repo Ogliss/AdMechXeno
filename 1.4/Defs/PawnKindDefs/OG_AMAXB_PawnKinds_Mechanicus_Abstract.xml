@@ -737,7 +737,7 @@
 		<backstoryFiltersOverride>
 			<li>
 				<categoriesAdulthood>
-					<li>Mechanicus_Tech_Priest</li>
+					<li>Mechanicus_TechPriest</li>
 				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Outlander</li>
@@ -749,7 +749,7 @@
 			</li>
 			<li>
 				<categoriesAdulthood>
-					<li>Mechanicus_Tech_Priest</li>
+					<li>Mechanicus_TechPriest</li>
 				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Offworld</li>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<PawnKindDef Abstract="True" Name="OG_Miliatrum_Base_PawnKind">
+<PawnKindDef Abstract="True" Name="OG_Militarum_Base_PawnKind">
 	<race>Human</race>
 	<combatPower>40</combatPower>
 	<!--baseRecruitDifficulty>0.50</baseRecruitDifficulty-->
@@ -29,13 +29,23 @@
 			</categoriesChildhood>
 			<commonality>0.05</commonality>
 		</li>
+		<li>
+			<categoriesAdulthood>
+				<li>Imperium_Militarum</li>
+			</categoriesAdulthood>
+			<categoriesChildhood>
+				<li>Offworld</li>
+				<li>Pirate</li>
+			</categoriesChildhood>
+			<commonality>0.35</commonality>
+		</li>
 	</backstoryFiltersOverride>
 	<apparelTags>
 		<li>OGIGClothing</li>
 	</apparelTags>
 </PawnKindDef>
 
-<PawnKindDef Name="Colonist_OG_Militarum_Base" ParentName="OG_Miliatrum_Base_PawnKind">
+<PawnKindDef Name="Colonist_OG_Militarum_Base" ParentName="OG_Militarum_Base_PawnKind">
 	<defName>Colonist_OG_Militarum</defName>
     <label>colonist (Militarum)</label>
 	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
@@ -51,7 +61,7 @@
 	<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
 </PawnKindDef>
 
-<PawnKindDef Name="Colonist_OG_Militarum_KreigBase" ParentName="OG_Miliatrum_Base_PawnKind">
+<PawnKindDef Name="Colonist_OG_Militarum_KreigBase" ParentName="OG_Militarum_Base_PawnKind">
 	<defName>Colonist_OG_Militarum_Kreig_Guardsmen</defName>
 	<label>guardsman</label>
 	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
@@ -60,7 +70,7 @@
 	<backstoryFiltersOverride Inherit="false">
 		<li>
 			<categoriesAdulthood>
-				<li>Imperium_Kreig</li>
+				<li>Imperium_Militarum_Kreig</li>
 			</categoriesAdulthood>
 			<categoriesChildhood>
 				<li>Outlander</li>
@@ -69,7 +79,7 @@
 		</li>
 		<li>
 			<categoriesAdulthood>
-				<li>Imperium_Kreig</li>
+				<li>Imperium_Militarum_Kreig</li>
 			</categoriesAdulthood>
 			<categoriesChildhood>
 				<li>Offworld</li>

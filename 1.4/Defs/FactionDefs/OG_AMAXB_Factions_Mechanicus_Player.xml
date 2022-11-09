@@ -21,16 +21,28 @@
 		<techLevel>Ultra</techLevel>
 		<backstoryFilters>
 			<li>
-				<categories>
+				<categoriesAdulthood>
 					<li>Mechanicus_Standard</li>
+					<li>Mechanicus_Menial</li>	
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Outlander</li>
 					<li>Imperium_Standard</li>
-				</categories>
+					<li>Mechanicus_Standard</li>
+					<li>Mechanicus_Menial</li>	
+				</categoriesChildhood>
+				<commonality>0.95</commonality>
 			</li>
 			<li>
-				<categories>
+				<categoriesAdulthood>
+					<li>Mechanicus_Standard</li>
+					<li>Mechanicus_Menial</li>	
+				</categoriesAdulthood>
+				<categoriesChildhood>
 					<li>Offworld</li>
 					<li>Pirate</li>
-				</categories>
+				</categoriesChildhood>
+				<commonality>0.05</commonality>
 			</li>
 		</backstoryFilters>
 		<allowedCultures IgnoreIfNoMatchingField="True">

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using AdeptusMechanicus;
 using RimWorld;
+using UnityEngine;
 using Verse;
 using Verse.AI;
 using Verse.AI.Group;
@@ -11,6 +12,42 @@ namespace AdeptusMechanicus
     // AdeptusMechanicus.DeathActionWorker_ChaosDeamon
     public class DeathActionWorker_ChaosDeamon : DeathActionWorker_WarpSpawn
     {
+        public override void PawnDied(Corpse corpse)
+        {
+            PawnKindDef pawnKindDef = corpse.InnerPawn.kindDef;
+            Pawn pawn = corpse.InnerPawn;
+            IntVec3 position = corpse.Position;
+            Map map = corpse.Map;if (position != null && map != null)
+            {
+                GenExplosion.DoExplosion(position, map, 1.9f, AdeptusDamageDefOf.OG_Chaos_Deamon_WarpfireDeath, corpse.InnerPawn, -1, -1f, null, null, null, null, SpawnedThingOnDeath(pawn), 0f, 1, GasType.Unused, false, null, 0f, 1, 0f, false, ignoredThings: ThingsToIgnore);
+            }
+            base.PawnDied(corpse);
+        }
+        public virtual List<Thing> ThingsToIgnore { get; set; } = new List<Thing>();
+        public virtual ThingDef SpawnedThingOnDeath(Pawn pawn)
+        {
+            return null;
+        }
+        public virtual float SpawnThingOnDeathChance(Pawn pawn)
+        {
+            return 0f;
+        }
+    }
+    // AdeptusMechanicus.DeathActionWorker_ChaosHorror
+    public class DeathActionWorker_ChaosHorror : DeathActionWorker_ChaosDeamon
+    {
+        public override List<Thing> ThingsToIgnore
+        {
+            get
+            {
+                return spawnedPawns;
+            }
+        }
+        public override float SpawnThingOnDeathChance(Pawn pawn)
+        {
+            return base.SpawnThingOnDeathChance(pawn);
+        }
+        List<Thing> spawnedPawns = new List<Thing>();
         public override void PawnDied(Corpse corpse)
         {
             PawnGenerationRequest pawnGenerationRequest;
@@ -26,25 +63,24 @@ namespace AdeptusMechanicus
             Pawn newPawn2 = null;
             bool spawn = false;
             Lord  lord = pawn.GetLord();
-            List<Thing> spawned = new List<Thing>();
             if (map != null)
             {
-                if (corpse.InnerPawn.kindDef == AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue)
+                if (pawnKindDef == AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue)
                 {
                     spawn = true;
                     pawnKindDef = AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Brimstone;
                 }
-                else if (corpse.InnerPawn.kindDef == AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Pink)
+                else if (pawnKindDef == AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Pink)
                 {
                     spawn = true;
                     pawnKindDef = AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue;
                 }
                 if (spawn)
                 {
-                    pawnGenerationRequest = new PawnGenerationRequest(pawnKindDef, corpse.InnerPawn.Faction, PawnGenerationContext.NonPlayer, -1, true, false, true, true, true, 20f, fixedBiologicalAge: bioyears, fixedChronologicalAge: chronoyears);
+                    pawnGenerationRequest = new PawnGenerationRequest(pawnKindDef, faction, PawnGenerationContext.NonPlayer, -1, true, false, true, true, true, 20f, fixedBiologicalAge: bioyears, fixedChronologicalAge: chronoyears);
                     newPawn1 = PawnGenerator.GeneratePawn(pawnGenerationRequest);
                     newPawn2 = PawnGenerator.GeneratePawn(pawnGenerationRequest);
-                    spawned = new List<Thing>()
+                    spawnedPawns = new List<Thing>()
                     {
                         newPawn1,
                         newPawn2
@@ -115,10 +151,6 @@ namespace AdeptusMechanicus
                         }
                     }
                 }
-            }
-            if (position != null && map != null)
-            {
-                GenExplosion.DoExplosion(position, map, 1.9f, AdeptusDamageDefOf.OG_Chaos_Deamon_WarpfireDeath, corpse.InnerPawn, -1, -1f, null, null, null, null, null, 0f, 1, GasType.Unused, false, null, 0f, 1, 0f, false, null, spawned);
             }
             base.PawnDied(corpse);
         }
