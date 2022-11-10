@@ -118,6 +118,8 @@
 				</factionRelations>
 			</generalSettings>
 			<graphicPaths>
+			<body><debug>false</debug></body>
+			<head><debug>false</debug></head>
 			</graphicPaths>
 			<thoughtSettings>
 				<cannotReceiveThoughts>

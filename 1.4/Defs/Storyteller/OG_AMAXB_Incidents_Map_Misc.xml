@@ -12,7 +12,7 @@
 		</targetTags>
 		<workerClass>AdeptusMechanicus.IncidentWorker_Warpstorm</workerClass>
 		<letterLabel>Warpstorm</letterLabel>
-		<letterText>A freak localized Warpstorm is striking a small area. At best this can cause massive fires, at worst a deamonic incursion.</letterText>
+		<letterText>A freak Warpstorm is striking a {0} area. At best this can cause massive fires, at worst a deamonic incursion.</letterText>
 		<letterDef>ThreatSmall</letterDef>
 		<baseChance>0.1</baseChance>
 		<minRefireDays>35</minRefireDays>

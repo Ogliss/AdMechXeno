@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="Racial\Chaos\DeathActionWorker_ChaosHorror.cs" />
     <Compile Include="_Harmony\Patches\BackCompatibility_BackCompatibleDefName_Patch.cs" />
     <Compile Include="_Harmony\Patches\DamageWorker_AddInjury_FinalizeAndAddInjury_NecronWellBeBack_Patch.cs" />
     <Compile Include="_Harmony\Patches\Pawn_DropAndForbidEverything_Necron_Patch.cs" />

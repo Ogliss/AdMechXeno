@@ -242,7 +242,8 @@
 			<min>1000</min>
 			<max>2400</max>
 		</apparelMoney>
-		<apparelRequired>
+		<apparelRequired Inherit="False">
+			<li>OGAM_Apparel_EnginseerRobe</li>
 			<li>OGIG_Apparel_Krieg_Gasmask</li>
 		</apparelRequired>
 		<weaponMoney>
