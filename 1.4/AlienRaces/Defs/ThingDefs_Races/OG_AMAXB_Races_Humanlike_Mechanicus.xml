@@ -53,6 +53,8 @@
 				  <li>OG_Abhuman_Ratlin</li>
 				  <li>OG_Abhuman_Ogryn</li>
 				  <li MayRequire="Ogliss.AdMech.Astartes">OG_Human_Astartes</li>
+				  <li MayRequire="Ogliss.AliceTries.GeneSeed">AstarteSpaceMarine</li>
+				  <li MayRequire="Ogliss.AliceTries.GeneSeed">AdaptusCustodes</li>
 				</notXenophobistTowards>
 				<factionRelations>
 					<li>

@@ -147,6 +147,10 @@
 					</li>
 					</kindCounts>
 				</li>
+			<li Class="AdeptusMechanicus.ScenPart_RequiredApparel">
+				<def>OG_ForcedApparel</def>
+				<requiredApparel>OGIG_Apparel_Krieg_Gasmask</requiredApparel>
+			</li>
 			<li Class="AdeptusMechanicus.ScenPart_PlayerPawnsArriveMethod_DropShip">
 				<def>PlayerPawnsArriveMethod</def>
 				<method>DropPods</method>

@@ -62,6 +62,7 @@
 			<li>Advanced</li>
 		</techHediffsTags>
 		<techHediffsDisallowTags>
+			<li>AAGeneSeed</li>
 			<li>PainCauser</li>
 		</techHediffsDisallowTags>
 		<techHediffsMaxAmount>5</techHediffsMaxAmount>
@@ -132,6 +133,7 @@
 			<li>Advanced</li>
 		</techHediffsTags>
 		<techHediffsDisallowTags>
+			<li>AAGeneSeed</li>
 			<li>PainCauser</li>
 		</techHediffsDisallowTags>
 		<techHediffsMaxAmount>5</techHediffsMaxAmount>
@@ -200,6 +202,7 @@
 			<li>ImplantEmpireCommon</li>
 		</techHediffsTags>
 		<techHediffsDisallowTags>
+			<li>AAGeneSeed</li>
 			<li>PainCauser</li>
 		</techHediffsDisallowTags>
 		<techHediffsChance>5</techHediffsChance>
@@ -242,10 +245,6 @@
 			<min>1000</min>
 			<max>2400</max>
 		</apparelMoney>
-		<apparelRequired Inherit="False">
-			<li>OGAM_Apparel_EnginseerRobe</li>
-			<li>OGIG_Apparel_Krieg_Gasmask</li>
-		</apparelRequired>
 		<weaponMoney>
 			<min>10000</min>
 			<max>28000</max>
@@ -265,6 +264,7 @@
 			<li>ImplantEmpireCommon</li>
 		</techHediffsTags>
 		<techHediffsDisallowTags>
+			<li>AAGeneSeed</li>
 			<li>PainCauser</li>
 		</techHediffsDisallowTags>
 		<techHediffsChance>10</techHediffsChance>

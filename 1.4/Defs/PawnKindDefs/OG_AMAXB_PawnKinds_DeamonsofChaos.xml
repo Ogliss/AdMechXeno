@@ -6,13 +6,17 @@
 		<aiAvoidCover>true</aiAvoidCover>
 		<destroyGearOnDrop>true</destroyGearOnDrop>
 	</PawnKindDef>
+	
+	<PawnKindDef Abstract="True" Name="OG_Chaos_GreaterDeamon_PawnKind" ParentName="OG_Chaos_Deamon_PawnKind">
+		<maxPerGroup>1</maxPerGroup>
+	</PawnKindDef>
  
 	<!-- Bloodletter -->
 	<PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
 		<defName>OG_Chaos_Deamon_Lessar_Bloodletter</defName>
 		<label>Bloodletter</label>
 		<race>OG_Chaos_Deamon_Bloodletter</race>
-		<combatPower>150</combatPower>
+		<combatPower>200</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -41,7 +45,7 @@
 		<defName>OG_Chaos_Deamon_Lessar_Horror_Pink</defName>
 		<label>Pink Horror of Tzeentch</label>
 		<race>OG_Chaos_Deamon_Horror_Pink</race>
-		<combatPower>100</combatPower>
+		<combatPower>200</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -63,7 +67,7 @@
 		<defName>OG_Chaos_Deamon_Lessar_Horror_Blue</defName>
 		<label>Blue Horror of Tzeentch</label>
 		<race>OG_Chaos_Deamon_Horror_Blue</race>
-		<combatPower>50</combatPower>
+		<combatPower>100</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -107,7 +111,7 @@
 		<defName>OG_Chaos_Deamon_Flamer</defName>
 		<label>Flamer of Tzeentch</label>
 		<race>OG_Chaos_Deamon_Flamer</race>
-		<combatPower>150</combatPower>
+		<combatPower>250</combatPower>
 		<lifeStages>
 			<li>
 			<bodyGraphicData>
@@ -129,7 +133,7 @@
 		<defName>OG_Chaos_Deamon_Flamer_Exalted</defName>
 		<label>Flamer of Tzeentch</label>
 		<race>OG_Chaos_Deamon_Flamer</race>
-		<combatPower>200</combatPower>
+		<combatPower>300</combatPower>
 		<lifeStages>
 			<li>
 			<bodyGraphicData>
@@ -151,7 +155,7 @@
 		<defName>OG_Chaos_Deamon_Lessar_Screamer</defName>
 		<label>Screamer of Tzeentch</label>
 		<race>OG_Chaos_Deamon_Screamer</race>
-		<combatPower>65</combatPower>
+		<combatPower>100</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -169,11 +173,11 @@
 	</PawnKindDef>
 	
 	<!-- Lord of Change -->
-	<PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+	<PawnKindDef ParentName="OG_Chaos_GreaterDeamon_PawnKind">
 		<defName>OG_Chaos_Deamon_Lord_of_Change</defName>
 		<label>Lord of Change</label>
 		<race>OG_Chaos_Deamon_LordofChange</race>
-		<combatPower>500</combatPower>
+		<combatPower>600</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -365,7 +369,7 @@
 		<defName>OG_Chaos_Deamon_Plague_Bearer</defName>
 		<label>Plague Bearer</label>
 		<race>OG_Chaos_Deamon_Plaguebearer</race>
-		<combatPower>50</combatPower>
+		<combatPower>150</combatPower>
 
 		<lifeStages>
 			<li>
@@ -392,11 +396,11 @@
 	</PawnKindDef>
 
 	<!-- Great Unclean One -->
-	<PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+	<PawnKindDef ParentName="OG_Chaos_GreaterDeamon_PawnKind">
 		<defName>OG_Chaos_Deamon_Great_Unclean_One</defName>
 		<label>Great Unclean One</label>
 		<race>OG_Chaos_Deamon_GreatUncleanOne</race>
-		<combatPower>500</combatPower>
+		<combatPower>600</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -450,11 +454,11 @@
 	</PawnKindDef>
 
 	<!-- Keeper of Secrets -->
-	<PawnKindDef ParentName="OG_Chaos_Deamon_PawnKind">
+	<PawnKindDef ParentName="OG_Chaos_GreaterDeamon_PawnKind">
 		<defName>OG_Chaos_Deamon_Keeper_of_Secrets</defName>
 		<label>Keeper of Secrets</label>
 		<race>OG_Chaos_Deamon_KeeperofSecrets</race>
-		<combatPower>500</combatPower>
+		<combatPower>600</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>

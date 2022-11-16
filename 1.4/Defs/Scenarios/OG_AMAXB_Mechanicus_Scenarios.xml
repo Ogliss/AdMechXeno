@@ -15,7 +15,7 @@
 				<li Class="ScenPart_ConfigPage_ConfigureStartingPawns_KindDefs">
 					<def>OG_ConfigurePawnsKindDefs</def>
 					<pawnChoiceCount>8</pawnChoiceCount>
-					<leftBehindPawnKind>Colonist_OG_Mechanicus</leftBehindPawnKind>
+					<leftBehindPawnKind>Colonist_OG_Mechanicus_Servitor</leftBehindPawnKind>
 					<kindCounts>
 					<li>
 						<kindDef>Colonist_OG_Mechanicus</kindDef>
