@@ -9,18 +9,22 @@
 			<li>(0.25, 0.65, 0.05)</li>
 			<li>(0.25, 0.75, 0.05)</li>
 		</colorSpectrum>
+		<fixedLeaderKinds>
+			<li>OG_Sororitas_Faction_Canoness_Superior</li>
+		</fixedLeaderKinds>
 		<categoryTag>OG_Outlander_Sororitas</categoryTag>
-		<basicMemberKind>Colonist_OG_Sororitas</basicMemberKind>
-		<requiredCountAtGameStart>0</requiredCountAtGameStart>
+		<basicMemberKind>OG_Sororitas_Battle_Sister</basicMemberKind>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<settlementGenerationWeight>0</settlementGenerationWeight>
 		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
 		<configurationListOrderPriority IgnoreIfNoMatchingField="True">90</configurationListOrderPriority>
 		<canMakeRandomly>true</canMakeRandomly>
+		<humanlikeFaction>true</humanlikeFaction>
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
 		<leaderTitle>Canoness Superior</leaderTitle>
-		<settlementNameMaker>OG_NamerBases_Sororitas</settlementNameMaker>
-		<factionNameMaker>OG_NamerFaction_Sororitas</factionNameMaker>
+		<settlementNameMaker>OG_Sororitas_NamerBases</settlementNameMaker>
+		<factionNameMaker>OG_Sororitas_Order_NamerFaction</factionNameMaker>
 		<techLevel>Ultra</techLevel>
 		<backstoryFilters>
 			<li>
@@ -64,7 +68,7 @@
 			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
 		</disallowedMemes>
 		<structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
-			<OG_Mechanicus_Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</OG_Mechanicus_Structure_Archist>
+			<OG_Imperial_Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1</OG_Imperial_Structure_TheistEmbodied>
 		</structureMemeWeights>
 		<naturalColonyGoodwill IgnoreIfNoMatchingField="True">
 			<min>-60</min>
@@ -106,53 +110,52 @@
 			<li>
 				<kindDef>Combat</kindDef>
 				<options>
-					<OG_Militarum_Guardsman_Ranged>230</OG_Militarum_Guardsman_Ranged>
-					<OG_Militarum_Guardsman_Melee>100</OG_Militarum_Guardsman_Melee>
-					<OG_Militarum_Guardsman_Ranged_Special>65</OG_Militarum_Guardsman_Ranged_Special>
-					<OG_Militarum_Guardsman_Melee_Special>50</OG_Militarum_Guardsman_Melee_Special>
-					<OG_Militarum_Guardsman_Heavy_Weapons>30</OG_Militarum_Guardsman_Heavy_Weapons>
-					<OG_Militarum_Guardsman_Marksman>30</OG_Militarum_Guardsman_Marksman>
-					<OG_Militarum_Sergeant>10</OG_Militarum_Sergeant>
-					<OG_Mechanicus_Tech_Priest_Engineer>1</OG_Mechanicus_Tech_Priest_Engineer>
-					<OG_Militarum_LordMarshal>1</OG_Militarum_LordMarshal>
+					<OG_Sororitas_Battle_Sister>230</OG_Sororitas_Battle_Sister>
+					<OG_Sororitas_Battle_Sister_Special>100</OG_Sororitas_Battle_Sister_Special>
+					<OG_Sororitas_Battle_Sister_Heavy>65</OG_Sororitas_Battle_Sister_Heavy>
+					<OG_Sororitas_Battle_Sister_Superior>50</OG_Sororitas_Battle_Sister_Superior>
+					<OG_Sororitas_Sister_Celestian>30</OG_Sororitas_Sister_Celestian>
+					<OG_Sororitas_Sister_Celestian_Special>30</OG_Sororitas_Sister_Celestian_Special>
+					<OG_Sororitas_Sister_Celestian_Heavy>10</OG_Sororitas_Sister_Celestian_Heavy>
+					<OG_Sororitas_Sister_Celestian_Superior>1</OG_Sororitas_Sister_Celestian_Superior>
+					<OG_Sororitas_Canoness>1</OG_Sororitas_Canoness>
 				</options>
 			</li>
 			<li>
 				<kindDef>Peaceful</kindDef>
 				<options>
-					<Colonist_OG_Militarum>50</Colonist_OG_Militarum>
-					<OG_Militarum_Guardsman_Ranged>230</OG_Militarum_Guardsman_Ranged>
-					<OG_Militarum_Guardsman_Melee>130</OG_Militarum_Guardsman_Melee>
+					<OG_Sororitas_Battle_Sister>230</OG_Sororitas_Battle_Sister>
+					<OG_Sororitas_Battle_Sister_Special>130</OG_Sororitas_Battle_Sister_Special>
 					<OG_Mechanicus_Tech_Priest_Engineer>1</OG_Mechanicus_Tech_Priest_Engineer>
-					<OG_Militarum_LordMarshal>1</OG_Militarum_LordMarshal>
+					<OG_Sororitas_Canoness>1</OG_Sororitas_Canoness>
 				</options>
 			</li>
 			<li>
 				<kindDef>Trader</kindDef>
 				<traders>
-					<OG_Militarum_Trader>1</OG_Militarum_Trader>
+					<OG_Sororitas_Trader>1</OG_Sororitas_Trader>
 				</traders>
 				<carriers>
 					<Muffalo>2</Muffalo>
 					<Dromedary>2</Dromedary>
 				</carriers>
 				<guards>
-					<OG_Militarum_Guardsman_Ranged>130</OG_Militarum_Guardsman_Ranged>
-					<OG_Mechanicus_Tech_Priest_Engineer>1</OG_Mechanicus_Tech_Priest_Engineer>
+					<OG_Sororitas_Battle_Sister>130</OG_Sororitas_Battle_Sister>
+					<OG_Sororitas_Battle_Sister_Superior>1</OG_Sororitas_Battle_Sister_Superior>
 				</guards>
 			</li>
 			<li>
 				<kindDef>Settlement</kindDef>
 				<options>
-					<OG_Militarum_LordMarshal>1</OG_Militarum_LordMarshal>
-					<OG_Militarum_Guardsman_Ranged>230</OG_Militarum_Guardsman_Ranged>
-					<OG_Militarum_Guardsman_Melee>100</OG_Militarum_Guardsman_Melee>
-					<OG_Militarum_Guardsman_Ranged_Special>65</OG_Militarum_Guardsman_Ranged_Special>
-					<OG_Militarum_Guardsman_Melee_Special>50</OG_Militarum_Guardsman_Melee_Special>
-					<OG_Militarum_Guardsman_Heavy_Weapons>30</OG_Militarum_Guardsman_Heavy_Weapons>
-					<OG_Militarum_Guardsman_Marksman>30</OG_Militarum_Guardsman_Marksman>
-					<OG_Militarum_Sergeant>10</OG_Militarum_Sergeant>
-					<OG_Mechanicus_Tech_Priest_Engineer>10</OG_Mechanicus_Tech_Priest_Engineer>
+					<OG_Sororitas_Faction_Canoness_Superior>1</OG_Sororitas_Faction_Canoness_Superior>
+					<OG_Sororitas_Battle_Sister>230</OG_Sororitas_Battle_Sister>
+					<OG_Sororitas_Battle_Sister_Special>100</OG_Sororitas_Battle_Sister_Special>
+					<OG_Sororitas_Battle_Sister_Heavy>65</OG_Sororitas_Battle_Sister_Heavy>
+					<OG_Sororitas_Battle_Sister_Superior>50</OG_Sororitas_Battle_Sister_Superior>
+					<OG_Sororitas_Sister_Celestian>30</OG_Sororitas_Sister_Celestian>
+					<OG_Sororitas_Sister_Celestian_Special>30</OG_Sororitas_Sister_Celestian_Special>
+					<OG_Sororitas_Sister_Celestian_Heavy>10</OG_Sororitas_Sister_Celestian_Heavy>
+					<OG_Sororitas_Sister_Celestian_Superior>1</OG_Sororitas_Sister_Celestian_Superior>
 				</options>
 			</li>
 		</pawnGroupMakers>
@@ -160,8 +163,8 @@
 		<factionIconPath>Icons/Imperial/Sororitas/Icon_Adeptus_Sororitas</factionIconPath>
 	</FactionDef>
 
-	<!--FactionDef ParentName="OG_Sororitas_Faction_Base">
+	<FactionDef ParentName="OG_Sororitas_Faction_Base">
 		<defName>OG_Sororitas_Faction</defName>
-	</FactionDef-->
+	</FactionDef>
 	
 </Defs>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Base Kind -->
+	<PawnKindDef Abstract="True" Name="OG_Sororitas_Base_KindDef">
+		<race>Human</race>
+		<defaultFactionType>OG_Sororitas_PlayerColony</defaultFactionType>
+		<combatPower>50</combatPower>
+		<!--baseRecruitDifficulty>0.50</baseRecruitDifficulty-->
+		<isFighter>false</isFighter>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+	</PawnKindDef>
+
+	<!-- Basic Colonist -->
+	<PawnKindDef Name="OG_Sororitas_Colonist_Base" ParentName="OG_Sororitas_Base_KindDef">
+		<defName>Colonist_OG_Sororitas</defName>
+		<label>colonist (Sororitas)</label>
+		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Standard</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Outlander</li>
+					<li>Imperium_Standard</li>
+					<li>Sororitas_Standard</li>
+				</categoriesChildhood>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Standard</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags>
+			<li>OGAMClothing</li>
+			<li>OGIGClothing</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>1000</min>
+			<max>2400</max>
+		</apparelMoney>
+		<!--techHediffsMoney>
+			<min>6000</min>
+			<max>12200</max>
+		</techHediffsMoney-->
+		<techHediffsRequired>
+		
+		</techHediffsRequired>
+		<techHediffsTags>
+			<!--li>Advanced</li-->
+		</techHediffsTags>
+		<techHediffsDisallowTags>
+			<li>AAGeneSeed</li>
+			<li>PainCauser</li>
+		</techHediffsDisallowTags>
+		<techHediffsMaxAmount>5</techHediffsMaxAmount>
+		<techHediffsChance>1</techHediffsChance>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+	</PawnKindDef>
+	
+	<!-- Adv Colonist -->
+	<PawnKindDef Name="OG_Sororitas_Colonist_Priest_Base" ParentName="OG_Sororitas_Colonist_Base">
+		<defName>Colonist_OG_Sororitas_Priest</defName>
+		<label>battle sister</label>
+		<fixedGender>Female</fixedGender>
+		<minGenerationAge>19</minGenerationAge>
+		<maxGenerationAge>250</maxGenerationAge>
+		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+		<backstoryFiltersOverride Inherit="false">
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Soldier</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Outlander</li>
+					<li>Imperium_Standard</li>
+					<li>Sororitas_Standard</li>
+				</categoriesChildhood>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Soldier</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags>
+			<li>SororitasPowerArmourHelmet</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>1000</min>
+			<max>5400</max>
+		</apparelMoney>
+		<apparelRequired>
+			<li>OGAS_Apparel_PowerArmour</li>
+		</apparelRequired>
+		<weaponMoney>
+			<min>10000</min>
+			<max>28000</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>ImperialBoltPistol</li>
+		</weaponTags>
+		<techHediffsMoney>
+			<min>1600</min>
+			<max>5200</max>
+		</techHediffsMoney>
+		<techHediffsRequired>
+		
+		</techHediffsRequired>
+		<techHediffsTags>
+			<li>Advanced</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<techHediffsDisallowTags>
+			<li>AAGeneSeed</li>
+			<li>PainCauser</li>
+		</techHediffsDisallowTags>
+		<techHediffsChance>5</techHediffsChance>
+		<techHediffsMaxAmount>5</techHediffsMaxAmount>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+	</PawnKindDef>
+	
+	<!-- Adv Colonist -->
+	<PawnKindDef Name="OG_Sororitas_Colonist_Soldier_Base" ParentName="OG_Sororitas_Colonist_Base">
+		<defName>Colonist_OG_Sororitas_Soldier</defName>
+		<label>battle sister</label>
+		<fixedGender>Female</fixedGender>
+		<minGenerationAge>19</minGenerationAge>
+		<maxGenerationAge>250</maxGenerationAge>
+		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+		<backstoryFiltersOverride Inherit="false">
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Soldier</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Imperium_Standard</li>
+					<li>Sororitas_Standard</li>
+					<li>Outlander</li>
+				</categoriesChildhood>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Soldier</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags>
+			<li>SororitasPowerArmourHelmet</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>1000</min>
+			<max>5400</max>
+		</apparelMoney>
+		<apparelRequired>
+			<li>OGAS_Apparel_PowerArmour</li>
+		</apparelRequired>
+		<weaponMoney>
+			<min>10000</min>
+			<max>28000</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>ImperialSororitasBoltGun</li>
+		</weaponTags>
+		<techHediffsMoney>
+			<min>1600</min>
+			<max>5200</max>
+		</techHediffsMoney>
+		<techHediffsRequired>
+		
+		</techHediffsRequired>
+		<techHediffsTags>
+			<li>Advanced</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<techHediffsDisallowTags>
+			<li>AAGeneSeed</li>
+			<li>PainCauser</li>
+		</techHediffsDisallowTags>
+		<techHediffsChance>5</techHediffsChance>
+		<techHediffsMaxAmount>5</techHediffsMaxAmount>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+	</PawnKindDef>
+	
+</Defs>

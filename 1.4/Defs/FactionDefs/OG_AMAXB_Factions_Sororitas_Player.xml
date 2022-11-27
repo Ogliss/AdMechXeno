@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef Abstract="True" Name="OG_Sororitas_PlayerFaction_Base" ParentName="FactionBase">
+		<colorSpectrum>
+			<li>(0, 0.737, 0.847)</li>
+		</colorSpectrum>
+	</FactionDef>
+
+	<FactionDef Name="OG_Sororitas_PlayerColony_Base" ParentName="OG_Sororitas_PlayerFaction_Base">
+		<defName>OG_Sororitas_PlayerColony</defName>
+		<label>Sororitas Colony</label>
+		<description>Your Sororitas Outpost.</description>
+		<isPlayer>true</isPlayer>
+		<pawnSingular>sororitas</pawnSingular>
+		<pawnsPlural>sororitas</pawnsPlural>
+		<categoryTag>OG_Outlander_Sororitas</categoryTag>
+		<basicMemberKind>Colonist_OG_Sororitas</basicMemberKind>
+		<settlementNameMaker>NamerSettlementOutlander</settlementNameMaker>
+		<playerInitialSettlementNameMaker>NamerInitialSettlementColony</playerInitialSettlementNameMaker>
+		<factionNameMaker>OG_Sororitas_Order_NamerFaction</factionNameMaker>
+		<techLevel>Ultra</techLevel>
+		<backstoryFilters>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Standard</li>	
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Outlander</li>
+					<li>Imperium_Standard</li>
+					<li>Mechanicus_Standard</li>
+					<li>Sororitas_Standard</li>	
+				</categoriesChildhood>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Soldier</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Outlander</li>
+					<li>Imperium_Standard</li>
+					<li>Mechanicus_Standard</li>
+					<li>Sororitas_Standard</li>	
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+				<commonality>0.5</commonality>
+			</li>
+		</backstoryFilters>
+		<allowedCultures IgnoreIfNoMatchingField="True">
+			<li>OG_Imperial_Sororitas_Spacer</li>
+		</allowedCultures>
+		<requiredMemes IgnoreIfNoMatchingField="True">
+			<li MayRequire="Ludeon.RimWorld.Ideology">OG_Imperial_Structure_TheistEmbodied</li>
+			<!--li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li-->
+		</requiredMemes>
+		<disallowedMemes IgnoreIfNoMatchingField="True">
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">AnimalPersonhood</li>
+			<!--li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li-->
+			<!--li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li-->
+		</disallowedMemes>
+		<!--structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
+			<OG_Imperial_Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">10</OG_Imperial_Structure_TheistEmbodied>
+		</structureMemeWeights-->
+		<hairTags IgnoreIfNoMatchingField="True">
+			<li>Urban</li>
+		</hairTags>
+		<startingResearchTags>
+			<li>ClassicStart</li>
+		</startingResearchTags>
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Synthread</li>
+			</thingDefs>
+		</apparelStuffFilter>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<factionIconPath>Icons/Imperial/Sororitas/Icon_Adeptus_SororitasB</factionIconPath>
+		<modExtensions>
+			<li Class="AdeptusMechanicus.FactionDefExtension">
+				<!--ForcedTraits>
+					<li>
+						<def>Transhumanist</def>
+						<degree>0</degree>
+						<Chance>1</Chance>
+						<replaceiffull>True</replaceiffull>
+					</li>
+				</ForcedTraits-->
+				<hediffGivers>
+					<!--li>OG_Mechanicus_HediffSet</li-->
+				</hediffGivers>
+			</li>
+		</modExtensions>
+	</FactionDef>
+</Defs>
