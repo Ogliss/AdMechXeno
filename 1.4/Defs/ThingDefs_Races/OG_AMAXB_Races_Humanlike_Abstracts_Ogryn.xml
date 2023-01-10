@@ -83,6 +83,7 @@
 			-->
 			<leatherDef>Leather_Human</leatherDef>
 			<nameCategory>HumanStandard</nameCategory>
+			<!--nameGenerator>HumanStandard</nameGenerator-->
 			<lifeExpectancy>50</lifeExpectancy>
 			<body>Human</body>
 			<baseBodySize>3</baseBodySize>

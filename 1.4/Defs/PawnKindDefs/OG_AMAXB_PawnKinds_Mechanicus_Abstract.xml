@@ -612,11 +612,11 @@
 			<li>AMSkitariiVanguard</li>
 		</apparelTags>
 		<apparelMoney>
-			<min>1500</min>
+			<min>2500</min>
 			<max>25000</max>
 		</apparelMoney>
 		<weaponMoney>
-			<min>1400</min>
+			<min>2500</min>
 			<max>28000</max>
 		</weaponMoney>
 		<weaponTags Inherit="false">
@@ -807,11 +807,11 @@
 		
 		</apparelTags>
 		<apparelMoney>
-			<min>1500</min>
+			<min>2750</min>
 			<max>25000</max>
 		</apparelMoney>
 		<weaponMoney>
-			<min>1400</min>
+			<min>2750</min>
 			<max>28000</max>
 		</weaponMoney>
 		<weaponTags Inherit="false">
@@ -952,7 +952,7 @@
 			<bodyGraphicData>
 				<texPath>Things/Pawn/ToolUser/Mechanicus/AdeptusMechanicusSicarian</texPath>
 				<graphicClass>Graphic_Multi</graphicClass>
-				<drawSize>1.5</drawSize>
+				<drawSize>1.25</drawSize>
 				<shadowData>
 				<volume>(0.4, 0.8, 0.4)</volume>
 				</shadowData>

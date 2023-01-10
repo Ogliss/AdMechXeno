@@ -96,9 +96,73 @@
 		<max>2400</max>
 	</apparelMoney>
 	<apparelRequired>
-		<li>OGIG_Apparel_Krieg_FlakHelmet_TOGGLEDEF_A</li>
+		<li>OGIG_Apparel_Krieg_FlakHelmet</li>
+		<li>OGIG_Apparel_FlakArmour</li>
+		<!--li>OGIG_Apparel_Krieg_FlakHelmet_TOGGLEDEF_A</li-->
 		<li>OGIG_Apparel_Krieg_Uniform_Trenchcoat</li>
 		<li>OGIG_Apparel_Krieg_Gasmask</li>
+	</apparelRequired>
+	<weaponMoney>
+		<min>1400</min>
+		<max>28000</max>
+	</weaponMoney>
+	<weaponTags Inherit="false">
+		<li>KriegGun</li>
+	</weaponTags>
+	<skills>
+		<li>
+			<skill>Shooting</skill>
+			<range>4~8</range>
+		</li>
+		<li>
+			<skill>Melee</skill>
+			<range>3~6</range>
+		</li>
+	</skills>
+	<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+</PawnKindDef>
+
+<PawnKindDef Name="Colonist_OG_Militarum_ArmageddonBase" ParentName="OG_Militarum_Base_PawnKind">
+	<defName>Colonist_OG_Militarum_Armageddon_Guardsmen</defName>
+	<label>guardsman</label>
+	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
+	<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
+	<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+	<backstoryFiltersOverride Inherit="false">
+		<li>
+			<categoriesAdulthood>
+				<li>Imperium_Militarum_Armageddon</li>
+			</categoriesAdulthood>
+			<categoriesChildhood>
+				<li>Outlander</li>
+				<li>Imperium_Standard</li>
+			</categoriesChildhood>
+		</li>
+		<li>
+			<categoriesAdulthood>
+				<li>Imperium_Militarum_Armageddon</li>
+			</categoriesAdulthood>
+			<categoriesChildhood>
+				<li>Offworld</li>
+				<li>Pirate</li>
+			</categoriesChildhood>
+			<commonality>0.05</commonality>
+		</li>
+	</backstoryFiltersOverride>
+	<apparelTags>
+		<li>OGSteelLegion</li>
+	</apparelTags>
+	<apparelMoney>
+		<min>1000</min>
+		<max>2400</max>
+	</apparelMoney>
+	<apparelRequired>
+		<li>OGIG_Apparel_Armageddon_FlakHelmet</li>
+		<li>OGIG_Apparel_FlakArmour</li>
+		<!--li>OGIG_Apparel_Krieg_FlakHelmet_TOGGLEDEF_A</li-->
+		<li>OGIG_Apparel_Armageddon_Uniform_Trenchcoat</li>
+		<li>OGIG_Apparel_Armageddon_Goggles</li>
+		<li>OGIG_Apparel_Armageddon_Gasmask</li>
 	</apparelRequired>
 	<weaponMoney>
 		<min>1400</min>

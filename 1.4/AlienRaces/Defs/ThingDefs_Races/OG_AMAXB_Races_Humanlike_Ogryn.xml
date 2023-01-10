@@ -8,17 +8,23 @@
 				<alienPartGenerator>
 					<!--useGenderedHeads>false</useGenderedHeads-->
 					<headTypes Inherit="false">
-						<li>Male_AverageNormal</li>
+						<li>Ogyran_HeadA</li>
+						<li>Ogyran_HeadB</li>
+						<li>Ogyran_HeadC</li>
+						<li>Ogyran_HeadD</li>
+						<li>Ogyran_HeadE</li>
 					</headTypes>
 					<headOffset>(0.0, 0.15)</headOffset>
+					<customDrawSize>(1.75, 1.75)</customDrawSize>
+					<!-- <customPortraitDrawSize>(0.8, 0.8)</customPortraitDrawSize> -->
 					<customHeadDrawSize>(1.25, 1.25)</customHeadDrawSize>
 					<!-- <customPortraitHeadDrawSize>(0.7, 0.7)</customPortraitHeadDrawSize> -->
 					<!--useGenderedBodies>false</useGenderedBodies-->
+					<borderScale>1.5</borderScale>
+					<atlasScale>2</atlasScale>
 					<bodyTypes Inherit="false">
 						<li>Hulk</li>
 					</bodyTypes>
-					<customDrawSize>(1.75, 1.75)</customDrawSize>
-					<!-- <customPortraitDrawSize>(0.8, 0.8)</customPortraitDrawSize> -->
 					<headOffsetDirectional>
 						<north>(0.0, 0.10)</north>
 						<south>(0.0, -0.10)</south>
@@ -150,6 +156,11 @@
 				</renamer>
 			</relationSettings>
 			<raceRestriction>
+				<blackEndoCategories>
+					<li>BodyType</li>
+					<li>Headbone</li>
+					<li>Head</li>
+				</blackEndoCategories>
 				<researchList>
 					<li>
 						<projects>

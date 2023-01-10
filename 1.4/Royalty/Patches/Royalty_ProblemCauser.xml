@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+	<Operation Class="PatchOperationSequence">
+		<operations>
+			<!-- Add factions to Royalty ProblemCauser questNameRules/rulesStrings -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/QuestScriptDef[defName="ProblemCauser"]/questNameRules/rulesStrings</xpath>
+				<value>
+					<li>questName(siteFaction==Militarum)->Astra Militarum with a [problemCauserLabel]</li>
+					<li>questName(siteFaction==Mechanicus)->Aeptus Mechanicus with a [problemCauserLabel]</li>
+					<li>questName(siteFaction==Sororitas)->Aeptus Sororitas with a [problemCauserLabel]</li>
+					<li>questName(siteFaction==Astartes)->Aeptus Astartes with a [problemCauserLabel]</li>
+					<li>questName(siteFaction==Orkz)->Orkz with a [problemCauserLabel]</li>
+					<li>questName(siteFaction==Eldar)->Eldar with a [problemCauserLabel]</li>
+					<li>questName(siteFaction==DarkEldar)->Dark Eldar with a [problemCauserLabel]</li>
+					<li>questName(siteFaction==Tau)->Tau with a [problemCauserLabel]</li>
+					<li>questName(siteFaction==Kroot)->Kroot with a [problemCauserLabel]</li>
+					<li>questName(siteFaction==Chaos)->Chaos with a [problemCauserLabel]</li>
+					<li>questName(siteFaction==Necron)->Necrons with a [problemCauserLabel]</li>
+					<li>questName(siteFaction==Tyranid)->Tyranids with a [problemCauserLabel]</li>
+				</value>
+			</li>
+			<!-- Add factions to Royalty ProblemCauser questDescriptionRules/rulesStrings -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/QuestScriptDef[defName="ProblemCauser"]/questNameRules/rulesStrings</xpath>
+				<value>
+					<li>questDescription(siteFaction==Militarum)->Astra Militarum have set up an outpost near [map_definite] to harass you. [allSitePartsDescriptions]\n\nThe outpost will remain until you send a team there to attack and destroy it.</li>
+					<li>questDescription(siteFaction==Mechanicus)->Aeptus Mechanicus have set up an outpost near [map_definite] to harass you. [allSitePartsDescriptions]\n\nThe outpost will remain until you send a team there to attack and destroy it.</li>
+					<li>questDescription(siteFaction==Sororitas)->Aeptus Sororitas have set up an outpost near [map_definite] to harass you. [allSitePartsDescriptions]\n\nThe outpost will remain until you send a team there to attack and destroy it.</li>
+					<li>questDescription(siteFaction==Astartes)->Aeptus Astartes have set up an outpost near [map_definite] to harass you. [allSitePartsDescriptions]\n\nThe outpost will remain until you send a team there to attack and destroy it.</li>
+					<li>questDescription(siteFaction==Orkz)->Orkz have set up an outpost near [map_definite] to harass you. [allSitePartsDescriptions]\n\nThe outpost will remain until you send a team there to attack and destroy it.</li>
+					<li>questDescription(siteFaction==Eldar)->Eldar have set up an outpost near [map_definite] to harass you. [allSitePartsDescriptions]\n\nThe outpost will remain until you send a team there to attack and destroy it.</li>
+					<li>questDescription(siteFaction==DarkEldar)->Dark Eldar have set up an outpost near [map_definite] to harass you. [allSitePartsDescriptions]\n\nThe outpost will remain until you send a team there to attack and destroy it.</li>
+					<li>questDescription(siteFaction==Tau)->Tau have set up an outpost near [map_definite] to harass you. [allSitePartsDescriptions]\n\nThe outpost will remain until you send a team there to attack and destroy it.</li>
+					<li>questDescription(siteFaction==Kroot)->Kroot have set up an outpost near [map_definite] to harass you. [allSitePartsDescriptions]\n\nThe outpost will remain until you send a team there to attack and destroy it.</li>
+					<li>questDescription(siteFaction==Chaos)->Chaos have set up an outpost near [map_definite] to harass you. [allSitePartsDescriptions]\n\nThe outpost will remain until you send a team there to attack and destroy it.</li>
+					<li>questDescription(siteFaction==Necron)->Necrons have set up an outpost near [map_definite] to harass you. [allSitePartsDescriptions]\n\nThe outpost will remain until you send a team there to attack and destroy it.</li>
+					<li>questDescription(siteFaction==Tyranid)->Tyranids have set up an outpost near [map_definite] to harass you. [allSitePartsDescriptions]\n\nThe outpost will remain until you send a team there to attack and destroy it.</li>
+				</value>
+			</li>
+			<!-- Add factions  Royalty ProblemCauser selectionWeight -->
+			<li Class="PatchOperationInsert">
+				<xpath>/Defs/QuestScriptDef[defName="ProblemCauser"]/root/nodes/li[@Class="QuestNode_FactionExists"]</xpath>
+				<value>
+					<li Class="QuestNode_FactionExists">
+						<faction>OG_Mechanicus_Faction</faction>
+						<node Class="QuestNode_Set">
+							<name>selectionWeightMechanicus</name>
+							<value>1</value>
+						</node>
+						<elseNode Class="QuestNode_Set">
+							<name>selectionWeightMechanicus</name>
+							<value>0</value>
+						</elseNode>
+					</li>
+					<li Class="QuestNode_FactionExists">
+						<faction>OG_Sororitas_Faction</faction>
+						<node Class="QuestNode_Set">
+							<name>selectionWeightSororitas</name>
+							<value>1</value>
+						</node>
+						<elseNode Class="QuestNode_Set">
+							<name>selectionWeightSororitas</name>
+							<value>0</value>
+						</elseNode>
+					</li>
+					<li Class="QuestNode_FactionExists">
+						<faction>OG_Eldar_Craftworld_Faction</faction>
+						<node Class="QuestNode_Set">
+							<name>selectionWeightEldar_Craftworld</name>
+							<value>1</value>
+						</node>
+						<elseNode Class="QuestNode_Set">
+							<name>selectionWeightEldar_Craftworld</name>
+							<value>0</value>
+						</elseNode>
+					</li>
+					<li Class="QuestNode_FactionExists">
+						<faction>OG_DarkEldar_Kabal_Faction</faction>
+						<node Class="QuestNode_Set">
+							<name>selectionWeightDarkEldar_Kabal</name>
+							<value>1</value>
+						</node>
+						<elseNode Class="QuestNode_Set">
+							<name>selectionWeightDarkEldar_Kabal</name>
+							<value>0</value>
+						</elseNode>
+					</li>
+					<li Class="QuestNode_FactionExists">
+						<faction>OG_Necron_Faction</faction>
+						<node Class="QuestNode_Set">
+							<name>selectionWeightNecron</name>
+							<value>1</value>
+						</node>
+						<elseNode Class="QuestNode_Set">
+							<name>selectionWeightNecron</name>
+							<value>0</value>
+						</elseNode>
+					</li>
+					<li Class="QuestNode_FactionExists">
+						<faction>OG_Ork_Tek_Faction</faction>
+						<node Class="QuestNode_Set">
+							<name>selectionWeightOrk</name>
+							<value>1</value>
+						</node>
+						<elseNode Class="QuestNode_Set">
+							<name>selectionWeightOrk</name>
+							<value>0</value>
+						</elseNode>
+					</li>
+					<li Class="QuestNode_FactionExists">
+						<faction>OG_Tau_Faction</faction>
+						<node Class="QuestNode_Set">
+							<name>selectionWeightTau</name>
+							<value>1</value>
+						</node>
+						<elseNode Class="QuestNode_Set">
+							<name>selectionWeightTau</name>
+							<value>0</value>
+						</elseNode>
+					</li>
+					<li Class="QuestNode_FactionExists">
+						<faction>OG_Tyranid_Faction</faction>
+						<node Class="QuestNode_Set">
+							<name>selectionWeightTyranid</name>
+							<value>1</value>
+						</node>
+						<elseNode Class="QuestNode_Set">
+							<name>selectionWeightTyranid</name>
+							<value>0</value>
+						</elseNode>
+					</li>
+				</value>
+			</li>
+			<!-- Add factions  Royalty ProblemCauser QuestNode_RandomNode -->
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/QuestScriptDef[defName="ProblemCauser"]/root/nodes/li[@Class="QuestNode_RandomNode"]/nodes</xpath>
+				<value>
+					<li Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Set">
+								<name>siteFaction</name>
+								<value>OG_Mechanicus_Faction</value>
+							</li>
+							<li Class="QuestNode_Set">
+								<name>sitePartsTags</name>
+								<value>
+									<li>
+										<tag>QuestConditionCauser</tag>
+									</li>
+									<li>
+										<tag>Outpost</tag>
+									</li>
+								</value>
+							</li>
+						</nodes>
+						<selectionWeight>$selectionWeightMechanicus</selectionWeight>
+					</li>
+					<li Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Set">
+								<name>siteFaction</name>
+								<value>OG_Sororitas_Faction</value>
+							</li>
+							<li Class="QuestNode_Set">
+								<name>sitePartsTags</name>
+								<value>
+									<li>
+										<tag>QuestConditionCauser</tag>
+									</li>
+									<li>
+										<tag>Outpost</tag>
+									</li>
+								</value>
+							</li>
+						</nodes>
+						<selectionWeight>$selectionWeightSororitas</selectionWeight>
+					</li>
+					<li Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Set">
+								<name>siteFaction</name>
+								<value>OG_Eldar_Craftworld_Faction</value>
+							</li>
+							<li Class="QuestNode_Set">
+								<name>sitePartsTags</name>
+								<value>
+									<li>
+										<tag>QuestConditionCauser</tag>
+									</li>
+									<li>
+										<tag>Outpost</tag>
+									</li>
+								</value>
+							</li>
+						</nodes>
+						<selectionWeight>$selectionWeightEldar_Craftworld</selectionWeight>
+					</li>
+					<li Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Set">
+								<name>siteFaction</name>
+								<value>OG_DarkEldar_Kabal_Faction</value>
+							</li>
+							<li Class="QuestNode_Set">
+								<name>sitePartsTags</name>
+								<value>
+									<li>
+										<tag>QuestConditionCauser</tag>
+									</li>
+									<li>
+										<tag>Outpost</tag>
+									</li>
+								</value>
+							</li>
+						</nodes>
+						<selectionWeight>$selectionWeightDarkEldar_Kabal</selectionWeight>
+					</li>
+					<li Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Set">
+								<name>siteFaction</name>
+								<value>OG_Necron_Faction</value>
+							</li>
+							<li Class="QuestNode_Set">
+								<name>sitePartsTags</name>
+								<value>
+									<li>
+										<tag>QuestConditionCauser</tag>
+									</li>
+									<li>
+										<tag>Outpost</tag>
+									</li>
+								</value>
+							</li>
+						</nodes>
+						<selectionWeight>$selectionWeightNecron</selectionWeight>
+					</li>
+					<li Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Set">
+								<name>siteFaction</name>
+								<value>OG_Ork_Tek_Faction</value>
+							</li>
+							<li Class="QuestNode_Set">
+								<name>sitePartsTags</name>
+								<value>
+									<li>
+										<tag>QuestConditionCauser</tag>
+									</li>
+									<li>
+										<tag>Outpost</tag>
+									</li>
+								</value>
+							</li>
+						</nodes>
+						<selectionWeight>$selectionWeightOrk</selectionWeight>
+					</li>
+					<li Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Set">
+								<name>siteFaction</name>
+								<value>OG_Tau_Faction</value>
+							</li>
+							<li Class="QuestNode_Set">
+								<name>sitePartsTags</name>
+								<value>
+									<li>
+										<tag>QuestConditionCauser</tag>
+									</li>
+									<li>
+										<tag>Outpost</tag>
+									</li>
+								</value>
+							</li>
+						</nodes>
+						<selectionWeight>$selectionWeightTau</selectionWeight>
+					</li>
+					<li Class="QuestNode_Sequence">
+						<nodes>
+							<li Class="QuestNode_Set">
+								<name>siteFaction</name>
+								<value>OG_Tyranid_Faction</value>
+							</li>
+							<li Class="QuestNode_Set">
+								<name>sitePartsTags</name>
+								<value>
+									<li>
+										<tag>QuestConditionCauser</tag>
+									</li>
+									<li>
+										<tag>Outpost</tag>
+									</li>
+								</value>
+							</li>
+						</nodes>
+						<selectionWeight>$selectionWeightTyranid</selectionWeight>
+					</li>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+</Patch>

@@ -84,11 +84,11 @@
 	<labelMale>man in black</labelMale>
 	<labelFemale>woman in black</labelFemale>
 	<labelPlural>strangers in black</labelPlural>
-	<combatPower>100</combatPower>
+	<combatPower>200</combatPower>
 	<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
 	<initialResistanceRange IgnoreIfNoMatchingField="True">0~2</initialResistanceRange>
-	<minGenerationAge>20</minGenerationAge>
-	<maxGenerationAge>50</maxGenerationAge>
+	<minGenerationAge>45</minGenerationAge>
+	<maxGenerationAge>120</maxGenerationAge>
 	<isFighter>true</isFighter>
 	<race>Human</race>
 	<chemicalAddictionChance>0.05</chemicalAddictionChance>
@@ -140,9 +140,8 @@
 	<apparelRequired>
 		<li>Apparel_CollarShirt</li>
 		<li>Apparel_Pants</li>
-		<li>OGIG_Apparel_FlakArmourLight</li>
-		<li>OGIG_Apparel_FlakArmourLightGreaves</li>
-		<li>Apparel_CowboyHat</li>
+		<li>OGI_Armour_Power</li>
+		<li>OGI_Armour_Power_Helmet</li>
 	</apparelRequired>
 	<apparelColor>(58,58,58)</apparelColor>
 	<modExtensions>

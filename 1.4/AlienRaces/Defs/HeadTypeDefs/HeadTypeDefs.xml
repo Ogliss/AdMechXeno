@@ -35,6 +35,36 @@
     <gender>None</gender>
   </HeadTypeDef-->
 
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Ogyran_HeadA</defName>
+    <graphicPath>Things/Pawn/Humanlike/Ogyran/Heads/Male_AverageNormal</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Ogyran_HeadB</defName>
+    <graphicPath>Things/Pawn/Humanlike/Ogyran/Heads/Male_AverageNormal1</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Ogyran_HeadC</defName>
+    <graphicPath>Things/Pawn/Humanlike/Ogyran/Heads/Male_AverageNormal2</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Ogyran_HeadD</defName>
+    <graphicPath>Things/Pawn/Humanlike/Ogyran/Heads/Male_AverageNormal3</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
+  <HeadTypeDef ParentName="AverageBase">
+    <defName>Ogyran_HeadE</defName>
+    <graphicPath>Things/Pawn/Humanlike/Ogyran/Heads/Male_AverageNormal4</graphicPath>
+    <gender>None</gender>
+  </HeadTypeDef>
+
   <!-- Male -->
 
   <HeadTypeDef ParentName="AverageBase">
