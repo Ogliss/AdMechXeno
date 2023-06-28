@@ -3,9 +3,9 @@
 	<!-- ================= Chaos Deamon Faction Base ================= -->
 	<FactionDef Name="OG_Chaos_Deamon_Faction_Base" ParentName="FactionBase">
 		<defName>OG_Chaos_Deamon_Faction</defName>
-		<label>Deamons of Chaos</label>
-		<pawnSingular>Deamon</pawnSingular>
-		<pawnsPlural>Deamons</pawnsPlural>
+		<label>Daemons of Chaos</label>
+		<pawnSingular>Daemon</pawnSingular>
+		<pawnsPlural>Daemons</pawnsPlural>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">1</maxConfigurableAtWorldCreation>
 		<configurationListOrderPriority IgnoreIfNoMatchingField="True">85</configurationListOrderPriority>

@@ -7,7 +7,7 @@
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
-		<workerClass>ExtraHives.IncidentWorker_Infestation</workerClass>
+		<workerClass>AdeptusMechanicus.IncidentWorker_Infestation</workerClass>
 		<letterLabel>Daemonic Infestation</letterLabel>
 		<letterText>Daemonic Forces are clawing their way out of the Warp! They will break through in a few seconds and open Warp Rifts.\n\nThe warp rifts will spawn more Daemons and more rifts.\n\nIf you don't want the daemons to infest the whole area, destroy the rifts. But beware - the daemons will defend their home.</letterText>
 		<letterDef>ThreatBig</letterDef>
@@ -35,7 +35,7 @@
 		<targetTags>
 			<li>Map_PlayerHome</li>
 		</targetTags>
-		<workerClass>ExtraHives.IncidentWorker_Infestation</workerClass>
+		<workerClass>AdeptusMechanicus.IncidentWorker_Infestation</workerClass>
 		<letterLabel>Daemonic Incursion</letterLabel>
 		<letterText>Daemonic Forces are clawing their way out of the Warp! They will break through in a few seconds and open Warp Rifts.\n\nThe warp rifts will spawn more Daemons and more rifts.\n\nIf you don't want the daemons to infest the whole area, destroy the rifts. But beware - the daemons will defend their home.</letterText>
 		<letterDef>ThreatBig</letterDef>

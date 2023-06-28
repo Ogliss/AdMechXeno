@@ -3,7 +3,7 @@
 <Operation Class="PatchOperationSequence">
 <operations>	
 	<!-- ========== Tau Battlesuit ========== -->
-	<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+	<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 		<Name>OG_Tau_Battlesuit</Name>
 		<statBases>
 			<ArmorRating_Blunt>72</ArmorRating_Blunt>

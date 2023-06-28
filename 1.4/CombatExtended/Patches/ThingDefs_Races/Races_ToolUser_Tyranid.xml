@@ -5,7 +5,7 @@
 <operations>
 
 		<!--==================== Tyranid - Ripper Swarm =========================-->
-		<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 			<defName>Tyranid_RipperSwarm</defName>
 			<statBases>
 				<ArmorRating_Blunt>8</ArmorRating_Blunt>
@@ -77,7 +77,7 @@
 		</li>
 		
 		<!--==================== Tyranid - Hormagaunt =========================-->
-		<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 			<defName>Tyranid_Hormagaunt</defName>
 			<statBases>
 				<ArmorRating_Blunt>16</ArmorRating_Blunt>
@@ -146,7 +146,7 @@
 			</tools>
 		</li>
 		<!--==================== Tyranid - Termagant =========================-->
-		<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 			<defName>Tyranid_Termagant</defName>
 			<statBases>
 				<ArmorRating_Blunt>16</ArmorRating_Blunt>
@@ -215,7 +215,7 @@
 			</tools>
 		</li>
 		<!--==================== Tyranid - Genestealer =========================-->
-		<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 			<defName>Tyranid_Genestealer</defName>
 			<statBases>
 				<ArmorRating_Blunt>20</ArmorRating_Blunt>
@@ -285,7 +285,7 @@
 		</li>
 		
 		<!--==================== Tyranid - Warrior =========================-->
-		<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 			<defName>Tyranid_Warrior</defName>
 			<statBases>
 				<ArmorRating_Blunt>32</ArmorRating_Blunt>
@@ -355,7 +355,7 @@
 		</li>
 		
 		<!--==================== Tyranid - Gargoyle =========================-->
-		<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 			<defName>Tyranid_Gargoyle</defName>
 			<statBases>
 				<ArmorRating_Blunt>16</ArmorRating_Blunt>
@@ -425,7 +425,7 @@
 		</li>
 			
 		<!--==================== Tyranid - Lictor =========================-->
-		<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 			<defName>Tyranid_Lictor</defName>
 			<statBases>
 				<ArmorRating_Blunt>32</ArmorRating_Blunt>
@@ -495,7 +495,7 @@
 		</li>
 		
 		<!--==================== Tyranid - Ravener =========================-->
-		<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 			<defName>Tyranid_Ravener</defName>
 			<statBases>
 				<ArmorRating_Blunt>32</ArmorRating_Blunt>
@@ -565,7 +565,7 @@
 		</li>
 		
 		<!--==================== Tyranid - Hive Tyrant =========================-->
-		<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 			<defName>Tyranid_Hive_Tyrant</defName>
 			<statBases>
 				<ArmorRating_Blunt>72</ArmorRating_Blunt>
@@ -635,7 +635,7 @@
 		</li>
 		
 		<!--==================== Tyranid - Carnifex =========================-->
-		<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 			<defName>Tyranid_Hive_Tyrant</defName>
 			<statBases>
 				<ArmorRating_Blunt>72</ArmorRating_Blunt>
@@ -705,7 +705,7 @@
 		</li>
 		
 		<!--==================== Tyranid - Biovore =========================-->
-		<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 			<defName>Tyranid_Biovore</defName>
 			<statBases>
 				<ArmorRating_Blunt>72</ArmorRating_Blunt>
@@ -793,7 +793,7 @@
 		</value>
 	</li>
 		<!--==================== Tyranid - Zoanthrope =========================-->
-		<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+		<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 			<defName>Tyranid_Zoanthrope</defName>
 			<statBases>
 				<ArmorRating_Blunt>72</ArmorRating_Blunt>

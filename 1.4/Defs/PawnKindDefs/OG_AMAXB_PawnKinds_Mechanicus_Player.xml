@@ -9,14 +9,22 @@
 		<isFighter>false</isFighter>
 		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
 		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+		<apparelTags>
+			<li>OGAMClothing</li>
+			<li>OGIGClothing</li>
+		</apparelTags>
+		<techHediffsDisallowTags>
+			<li>AAGeneSeed</li>
+			<li>PainCauser</li>
+		</techHediffsDisallowTags>
 	</PawnKindDef>
 
 	<!-- Basic Colonist -->
 	<PawnKindDef Name="OG_Mechanicus_Colonist_Base" ParentName="OG_Mechanicus_Base_KindDef">
 		<defName>Colonist_OG_Mechanicus</defName>
-		<label>colonist (Mechanicus)</label>
-		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+		<label>colonist (Mechanicus Menial)</label>
 		<backstoryFiltersOverride>
 			<li>
 				<categoriesAdulthood>
@@ -43,10 +51,6 @@
 				<commonality>0.05</commonality>
 			</li>
 		</backstoryFiltersOverride>
-		<apparelTags>
-			<li>OGAMClothing</li>
-			<li>OGIGClothing</li>
-		</apparelTags>
 		<apparelMoney>
 			<min>1000</min>
 			<max>2400</max>
@@ -61,11 +65,7 @@
 		<techHediffsTags>
 			<li>Advanced</li>
 		</techHediffsTags>
-		<techHediffsDisallowTags>
-			<li>AAGeneSeed</li>
-			<li>PainCauser</li>
-		</techHediffsDisallowTags>
-		<techHediffsMaxAmount>5</techHediffsMaxAmount>
+		<techHediffsMaxAmount>3</techHediffsMaxAmount>
 		<techHediffsChance>1</techHediffsChance>
 		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
 	</PawnKindDef>
@@ -73,7 +73,7 @@
 	<!-- Basic Servitor -->
 	<PawnKindDef Name="OG_Mechanicus_Servitor_Base" ParentName="OG_Mechanicus_Base_KindDef">
 		<defName>Colonist_OG_Mechanicus_Servitor</defName>
-		<label>colonist (Mechanicus)</label>
+		<label>colonist (Mechanicus Sevitor)</label>
 		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
 		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
 		<backstoryFiltersOverride Inherit="false">
@@ -142,7 +142,7 @@
 	</PawnKindDef>
 	
 	<!-- Adv Colonist -->
-	<PawnKindDef Name="OG_Mechanicus_Colonist_TechPriest_Base" ParentName="OG_Mechanicus_Colonist_Base">
+	<PawnKindDef Name="OG_Mechanicus_Colonist_TechPriest_Base" ParentName="OG_Mechanicus_Base_KindDef">
 		<defName>Colonist_OG_Mechanicus_Tech_Priest</defName>
 		<label>tech-priest</label>
 		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
@@ -172,6 +172,7 @@
 			</li>
 		</backstoryFiltersOverride>
 		<apparelTags>
+			<li>AMTech_Priest</li>
 			<li>OGAMClothing</li>
 			<li>OGIGClothing</li>
 		</apparelTags>
@@ -210,9 +211,9 @@
 		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
 	</PawnKindDef>
 	
-	<PawnKindDef Name="OG_Mechanicus_Colonist_Enginseer_Base" ParentName="OG_Mechanicus_Colonist_TechPriest_Base">
+	<PawnKindDef Name="OG_Mechanicus_Colonist_Enginseer_Base" ParentName="OG_Mechanicus_Base_KindDef">
 		<defName>Colonist_OG_Mechanicus_Tech_Priest_Enginseer</defName>
-		<label>tech-priest</label>
+		<label>tech-priest enginseer</label>
 		<backstoryFiltersOverride Inherit="false">
 			<li>
 				<categoriesAdulthood>
@@ -238,9 +239,14 @@
 			</li>
 		</backstoryFiltersOverride>
 		<apparelTags>
+			<li>AMTech_Priest</li>
 			<li>OGAMClothing</li>
 			<li>OGIGClothing</li>
 		</apparelTags>
+		<apparelRequired>
+			<li>OGAM_Apparel_EnginseerHood</li>
+			<li>OGAM_Apparel_EnginseerRobe</li>
+		</apparelRequired>
 		<apparelMoney>
 			<min>1000</min>
 			<max>2400</max>

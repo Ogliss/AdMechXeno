@@ -5,7 +5,7 @@
   <operations>
   
 	<!--==================== Tyranid - Spinefist =========================-->	
-	<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+	<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 	<defName>OGTY_Gun_Spinefist</defName>
 	<statBases>
 		<Mass>1</Mass>
@@ -88,7 +88,7 @@
 	</li>
 	
 	<!--==================== Tyranid - Spinefist Dual =========================-->	
-	<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+	<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 	<defName>OGTY_Gun_SpinefistDual</defName>
 	<statBases>
 		<Mass>1</Mass>
@@ -171,7 +171,7 @@
 	</li>
 	
 	<!--==================== Tyranid - Fleshborer =========================-->	
-	<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+	<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 	<defName>OGTY_Gun_Fleshborer</defName>
 	<statBases>
 		<Mass>2</Mass>
@@ -232,7 +232,7 @@
 	</li>
 	
 	<!--==================== Tyranid - Devourer =========================-->	
-	<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+	<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 	<defName>OGTY_Gun_Devourer</defName>
 	<statBases>
 		<Mass>2</Mass>
@@ -315,7 +315,7 @@
 	</li>
 	
 	<!--==================== Tyranid - Barbed Strangler =========================-->
-	<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+	<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 	<defName>OGTY_Gun_BarbedStrangler</defName>
 	<statBases>
 		<Mass>6</Mass>
@@ -384,7 +384,7 @@
 	</li>
 	
 	<!--==================== Tyranid - Venom Cannon =========================-->
-	<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+	<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 	<defName>OGTY_Gun_VenomCannon</defName>
 	<statBases>
 		<Mass>2.5</Mass>
@@ -445,7 +445,7 @@
 	</li>
 	
 	<!--==================== Tyranid - Impaler Cannon =========================-->
-	<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+	<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 	<defName>OGTY_Gun_ImpalerCannon</defName>
 	<statBases>
 		<Mass>8.5</Mass>

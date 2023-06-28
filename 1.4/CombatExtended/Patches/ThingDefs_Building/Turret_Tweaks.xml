@@ -41,7 +41,7 @@
 					<texPath>DummyTexture</texPath>
 				</value>
 			</li>
-			<li Class="CombatExtended.PatchOperationMakeGunCECompatible">
+			<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 				<defName>OGN_TurretGun_MonolithGuassFluxArc</defName>
 				<statBases>
 					<RangedWeapon_Cooldown>3.5</RangedWeapon_Cooldown>

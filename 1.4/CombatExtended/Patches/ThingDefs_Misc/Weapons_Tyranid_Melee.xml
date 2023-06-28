@@ -4,7 +4,7 @@
 		<!--success>Always</success-->
 		<operations>
 		<!--==================== Tyranid - Hormagaunt Weapons =========================-->
-			<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+			<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 				<defName>OGTY_Melee_Hormagaunt_ST</defName>
 				<statBases>
 					<Bulk>4</Bulk>
@@ -45,7 +45,7 @@
 			</li>
 
 		<!--==================== Tyranid - Genestealer Weapons =========================-->
-			<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+			<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 				<defName>OGTY_Melee_Genestealer_RC</defName>
 				<statBases>
 					<Bulk>11.5</Bulk>
@@ -94,7 +94,7 @@
 			</li>
 
 		<!--==================== Tyranid - Ravener Weapons =========================-->
-			<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+			<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 				<defName>OGTY_Melee_Ravener_ST</defName>
 				<statBases>
 					<Bulk>4</Bulk>
@@ -136,7 +136,7 @@
 			</li>
 
 		<!--==================== Tyranid - Lictor Weapons =========================-->
-			<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+			<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 				<defName>OGTY_Melee_Lictor_ST</defName>
 				<statBases>
 					<Bulk>4</Bulk>
@@ -178,7 +178,7 @@
 			</li>
 			
 		<!--==================== Tyranid - Carnifex Weapons =========================-->
-			<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+			<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 				<defName>OGTY_Melee_Carnifex_STCC</defName>
 				<statBases>
 					<Bulk>4</Bulk>

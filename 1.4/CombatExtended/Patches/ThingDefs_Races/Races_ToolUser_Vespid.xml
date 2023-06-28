@@ -3,7 +3,7 @@
 <Operation Class="PatchOperationSequence">
 <operations>
 	<!-- ========== Vespid ========== -->
-	<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+	<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 		<defName>OG_Alien_Vespid</defName>
 		<statBases>
 			<ArmorRating_Blunt>16</ArmorRating_Blunt>

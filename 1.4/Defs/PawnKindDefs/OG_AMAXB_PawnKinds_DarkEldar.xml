@@ -117,7 +117,7 @@
 
 	<!-- ============================ Dark Eldar Kabalite Ranged ========================== -->
 	<PawnKindDef ParentName="OG_DarkEldar_Kabalite_BaseKind">
-		<defName>OG_DarkEldar_Kabalite_Warrior</defName>
+		<defName>OG_DarkEldar_Kabalite_Ranged</defName>
 		<combatPower>50</combatPower>
 		<weaponTags>
 			<li>DESplinterRifle</li>
@@ -127,7 +127,7 @@
 	
 	<!-- ============================ Dark Eldar Kabalite Melee ========================== -->
 	<PawnKindDef ParentName="OG_DarkEldar_Kabalite_BaseKind">
-		<defName>OG_DarkEldar_Kabalite_Storm</defName>
+		<defName>OG_DarkEldar_Kabalite_Melee</defName>
 		<combatPower>50</combatPower>
 		<weaponTags>
 			<li>DESplinterPistol</li>

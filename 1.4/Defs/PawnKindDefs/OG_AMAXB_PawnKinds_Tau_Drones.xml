@@ -39,9 +39,40 @@
 		<defName>OGT_Gun_PulseCarbineTwinLinked</defName>
 		<label>twin-linked pulse carbine</label>
 		<description>Gun Drones are most commonly armed with twin-linked Pulse Carbines, a formidable weapon at short range, and are used by the Tau Fire Caste in combat alongside Fire Warriors as a form of fire support. Indeed, Gun Drones are the most common type of Drone found deployed by the Tau alongside their forces in battle. They are also ideal for many military applications that involve dangerous or tedious duties.</description>
-		<graphicData>
+		<graphicData Class="AdvancedGraphics.GraphicData_Equippable">
 			<texPath>Things/Item/Equipment/WeaponRanged/Tau/PulseCarbine</texPath>
 			<graphicClass>Graphic_Single</graphicClass>
+			<shaderType>CutoutComplex</shaderType>
+			<colorTwo>(0.286,0.286,0.286)</colorTwo>
+			<drawSize>0.95</drawSize>
+			<verticalFlipNorth>true</verticalFlipNorth>
+			<isDualWeapon>true</isDualWeapon>
+			<offsets>
+				<south>
+					<offset>-0.20,0,-0.20</offset>
+					<angleAdjustment>0</angleAdjustment>
+					<offsetOffhand>0.20,0,-0.20</offsetOffhand>
+					<angleAdjustmentOffhand>0</angleAdjustmentOffhand>
+				</south>
+				<north>
+					<offset>0.20,0,0.20</offset>
+					<angleAdjustment>0</angleAdjustment>
+					<offsetOffhand>-0.20,0,0.20</offsetOffhand>
+					<angleAdjustmentOffhand>0</angleAdjustmentOffhand>
+				</north>
+				<east>
+					<offset>-0.0,0,-0.200</offset>
+					<angleAdjustment>0</angleAdjustment>
+					<offsetOffhand>0.05,-0.10,-0.15</offsetOffhand>
+					<angleAdjustmentOffhand>180</angleAdjustmentOffhand>
+				</east>
+				<west>
+					<offset>-0.05,-0.10,-0.15</offset>
+					<angleAdjustment>-0</angleAdjustment>
+					<offsetOffhand>-0.0,0,-0.200</offsetOffhand>
+					<angleAdjustmentOffhand>-0</angleAdjustmentOffhand>
+				</west>
+			</offsets>
 		</graphicData>
 		<soundInteract>Interact_Autopistol</soundInteract>
 		<statBases>
@@ -57,21 +88,6 @@
 			<ShootingAccuracyPawn>-0.5</ShootingAccuracyPawn>
 		</equippedStatOffsets>
 		<comps>
-			<li Class="OgsCompOversizedWeapon.CompProperties_OversizedWeapon">
-				<!--
-				<verticalFlipOutsideCombat>true</verticalFlipOutsideCombat>
-				-->	
-				<isDualWeapon>true</isDualWeapon>
-				<verticalFlipNorth>true</verticalFlipNorth>
-				<angleAdjustmentNorth>60</angleAdjustmentNorth>
-				<angleAdjustmentEast>-90</angleAdjustmentEast>
-				<angleAdjustmentWest>90</angleAdjustmentWest>
-				<angleAdjustmentSouth>60</angleAdjustmentSouth>
-				<northOffset>0.15,0.0,0.35</northOffset>
-				<eastOffset>0.0,1.0,0.15</eastOffset>
-				<westOffset>0.0,1.0,0.15</westOffset>
-				<southOffset>0.25,1.0,0.30</southOffset>
-			</li> 
 			<li Class="AdeptusMechanicus.CompProperties_Weapon_GunSpecialRules">
 				<VerbEntries>
 					<li>

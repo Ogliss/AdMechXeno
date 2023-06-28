@@ -5,7 +5,7 @@
 		<description>The Drukhari (pronounced Druh-KAR-ee) or "Dark Ones" in the Aeldari Lexicon, also known to outsiders as the Dark Eldar, are a forsaken and corrupt Aeldari kindred, the sadistic, malicious counterparts of the Asuryani. Like their cousins of the craftworlds, the Drukhari are an ancient and highly advanced alien race of fey humanoids.</description>
 		<pawnSingular>drukhar</pawnSingular>
 		<pawnsPlural>drukhari</pawnsPlural>
-		<basicMemberKind>OG_DarkEldar_Kabalite_Warrior</basicMemberKind>
+		<basicMemberKind>OG_DarkEldar_Kabalite_Ranged</basicMemberKind>
 		<categoryTag>OG_Outlander_DarkEldar</categoryTag>
 		<listOrderPriority>15</listOrderPriority>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
@@ -82,8 +82,8 @@
 				<kindDef>Combat</kindDef>
 				<commonality>100</commonality>
 				<options>
-					<OG_DarkEldar_Kabalite_Warrior>100</OG_DarkEldar_Kabalite_Warrior>
-					<OG_DarkEldar_Kabalite_Storm>100</OG_DarkEldar_Kabalite_Storm>
+					<OG_DarkEldar_Kabalite_Ranged>100</OG_DarkEldar_Kabalite_Ranged>
+					<OG_DarkEldar_Kabalite_Melee>100</OG_DarkEldar_Kabalite_Melee>
 					<OG_DarkEldar_Kabalite_Support>10</OG_DarkEldar_Kabalite_Support>
 					<OG_DarkEldar_Kabalite_Sybarite>50</OG_DarkEldar_Kabalite_Sybarite>
 					<OG_DarkEldar_Incubi>10</OG_DarkEldar_Incubi>
@@ -105,7 +105,7 @@
 					<li>Siege</li>
 				</disallowedStrategies>
 				<options>
-					<OG_DarkEldar_Kabalite_Storm>100</OG_DarkEldar_Kabalite_Storm>
+					<OG_DarkEldar_Kabalite_Melee>100</OG_DarkEldar_Kabalite_Melee>
 					<OG_DarkEldar_Wych>25</OG_DarkEldar_Wych>
 					<OG_DarkEldar_Wych_Hekatrix>1</OG_DarkEldar_Wych_Hekatrix>
 					<OG_DarkEldar_Incubi>10</OG_DarkEldar_Incubi>
@@ -121,7 +121,7 @@
 				<kindDef>Combat</kindDef>
 				<commonality>20</commonality>
 				<options>
-					<OG_DarkEldar_Kabalite_Warrior>100</OG_DarkEldar_Kabalite_Warrior>
+					<OG_DarkEldar_Kabalite_Ranged>100</OG_DarkEldar_Kabalite_Ranged>
 					<OG_DarkEldar_Kabalite_Support>10</OG_DarkEldar_Kabalite_Support>
 					<OG_DarkEldar_Kabalite_Sybarite>50</OG_DarkEldar_Kabalite_Sybarite>
 					<OG_DarkEldar_Archon>5</OG_DarkEldar_Archon>
@@ -175,8 +175,8 @@
 				<!-- Base defense, mainly ranged with melee mix-ins -->
 				<kindDef>Settlement</kindDef>
 				<options>
-					<OG_DarkEldar_Kabalite_Warrior>100</OG_DarkEldar_Kabalite_Warrior>
-					<OG_DarkEldar_Kabalite_Storm>100</OG_DarkEldar_Kabalite_Storm>
+					<OG_DarkEldar_Kabalite_Ranged>100</OG_DarkEldar_Kabalite_Ranged>
+					<OG_DarkEldar_Kabalite_Melee>100</OG_DarkEldar_Kabalite_Melee>
 					<OG_DarkEldar_Kabalite_Support>10</OG_DarkEldar_Kabalite_Support>
 					<OG_DarkEldar_Kabalite_Sybarite>50</OG_DarkEldar_Kabalite_Sybarite>
 					<OG_DarkEldar_Incubi>10</OG_DarkEldar_Incubi>

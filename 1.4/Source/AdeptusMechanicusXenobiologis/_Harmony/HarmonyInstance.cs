@@ -17,11 +17,12 @@ namespace AdeptusMechanicus.HarmonyInstance
 
             harmony = new Harmony("com.ogliss.rimworld.mod.adeptus.xenobiologis");
             harmony.PatchAll(Assembly.GetExecutingAssembly());
-
+            /*
             if (AdeptusIntergrationUtility.enabled_SOS2)
             {
                 SOSDeamonConstructPatch();
             }
+            */
             if (AdeptusIntergrationUtility.enabled_EndTimesWithGuns)
             {
                 EndTimesPortalPatch();

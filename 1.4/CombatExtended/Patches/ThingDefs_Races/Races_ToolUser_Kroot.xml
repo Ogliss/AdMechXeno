@@ -4,7 +4,7 @@
 <!--success>Always</success-->
 <operations>	
 	<!-- ========== Kroot ========== -->
-	<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+	<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 		<defName>OG_Alien_Kroot</defName>
 		<statBases>
 			<ArmorRating_Blunt>8</ArmorRating_Blunt>

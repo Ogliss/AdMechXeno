@@ -3,7 +3,7 @@
 <Operation Class="PatchOperationSequence">
 <operations>
 	<!-- ========== Tau ========== -->
-	<li Class="CombatExtended.PatchOperationMakeWeaponCECompatible">
+	<li Class="AdeptusMechanicus.PatchOperationMakeWeaponCECompatible">
 		<Name>OG_Tau_Pawn_Base</Name>
 		<statBases>
 			<ArmorRating_Blunt>50</ArmorRating_Blunt>

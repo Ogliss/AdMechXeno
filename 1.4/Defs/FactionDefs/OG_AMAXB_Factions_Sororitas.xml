@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 	<FactionDef Abstract="true" Name="OG_Sororitas_Faction_Base" ParentName="FactionBase">
-		<label>Adetpus Sororitas Order</label>
+		<label>Adeptus Sororitas Order</label>
 		<description>The Adepta Sororitas, colloquially called the "Sisterhood," whose military arm is also known as the Sisters of Battle and formerly as the Daughters of the Emperor, are an all-female division of the Imperium of Man's state church known as the Ecclesiarchy or, more formally, as the Adeptus Ministorum.</description>
 		<pawnSingular>Sister</pawnSingular>
 		<pawnsPlural>Sisters</pawnsPlural>
