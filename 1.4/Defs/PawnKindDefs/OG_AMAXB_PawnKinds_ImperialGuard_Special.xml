@@ -131,8 +131,8 @@
 	</gearHealthRange>
 	<itemQuality>Good</itemQuality>
 	<weaponMoney>
-		<min>900</min>
-		<max>1200</max>
+		<min>1200</min>
+		<max>1500</max>
 	</weaponMoney>
 	<weaponTags>
 		<li>BoltPistol</li>
