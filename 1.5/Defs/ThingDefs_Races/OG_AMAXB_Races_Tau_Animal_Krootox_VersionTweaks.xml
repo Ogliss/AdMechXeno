@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- ========================== Kroot Ox ================================= -->
+	<!-- 1.3 -->
+	<ThingDef ParentName="OG_KrootOx_Base" ADogSaidBody="Legs">
+		<defName>OG_KrootOx</defName>
+		<race>
+			<trainability>None</trainability>
+		</race>
+	</ThingDef>
+</Defs>

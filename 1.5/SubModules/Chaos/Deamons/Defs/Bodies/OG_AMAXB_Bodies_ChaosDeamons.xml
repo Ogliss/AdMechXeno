@@ -1,0 +1,545 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--===================== Nurgling single ====================-->
+<!--BodyDef>
+	<defName>OG_Chaos_Nurgling_Single</defName>
+	<label>nurgling</label>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+	<corePart>
+		<def>OG_ChaosDeamon_Carapace</def>
+		<height>Middle</height>
+		<depth>Outside</depth>
+		<parts>
+		<li>
+			<def>OG_ChaosDeamon_NecrodermisRegulator</def>
+			<coverage>0.05</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_ChaosDeamon_Heart</def>
+			<coverage>0.03</coverage>
+			<depth>Inside</depth>
+		</li>
+		<li>
+			<def>OG_ChaosDeamon_HeadMount</def>
+			<coverage>0.18</coverage>
+			<height>Top</height>
+			<parts>
+			<li>
+				<def>OG_ChaosDeamon_Head</def>
+				<coverage>0.65</coverage>
+				<groups>
+				<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+				<li>
+					<def>OG_ChaosDeamon_Brain</def>
+					<coverage>0.2</coverage>
+					<depth>Inside</depth>
+				</li>
+				<li>
+					<def>OG_ChaosDeamon_VisualSensor</def>
+					<customLabel>left eye</customLabel>
+					<coverage>0.12</coverage>
+				</li>
+				<li>
+					<def>OG_ChaosDeamon_VisualSensor</def>
+					<customLabel>right eye</customLabel>
+					<coverage>0.12</coverage>
+				</li>
+				<li>
+					<def>OG_ChaosDeamon_AuditorySensor</def>
+					<coverage>0.06</coverage>
+				</li>
+				<li>
+					<def>OG_ChaosDeamon_FlayingBlade</def>
+					<customLabel>right blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>RightBlade</li>
+					</groups>
+				 </li>				
+				<li>
+					<def>OG_ChaosDeamon_FlayingBlade</def>
+					<customLabel>left blade</customLabel>
+					<coverage>0.04</coverage>
+					<groups>
+						<li>LeftBlade</li>
+					</groups>
+				 </li>
+				</parts>
+			</li>
+			</parts>
+		</li>
+		<li>
+			<def>OG_ChaosDeamon_HumanoidLeg</def>
+			<customLabel>front left leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_ChaosDeamon_HumanoidLeg</def>
+			<customLabel>front right leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_ChaosDeamon_HumanoidLeg</def>
+			<customLabel>middle left leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_ChaosDeamon_HumanoidLeg</def>
+			<customLabel>middle right leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_ChaosDeamon_HumanoidLeg</def>
+			<customLabel>rear left leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		<li>
+			<def>OG_ChaosDeamon_HumanoidLeg</def>
+			<customLabel>rear right leg</customLabel>
+			<coverage>0.06</coverage>
+			<height>Bottom</height>
+		</li>
+		</parts>
+	</corePart>
+</BodyDef-->
+
+<!--===================== Nurgling swarm ====================-->
+<BodyDef>
+	<defName>OG_haosDeamon_Nurgling_Swarm</defName>
+	<label>nurgling swarm</label>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+	<corePart>
+		<def>OG_ChaosDeamon_SwarmCore</def>
+		<height>Middle</height>
+		<depth>Outside</depth>
+		<parts>
+			<li>
+				<def>OG_ChaosDeamon_SwarmNurgling</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>left hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>right hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>RightHand</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_SwarmNurgling</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>left hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>right hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>RightHand</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_SwarmNurgling</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>left hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>right hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>RightHand</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_SwarmNurgling</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>left hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>right hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>RightHand</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_SwarmNurgling</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>left hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>right hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>RightHand</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_SwarmNurgling</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>left hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>right hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>RightHand</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_SwarmNurgling</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>left hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>right hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>RightHand</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_SwarmNurgling</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>left hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>right hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>RightHand</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_SwarmNurgling</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>left hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>right hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>RightHand</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_SwarmNurgling</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>HeadAttackTool</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>left hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>LeftHand</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>right hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>RightHand</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+		</parts>
+	</corePart>
+</BodyDef>
+
+<!--===================== Humanoid ====================-->
+<BodyDef>
+	<defName>OG_ChaosDeamon_Humanoid</defName>
+	<label>ChaosDeamon warrior</label>
+	<ignoreConfigErrors>true</ignoreConfigErrors>
+	<corePart>
+		<def>OG_ChaosDeamon_HumanoidTorso</def>
+		<height>Middle</height>
+		<depth>Outside</depth>
+		<parts>
+			<li>
+				<def>OG_ChaosDeamon_Neck</def>
+				<coverage>0.10</coverage>
+				<height>Top</height>
+				<parts>
+					<li>
+						<def>OG_ChaosDeamon_Head</def>
+						<coverage>0.80</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+						</groups>
+						<parts>
+							<li>
+								<def>OG_ChaosDeamon_Brain</def>
+								<coverage>0.10</coverage>
+								<depth>Inside</depth>
+							</li>
+							<li>
+								<def>OG_ChaosDeamon_VisualSensor</def>
+								<customLabel>left eye</customLabel>
+								<coverage>0.13</coverage>
+							</li>
+							<li>
+								<def>OG_ChaosDeamon_VisualSensor</def>
+								<customLabel>right eye</customLabel>
+								<coverage>0.13</coverage>
+							</li>
+							<li>
+								<def>OG_ChaosDeamon_AuditorySensor</def>
+								<customLabel>left ear</customLabel>
+								<coverage>0.10</coverage>
+							</li>
+							<li>
+								<def>OG_ChaosDeamon_AuditorySensor</def>
+								<customLabel>right ear</customLabel>
+								<coverage>0.10</coverage>
+							</li>
+							<li>
+								<def>OG_ChaosDeamon_OlfactorySensor</def>
+								<coverage>0.10</coverage>
+							</li>
+						</parts>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_Shoulder</def>
+				<customLabel>left shoulder</customLabel>
+				<coverage>0.17</coverage>
+				<parts>
+				<li>
+					<def>OG_ChaosDeamon_Arm</def>
+					<customLabel>left arm</customLabel>
+					<coverage>0.85</coverage>
+					<parts>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>left hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>LeftHand</li>
+						</groups>
+					</li>
+					</parts>
+				</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_Shoulder</def>
+				<customLabel>right ChaosDeamon shoulder</customLabel>
+				<coverage>0.17</coverage>
+				<parts>
+				<li>
+					<def>OG_ChaosDeamon_Arm</def>
+					<customLabel>right arm</customLabel>
+					<coverage>0.85</coverage>
+					<parts>
+					<li>
+						<def>OG_ChaosDeamon_Hand</def>
+						<customLabel>right hand</customLabel>
+						<coverage>0.2</coverage>
+						<height>Bottom</height>
+						<groups>
+							<li>RightHand</li>
+						</groups>
+					</li>
+					</parts>
+				</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_HumanoidLeg</def>
+				<customLabel>left leg</customLabel>
+				<coverage>0.2</coverage>
+				<height>Bottom</height>
+				<parts>
+				<li>
+					<def>OG_ChaosDeamon_HumanoidFoot</def>
+					<customLabel>left foot</customLabel>
+					<coverage>0.2</coverage>
+				</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_HumanoidLeg</def>
+				<customLabel>right leg</customLabel>
+				<coverage>0.2</coverage>
+				<height>Bottom</height>
+				<parts>
+				<li>
+					<def>OG_ChaosDeamon_HumanoidFoot</def>
+					<customLabel>right foot</customLabel>
+					<coverage>0.2</coverage>
+				</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_ChaosDeamon_Heart</def>
+				<coverage>0.06</coverage>
+				<depth>Inside</depth>
+			</li>
+		</parts>
+	</corePart>
+</BodyDef>
+ 
+</Defs>

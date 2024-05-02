@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--===================== ChaosDeamon specific ====================-->
+<!--======== Common to various ChaosDeamons ========-->
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_Neck</defName>
+	<label>neck</label>
+	<hitPoints>35</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+	<alive>false</alive>
+	<tags>
+		<li>BreathingPathway</li>
+		<li>EatingPathway</li>
+		<li>TalkingPathway</li>
+	</tags>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_Head</defName>
+	<label>head</label>
+	<hitPoints>40</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+	<alive>false</alive>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_Brain</defName>
+	<label>brain</label>
+	<hitPoints>15</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>ConsciousnessSource</li>
+	</tags>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_Heart</defName>
+	<label>heart</label>
+	<hitPoints>25</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>BloodPumpingSource</li>
+	</tags>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_VisualSensor</defName>
+	<label>eyer</label>
+	<hitPoints>15</hitPoints>
+	<frostbiteVulnerability>0</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<socketed>true</socketed>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>SightSource</li>
+	</tags>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_AuditorySensor</defName>
+	<label>ear</label>
+	<hitPoints>15</hitPoints>
+	<frostbiteVulnerability>0</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>HearingSource</li>
+	</tags>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_OlfactorySensor</defName>
+	<label>chemical analyzer</label>
+	<hitPoints>15</hitPoints>
+	<frostbiteVulnerability>0</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_Shoulder</defName>
+	<label>shoulder</label>
+	<hitPoints>30</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>ManipulationLimbSegment</li>
+	</tags>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_Arm</defName>
+	<label>arm</label>
+	<hitPoints>35</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>ManipulationLimbCore</li>
+	</tags>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_Hand</defName>
+	<label>hand</label>
+	<hitPoints>25</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>ManipulationLimbSegment</li>
+	</tags>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_Finger</defName>
+	<label>finger</label>
+	<hitPoints>13</hitPoints>
+	<frostbiteVulnerability>0</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<pawnGeneratorCanAmputate>true</pawnGeneratorCanAmputate>
+	<tags>
+		<li>ManipulationLimbDigit</li>
+	</tags>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_HumanoidLeg</defName>
+	<label>leg</label>
+	<hitPoints>35</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_HumanoidFoot</defName>
+	<label>foot</label>
+	<hitPoints>25</hitPoints>
+	<frostbiteVulnerability>0</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>MovingLimbSegment</li>
+	</tags>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_HumanoidTorso</defName>
+	<label>torso</label>
+	<hitPoints>45</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+</BodyPartDef>
+
+<!--===================== Swarm specific ====================-->
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_HeadMount</defName>
+	<label>intake</label>
+	<hitPoints>20</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>BreathingPathway</li>
+		<li>EatingPathway</li>
+		<li>TalkingPathway</li>
+	</tags>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_Carapace</defName>
+	<label>carapace</label>
+	<hitPoints>30</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<solid>true</solid>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_SwarmCore</defName>
+	<label>scarab swarm</label>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<solid>true</solid>
+	<conceptual>true</conceptual>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>OG_ChaosDeamon_SwarmNurgling</defName>
+	<label>swarm nurgle</label>
+	<hitPoints>16</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<tags>
+		<li>ConsciousnessSource</li>
+		<li>BloodPumpingSource</li>
+		<li>BloodFiltrationSource</li>
+		<li>SightSource</li>
+		<li>HearingSource</li>
+		<li>ManipulationLimbSegment</li>
+		<li>ManipulationLimbCore</li>
+		<li>MovingLimbSegment</li>
+		<li>MovingLimbCore</li>
+	</tags>
+</BodyPartDef>
+
+</Defs>

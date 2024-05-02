@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef Abstract="true" Name="OG_Sororitas_Faction_Base" ParentName="FactionBase">
+		<label>Adeptus Sororitas Order</label>
+		<description>The Adepta Sororitas, colloquially called the "Sisterhood," whose military arm is also known as the Sisters of Battle and formerly as the Daughters of the Emperor, are an all-female division of the Imperium of Man's state church known as the Ecclesiarchy or, more formally, as the Adeptus Ministorum.</description>
+		<pawnSingular>Sister</pawnSingular>
+		<pawnsPlural>Sisters</pawnsPlural>
+		<colorSpectrum>
+			<li>(0.25, 0.65, 0.05)</li>
+			<li>(0.25, 0.75, 0.05)</li>
+		</colorSpectrum>
+		<fixedLeaderKinds>
+			<li>OG_Sororitas_Faction_Canoness_Superior</li>
+		</fixedLeaderKinds>
+		<categoryTag>OG_Outlander_Sororitas</categoryTag>
+		<basicMemberKind>OG_Sororitas_Battle_Sister</basicMemberKind>
+		<requiredCountAtGameStart>1</requiredCountAtGameStart>
+		<settlementGenerationWeight>0</settlementGenerationWeight>
+		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority IgnoreIfNoMatchingField="True">90</configurationListOrderPriority>
+		<canMakeRandomly>true</canMakeRandomly>
+		<humanlikeFaction>true</humanlikeFaction>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>Canoness Superior</leaderTitle>
+		<settlementNameMaker>OG_Sororitas_NamerBases</settlementNameMaker>
+		<factionNameMaker>OG_Sororitas_Order_NamerFaction</factionNameMaker>
+		<techLevel>Ultra</techLevel>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Sororitas_Standard</li>
+				</categories>
+				<commonality>2.5</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Sororitas_Soldier</li>
+				</categories>
+				<commonality>10</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Imperium_Standard</li>
+				</categories>
+				<commonality>0.5</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Imperium_Soldier</li>
+				</categories>
+				<commonality>0.75</commonality>
+			</li>
+			<li>
+				<categories>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categories>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFilters>
+		<allowedCultures IgnoreIfNoMatchingField="True">
+			<li>OG_Imperial_Sororitas_Spacer</li>
+		</allowedCultures>
+		<disallowedMemes IgnoreIfNoMatchingField="True">
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
+			<OG_Imperial_Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">100</OG_Imperial_Structure_TheistEmbodied>
+		</structureMemeWeights>
+		<naturalColonyGoodwill IgnoreIfNoMatchingField="True">
+			<min>-60</min>
+			<max>0</max>
+		</naturalColonyGoodwill>
+		<startingGoodwill IgnoreIfNoMatchingField="True">
+			<min>10</min>
+			<max>40</max>
+		</startingGoodwill>
+		<hairTags IgnoreIfNoMatchingField="True">
+			<li>Urban</li>
+			<li>Rural</li>
+		</hairTags>
+		<visitorTraderKinds>
+			<li>OG_Sororitas_Trader_Visitor_Standard</li>
+		</visitorTraderKinds>
+		 <caravanTraderKinds>
+			<li>OG_Sororitas_Trader_Caravan_BulkGoods</li>
+			<li>OG_Sororitas_Trader_Caravan_CombatSupplier</li>
+			<li>OG_Sororitas_Trader_Caravan_Exotic</li>
+		</caravanTraderKinds>
+		<baseTraderKinds>
+			<li>OG_Sororitas_Trader_Base_Standard</li>
+		</baseTraderKinds>
+		<allowedArrivalTemperatureRange>
+			<min>-50</min>
+			<max>45</max>
+		</allowedArrivalTemperatureRange>
+		<maxPawnCostPerTotalPointsCurve>
+			<points>
+				<li>(0,35)</li>
+				<li>(70, 50)</li>
+				<li>(700, 100)</li>
+				<li>(1300, 150)</li>
+				<li>(100000, 10000)</li>
+			</points>
+		</maxPawnCostPerTotalPointsCurve>
+		<pawnGroupMakers>
+			<li>
+				<kindDef>Combat</kindDef>
+				<options>
+					<OG_Sororitas_Battle_Sister>230</OG_Sororitas_Battle_Sister>
+					<OG_Sororitas_Battle_Sister_Special>100</OG_Sororitas_Battle_Sister_Special>
+					<OG_Sororitas_Battle_Sister_Heavy>65</OG_Sororitas_Battle_Sister_Heavy>
+					<OG_Sororitas_Battle_Sister_Superior>50</OG_Sororitas_Battle_Sister_Superior>
+					<OG_Sororitas_Sister_Celestian>30</OG_Sororitas_Sister_Celestian>
+					<OG_Sororitas_Sister_Celestian_Special>30</OG_Sororitas_Sister_Celestian_Special>
+					<OG_Sororitas_Sister_Celestian_Heavy>10</OG_Sororitas_Sister_Celestian_Heavy>
+					<OG_Sororitas_Sister_Celestian_Superior>1</OG_Sororitas_Sister_Celestian_Superior>
+					<OG_Sororitas_Canoness>1</OG_Sororitas_Canoness>
+				</options>
+			</li>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<OG_Sororitas_Battle_Sister>230</OG_Sororitas_Battle_Sister>
+					<OG_Sororitas_Battle_Sister_Special>130</OG_Sororitas_Battle_Sister_Special>
+					<OG_Mechanicus_Tech_Priest_Engineer>1</OG_Mechanicus_Tech_Priest_Engineer>
+					<OG_Sororitas_Canoness>1</OG_Sororitas_Canoness>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<OG_Sororitas_Trader>1</OG_Sororitas_Trader>
+				</traders>
+				<carriers>
+					<Muffalo>2</Muffalo>
+					<Dromedary>2</Dromedary>
+				</carriers>
+				<guards>
+					<OG_Sororitas_Battle_Sister>130</OG_Sororitas_Battle_Sister>
+					<OG_Sororitas_Battle_Sister_Superior>1</OG_Sororitas_Battle_Sister_Superior>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<OG_Sororitas_Faction_Canoness_Superior>1</OG_Sororitas_Faction_Canoness_Superior>
+					<OG_Sororitas_Battle_Sister>230</OG_Sororitas_Battle_Sister>
+					<OG_Sororitas_Battle_Sister_Special>100</OG_Sororitas_Battle_Sister_Special>
+					<OG_Sororitas_Battle_Sister_Heavy>65</OG_Sororitas_Battle_Sister_Heavy>
+					<OG_Sororitas_Battle_Sister_Superior>50</OG_Sororitas_Battle_Sister_Superior>
+					<OG_Sororitas_Sister_Celestian>30</OG_Sororitas_Sister_Celestian>
+					<OG_Sororitas_Sister_Celestian_Special>30</OG_Sororitas_Sister_Celestian_Special>
+					<OG_Sororitas_Sister_Celestian_Heavy>10</OG_Sororitas_Sister_Celestian_Heavy>
+					<OG_Sororitas_Sister_Celestian_Superior>1</OG_Sororitas_Sister_Celestian_Superior>
+				</options>
+			</li>
+		</pawnGroupMakers>
+		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+		<factionIconPath>Icons/Imperial/Sororitas/Icon_Adeptus_Sororitas</factionIconPath>
+	</FactionDef>
+
+	<FactionDef ParentName="OG_Sororitas_Faction_Base">
+		<defName>OG_Sororitas_Faction</defName>
+	</FactionDef>
+	
+</Defs>

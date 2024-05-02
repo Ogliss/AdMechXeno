@@ -1,0 +1,858 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- ============================ Adeptus Sororitas Base Pawnkinds ========================== -->
+	<!-- ============================ Base ========================== -->
+	<PawnKindDef Abstract="True" Name="OG_Sororitas_Base_Kind">
+		<defaultFactionType>OG_Sororitas_PlayerColony</defaultFactionType>
+		<race>Human</race>
+		<backstoryFiltersOverride>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Standard</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Outlander</li>
+					<li>Imperium_Standard</li>
+					<li>Imperium_Standard</li>
+				</categoriesChildhood>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Standard</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFiltersOverride>
+		<chemicalAddictionChance>0.005</chemicalAddictionChance>
+		<!--baseRecruitDifficulty>0.60</baseRecruitDifficulty-->
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelTags>
+			<li>OGIGClothing</li>
+			<li>IndustrialBasic</li>
+		</apparelTags>
+		 <weaponTags>
+			<li>LasPistol</li>
+			<li>AutoPistol</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- ============================ Civilian Base ========================== -->
+	<PawnKindDef Abstract="True" Name="OG_Sororitas_Civilian_Base" ParentName="OG_Sororitas_Base_Kind">
+		<combatPower>25</combatPower>
+		<itemQuality>Poor</itemQuality>
+		<isFighter>false</isFighter>
+		<gearHealthRange>
+			<min>0.2</min>
+			<max>2.0</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>300</min>
+			<max>900</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>200</min>
+			<max>400</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>Gun</li>
+			<li>NonNeolithicOnlyMelee</li>
+		</weaponTags>
+		<techHediffsMoney>
+			<min>200</min>
+			<max>300</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Simple</li>
+		</techHediffsTags>
+		<techHediffsChance>0.51</techHediffsChance>
+		<invNutrition>2.55</invNutrition>
+		<inventoryOptions>
+			<skipChance>0.75</skipChance>
+			<subOptionsChooseOne>
+			<li>
+				<choiceChance>90</choiceChance>
+				<thingDef>Silver</thingDef>
+				<countRange>
+				<min>25</min>
+				<max>70</max>
+				</countRange>
+			</li>
+			<li>
+				<choiceChance>10</choiceChance>
+				<thingDef>Silver</thingDef>
+				<countRange>
+				<min>700</min>
+				<max>1000</max>
+				</countRange>
+			</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>2</min>
+					<max>5</max>
+				</primaryMagazineCount>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!-- ============================ Trader ========================== -->
+	<PawnKindDef ParentName="OG_Sororitas_Civilian_Base">
+		<defName>OG_Sororitas_Trader</defName>
+		<label>Sororitas logistician</label>
+		<trader>true</trader>
+		<initialWillRange IgnoreIfNoMatchingField="True">0~1</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">7~12</initialResistanceRange>
+	</PawnKindDef>
+
+	<!-- ============================ Faction Leader ========================== -->
+	<PawnKindDef Name="OG_Sororitas_Faction_Canoness_Superior_Base" ParentName="OG_Sororitas_Civilian_Base">
+		<defName>OG_Sororitas_Faction_Canoness_Superior</defName>
+		<label>canoness superior</label>
+		<labelPlural>canonesses superior</labelPlural>
+		<initialWillRange IgnoreIfNoMatchingField="True">6~10</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">34~54</initialResistanceRange>
+		<factionLeader>true</factionLeader>
+		<fixedGender>Female</fixedGender>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Canoness</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Sororitas_Standard</li>
+					<li>Imperium_Standard</li>
+					<li>Outlander</li>
+				</categoriesChildhood>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Canoness</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFiltersOverride>
+		<minGenerationAge>50</minGenerationAge>
+		<maxGenerationAge>300</maxGenerationAge>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+		<weaponMoney>
+			<min>9999</min>
+			<max>9999</max>
+		</weaponMoney>
+		<apparelRequired>
+			<li>OGAS_Apparel_PowerArmourHelmet</li>
+			<li>OGAS_Apparel_PowerArmour</li>
+		</apparelRequired>
+		<apparelTags>
+			<li>OGAMClothing</li>
+			<li>OGIGClothing</li>
+		</apparelTags>
+		 <weaponTags>
+			<li>ImperialSororitasBoltGun</li>
+		</weaponTags>
+		<techHediffsMoney>
+			<min>10000</min>
+			<max>20000</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<!--li>UseAllTechHediff</li-->
+		</techHediffsTags>
+		<techHediffsChance>10</techHediffsChance>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>5</min>
+					<max>8</max>
+				</primaryMagazineCount>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+	 
+	<!-- ============================ Military Base ========================== -->
+	<PawnKindDef Abstract="True" Name="OG_Sororitas_Military_Base" ParentName="OG_Sororitas_Base_Kind">
+		<chemicalAddictionChance>0</chemicalAddictionChance>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<isFighter>true</isFighter>
+		<requiredWorkTags>Violent</requiredWorkTags>
+		<invNutrition>2.55</invNutrition>
+		<itemQuality>Normal</itemQuality>
+		<minGenerationAge>19</minGenerationAge>
+		<maxGenerationAge>250</maxGenerationAge>
+		<gearHealthRange>
+			<min>0.7</min>
+			<max>2.3</max>
+		</gearHealthRange>
+		<apparelMoney>
+			<min>1500</min>
+			<max>5800</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>1400</min>
+			<max>20000</max>
+		</weaponMoney>
+		<techHediffsMoney>
+			<min>1000</min>
+			<max>15000</max>
+		</techHediffsMoney>
+		<inventoryOptions>
+			<skipChance>0.8</skipChance>
+			<subOptionsChooseOne>
+			<li>
+				<thingDef>Silver</thingDef>
+				<countRange>
+				<min>50</min>
+				<max>200</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>
+				<min>1</min>
+				<max>1</max>
+				</countRange>
+			</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>5</min>
+					<max>8</max>
+				</primaryMagazineCount>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!-- ============================ Military ========================== -->
+	<!-- ============================ Human ========================== -->
+	
+	<!-- ============================ Sororitas Battle Sisters ============================ -->
+	<!-- ============================ Base ============================ -->
+	<PawnKindDef Abstract="True" Name="OG_Sororitas_Battle_Sister_Base" ParentName="OG_Sororitas_Military_Base">
+		<label>battle sister</label>
+		<labelPlural>sisters of battle</labelPlural>
+		<defaultFactionType>OG_Sororitas_Faction</defaultFactionType>
+		<fixedGender>Female</fixedGender>
+		<initialWillRange IgnoreIfNoMatchingField="True">3~5</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">17~27</initialResistanceRange>
+		<combatPower>150</combatPower>
+		<!--baseRecruitDifficulty>0.30</baseRecruitDifficulty-->
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Sister</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Outlander</li>
+					<li>Sororitas_Standard</li>
+					<li>Imperium_Standard</li>
+				</categoriesChildhood>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Sister</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFiltersOverride>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+		<chemicalAddictionChance>0.08</chemicalAddictionChance>
+		<apparelMoney>
+			<min>3800</min>
+			<max>3800</max>
+		</apparelMoney>
+		<apparelTags>
+			<li>SororitasPowerArmourHelmet</li>
+		</apparelTags>
+		<apparelRequired>
+			<li>OGAS_Apparel_PowerArmour</li>
+		</apparelRequired>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<apparelAllowHeadgearChance>1</apparelAllowHeadgearChance>
+		<weaponMoney>
+			<min>1000</min>
+			<max>9999</max>
+		</weaponMoney>
+		<weaponTags>
+			<!-- <li>AMArmoury</li> -->
+		</weaponTags>
+		<techHediffsMoney>
+			<min>2000</min>
+			<max>3000</max>
+		</techHediffsMoney>
+		<techHediffsTags>
+			<li>Advanced</li>
+			<li>AdvancedWeapon</li>
+		</techHediffsTags>
+		<techHediffsChance>1</techHediffsChance>
+		<combatEnhancingDrugsChance>0.5</combatEnhancingDrugsChance>
+		<combatEnhancingDrugsCount>
+			<min>1</min>
+			<max>2</max>
+		</combatEnhancingDrugsCount>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>5</min>
+					<max>8</max>
+				</primaryMagazineCount>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!-- ============================ Battle Sister ========================== -->
+	<PawnKindDef Name="OG_Sororitas_Battle_Sister" ParentName="OG_Sororitas_Battle_Sister_Base">
+		<defName>OG_Sororitas_Battle_Sister</defName>
+		<apparelTags>
+		
+		</apparelTags>
+		<apparelMoney>
+		
+		</apparelMoney>
+		<weaponMoney>
+			<min>2400</min>
+			<max>28000</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>ImperialSororitasBoltGun</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- ============================ Battle Sister Special Weapons ========================== -->
+	<PawnKindDef Name="OG_Sororitas_Battle_Sister_Special" ParentName="OG_Sororitas_Battle_Sister_Base">
+		<defName>OG_Sororitas_Battle_Sister_Special</defName>
+		<combatPower>180</combatPower>
+		<apparelTags>
+		
+		</apparelTags>
+		<apparelMoney>
+		
+		</apparelMoney>
+		<weaponMoney>
+			<min>3400</min>
+			<max>28000</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>ImperialStormBolter</li>
+			<li>OGIGFlamer</li>
+			<li>OGIGMetlaGun</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- ============================ Battle Sister Heavy Weapons ========================== -->
+	<PawnKindDef Name="OG_Sororitas_Battle_Sister_Heavy" ParentName="OG_Sororitas_Battle_Sister_Base">
+		<defName>OG_Sororitas_Battle_Sister_Heavy</defName>
+		<combatPower>200</combatPower>
+		<apparelTags>
+		
+		</apparelTags>
+		<apparelMoney>
+			<min>1500</min>
+			<max>2500</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>3400</min>
+			<max>28000</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>ImperialHeavyBolter</li>
+			<li>ImperialHeavyFlamer</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- ============================ Battle Sister Superior ========================== -->
+	<PawnKindDef Name="OG_Sororitas_Battle_Sister_Superior" ParentName="OG_Sororitas_Battle_Sister_Base">
+		<defName>OG_Sororitas_Battle_Sister_Superior</defName>
+		<label>sister superior</label>
+		<labelPlural>sisters superior</labelPlural>
+		<initialWillRange IgnoreIfNoMatchingField="True">4~6</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">20~30</initialResistanceRange>
+		<combatPower>240</combatPower>
+		<minGenerationAge>35</minGenerationAge>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Sister_Superior</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Outlander</li>
+					<li>Sororitas_Standard</li>
+					<li>Imperium_Standard</li>
+				</categoriesChildhood>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Sister_Superior</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFiltersOverride>
+		<gearHealthRange>
+			<min>0.7</min>
+			<max>2.3</max>
+		</gearHealthRange>
+		<apparelRequired>
+		
+		</apparelRequired>
+		<apparelTags>
+			<li>SororitasPowerArmourHelmet</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>1500</min>
+			<max>2500</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>3400</min>
+			<max>28000</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>ImperialBoltPistol</li>
+			<li>ImperialHandFlamer</li>
+			<li>Infernopistol</li>
+			<li>ImperialCombiMelta</li>
+			<li>ImperialCombiFlamer</li>
+			<li>IEviscerator</li>
+			<li>IPowerSword</li>
+			<li>IPowerAxe</li>
+			<li>IPowerMaul</li>
+		</weaponTags>
+		<techHediffsMoney>
+			<min>1000</min>
+			<max>15000</max>
+		</techHediffsMoney>
+		<combatEnhancingDrugsCount>
+			<min>0</min>
+			<max>2</max>
+		</combatEnhancingDrugsCount>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<techHediffsChance>0.73</techHediffsChance>
+		<inventoryOptions>
+			<skipChance>0.8</skipChance>
+			<subOptionsChooseOne>
+			<li>
+				<thingDef>Silver</thingDef>
+				<countRange>
+				<min>50</min>
+				<max>200</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>
+				<min>1</min>
+				<max>1</max>
+				</countRange>
+			</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+	</PawnKindDef>
+
+	<!-- ============================ Celestian Sister Base ========================== -->
+	<PawnKindDef Abstract="True" Name="OG_Sororitas_Celestian_Sister_Base" ParentName="OG_Sororitas_Battle_Sister_Base">
+		<label>celestian sister</label>
+		<labelPlural>sisters celestian</labelPlural>
+		<combatPower>180</combatPower>
+		<minGenerationAge>30</minGenerationAge>
+		<gearHealthRange>
+			<min>0.7</min>
+			<max>2.3</max>
+		</gearHealthRange>
+		<apparelTags>
+		
+		</apparelTags>
+		<apparelMoney>
+			<min>1500</min>
+			<max>25000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>3400</min>
+			<max>28000</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>RadiumCarbine</li>
+			<li>RadiumPistol</li>
+		</weaponTags>
+		<techHediffsMoney>
+			<min>1000</min>
+			<max>15000</max>
+		</techHediffsMoney>
+		<combatEnhancingDrugsCount>
+			<min>0</min>
+			<max>2</max>
+		</combatEnhancingDrugsCount>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+		<techHediffsChance>0.73</techHediffsChance>
+		<inventoryOptions>
+			<skipChance>0.8</skipChance>
+			<subOptionsChooseOne>
+			<li>
+				<thingDef>Silver</thingDef>
+				<countRange>
+				<min>50</min>
+				<max>200</max>
+				</countRange>
+			</li>
+			<li>
+				<thingDef>MedicineIndustrial</thingDef>
+				<countRange>
+				<min>1</min>
+				<max>1</max>
+				</countRange>
+			</li>
+			</subOptionsChooseOne>
+		</inventoryOptions>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Celestine</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Outlander</li>
+					<li>Sororitas_Standard</li>
+					<li>Imperium_Standard</li>
+				</categoriesChildhood>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Celestine</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFiltersOverride>
+	</PawnKindDef>
+
+	<!-- ============================ Celestian Sister ========================== -->
+	<PawnKindDef Name="OG_Sororitas_Celestian_Sister" ParentName="OG_Sororitas_Celestian_Sister_Base">
+		<defName>OG_Sororitas_Sister_Celestian</defName>
+		<label>celestian sister</label>
+		<combatPower>120</combatPower>
+		<minGenerationAge>25</minGenerationAge>
+		<apparelTags>
+		
+		</apparelTags>
+		<weaponMoney>
+			<min>3400</min>
+			<max>28000</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>ImperialStormBolter</li>
+			<li>PlasmaPistol</li>
+			<li>BoltPistol</li>
+			<li>IChainsword</li>
+			<li>IEviscerator</li>
+			<li>IPowerSword</li>
+			<li>IPowerAxe</li>
+			<li>IPowerMaul</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- ============================ Battle Sister Celestian Special Weapons ========================== -->
+	<PawnKindDef Name="OG_Sororitas_Celestian_Sister_Special" ParentName="OG_Sororitas_Celestian_Sister_Base">
+		<defName>OG_Sororitas_Sister_Celestian_Special</defName>
+		<label>celestian sister specialist</label>
+		<combatPower>120</combatPower>
+		<minGenerationAge>25</minGenerationAge>
+		<apparelTags>
+		
+		</apparelTags>
+		<weaponMoney>
+			<min>3400</min>
+			<max>28000</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>ImperialStormBolter</li>
+			<li>PlasmaPistol</li>
+			<li>BoltPistol</li>
+			<li>IChainsword</li>
+			<li>IEviscerator</li>
+			<li>IPowerSword</li>
+			<li>IPowerAxe</li>
+			<li>IPowerMaul</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- ============================ Battle Sister Celestian Heavy Weapons ========================== -->
+	<PawnKindDef Name="OG_Sororitas_Celestian_Sister_Heavy" ParentName="OG_Sororitas_Celestian_Sister_Base">
+		<defName>OG_Sororitas_Sister_Celestian_Heavy</defName>
+		<label>celestian sister specialist</label>
+		<combatPower>200</combatPower>
+		<gearHealthRange>
+		
+		</gearHealthRange>
+		<apparelTags>
+		
+		</apparelTags>
+		<apparelMoney>
+		
+		</apparelMoney>
+		<weaponMoney>
+			<min>1400</min>
+			<max>28000</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>HeavyBolter</li>
+			<li>HeavyFlamer</li>
+			<li>MultiMetla</li>
+		</weaponTags>
+	</PawnKindDef>
+
+	<!-- ============================ Battle Sister Veteran Superior ========================== -->
+	<PawnKindDef Name="OG_Sororitas_Battle_Sister_Veteran_Superior" ParentName="OG_Sororitas_Celestian_Sister_Base">
+		<defName>OG_Sororitas_Sister_Celestian_Superior</defName>
+		<label>veteran sister superior</label>
+		<labelPlural>veteran sisters superior</labelPlural>
+		<combatPower>260</combatPower>
+		<minGenerationAge>40</minGenerationAge>
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Sister_Superior</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Outlander</li>
+					<li>Sororitas_Standard</li>
+					<li>Imperium_Standard</li>
+				</categoriesChildhood>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Sister_Superior</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFiltersOverride>
+		<gearHealthRange>
+			<min>1.0</min>
+			<max>2.3</max>
+		</gearHealthRange>
+		<apparelRequired>
+		
+		</apparelRequired>
+		<apparelTags>
+		
+		</apparelTags>
+		<apparelMoney>
+			<min>1500</min>
+			<max>25000</max>
+		</apparelMoney>
+		<weaponMoney>
+			<min>1400</min>
+			<max>28000</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>ImperialBoltPistol</li>
+			<li>ImperialHandFlamer</li>
+			<li>Infernopistol</li>
+			<li>ImperialCombiMelta</li>
+			<li>ImperialCombiFlamer</li>
+			<li>IEviscerator</li>
+			<li>IPowerSword</li>
+			<li>IPowerAxe</li>
+			<li>IPowerMaul</li>
+		</weaponTags>
+		<techHediffsMoney> 
+			<min>1000</min>
+			<max>15000</max>
+		</techHediffsMoney>
+		<combatEnhancingDrugsCount>
+			<min>0</min>
+			<max>2</max>
+		</combatEnhancingDrugsCount>
+		<techHediffsTags>
+			<li>Advanced</li>
+		</techHediffsTags>
+	</PawnKindDef>
+
+	<!-- ============================ Sororitas Canoness ============================ -->
+	<!-- ============================ Base ============================ -->
+	<PawnKindDef Name="OG_Sororitas_Canoness_Base" ParentName="OG_Sororitas_Military_Base">
+		<defName>OG_Sororitas_Canoness</defName>
+		<label>canoness</label>
+		<labelPlural>canonesses</labelPlural>
+		<fixedGender>Female</fixedGender>
+		<initialWillRange IgnoreIfNoMatchingField="True">6~10</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">34~54</initialResistanceRange>
+		<defaultFactionType>OG_Sororitas_Faction</defaultFactionType>
+		<combatPower>600</combatPower>
+		<!--baseRecruitDifficulty>0.50</baseRecruitDifficulty-->
+		<backstoryFiltersOverride Inherit="False">
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Canoness</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Outlander</li>
+					<li>Imperium_Standard</li>
+					<li>Sororitas_Standard</li>
+				</categoriesChildhood>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Canoness</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFiltersOverride>
+		<forceNormalGearQuality>true</forceNormalGearQuality>
+		<isFighter>true</isFighter>
+		<chemicalAddictionChance>0.08</chemicalAddictionChance>
+		<gearHealthRange>
+			<min>0.4</min>
+			<max>1.4</max>
+		</gearHealthRange>
+		<apparelRequired>
+			<li>OGAS_Apparel_PowerArmour</li>
+		</apparelRequired>
+		<apparelMoney>
+			<min>3800</min>
+			<max>3800</max>
+		</apparelMoney>
+		<apparelTags>
+			<li>SororitasPowerArmourHelmet</li>
+		</apparelTags>
+		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
+		<apparelAllowHeadgearChance>0.5</apparelAllowHeadgearChance>
+		<weaponMoney>
+			<min>9999</min>
+			<max>9999</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>ImperialSororitasBoltGun</li>
+			<li>ImperialBoltPistol</li>
+			<li>ImperialHandFlamer</li>
+			<li>Infernopistol</li>
+			<li>ImperialCombiMelta</li>
+			<li>ImperialCombiFlamer</li>
+			<li>IEviscerator</li>
+			<li>IPowerSword</li>
+			<li>IPowerAxe</li>
+			<li>IPowerMaul</li>
+		</weaponTags>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>5</min>
+					<max>8</max>
+				</primaryMagazineCount>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!-- ============================ Base Construct ============================ -->
+	<PawnKindDef Abstract="True" Name="OG_Sororitas_Construct_BaseKind">
+		<defaultFactionType>OG_Sororitas_Faction</defaultFactionType>
+		<aiAvoidCover>true</aiAvoidCover>
+		<destroyGearOnDrop>false</destroyGearOnDrop>
+		<modExtensions>
+			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.LoadoutPropertiesExtension">
+				<primaryMagazineCount>
+					<min>5</min>
+					<max>8</max>
+				</primaryMagazineCount>
+			</li>
+		</modExtensions>
+	</PawnKindDef>
+
+	<!--  Pentient Engine Base -->
+	<!--PawnKindDef Abstract="True" Name="OG_Sororitas_Pentient_Engine_Base" ParentName="OG_Sororitas_Construct_BaseKind">
+		<label>sicarian rust stalker</label>
+		<race>OG_Sororitas_Sicarian</race>
+		<combatPower>160</combatPower>
+		<lifeStages>
+			<li>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Sororitas/AdeptusSororitasSicarian</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>1.25</drawSize>
+				<shadowData>
+				<volume>(0.4, 0.8, 0.4)</volume>
+				</shadowData>
+			</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>9999</min>
+			<max>9999</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>IGCDualLightningClaw</li>
+			<li>LightningClaw</li>
+		</weaponTags>
+	</PawnKindDef-->
+
+	<!--  --> 
+	<!--PawnKindDef Abstract="True" Name="OG_Sororitas_Pentient_Engine" ParentName="OG_Sororitas_Pentient_Engine_Base">
+		<label>pentient engine</label>
+		<race>OG_Sororitas_Pentient_Engine</race>
+		<combatPower>160</combatPower>
+		<lifeStages>
+			<li>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Sororitas/AdeptusSororitasSicarian</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>1.5</drawSize>
+				<shadowData>
+				<volume>(0.4, 0.8, 0.4)</volume>
+				</shadowData>
+			</bodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>9999</min>
+			<max>9999</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>StubCarbine</li>
+		</weaponTags>
+		<modExtensions>
+			<li Class="AdeptusSororitas.ReserveDeploymentExtension">
+				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
+			</li>
+		</modExtensions>
+	</PawnKindDef-->
+
+	<!-- ============================ Servitors ========================== -->
+	
+</Defs>

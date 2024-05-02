@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="BaseFilth">
+	<defName>OG_FilthBlood_ChaosDeamon</defName>
+	<label>deamonic viscera</label>
+	<statBases>
+		<Beauty>-20</Beauty>
+		<Cleanliness>-15</Cleanliness>
+	</statBases>
+	<graphicData>
+		<texPath>Things/Filth/Spatter</texPath>
+		<color>(172, 0, 135, 180)</color>
+	</graphicData>
+	<filth>
+		<rainWashes>true</rainWashes>
+		<cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+		<canFilthAttach>true</canFilthAttach>
+	</filth>
+</ThingDef> 
+
+<ThingDef ParentName="BaseFilth">
+	<defName>OG_FilthBlood_Tyranid</defName>
+	<label>blood</label>
+	<statBases>
+		<Beauty>-20</Beauty>
+		<Cleanliness>-15</Cleanliness>
+	</statBases>
+	<graphicData>
+		<texPath>Things/Filth/Spatter</texPath>
+		<color>(172, 0, 65, 180)</color>
+	</graphicData>
+	<filth>
+		<rainWashes>true</rainWashes>
+		<cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+		<canFilthAttach>true</canFilthAttach>
+	</filth>
+</ThingDef> 
+
+<ThingDef ParentName="BaseFilth">
+	<defName>OG_FilthBlood_Necron</defName>
+	<label>living metal</label>
+	<statBases>
+		<Beauty>-14</Beauty>
+		<Cleanliness>-10</Cleanliness>
+	</statBases>
+	<graphicData>
+		<texPath>Things/Filth/Spatter</texPath>
+		<color>(99, 99, 99, 180)</color>
+	</graphicData>
+	<filth>
+		<rainWashes>true</rainWashes>
+		<cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+		<canFilthAttach>true</canFilthAttach>
+	</filth>
+</ThingDef>
+
+<ThingDef ParentName="BaseFilth">
+	<defName>OG_FilthBlood_Orkoid</defName>
+	<label>blood</label>
+	<statBases>
+		<Beauty>-14</Beauty>
+		<Cleanliness>-10</Cleanliness>
+	</statBases>
+	<graphicData>
+		<texPath>Things/Filth/Spatter</texPath>
+		<color>(179, 185, 73, 180)</color>
+	</graphicData>
+	<filth>
+		<rainWashes>true</rainWashes>
+		<cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+		<canFilthAttach>true</canFilthAttach>
+	</filth>
+</ThingDef>
+	 
+<ThingDef ParentName="BaseFilth">
+	<defName>OG_FilthBlood_Tau</defName>
+	<label>blood</label>
+	<statBases>
+		<Beauty>-14</Beauty>
+		<Cleanliness>-10</Cleanliness>
+	</statBases>
+	<graphicData>
+		<texPath>Things/Filth/Spatter</texPath>
+		<color>(190, 120, 64, 180)</color>
+	</graphicData>
+	<filth>
+		<rainWashes>true</rainWashes>
+		<cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+		<canFilthAttach>true</canFilthAttach>
+	</filth>
+</ThingDef>
+ 
+<ThingDef ParentName="BaseFilth">
+	<defName>OG_FilthBlood_Kroot</defName>
+	<label>blood</label>
+	<statBases>
+		<Beauty>-14</Beauty>
+		<Cleanliness>-10</Cleanliness>
+	</statBases>
+	<graphicData>
+		<texPath>Things/Filth/Spatter</texPath>
+		<color>(190, 120, 64, 180)</color>
+	</graphicData>
+	<filth>
+		<rainWashes>true</rainWashes>
+		<cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+		<canFilthAttach>true</canFilthAttach>
+	</filth>
+</ThingDef>
+ 
+<ThingDef ParentName="BaseFilth">
+	<defName>OG_FilthBlood_Vespid</defName>
+	<label>blood</label>
+	<statBases>
+		<Beauty>-14</Beauty>
+		<Cleanliness>-10</Cleanliness>
+	</statBases>
+	<graphicData>
+		<texPath>Things/Filth/Spatter</texPath>
+		<color>(190, 120, 64, 180)</color>
+	</graphicData>
+	<filth>
+		<rainWashes>true</rainWashes>
+		<cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+		<canFilthAttach>true</canFilthAttach>
+	</filth>
+</ThingDef>
+ 
+<ThingDef ParentName="BaseFilth">
+	<defName>OG_FilthBlood_Eldar</defName>
+	<label>blood</label>
+	<statBases>
+		<Beauty>-14</Beauty>
+		<Cleanliness>-10</Cleanliness>
+	</statBases>
+	<graphicData>
+		<texPath>Things/Filth/Spatter</texPath>
+		<color>(131, 34, 34, 180)</color>
+	</graphicData>
+	<filth>
+		<rainWashes>true</rainWashes>
+		<cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+		<canFilthAttach>true</canFilthAttach>
+	</filth>
+</ThingDef> 
+
+<ThingDef ParentName="BaseFilth">
+	<defName>OG_FilthBlood_Ambull</defName>
+	<label>blood</label>
+	<statBases>
+		<Beauty>-14</Beauty>
+		<Cleanliness>-10</Cleanliness>
+	</statBases>
+	<graphicData>
+		<texPath>Things/Filth/Spatter</texPath>
+		<color>(190, 120, 64, 180)</color>
+	</graphicData>
+	<filth>
+		<rainWashes>true</rainWashes>
+		<cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+		<canFilthAttach>true</canFilthAttach>
+	</filth>
+</ThingDef>
+ 
+<ThingDef ParentName="BaseFilth">
+	<defName>OG_FilthBlood_ClawedFiend</defName>
+	<label>blood</label>
+	<statBases>
+		<Beauty>-14</Beauty>
+		<Cleanliness>-10</Cleanliness>
+	</statBases>
+	<graphicData>
+		<texPath>Things/Filth/Spatter</texPath>
+		<color>(190, 120, 64, 180)</color>
+	</graphicData>
+	<filth>
+		<rainWashes>true</rainWashes>
+		<cleaningWorkToReduceThickness>90</cleaningWorkToReduceThickness>
+		<canFilthAttach>true</canFilthAttach>
+	</filth>
+</ThingDef>
+ 
+</Defs>

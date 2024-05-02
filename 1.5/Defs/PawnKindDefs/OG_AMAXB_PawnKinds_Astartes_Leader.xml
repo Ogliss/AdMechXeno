@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Chapter Master -->
+	<PawnKindDef ParentName="OG_Astartes_Pawnkind_Base">
+		<defName>OG_Astartes_ChapterMaster</defName>
+		<label>chapter master</label>
+		<race>Human</race>
+		<combatPower>15000</combatPower>
+		<itemQuality>Superior</itemQuality>
+		<factionLeader>true</factionLeader>
+		<aiAvoidCover>false</aiAvoidCover>
+		<initialWillRange IgnoreIfNoMatchingField="True">3~5</initialWillRange>
+		<initialResistanceRange IgnoreIfNoMatchingField="True">17~27</initialResistanceRange>
+		<lifeStages>
+			<li>
+				<bodyGraphicData>
+					<texPath>Things/Pawn/ToolUser/Astartes/Renegade/Astartes_Commander</texPath>
+					<graphicClass>Graphic_Multi</graphicClass>
+					<drawSize>3.000</drawSize>
+					<shadowData>
+						<volume>(0.6, 0.8, 0.6)</volume>
+					</shadowData>
+				</bodyGraphicData>
+				<dessicatedBodyGraphicData>
+					<texPath>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Male</texPath>
+					<drawSize>1.350</drawSize>
+				</dessicatedBodyGraphicData>
+			</li>
+		</lifeStages>
+		<weaponMoney>
+			<min>7500</min>
+			<max>15000</max>
+		</weaponMoney>
+		<weaponTags>
+			<li>DESplinterPistol</li>
+		</weaponTags>
+	</PawnKindDef>
+	
+</Defs>

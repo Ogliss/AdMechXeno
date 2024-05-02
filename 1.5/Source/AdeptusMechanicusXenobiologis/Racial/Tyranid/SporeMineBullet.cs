@@ -1,0 +1,35 @@
+﻿using System;
+using System.Runtime.CompilerServices;
+using RimWorld;
+using Verse;
+
+namespace AdeptusMechanicus
+{
+    // Token: 0x02000003 RID: 3
+    public class SporeMine : ArcingBullet
+    {
+
+        public override Graphic Graphic
+        {
+            get
+            {
+               return base.DefaultGraphic.GetColoredVersion(base.DefaultGraphic.Shader, Launcher.DrawColor, DrawColorTwo);
+            }
+        }
+
+		public override void Impact(Thing hitThing, bool blockedByShield = false)
+		{
+			Faction faction = this.launcher.Faction;
+			ThingDef raceDef = this.def.projectile.postExplosionSpawnThingDef;
+			Pawn pawn = GenSpawn.Spawn(PawnGenerator.GeneratePawn(SporeMine.mineDef, faction), base.Position, base.Map, WipeMode.Vanish) as Pawn;
+			pawn.def = raceDef;
+			pawn.health.AddHediff(HediffDefOf.Scaria, null, null, null);
+			pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent, null, false, false, false, null, false) ;
+			GenClamor.DoClamor(this, 2.1f, ClamorDefOf.Impact);
+			this.Destroy(DestroyMode.Vanish);
+		}
+
+		// Token: 0x04000001 RID: 1
+		public static readonly PawnKindDef mineDef = PawnKindDef.Named("OG_Tyranid_SporeMine");
+	}
+}
