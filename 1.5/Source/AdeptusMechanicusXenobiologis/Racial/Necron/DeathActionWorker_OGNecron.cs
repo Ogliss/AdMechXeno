@@ -23,7 +23,7 @@ namespace AdeptusMechanicus
         float maxtime = 30f;
         public override void PawnDied(Corpse corpse, Lord prevLord)
         {
-            Comp_NecronOG _Necron = corpse.InnerPawn.TryGetCompFast<Comp_NecronOG>();
+            Comp_Necron _Necron = corpse.InnerPawn.TryGetCompFast<Comp_Necron>();
             if (_Necron==null)
             {
                 return;

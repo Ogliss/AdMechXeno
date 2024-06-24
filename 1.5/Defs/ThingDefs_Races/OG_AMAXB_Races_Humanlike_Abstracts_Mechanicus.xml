@@ -31,6 +31,7 @@
 			<nameCategory>HumanStandard</nameCategory>
 			<lifeExpectancy>80</lifeExpectancy>
 			<body>Human</body>
+			<linkedCorpseKind>Human</linkedCorpseKind>
 			<baseBodySize>1</baseBodySize>
 			<baseHealthScale>1</baseHealthScale>
 			<foodType>OmnivoreHuman</foodType>

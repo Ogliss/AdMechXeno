@@ -8,8 +8,8 @@
 	<labelFemale>woman in black</labelFemale>
 	<labelPlural>strangers in black</labelPlural>
 	<combatPower>100</combatPower>
-	<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-	<initialResistanceRange IgnoreIfNoMatchingField="True">0~2</initialResistanceRange>
+	<initialWillRange>0~0</initialWillRange>
+	<initialResistanceRange>0~2</initialResistanceRange>
 	<minGenerationAge>20</minGenerationAge>
 	<maxGenerationAge>50</maxGenerationAge>
 	<isFighter>true</isFighter>
@@ -85,8 +85,8 @@
 	<labelFemale>woman in black</labelFemale>
 	<labelPlural>strangers in black</labelPlural>
 	<combatPower>200</combatPower>
-	<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-	<initialResistanceRange IgnoreIfNoMatchingField="True">0~2</initialResistanceRange>
+	<initialWillRange>0~0</initialWillRange>
+	<initialResistanceRange>0~2</initialResistanceRange>
 	<minGenerationAge>45</minGenerationAge>
 	<maxGenerationAge>120</maxGenerationAge>
 	<isFighter>true</isFighter>

@@ -11,8 +11,8 @@
 		<basicMemberKind>OG_Militarum_Guardsman_Ranged_Cadian</basicMemberKind>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<settlementGenerationWeight>1</settlementGenerationWeight>
-		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
-		<configurationListOrderPriority IgnoreIfNoMatchingField="True">20</configurationListOrderPriority>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>20</configurationListOrderPriority>
 		<canMakeRandomly>true</canMakeRandomly>
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
@@ -32,35 +32,32 @@
 			<min>-50</min>
 			<max>45</max>
 		</allowedArrivalTemperatureRange>
-		<allowedCultures IgnoreIfNoMatchingField="True">
+		<allowedCultures>
 			<li>OG_Imperial_Militarum_Spacer</li>
 		</allowedCultures>
-		<disallowedMemes IgnoreIfNoMatchingField="True">
-			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
-			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
-			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
-		</disallowedMemes>
-		<requiredMemes IgnoreIfNoMatchingField="True">
+		<requiredMemes>
 			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
 		</requiredMemes>
-		<structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
-			<OG_Imperial_Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">100</OG_Imperial_Structure_TheistEmbodied>
+		<disallowedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginChristian</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginIslamic</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginHindu</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginBuddhist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">AnimalPersonhood</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HighLife</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Rancher</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">TreeConnection</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">NaturePrimacy</li>
+		</disallowedMemes>
+		<structureMemeWeights Inherit="False">
+			<Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">100</Structure_TheistEmbodied>
 		</structureMemeWeights>
-		<pawnNameMaker IgnoreIfNoMatchingField="True">OG_Militarum_NamerPerson</pawnNameMaker>
-		<pawnNameMakerFemale IgnoreIfNoMatchingField="True">OG_Militarum_NamerPersonFemale</pawnNameMakerFemale>
-		<naturalColonyGoodwill IgnoreIfNoMatchingField="True">
-			<min>-60</min>
-			<max>0</max>
-		</naturalColonyGoodwill>
-		<startingGoodwill IgnoreIfNoMatchingField="True">
-			<min>10</min>
-			<max>40</max>
-		</startingGoodwill>
-		<hairTags IgnoreIfNoMatchingField="True">
-			<li>Urban</li>
-			<li>Rural</li>
-		</hairTags>
 		<pawnGroupMakers Inherit="False">
 			<li>
 				<kindDef>Combat</kindDef>

@@ -10,8 +10,8 @@
 		<combatPower>12500</combatPower>
 		<itemQuality>Superior</itemQuality>
 		<factionLeader>true</factionLeader>
-		<initialWillRange IgnoreIfNoMatchingField="True">3~5</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">17~27</initialResistanceRange>
+		<initialWillRange>3~5</initialWillRange>
+		<initialResistanceRange>17~27</initialResistanceRange>
 		<weaponTags>
 			<li>NeolithicRangedChief</li>
 			<li>OBigChoppa</li>

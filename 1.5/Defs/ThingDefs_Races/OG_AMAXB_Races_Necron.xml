@@ -117,10 +117,8 @@
 	</butcherProducts>
 </ThingDef>
  
-<!-- Necron Scarab Swarm-->
-<ThingDef ParentName="OG_Necron_Base_Walker">
-	<defName>OG_Necron_ScarabSwarm</defName>
-	<label>Necron scarab swarm</label>
+<!-- Necron Scarabs Base-->
+<ThingDef Name="BaseNecronScarab" ParentName="OG_Necron_Base_Walker" Abstract="true">
 	<description>A Canoptek Scarab is a small, silver, beetle-like Necron construct. These robotic Scarabs are the most numerous and diverse of the Necrons' Canoptek machine servants. They are designed to break down organic and non-organic matter into raw energy, which can then be woven into fresh construct forms at the direction of the Scarabs’ controller. Essentially mindless feeding and replication machines of various sizes and functions, their swift, darting movements and their high-pitched chittering mimic in form and behaviour organic invertebrates but, directed by the will of a Cryptek or slaved to the more complex artificial intelligence of a Canoptek Spyder, they are capable of staggering feats of construction and destruction. It is for this latter function they are used by the Necron Lords as weapons of war -- an all-devouring tide of skittering metal launched ahead of a Necron phalanx that can break down tanks and fortifications and force an enemy to expend its firepower in frantic efforts to halt the onslaughts. However, Canoptek Scarabs lack a true hive mind. A swarm of Scarabs has no more true intelligence than one Scarab alone -- which is to say none at all. All they are driven by are simple instructions and even simpler instincts. Nevertheless, their highly sophisticated auto-routines and construct-patterns allow them to build Necron weapons and vehicles of immense power in a surprisingly brief time. Canoptek Scarabs are fearsome enemies in swarms due to their horrifying nature as mindless feeding machines.</description>
 	<statBases>
 		<MoveSpeed>4.7</MoveSpeed>
@@ -136,7 +134,7 @@
 				<li>Stab</li>
 			</capacities>
 			<power>5</power>
-			<cooldownTime>0.5</cooldownTime>
+			<cooldownTime>1</cooldownTime>
 			<linkedBodyPartsGroup>LeftBlade</linkedBodyPartsGroup>
 			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 		</li>
@@ -147,14 +145,12 @@
 				<li>Stab</li>
 			</capacities>
 			<power>5</power>
-			<cooldownTime>0.5</cooldownTime>
+			<cooldownTime>1</cooldownTime>
 			<linkedBodyPartsGroup>RightBlade</linkedBodyPartsGroup>
 			<alwaysTreatAsWeapon>true</alwaysTreatAsWeapon>
 		</li>
 	</tools>
 	<race>
-		<renderTree>Swarm</renderTree>
-		<body>OG_Necron_Scarab_Swarm</body>
 		<bloodDef>OG_FilthBlood_Necron</bloodDef>	
 		<baseHealthScale>2.00</baseHealthScale>
 		<soundMeleeHitPawn>Pawn_Melee_MechanoidSlash_HitPawn</soundMeleeHitPawn>
@@ -166,6 +162,29 @@
 			<bodyShape>Quadruped</bodyShape>
 		</li>
 	</modExtensions>
+</ThingDef>
+
+<!-- Necron Scarab Swarm-->
+<ThingDef ParentName="BaseNecronScarab">
+	<defName>OG_Necron_ScarabSingle</defName>
+	<label>scarab</label>
+	<race>
+		<body>OG_Necron_Scarab_Swarm</body>
+		<baseHealthScale>2</baseHealthScale>
+	</race>
+</ThingDef>
+
+<!-- Necron Scarab Swarm-->
+<ThingDef ParentName="BaseNecronScarab">
+	<defName>OG_Necron_ScarabSwarm</defName>
+	<label>scarab swarm</label>
+	<race>
+		<renderTree>OG_Swarm</renderTree>
+		<body>OG_Necron_Scarab_Swarm</body>
+		<baseHealthScale>2.00</baseHealthScale>
+		<hasCorpse>false</hasCorpse>
+		<linkedCorpseKind>OG_Necron_ScarabSingle</linkedCorpseKind>
+	</race>
 </ThingDef>
 
 <!-- Tomb Spyder -->
@@ -211,7 +230,7 @@
 		<ComponentIndustrial>2</ComponentIndustrial>
 	</butcherProducts>
 	<comps> 
-		<li Class="AdeptusMechanicus.CompProperties_NecronOG">
+		<li Class="AdeptusMechanicus.CompProperties_Necron">
 		</li> 
 		<li Class="AdeptusMechanicus.CompProperties_Floating">
 			<isFloater>true</isFloater>
@@ -282,7 +301,7 @@
 		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 	</race>
 	<comps> 
-		<li Class="AdeptusMechanicus.CompProperties_NecronOG">
+		<li Class="AdeptusMechanicus.CompProperties_Necron">
 		</li> 
 	</comps>
 	<modExtensions>
@@ -351,7 +370,7 @@
 		-->
 	</race>
 	<comps> 
-		<li Class="AdeptusMechanicus.CompProperties_NecronOG">
+		<li Class="AdeptusMechanicus.CompProperties_Necron">
 		</li> 
 	</comps>
 	<modExtensions>
@@ -418,7 +437,7 @@
 		</hediffGiverSets>
 	</race>
 	<comps> 
-		<li Class="AdeptusMechanicus.CompProperties_NecronOG">
+		<li Class="AdeptusMechanicus.CompProperties_Necron">
 		</li> 
 		<li Class="AdeptusMechanicus.CompProperties_Floating">
 			<isFloater>true</isFloater>
@@ -489,7 +508,7 @@
 		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 	</race>
 	<comps> 
-		<li Class="AdeptusMechanicus.CompProperties_NecronOG">
+		<li Class="AdeptusMechanicus.CompProperties_Necron">
 		</li> 
 	</comps>
 	<modExtensions>
@@ -552,7 +571,7 @@
 		<soundMeleeMiss>Pawn_Melee_Punch_Miss</soundMeleeMiss>
 	</race>
 	<comps> 
-		<li Class="AdeptusMechanicus.CompProperties_NecronOG">
+		<li Class="AdeptusMechanicus.CompProperties_Necron">
 		</li> 
 	</comps>
 	<modExtensions>
@@ -615,7 +634,7 @@
 		<ComponentIndustrial>2</ComponentIndustrial>
 	</butcherProducts>
 	<comps> 
-		<li Class="AdeptusMechanicus.CompProperties_NecronOG">
+		<li Class="AdeptusMechanicus.CompProperties_Necron">
 		</li> 
 		<li Class="AdeptusMechanicus.CompProperties_Floating">
 			<isFloater>true</isFloater>

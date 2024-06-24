@@ -2,106 +2,370 @@
 <Defs>
 
 <!--===================== Ripper single ====================-->
+<BodyDef>
+	<defName>OG_Tyranid_Ripper</defName>
+	<label>ripper</label>
+	<corePart>
+			<def>OGTY_Ripper</def>
+			<coverage>1</coverage>
+			<depth>Outside</depth>
+			<groups>
+				<li>Swarm_1</li>
+			</groups>
+			<parts>
+				<li>
+					<def>OG_SwarmHead</def>
+					<customLabel>ripper head</customLabel>
+					<depth>Undefined</depth>
+					<coverage>0</coverage>
+					<groups>
+						<li>HeadAttackTool</li>
+						<li>Teeth</li>
+						<li>Mouth</li>
+					</groups>
+				</li>
+				<li>
+					<def>OG_SwarmOrgans</def>
+					<customLabel>ripper organs</customLabel>
+					<depth>Undefined</depth>
+					<coverage>0</coverage>
+				</li>
+				<li>
+					<def>OG_SwarmLimbs</def>
+					<customLabel>ripper limbs</customLabel>
+					<depth>Undefined</depth>
+					<coverage>0</coverage>
+					<groups>
+						<li>RightBlade</li>
+						<li>LeftBlade</li>
+					</groups>
+				</li>
+			</parts>
+	</corePart>
+</BodyDef>
+
 
 <!--===================== Ripper swarm ====================-->
 <BodyDef>
 	<defName>OG_Tyranid_Ripper_Swarm</defName>
 	<label>ripper swarm</label>
 	<corePart>
-		<def>OGTY_RipperSwarmCore</def>
+		<def>OG_SwarmCore</def>
 		<height>Middle</height>
-		<depth>Outside</depth>
+		<depth>Undefined</depth>
+		<coverage>0</coverage>
 		<parts>
-		<li>
-			<def>TyranidSwarmRipper</def>
-			<coverage>0.34</coverage>
-			<depth>Outside</depth>
+			<li>
+				<def>OGTY_Ripper</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_1</li>
+				</groups>
 				<parts>
-				<li>
-					<def>TyranidMouth</def>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>Mouth</li>
-					</groups>
-				 </li>
-				<li>
-					<def>FrontClaw</def>
-					<customLabel>right claw</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>				
-				<li>
-					<def>FrontClaw</def>
-					<customLabel>left claw</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>ripper head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>ripper limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
 				</parts>
-		</li>
-		<li>
-			<def>TyranidSwarmRipper</def>
-			<coverage>0.33</coverage>
-			<depth>Outside</depth>
+			</li>
+			<li>
+				<def>OGTY_Ripper</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_2</li>
+				</groups>
 				<parts>
-				<li>
-					<def>TyranidMouth</def>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>Teeth</li>
-					</groups>
-				 </li>
-				<li>
-					<def>FrontClaw</def>
-					<customLabel>right claw</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>				
-				<li>
-					<def>FrontClaw</def>
-					<customLabel>left claw</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>ripper head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>ripper limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
 				</parts>
-		</li>
-		<li>
-			<def>TyranidSwarmRipper</def>
-			<coverage>0.33</coverage>
-			<depth>Outside</depth>
+			</li>
+			<li>
+				<def>OGTY_Ripper</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_3</li>
+				</groups>
 				<parts>
-				<li>
-					<def>TyranidMouth</def>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>Teeth</li>
-					</groups>
-				 </li>
-				<li>
-					<def>FrontClaw</def>
-					<customLabel>right claw</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>				
-				<li>
-					<def>FrontClaw</def>
-					<customLabel>left claw</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>ripper head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>ripper limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
 				</parts>
-		</li>
+			</li>
+			<li>
+				<def>OGTY_Ripper</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_4</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>ripper head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>ripper limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OGTY_Ripper</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_5</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>ripper head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>ripper limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OGTY_Ripper</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_6</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>ripper head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>ripper limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OGTY_Ripper</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_7</li>
+					<li>RightBlade</li>
+					<li>LeftBlade</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_SwarmHead</def>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OGTY_Ripper</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_8</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>ripper head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>TyranidPsykerAttack</li>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>ripper limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OGTY_Ripper</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_9</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>ripper head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>ripper limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OGTY_Ripper</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_10</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>ripper head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>ripper limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
 		</parts>
 	</corePart>
 </BodyDef>
@@ -286,7 +550,7 @@
 				<def>TyranidHead</def>
 				<coverage>0.75</coverage>
 				<groups>
-				<li>HeadAttackTool</li>
+					<li>HeadAttackTool</li>
 				</groups>
 				<parts>
 				<li>
@@ -298,6 +562,9 @@
 						<def>Brain</def>
 						<coverage>0.60</coverage>
 						<depth>Inside</depth>
+						<groups>
+							<li>TyranidPsykerAttack</li>
+						</groups>
 					</li>
 					</parts>
 				</li>
@@ -1891,6 +2158,9 @@
 			<def>TyranidHumpGun</def>
 			<coverage>0.10</coverage>
 			<height>Top</height>
+			<groups>
+				<li>TyranidHumpGun</li>
+			</groups>
 		</li>
 		<li>
 			<def>TyranidLowerShoulder</def>
@@ -1908,7 +2178,7 @@
 					<coverage>0.2</coverage>
 					<height>Bottom</height>
 					<groups>
-					<li>LeftHand</li>
+						<li>LeftHand</li>
 					</groups>
 				</li>
 				</parts>

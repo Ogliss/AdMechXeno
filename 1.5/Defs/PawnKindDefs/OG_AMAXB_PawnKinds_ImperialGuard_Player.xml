@@ -49,8 +49,8 @@
 	<defName>Colonist_OG_Militarum</defName>
     <label>colonist (Militarum)</label>
 	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
-	<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-	<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+	<initialWillRange>0~0</initialWillRange>
+	<initialResistanceRange>13~21</initialResistanceRange>
 	<apparelTags>
 		<li>OGIGClothing</li>
 	</apparelTags>
@@ -65,8 +65,8 @@
 	<defName>Colonist_OG_Militarum_Kreig_Guardsmen</defName>
 	<label>guardsman</label>
 	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
-	<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-	<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+	<initialWillRange>0~0</initialWillRange>
+	<initialResistanceRange>13~21</initialResistanceRange>
 	<backstoryFiltersOverride Inherit="false">
 		<li>
 			<categoriesAdulthood>
@@ -126,8 +126,8 @@
 	<defName>Colonist_OG_Militarum_Armageddon_Guardsmen</defName>
 	<label>guardsman</label>
 	<defaultFactionType>OG_Militarum_PlayerColony</defaultFactionType>
-	<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-	<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+	<initialWillRange>0~0</initialWillRange>
+	<initialResistanceRange>13~21</initialResistanceRange>
 	<backstoryFiltersOverride Inherit="false">
 		<li>
 			<categoriesAdulthood>

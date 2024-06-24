@@ -3,6 +3,7 @@
 
 <!-- Ork Pawn Base -->
 <PawnKindDef Abstract="True" Name="OG_Orkoid_KindBase">
+	<overrideDebugActionCategory>Greekskin</overrideDebugActionCategory>
 	<invNutrition>2.55</invNutrition>
 	<aiAvoidCover>false</aiAvoidCover>
 	<inventoryOptions>
@@ -92,7 +93,7 @@
 			<bodyGraphicData>
 				<texPath>Things/Pawn/ToolUser/Ork/Grot_A</texPath>
 				<graphicClass>Graphic_Multi</graphicClass>
-				<drawSize>1</drawSize>
+				<drawSize>2</drawSize>
 				<shadowData>
 					<volume>(0.6, 0.8, 0.6)</volume>
 				</shadowData>
@@ -134,7 +135,7 @@
 <PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Grot">
 	<defName>OG_Ork_Grot_Stabba</defName>
 	<label>stabba grot</label>
-	<combatPower>25</combatPower>
+	<combatPower>45</combatPower>
 	<aiAvoidCover>false</aiAvoidCover>
 	<weaponTags>
 		<li>OCrudeChoppa</li>
@@ -145,7 +146,7 @@
 <PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Grot">
 	<defName>OG_Ork_Grot_Blasta</defName>
 	<label>blasta grot</label>
-	<combatPower>35</combatPower>
+	<combatPower>40</combatPower>
 	<weaponTags>
 		<li>GrotBlasta</li>
 	</weaponTags>
@@ -155,7 +156,7 @@
 <PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Grot">
 	<defName>OG_Ork_Grot_Shoota</defName>
 	<label>shoota grot</label>
-	<combatPower>40</combatPower>
+	<combatPower>50</combatPower>
 	<weaponTags>
 		<li>OShoota</li>
 	</weaponTags>
@@ -205,7 +206,7 @@
 <PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Ork_Boy">
 	<defName>OG_Ork_Boy_Slugga</defName>
 	<label>slugga boy</label>
-	<combatPower>60</combatPower>
+	<combatPower>70</combatPower>
 	<weaponTags>
 		<li>OSlugga</li>
 	</weaponTags>
@@ -219,7 +220,7 @@
 <PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Ork_Boy">
 	<defName>OG_Ork_Boy_Choppa</defName>
 	<label>choppa boy</label>
-	<combatPower>50</combatPower>
+	<combatPower>60</combatPower>
 	<weaponTags>
 		<li>OChoppa</li>
 	</weaponTags>
@@ -229,7 +230,7 @@
 <PawnKindDef ParentName="OG_Orkoid_KindBase_Spacer_Ork_Boy">
 	<defName>OG_Ork_Boy_Shoota</defName>
 	<label>shoota boy</label>
-	<combatPower>75</combatPower>
+	<combatPower>85</combatPower>
 	<weaponTags>
 		<li>OShoota</li>
 	</weaponTags>

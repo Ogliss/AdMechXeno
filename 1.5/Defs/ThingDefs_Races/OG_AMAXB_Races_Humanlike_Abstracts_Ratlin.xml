@@ -19,6 +19,7 @@
 		</tools>
 		<race>
 			<useMeatFrom>Human</useMeatFrom>
+			<linkedCorpseKind>Human</linkedCorpseKind>
 			<!--
 			<thinkTreeMain>Humanlike</thinkTreeMain>
 			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>

@@ -16,7 +16,7 @@
 			<MeatAmount>0</MeatAmount>
 		</statBases>
 		<race>
-			<body>Human</body>
+			<body>OG_Eldar_ConstructBody</body>
 			<fleshType>OG_Flesh_Construct_Eldar</fleshType>
 			<useMeatFrom>Mech_CentipedeBlaster</useMeatFrom>
 			<needsRest>false</needsRest>
@@ -29,6 +29,7 @@
 			<trainability>Advanced</trainability>
 		</race>
 		<comps>
+			<li MayRequire="Ludeon.RimWorld.Biotech" Class="CompProperties_MechRepairable" />
 			<li MayRequire="CETeam.CombatExtended" Class="CombatExtended.CompProperties_Inventory" />
 			<li MayRequire="CETeam.CombatExtended">
 				<compClass>CombatExtended.CompPawnGizmo</compClass>

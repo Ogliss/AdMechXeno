@@ -12,6 +12,11 @@
 	<statFactors>
 		<MoveSpeed>0.5</MoveSpeed>
 	</statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanBaby</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
 </LifeStageDef>
 
 <LifeStageDef>
@@ -26,6 +31,11 @@
 	<statFactors>
 		<MoveSpeed>1</MoveSpeed>
 	</statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanChild</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
 </LifeStageDef>
 
 <LifeStageDef>
@@ -33,6 +43,11 @@
 	<label>adult</label>
 	<visible>false</visible>
 	<reproductive>true</reproductive>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanAdult</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
 </LifeStageDef>
 
 <LifeStageDef>
@@ -47,6 +62,11 @@
 	<statFactors>
 		<MoveSpeed>1</MoveSpeed>
 	</statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanAdult</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
 </LifeStageDef>
 
 <LifeStageDef>
@@ -61,5 +81,10 @@
 	<statFactors>
 		<MoveSpeed>1</MoveSpeed>
 	</statFactors>
+    <silhouetteGraphicData>
+      <texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanAdult</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+      <drawSize>1</drawSize>
+    </silhouetteGraphicData>
 </LifeStageDef>
 </Defs>

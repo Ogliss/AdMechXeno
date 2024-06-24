@@ -2,6 +2,7 @@
 <Defs>
 <!-- Tyranid Base Abstracts -->
 <PawnKindDef Name="BaseTyranidKind" Abstract="True">
+	<overrideDebugActionCategory>Tyranid</overrideDebugActionCategory>
 	<defaultFactionType>OG_Tyranid_Faction</defaultFactionType>
 	<aiAvoidCover>true</aiAvoidCover>
 	<destroyGearOnDrop>false</destroyGearOnDrop>
@@ -19,30 +20,61 @@
 	<alternateGraphicChance>1</alternateGraphicChance>
 	<alternateGraphics>
 		<li>
-		<colorTwo>(64,51,75)</colorTwo>
-		<color>(175,168,153)</color>
+			<colorTwo>(64,51,75)</colorTwo>
+			<color>(175,168,153)</color>
 		</li>
 	</alternateGraphics>
 </PawnKindDef>
 	
-<!-- Tyranid Ripper Swarm -->
-<PawnKindDef ParentName="BaseTyranidKindColoured">
-	<defName>OG_Tyranid_Ripper_Swarm</defName>
-	<label>tyranid Ripper</label>
-	<race>Tyranid_RipperSwarm</race>
-	<combatPower>25</combatPower>
-
+<!-- Tyranid Ripper Base -->
+<PawnKindDef Name="BaseRipperKindColoured" ParentName="BaseTyranidKindColoured" Abstract="true">
+	<ignoresPainShock>true</ignoresPainShock>
+	<!--alternateGraphicChance>0.50</alternateGraphicChance-->
+    <alternateGraphics>
+		<li>
+			<texPath>Things/Pawn/ToolUser/Tyranid/RipperSwarm/RipperSingle0</texPath>
+		</li>
+		<li>
+			<texPath>Things/Pawn/ToolUser/Tyranid/RipperSwarm/RipperSingle1</texPath>
+		</li>
+		<li>
+			<texPath>Things/Pawn/ToolUser/Tyranid/RipperSwarm/RipperSingle2</texPath>
+		</li>
+		<li>
+			<texPath>Things/Pawn/ToolUser/Tyranid/RipperSwarm/RipperSingle3</texPath>
+		</li>
+		<li>
+			<texPath>Things/Pawn/ToolUser/Tyranid/RipperSwarm/RipperSingle4</texPath>
+		</li>
+		<li>
+			<texPath>Things/Pawn/ToolUser/Tyranid/RipperSwarm/RipperSingle5</texPath>
+		</li>
+		<li>
+			<texPath>Things/Pawn/ToolUser/Tyranid/RipperSwarm/RipperSingle6</texPath>
+		</li>
+		<li>
+			<texPath>Things/Pawn/ToolUser/Tyranid/RipperSwarm/RipperSingle7</texPath>
+		</li>
+		<li>
+			<texPath>Things/Pawn/ToolUser/Tyranid/RipperSwarm/RipperSingle8</texPath>
+		</li>
+		<li>
+			<texPath>Things/Pawn/ToolUser/Tyranid/RipperSwarm/RipperSingle9</texPath>
+		</li>
+    </alternateGraphics>
 	<lifeStages>
 		<li>
-		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Ripper</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>2.00</drawSize>
-			<shaderType>CutoutComplex</shaderType>
-			<shadowData>
-			<volume>(0.4, 0.8, 0.4)</volume>
-			</shadowData>
-		</bodyGraphicData>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Tyranid/RipperSwarm/RipperSingle</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>2.00</drawSize>
+				<shaderType>CutoutComplex</shaderType>
+				<colorTwo>(64,51,75)</colorTwo>
+				<color>(175,168,153)</color>
+				<shadowData>
+					<volume>(0.4, 0.8, 0.4)</volume>
+				</shadowData>
+			</bodyGraphicData>
 		</li>
 	</lifeStages>
 	<!--
@@ -56,24 +88,40 @@
 	</weaponTags>
 </PawnKindDef>
 
+<!-- Tyranid Ripper Swarm -->
+<PawnKindDef ParentName="BaseRipperKindColoured">
+	<defName>OG_Tyranid_Ripper</defName>
+	<label>Ripper</label>
+	<race>Tyranid_RipperSingle</race>
+	<combatPower>50</combatPower>
+</PawnKindDef>
+
+<!-- Tyranid Ripper Swarm -->
+<PawnKindDef ParentName="BaseRipperKindColoured">
+	<defName>OG_Tyranid_Ripper_Swarm</defName>
+	<label>Ripper</label>
+	<race>Tyranid_RipperSwarm</race>
+	<combatPower>150</combatPower>
+</PawnKindDef>
+
 <!-- Tyranid Hormagaunt -->
 <PawnKindDef ParentName="BaseTyranidKindColoured">
 	<defName>OG_Tyranid_Hormagaunt</defName>
-	<label>tyranid hormagaunt</label>
+	<label>hormagaunt</label>
 	<race>Tyranid_Hormagaunt</race>
 	<combatPower>40</combatPower>
 
 	<lifeStages>
 		<li>
-		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Gaunt</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>2</drawSize>
-			<shaderType>CutoutComplex</shaderType>
-			<shadowData>
-			<volume>(0.4, 0.8, 0.4)</volume>
-			</shadowData>
-		</bodyGraphicData>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Gaunt</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>2</drawSize>
+				<shaderType>CutoutComplex</shaderType>
+				<shadowData>
+					<volume>(0.4, 0.8, 0.4)</volume>
+				</shadowData>
+			</bodyGraphicData>
 		</li>
 	</lifeStages>
 	<weaponMoney>
@@ -83,6 +131,15 @@
 	<weaponTags>
 		<li>OGTY_Hormagaunt</li>
 	</weaponTags>
+	<abilities>
+		<li>OGTY_Biomorph_EnhancedLegMuscles_Leap</li>
+	</abilities>
+	<!--startingHediffs>
+		<li>
+			<def>OGTY_Hormagaunt_Leap</def>
+			<chance>OGTY_Hormagaunt_Leap</chance>
+		</li>
+	</startingHediffs-->
 	<modExtensions>
 		<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
 			<pawnsArrivalMode>DropPod</pawnsArrivalMode>
@@ -93,7 +150,7 @@
 <!-- Tyranid Termagant -->
 <PawnKindDef ParentName="BaseTyranidKindColoured">
 	<defName>OG_Tyranid_Termagant</defName>
-	<label>tyranid termagant</label>
+	<label>termagant</label>
 	<race>Tyranid_Termagant</race>
 	<combatPower>40</combatPower>
 
@@ -153,7 +210,7 @@
 <!-- Tyranid Warrior -->
 <PawnKindDef ParentName="BaseTyranidKindColoured">
 	<defName>OG_Tyranid_Warrior</defName>
-	<label>tyranid warrior</label>
+	<label>warrior</label>
 	<race>Tyranid_Warrior</race>
 	<combatPower>100</combatPower>
 
@@ -183,7 +240,7 @@
 <!-- Tyranid Gargoyle -->
 <PawnKindDef ParentName="BaseTyranidKindColoured">
 	<defName>OG_Tyranid_Gargoyle</defName>
-	<label>tyranid gargoyle</label>
+	<label>gargoyle</label>
 	<race>Tyranid_Gargoyle</race>
 	<combatPower>60</combatPower>
 
@@ -207,6 +264,9 @@
 	<weaponTags>
 		<li>OGTY_Fleshborer</li>
 	</weaponTags>
+	<abilities>
+		<li>OGTY_Biomorph_Wings_Flight</li>
+	</abilities>
 	<modExtensions>
 		<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
 			<pawnsArrivalMode>Fly</pawnsArrivalMode>
@@ -217,7 +277,7 @@
 <!-- Tyranid Lictor -->
 <PawnKindDef ParentName="BaseTyranidKindColoured">
 	<defName>OG_Tyranid_Lictor</defName>
-	<label>tyranid lictor</label>
+	<label>lictor</label>
 	<race>Tyranid_Lictor</race>
 	<combatPower>150</combatPower>
 
@@ -251,7 +311,7 @@
 <!-- Tyranid Ravener -->
 <PawnKindDef ParentName="BaseTyranidKindColoured">
 	<defName>OG_Tyranid_Ravener</defName>
-	<label>tyranid ravener</label>
+	<label>ravener</label>
 	<race>Tyranid_Ravener</race>
 	<combatPower>200</combatPower>
 	<ignoreConfigErrors>true</ignoreConfigErrors>
@@ -289,7 +349,7 @@
 <!-- Tyranid Hive Tyrant -->
 <PawnKindDef ParentName="BaseTyranidKindColoured">
 	<defName>OG_Tyranid_Hive_Tyrant</defName>
-	<label>tyranid hive tyrant</label>
+	<label>hive tyrant</label>
 	<race>Tyranid_Hive_Tyrant</race>
 	<combatPower>400</combatPower>
 
@@ -319,7 +379,7 @@
 <!-- Tyranid Carnifex -->
 <PawnKindDef ParentName="BaseTyranidKindColoured">
 	<defName>OG_Tyranid_Carnifex</defName>
-	<label>tyranid carnifex</label>
+	<label>carnifex</label>
 	<race>Tyranid_Carnifex</race>
 	<combatPower>500</combatPower>
 
@@ -348,21 +408,20 @@
 <!-- Tyranid Biovore -->
 <PawnKindDef ParentName="BaseTyranidKindColoured">
 	<defName>OG_Tyranid_Biovore</defName>
-	<label>tyranid Biovore</label>
+	<label>Biovore</label>
 	<race>Tyranid_Biovore</race>
 	<combatPower>300</combatPower>
-
 	<lifeStages>
 		<li>
-		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Biovore</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>2.50</drawSize>
-			<shaderType>CutoutComplex</shaderType>
-			<shadowData>
-			<volume>(0.4, 0.8, 0.4)</volume>
-			</shadowData>
-		</bodyGraphicData>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_Biovore</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>2.50</drawSize>
+				<shaderType>CutoutComplex</shaderType>
+				<shadowData>
+					<volume>(0.4, 0.8, 0.4)</volume>
+				</shadowData>
+			</bodyGraphicData>
 		</li>
 	</lifeStages>
 	<weaponMoney>
@@ -374,31 +433,65 @@
 	</weaponTags>
 </PawnKindDef>
 
-<!-- Tyranid SporeMine -->
-<PawnKindDef ParentName="BaseTyranidKindColoured">
-	<defName>OG_Tyranid_SporeMine</defName>
-	<label>tyranid Spore mine</label>
-	<race>Tyranid_SporeMine_HE</race>
+<!-- Tyranid SporeMines -->
+<PawnKindDef Name="BaseTyranidSporeMineColoured" ParentName="BaseTyranidKindColoured" Abstract="true">
+	<label>Spore mine</label>
 	<combatPower>10</combatPower>
 	<lifeStages>
 		<li>
-		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_SporeMine</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<drawSize>2.0</drawSize>
-			<shaderType>CutoutComplex</shaderType>
-			<shadowData>
-			<volume>(0.4, 0.8, 0.4)</volume>
-			</shadowData>
-		</bodyGraphicData>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Tyranid/Tyranid_SporeMine</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<drawSize>2.0</drawSize>
+				<shaderType>CutoutComplex</shaderType>
+				<shadowData>
+				<volume>(0.4, 0.8, 0.4)</volume>
+				</shadowData>
+			</bodyGraphicData>
 		</li>
 	</lifeStages>
+</PawnKindDef>
+
+<PawnKindDef ParentName="BaseTyranidSporeMineColoured">
+	<defName>OG_Tyranid_SporeMine_Acid</defName>
+	<label>acidic spore mine</label>
+	<race>Tyranid_SporeMine_Acid</race>
+	<alternateGraphics Inherit="false">
+		<li>
+			<colorTwo>(246,243,0)</colorTwo>
+			<color>(175,168,153)</color>
+		</li>
+	</alternateGraphics>
+</PawnKindDef>
+
+<PawnKindDef ParentName="BaseTyranidSporeMineColoured">
+	<defName>OG_Tyranid_SporeMine_Incendiary</defName>
+	<label>incendiary spore mine</label>
+	<race>Tyranid_SporeMine_Incendiary</race>
+	<alternateGraphics Inherit="false">
+		<li>
+			<colorTwo>(231,97,30)</colorTwo>
+			<color>(175,168,153)</color>
+		</li>
+	</alternateGraphics>
+</PawnKindDef>
+
+<PawnKindDef ParentName="BaseTyranidSporeMineColoured">
+	<defName>OG_Tyranid_SporeMine_Explosive</defName>
+	<label>explosive spore mine</label>
+	<race>Tyranid_SporeMine_Explosive</race>
+	<alternateGraphics Inherit="false">
+		<li>
+			<colorTwo>(242,21,36)</colorTwo>
+			<color>(175,168,153)</color>
+		</li>
+	</alternateGraphics>
 </PawnKindDef>
 
 <!-- Tyranid Zoanthrope -->
 <PawnKindDef ParentName="BaseTyranidKindColoured">
 	<defName>OG_Tyranid_Zoanthrope</defName>
-	<label>tyranid zoanthrope</label>
+	<label>zoanthrope</label>
 	<race>Tyranid_Zoanthrope</race>
 	<combatPower>500</combatPower>
 

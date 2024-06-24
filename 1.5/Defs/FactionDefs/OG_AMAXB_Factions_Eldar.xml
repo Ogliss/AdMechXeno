@@ -182,11 +182,8 @@
 		</pawnGroupMakers>
 		<settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
 		<factionIconPath>Icons/Eldar/Icon_Eldar</factionIconPath>
-		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">5</maxConfigurableAtWorldCreation>
-		<configurationListOrderPriority IgnoreIfNoMatchingField="True">76</configurationListOrderPriority>
-		<hairTags IgnoreIfNoMatchingField="True">
-			<li>Punk</li>
-		</hairTags>
+		<maxConfigurableAtWorldCreation>5</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>76</configurationListOrderPriority>
 		<modExtensions>
 			<li Class="AdeptusMechanicus.FactionDefExtension">
 				<!--

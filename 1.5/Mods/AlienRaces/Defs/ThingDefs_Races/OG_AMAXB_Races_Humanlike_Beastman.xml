@@ -6,7 +6,7 @@
 		<alienRace>
 			<generalSettings>
 				<alienPartGenerator>
-					<headTypes>
+					<headTypes Inherit="false">
 						<li>Male_AverageNormal</li>
 						<li>Male_AveragePointy</li>
 						<li>Male_AverageWide</li>
@@ -20,13 +20,16 @@
 						<li>Female_NarrowPointy</li>
 						<li>Female_NarrowWide</li>
 					</headTypes>
-					<bodyTypes>
+					<bodyTypes Inherit="false">
 						<li>Thin</li>
 						<li>Female</li>
 						<li>Male</li>
 					</bodyTypes>
+					<!--
 					<bodyAddons>
+					
 					</bodyAddons>
+					-->
 				</alienPartGenerator>
 				<factionRelations Inherit="False">
 					<li>
@@ -117,10 +120,22 @@
 					</li>
 				</factionRelations>
 			</generalSettings>
-			<graphicPaths>
-			<body><debug>false</debug></body>
-			<head><debug>false</debug></head>
-			</graphicPaths>
+			<styleSettings>
+				<li>
+					<key>HairDef</key>
+					<value>
+						<hasStyle>false</hasStyle>
+						<!--getsGreyAt>200</getsGreyAt--> 
+						<styleTags>
+							<!--li>BeastmanHair</li-->
+						</styleTags>
+					</value>
+				</li>
+			</styleSettings>
+			<!--graphicPaths>
+				<body><debug>false</debug></body>
+				<head><debug>false</debug></head>
+			</graphicPaths-->
 			<thoughtSettings>
 				<cannotReceiveThoughts>
 				</cannotReceiveThoughts>

@@ -3,6 +3,7 @@
 
 	<!-- Dark Eldar Base kind -->
 	<PawnKindDef Name="OG_DarkEldar_BaseKind" Abstract="True">
+		<overrideDebugActionCategory>Aeldari</overrideDebugActionCategory>
 		<defaultFactionType>OG_DarkEldar_Kabal_Faction</defaultFactionType>
 		<backstoryFiltersOverride>
 			<li>

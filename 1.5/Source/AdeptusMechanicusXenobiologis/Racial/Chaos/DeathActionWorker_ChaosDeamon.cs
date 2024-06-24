@@ -12,15 +12,14 @@ namespace AdeptusMechanicus
     {
         public override void PawnDied(Corpse corpse, Lord prevLord)
         {
-            PawnKindDef pawnKindDef = corpse.InnerPawn.kindDef;
             Pawn pawn = corpse.InnerPawn;
             IntVec3 position = corpse.Position;
             Map map = corpse.Map;
+            base.PawnDied(corpse, prevLord);
             if (position != null && map != null)
             {
-                GenExplosion.DoExplosion(position, map, 1.9f, AdeptusDamageDefOf.OG_Chaos_Deamon_WarpfireDeath, corpse.InnerPawn, -1, -1f, null, null, null, null, SpawnedThingOnDeath(pawn), 0f, 1, null, false, null, 0f, 1, 0f, false, ignoredThings: ThingsToIgnore);
+                GenExplosion.DoExplosion(position, map, 1.9f * pawn.BodySize, AdeptusDamageDefOf.OG_Chaos_Deamon_WarpfireDeath, corpse.InnerPawn, -1, -1f, null, null, null, null, SpawnedThingOnDeath(pawn), 0f, 1, null, false, null, 0f, 1, 0f, false, ignoredThings: ThingsToIgnore);
             }
-            base.PawnDied(corpse, prevLord);
         }
         public virtual List<Thing> ThingsToIgnore { get; set; } = new List<Thing>();
         public virtual ThingDef SpawnedThingOnDeath(Pawn pawn)

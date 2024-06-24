@@ -14,8 +14,8 @@
 		<basicMemberKind>Colonist_OG_Militarum</basicMemberKind>
 		<requiredCountAtGameStart>0</requiredCountAtGameStart>
 		<settlementGenerationWeight>0</settlementGenerationWeight>
-		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
-		<configurationListOrderPriority IgnoreIfNoMatchingField="True">20</configurationListOrderPriority>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>20</configurationListOrderPriority>
 		<canMakeRandomly>true</canMakeRandomly>
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
@@ -27,11 +27,11 @@
 		<settlementNameMaker>OG_Militarum_NamerBases</settlementNameMaker>
 		<factionNameMaker>OG_Militarum_NamerFaction</factionNameMaker>
 		<techLevel>Ultra</techLevel>
-		<requiredMemes IgnoreIfNoMatchingField="True">
-			<li MayRequire="Ludeon.RimWorld.Ideology">OG_Imperial_Structure_TheistEmbodied</li>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_TheistEmbodied</li>
 		</requiredMemes>
-		<structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
-			<OG_Imperial_Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">100</OG_Imperial_Structure_TheistEmbodied>
+		<structureMemeWeights Inherit="False">
+			<Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">100</Structure_TheistEmbodied>
 		</structureMemeWeights>
 		<backstoryFilters>
 			<li>

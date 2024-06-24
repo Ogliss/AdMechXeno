@@ -110,7 +110,7 @@
 	</DamageDef>
 	-->
 
-	<DamageDef>
+	<DamageDef Name="OG_LivingBullet">
 		<defName>OGTY_LivingAmmunition</defName>
 		<label>bullet</label>
 		<workerClass>DamageWorker_AddInjury</workerClass>
@@ -125,6 +125,22 @@
 		<makesAnimalsFlee>true</makesAnimalsFlee>
 	</DamageDef>
 
+  <DamageDef ParentName="OG_LivingBullet">
+    <defName>OGTY_LivingAmmunitionToxic</defName>
+    <label>toxic bullet</label>
+    <additionalHediffs>
+      <li>
+        <hediff>ToxicBuildup</hediff>
+        <severityPerDamageDealt>0.0065</severityPerDamageDealt>
+        <victimSeverityScaling>ToxicResistance</victimSeverityScaling>
+        <inverseStatScaling>true</inverseStatScaling>
+        <victimSeverityScalingByInvBodySize>true</victimSeverityScalingByInvBodySize>
+      </li>
+    </additionalHediffs>
+    <applyAdditionalHediffsIfHuntingForFood>false</applyAdditionalHediffsIfHuntingForFood>
+    <impactSoundType>Bullet</impactSoundType>
+  </DamageDef>
+  
 	<DamageDef Name="OGTY_FleshHook">
 		<defName>OGTY_FleshHook</defName>
 		<label>fleshhook</label>
@@ -173,4 +189,59 @@
 		<combatLogRules>Damage_Bomb</combatLogRules>
 	</DamageDef>
 	
+  <DamageDef>
+    <defName>OGTY_BlindingVenom</defName>
+    <label>extinguish</label>
+    <workerClass>DamageWorker_Extinguish</workerClass>
+    <canInterruptJobs>false</canInterruptJobs>
+    <makesBlood>false</makesBlood>
+    <defaultDamage>999999</defaultDamage>
+    <hediff>OGTY_BlindingVenom</hediff>
+    <explosionCellFleck>BlastExtinguisher</explosionCellFleck>
+    <explosionColorEdge>(1, 1, 1, 0.05)</explosionColorEdge>
+    <soundExplosion>Explosion_Stun</soundExplosion>
+    <harmsHealth>false</harmsHealth>
+    <combatLogRules>Damage_Extinguish</combatLogRules>
+    <consideredHelpful>true</consideredHelpful>
+  </DamageDef>
+
+  <!--DamageDef Name="Flame">
+    <defName>Flame</defName>
+    <workerClass>DamageWorker_Flame</workerClass>
+    <label>flame</label>
+    <hasForcefulImpact>false</hasForcefulImpact>
+    <makesBlood>false</makesBlood>
+    <canInterruptJobs>false</canInterruptJobs>
+    <externalViolence>true</externalViolence>
+    <deathMessage>{0} has burned to death.</deathMessage>
+    <hediff>Burn</hediff>
+    <armorCategory>Heat</armorCategory>
+    <minDamageToFragment>15</minDamageToFragment>
+    <defaultDamage>10</defaultDamage>
+    <defaultArmorPenetration>0</defaultArmorPenetration>
+    <explosionHeatEnergyPerCell>15</explosionHeatEnergyPerCell>
+    <explosionCellFleck>BlastFlame</explosionCellFleck>
+    <explosionColorCenter>(1, 0.7, 0.7)</explosionColorCenter>
+    <explosionColorEdge>(1, 1, 0.7)</explosionColorEdge>
+    <soundExplosion>Explosion_Flame</soundExplosion>
+    <combatLogRules>Damage_Flame</combatLogRules>
+    <canUseDeflectMetalEffect>false</canUseDeflectMetalEffect>
+    <scaleDamageToBuildingsBasedOnFlammability>true</scaleDamageToBuildingsBasedOnFlammability>
+  </DamageDef-->
+  
+  <!-- Burn is like Flame, but doesn't ignite anything -->
+  <!--DamageDef ParentName="Flame">
+    <defName>Burn</defName>
+    <label>burn</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+  </DamageDef-->
+  
+  <!--DamageDef ParentName="Flame">
+    <defName>AcidBurn</defName>
+    <label>acid burn</label>
+    <workerClass>DamageWorker_AddInjury</workerClass>
+    <armorCategory>Sharp</armorCategory>
+    <hediff>AcidBurn</hediff>
+    <scaleDamageToBuildingsBasedOnFlammability>false</scaleDamageToBuildingsBasedOnFlammability>
+  </DamageDef-->
 </Defs>

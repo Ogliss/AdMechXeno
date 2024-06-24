@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using AdeptusMechanicus.settings;
 using RimWorld;
 using Verse;
 using Verse.AI;
@@ -25,39 +26,36 @@ namespace AdeptusMechanicus
         {
             PawnGenerationRequest pawnGenerationRequest;
             Pawn pawn = corpse.InnerPawn;
-            if (pawn == null) Log.Message("pawn null");
+            if (AMAMod.Dev && pawn == null) Log.Message("pawn null");
             PawnKindDef pawnKindDef = pawn.kindDef;
-            if (pawnKindDef == null) Log.Message("pawnKindDef null");
+            if (AMAMod.Dev && pawnKindDef == null) Log.Message("pawnKindDef null");
             IntVec3 position = corpse.Position;
-            if (position == null) Log.Message("position null");
+            if (AMAMod.Dev && position == null) Log.Message("position null");
             Map map = corpse.Map;
-            if (map == null) Log.Message("map null");
             Faction faction = pawn.Faction;
-            if (faction == null) Log.Message("faction null");
+            if (AMAMod.Dev && faction == null) Log.Message("faction null");
             float bioyears = pawn.ageTracker.AgeBiologicalYears;
             float chronoyears = pawn.ageTracker.AgeChronologicalYears;
+            /*
             Pawn_MindState mind = pawn.mindState;
-            if (mind == null) Log.Message("mind null");
+            if (AMAMod.Dev && mind == null) Log.Message("mind null");
+            */
             Pawn newPawn1 = null;
             Pawn newPawn2 = null;
             bool spawn = false;
             Lord  lord = pawn.GetLord();
-            if (lord == null) Log.Message("lord null");
-            if (map != null)
+            if (AMAMod.Dev && lord == null) Log.Message("lord null");
+            base.PawnDied(corpse, prevLord);
+            if (map != null && position != null)
             {
-                if (pawnKindDef == AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue)
+                PawnKindDef newKindDef = null;
+                if (pawnKindDef == AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue || pawnKindDef == AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Pink)
                 {
-                    spawn = true;
-                    pawnKindDef = AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Brimstone;
+                    newKindDef = pawnKindDef == AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Pink ? AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue : AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Brimstone;
                 }
-                else if (pawnKindDef == AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Pink)
+                if (newKindDef != null)
                 {
-                    spawn = true;
-                    pawnKindDef = AdeptusPawnKindDefOf.OG_Chaos_Deamon_Lessar_Horror_Blue;
-                }
-                if (spawn)
-                {
-                    pawnGenerationRequest = new PawnGenerationRequest(pawnKindDef, faction, PawnGenerationContext.NonPlayer, -1, true, false, true, true, true, 20f, fixedBiologicalAge: bioyears, fixedChronologicalAge: chronoyears);
+                    pawnGenerationRequest = new PawnGenerationRequest(newKindDef, faction, PawnGenerationContext.NonPlayer, -1, true, false, true, true, true, 20f, fixedBiologicalAge: bioyears, fixedChronologicalAge: chronoyears);
                     newPawn1 = PawnGenerator.GeneratePawn(pawnGenerationRequest);
                     newPawn2 = PawnGenerator.GeneratePawn(pawnGenerationRequest);
                     spawnedPawns = new List<Thing>()
@@ -111,7 +109,7 @@ namespace AdeptusMechanicus
                             }
                         }
                     }
-                    if (spawn && pawnKindDef != corpse.InnerPawn.kindDef && lord != null && map != null)
+                    if (spawn && pawnKindDef != pawn.kindDef)
                     {
                         if (newPawn1 != null)
                         {
@@ -132,7 +130,6 @@ namespace AdeptusMechanicus
                     }
                 }
             }
-            base.PawnDied(corpse, prevLord);
         }
 
     }

@@ -1,0 +1,203 @@
+<Defs>
+
+	<AbilityCategoryDef>
+		<defName>OG_Tyranid</defName>
+		<displayOrder>1000</displayOrder>
+	</AbilityCategoryDef>
+	
+	<AbilityDef Name="OG_Tyranid_Ability" Abstract="true">
+		<category>OG_Tyranid</category>
+	</AbilityDef>
+
+	<AbilityDef ParentName="OG_Tyranid_Ability">
+		<defName>OGTY_Biomorph_EnhancedLegMuscles_Leap</defName>
+		<label>bounding leap</label>
+		<description>Jump to a distant location using special enhanced leg muscles.</description>
+		<iconPath>UI/Abilities/Tyranid/Gaunt_Leap_Icon</iconPath>
+		<cooldownTicksRange>240</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>AdeptusMechanicus.Verb_CastAbilityJump</verbClass>
+			<label>leap</label>
+			<violent>false</violent>
+			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+			<warmupTime>0.1</warmupTime>
+			<minRange>3</minRange>
+			<range>8</range>
+			<requireLineOfSight>true</requireLineOfSight>
+			<soundCast>Longjump_Jump</soundCast>
+			<soundLanding>Longjump_Land</soundLanding>
+			<flyWithCarriedThing>false</flyWithCarriedThing>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+	</AbilityDef>
+
+	<AbilityDef ParentName="OG_Tyranid_Ability">
+		<defName>OGTY_Biomorph_Wings_Flight</defName>
+		<label>flight</label>
+		<description>Jump to a distant location using special ultrafast gargoyle muscles.</description>
+		<iconPath>UI/Abilities/Tyranid/Gaunt_Leap_Icon</iconPath>
+		<cooldownTicksRange>480</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<hostile>false</hostile>
+		<ai_IsIncendiary>false</ai_IsIncendiary>
+		<ai_IsOffensive>false</ai_IsOffensive>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<verbClass>AdeptusMechanicus.Verb_CastAbilityJump</verbClass>
+			<label>jump</label>
+			<violent>false</violent>
+			<forceNormalTimeSpeed>false</forceNormalTimeSpeed>
+			<warmupTime>0.5</warmupTime>
+			<minRange>12</minRange>
+			<range>24</range>
+			<requireLineOfSight>true</requireLineOfSight>
+			<soundCast>Longjump_Jump</soundCast>
+			<soundLanding>Longjump_Land</soundLanding>
+			<flyWithCarriedThing>false</flyWithCarriedThing>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+				<canTargetPawns>false</canTargetPawns>
+				<canTargetBuildings>false</canTargetBuildings>
+			</targetParams>
+		</verbProperties>
+	</AbilityDef>
+ 
+	<AbilityDef ParentName="OG_Tyranid_Ability">
+		<defName>OGTY_Lictor_Invisibility</defName>
+		<label>chameleonic skin</label>
+		<description>Chameleonic skin is a Tyranid biomorph used as camouflage by Lictors to continuously change their skin colour to blend into any environment and become all but invisible to the naked eye.</description>
+		<!--iconPath>UI/Abilities/XV25StealthSuit_Icon</iconPath-->
+		<cooldownTicksRange>6000</cooldownTicksRange> <!-- 2 hours -->
+		<aiCanUse>true</aiCanUse>
+		<writeCombatLog>True</writeCombatLog>
+		<hotKey>Misc12</hotKey>
+		<targetRequired>false</targetRequired>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<statBases>
+			<Ability_Duration>60</Ability_Duration>
+		</statBases>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<drawAimPie>false</drawAimPie>
+			<requireLineOfSight>false</requireLineOfSight>
+			<nonInterruptingSelfCast>true</nonInterruptingSelfCast>
+			<warmupTime>0.5</warmupTime>
+			<range>19.9</range>
+			<targetable>false</targetable>
+			<targetParams>
+				<canTargetSelf>True</canTargetSelf>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilityGiveHediff">
+				<compClass>CompAbilityEffect_GiveHediff</compClass>
+				<hediffDef>OGTY_Lictor_Invisibility</hediffDef>
+				<psychic>false</psychic>
+			</li>
+		</comps>
+	</AbilityDef>
+	<HediffDef>
+		<defName>OGTY_Lictor_Invisibility</defName>
+		<label>invisibility</label>
+		<hediffClass>HediffWithComps</hediffClass>
+		<description>Chameleonic skin is a Tyranid biomorph used as camouflage by Lictors to continuously change their skin colour to blend into any environment and become all but invisible to the naked eye.</description>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_Invisibility">
+				<visibleToPlayer>false</visibleToPlayer>
+				<fadeDurationTicks>120</fadeDurationTicks>
+			</li>
+			<li Class="HediffCompProperties_Disappears">
+				<showRemainingTime>True</showRemainingTime>
+			</li>
+			<li Class="HediffCompProperties_DisappearsOnDeath"/>
+		</comps>
+	</HediffDef>
+
+	<AbilityDef ParentName="OG_Tyranid_Ability">
+		<defName>OGTY_Spray_BlindingVenom</defName>
+		<label>venom spray</label>
+		<description>Spray a sticky venomous substance from glands in the neck up through the mouth and all over the target area. The acid will stick to targets and burn them.</description>
+		<iconPath>UI/Abilities/AcidSpray</iconPath>
+		<cooldownTicksRange>30000</cooldownTicksRange>
+		<aiCanUse>true</aiCanUse>
+		<ai_SearchAOEForTargets>true</ai_SearchAOEForTargets>
+		<displayOrder>300</displayOrder>
+		<sendMessageOnCooldownComplete>true</sendMessageOnCooldownComplete>
+		<warmupStartSound>AcidSpray_Warmup</warmupStartSound>
+		<verbProperties>
+			<verbClass>Verb_CastAbility</verbClass>
+			<range>8.9</range>
+			<warmupTime>0.25</warmupTime>
+			<soundCast>AcidSpray_Resolve</soundCast>
+			<targetParams>
+				<canTargetLocations>true</canTargetLocations>
+			</targetParams>
+		</verbProperties>
+		<comps>
+			<li Class="CompProperties_AbilitySprayLiquid">
+				<projectileDef>OGTY_Proj_BlindingVenom</projectileDef>
+				<numCellsToHit>9</numCellsToHit>
+				<sprayEffecter>AcidSpray_Directional</sprayEffecter>
+			</li>
+		</comps>
+	</AbilityDef>
+	<ThingDef>
+		<defName>OGTY_Proj_BlindingVenom</defName>
+		<label>acid</label>
+		<thingClass>Projectile_Liquid</thingClass>
+		<category>Projectile</category>
+		<tickerType>Normal</tickerType>
+		<altitudeLayer>Projectile</altitudeLayer>
+		<useHitPoints>False</useHitPoints>
+		<neverMultiSelect>True</neverMultiSelect>
+		<graphicData>
+			<texPath>Things/Projectile/Acid</texPath>
+			<graphicClass>Graphic_Random</graphicClass>
+			<shaderType>MoteGlow</shaderType>
+			<drawSize>0.85</drawSize>
+		</graphicData>
+		<projectile>
+			<damageDef>OGTY_BlindingVenom</damageDef>
+			<speed>25</speed>
+			<damageAmountBase>10</damageAmountBase>
+			<arcHeightFactor>0.4</arcHeightFactor>
+			<armorPenetrationBase>0.8</armorPenetrationBase>
+			<stoppingPower>1</stoppingPower>
+			<shadowSize>0</shadowSize>
+			<filth>OGTY_Filth_VenomAcid</filth>
+			<filthCount>1</filthCount>
+		</projectile>
+	</ThingDef>
+
+	<!--AbilityDef ParentName="OG_Tyranid_Ability">
+		<defName>LongjumpMechLauncher</defName>
+		<label>jump launcher</label>
+		<description>Jump to a distant location using a built-in jump launcher.</description>
+		<displayGizmoWhileUndrafted>false</displayGizmoWhileUndrafted>
+		<disableGizmoWhileUndrafted>true</disableGizmoWhileUndrafted>
+		<charges>2</charges>
+		<cooldownTicksRange>20000</cooldownTicksRange--><!-- 8h -->
+		<!--hostile>false</hostile>
+		<casterMustBeCapableOfViolence>false</casterMustBeCapableOfViolence>
+		<verbProperties>
+			<range>15</range>
+			<minRange>6</minRange>
+			<warmupEffecter>JumpMechWarmupEffect</warmupEffecter>
+			<requireLineOfSight>true</requireLineOfSight>
+			<flightEffecterDef>JumpMechFlightEffect</flightEffecterDef>
+			<flyWithCarriedThing>true</flyWithCarriedThing>
+			<soundLanding>JumpMechLand</soundLanding>
+			<soundCast Inherit="False" />
+		</verbProperties>
+		<jobDef>CastJump</jobDef>
+	</AbilityDef-->
+
+</Defs>

@@ -10,8 +10,8 @@
 		<listOrderPriority>10</listOrderPriority>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<settlementGenerationWeight>0</settlementGenerationWeight>
-		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
-		<configurationListOrderPriority IgnoreIfNoMatchingField="True">20</configurationListOrderPriority>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>20</configurationListOrderPriority>
 		<canMakeRandomly>true</canMakeRandomly>
 		<canSiege>true</canSiege>
 		<canStageAttacks>true</canStageAttacks>
@@ -36,26 +36,32 @@
 				</categories>
 			</li>
 		</backstoryFilters>
-		<allowedCultures IgnoreIfNoMatchingField="True">
+		<allowedCultures>
 			<li>OG_Imperial_Mechanicus_Spacer</li>
 		</allowedCultures>
-		<requiredMemes IgnoreIfNoMatchingField="True">
-			<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
-			<li MayRequire="Ludeon.RimWorld.Ideology">OG_Mechanicus_Structure_Archist</li>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Archist</li>
 		</requiredMemes>
-		<disallowedMemes IgnoreIfNoMatchingField="True">
+		<disallowedMemes>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginChristian</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginIslamic</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginHindu</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginBuddhist</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">AnimalPersonhood</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HighLife</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Rancher</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">TreeConnection</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">NaturePrimacy</li>
 		</disallowedMemes>
-		<structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
-			<OG_Mechanicus_Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">100</OG_Mechanicus_Structure_Archist>
+		<structureMemeWeights Inherit="False">
+			<Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">100</Structure_Archist>
 		</structureMemeWeights>
-		<hairTags IgnoreIfNoMatchingField="True">
-			<li>Urban</li>
-		</hairTags>
 		<allowedArrivalTemperatureRange>
 			<min>-40</min>
 			<max>45</max>

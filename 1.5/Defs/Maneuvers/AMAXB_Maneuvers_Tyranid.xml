@@ -40,10 +40,10 @@
 		<!-- <linkedBodyPartsGroup>HeadAttackTool</linkedBodyPartsGroup> -->
 	</verb>
 	<logEntryDef>SandInEyes</logEntryDef>
-	<combatLogRulesHit>Maneuver_KickMaterialInEyes_MeleeHit</combatLogRulesHit>
-	<combatLogRulesDeflect>Maneuver_KickMaterialInEyes_MeleeDeflect</combatLogRulesDeflect>
-	<combatLogRulesMiss>Maneuver_KickMaterialInEyes_MeleeMiss</combatLogRulesMiss>
-	<combatLogRulesDodge>Maneuver_KickMaterialInEyes_MeleeDodge</combatLogRulesDodge>
+	<combatLogRulesHit>OG_Maneuver_SprayMaterialInEyes_MeleeHit</combatLogRulesHit>
+	<combatLogRulesDeflect>OG_Maneuver_SprayMaterialInEyess_MeleeDeflect</combatLogRulesDeflect>
+	<combatLogRulesMiss>OG_Maneuver_SprayMaterialInEyes_MeleeMiss</combatLogRulesMiss>
+	<combatLogRulesDodge>OG_Maneuver_SprayMaterialInEyes_MeleeDodge</combatLogRulesDodge>
 </ManeuverDef>
 
 </Defs>

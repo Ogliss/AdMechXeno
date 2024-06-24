@@ -3,111 +3,43 @@
 
 <!--===================== Scarab single ====================-->
 <BodyDef>
-	<defName>OG_Necron_Scarab_Single</defName>
-	<label>necron scarab beetle</label>
-	<ignoreConfigErrors>true</ignoreConfigErrors>
+	<defName>OG_Necron_Scarab</defName>
+	<label>scarab</label>
 	<corePart>
-		<def>OG_Necron_Carapace</def>
-		<height>Middle</height>
+		<def>OG_Necron_Scarab</def>
+		<coverage>1</coverage>
 		<depth>Outside</depth>
+		<groups>
+			<li>Swarm_1</li>
+		</groups>
 		<parts>
-		<li>
-			<def>OG_Necron_NecrodermisRegulator</def>
-			<coverage>0.05</coverage>
-			<depth>Inside</depth>
-		</li>
-		<li>
-			<def>OG_Necron_Reactor</def>
-			<coverage>0.03</coverage>
-			<depth>Inside</depth>
-		</li>
-		<li>
-			<def>OG_Necron_HeadMount</def>
-			<coverage>0.18</coverage>
-			<height>Top</height>
-			<parts>
 			<li>
-				<def>OG_Necron_Head</def>
-				<coverage>0.65</coverage>
+				<def>OG_SwarmHead</def>
+				<customLabel>scarab head</customLabel>
+				<depth>Undefined</depth>
+				<coverage>0</coverage>
 				<groups>
-				<li>HeadAttackTool</li>
+					<li>HeadAttackTool</li>
+					<li>Teeth</li>
+					<li>Mouth</li>
 				</groups>
-				<parts>
-				<li>
-					<def>OG_Necron_Brain</def>
-					<coverage>0.2</coverage>
-					<depth>Inside</depth>
-				</li>
-				<li>
-					<def>OG_Necron_ViasalSensor</def>
-					<customLabel>left eye</customLabel>
-					<coverage>0.12</coverage>
-				</li>
-				<li>
-					<def>OG_Necron_ViasalSensor</def>
-					<customLabel>right eye</customLabel>
-					<coverage>0.12</coverage>
-				</li>
-				<li>
-					<def>OG_Necron_AuditorySensor</def>
-					<coverage>0.06</coverage>
-				</li>
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>right blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>				
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>left blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
-				</parts>
 			</li>
-			</parts>
-		</li>
-		<li>
-			<def>OG_Necron_HumanoidLeg</def>
-			<customLabel>front left leg</customLabel>
-			<coverage>0.06</coverage>
-			<height>Bottom</height>
-		</li>
-		<li>
-			<def>OG_Necron_HumanoidLeg</def>
-			<customLabel>front right leg</customLabel>
-			<coverage>0.06</coverage>
-			<height>Bottom</height>
-		</li>
-		<li>
-			<def>OG_Necron_HumanoidLeg</def>
-			<customLabel>middle left leg</customLabel>
-			<coverage>0.06</coverage>
-			<height>Bottom</height>
-		</li>
-		<li>
-			<def>OG_Necron_HumanoidLeg</def>
-			<customLabel>middle right leg</customLabel>
-			<coverage>0.06</coverage>
-			<height>Bottom</height>
-		</li>
-		<li>
-			<def>OG_Necron_HumanoidLeg</def>
-			<customLabel>rear left leg</customLabel>
-			<coverage>0.06</coverage>
-			<height>Bottom</height>
-		</li>
-		<li>
-			<def>OG_Necron_HumanoidLeg</def>
-			<customLabel>rear right leg</customLabel>
-			<coverage>0.06</coverage>
-			<height>Bottom</height>
-		</li>
+			<li>
+				<def>OG_SwarmOrgans</def>
+				<customLabel>scarab subsystems</customLabel>
+				<depth>Undefined</depth>
+				<coverage>0</coverage>
+			</li>
+			<li>
+				<def>OG_SwarmLimbs</def>
+				<customLabel>scarab limbs</customLabel>
+				<depth>Undefined</depth>
+				<coverage>0</coverage>
+				<groups>
+					<li>RightBlade</li>
+					<li>LeftBlade</li>
+				</groups>
+			</li>
 		</parts>
 	</corePart>
 </BodyDef>
@@ -116,127 +48,324 @@
 <BodyDef>
 	<defName>OG_Necron_Scarab_Swarm</defName>
 	<label>scarab swarm</label>
-	<ignoreConfigErrors>true</ignoreConfigErrors>
 	<corePart>
-		<def>OG_Necron_ScarabSwarmCore</def>
+		<def>OG_SwarmCore</def>
 		<height>Middle</height>
-		<depth>Outside</depth>
+		<depth>Undefined</depth>
+		<coverage>0</coverage>
 		<parts>
-		<li>
-			<def>OG_Necron_SwarmScarab</def>
-			<coverage>0.2</coverage>
-			<depth>Outside</depth>
-			<parts>
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>right blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				</li>				
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>left blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				</li>
-			</parts>
-		</li>
-		<li>
-			<def>OG_Necron_SwarmScarab</def>
-			<coverage>0.2</coverage>
-			<depth>Outside</depth>
+			<li>
+				<def>OG_Necron_Scarab</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_1</li>
+				</groups>
 				<parts>
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>right blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>				
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>left blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>scarab head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>scarab limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
 				</parts>
-		</li>
-		<li>
-			<def>OG_Necron_SwarmScarab</def>
-			<coverage>0.2</coverage>
-			<depth>Outside</depth>
+			</li>
+			<li>
+				<def>OG_Necron_Scarab</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_2</li>
+				</groups>
 				<parts>
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>right blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>				
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>left blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>scarab head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>scarab limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
 				</parts>
-		</li>
-		<li>
-			<def>OG_Necron_SwarmScarab</def>
-			<coverage>0.2</coverage>
-			<depth>Outside</depth>
+			</li>
+			<li>
+				<def>OG_Necron_Scarab</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_3</li>
+				</groups>
 				<parts>
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>right blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>				
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>left blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>scarab head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>scarab limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
 				</parts>
-		</li>
-		<li>
-			<def>OG_Necron_SwarmScarab</def>
-			<coverage>0.2</coverage>
-			<depth>Outside</depth>
+			</li>
+			<li>
+				<def>OG_Necron_Scarab</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_4</li>
+				</groups>
 				<parts>
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>right blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>RightBlade</li>
-					</groups>
-				 </li>				
-				<li>
-					<def>OG_Necron_FlayingBlade</def>
-					<customLabel>left blade</customLabel>
-					<coverage>0.04</coverage>
-					<groups>
-						<li>LeftBlade</li>
-					</groups>
-				 </li>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>scarab head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>scarab limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
 				</parts>
-		</li>
+			</li>
+			<li>
+				<def>OG_Necron_Scarab</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_5</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>scarab head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>scarab limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_Necron_Scarab</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_6</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>scarab head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>scarab limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_Necron_Scarab</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_7</li>
+					<li>RightBlade</li>
+					<li>LeftBlade</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>scarab head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>scarab limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_Necron_Scarab</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_8</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>scarab head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>scarab limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_Necron_Scarab</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_9</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>scarab head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>scarab limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
+			<li>
+				<def>OG_Necron_Scarab</def>
+				<coverage>0.1</coverage>
+				<depth>Outside</depth>
+				<groups>
+					<li>Swarm_10</li>
+				</groups>
+				<parts>
+					<li>
+						<def>OG_SwarmHead</def>
+						<customLabel>scarab head</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>HeadAttackTool</li>
+							<li>Teeth</li>
+							<li>Mouth</li>
+						</groups>
+					</li>
+					<li>
+						<def>OG_SwarmLimbs</def>
+						<customLabel>scarab limbs</customLabel>
+						<depth>Undefined</depth>
+						<coverage>0</coverage>
+						<groups>
+							<li>RightBlade</li>
+							<li>LeftBlade</li>
+						</groups>
+					</li>
+				</parts>
+			</li>
 		</parts>
 	</corePart>
 </BodyDef>

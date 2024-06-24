@@ -2,6 +2,7 @@
 <Defs>
 
 	<PawnKindDef Name="KrootBase" Abstract="True">
+		<overrideDebugActionCategory>Kroot</overrideDebugActionCategory>
 		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
 		<!--backstoryFiltersOverride>
 			<li>
@@ -78,7 +79,7 @@
 		<label>Kroot Warrior</label>
 		<race>OG_Alien_Kroot</race>
 		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
-		<combatPower>75</combatPower>
+		<combatPower>95</combatPower>
 		<itemQuality>Poor</itemQuality>
 		<aiAvoidCover>true</aiAvoidCover>
 		<lifeStages>
@@ -114,7 +115,7 @@
 		<label>Kroot Hunter</label>
 		<race>OG_Alien_Kroot</race>
 		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
-		<combatPower>95</combatPower>
+		<combatPower>115</combatPower>
 		<itemQuality>Good</itemQuality>
 		<aiAvoidCover>true</aiAvoidCover>
 		<lifeStages>
@@ -151,7 +152,7 @@
 		<label>Kroot Warrior</label>
 		<race>OG_Alien_Kroot</race>
 		<defaultFactionType>OG_Tau_Faction</defaultFactionType>
-		<combatPower>120</combatPower>
+		<combatPower>150</combatPower>
 		<itemQuality>Good</itemQuality>
 		<aiAvoidCover>true</aiAvoidCover>
 		<lifeStages>

@@ -9,11 +9,8 @@
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<fixedName>a necron dynasty</fixedName>
 		<categoryTag>OG_Outlander_Necron</categoryTag>
-		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">1</maxConfigurableAtWorldCreation>
-		<configurationListOrderPriority IgnoreIfNoMatchingField="True">85</configurationListOrderPriority>
-		<hairTags IgnoreIfNoMatchingField="True">
-			<li>Punk</li>
-		</hairTags>
+		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>85</configurationListOrderPriority>
 		<raidCommonalityFromPointsCurve>
 			<points>
 				<li>(700, 0.1)</li>

@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-
-
 <Defs>
 
 <ThinkTreeDef>
 	<defName>OG_Eldar_ThinkTree</defName>
 	<thinkRoot Class="ThinkNode_Priority">
 		<subNodes>
+			<!-- Despawned -->
+			<li Class="ThinkNode_Subtree">
+				<treeDef>Despawned</treeDef>
+			</li>
+
 		<!-- Downed -->
 		<li Class="ThinkNode_Subtree">
 			<treeDef>Downed</treeDef>
@@ -25,13 +28,30 @@
 		<li Class="ThinkNode_Tagger">
 			<tagToGive>Idle</tagToGive>
 			<subNodes>
-			<!-- Try to pick up nearby weapons -->
-			<li Class="JobGiver_PickUpOpportunisticWeapon" />
-			<!--
-			<li Class="JobGiver_WanderAnywhere">
-				<maxDanger>Deadly</maxDanger>
-			</li>
-			-->
+				<!-- Try to pick up nearby weapons -->
+				<li Class="JobGiver_PickUpOpportunisticWeapon" />
+				<!-- Fire spikes at distant enemies -->
+				<!--li Class="AdeptusMechanicus.JobGiver_AIMultiAbilityFight">
+					<targetAcquireRadius>35</targetAcquireRadius>
+					<targetKeepRadius>42</targetKeepRadius>
+					<needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+					<allowTurrets>true</allowTurrets>
+					<skipIfCantTargetNow>true</skipIfCantTargetNow>
+					<includeTemporary>true</includeTemporary>
+					<abilities>
+						<li></li>
+					</abilities>
+				</li-->
+				
+				<li Class="JobGiver_AIFightEnemies">
+					<targetAcquireRadius>65</targetAcquireRadius>
+					<targetKeepRadius>72</targetKeepRadius>
+				</li>
+				<li Class="JobGiver_AIGotoNearestHostile" />
+			
+				<li Class="JobGiver_WanderAnywhere">
+					<maxDanger>Deadly</maxDanger>
+				</li>
 			</subNodes>
 
 		</li>
@@ -41,10 +61,133 @@
 			<targetKeepRadius>72</targetKeepRadius>
 		</li>
 		<li Class="JobGiver_AIGotoNearestHostile" />
+		
 		<!-- Idle error -->
 		<li Class="JobGiver_IdleError"/>
 		</subNodes>
 	</thinkRoot>
 </ThinkTreeDef>
+
+<!-- JobGiver_AISkipToJobTarget -->
+<!-- ThinkNode_ConditionalAimingAtCount -->
+<!-- ThinkNode_ConditionalIsMemberOfRace -->
+	<ThinkTreeDef>
+		<defName>OG_Eldar_AspectWarrior_Constant</defName>
+		<thinkRoot Class="ThinkNode_Priority">
+			<subNodes>
+
+				<!-- Despawned -->
+				<li Class="ThinkNode_Subtree">
+					<treeDef>Despawned</treeDef>
+				</li>
+
+				<!-- Jump towards target to Attack in Melee -->
+				<li Class="ThinkNode_ConditionalDoingJob">
+					<jobDef>AttackMelee</jobDef>
+					<subNodes>
+						<li Class="ThinkNode_ConditionalHasAbility">
+							<ability>OGE_WarpSpider_Jump</ability>
+							<subNodes>
+								<li Class="JobGiver_AIJumpToJobTarget">
+									<ability>OGE_WarpSpider_Jump</ability>
+								</li>
+							</subNodes>
+						</li>
+						<li Class="ThinkNode_ConditionalHasAbility">
+							<ability>OGE_SwoopingHawk_Flight</ability>
+							<subNodes>
+								<li Class="JobGiver_AIJumpToJobTarget">
+									<ability>OGE_SwoopingHawk_Flight</ability>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+				<li Class="ThinkNode_ConditionalDoingJob">
+					<jobDef>AttackMelee</jobDef>
+					<invert>true</invert>
+					<subNodes>
+						<li Class="ThinkNode_ConditionalHasAbility">
+							<ability>OGE_SwoopingHawk_Flight</ability>
+							<subNodes>
+								<li Class="ThinkNode_HarmedRecently">
+									<thresholdTicks>120</thresholdTicks>
+									<subNodes>
+										<li Class="ThinkNode_ConditionalUnderCombatPressure">
+											<maxThreatDistance>5</maxThreatDistance>
+											<minCloseTargets>1</minCloseTargets>
+											<subNodes>
+												<li Class="JobGiver_AIJumpEscapeEnemies">
+													<ability>OGE_SwoopingHawk_Flight</ability>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<li Class="AdeptusMechanicus.JobGiver_AIJumpToShootingPosition">
+									<ability>OGE_SwoopingHawk_Flight</ability>
+								</li>
+							</subNodes>
+						</li>
+						<li Class="ThinkNode_ConditionalHasAbility">
+							<ability>OGE_WarpSpider_Jump</ability>
+							<subNodes>
+								<li Class="ThinkNode_HarmedRecently">
+									<thresholdTicks>120</thresholdTicks>
+									<subNodes>
+										<li Class="ThinkNode_ConditionalUnderCombatPressure">
+											<maxThreatDistance>5</maxThreatDistance>
+											<minCloseTargets>1</minCloseTargets>
+											<subNodes>
+												<li Class="JobGiver_AIJumpEscapeEnemies">
+													<ability>OGE_WarpSpider_Jump</ability>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<li Class="AdeptusMechanicus.JobGiver_AIJumpToShootingPosition">
+									<ability>OGE_WarpSpider_Jump</ability>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+				<!-- AdeptusMechanicus.JobGiver_AIJumpToShootingPosition -->
+				<!-- Jump towards shooting position to fire -->
+				<li Class="ThinkNode_ConditionalDoingJob">
+					<jobDef>AttackStatic</jobDef>
+					<subNodes>
+						<li Class="ThinkNode_ConditionalHasAbility">
+							<ability>OGE_WarpSpider_Jump</ability>
+							<subNodes>
+								<li Class="AdeptusMechanicus.JobGiver_AIJumpToShootingPosition">
+									<ability>OGE_WarpSpider_Jump</ability>
+								</li>
+							</subNodes>
+						</li>
+						<li Class="ThinkNode_ConditionalHasAbility">
+							<ability>OGE_SwoopingHawk_Flight</ability>
+							<subNodes>
+								<li Class="AdeptusMechanicus.JobGiver_AIJumpToShootingPosition">
+									<ability>OGE_SwoopingHawk_Flight</ability>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			
+				<li Class="ThinkNode_ConditionalCanDoLordJobNow">
+					<subNodes>
+						<!-- Lord directives -->
+						<li Class="ThinkNode_Subtree">
+							<treeDef>LordDutyConstant</treeDef>
+						</li>
+					</subNodes>
+				</li>
+				
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
 
 </Defs>

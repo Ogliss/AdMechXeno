@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IncidentWorker_Infestation.cs" />
     <Compile Include="Racial\Chaos\DeathActionWorker_ChaosHorror.cs" />
+    <Compile Include="Racial\Tyranid\CompSporeMine.cs" />
     <Compile Include="_Harmony\Patches\BackCompatibility_BackCompatibleDefName_Patch.cs" />
     <Compile Include="_Harmony\Patches\DamageWorker_AddInjury_FinalizeAndAddInjury_NecronWellBeBack_Patch.cs" />
     <Compile Include="_Harmony\Patches\Pawn_DropAndForbidEverything_Necron_Patch.cs" />
@@ -78,13 +80,11 @@
     <Compile Include="Racial\Chaos\ChaosDeamonUtil.cs" />
     <Compile Include="Racial\Chaos\JobGiver_OGChaosDeamon.cs" />
     <Compile Include="Racial\Chaos\MentalState_OGChaosDeamon.cs" />
-    <None Include="Racial\Necron\Comp_NecronOG.cs.bak" />
     <Compile Include="Racial\Necron\DeathActionWorker_OGNecron.cs" />
     <None Include="Racial\Necron\JobDriver_TombSpyderRepair.cs.bak" />
     <Compile Include="Racial\Necron\JobDriver_TombSpyderRepair.cs" />
     <Compile Include="Racial\Necron\JobGiver_TombSpyderRepair.cs" />
     <Compile Include="Racial\Necron\TombSpyderUtility.cs" />
-    <Compile Include="Racial\Tyranid\CompSporeMine.cs" />
     <Compile Include="Racial\Tyranid\DeathActionWorker_SporeMine.cs" />
     <Compile Include="Racial\Tyranid\SporeMineBullet.cs" />
     <Compile Include="Racial\Tyranid\CompTyranidRottable.cs" />
@@ -104,13 +104,12 @@
     <Compile Include="AMXBMain.cs" />
     <Compile Include="Util\ConstructFleshTypeUtility.cs" />
     <Compile Include="Racial\Necron\NecronHediffUtility.cs" />
-    <Compile Include="Hediffs\Hediff_RegeneratingPart.cs" />
     <Compile Include="ThinkNodes\ThinkNode_ChancePerHour.cs" />
     <Compile Include="ThinkNodes\ThinkNode_ChancePerHour_Constant.cs" />
     <Compile Include="Racial\Necron\IncidentWorker_Monolith.cs" />
     <Compile Include="Racial\Necron\JobGiver_OGNecron.cs" />
     <Compile Include="Racial\Necron\LordJob_NecronsDefendShip.cs" />
-    <Compile Include="Racial\Necron\Comp_NecronOG.cs" />
+    <Compile Include="Racial\Necron\Comp_Necron.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Racial\AdeptusAstartes\" />

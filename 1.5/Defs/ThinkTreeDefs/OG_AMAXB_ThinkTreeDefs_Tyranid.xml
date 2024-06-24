@@ -1,54 +1,298 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-
-
 <Defs>
 
 <ThinkTreeDef>
 	<defName>OG_Tyranid_ThinkTree</defName>
 	<thinkRoot Class="ThinkNode_Priority">
 		<subNodes>
-		<!-- Downed -->
-		<li Class="ThinkNode_Subtree">
-			<treeDef>Downed</treeDef>
-		</li>
-		
-		<!-- Do a queued job -->
-		<li Class="ThinkNode_QueuedJob" />
+			<!-- Despawned -->
+			<li Class="ThinkNode_Subtree">
+				<treeDef>Despawned</treeDef>
+			</li>
 
-		<!-- Tomb Spyder Repairs Dead/Damaged Necrons 
-		<li Class="AdeptusMechanicus.JobGiver_TombSpyderRepair">
-			<SearchRadius>30</SearchRadius>
-		</li>
-		-->
-		
-		<!-- Lord -->
-		<li Class="ThinkNode_Subtree">
-			<treeDef>LordDuty</treeDef>
-		</li>
-		
-		<!-- Idle -->
-		<li Class="ThinkNode_Tagger">
-			<tagToGive>Idle</tagToGive>
-			<subNodes>
-			
-		<li Class="JobGiver_AIFightEnemies">
-			<targetAcquireRadius>65</targetAcquireRadius>
-			<targetKeepRadius>72</targetKeepRadius>
-		</li>
-		<li Class="JobGiver_AIGotoNearestHostile" />
-		
-			<li Class="JobGiver_WanderAnywhere">
-				<maxDanger>Deadly</maxDanger>
+			<!-- Downed -->
+			<li Class="ThinkNode_Subtree">
+				<treeDef>Downed</treeDef>
 			</li>
 			
-			</subNodes>
+			<!-- Do a queued job -->
+			<li Class="ThinkNode_QueuedJob" />
 
-		</li>
-		
-		<!-- Idle error -->
-		<li Class="JobGiver_IdleError"/>
+			
+			<!-- Lord -->
+			<li Class="ThinkNode_Subtree">
+				<treeDef>LordDuty</treeDef>
+			</li>
+			
+			<!-- Idle -->
+			<li Class="ThinkNode_Tagger">
+				<tagToGive>Idle</tagToGive>
+				<subNodes>
+				
+					<!-- Fire spikes at distant enemies -->
+					<!--li Class="AdeptusMechanicus.JobGiver_AIMultiAbilityFight">
+						<targetAcquireRadius>35</targetAcquireRadius>
+						<targetKeepRadius>42</targetKeepRadius>
+						<needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+						<allowTurrets>true</allowTurrets>
+						<skipIfCantTargetNow>true</skipIfCantTargetNow>
+						<includeTemporary>true</includeTemporary>
+						<abilities>
+							<li>OGTY_Spray_BlindingVenom</li>
+						</abilities>
+					</li-->
+					
+					<li Class="JobGiver_AIFightEnemies">
+						<targetAcquireRadius>65</targetAcquireRadius>
+						<targetKeepRadius>72</targetKeepRadius>
+					</li>
+					<li Class="JobGiver_AIGotoNearestHostile" />
+				
+					<li Class="JobGiver_WanderAnywhere">
+						<maxDanger>Deadly</maxDanger>
+					</li>
+				
+				</subNodes>
+
+			</li>
+			
+			<!-- Idle error -->
+			<li Class="JobGiver_IdleError"/>
 		</subNodes>
 	</thinkRoot>
 </ThinkTreeDef>
+
+<ThinkTreeDef>
+	<defName>OG_Tyranid_ThinkTree_Gargoyle</defName>
+	<thinkRoot Class="ThinkNode_Priority">
+		<subNodes>
+			<!-- Despawned -->
+			<li Class="ThinkNode_Subtree">
+				<treeDef>Despawned</treeDef>
+			</li>
+
+			<!-- Downed -->
+			<li Class="ThinkNode_Subtree">
+				<treeDef>Downed</treeDef>
+			</li>
+			
+			<!-- Do a queued job -->
+			<li Class="ThinkNode_QueuedJob" />
+
+			
+			<!-- Lord -->
+			<li Class="ThinkNode_Subtree">
+				<treeDef>LordDuty</treeDef>
+			</li>
+			
+			<!-- Lord if Synapst linked -->
+			<!--li Class="ThinkNode_ConditionalHasHediff">
+				<hediff>OG_Tyranid_SynapticLink</hediff>
+				<subNodes>
+					<li Class="ThinkNode_Subtree">
+						<treeDef>LordDuty</treeDef>
+					</li>
+				</subNodes>
+			</li-->
+			
+			<!-- Idle -->
+			<li Class="ThinkNode_Tagger">
+				<tagToGive>Idle</tagToGive>
+				<subNodes>
+				
+					<!-- Keep distance -->
+					<li Class="JobGiver_FleeForDistance">
+						<enemyDistToFleeRange>2.9~7.9</enemyDistToFleeRange>
+						<fleeDistRange>13.5~20</fleeDistRange>
+					</li>
+					
+					<!-- React to close melee threat -->
+					<li Class="JobGiver_ReactToCloseMeleeThreat">
+						<maxDistance>2.9</maxDistance>
+					</li>
+					
+					<!-- Fire abilities at distant enemies -->
+					<!--li Class="AdeptusMechanicus.JobGiver_AIMultiAbilityFight">
+						<targetAcquireRadius>35</targetAcquireRadius>
+						<targetKeepRadius>42</targetKeepRadius>
+						<needLOSToAcquireNonPawnTargets>true</needLOSToAcquireNonPawnTargets>
+						<allowTurrets>true</allowTurrets>
+						<skipIfCantTargetNow>true</skipIfCantTargetNow>
+						<includeTemporary>true</includeTemporary>
+						<abilities>
+							<li>OGTY_Spray_BlindingVenom</li>
+						</abilities>
+					</li-->
+					
+					<li Class="JobGiver_AIFightEnemies">
+						<targetAcquireRadius>65</targetAcquireRadius>
+						<targetKeepRadius>72</targetKeepRadius>
+					</li>
+					<li Class="JobGiver_AIGotoNearestHostile" />
+				
+					<li Class="JobGiver_WanderAnywhere">
+						<maxDanger>Deadly</maxDanger>
+					</li>
+				
+				</subNodes>
+
+			</li>
+			
+			<!-- Idle error -->
+			<li Class="JobGiver_IdleError"/>
+		</subNodes>
+	</thinkRoot>
+</ThinkTreeDef>
+
+<ThinkTreeDef>
+	<defName>OG_Tyranid_ThinkTree_SporeMine</defName>
+	<thinkRoot Class="ThinkNode_Priority">
+		<subNodes>
+			<!-- Despawned -->
+			<li Class="ThinkNode_Subtree">
+				<treeDef>Despawned</treeDef>
+			</li>
+
+			<!-- Downed -->
+			<li Class="ThinkNode_Subtree">
+				<treeDef>Downed</treeDef>
+			</li>
+			
+			<!-- Do a queued job -->
+			<li Class="ThinkNode_QueuedJob" />
+
+			
+			<!-- Lord -->
+			<!--li Class="ThinkNode_Subtree">
+				<treeDef>LordDuty</treeDef>
+			</li-->
+			
+			<!-- Idle -->
+			<li Class="ThinkNode_Tagger">
+				<tagToGive>Idle</tagToGive>
+				<subNodes>
+				
+					<li Class="JobGiver_ReactToCloseMeleeThreat">
+						<maxDistance>5</maxDistance>
+					</li>
+					<li Class="JobGiver_AIFightEnemies">
+						<targetAcquireRadius>10</targetAcquireRadius>
+						<targetKeepRadius>15</targetKeepRadius>
+					</li>
+					<li Class="JobGiver_WanderAnywhere">
+						<maxDanger>Deadly</maxDanger>
+					</li>
+				
+				</subNodes>
+
+			</li>
+			
+			<!-- Idle error -->
+			<li Class="JobGiver_IdleError"/>
+		</subNodes>
+	</thinkRoot>
+</ThinkTreeDef>
+
+<!-- JobGiver_AISkipToJobTarget -->
+<!-- ThinkNode_ConditionalAimingAtCount -->
+<!-- ThinkNode_ConditionalIsMemberOfRace -->
+	<ThinkTreeDef>
+		<defName>OG_Tyranid_Constant</defName>
+		<thinkRoot Class="ThinkNode_Priority">
+			<subNodes>
+
+				<!-- Despawned -->
+				<li Class="ThinkNode_Subtree">
+					<treeDef>Despawned</treeDef>
+				</li>
+
+				<!-- Jump towards target to Attack in Melee -->
+				<li Class="ThinkNode_ConditionalDoingJob">
+					<jobDef>AttackMelee</jobDef>
+					<subNodes>
+						<li Class="ThinkNode_ConditionalHasAbility">
+							<ability>OGTY_Biomorph_EnhancedLegMuscles_Leap</ability>
+							<subNodes>
+								<li Class="JobGiver_AIJumpToJobTarget">
+									<ability>OGTY_Biomorph_EnhancedLegMuscles_Leap</ability>
+								</li>
+							</subNodes>
+						</li>
+						<li Class="ThinkNode_ConditionalHasAbility">
+							<ability>OGTY_Biomorph_Wings_Flight</ability>
+							<subNodes>
+								<li Class="JobGiver_AIJumpToJobTarget">
+									<ability>OGTY_Biomorph_Wings_Flight</ability>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+				<li Class="ThinkNode_ConditionalDoingJob">
+					<jobDef>AttackMelee</jobDef>
+					<invert>true</invert>
+					<subNodes>
+						<li Class="ThinkNode_ConditionalHasAbility">
+							<ability>OGTY_Biomorph_Wings_Flight</ability>
+							<subNodes>
+								<li Class="ThinkNode_HarmedRecently">
+									<thresholdTicks>120</thresholdTicks>
+									<subNodes>
+										<li Class="ThinkNode_ConditionalUnderCombatPressure">
+											<maxThreatDistance>2</maxThreatDistance>
+											<minCloseTargets>2</minCloseTargets>
+											<subNodes>
+												<li Class="JobGiver_AIJumpEscapeEnemies">
+													<ability>OGTY_Biomorph_Wings_Flight</ability>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+								<li Class="AdeptusMechanicus.JobGiver_AIJumpToShootingPosition">
+									<ability>OGTY_Biomorph_Wings_Flight</ability>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li>
+			
+				<!-- Jump Away from hostiles in Melee -->
+				<!--li Class="ThinkNode_ConditionalHasAbility">
+					<ability>OGTY_Biomorph_Wings_Flight</ability>
+					<subNodes>
+						<li Class="ThinkNode_ConditionalTotalDamage">
+							<thresholdPercent>0.25</thresholdPercent>
+							<subNodes>
+								<li Class="ThinkNode_HarmedRecently">
+									<thresholdTicks>120</thresholdTicks>
+									<subNodes>
+										<li Class="ThinkNode_ConditionalUnderCombatPressure">
+											<maxThreatDistance>2</maxThreatDistance>
+											<minCloseTargets>2</minCloseTargets>
+											<subNodes>
+												<li Class="JobGiver_AIJumpEscapeEnemies">
+													<ability>OGTY_Biomorph_Wings_Flight</ability>
+												</li>
+											</subNodes>
+										</li>
+									</subNodes>
+								</li>
+							</subNodes>
+						</li>
+					</subNodes>
+				</li-->
+				<li Class="ThinkNode_ConditionalCanDoLordJobNow">
+					<subNodes>
+						<!-- Lord directives -->
+						<li Class="ThinkNode_Subtree">
+							<treeDef>LordDutyConstant</treeDef>
+						</li>
+					</subNodes>
+				</li>
+				
+			</subNodes>
+		</thinkRoot>
+	</ThinkTreeDef>
 
 </Defs>

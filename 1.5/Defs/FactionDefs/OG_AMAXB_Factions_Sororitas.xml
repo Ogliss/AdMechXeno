@@ -16,8 +16,8 @@
 		<basicMemberKind>OG_Sororitas_Battle_Sister</basicMemberKind>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
 		<settlementGenerationWeight>0</settlementGenerationWeight>
-		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
-		<configurationListOrderPriority IgnoreIfNoMatchingField="True">90</configurationListOrderPriority>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>90</configurationListOrderPriority>
 		<canMakeRandomly>true</canMakeRandomly>
 		<humanlikeFaction>true</humanlikeFaction>
 		<canSiege>true</canSiege>
@@ -59,29 +59,33 @@
 				<commonality>0.05</commonality>
 			</li>
 		</backstoryFilters>
-		<allowedCultures IgnoreIfNoMatchingField="True">
+		<allowedCultures>
 			<li>OG_Imperial_Sororitas_Spacer</li>
 		</allowedCultures>
-		<disallowedMemes IgnoreIfNoMatchingField="True">
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_TheistEmbodied</li>
+		</requiredMemes>
+		<disallowedMemes>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginChristian</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginIslamic</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginHindu</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_OriginBuddhist</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">AnimalPersonhood</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Cannibal</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">HighLife</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Rancher</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">TreeConnection</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">NaturePrimacy</li>
 		</disallowedMemes>
-		<structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
-			<OG_Imperial_Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">100</OG_Imperial_Structure_TheistEmbodied>
+		<structureMemeWeights Inherit="False">
+			<Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">1000</Structure_TheistEmbodied>
 		</structureMemeWeights>
-		<naturalColonyGoodwill IgnoreIfNoMatchingField="True">
-			<min>-60</min>
-			<max>0</max>
-		</naturalColonyGoodwill>
-		<startingGoodwill IgnoreIfNoMatchingField="True">
-			<min>10</min>
-			<max>40</max>
-		</startingGoodwill>
-		<hairTags IgnoreIfNoMatchingField="True">
-			<li>Urban</li>
-			<li>Rural</li>
-		</hairTags>
 		<visitorTraderKinds>
 			<li>OG_Sororitas_Trader_Visitor_Standard</li>
 		</visitorTraderKinds>

@@ -47,26 +47,23 @@
 				<commonality>0.5</commonality>
 			</li>
 		</backstoryFilters>
-		<allowedCultures IgnoreIfNoMatchingField="True">
+		<allowedCultures>
 			<li>OG_Imperial_Sororitas_Spacer</li>
 		</allowedCultures>
-		<requiredMemes IgnoreIfNoMatchingField="True">
-			<li MayRequire="Ludeon.RimWorld.Ideology">OG_Imperial_Structure_TheistEmbodied</li>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_TheistEmbodied</li>
 			<!--li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li-->
 		</requiredMemes>
-		<disallowedMemes IgnoreIfNoMatchingField="True">
+		<disallowedMemes>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">AnimalPersonhood</li>
 			<!--li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li-->
 			<!--li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li-->
 		</disallowedMemes>
-		<!--structureMemeWeights IgnoreIfNoMatchingField="True" Inherit="False">
-			<OG_Imperial_Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">10</OG_Imperial_Structure_TheistEmbodied>
+		<!--structureMemeWeights Inherit="False">
+			<Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">10</Structure_TheistEmbodied>
 		</structureMemeWeights-->
-		<hairTags IgnoreIfNoMatchingField="True">
-			<li>Urban</li>
-		</hairTags>
 		<startingResearchTags>
 			<li>ClassicStart</li>
 		</startingResearchTags>

@@ -2,8 +2,8 @@
 <Defs>
 
 	<PawnKindDef Abstract="True" Name="OG_Mechanicus_StrangerInBlack_Base">
-		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">0~2</initialResistanceRange>
+		<initialWillRange>0~0</initialWillRange>
+		<initialResistanceRange>0~2</initialResistanceRange>
 		<label>stranger in black</label>
 		<labelMale>man in black</labelMale>
 		<labelFemale>woman in black</labelFemale>

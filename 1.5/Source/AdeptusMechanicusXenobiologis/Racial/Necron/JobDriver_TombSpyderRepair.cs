@@ -23,11 +23,11 @@ namespace AdeptusMechanicus
             }
         }
         
-        protected Comp_NecronOG _Necron
+        protected Comp_Necron _Necron
         {
             get
             {
-                return DamagedNecron.TryGetCompFast<Comp_NecronOG>();
+                return DamagedNecron.TryGetCompFast<Comp_Necron>();
             }
         }
 
@@ -144,7 +144,10 @@ namespace AdeptusMechanicus
                         {
                             DamagedNecron.inventory.innerContainer.Remove(thing);
                         }
-                        DamagedNecron.equipment.AddEquipment(thing);
+                        if (!DamagedNecron.equipment.Contains(thing))
+                        {
+                            DamagedNecron.equipment.AddEquipment(thing);
+                        }
                     }
                     if (_Necron.secondryWeapon != null)
                     {

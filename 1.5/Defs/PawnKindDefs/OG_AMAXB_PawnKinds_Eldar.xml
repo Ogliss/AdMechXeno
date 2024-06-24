@@ -3,6 +3,7 @@
 
 	<!-- Eldar Base kind -->
 	<PawnKindDef Name="OG_Eldar_Pawnkind_Base" Abstract="True">
+		<overrideDebugActionCategory>Aeldari</overrideDebugActionCategory>
 		<defaultFactionType>OG_Eldar_Craftworld_Faction</defaultFactionType>
 		<backstoryFiltersOverride>
 			<li>
@@ -52,7 +53,7 @@
 		<defName>OG_Eldar_Farseer</defName>
 		<label>farseer</label>
 		<race>Eldar_Farseer</race>
-		<combatPower>250</combatPower>
+		<combatPower>500</combatPower>
 		<itemQuality>Superior</itemQuality>
 		<aiAvoidCover>false</aiAvoidCover>
 		<lifeStages>
@@ -89,7 +90,7 @@
 		<label>warlock</label>
 		<race>Eldar_Warlock</race>
 		<defaultFactionType>OG_Eldar_Craftworld_Faction</defaultFactionType>
-		<combatPower>200</combatPower>
+		<combatPower>300</combatPower>
 		<itemQuality>Good</itemQuality>
 		<aiAvoidCover>false</aiAvoidCover>
 		<lifeStages>
@@ -151,7 +152,7 @@
 	<PawnKindDef ParentName="OG_Eldar_Pawnkind_Guardian_Base">
 		<defName>OG_Eldar_Guardian</defName>
 		<label>guardian</label>
-		<combatPower>50</combatPower>
+		<combatPower>75</combatPower>
 		<weaponMoney>
 			<min>5000</min>
 			<max>5000</max>
@@ -174,7 +175,6 @@
 		<weaponTags>
 			<li>EShurikenPistol</li>
 			<li>EScorpionChainsword</li>
-			<li>EPowerSword</li>
 		</weaponTags>
 	</PawnKindDef>
 
@@ -200,7 +200,7 @@
 		<label>ranger</label>
 		<race>Eldar_Aspect_Warrior</race>
 		<defaultFactionType>OG_Eldar_Craftworld_Faction</defaultFactionType>
-		<combatPower>60</combatPower>
+		<combatPower>120</combatPower>
 		<itemQuality>Good</itemQuality>
 		<aiAvoidCover>false</aiAvoidCover>
 		<lifeStages>
@@ -229,6 +229,9 @@
 		<weaponTags>
 			<li>EldarRanger</li>
 		</weaponTags>
+		<abilities>
+			<li>OGE_Ranger_Invisibility</li>
+		</abilities>
 		<modExtensions>
 			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
 				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
@@ -252,7 +255,7 @@
 	<PawnKindDef Name="OG_Eldar_Pawnkind_DireAvenger_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
 		<defName>OG_Eldar_DireAvenger</defName>
 		<label>dire avenger</label>
-		<combatPower>65</combatPower>
+		<combatPower>95</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -280,7 +283,7 @@
 	<PawnKindDef ParentName="OG_Eldar_Pawnkind_DireAvenger_Base">
 		<defName>OG_Eldar_DireAvenger_Exarch</defName>
 		<label>dire avenger exarch</label>
-		<combatPower>90</combatPower>
+		<combatPower>115</combatPower>
 		<itemQuality>Masterwork</itemQuality>
 		<weaponTags>
 			<li>EldarDireAvengerExarch</li>
@@ -291,7 +294,7 @@
 	<PawnKindDef Name="OG_Eldar_Pawnkind_DarkReaper_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
 		<defName>OG_Eldar_DarkReaper</defName>
 		<label>dark reaper</label>
-		<combatPower>125</combatPower>
+		<combatPower>155</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -320,7 +323,7 @@
 	<PawnKindDef ParentName="OG_Eldar_Pawnkind_DarkReaper_Base">
 		<defName>OG_Eldar_DarkReaper_Exarch</defName>
 		<label>dark reaper exarch</label>
-		<combatPower>155</combatPower>
+		<combatPower>175</combatPower>
 		<itemQuality>Masterwork</itemQuality>
 		<weaponTags>
 			<li>EldarDarkReaperExarch</li>
@@ -331,7 +334,7 @@
 	<PawnKindDef Name="OG_Eldar_Pawnkind_HowlingBanshee_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
 		<defName>OG_Eldar_HowlingBanshee</defName>
 		<label>howling banshee</label>
-		<combatPower>75</combatPower>
+		<combatPower>105</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -360,7 +363,7 @@
 	<PawnKindDef ParentName="OG_Eldar_Pawnkind_HowlingBanshee_Base">
 		<defName>OG_Eldar_HowlingBanshee_Exarch</defName>
 		<label>howling banshee exarch</label>
-		<combatPower>100</combatPower>
+		<combatPower>130</combatPower>
 		<itemQuality>Masterwork</itemQuality>
 		<weaponTags>
 			<li>EldarHowlingBansheeExarch</li>
@@ -371,7 +374,7 @@
 	<PawnKindDef Name="OG_Eldar_Pawnkind_StrikingScorpion_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
 		<defName>OG_Eldar_StrikingScorpion</defName>
 		<label>striking scorpion</label>
-		<combatPower>75</combatPower>
+		<combatPower>85</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -394,6 +397,9 @@
 		<weaponTags>
 			<li>EldarStrikingScorpion</li>
 		</weaponTags>
+		<abilities>
+			<!--li>OGE_Scorpion_Mantiblasters</li-->
+		</abilities>
 		<modExtensions>
 			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
 				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
@@ -405,7 +411,7 @@
 	<PawnKindDef ParentName="OG_Eldar_Pawnkind_StrikingScorpion_Base">
 		<defName>OG_Eldar_StrikingScorpion_Exarch</defName>
 		<label>striking scorpion exarch</label>
-		<combatPower>100</combatPower>
+		<combatPower>110</combatPower>
 		<itemQuality>Masterwork</itemQuality>
 		<weaponTags>
 			<li>EldarStrikingScorpionExarch</li>
@@ -416,7 +422,7 @@
 	<PawnKindDef Name="OG_Eldar_Pawnkind_SwoopingHawk_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
 		<defName>OG_Eldar_SwoopingHawk</defName>
 		<label>swooping hawk</label>
-		<combatPower>75</combatPower>
+		<combatPower>150</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -439,6 +445,9 @@
 		<weaponTags>
 			<li>EldarSwoopingHawk</li>
 		</weaponTags>
+		<abilities>
+			<li>OGE_SwoopingHawk_Flight</li>
+		</abilities>
 		<modExtensions>
 			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
 				<pawnsArrivalMode>Fly</pawnsArrivalMode>
@@ -450,7 +459,7 @@
 	<PawnKindDef ParentName="OG_Eldar_Pawnkind_SwoopingHawk_Base">
 		<defName>OG_Eldar_SwoopingHawk_Exarch</defName>
 		<label>swooping hawkexarch</label>
-		<combatPower>100</combatPower>
+		<combatPower>175</combatPower>
 		<itemQuality>Masterwork</itemQuality>
 		<weaponTags>
 			<li>EldarSwoopingHawkExarch</li>
@@ -461,7 +470,7 @@
 	<PawnKindDef Name="OG_Eldar_Pawnkind_FireDragon_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
 		<defName>OG_Eldar_FireDragon</defName>
 		<label>fire dragon</label>
-		<combatPower>75</combatPower>
+		<combatPower>125</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -490,7 +499,7 @@
 	<PawnKindDef ParentName="OG_Eldar_Pawnkind_FireDragon_Base">
 		<defName>OG_Eldar_FireDragon_Exarch</defName>
 		<label>fire dragon exarch</label>
-		<combatPower>100</combatPower>
+		<combatPower>175</combatPower>
 		<itemQuality>Masterwork</itemQuality>
 		<weaponTags>
 			<li>EldarFireDragonExarch</li>
@@ -501,7 +510,7 @@
 	<PawnKindDef Name="OG_Eldar_Pawnkind_WarpSpider_Base" ParentName="OG_Eldar_Pawnkind_Aspect_Base">
 		<defName>OG_Eldar_WarpSpider</defName>
 		<label>warp spider</label>
-		<combatPower>75</combatPower>
+		<combatPower>175</combatPower>
 		<lifeStages>
 			<li>
 				<bodyGraphicData>
@@ -524,6 +533,9 @@
 		<weaponTags>
 			<li>EldarWarpSpider</li>
 		</weaponTags>
+		<abilities>
+			<li>OGE_WarpSpider_Jump</li>
+		</abilities>
 		<modExtensions>
 			<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
 				<pawnsArrivalMode>Teleport</pawnsArrivalMode>
@@ -535,7 +547,7 @@
 	<PawnKindDef ParentName="OG_Eldar_Pawnkind_WarpSpider_Base">
 		<defName>OG_Eldar_WarpSpider_Exarch</defName>
 		<label>warp spider exarch</label>
-		<combatPower>100</combatPower>
+		<combatPower>210</combatPower>
 		<itemQuality>Masterwork</itemQuality>
 		<weaponTags>
 			<li>EldarWarpSpiderExarch</li>

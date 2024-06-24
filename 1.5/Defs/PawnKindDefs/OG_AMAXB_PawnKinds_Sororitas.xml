@@ -108,8 +108,8 @@
 		<defName>OG_Sororitas_Trader</defName>
 		<label>Sororitas logistician</label>
 		<trader>true</trader>
-		<initialWillRange IgnoreIfNoMatchingField="True">0~1</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">7~12</initialResistanceRange>
+		<initialWillRange>0~1</initialWillRange>
+		<initialResistanceRange>7~12</initialResistanceRange>
 	</PawnKindDef>
 
 	<!-- ============================ Faction Leader ========================== -->
@@ -117,8 +117,8 @@
 		<defName>OG_Sororitas_Faction_Canoness_Superior</defName>
 		<label>canoness superior</label>
 		<labelPlural>canonesses superior</labelPlural>
-		<initialWillRange IgnoreIfNoMatchingField="True">6~10</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">34~54</initialResistanceRange>
+		<initialWillRange>6~10</initialWillRange>
+		<initialResistanceRange>34~54</initialResistanceRange>
 		<factionLeader>true</factionLeader>
 		<fixedGender>Female</fixedGender>
 		<backstoryFiltersOverride Inherit="False">
@@ -246,8 +246,8 @@
 		<labelPlural>sisters of battle</labelPlural>
 		<defaultFactionType>OG_Sororitas_Faction</defaultFactionType>
 		<fixedGender>Female</fixedGender>
-		<initialWillRange IgnoreIfNoMatchingField="True">3~5</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">17~27</initialResistanceRange>
+		<initialWillRange>3~5</initialWillRange>
+		<initialResistanceRange>17~27</initialResistanceRange>
 		<combatPower>150</combatPower>
 		<!--baseRecruitDifficulty>0.30</baseRecruitDifficulty-->
 		<backstoryFiltersOverride Inherit="False">
@@ -383,8 +383,8 @@
 		<defName>OG_Sororitas_Battle_Sister_Superior</defName>
 		<label>sister superior</label>
 		<labelPlural>sisters superior</labelPlural>
-		<initialWillRange IgnoreIfNoMatchingField="True">4~6</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">20~30</initialResistanceRange>
+		<initialWillRange>4~6</initialWillRange>
+		<initialResistanceRange>20~30</initialResistanceRange>
 		<combatPower>240</combatPower>
 		<minGenerationAge>35</minGenerationAge>
 		<backstoryFiltersOverride Inherit="False">
@@ -707,8 +707,8 @@
 		<label>canoness</label>
 		<labelPlural>canonesses</labelPlural>
 		<fixedGender>Female</fixedGender>
-		<initialWillRange IgnoreIfNoMatchingField="True">6~10</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">34~54</initialResistanceRange>
+		<initialWillRange>6~10</initialWillRange>
+		<initialResistanceRange>34~54</initialResistanceRange>
 		<defaultFactionType>OG_Sororitas_Faction</defaultFactionType>
 		<combatPower>600</combatPower>
 		<!--baseRecruitDifficulty>0.50</baseRecruitDifficulty-->

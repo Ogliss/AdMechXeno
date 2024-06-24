@@ -71,8 +71,8 @@
 		<predator>true</predator>
 		<lifeStageAges>
 		<li>
-			<def>HumanlikeAdult</def>
-			<minAge>18</minAge>
+			<def>TauWarrriorComplete</def>
+			<minAge>0</minAge>
 		</li>
 		</lifeStageAges>
 		<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -143,6 +143,7 @@
 		<MoveSpeed>5.8</MoveSpeed>
 	</statBases>
 	<race>
+		<overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker>
 		<lifeExpectancy>150</lifeExpectancy>
 		<body>OG_Tau_Body</body>
 		<baseHealthScale>2.5</baseHealthScale>
@@ -159,6 +160,7 @@
 	<statBases>
 	</statBases>
 	<race>
+		<overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker>
 		<lifeExpectancy>50</lifeExpectancy>
 		<body>OG_Tau_Body</body>
 		<baseHealthScale>1.5</baseHealthScale>
@@ -180,6 +182,7 @@
 		<MeleeHitChance>1.25</MeleeHitChance>
 	</statBases>
 	<race>
+		<overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker>
 		<lifeExpectancy>120</lifeExpectancy>
 		<body>OG_Kroot_Body</body>
 		<baseHungerRate>0.25</baseHungerRate>

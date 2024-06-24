@@ -7,6 +7,11 @@
 		<defName>TauWarrriorComplete</defName>
 		<label>Combat Ready</label>
 		<visible>false</visible>
+		<silhouetteGraphicData>
+		  <texPath>Things/Pawn/Humanlike/Silhouettes/Silhouette_HumanAdult</texPath>
+		  <graphicClass>Graphic_Single</graphicClass>
+		  <drawSize>1</drawSize>
+		</silhouetteGraphicData>
 	</LifeStageDef>
 
 </Defs>

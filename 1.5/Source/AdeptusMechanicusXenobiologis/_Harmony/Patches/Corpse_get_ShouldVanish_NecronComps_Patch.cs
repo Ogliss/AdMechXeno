@@ -21,7 +21,7 @@ namespace AdeptusMechanicus.HarmonyInstance
                 __result = false;
                 return false;
             }
-            if (__instance.TryGetCompFast<Comp_NecronOG>() != null)
+            if (__instance.TryGetCompFast<Comp_Necron>() != null)
             {
                 __result = false;
                 return false;

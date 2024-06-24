@@ -1,5 +1,8 @@
-﻿using RimWorld;
+﻿using AdeptusMechanicus.ExtensionMethods;
+using Mono.Unix.Native;
+using RimWorld;
 using System;
+using System.Collections.Generic;
 using Verse;
 using Verse.AI.Group;
 
@@ -57,46 +60,56 @@ namespace AdeptusMechanicus
 		public void Detonate(Corpse corpse, IntVec3 position)
 		{
 			Pawn innerPawn = corpse.InnerPawn;
-			float radius;
+			float r;
 			if (corpse.InnerPawn.ageTracker.CurLifeStageIndex == 0)
 			{
-				radius = 1.9f;
+				r = 1.9f;
 			}
 			else if (corpse.InnerPawn.ageTracker.CurLifeStageIndex == 1)
 			{
-				radius = 4.9f;
+				r = 4.9f;
 			}
 			else
 			{
-				radius = 2.9f;
+				r = 2.9f;
 			};
 			this.map = corpse.Map;
-			DamageDef damage = DamageDefOf.Flame;
-			int damageAmount = 0;
-			float ap = 0f;
-			CompProperties_SporeMine explosive = innerPawn.def.GetCompProperties<CompProperties_SporeMine>();
-			if (explosive != null)
-			{
-				damage = explosive.explosiveDamageType;
-				radius = explosive.explosiveRadius;
-				damageAmount = explosive.explosiveDamageType.defaultDamage;
-				ap = explosive.explosiveDamageType.defaultArmorPenetration;
-			}
-			/*
-			if (innerPawn.def == OGTyranidDefOf.Tyranid_SporeMine_HE)
-			{
-				damage = DamageDefOf.Bomb;
-			}
-			Log.Message("PawnDied 10");
-			Log.Message("position " + position.ToString());
-			Log.Message("map " + this.map.ToString());
-			Log.Message("radius " + radius.ToString());
-			Log.Message("damage " + damage.ToString());
-			Log.Message("InnerPawn " + corpse.InnerPawn.ToString());
-			Log.Message("defaultDamage " + damageAmount.ToString());
-			Log.Message("defaultArmorPenetration " + ap.ToString());
-			*/
-			GenExplosion.DoExplosion(position, this.map, radius, damage, corpse.InnerPawn, damageAmount, ap, null, null, null, null, null, 0f, 1, GasType.RotStink, false, null, 0f, 1, 0f, false, null, null);
+			CompSporeMine comp = innerPawn.TryGetCompFast<CompSporeMine>();
+			if (comp != null)
+            {
+
+                CompProperties_SporeMine props = comp.Props;
+                if (props != null)
+                {
+                    float num = comp.ExplosiveRadius();
+                    IntVec3 positionHeld = innerPawn.PositionHeld;
+                    float radius = num;
+                    DamageDef explosiveDamageType = props.explosiveDamageType;
+                    Thing thing = innerPawn;
+                    int damageAmountBase = props.damageAmountBase;
+                    float armorPenetrationBase = props.armorPenetrationBase;
+                    SoundDef explosionSound = props.explosionSound;
+                    ThingDef weapon = null;
+                    ThingDef projectile = null;
+                    Thing intendedTarget = null;
+                    ThingDef postExplosionSpawnThingDef = props.postExplosionSpawnThingDef;
+                    float postExplosionSpawnChance = props.postExplosionSpawnChance;
+                    int postExplosionSpawnThingCount = props.postExplosionSpawnThingCount;
+                    GasType? postExplosionGasType = props.postExplosionGasType;
+                    bool applyDamageToExplosionCellsNeighbors = props.applyDamageToExplosionCellsNeighbors;
+                    ThingDef preExplosionSpawnThingDef = props.preExplosionSpawnThingDef;
+                    float preExplosionSpawnChance = props.preExplosionSpawnChance;
+                    int preExplosionSpawnThingCount = props.preExplosionSpawnThingCount;
+                    float chanceToStartFire = props.chanceToStartFire;
+                    bool damageFalloff = props.damageFalloff;
+                    float? direction = null;
+                    List<Thing> ignoredThings = comp.thingsIgnoredByExplosion;
+                    FloatRange? affectedAngle = null;
+                    bool doVisualEffects = props.doVisualEffects;
+                    bool doSoundEffects = props.doSoundEffects;
+                    GenExplosion.DoExplosion(positionHeld, map, radius, explosiveDamageType, thing, damageAmountBase, armorPenetrationBase, explosionSound, weapon, projectile, intendedTarget, postExplosionSpawnThingDef, postExplosionSpawnChance, postExplosionSpawnThingCount, postExplosionGasType, applyDamageToExplosionCellsNeighbors, preExplosionSpawnThingDef, preExplosionSpawnChance, preExplosionSpawnThingCount, chanceToStartFire, damageFalloff, direction, ignoredThings, affectedAngle, doVisualEffects, props.propagationSpeed, 0f, doSoundEffects, null, 1f, null, null);
+                }
+            }
 
 		}
 	}

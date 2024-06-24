@@ -9,8 +9,8 @@
 		<isFighter>false</isFighter>
 		<apparelIgnoreSeasons>true</apparelIgnoreSeasons>
 		<forceNormalGearQuality>true</forceNormalGearQuality>
-		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+		<initialWillRange>0~0</initialWillRange>
+		<initialResistanceRange>13~21</initialResistanceRange>
 		<apparelTags>
 			<li>OGAMClothing</li>
 			<li>OGIGClothing</li>
@@ -74,8 +74,8 @@
 	<PawnKindDef Name="OG_Mechanicus_Servitor_Base" ParentName="OG_Mechanicus_Base_KindDef">
 		<defName>Colonist_OG_Mechanicus_Servitor</defName>
 		<label>colonist (Mechanicus Sevitor)</label>
-		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+		<initialWillRange>0~0</initialWillRange>
+		<initialResistanceRange>13~21</initialResistanceRange>
 		<backstoryFiltersOverride Inherit="false">
 			<li>
 				<categories>
@@ -145,8 +145,8 @@
 	<PawnKindDef Name="OG_Mechanicus_Colonist_TechPriest_Base" ParentName="OG_Mechanicus_Base_KindDef">
 		<defName>Colonist_OG_Mechanicus_Tech_Priest</defName>
 		<label>tech-priest</label>
-		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+		<initialWillRange>0~0</initialWillRange>
+		<initialResistanceRange>13~21</initialResistanceRange>
 		<backstoryFiltersOverride Inherit="false">
 			<li>
 				<categoriesAdulthood>

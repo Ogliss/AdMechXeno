@@ -8,8 +8,8 @@
 		<pawnsPlural>Tyranids</pawnsPlural>
 		<basicMemberKind>OG_Tyranid_Warrior</basicMemberKind>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
-		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">9999</maxConfigurableAtWorldCreation>
-		<configurationListOrderPriority IgnoreIfNoMatchingField="True">89</configurationListOrderPriority>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>89</configurationListOrderPriority>
 		<fixedName>a Tyranid swarm</fixedName>
 		<raidCommonalityFromPointsCurve>
 			<points>

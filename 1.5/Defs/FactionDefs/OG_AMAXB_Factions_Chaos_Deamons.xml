@@ -7,8 +7,8 @@
 		<pawnSingular>Daemon</pawnSingular>
 		<pawnsPlural>Daemons</pawnsPlural>
 		<requiredCountAtGameStart>1</requiredCountAtGameStart>
-		<maxConfigurableAtWorldCreation IgnoreIfNoMatchingField="True">1</maxConfigurableAtWorldCreation>
-		<configurationListOrderPriority IgnoreIfNoMatchingField="True">85</configurationListOrderPriority>
+		<maxConfigurableAtWorldCreation>1</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>85</configurationListOrderPriority>
 		<fixedName>Deamonhost</fixedName>
 		<raidCommonalityFromPointsCurve>
 			<points>

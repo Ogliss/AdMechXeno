@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Runtime.CompilerServices;
+using AdeptusMechanicus.ExtensionMethods;
 using RimWorld;
+using UnityEngine;
 using Verse;
+using Verse.AI;
 
 namespace AdeptusMechanicus
 {
-    // Token: 0x02000003 RID: 3
     public class SporeMine : ArcingBullet
     {
 
@@ -21,15 +23,29 @@ namespace AdeptusMechanicus
 		{
 			Faction faction = this.launcher.Faction;
 			ThingDef raceDef = this.def.projectile.postExplosionSpawnThingDef;
-			Pawn pawn = GenSpawn.Spawn(PawnGenerator.GeneratePawn(SporeMine.mineDef, faction), base.Position, base.Map, WipeMode.Vanish) as Pawn;
-			pawn.def = raceDef;
-			pawn.health.AddHediff(HediffDefOf.Scaria, null, null, null);
-			pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent, null, false, false, false, null, false) ;
+            if (raceDef != null)
+            {
+                PawnKindDef mineDef = PawnKindDef.Named("OG_" + raceDef.defName);
+                if (mineDef != null)
+                {
+                    Pawn pawn = GenSpawn.Spawn(PawnGenerator.GeneratePawn(mineDef, faction), base.Position, base.Map, WipeMode.Vanish) as Pawn;
+                    if (pawn != null)
+                    {
+                        pawn.health.AddHediff(HediffDefOf.Scaria, null, null, null);
+                        pawn.mindState.mentalStateHandler.TryStartMentalState(MentalStateDefOf.ManhunterPermanent, null, false, false, false, null, false);
+                    }
+                }
+                else
+                {
+                    Log.Warning($"Spore mine PawnKindDef missing for {this.def.defName}()");
+                }
+            }
+            else
+            {
+                Log.Warning($"Spore mine race def missing for {this.def.defName}");
+            }
 			GenClamor.DoClamor(this, 2.1f, ClamorDefOf.Impact);
 			this.Destroy(DestroyMode.Vanish);
 		}
-
-		// Token: 0x04000001 RID: 1
-		public static readonly PawnKindDef mineDef = PawnKindDef.Named("OG_Tyranid_SporeMine");
 	}
 }

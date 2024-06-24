@@ -27,8 +27,8 @@ namespace AdeptusMechanicus.HarmonyInstance
 
             for (int o = 0; o < __instance.AllComps.Count; o++)
             {
-                Comp_NecronOG _Necron;
-                if ((_Necron = __instance.TryGetCompFast<Comp_NecronOG>()) != null)
+                Comp_Necron _Necron;
+                if ((_Necron = __instance.TryGetCompFast<Comp_Necron>()) != null)
                 {
                     foreach (Gizmo gizmo in _Necron.CompGetGizmosExtra())
                     {

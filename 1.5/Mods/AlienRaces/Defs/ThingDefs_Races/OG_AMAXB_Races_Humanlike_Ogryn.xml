@@ -126,10 +126,7 @@
 					</li>
 				</factionRelations>
 			</generalSettings>
-			<hairSettings IgnoreIfNoMatchingField="True">
-				<hasHair>false</hasHair>
-			</hairSettings>
-			<styleSettings IgnoreIfNoMatchingField="True">
+			<styleSettings>
 				<li>
 					<key>HairDef</key>
 					<value>

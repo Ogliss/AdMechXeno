@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--===================== Misc =====================-->
+<!--===================== Common =====================-->
 
 <BodyPartDef>
 	<defName>TyranidBody</defName>
@@ -28,6 +28,18 @@
 	<defName>TyranidWingMountL</defName>
 	<label>waist</label>
 	<conceptual>true</conceptual>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>TyranidWing</defName>
+	<label>wing</label>
+	<hitPoints>20</hitPoints>
+	<frostbiteVulnerability>0.1</frostbiteVulnerability>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>true</skinCovered>
+	<tags>
+		<li>MovingLimbCore</li>
+	</tags>
 </BodyPartDef>
 
 <BodyPartDef>
@@ -83,61 +95,6 @@
 	<hitPoints>10</hitPoints>
 	<frostbiteVulnerability>8</frostbiteVulnerability>
 	<skinCovered>true</skinCovered>
-</BodyPartDef>
-
-<BodyPartDef>
-	<defName>TyranidCarapace</defName>
-	<label>carapace</label>
-	<hitPoints>30</hitPoints>
-	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-	<skinCovered>false</skinCovered>
-	<alive>false</alive>
-	<bleedRate>0</bleedRate>
-	<solid>true</solid>
-</BodyPartDef>
-
-<BodyPartDef>
-	<defName>TyranidTalon</defName>
-	<label>talon</label>
-	<hitPoints>20</hitPoints>
-	<skinCovered>false</skinCovered>
-	<solid>true</solid>
-	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-	<alive>false</alive>
-	<bleedRate>0</bleedRate>
-</BodyPartDef>
-
-<BodyPartDef>
-	<defName>TyranidHorn</defName>
-	<label>horn</label>
-	<hitPoints>20</hitPoints>
-	<skinCovered>false</skinCovered>
-	<solid>true</solid>
-	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-	<alive>false</alive>
-	<bleedRate>0</bleedRate>
-</BodyPartDef>
-
-<BodyPartDef>
-	<defName>TyranidHeadClaw</defName>
-	<label>head claw</label>
-	<hitPoints>15</hitPoints>
-	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-	<skinCovered>false</skinCovered>
-	<solid>true</solid>
-	<alive>false</alive>
-	<bleedRate>0</bleedRate>
-</BodyPartDef>
-
-<BodyPartDef>
-	<defName>ThickTyranidCarapace</defName>
-	<label>carapace</label>
-	<hitPoints>50</hitPoints>
-	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-	<skinCovered>false</skinCovered>
-	<solid>true</solid>
-	<alive>false</alive>
-	<bleedRate>0</bleedRate>
 </BodyPartDef>
 
 <BodyPartDef>
@@ -240,46 +197,30 @@
 	</tags>
 </BodyPartDef>
 
-
+<!--===================== Defensive Parts ====================-->
 <BodyPartDef>
-	<defName>OGTY_RipperSwarmCore</defName>
-	<label>ripper swarm</label>
-	<conceptual>true</conceptual>
-</BodyPartDef>
-
-<BodyPartDef>
-	<defName>TyranidSwarmRipper</defName>
-	<label>swarm ripper</label>
+	<defName>TyranidCarapace</defName>
+	<label>carapace</label>
 	<hitPoints>30</hitPoints>
 	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-	<skinCovered>true</skinCovered>
-	<solid>false</solid>
-	<alive>true</alive>
-	<tags>
-		<li>ConsciousnessSource</li>
-		<li>BloodPumpingSource</li>
-		<li>BloodFiltrationSource</li>
-		<li>SightSource</li>
-		<li>HearingSource</li>
-		<li>ManipulationLimbSegment</li>
-		<li>ManipulationLimbCore</li>
-		<li>MovingLimbSegment</li>
-		<li>MovingLimbCore</li>
-	</tags>
+	<skinCovered>false</skinCovered>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+	<solid>true</solid>
 </BodyPartDef>
 
 <BodyPartDef>
-	<defName>TyranidWing</defName>
-	<label>wing</label>
-	<hitPoints>20</hitPoints>
-	<frostbiteVulnerability>0.1</frostbiteVulnerability>
+	<defName>ThickTyranidCarapace</defName>
+	<label>carapace</label>
+	<hitPoints>50</hitPoints>
 	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-	<skinCovered>true</skinCovered>
-	<tags>
-		<li>MovingLimbCore</li>
-	</tags>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
 </BodyPartDef>
 
+<!--===================== Biovore =====================-->
 <BodyPartDef>
 	<defName>TyranidHumpGun</defName>
 	<label>bio artillery</label>
@@ -289,7 +230,6 @@
 </BodyPartDef>
 
 <!--===================== Claws =====================-->
-
 <BodyPartDef ParentName="ClawBase">
 	<defName>TyranidClaw</defName>
 	<label>claw</label>
@@ -299,6 +239,40 @@
 	</tags>
 </BodyPartDef>
 
+<BodyPartDef>
+	<defName>TyranidTalon</defName>
+	<label>talon</label>
+	<hitPoints>20</hitPoints>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>TyranidHorn</defName>
+	<label>horn</label>
+	<hitPoints>20</hitPoints>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+</BodyPartDef>
+
+<BodyPartDef>
+	<defName>TyranidHeadClaw</defName>
+	<label>head claw</label>
+	<hitPoints>15</hitPoints>
+	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+	<skinCovered>false</skinCovered>
+	<solid>true</solid>
+	<alive>false</alive>
+	<bleedRate>0</bleedRate>
+</BodyPartDef>
+
+<!--===================== Spore Mine =====================-->
 <BodyPartDef>
 	<defName>TyranidSporeMine</defName>
 	<label>spore mine</label>

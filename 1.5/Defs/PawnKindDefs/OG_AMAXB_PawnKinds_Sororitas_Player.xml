@@ -15,8 +15,8 @@
 	<PawnKindDef Name="OG_Sororitas_Colonist_Base" ParentName="OG_Sororitas_Base_KindDef">
 		<defName>Colonist_OG_Sororitas</defName>
 		<label>colonist (Sororitas)</label>
-		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+		<initialWillRange>0~0</initialWillRange>
+		<initialResistanceRange>13~21</initialResistanceRange>
 		<backstoryFiltersOverride>
 			<li>
 				<categoriesAdulthood>
@@ -74,8 +74,8 @@
 		<fixedGender>Female</fixedGender>
 		<minGenerationAge>19</minGenerationAge>
 		<maxGenerationAge>250</maxGenerationAge>
-		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+		<initialWillRange>0~0</initialWillRange>
+		<initialResistanceRange>13~21</initialResistanceRange>
 		<backstoryFiltersOverride Inherit="false">
 			<li>
 				<categoriesAdulthood>
@@ -143,8 +143,8 @@
 		<fixedGender>Female</fixedGender>
 		<minGenerationAge>19</minGenerationAge>
 		<maxGenerationAge>250</maxGenerationAge>
-		<initialWillRange IgnoreIfNoMatchingField="True">0~0</initialWillRange>
-		<initialResistanceRange IgnoreIfNoMatchingField="True">13~21</initialResistanceRange>
+		<initialWillRange>0~0</initialWillRange>
+		<initialResistanceRange>13~21</initialResistanceRange>
 		<backstoryFiltersOverride Inherit="false">
 			<li>
 				<categoriesAdulthood>

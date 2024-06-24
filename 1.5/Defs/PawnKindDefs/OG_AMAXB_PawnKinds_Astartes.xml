@@ -3,6 +3,7 @@
 
 	<!-- Astartes Base kind -->
 	<PawnKindDef Name="OG_Astartes_Pawnkind_Base" Abstract="True">
+		<overrideDebugActionCategory>Astartes</overrideDebugActionCategory>
 		<defaultFactionType>Pirate</defaultFactionType>
 		<backstoryFiltersOverride>
 			<li>

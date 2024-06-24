@@ -32,24 +32,19 @@
 				</categories>
 			</li>
 		</backstoryFilters>
-		<allowedCultures IgnoreIfNoMatchingField="True">
+		<allowedCultures>
 			<li>OG_Imperial_Militarum_Spacer</li>
 		</allowedCultures>
-		<disallowedMemes IgnoreIfNoMatchingField="True">
+		<disallowedMemes>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_Animist</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
 		</disallowedMemes>
-		<requiredMemes IgnoreIfNoMatchingField="True">
-			<li MayRequire="Ludeon.RimWorld.Ideology">OG_Imperial_Structure_TheistEmbodied</li>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Structure_TheistEmbodied</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
 			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
 		</requiredMemes>
-		<pawnNameMaker IgnoreIfNoMatchingField="True">OG_Militarum_NamerPerson</pawnNameMaker>
-		<pawnNameMakerFemale IgnoreIfNoMatchingField="True">OG_Militarum_NamerPersonFemale</pawnNameMakerFemale>
-		<hairTags IgnoreIfNoMatchingField="True">
-			<li>Urban</li>
-		</hairTags>
 		<startingResearchTags>
 			<li>ClassicStart</li>
 		</startingResearchTags>

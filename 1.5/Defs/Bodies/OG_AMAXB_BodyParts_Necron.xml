@@ -236,7 +236,7 @@
 	<bleedRate>0</bleedRate>
 </BodyPartDef>
 
-<!--===================== Scarab specific ====================-->
+<!--===================== Tomb Spyder specific ====================-->
 <BodyPartDef>
 	<defName>OG_Necron_HeadMount</defName>
 	<label>intake</label>
@@ -263,38 +263,7 @@
 	<solid>true</solid>
 </BodyPartDef>
 
-<BodyPartDef>
-	<defName>OG_Necron_ScarabSwarmCore</defName>
-	<label>scarab swarm</label>
-	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-	<skinCovered>false</skinCovered>
-	<alive>false</alive>
-	<bleedRate>0</bleedRate>
-	<solid>true</solid>
-	<conceptual>true</conceptual>
-</BodyPartDef>
 
-<BodyPartDef>
-	<defName>OG_Necron_SwarmScarab</defName>
-	<label>swarm scarab</label>
-	<hitPoints>30</hitPoints>
-	<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
-	<skinCovered>false</skinCovered>
-	<solid>true</solid>
-	<alive>false</alive>
-	<bleedRate>0</bleedRate>
-	<tags>
-		<li>ConsciousnessSource</li>
-		<li>BloodPumpingSource</li>
-		<li>BloodFiltrationSource</li>
-		<li>SightSource</li>
-		<li>HearingSource</li>
-		<li>ManipulationLimbSegment</li>
-		<li>ManipulationLimbCore</li>
-		<li>MovingLimbSegment</li>
-		<li>MovingLimbCore</li>
-	</tags>
-</BodyPartDef>
 <!--===================== Flayed One/Wraith specific ====================-->
 <BodyPartDef>
 	<defName>OG_Necron_FlayingBlade</defName>

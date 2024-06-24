@@ -5,13 +5,13 @@
 		<label>Dark Eldar Race</label>
 		<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
 		<statBases>
-		<MarketValue>1750</MarketValue>
-		<MoveSpeed>5.61</MoveSpeed>
-		<PsychicSensitivity>+0.5</PsychicSensitivity>
-		<Flammability>1</Flammability>
-		<ComfyTemperatureMin>-60</ComfyTemperatureMin>
-		<ComfyTemperatureMax>65</ComfyTemperatureMax>
-		<LeatherAmount>25</LeatherAmount>
+			<MarketValue>1750</MarketValue>
+			<MoveSpeed>5.61</MoveSpeed>
+			<PsychicSensitivity>+0.5</PsychicSensitivity>
+			<Flammability>1</Flammability>
+			<ComfyTemperatureMin>-60</ComfyTemperatureMin>
+			<ComfyTemperatureMax>65</ComfyTemperatureMax>
+			<LeatherAmount>25</LeatherAmount>
 		</statBases>
 		<tools>
 		<li>
@@ -50,6 +50,7 @@
 		</li>
 		</tools>
 		<race>
+			<overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker>
 			<thinkTreeMain>Humanlike</thinkTreeMain>
 			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
 			<intelligence>ToolUser</intelligence>
@@ -68,8 +69,8 @@
 			<predator>true</predator>
 			<lifeStageAges>
 				<li>
-					<def>HumanlikeAdult</def>
-					<minAge>18</minAge>
+					<def>AeldariWarrriorComplete</def>
+					<minAge>0</minAge>
 				</li>
 			</lifeStageAges>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>

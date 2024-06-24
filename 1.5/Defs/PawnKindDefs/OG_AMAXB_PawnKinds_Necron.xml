@@ -2,9 +2,11 @@
 <Defs>
 <!-- Necron Base Abstracts -->
 <PawnKindDef Name="OG_Necron_BaseKind" Abstract="True">
+	<overrideDebugActionCategory>Necron</overrideDebugActionCategory>
 	<defaultFactionType>OG_Necron_Faction</defaultFactionType>
 	<aiAvoidCover>true</aiAvoidCover>
 	<destroyGearOnDrop>false</destroyGearOnDrop>
+	<ignoresPainShock>true</ignoresPainShock>
 	<weaponMoney>
 		<min>99999</min>
 		<max>99999</max>
@@ -16,18 +18,18 @@
 	<defName>OG_Necron_Warrior</defName>
 	<label>necron warrior</label>
 	<race>OG_Necron_Warrior</race>
-	<combatPower>100</combatPower>
+	<combatPower>120</combatPower>
 	<lifeStages>
 		<li>
-		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Necron/Warrior</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<color>(205,205,205)</color>
-			<drawSize>1.75</drawSize>
-			<shadowData>
-			<volume>(0.4, 0.8, 0.4)</volume>
-			</shadowData>
-		</bodyGraphicData>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Necron/Warrior</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<color>(205,205,205)</color>
+				<drawSize>1.75</drawSize>
+				<shadowData>
+					<volume>(0.4, 0.8, 0.4)</volume>
+				</shadowData>
+			</bodyGraphicData>
 		</li>
 	</lifeStages>
 	<weaponTags>
@@ -38,20 +40,20 @@
 <!-- Flayed One -->
 <PawnKindDef ParentName="OG_Necron_BaseKind">
 	<defName>OG_Necron_Flayed_One</defName>
-	<label>necron Flayed One</label>
+	<label>flayed one</label>
 	<race>OG_Necron_FlayedOne</race>
 	<combatPower>100</combatPower>
 	<lifeStages>
 		<li>
-		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Necron/FlayedOne</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<color>(205,205,205)</color>
-			<drawSize>1.65</drawSize>
-			<shadowData>
-			<volume>(0.4, 0.8, 0.4)</volume>
-			</shadowData>
-		</bodyGraphicData>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Necron/FlayedOne</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<color>(205,205,205)</color>
+				<drawSize>1.65</drawSize>
+				<shadowData>
+					<volume>(0.4, 0.8, 0.4)</volume>
+				</shadowData>
+			</bodyGraphicData>
 		</li>
 	</lifeStages>
 	<weaponTags>
@@ -60,7 +62,7 @@
 	</weaponTags>
 	<modExtensions>
 		<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
-				<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
+			<pawnsArrivalMode>Infiltrate</pawnsArrivalMode>
 		</li>
 	</modExtensions>
 </PawnKindDef>
@@ -68,20 +70,20 @@
 <!-- Wraith -->
 <PawnKindDef ParentName="OG_Necron_BaseKind">
 	<defName>OG_Necron_Wraith</defName>
-	<label>necron wraith</label>
+	<label>wraith</label>
 	<race>OG_Necron_Wraith</race>
-	<combatPower>150</combatPower>
+	<combatPower>175</combatPower>
 	<lifeStages>
 		<li>
-		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Necron/Wraith</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<color>(205,205,205)</color>
-			<drawSize>1.75</drawSize>
-			<shadowData>
-			<volume>(0.4, 0.1, 0.4)</volume>
-			</shadowData>
-		</bodyGraphicData>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Necron/Wraith</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<color>(205,205,205)</color>
+				<drawSize>1.75</drawSize>
+				<shadowData>
+					<volume>(0.4, 0.1, 0.4)</volume>
+				</shadowData>
+			</bodyGraphicData>
 		</li>
 	</lifeStages>
 	<weaponTags>
@@ -95,18 +97,18 @@
 	<defName>OG_Necron_Immortal</defName>
 	<label>necron immortal</label>
 	<race>OG_Necron_Immortal</race>
-	<combatPower>200</combatPower>
+	<combatPower>150</combatPower>
 	<lifeStages>
 		<li>
-		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Necron/Immortal</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<color>(205,205,205)</color>
-			<drawSize>1.85</drawSize>
-			<shadowData>
-			<volume>(0.4, 0.8, 0.4)</volume>
-			</shadowData>
-		</bodyGraphicData>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Necron/Immortal</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<color>(205,205,205)</color>
+				<drawSize>1.85</drawSize>
+				<shadowData>
+					<volume>(0.4, 0.8, 0.4)</volume>
+				</shadowData>
+			</bodyGraphicData>
 		</li>
 	</lifeStages>
 	<weaponTags>
@@ -115,7 +117,7 @@
 	</weaponTags>
 	<modExtensions>
 		<li Class="AdeptusMechanicus.ReserveDeploymentExtension">
-		<pawnsArrivalMode>Teleport</pawnsArrivalMode>
+			<pawnsArrivalMode>Teleport</pawnsArrivalMode>
 		</li>
 	</modExtensions>
 </PawnKindDef>
@@ -128,15 +130,15 @@
 	<combatPower>500</combatPower>
 	<lifeStages>
 		<li>
-		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Necron/Lord</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<color>(205,205,205)</color>
-			<drawSize>1.75</drawSize>
-			<shadowData>
-			<volume>(0.4, 0.8, 0.4)</volume>
-			</shadowData>
-		</bodyGraphicData>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Necron/Lord</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<color>(205,205,205)</color>
+				<drawSize>1.75</drawSize>
+				<shadowData>
+					<volume>(0.4, 0.8, 0.4)</volume>
+				</shadowData>
+			</bodyGraphicData>
 		</li>
 	</lifeStages>
 	<weaponTags>
@@ -149,18 +151,18 @@
 	<defName>OG_Necron_Destroyer</defName>
 	<label>necron destroyer</label>
 	<race>OG_Necron_Destroyer</race>
-	<combatPower>275</combatPower>
+	<combatPower>300</combatPower>
 	<lifeStages>
 		<li>
-		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Necron/Destroyer</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<color>(205,205,205)</color>
-			<drawSize>2</drawSize>
-			<shadowData>
-			<volume>(0.0, 0.0, 0.0)</volume>
-			</shadowData>
-		</bodyGraphicData>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Necron/Destroyer</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<color>(205,205,205)</color>
+				<drawSize>2</drawSize>
+				<shadowData>
+					<volume>(0.0, 0.0, 0.0)</volume>
+				</shadowData>
+			</bodyGraphicData>
 		</li>
 	</lifeStages>
 	<weaponTags>
@@ -178,15 +180,15 @@
 	<combatPower>350</combatPower>
 	<lifeStages>
 		<li>
-		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Necron/Destroyer</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<color>(205,205,205)</color>
-			<drawSize>2</drawSize>
-			<shadowData>
-			<volume>(0.0, 0.0, 0.0)</volume>
-			</shadowData>
-		</bodyGraphicData>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Necron/Destroyer</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<color>(205,205,205)</color>
+				<drawSize>2</drawSize>
+				<shadowData>
+					<volume>(0.0, 0.0, 0.0)</volume>
+				</shadowData>
+			</bodyGraphicData>
 		</li>
 	</lifeStages>
 	<weaponTags>
@@ -195,22 +197,18 @@
 </PawnKindDef>
 
 <!-- Necron Scarab -->
-<PawnKindDef ParentName="OG_Necron_BaseKind">
-	<defName>OG_Necron_Scarab_Swarm</defName>
-	<label>necron scarab swarm</label>
-	<race>OG_Necron_ScarabSwarm</race>
-	<combatPower>50</combatPower>
+<PawnKindDef Name="OG_Scarab_BaseKind" ParentName="OG_Necron_BaseKind" Abstract="true">
 	<lifeStages>
 		<li>
-		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Necron/ScarabSingle</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<color>(205,205,205)</color>
-			<drawSize>1.0</drawSize>
-			<shadowData>
-			<volume>(0.4, 0.8, 0.4)</volume>
-			</shadowData>
-		</bodyGraphicData>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Necron/ScarabSingle</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<color>(205,205,205)</color>
+				<drawSize>1.0</drawSize>
+				<shadowData>
+					<volume>(0.4, 0.8, 0.4)</volume>
+				</shadowData>
+			</bodyGraphicData>
 		</li>
 	</lifeStages>
 	<weaponMoney>
@@ -221,6 +219,22 @@
 	</weaponTags>
 </PawnKindDef>
 
+<!-- Necron Scarab -->
+<PawnKindDef ParentName="OG_Scarab_BaseKind">
+	<defName>OG_Necron_Scarab</defName>
+	<label>scarab</label>
+	<race>OG_Necron_ScarabSingle</race>
+	<combatPower>20</combatPower>
+</PawnKindDef>
+
+<!-- Necron Scarab -->
+<PawnKindDef ParentName="OG_Scarab_BaseKind">
+	<defName>OG_Necron_Scarab_Swarm</defName>
+	<label>necron scarab swarm</label>
+	<race>OG_Necron_ScarabSwarm</race>
+	<combatPower>175</combatPower>
+</PawnKindDef>
+
 <!-- Tomb Spyder -->
 <PawnKindDef ParentName="OG_Necron_BaseKind">
 	<defName>OG_Necron_Tomb_Spyder</defName>
@@ -229,15 +243,15 @@
 	<combatPower>400</combatPower>
 	<lifeStages>
 		<li>
-		<bodyGraphicData>
-			<texPath>Things/Pawn/ToolUser/Necron/TombSpyder</texPath>
-			<graphicClass>Graphic_Multi</graphicClass>
-			<color>(205,205,205)</color>
-			<drawSize>3</drawSize>
-			<shadowData>
-			<volume>(0.6, 0.0, 0.6)</volume>
-			</shadowData>
-		</bodyGraphicData>
+			<bodyGraphicData>
+				<texPath>Things/Pawn/ToolUser/Necron/TombSpyder</texPath>
+				<graphicClass>Graphic_Multi</graphicClass>
+				<color>(205,205,205)</color>
+				<drawSize>3</drawSize>
+				<shadowData>
+					<volume>(0.6, 0.0, 0.6)</volume>
+				</shadowData>
+			</bodyGraphicData>
 		</li>
 	</lifeStages>
 	<weaponTags>

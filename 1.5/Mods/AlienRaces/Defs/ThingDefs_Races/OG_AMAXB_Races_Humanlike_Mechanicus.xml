@@ -150,10 +150,10 @@
 			<graphicPaths Inherit="false">
 					<body>
 						<bodytypeGraphics>
-						  <Baby>
+						  <Baby MayRequire="Ludeon.RimWorld.Biotech">
 							<path>Things/Pawn/Humanlike/Bodies/Naked_Child</path>
 						  </Baby>
-						  <Child>
+						  <Child MayRequire="Ludeon.RimWorld.Biotech">
 							<path>Things/Pawn/Humanlike/Bodies/Naked_Child</path>
 						  </Child>
 						  <Male>

@@ -17,7 +17,7 @@ namespace AdeptusMechanicus.HarmonyInstance
             {
                 if (injury!=null)
                 {
-                    Comp_NecronOG _Necron = pawn.TryGetCompFast<Comp_NecronOG>();
+                    Comp_Necron _Necron = pawn.TryGetCompFast<Comp_Necron>();
                     if (_Necron != null)
                     {
                         DamageInfo dInfo = dinfo;

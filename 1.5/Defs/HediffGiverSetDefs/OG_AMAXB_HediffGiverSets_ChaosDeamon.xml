@@ -5,11 +5,11 @@
 	<defName>OGCD_Horror_Options</defName>
 	<hediffGivers>
 		<li Class="AdeptusMechanicus.HediffGiver_StartWithHediff">
-		<hediff>OG_ChaosDeamon_Power_Warpfire_Bolt</hediff>
-		<partsToAffect>
-		<li>Brain</li>
-		</partsToAffect>
-		<chance>100</chance>
+			<hediff>OG_ChaosDeamon_Power_Warpfire_Bolt</hediff>
+			<partsToAffect>
+				<li>Brain</li>
+			</partsToAffect>
+			<chance>100</chance>
 		</li>
 	</hediffGivers>
 </HediffGiverSetDef>
@@ -18,11 +18,11 @@
 	<defName>OGCD_Flamer_Options</defName>
 	<hediffGivers>
 		<li Class="AdeptusMechanicus.HediffGiver_StartWithHediff">
-		<hediff>OG_ChaosDeamon_Power_Warpfire_Flamer</hediff>
-		<partsToAffect>
-		<li>Brain</li>
-		</partsToAffect>
-		<chance>100</chance>
+			<hediff>OG_ChaosDeamon_Power_Warpfire_Flamer</hediff>
+			<partsToAffect>
+				<li>Brain</li>
+			</partsToAffect>
+			<chance>100</chance>
 		</li>
 	</hediffGivers>
 </HediffGiverSetDef>

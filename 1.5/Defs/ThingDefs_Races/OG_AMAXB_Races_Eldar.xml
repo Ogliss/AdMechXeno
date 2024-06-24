@@ -5,53 +5,52 @@
 		<label>Eldar Race</label>
 		<soundImpactDefault>BulletImpact_Flesh</soundImpactDefault>
 		<statBases>
-		<MarketValue>1750</MarketValue>
-		<MoveSpeed>5.61</MoveSpeed>
-		<PsychicSensitivity>+0.5</PsychicSensitivity>
-		<Flammability>1</Flammability>
-		<ComfyTemperatureMin>-60</ComfyTemperatureMin>
-		<ComfyTemperatureMax>65</ComfyTemperatureMax>
-		<LeatherAmount>25</LeatherAmount>
+			<MarketValue>1750</MarketValue>
+			<MoveSpeed>5.61</MoveSpeed>
+			<PsychicSensitivity>+0.5</PsychicSensitivity>
+			<Flammability>1</Flammability>
+			<ComfyTemperatureMin>-60</ComfyTemperatureMin>
+			<ComfyTemperatureMax>65</ComfyTemperatureMax>
+			<LeatherAmount>25</LeatherAmount>
 		</statBases>
 		<tools>
-		<li>
-			<label>left fist</label>
-			<capacities>
-				<li>Blunt</li>
-			</capacities>
-			<power>7</power>
-			<cooldownTime>1.6</cooldownTime>
-			<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
-			<surpriseAttack>
-			<extraMeleeDamages>
-				<li>
-					<def>Stun</def>
-					<amount>22</amount>
-				</li>
-			</extraMeleeDamages>
-			</surpriseAttack>
-		</li>
-		<li>
-			<label>right fist</label>
-			<capacities>
-				<li>Blunt</li>
-			</capacities>
-			<power>7</power>
-			<cooldownTime>1.6</cooldownTime>
-			<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
-			<surpriseAttack>
-			<extraMeleeDamages>
-				<li>
-					<def>Stun</def>
-					<amount>22</amount>
-				</li>
-			</extraMeleeDamages>
-			</surpriseAttack>
-		</li>
+			<li>
+				<label>left fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>7</power>
+				<cooldownTime>1.6</cooldownTime>
+				<linkedBodyPartsGroup>LeftHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>22</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
+			<li>
+				<label>right fist</label>
+				<capacities>
+					<li>Blunt</li>
+				</capacities>
+				<power>7</power>
+				<cooldownTime>1.6</cooldownTime>
+				<linkedBodyPartsGroup>RightHand</linkedBodyPartsGroup>
+				<surpriseAttack>
+					<extraMeleeDamages>
+						<li>
+							<def>Stun</def>
+							<amount>22</amount>
+						</li>
+					</extraMeleeDamages>
+				</surpriseAttack>
+			</li>
 		</tools>
 		<race>
-			<thinkTreeMain>Humanlike</thinkTreeMain>
-			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+			<thinkTreeMain>OG_Eldar_ThinkTree</thinkTreeMain>
 			<intelligence>ToolUser</intelligence>
 			<leatherDef>Leather_Eldar</leatherDef>
 			<body>OG_Eldar_Body</body>
@@ -68,8 +67,8 @@
 			<predator>true</predator>
 			<lifeStageAges>
 				<li>
-					<def>HumanlikeAdult</def>
-					<minAge>18</minAge>
+					<def>AeldariWarrriorComplete</def>
+					<minAge>0</minAge>
 				</li>
 			</lifeStageAges>
 			<soundMeleeHitPawn>Pawn_Melee_Punch_HitPawn</soundMeleeHitPawn>
@@ -111,6 +110,10 @@
 
 	<ThingDef ParentName="OG_Eldar_Pawn_Base">
 		<defName>OG_Alien_Eldar</defName>
+		<race>
+			<thinkTreeMain>Humanlike</thinkTreeMain>
+			<thinkTreeConstant>HumanlikeConstant</thinkTreeConstant>
+		</race>
 	</ThingDef>
 
 	<!-- Eldar Warrior -->
@@ -142,6 +145,8 @@
 			<MoveSpeed>6.4</MoveSpeed>
 		</statBases>
 		<race>
+			<overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker>
+			<thinkTreeConstant>OG_Eldar_AspectWarrior_Constant</thinkTreeConstant>	
 			<baseHealthScale>1</baseHealthScale>
 			<useMeatFrom>OG_Alien_Eldar</useMeatFrom>
 		</race>
@@ -160,6 +165,7 @@
 			<ArmorRating_Heat>0.48</ArmorRating_Heat>
 		</statBases>
 		<race>
+			<overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker>	
 			<lifeExpectancy>15000</lifeExpectancy>
 			<baseHealthScale>1.25</baseHealthScale>
 			<useMeatFrom>OG_Alien_Eldar</useMeatFrom>
@@ -182,6 +188,7 @@
 			<MoveSpeed>6.8</MoveSpeed>
 		</statBases>
 		<race>
+			<overrideShouldHaveAbilityTracker>true</overrideShouldHaveAbilityTracker>	
 			<lifeExpectancy>25000</lifeExpectancy>
 			<baseHealthScale>1.50</baseHealthScale>
 			<useMeatFrom>OG_Alien_Eldar</useMeatFrom>

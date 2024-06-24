@@ -27,4 +27,16 @@
 </BodyPartGroupDef>
 -->
 
+<BodyPartGroupDef>
+	<defName>TyranidHumpGun</defName>
+	<label>bio artillery</label>
+	<labelShort>artillery</labelShort>
+</BodyPartGroupDef>
+
+<BodyPartGroupDef>
+	<defName>TyranidPsykerAttack</defName>
+	<label>psychic artillery</label>
+	<labelShort>artillery</labelShort>
+</BodyPartGroupDef>
+
 </Defs>
