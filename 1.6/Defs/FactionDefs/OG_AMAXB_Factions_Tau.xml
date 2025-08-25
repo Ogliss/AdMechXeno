@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<FactionDef Name="OG_Tau_Faction" ParentName="OG_Tau_Faction_Base">
+		<defName>OG_Tau_Faction</defName>
+		<permanentEnemy>true</permanentEnemy>
+		<pawnGroupMakers>
+			<li>
+				<!-- Normal fights, ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<OG_Kroothound_Kindred>10</OG_Kroothound_Kindred>
+					<OG_Knarloc_Kindred>2</OG_Knarloc_Kindred>
+					<OG_Kroot_Warrior>10</OG_Kroot_Warrior>
+					<OG_Kroot_Hunter>5</OG_Kroot_Hunter>
+					<OG_Kroot_Shaper>1</OG_Kroot_Shaper>
+					<OG_Guevesa_Cadet>7</OG_Guevesa_Cadet>
+					<OG_Guevesa_Sgt>4</OG_Guevesa_Sgt>
+					<OG_Guevesa_Soldier_HW>5</OG_Guevesa_Soldier_HW>
+					<OG_Guevesa_Soldier_SW>5</OG_Guevesa_Soldier_SW>
+					<OG_Guevesa_Soldier>10</OG_Guevesa_Soldier>
+					<OG_Tau_GunDrone>10</OG_Tau_GunDrone>
+					<OG_Tau_Firewarrior>10</OG_Tau_Firewarrior>
+					<OG_Tau_Firewarrior_Sgt>1</OG_Tau_Firewarrior_Sgt>
+					<OG_Tau_Pathfinder>10</OG_Tau_Pathfinder>
+					<OG_Tau_Pathfinder_Sgt>1</OG_Tau_Pathfinder_Sgt>
+					<OG_Tau_Ethereal>1</OG_Tau_Ethereal>
+					<OG_Tau_Faction_Ethereal>0</OG_Tau_Faction_Ethereal>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, melee-only -->
+				<kindDef>Combat</kindDef>
+				<commonality>30</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<OG_Kroot_Warrior>10</OG_Kroot_Warrior>
+					<OG_Kroot_Shaper>1</OG_Kroot_Shaper>
+					<OG_Kroothound_Kindred>10</OG_Kroothound_Kindred>
+					<OG_Knarloc_Kindred>2</OG_Knarloc_Kindred>
+					<OG_Tau_Ethereal>1</OG_Tau_Ethereal>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, ranged only -->
+				<kindDef>Combat</kindDef>
+				<commonality>20</commonality>
+				<options>
+					<OG_Kroot_Warrior>10</OG_Kroot_Warrior>
+					<OG_Kroot_Hunter>5</OG_Kroot_Hunter>
+					<OG_Kroot_Shaper>1</OG_Kroot_Shaper>
+					<OG_Guevesa_Cadet>15</OG_Guevesa_Cadet>
+					<OG_Guevesa_Sgt>10</OG_Guevesa_Sgt>
+					<OG_Guevesa_Soldier_HW>5</OG_Guevesa_Soldier_HW>
+					<OG_Guevesa_Soldier_SW>5</OG_Guevesa_Soldier_SW>
+					<OG_Guevesa_Soldier>10</OG_Guevesa_Soldier>
+					<OG_Tau_GunDrone>15</OG_Tau_GunDrone>
+					<OG_Tau_Pathfinder>10</OG_Tau_Pathfinder>
+					<OG_Tau_Pathfinder_Sgt>1</OG_Tau_Pathfinder_Sgt>
+					<OG_Tau_Firewarrior>10</OG_Tau_Firewarrior>
+					<OG_Tau_Firewarrior_Sgt>0.5</OG_Tau_Firewarrior_Sgt>
+					<OG_Tau_Ethereal>1</OG_Tau_Ethereal>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, explosives with ranged mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>15</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<OG_Tau_GunDrone>10</OG_Tau_GunDrone>
+					<OG_Tau_Pathfinder>10</OG_Tau_Pathfinder>
+					<OG_Tau_Pathfinder_Sgt>1</OG_Tau_Pathfinder_Sgt>
+					<OG_Tau_Firewarrior>10</OG_Tau_Firewarrior>
+					<OG_Tau_Firewarrior_Sgt>1</OG_Tau_Firewarrior_Sgt>
+					<OG_Tau_Ethereal>1</OG_Tau_Ethereal>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, snipers only -->
+				<kindDef>Combat</kindDef>
+				<commonality>10</commonality>
+				<options>
+					<OG_Tau_Pathfinder>10</OG_Tau_Pathfinder>
+					<OG_Tau_Pathfinder_Sgt>1</OG_Tau_Pathfinder_Sgt>
+					<OG_Tau_Firewarrior>10</OG_Tau_Firewarrior>
+					<OG_Tau_Firewarrior_Sgt>10</OG_Tau_Firewarrior_Sgt>
+					<OG_Guevesa_Cadet>15</OG_Guevesa_Cadet>
+					<OG_Guevesa_Sgt>10</OG_Guevesa_Sgt>
+					<OG_Guevesa_Soldier_HW>5</OG_Guevesa_Soldier_HW>
+					<OG_Guevesa_Soldier_SW>5</OG_Guevesa_Soldier_SW>
+					<OG_Guevesa_Soldier>10</OG_Guevesa_Soldier>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, drifters only (very rare) -->
+				<kindDef>Combat</kindDef>
+				<commonality>2.5</commonality>
+				<maxTotalPoints>1000</maxTotalPoints>
+				<options>
+					<OG_Tau_Pathfinder>10</OG_Tau_Pathfinder>
+					<OG_Tau_Pathfinder_Sgt>1</OG_Tau_Pathfinder_Sgt>
+					<OG_Kroot_Warrior>10</OG_Kroot_Warrior>
+					<OG_Kroot_Hunter>5</OG_Kroot_Hunter>
+					<OG_Kroot_Shaper>1</OG_Kroot_Shaper>
+					<OG_Guevesa_Cadet>15</OG_Guevesa_Cadet>
+					<OG_Guevesa_Sgt>10</OG_Guevesa_Sgt>
+					<OG_Guevesa_Soldier_HW>5</OG_Guevesa_Soldier_HW>
+					<OG_Guevesa_Soldier_SW>5</OG_Guevesa_Soldier_SW>
+					<OG_Guevesa_Soldier>10</OG_Guevesa_Soldier>
+				</options>
+			</li>
+			<li>
+				<!-- Base defense, mainly ranged with melee mix-ins -->
+				<kindDef>Settlement</kindDef>
+				<options>
+					<OG_Kroot_Warrior>10</OG_Kroot_Warrior>
+					<OG_Kroot_Hunter>5</OG_Kroot_Hunter>
+					<OG_Kroot_Shaper>1</OG_Kroot_Shaper>
+					<OG_Tau_Pathfinder>10</OG_Tau_Pathfinder>
+					<OG_Tau_Pathfinder_Sgt>1</OG_Tau_Pathfinder_Sgt>
+					<OG_Tau_Firewarrior>10</OG_Tau_Firewarrior>
+					<OG_Tau_Firewarrior_Sgt>1</OG_Tau_Firewarrior_Sgt>
+					<OG_Tau_Ethereal>1</OG_Tau_Ethereal>
+					<OG_Tau_Faction_Ethereal>0</OG_Tau_Faction_Ethereal>
+					<OG_Guevesa_Cadet>15</OG_Guevesa_Cadet>
+					<OG_Guevesa_Sgt>10</OG_Guevesa_Sgt>
+					<OG_Guevesa_Soldier_HW>5</OG_Guevesa_Soldier_HW>
+					<OG_Guevesa_Soldier_SW>5</OG_Guevesa_Soldier_SW>
+					<OG_Guevesa_Soldier>10</OG_Guevesa_Soldier>
+				</options>
+			</li>
+		</pawnGroupMakers>
+	</FactionDef>
+
+</Defs>

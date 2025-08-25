@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<FactionDef Abstract="True" Name="OG_DarkEldar_Faction" ParentName="OG_DarkEldar_Faction_Base">
+		<basicMemberKind>OG_DarkEldar_Kabalite_Ranged</basicMemberKind>
+		<hidden>true</hidden>
+		<canSiege>false</canSiege>
+		<permanentEnemy>true</permanentEnemy>
+	</FactionDef>
+
+	<FactionDef Name="OG_DarkEldar_Kabal_Faction_Base" ParentName="OG_DarkEldar_Faction">
+		<defName>OG_DarkEldar_Kabal_Faction</defName>
+		<label>drukhari kabal</label>
+		<pawnGroupMakers>
+			<li>
+				<!-- Normal fights, ranged with melee mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>100</commonality>
+				<options>
+					<OG_DarkEldar_Kabalite_Ranged>100</OG_DarkEldar_Kabalite_Ranged>
+					<OG_DarkEldar_Kabalite_Melee>100</OG_DarkEldar_Kabalite_Melee>
+					<OG_DarkEldar_Kabalite_Support>10</OG_DarkEldar_Kabalite_Support>
+					<OG_DarkEldar_Kabalite_Sybarite>50</OG_DarkEldar_Kabalite_Sybarite>
+					<OG_DarkEldar_Incubi>10</OG_DarkEldar_Incubi>
+					<OG_DarkEldar_Incubi_Lord>1</OG_DarkEldar_Incubi_Lord>
+					<OG_DarkEldar_Wych>25</OG_DarkEldar_Wych>
+					<OG_DarkEldar_Wych_Hekatrix>1</OG_DarkEldar_Wych_Hekatrix>
+					<OG_DarkEldar_Hellion>15</OG_DarkEldar_Hellion>
+					<OG_DarkEldar_Hellion_Heliarch>1</OG_DarkEldar_Hellion_Heliarch>
+					<!--OG_DarkEldar_TalosPainEngine>0.5</OG_DarkEldar_TalosPainEngine-->
+					<OG_DarkEldar_Archon>0.25</OG_DarkEldar_Archon>
+					<OG_DarkEldar_Archon_Faction>0</OG_DarkEldar_Archon_Faction>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, melee-only -->
+				<kindDef>Combat</kindDef>
+				<commonality>30</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<OG_DarkEldar_Kabalite_Melee>100</OG_DarkEldar_Kabalite_Melee>
+					<OG_DarkEldar_Wych>25</OG_DarkEldar_Wych>
+					<OG_DarkEldar_Wych_Hekatrix>1</OG_DarkEldar_Wych_Hekatrix>
+					<OG_DarkEldar_Incubi>10</OG_DarkEldar_Incubi>
+					<OG_DarkEldar_Incubi_Lord>1</OG_DarkEldar_Incubi_Lord>
+					<OG_DarkEldar_Hellion>15</OG_DarkEldar_Hellion>
+					<OG_DarkEldar_Hellion_Heliarch>1</OG_DarkEldar_Hellion_Heliarch>
+					<!--OG_DarkEldar_TalosPainEngine>0.5</OG_DarkEldar_TalosPainEngine-->
+					<OG_DarkEldar_Archon>0.25</OG_DarkEldar_Archon>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, ranged only -->
+				<kindDef>Combat</kindDef>
+				<commonality>20</commonality>
+				<options>
+					<OG_DarkEldar_Kabalite_Ranged>100</OG_DarkEldar_Kabalite_Ranged>
+					<OG_DarkEldar_Kabalite_Support>10</OG_DarkEldar_Kabalite_Support>
+					<OG_DarkEldar_Kabalite_Sybarite>50</OG_DarkEldar_Kabalite_Sybarite>
+					<OG_DarkEldar_Archon>5</OG_DarkEldar_Archon>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, explosives with ranged mix-ins -->
+				<kindDef>Combat</kindDef>
+				<commonality>15</commonality>
+				<disallowedStrategies>
+					<li>Siege</li>
+				</disallowedStrategies>
+				<options>
+					<OG_DarkEldar_Kabalite_Sybarite>8</OG_DarkEldar_Kabalite_Sybarite>
+					<OG_DarkEldar_Kabalite_Support>10</OG_DarkEldar_Kabalite_Support>
+					<!--OG_DarkEldar_TalosPainEngine>1</OG_DarkEldar_TalosPainEngine-->
+					<OG_DarkEldar_Archon>1</OG_DarkEldar_Archon>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, Wyches only (very rare) -->
+				<kindDef>Combat</kindDef>
+				<commonality>2.5</commonality>
+				<maxTotalPoints>1000</maxTotalPoints>
+				<options>
+					<OG_DarkEldar_Wych>25</OG_DarkEldar_Wych>
+					<OG_DarkEldar_Wych_Hekatrix>1</OG_DarkEldar_Wych_Hekatrix>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, Incubi only (very rare) -->
+				<kindDef>Combat</kindDef>
+				<commonality>2.5</commonality>
+				<maxTotalPoints>1000</maxTotalPoints>
+				<options>
+					<OG_DarkEldar_Incubi>10</OG_DarkEldar_Incubi>
+					<OG_DarkEldar_Incubi_Lord>1</OG_DarkEldar_Incubi_Lord>
+				</options>
+			</li>
+			<li>
+				<!-- Normal fights, Hellion only (very rare) -->
+				<kindDef>Combat</kindDef>
+				<commonality>2.5</commonality>
+				<maxTotalPoints>1000</maxTotalPoints>
+				<options>
+					<OG_DarkEldar_Hellion>15</OG_DarkEldar_Hellion>
+					<OG_DarkEldar_Hellion_Heliarch>1</OG_DarkEldar_Hellion_Heliarch>
+				</options>
+			</li>
+			<li>
+				<!-- Base defense, mainly ranged with melee mix-ins -->
+				<kindDef>Settlement</kindDef>
+				<options>
+					<OG_DarkEldar_Kabalite_Ranged>100</OG_DarkEldar_Kabalite_Ranged>
+					<OG_DarkEldar_Kabalite_Melee>100</OG_DarkEldar_Kabalite_Melee>
+					<OG_DarkEldar_Kabalite_Support>10</OG_DarkEldar_Kabalite_Support>
+					<OG_DarkEldar_Kabalite_Sybarite>50</OG_DarkEldar_Kabalite_Sybarite>
+					<OG_DarkEldar_Incubi>10</OG_DarkEldar_Incubi>
+					<OG_DarkEldar_Incubi_Lord>1</OG_DarkEldar_Incubi_Lord>
+					<OG_DarkEldar_Wych>25</OG_DarkEldar_Wych>
+					<OG_DarkEldar_Wych_Hekatrix>1</OG_DarkEldar_Wych_Hekatrix>
+					<OG_DarkEldar_Hellion>15</OG_DarkEldar_Hellion>
+					<OG_DarkEldar_Hellion_Heliarch>1</OG_DarkEldar_Hellion_Heliarch>
+					<!--OG_DarkEldar_TalosPainEngine>3</OG_DarkEldar_TalosPainEngine-->
+					<OG_DarkEldar_Archon>10</OG_DarkEldar_Archon>
+					<OG_DarkEldar_Archon_Faction>0</OG_DarkEldar_Archon_Faction>
+				</options>
+			</li>
+		</pawnGroupMakers>
+	</FactionDef>
+
+</Defs>

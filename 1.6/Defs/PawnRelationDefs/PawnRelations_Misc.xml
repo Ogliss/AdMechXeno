@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <HistoryEventDef>
+    <defName>OG_Ork_BecameBoss</defName>
+    <label>Boss</label>
+  </HistoryEventDef>
+
+  <PawnRelationDef>
+    <defName>OG_Ork_Boss</defName>
+    <label>boss</label>
+    <importance>85</importance>
+	<!--
+    <diedThought>OG_Ork_BossDied</diedThought>
+    <soldThoughts>
+      <li>OG_Ork_SoldMyBoss</li>
+      <li>OG_Ork_SoldMyBosslMood</li>
+    </soldThoughts>
+    <lostThought>OG_Ork_BossLost</lostThought>
+    <killedThought>OG_Ork_KilledMyBoss</killedThought>
+	-->
+    <opinionOffset>50</opinionOffset>
+    <implied>false</implied>
+    <reflexive>true</reflexive>
+  </PawnRelationDef>
+  
+  <PawnRelationDef>
+    <defName>OG_Ork_Biggest</defName>
+    <label>biggest</label>
+    <importance>85</importance>
+	<!--
+    <diedThought>OG_Ork_BossDied</diedThought>
+    <soldThoughts>
+      <li>OG_Ork_SoldMyBoss</li>
+      <li>OG_Ork_SoldMyBosslMood</li>
+    </soldThoughts>
+    <lostThought>OG_Ork_BossLost</lostThought>
+    <killedThought>OG_Ork_KilledMyBoss</killedThought>
+	-->
+    <opinionOffset>50</opinionOffset>
+    <implied>false</implied>
+    <reflexive>true</reflexive>
+  </PawnRelationDef>
+  
+</Defs>

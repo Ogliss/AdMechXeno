@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<AlienRace.ThingDef_AlienRace Name="OG_Mechanicus_Base" ParentName="OG_Mechanicus_RaceBase">
+		<defName>OG_Human_Mechanicus</defName>
+		<alienRace>
+			<generalSettings>
+				<humanRecipeImport>true</humanRecipeImport>
+				<alienPartGenerator>
+					<borderScale>1</borderScale>
+					<atlasScale>2</atlasScale>
+					<headTypes>
+						<li>Male_AverageNormal</li>
+						<li>Male_AveragePointy</li>
+						<li>Male_AverageWide</li>
+						<li>Male_NarrowNormal</li>
+						<li>Male_NarrowPointy</li>
+						<li>Male_NarrowWide</li>
+						<!--li>Male_MechHeadA</li>
+						<li>Male_MechHeadB</li>
+						<li>Male_MechHeadC</li>
+						<li>Male_MechHeadD</li>
+						<li>Male_MechHeadE</li-->
+						<li>Female_AverageNormal</li>
+						<li>Female_AveragePointy</li>
+						<li>Female_AverageWide</li>
+						<li>Female_NarrowNormal</li>
+						<li>Female_NarrowPointy</li>
+						<li>Female_NarrowWide</li>
+						<!--li>Female_MechHeadA</li>
+						<li>Female_MechHeadB</li>
+						<li>Female_MechHeadC</li>
+						<li>Female_MechHeadD</li>
+						<li>Female_MechHeadE</li-->
+						<!--li>MechHeadA</li>
+						<li>MechHeadB</li>
+						<li>MechHeadC</li>
+						<li>MechHeadD</li>
+						<li>MechHeadE</li-->
+					</headTypes>
+					<bodyTypes Inherit="false">
+						<li>Male</li>
+						<li>Female</li>
+						<li>Thin</li>
+						<li>Hulk</li>
+						<li>Fat</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Baby</li>
+						<li MayRequire="Ludeon.RimWorld.Biotech">Child</li>
+					</bodyTypes>
+					<bodyAddons>
+					</bodyAddons>
+				</alienPartGenerator>
+				<notXenophobistTowards>
+				  <li>Human</li>
+				  <li>OG_Abhuman_Ratlin</li>
+				  <li>OG_Abhuman_Ogryn</li>
+				  <li MayRequire="Ogliss.AdMech.Astartes">OG_Human_Astartes</li>
+				  <li MayRequire="Ogliss.AliceTries.GeneSeed">AstarteSpaceMarine</li>
+				  <li MayRequire="Ogliss.AliceTries.GeneSeed">AdaptusCustodes</li>
+				</notXenophobistTowards>
+				<factionRelations>
+					<li>
+						<factions>
+							<li>PlayerColony</li>
+							<li>PlayerTribe</li>
+							<li>OutlanderCivil</li>
+							<li>OutlanderRough</li>
+							<li>TribeCivil</li>
+							<li>TribeRough</li>
+						</factions>
+						<goodwill>
+							<min>-100</min>
+							<max>50</max>
+						</goodwill>
+					</li>
+					<li>
+						<factions>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Tau_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Tau_PlayerColony</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Kroot_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Kroot_PlayerColony</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Kroot_PlayerTribe</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Vespid_Faction</li>
+							<!--li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Vespid_PlayerColony</li-->
+							<!--li MayRequire="Ogliss.AdMech.Xenobiologis.Tau">OG_Vespid_PlayerTribe</li-->
+						</factions>
+						<goodwill>
+							<min>-100</min>
+							<max>10</max>
+						</goodwill>
+					</li>
+					<li>
+						<factions>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">OG_Eldar_Craftworld_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Eldar">OG_Eldar_Craftworld_PlayerColony</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.EldarExodite">OG_Eldar_Exodite_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.EldarExodite">OG_Eldar_Player_Exodite</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.EldarHarlequin">OG_Eldar_Harlequin_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.EldarHarlequin">OG_Eldar_Player_Harlequin</li>
+						</factions>
+						<goodwill>
+							<min>-100</min>
+							<max>25</max>
+						</goodwill>
+					</li>
+					<li>
+						<factions>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_Faction</li>
+							<!--li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Mechanicus_PlayerColony</li-->
+							<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_Cadian_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_Cadian_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Militarum_PlayerColony</li>
+							<li MayRequire="Ogliss.AdMech.Astartes">OG_Astartes_PlayerColony</li>
+							<li MayRequire="Ogliss.AdMech.Astartes">OG_AstartesNeophyte_PlayerColony</li>
+							<li MayRequire="CptOhu.CorruptionCore">PlayerColony_IoM</li>
+						</factions>
+						<goodwill>
+							<min>-10</min>
+							<max>100</max>
+						</goodwill>
+					</li>
+					<li>
+						<factions>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis,Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Tek_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis,Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Feral_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis,Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_Waaagh</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_PlayerColony</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Orkz">OG_Ork_PlayerTribe</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.DarkEldar">OG_DarkEldar_Kabal_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.DarkEldar">OG_DarkEldar_Kabal_PlayerColony</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Necrons">OG_Necron_PlayerColony</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Necrons">OG_Necron_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Tyranids">OG_Tyranid_PlayerColony</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis.Tyranids">OG_Tyranid_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Necron_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Tyranid_Faction</li>
+							<li MayRequire="Ogliss.AdMech.Xenobiologis">OG_Chaos_Deamon_Faction</li>
+							<li MayRequire="CptOhu.CorruptionCore">PlayerColony_Chaos</li>
+							<li MayRequire="QX.AstraMilitarum.Factions">QX_ChaosMarineFaction</li>
+							<li MayRequire="QX.AstraMilitarum.Factions">QX_TraitorGuardFaction</li>
+							<li MayRequire="QX.AstraMilitarum.Factions">QX_TyranidFaction</li>
+						</factions>
+						<goodwill>
+							<min>-100</min>
+							<max>-100</max>
+						</goodwill>
+					</li>
+				</factionRelations>
+			</generalSettings>
+			<graphicPaths Inherit="false">
+					<body>
+						<bodytypeGraphics>
+						  <Baby MayRequire="Ludeon.RimWorld.Biotech">
+							<path>Things/Pawn/Humanlike/Bodies/Naked_Child</path>
+						  </Baby>
+						  <Child MayRequire="Ludeon.RimWorld.Biotech">
+							<path>Things/Pawn/Humanlike/Bodies/Naked_Child</path>
+						  </Child>
+						  <Male>
+							<path>Things/Pawn/Humanlike/Mechanicus/Bodies/Naked_Male</path>
+						  </Male>
+						  <Female>
+							<path>Things/Pawn/Humanlike/Mechanicus/Bodies/Naked_Female</path>
+						  </Female>
+						  <Fat>
+							<path>Things/Pawn/Humanlike/Mechanicus/Bodies/Naked_Fat</path>
+						  </Fat>
+						  <Thin>
+							<path>Things/Pawn/Humanlike/Mechanicus/Bodies/Naked_Thin</path>
+						  </Thin>
+						  <Hulk>
+							<path>Things/Pawn/Humanlike/Mechanicus/Bodies/Naked_Hulk</path>
+						  </Hulk>
+						</bodytypeGraphics>
+					</body>
+					<!--head>Things/Pawn/Humanlike/Mechanicus/Heads</head-->
+					<skeleton>Things/Pawn/Humanlike/Bodies/Dessicated/Dessicated_Thin</skeleton>
+					<skinShader>Cutout</skinShader>
+			</graphicPaths>
+			<styleSettings>
+			
+			</styleSettings>
+			<thoughtSettings>
+				<cannotReceiveThoughts>
+				
+				</cannotReceiveThoughts>
+				<canStillReceiveThoughts>
+				
+				</canStillReceiveThoughts>
+			</thoughtSettings>
+			<relationSettings>
+				<renamer>
+				
+				</renamer>
+			</relationSettings>
+			<raceRestriction>
+				<reproductionList>
+					<li>Human</li>
+				</reproductionList>
+				<researchList>
+					<li>
+						<projects>
+						
+						</projects>
+						<apparelList>
+						
+						</apparelList>
+					</li>
+				</researchList>
+				<apparelList>
+				
+				</apparelList>
+				<whiteApparelList>
+				
+				</whiteApparelList>
+				<weaponList>
+				
+				</weaponList>
+				<whiteWeaponList>
+				
+				</whiteWeaponList>
+				<buildingList>
+				
+				</buildingList>
+				<whiteBuildingList>
+				
+				</whiteBuildingList>
+				<recipeList>
+				
+				</recipeList>
+				<plantList>
+				
+				</plantList>
+				<whitePlantList>
+				
+				</whitePlantList>
+				<traitList>
+				
+				</traitList>
+				<whiteTraitList>
+				
+				</whiteTraitList>
+				<foodList>
+				
+				</foodList>
+				<petList>
+				
+				</petList>
+				<conceptList>
+				
+				</conceptList>
+				<workGiverList>
+				
+				</workGiverList>
+			</raceRestriction>
+		</alienRace>
+	</AlienRace.ThingDef_AlienRace>
+
+</Defs>
