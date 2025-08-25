@@ -70,19 +70,20 @@
 	<!-- Adv Colonist -->
 	<PawnKindDef Name="OG_Sororitas_Colonist_Priest_Base" ParentName="OG_Sororitas_Colonist_Base">
 		<defName>Colonist_OG_Sororitas_Priest</defName>
-		<label>battle sister</label>
-		<fixedGender>Female</fixedGender>
-		<minGenerationAge>19</minGenerationAge>
+		<label>ministorum priest</label>
+		<!--fixedGender>Female</fixedGender-->
+		<minGenerationAge>50</minGenerationAge>
 		<maxGenerationAge>250</maxGenerationAge>
 		<initialWillRange>0~0</initialWillRange>
 		<initialResistanceRange>13~21</initialResistanceRange>
 		<backstoryFiltersOverride Inherit="false">
 			<li>
 				<categoriesAdulthood>
-					<li>Sororitas_Soldier</li>
+					<li>Sororitas_Priest</li>
 				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Outlander</li>
+					<li>Sororitas_Priest</li>
 					<li>Imperium_Standard</li>
 					<li>Sororitas_Standard</li>
 				</categoriesChildhood>
@@ -90,24 +91,25 @@
 			</li>
 			<li>
 				<categoriesAdulthood>
-					<li>Sororitas_Soldier</li>
+					<li>Sororitas_Priest</li>
 				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Offworld</li>
+					<li>Sororitas_Priest</li>
 					<li>Pirate</li>
 				</categoriesChildhood>
 				<commonality>0.05</commonality>
 			</li>
 		</backstoryFiltersOverride>
 		<apparelTags>
-			<li>SororitasPowerArmourHelmet</li>
+			<!--li>SororitasPowerArmourHelmet</li-->
 		</apparelTags>
 		<apparelMoney>
 			<min>1000</min>
 			<max>5400</max>
 		</apparelMoney>
 		<apparelRequired>
-			<li>OGAS_Apparel_PowerArmour</li>
+			<!--li>OGAS_Apparel_PowerArmour</li-->
 		</apparelRequired>
 		<weaponMoney>
 			<min>10000</min>
@@ -142,7 +144,7 @@
 		<label>battle sister</label>
 		<fixedGender>Female</fixedGender>
 		<minGenerationAge>19</minGenerationAge>
-		<maxGenerationAge>250</maxGenerationAge>
+		<maxGenerationAge>50</maxGenerationAge>
 		<initialWillRange>0~0</initialWillRange>
 		<initialResistanceRange>13~21</initialResistanceRange>
 		<backstoryFiltersOverride Inherit="false">
@@ -160,6 +162,75 @@
 			<li>
 				<categoriesAdulthood>
 					<li>Sororitas_Soldier</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Offworld</li>
+					<li>Pirate</li>
+				</categoriesChildhood>
+				<commonality>0.05</commonality>
+			</li>
+		</backstoryFiltersOverride>
+		<apparelTags>
+			<li>SororitasPowerArmourHelmet</li>
+		</apparelTags>
+		<apparelMoney>
+			<min>1000</min>
+			<max>5400</max>
+		</apparelMoney>
+		<apparelRequired>
+			<li>OGAS_Apparel_PowerArmour</li>
+		</apparelRequired>
+		<weaponMoney>
+			<min>10000</min>
+			<max>28000</max>
+		</weaponMoney>
+		<weaponTags Inherit="false">
+			<li>ImperialSororitasBoltGun</li>
+		</weaponTags>
+		<techHediffsMoney>
+			<min>1600</min>
+			<max>5200</max>
+		</techHediffsMoney>
+		<techHediffsRequired>
+		
+		</techHediffsRequired>
+		<techHediffsTags>
+			<li>Advanced</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<techHediffsDisallowTags>
+			<li>AAGeneSeed</li>
+			<li>PainCauser</li>
+		</techHediffsDisallowTags>
+		<techHediffsChance>5</techHediffsChance>
+		<techHediffsMaxAmount>5</techHediffsMaxAmount>
+		<backstoryCryptosleepCommonality>1</backstoryCryptosleepCommonality>
+	</PawnKindDef>
+	
+	<!-- Adv Colonist -->
+	<PawnKindDef Name="OG_Sororitas_Colonist_Command_Base" ParentName="OG_Sororitas_Colonist_Base">
+		<defName>Colonist_OG_Sororitas_Command</defName>
+		<label>sister superior</label>
+		<fixedGender>Female</fixedGender>
+		<minGenerationAge>30</minGenerationAge>
+		<maxGenerationAge>250</maxGenerationAge>
+		<initialWillRange>0~0</initialWillRange>
+		<initialResistanceRange>13~21</initialResistanceRange>
+		<backstoryFiltersOverride Inherit="false">
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Sister_Superior</li>
+				</categoriesAdulthood>
+				<categoriesChildhood>
+					<li>Imperium_Standard</li>
+					<li>Sororitas_Standard</li>
+					<li>Outlander</li>
+				</categoriesChildhood>
+				<commonality>0.95</commonality>
+			</li>
+			<li>
+				<categoriesAdulthood>
+					<li>Sororitas_Sister_Superior</li>
 				</categoriesAdulthood>
 				<categoriesChildhood>
 					<li>Offworld</li>

@@ -23,13 +23,13 @@
 						<requiredAtStart>true</requiredAtStart>
 					</li>
 					<li>
-						<kindDef>Colonist_OG_Sororitas_Priest</kindDef>
-						<count>1</count>
+						<kindDef>Colonist_OG_Sororitas_Soldier</kindDef>
+						<count>3</count>
 						<requiredAtStart>true</requiredAtStart>
 					</li>
 					<li>
-						<kindDef>Colonist_OG_Sororitas_Soldier</kindDef>
-						<count>3</count>
+						<kindDef>Colonist_OG_Sororitas_Priest</kindDef>
+						<count>1</count>
 						<requiredAtStart>true</requiredAtStart>
 					</li>
 					</kindCounts>
