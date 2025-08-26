@@ -13,6 +13,7 @@
 			<ArmorRating_Sharp>0.4</ArmorRating_Sharp>
 			<ComfyTemperatureMin>-55</ComfyTemperatureMin>
 			<ComfyTemperatureMax>45</ComfyTemperatureMax>
+			<Wildness>0.6</Wildness>
 	</statBases>
 	<tools>
 		<li>
@@ -94,7 +95,6 @@
 		<foodType>OmnivoreAnimal, OvivoreAnimal</foodType>
 		<leatherDef>Leather_Kroot</leatherDef>
 		<gestationPeriodDays>28</gestationPeriodDays>
-		<!--wildness>0.6</wildness-->
 		<trainability>Advanced</trainability>
 		<packAnimal>true</packAnimal>
 		<lifeExpectancy>30</lifeExpectancy>

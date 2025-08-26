@@ -14,6 +14,7 @@
 		<ArmorRating_Sharp>0.16</ArmorRating_Sharp>
 		<ArmorRating_Heat>0.16</ArmorRating_Heat>
 		<ComfyTemperatureMin>-40</ComfyTemperatureMin>
+			<Wildness>0.75</Wildness>
 	</statBases>
 	<tools>
 		<li>
@@ -63,7 +64,6 @@
 		<gestationPeriodDays>26</gestationPeriodDays>
 		<nameOnTameChance>1</nameOnTameChance>
 		<trainability>Advanced</trainability>
-		<!--wildness>0.75</wildness-->
 		<manhunterOnTameFailChance>0.55</manhunterOnTameFailChance>
 		<manhunterOnDamageChance>0.95</manhunterOnDamageChance>
 		<litterSizeCurve>
